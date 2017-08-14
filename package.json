@@ -2,8 +2,9 @@
   "name": "wag-framework",
   "version": "0.0.0",
   "description": "We Are Genki CSS Framework",
-  "main": "gulpfile.js",
   "scripts": {
+    "dev": "",
+    "build": "",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,29 @@
   "bugs": {
     "url": "https://github.com/WeAreGenki/wag-framework/issues"
   },
-  "homepage": "https://github.com/WeAreGenki/wag-framework#readme"
+  "homepage": "https://labs.wearegenki.com/framework",
+  "dependencies": {
+    "raven-js": "^3.17.0",
+    "vue": "^2.4.2",
+    "vue-router": "^2.7.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.2",
+    "babel-core": "^6.25.0",
+    "babel-eslint": "^7.2.3",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "clean-css": "^4.1.7",
+    "eslint": "^4.4.1",
+    "eslint-config-airbnb-base": "^11.3.1",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-plugin-html": "^3.2.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-vue": "beta",
+    "postcss": "^6.0.9",
+    "rollup": "^0.47.4",
+    "stylelint": "^8.0.0",
+    "stylelint-config-standard": "^17.0.0",
+    "stylelint-order": "^0.6.0"
+  }
 }
