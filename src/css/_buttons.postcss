@@ -1,0 +1,25 @@
+/* FIXME: Stylelint in both VS Code and webpack setup */
+
+.btn {
+  padding: 0.4rem 0.9rem;
+  margin: 0 0.3rem;
+  background-color: var(--white);
+  line-height: 1;
+  font-size: var(--font-size);
+  color: var(--body-colour);
+  border: 1px solid var(--grey);
+  border-radius: var(--radius);
+
+  &:hover,
+  &:active {
+    color: var(--body-colour);
+    text-decoration: none;
+    background-color: var(--grey-lighter);
+  }
+}
+
+.btn + .btn {
+  margin-left: 0.15rem;
+}
+
+.btn-lg {}
