@@ -1,19 +1,27 @@
 body {
-  font-family: var(--font-family);
-  font-size: var(--font-size);
-  font-weight: var(--font-weight);
-  line-height: var(--line-height);
-  color: var(--body-colour);
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  color: $body-colour;
 }
 
 a {
-  color: var(--primary-dark);
+  padding: 0.5rem 1rem;
+  margin: -0.5rem -1rem;
+  color: $link-colour;
   text-decoration: none;
+  word-wrap: break-word;
 
   &:hover {
-    color: var(--primary);
+    color: $primary;
     text-decoration: underline;
   }
+}
+
+li {
+  /* Extra space between list items */
+  margin-bottom: 0.5rem;
 }
 
 .display1 {

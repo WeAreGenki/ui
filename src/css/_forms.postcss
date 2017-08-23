@@ -5,3 +5,22 @@ form {
 .form-row {
   margin-bottom: 1rem;
 }
+
+label {
+  display: block;
+}
+
+input,
+textarea,
+select {
+  display: block;
+  width: 100%;
+}
+/* FIXME: Select doesn't stresh all the way to the right like other inputs */
+
+/* TODO: Padding between options */
+select {
+  padding: 0.2rem 0.4rem;
+  background-color: $white;
+  border: 1px solid $grey;
+}

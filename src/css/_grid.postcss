@@ -3,32 +3,36 @@
   https://css-tricks.com/snippets/css/complete-guide-grid/
 */
 
+/* TEMP: https://css-tricks.com/snippets/css/complete-guide-grid/#grid-introduction */
+/* TEMP: https://gridbyexample.com/browsers/ */
+/* TEMP: https://rachelandrew.co.uk/archives/2017/01/03/css-grid-is-coming/ */
+
 /* FIXME: Make responsive */
 /* FIXME: Reduce calc */
 .container {
   width: 1200px !important;
-  max-width: calc(100% - var(--gutter));
+  max-width: calc(100% - $gutter);
+  padding-right: calc($gutter / 2);
+  padding-left: calc($gutter / 2);
   margin-right: auto;
   margin-left: auto;
-  padding-left: calc(var(--gutter) / 2);
-  padding-right: calc(var(--gutter) / 2);
 }
 
 .grid,
 .grid-inline,
 .grid-sub {
-  grid-template-columns: repeat(var(--cols), var(--item-size));
-  grid-template-rows: var(--rows);
-  grid-auto-columns: var(--item-size);
-  grid-auto-rows: var(--item-size);
-  grid-column-gap: var(--gutter);
-  grid-row-gap: var(--gutter);
-  // grid-template-rows: repeat(var(--rows), 1fr);
+  grid-template-columns: repeat($cols, $item-size);
+  grid-template-rows: $rows;
+  grid-auto-columns: $item-size;
+  grid-auto-rows: $item-size;
+  grid-column-gap: $gutter;
+  grid-row-gap: $gutter;
+  /* grid-template-rows: repeat($rows, 1fr); */
   /* TODO: Update/remove this example */
   grid-template-areas:
-    repeat(var(--cols), "header")
-    repeat(var(--cols), "middle") /* TODO: Use for-each loop so we can add 2+ names [middle mid1] */
-    repeat(var(--cols), "footer");
+    repeat($cols, "header")
+    repeat($cols, "middle") /* TODO: Use for-each loop so we can add 2+ names [middle mid1] */
+    repeat($cols, "footer");
 }
 
 .grid {
@@ -47,6 +51,28 @@
 .flex {
   display: flex;
 }
+
+/* FIXME: Can this be done without using `repeat(X, $item-size)`? */
+/*
+.x2 { grid-template-columns: 2; }
+.x3 { grid-template-columns: 3; }
+.x4 { grid-template-columns: 4; }
+.x5 { grid-template-columns: 5; }
+.x6 { grid-template-columns: 6; }
+.x12 { grid-template-columns: 12; }
+*/
+.x2 { grid-template-columns: repeat(2, $item-size); }
+.x3 { grid-template-columns: repeat(3, $item-size); }
+.x4 { grid-template-columns: repeat(4, $item-size); }
+.x5 { grid-template-columns: repeat(5, $item-size); }
+.x6 { grid-template-columns: repeat(6, $item-size); }
+.x12 { grid-template-columns: repeat(12, $item-size); } /* default */
+
+.y2 { grid-template-rows: 2; }
+.y3 { grid-template-rows: 3; }
+.y4 { grid-template-rows: 4; }
+.y5 { grid-template-rows: 5; }
+.y6 { grid-template-rows: 6; }
 
 /* TODO: Automate the creation of these classes + their responsive equivalents */
 
@@ -88,111 +114,43 @@
 .h5 { grid-row-end: span 5; }
 .h6 { grid-row-end: span 6; }
 
-.align-row-stretch {
-  justify-items: stretch; /* default */
-}
-.align-row-start {
-  justify-items: start;
-}
-.align-row-end {
-  justify-items: end;
-}
-.align-row-center {
-  justify-items: center;
-}
+.align-row-stretch { justify-items: stretch; } /* default */
+.align-row-start { justify-items: start; }
+.align-row-end { justify-items: end; }
+.align-row-center { justify-items: center; }
 
-.align-col-stretch {
-  align-items: stretch; /* default */
-}
-.align-col-start {
-  align-items: start;
-}
-.align-col-end {
-  align-items: end;
-}
-.align-col-center {
-  align-items: center;
-}
+.align-col-stretch { align-items: stretch; } /* default */
+.align-col-start { align-items: start; }
+.align-col-end { align-items: end; }
+.align-col-center { align-items: center; }
 
-.align-item-row-stretch {
-  justify-self: stretch; /* default */
-}
-.align-item-row-start {
-  justify-self: start;
-}
-.align-item-row-end {
-  justify-self: end;
-}
-.align-item-row-center {
-  justify-self: center;
-}
+.align-item-row-stretch { justify-self: stretch; } /* default */
+.align-item-row-start { justify-self: start; }
+.align-item-row-end { justify-self: end; }
+.align-item-row-center { justify-self: center; }
 
-.align-item-col-stretch {
-  align-self: stretch; /* default */
-}
-.align-item-col-start {
-  align-self: start;
-}
-.align-item-col-end {
-  align-self: end;
-}
-.align-item-col-center {
-  align-self: center;
-}
+.align-item-col-stretch { align-self: stretch; } /* default */
+.align-item-col-start { align-self: start; }
+.align-item-col-end { align-self: end; }
+.align-item-col-center { align-self: center; }
 
-.justify-row-stretch {
-  justify-content: stretch; /* default */
-}
-.justify-row-start {
-  justify-content: start;
-}
-.justify-row-end {
-  justify-content: end;
-}
-.justify-row-center {
-  justify-content: center;
-}
-.justify-row-space-around {
-  justify-content: space-around;
-}
-.justify-row-space-between {
-  justify-content: space-between;
-}
-.justify-row-space-evenly {
-  justify-content: space-evenly;
-}
+.justify-row-stretch { justify-content: stretch; } /* default */
+.justify-row-start { justify-content: start; }
+.justify-row-end { justify-content: end; }
+.justify-row-center { justify-content: center; }
+.justify-row-space-around { justify-content: space-around; }
+.justify-row-space-between { justify-content: space-between; }
+.justify-row-space-evenly { justify-content: space-evenly; }
 
-.justify-col-stretch {
-  align-content: stretch; /* default */
-}
-.justify-col-start {
-  align-content: start;
-}
-.justify-col-end {
-  align-content: end;
-}
-.justify-col-center {
-  align-content: center;
-}
-.justify-col-space-around {
-  align-content: space-around;
-}
-.justify-col-space-between {
-  align-content: space-between;
-}
-.justify-col-space-evenly {
-  align-content: space-evenly;
-}
+.justify-col-stretch { align-content: stretch; } /* default */
+.justify-col-start { align-content: start; }
+.justify-col-end { align-content: end; }
+.justify-col-center { align-content: center; }
+.justify-col-space-around { align-content: space-around; }
+.justify-col-space-between { align-content: space-between; }
+.justify-col-space-evenly { align-content: space-evenly; }
 
-.flow-row {
-  grid-auto-flow: row; /* default */
-}
-.flow-col {
-  grid-auto-flow: column;
-}
-.flow-row-dense {
-  grid-auto-flow: row dense;
-}
-.flow-col-dense {
-  grid-auto-flow: column dense;
-}
+.flow-row { grid-auto-flow: row; } /* default */
+.flow-col { grid-auto-flow: column; }
+.flow-row-dense { grid-auto-flow: row dense; }
+.flow-col-dense { grid-auto-flow: column dense; }

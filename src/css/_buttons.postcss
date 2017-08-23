@@ -2,19 +2,20 @@
 
 .btn {
   padding: 0.4rem 0.9rem;
-  margin: 0 0.3rem;
-  background-color: var(--white);
+  // margin: 0 0.3rem; /* FIXME: Probably don't need this */
+  font-size: $font-size;
   line-height: 1;
-  font-size: var(--font-size);
-  color: var(--body-colour);
-  border: 1px solid var(--grey);
-  border-radius: var(--radius);
+  color: $body-colour;
+  cursor: pointer;
+  background-color: $white;
+  border: 1px solid $grey;
+  border-radius: $radius;
 
   &:hover,
   &:active {
-    color: var(--body-colour);
+    color: $body-colour;
     text-decoration: none;
-    background-color: var(--grey-lighter);
+    background-color: $grey-lighter;
   }
 }
 
@@ -22,4 +23,6 @@
   margin-left: 0.15rem;
 }
 
-.btn-lg {}
+.btn-lg {
+  font-size: calc($font-size * 1.2); /* FIXME: Simplify in compiled output; can postcss do calculation like SCSS? */
+}
