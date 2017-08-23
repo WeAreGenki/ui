@@ -5,17 +5,20 @@ body {
   // background-color: $body-bg;
 }
 
-/* FIXME: Colour should be in a seperate class (?) */
+.nav {
+  display: flex;
+}
+
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  // height: 3.15rem;
+  z-index: 10;
 
   .nav-link {
     padding: 0.9rem 1rem;
-    margin: 0; /* NOTE: Necessary due to larger click area on <a> links */
+    margin: 0; /* Necessary due to larger click area on <a> links */
 
     &:hover {
       text-decoration: none;
@@ -32,24 +35,33 @@ body {
     color: $white;
 
     &:hover {
+      /* TODO: Change */
       /* background-color: $primary-dark; */
       background-color: $primary;
     }
   }
 }
 
-.nav {
-  display: flex;
-}
-
 
 /* Sidenav */
 
-.nav {}
+.side-nav {
+  flex-direction: column;
+
+  > .nav-link {
+    margin: 0.2rem 0;
+
+    &.active {
+      /* TODO: Change */
+      background-color: $grey-lighter;
+    }
+  }
+}
 
 
 /* Footer */
 
+/* FIXME: Override <a> links (?) */
 .footer {
   margin-top: 3rem;
   margin-bottom: 1rem;
