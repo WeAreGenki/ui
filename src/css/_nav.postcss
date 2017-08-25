@@ -1,12 +1,16 @@
 /* Navbar */
 
 body {
-  margin-top: 5rem;
+  // margin-top: 5rem; /* FIXME: Not necessary with sidebar nav but worth including probably (?)*/
   // background-color: $body-bg;
 }
 
 .nav {
   display: flex;
+}
+
+.nav-link {
+  cursor: pointer;
 }
 
 .navbar {
@@ -29,7 +33,7 @@ body {
 .navbar-bg {
   color: $white;
   background-color: $primary;
-  box-shadow: 0 0 0.3rem $shadow;
+  box-shadow: 0 0 0.5rem $shadow;
 
   .nav-link {
     color: $white;
@@ -52,6 +56,8 @@ body {
     margin: 0.2rem 0;
 
     &.active {
+      cursor: default;
+      text-decoration: none;
       /* TODO: Change */
       background-color: $grey-lighter;
     }

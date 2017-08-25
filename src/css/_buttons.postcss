@@ -3,6 +3,7 @@
 .btn {
   padding: 0.4rem 0.9rem;
   // margin: 0 0.3rem; /* FIXME: Probably don't need this */
+  margin: 0;
   font-size: $font-size;
   line-height: 1;
   color: $body-colour;
@@ -16,6 +17,15 @@
     color: $body-colour;
     text-decoration: none;
     background-color: $grey-lighter;
+  }
+}
+
+.btn-link {
+  background: transparent;
+  border: 1px solid transparent;
+
+  &:hover {
+    text-decoration: underline;
   }
 }
 
