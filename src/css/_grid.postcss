@@ -1,3 +1,5 @@
+// FIXME: Unknown postcss properties
+
 /*
   EXAMPLES:
   https://css-tricks.com/snippets/css/complete-guide-grid/
@@ -7,20 +9,22 @@
 /* TEMP: https://gridbyexample.com/browsers/ */
 /* TEMP: https://rachelandrew.co.uk/archives/2017/01/03/css-grid-is-coming/ */
 
+// TODO: Study how grids are done in tachyons (also postcss!)
 /* FIXME: Make responsive */
-/* FIXME: Reduce calc */
+/* FIXME: Reduce or remove calc() */
 .container {
-  width: 1200px !important;
-  max-width: calc(100% - $gutter);
+  width: 100%;
+  // max-width: calc(100vw - $gutter);
+  max-width: calc(790px - $gutter); // FIXME: Should be a fixed width, not relative
   padding-right: calc($gutter / 2);
   padding-left: calc($gutter / 2);
   margin-right: auto;
-  margin-left: auto;
+  // margin-left: auto; // Consider disabling this on <= md
 }
 
 .grid,
 .grid-inline,
-.grid-sub {
+.grid-sub { /*  stylelint-disable declaration-block-no-redundant-longhand-properties */
   grid-template-columns: repeat($cols, $item-size);
   grid-template-rows: $rows;
   grid-auto-columns: $item-size;
@@ -28,11 +32,12 @@
   grid-column-gap: $gutter;
   grid-row-gap: $gutter;
   /* grid-template-rows: repeat($rows, 1fr); */
+  // FIXME: Premade templates should be in their own classes -- what common templates might be useful?
   /* TODO: Update/remove this example */
-  grid-template-areas:
-    repeat($cols, "header")
-    repeat($cols, "middle") /* TODO: Use for-each loop so we can add 2+ names [middle mid1] */
-    repeat($cols, "footer");
+  // grid-template-areas:
+  //   repeat($cols, "header")
+  //   repeat($cols, "middle") /* TODO: Use for-each loop so we can add 2+ names [middle mid1] */
+  //   repeat($cols, "footer");
 }
 
 .grid {
