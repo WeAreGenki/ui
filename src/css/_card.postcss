@@ -1,0 +1,31 @@
+/* FIXME: Look for inspiration from other projects; bootstrap */
+
+.card {
+  display: block;
+  padding: 1.2rem 1.3rem;
+  margin: 0;
+  border: 1px solid $blue-grey-100;
+  border-radius: $radius;
+
+  /* TODO: Might not need this once we have the grid working */
+  &:first-of-type {
+    margin-left: 0;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  &:hover {
+    background-color: $grey-lighter;
+  }
+
+  > h3 {
+    margin-top: 0;
+  }
+}
+
+.card-shadow {
+  border: 1px solid $blue-grey-50;
+  box-shadow: 0.12rem 0.13rem 0.9rem rgba(0, 0, 0, 0.06);
+}
