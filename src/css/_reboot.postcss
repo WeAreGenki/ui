@@ -1,15 +1,65 @@
 /* TODO: Go through the bootstrap reboot file and incorporate anything that may be useful */
 
-*,
-*::before,
-*::after {
+// *,
+// *::before,
+// *::after {
+//   box-sizing: border-box;
+// }
+
+// From tachyons
+html,
+body,
+div,
+article,
+section,
+main,
+footer,
+header,
+form,
+fieldset,
+legend,
+pre,
+code,
+a,
+h1,h2,h3,h4,h5,h6,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+textarea,
+table,
+td,
+th,
+tr,
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="tel"],
+input[type="text"],
+input[type="url"],
+.border-box {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  overflow-x: hidden; /* NOTE: Highly opinionated */
+  overflow-x: hidden; // Highly opinionated
   overflow-y: scroll;
-  overflow-y: overlay; /* TODO: Does this have any effect in any browsers? */
   background-color: $body-bg;
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  color: $body-colour;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
 }

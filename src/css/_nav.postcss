@@ -2,15 +2,10 @@
 
 body {
   // margin-top: 5rem; /* FIXME: Not necessary with sidebar nav but worth including probably (?)*/
-  // background-color: $body-bg;
 }
 
 .nav {
   display: flex;
-}
-
-.nav-link {
-  cursor: pointer;
 }
 
 .navbar {
@@ -19,15 +14,6 @@ body {
   left: 0;
   width: 100%;
   z-index: 10;
-
-  .nav-link {
-    padding: 0.9rem 1rem;
-    margin: 0; /* Necessary due to larger click area on <a> links */
-
-    &:hover {
-      text-decoration: none;
-    }
-  }
 }
 
 .navbar-bg {
@@ -43,6 +29,16 @@ body {
       /* background-color: $primary-dark; */
       background-color: $primary;
     }
+  }
+}
+
+.nav-link {
+  padding: 0.9rem 1rem;
+  margin: 0; /* Necessary due to larger click area on <a> links */
+  cursor: pointer;
+
+&:hover {
+    text-decoration: none;
   }
 }
 
