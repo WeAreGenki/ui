@@ -44,7 +44,7 @@ export default {
       'removeToast',
     ]),
     destroy() {
-      this.removeToast(this.id);
+      this.removeToast({ id: this.id });
     },
     setTimeoutHandler() {
       window.setTimeout(() => { this.destroy() }, this.timeout);
@@ -75,10 +75,10 @@ export default {
   bottom: 0;
   left: 100px;
   z-index: $toast-zindex;
-  padding: 1.2rem 1.6rem 1rem 1.2rem;
+  padding: 1.2rem 1.5rem 1rem;
   color: $white;
-  background-color: $blue-500;
-  box-shadow: 0 0 1rem $shadow; // TODO: Layered shadow effect?
+  background-color: $blue-600;
+  box-shadow: 0 0 1rem $shadow; // FIXME: Better aesthetics; layered shadow effect?
   transition: transform 0.15s ease-out; // Animate in
   transform: translateY(0);
   will-change: transform;
@@ -91,13 +91,22 @@ export default {
 }
 
 .toast-link {
+  padding: 1rem 1.4rem;
+  margin: -1rem 0 -1rem -1rem;
+  font-weight: bold;
   color: $blue-100;
+  cursor: pointer;
   background-color: transparent;
   border: 0;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $blue-200;
+  }
 }
 
 .toast-msg {
-  margin-left: 0.7rem;
   font-size: 1.13rem;
 }
 </style>
