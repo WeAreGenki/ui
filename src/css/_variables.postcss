@@ -1,28 +1,22 @@
+@import "_variables-colours.postcss";
+
 /* TODO: Remove any variables which arn't being used */
 
-/* TODO: Add material design colours (?) */
-
+// Anything worth changing at runtime should go here
 // :root {
-//   /* Anything worth changing at runtime should go here */
 // }
 
 /* Colours */
-$white: #fff;
-$black: #000;
-$grey: #9e9e9e;
-$grey-light: #bdbdbd;
-$grey-lighter: #e0e0e0;
-$red: red;
-$blue: #303f9f;
-$green: green;
-
-/* XXX: Slack Ochin theme colours */
-$colour1: #303E4D;
-$colour2: #2C3849;
-$colour3: #6698C8;
-$colour5: #4A5664;
-$colour6: #94E864;
-$colour7: #78AF8F;
+$white:         #fff;
+$black:         #000;
+$grey-darker:   #263238; // MD Blue Grey 900
+$grey-dark:     #37474f;
+$grey:          #9e9e9e;
+$grey-light:    #bdbdbd;
+$grey-lighter:  #e0e0e0;
+$red:           #f00;
+$blue:          #303f9f;
+$green:         #0f0;
 
 $primary: #1565c0;
 $primary-dark: color(#1565c0 shade(20%));
@@ -37,15 +31,16 @@ $body-colour: #121212;
 $link-colour: $primary;
 
 $sidebar-colour: $white;
-$sidebar-bg: #212121; // Grey 900
+$sidebar-bg: $blue-grey-900;
 $sidebar-drawer-colour: $white;
-$sidebar-drawer-bg: #263238; // MD Blue Grey 900
+$sidebar-drawer-bg: $grey-900;
 
 $shadow: rgba(0, 0, 0, 0.5);
 
 /* Z-index position */
 $sidebar-zindex: 1050;
 $sidebar-drawer-zindex: 1030;
+$toast-zindex: 1080;
 
 /* Grid */
 $cols: 12;
@@ -57,6 +52,7 @@ $gutter: 30px;
 $font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 $font-size: 16px;
 $font-weight: 500;
+$font-weight-light: 300;
 $line-height: 1.2;
 
 /* Misc. */
