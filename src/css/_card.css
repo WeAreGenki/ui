@@ -4,8 +4,8 @@
   display: block;
   padding: 1.2rem 1.3rem;
   margin: 0;
-  border: 1px solid $blue-grey-100;
-  border-radius: $radius;
+  border: 1px solid var(--blue-grey-100);
+  border-radius: var(--radius);
 
   /* TODO: Might not need this once we have the grid working */
   &:first-of-type {
@@ -17,7 +17,7 @@
   }
 
   &:hover {
-    background-color: $grey-lighter;
+    background-color: var(--grey-lighter);
   }
 
   > h3 {
@@ -26,6 +26,6 @@
 }
 
 .card-shadow {
-  border: 1px solid $blue-grey-50;
+  border: 1px solid var(--blue-grey-50);
   box-shadow: 0.12rem 0.13rem 0.9rem rgba(0, 0, 0, 0.06);
 }

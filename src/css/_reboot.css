@@ -1,12 +1,6 @@
 /* TODO: Go through the bootstrap reboot file and incorporate anything that may be useful */
 
-// *,
-// *::before,
-// *::after {
-//   box-sizing: border-box;
-// }
-
-// From tachyons
+/* From tachyons */
 html,
 body,
 div,
@@ -51,20 +45,20 @@ input[type="url"],
 
 body {
   margin: 0;
-  overflow-x: hidden; // Highly opinionated
+  overflow-x: hidden; /* Highly opinionated */
   overflow-y: scroll;
-  font-family: $font-family;
-  font-size: $font-size;
-  font-weight: $font-weight;
-  line-height: $line-height;
-  color: $body-colour;
-  background-color: $body-bg;
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  line-height: var(--line-height);
+  color: var(--body-colour);
+  background-color: var(--body-bg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 button {
-  font-family: $font-family;
-  font-size: $font-size;
-  font-weight: $font-weight;
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
 }

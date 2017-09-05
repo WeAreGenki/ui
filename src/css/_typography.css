@@ -1,7 +1,7 @@
-// README: Some typographic styles are in _reboot
+/* README: Some typographic styles are in _reboot */
 
 h1 {
-  font-weight: $font-weight-light;
+  font-weight: var(--font-weight-light);
 }
 
 p {
@@ -11,16 +11,16 @@ p {
 a {
   padding: 0.5rem 1rem;
   margin: -0.5rem -1rem;
-  color: $link-colour;
+  color: var(--link-colour);
   text-decoration: none;
   word-wrap: break-word;
 
   &:hover {
-    color: $primary;
+    color: var(--primary);
   }
 }
 
-// FIXME: Use a different hover animation, and specifically use high performance gpu rendered CSS transform + translate/opacity/ scale(?)
+/* // FIXME: Use a different hover animation, and specifically use high performance gpu rendered CSS transform + translate/opacity/ scale(?)
 // a {
 //   display: inline-block;
 //   vertical-align: bottom; // ORIGINAL: middle
@@ -46,7 +46,7 @@ a {
 //     height: 4px;
 
 //     // -webkit-transition-property: left, right; // Android =< 4.3
-//     // -webkit-transition-duration: $duration; // Android =< 4.3
+//     // -webkit-transition-duration: var(--duration; // Android =< 4.)3
 //     // -webkit-transition-timing-function: ease-out; // Android =< 4.3
 
 //     transition-property: left, right;
@@ -61,10 +61,10 @@ a {
 //     right: 0.5em;
 //     bottom: 0.5em;
 //   }
-// }
+// } */
 
 li {
-  margin-bottom: 0.5rem; // Extra space between list items
+  margin-bottom: 0.5rem; /* Extra space between list items */
 }
 
 .display1 {
@@ -73,7 +73,7 @@ li {
 
 .lead {
   font-size: 1.9rem;
-  font-weight: $font-weight-light;
+  font-weight: var(--font-weight-light);
 }
 
 .text-center {

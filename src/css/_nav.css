@@ -1,7 +1,7 @@
 /* Navbar */
 
 body {
-  // margin-top: 5rem; /* FIXME: Not necessary with sidebar nav but worth including probably (?)*/
+  /* margin-top: 5rem; */ /* FIXME: Not necessary with sidebar nav but worth including probably (?)*/
 }
 
 .nav {
@@ -17,17 +17,17 @@ body {
 }
 
 .navbar-bg {
-  color: $white;
-  background-color: $primary;
-  box-shadow: 0 0 0.5rem $shadow;
+  color: var(--white);
+  background-color: var(--primary);
+  box-shadow: 0 0 0.5rem var(--shadow);
 
   .nav-link {
-    color: $white;
+    color: var(--white);
 
     &:hover {
       /* TODO: Change */
-      /* background-color: $primary-dark; */
-      background-color: $primary;
+      /* background-color: var(--primary-dark; *)/
+      background-color: var(--primary);
     }
   }
 }
@@ -55,7 +55,7 @@ body {
       cursor: default;
       text-decoration: none;
       /* TODO: Change */
-      background-color: $grey-lighter;
+      background-color: var(--grey-lighter);
     }
   }
 }
@@ -67,5 +67,5 @@ body {
 .footer {
   margin-top: 3rem;
   margin-bottom: 1rem;
-  color: $grey;
+  color: var(--grey);
 }
