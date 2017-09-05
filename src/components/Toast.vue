@@ -65,8 +65,8 @@ export default {
 };
 </script>
 
-<style type="postcss">
-@import "../../css/import.postcss";
+<style>
+@import "css/import";
 
 /* TODO: Toast stacking (?) */
 
@@ -74,18 +74,18 @@ export default {
   position: absolute;
   bottom: 0;
   left: 100px;
-  z-index: $toast-zindex;
+  z-index: var(--toast-zindex);
   padding: 1.2rem 1.5rem 1rem;
-  color: $white;
-  background-color: $blue-600;
-  box-shadow: 0 0 1rem $shadow; // FIXME: Better aesthetics; layered shadow effect?
-  transition: transform 0.15s ease-out; // Animate in
+  color: var(--white);
+  background-color: var(--blue-600);
+  box-shadow: 0 0 1rem var(--shadow); /* FIXME: Better aesthetics; layered shadow effect? */
+  transition: transform 0.15s ease-out; /* Animate in */
   transform: translateY(0);
   will-change: transform;
 
   &.v-enter,
   &.v-leave-to {
-    transition: transform 0.3s ease-in; // Animate out
+    transition: transform 0.3s ease-in; /* Animate out */
     transform: translateY(102%);
   }
 }
@@ -94,7 +94,7 @@ export default {
   padding: 1rem 1.4rem;
   margin: -1rem 0 -1rem -1rem;
   font-weight: bold;
-  color: $blue-100;
+  color: var(--blue-100);
   cursor: pointer;
   background-color: transparent;
   border: 0;
@@ -102,7 +102,7 @@ export default {
   &:hover,
   &:focus,
   &:active {
-    color: $blue-200;
+    color: var(--blue-200);
   }
 }
 
