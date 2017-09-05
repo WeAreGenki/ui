@@ -20,7 +20,8 @@ a {
   }
 }
 
-/* // FIXME: Use a different hover animation, and specifically use high performance gpu rendered CSS transform + translate/opacity/ scale(?)
+/* // FIXME: Use a different hover animation, and specifically use high performance gpu rendered CSS transform + translate/opacity/ scale(?) */
+/*
 // a {
 //   display: inline-block;
 //   vertical-align: bottom; // ORIGINAL: middle
@@ -61,7 +62,8 @@ a {
 //     right: 0.5em;
 //     bottom: 0.5em;
 //   }
-// } */
+// }
+*/
 
 li {
   margin-bottom: 0.5rem; /* Extra space between list items */
