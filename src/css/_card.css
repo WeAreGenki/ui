@@ -25,6 +25,7 @@
   }
 }
 
+/* TODO: Update to be similar to alogia.com's homepage cards */
 .card-shadow {
   border: 1px solid var(--blue-grey-50);
   box-shadow: 0.12rem 0.13rem 0.9rem rgba(0, 0, 0, 0.06);
