@@ -74,7 +74,7 @@ export default {
   position: absolute;
   bottom: 0;
   left: 100px;
-  z-index: var(--toast-zindex);
+  z-index: var(--toast-z-index);
   padding: 1.2rem 1.5rem 1rem;
   color: var(--white);
   background-color: var(--blue-600);
