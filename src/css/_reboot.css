@@ -53,12 +53,46 @@ body {
   line-height: var(--line-height);
   color: var(--body-colour);
   background-color: var(--body-bg);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+  @media (--breakpoint-not-small) {
+    @if var(--font-size-ns) != var(--font-size) {
+      font-size: var(--font-size-ns);
+    }
+  }
+
+  @media (--breakpoint-medium) {
+    @if var(--font-size-m) != var(--font-size) {
+      font-size: var(--font-size-m);
+    }
+  }
+
+  @media (--breakpoint-large) {
+    @if var(--font-size-l) != var(--font-size) {
+      font-size: var(--font-size-l);
+    }
+  }
 }
 
 button {
   font-family: var(--font-family);
   font-size: var(--font-size);
   font-weight: var(--font-weight);
+
+  @media (--breakpoint-not-small) {
+    @if var(--font-size-ns) != var(--font-size) {
+      font-size: var(--font-size-ns);
+    }
+  }
+
+  @media (--breakpoint-medium) {
+    @if var(--font-size-m) != var(--font-size) {
+      font-size: var(--font-size-m);
+    }
+  }
+
+  @media (--breakpoint-large) {
+    @if var(--font-size-l) != var(--font-size) {
+      font-size: var(--font-size-l);
+    }
+  }
 }
