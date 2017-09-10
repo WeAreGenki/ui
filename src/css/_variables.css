@@ -1,5 +1,7 @@
 @import "_variables-colours";
 
+/* TODO: Should the sidebar vars be refactored out into the app variables file? */
+
 /* Media Queries */
 @custom-media --breakpoint-not-small screen and (min-width: 30em);
 @custom-media --breakpoint-medium screen and (min-width: 30em) and (max-width: 60em);
@@ -7,8 +9,18 @@
 
 :root {
   /* Breakpoints */
-  --breakpoints-long: "", --breakpoint-not-small, --breakpoint-medium, --breakpoint-large;
-  --breakpoints-short: "", -ns, -m, -l;
+  --breakpoints-long: --breakpoint-not-small, --breakpoint-medium, --breakpoint-large;
+  --breakpoints-short: -ns, -m, -l;
+
+  /* Grid */
+  --item-size: 1fr;
+  --cols: auto;
+  /* --cols: repeat(12, var(--item-size)); */ /* Example new default number of columns */
+  --rows: auto;
+  --max-cols: 12;
+  --max-rows: 6;
+  --gutter-col: 30px;
+  --gutter-row: calc(var(--gutter-col) / 2);
 
   /* Colours */
   --primary: var(--blue-500);
@@ -21,17 +33,7 @@
   --sidebar-drawer-bg: var(--grey-900);
   --shadow: rgba(0, 0, 0, 0.5);
 
-  /* Grid */
-  --item-size: 1fr;
-  /* --cols: repeat(12, var(--item-size)); */ /* Example new default number of columns */
-  --cols: auto;
-  --rows: auto;
-  --max-cols: 12;
-  --max-rows: 6;
-  --gutter-col: 30px;
-  --gutter-row: calc(var(--gutter-col) / 2);
-
-  /* Z-index position */
+  /* Z-index */
   --sidebar-z-index: 1050;
   --sidebar-drawer-z-index: 1030;
   --toast-z-index: 1080;
@@ -47,6 +49,9 @@
   --font-weight-heavy: 700;
   --line-height: 1.2;
 
-  /* Misc. */
+  /* Boarders */
   --radius: 0.15rem;
+
+  /* Navs */
+  --sidebar-width: 60px;
 }
