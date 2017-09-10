@@ -1,9 +1,6 @@
-// TODO: Consider incorporating rules from:
-//  ↳ https://github.com/airbnb/css#css
-//  ↳ https://gist.github.com/DanielaValero/b3a72b2f3d0c85c1985d5d2d7497f347
-
 module.exports = {
-  // ignoreFiles: ['./src/scss/bootstrap/**/*.scss'],
+  cache: true,
+  // ignoreFiles: ['./src/css/framework/**/*.postcss'],
   processors: ['stylelint-processor-html'],
   extends: 'stylelint-config-standard',
   plugins: [
@@ -11,7 +8,9 @@ module.exports = {
   ],
   rules: {
     'no-empty-source': null,            // Allow .vue files without <style/>
-    'comment-empty-line-before': null,  // Not necessary
+    'comment-empty-line-before': null,  // Not helpful for rapid development
+    'property-no-unknown': true,
+    'at-rule-no-unknown': [true, { ignoreAtRules: ['if', 'for', 'each'] }],
     'order/properties-order': [         // Based on https://github.com/twbs/bootstrap/blob/v4-dev/.scss-lint.yml
       'position',
       'top',
@@ -32,6 +31,23 @@ module.exports = {
       'flex-grow',
       'flex-order',
       'flex-pack',
+      'grid',
+      'grid-template',
+      'grid-template-columns',
+      'grid-template-rows',
+      'grid-template-areas',
+      'grid-auto-columns',
+      'grid-auto-rows',
+      'grid-column-start',
+      'grid-column-end',
+      'grid-column-gap',
+      'grid-gap',
+      'grid-row-start',
+      'grid-row-end',
+      'grid-row-gap',
+      'justify-items',
+      'justify-self',
+      'grid-auto-flow',
       'align-items',
       'align-self',
       'justify-content',
