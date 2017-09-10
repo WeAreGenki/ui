@@ -1,38 +1,25 @@
-/* FIXME: Unknown postcss properties */
+/* TODO: Create some premade grid templates (each in its own class) */
 
-/*
-  EXAMPLES:
-  https://css-tricks.com/snippets/css/complete-guide-grid/
-*/
-
-/* TEMP: https://css-tricks.com/snippets/css/complete-guide-grid/#grid-introduction */
-/* TEMP: https://gridbyexample.com/browsers/ */
-/* TEMP: https://rachelandrew.co.uk/archives/2017/01/03/css-grid-is-coming/ */
-
-/* TODO: Study how grids are done in tachyons (also postcss!) */
-/* FIXME: Make responsive */
-/* FIXME: Reduce or remove calc() */
 .container {
-  width: 100%;
-  /* max-width: calc(100vw - $gutter); */
-  max-width: calc(790px - var(--gutter)); /* FIXME: Should be a fixed width not relative */
-  padding-right: calc(var(--gutter) / 2);
-  padding-left: calc(var(--gutter) / 2);
+  padding-right: calc(var(--gutter-col) / 2);
+  padding-left: calc(var(--gutter-col) / 2);
   margin-right: auto;
-  /* margin-left: auto; */ /* Consider disabling this on <= md */
+  margin-left: auto;
+
+  @media (--breakpoint-large) {
+    max-width: 70em;
+    padding-right: var(--gutter-col);
+    padding-left: var(--gutter-col);
+  }
 }
 
 .grid,
-.grid-inline,
-.grid-sub { /*  stylelint-disable declaration-block-no-redundant-longhand-properties */
-  grid-template-columns: repeat(var(--cols), var(--item-size));
+.grid-inline {
+  grid-template-columns: var(--cols);
   grid-template-rows: var(--rows);
   grid-auto-columns: var(--item-size);
   grid-auto-rows: var(--item-size);
-  grid-column-gap: var(--gutter);
-  grid-row-gap: var(--gutter);
-  /* grid-template-rows: repeat(var(--rows), 1fr); */
-  /* FIXME: Premade templates should be in their own classes -- what common templates might be useful? */
+  grid-gap: var(--gutter-row) var(--gutter-col);
 }
 
 .grid {
@@ -43,91 +30,127 @@
   display: inline-grid;
 }
 
-.grid-sub {
-  display: subgrid;
+/* Number of columns in grid */
+@for $i from 1 to var(--max-cols) {
+  .x$(i) { grid-template-columns: repeat($i, var(--item-size)); }
+
+  @each $long, $short in (var(--breakpoints-long)), (var(--breakpoints-short)) {
+    @media ($long) {
+      .x$(i)$(short) { grid-template-columns: repeat($i, var(--item-size)); }
+    }
+  }
 }
 
-/* FIXME: Can this be done without using `repeat(X, $item-size)`? */
-/*
-.x2 { grid-template-columns: 2; }
-.x3 { grid-template-columns: 3; }
-.x4 { grid-template-columns: 4; }
-.x5 { grid-template-columns: 5; }
-.x6 { grid-template-columns: 6; }
-.x12 { grid-template-columns: 12; }
-*/
-.x2 { grid-template-columns: repeat(2, var(--item-size)); }
-.x3 { grid-template-columns: repeat(3, var(--item-size)); }
-.x4 { grid-template-columns: repeat(4, var(--item-size)); }
-.x5 { grid-template-columns: repeat(5, var(--item-size)); }
-.x6 { grid-template-columns: repeat(6, var(--item-size)); }
-.x12 { grid-template-columns: repeat(12, var(--item-size)); } /* default */
+/* Number of rows in grid */
+@for $i from 2 to var(--max-rows) {
+  .y$(i) { grid-template-rows: repeat($i, auto); }
 
-.y2 { grid-template-rows: 2; }
-.y3 { grid-template-rows: 3; }
-.y4 { grid-template-rows: 4; }
-.y5 { grid-template-rows: 5; }
-.y6 { grid-template-rows: 6; }
+  @each $long, $short in (var(--breakpoints-long)), (var(--breakpoints-short)) {
+    @media ($long) {
+      .y$(i)$(short) { grid-template-rows: repeat($i, auto); }
+    }
+  }
+}
 
-/* TODO: Automate the creation of these classes + their responsive equivalents */
+/* Starting column */
+@for $i from 1 to var(--max-cols) {
+  .c$(i) { grid-column-start: $i; }
 
-.c1 { grid-column-start: 1; }
-.c2 { grid-column-start: 2; }
-.c3 { grid-column-start: 3; }
-.c4 { grid-column-start: 4; }
-.c5 { grid-column-start: 5; }
-.c6 { grid-column-start: 6; }
-.c7 { grid-column-start: 7; }
-.c8 { grid-column-start: 8; }
-.c9 { grid-column-start: 9; }
-.c10 { grid-column-start: 10; }
-.c11 { grid-column-start: 11; }
-.c12 { grid-column-start: 12; }
+  @each $long, $short in (var(--breakpoints-long)), (var(--breakpoints-short)) {
+    @media ($long) {
+      .c$(i)$(short) { grid-column-start: $i; }
+    }
+  }
+}
 
-.r1 { grid-row-start: 1; }
-.r2 { grid-row-start: 2; }
-.r3 { grid-row-start: 3; }
-.r4 { grid-row-start: 4; }
-.r5 { grid-row-start: 5; }
-.r6 { grid-row-start: 6; }
+/* Starting row */
+@for $i from 1 to var(--max-rows) {
+  .r$(i) { grid-row-start: $i; }
 
-.w2 { grid-column-end: span 2; }
-.w3 { grid-column-end: span 3; }
-.w4 { grid-column-end: span 4; }
-.w5 { grid-column-end: span 5; }
-.w6 { grid-column-end: span 6; }
-.w7 { grid-column-end: span 7; }
-.w8 { grid-column-end: span 8; }
-.w9 { grid-column-end: span 9; }
-.w10 { grid-column-end: span 10; }
-.w11 { grid-column-end: span 11; }
-.w12 { grid-column-end: span 12; }
+  @each $long, $short in (var(--breakpoints-long)), (var(--breakpoints-short)) {
+    @media ($long) {
+      .r$(i)$(short) { grid-row-start: $i; }
+    }
+  }
+}
 
-.h2 { grid-row-end: span 2; }
-.h3 { grid-row-end: span 3; }
-.h4 { grid-row-end: span 4; }
-.h5 { grid-row-end: span 5; }
-.h6 { grid-row-end: span 6; }
+/* Item width */
+@for $i from 1 to var(--max-cols) {
+  .w$(i) { grid-column-end: span $i; }
+
+  @each $long, $short in (var(--breakpoints-long)), (var(--breakpoints-short)) {
+    @media ($long) {
+      .w$(i)$(short) { grid-column-end: span $i; }
+    }
+  }
+}
+
+/* Item height */
+@for $i from 1 to var(--max-rows) {
+  .h$(i) { grid-row-end: span $i; }
+
+  @each $long, $short in (var(--breakpoints-long)), (var(--breakpoints-short)) {
+    @media ($long) {
+      .h$(i)$(short) { grid-row-end: span $i; }
+    }
+  }
+}
 
 .align-row-stretch { justify-items: stretch; } /* default */
 .align-row-start { justify-items: start; }
 .align-row-end { justify-items: end; }
 .align-row-center { justify-items: center; }
 
+@each $long, $short in (var(--breakpoints-long)), (var(--breakpoints-short)) {
+  @media ($long) {
+    .align-row-stretch$(short) { justify-items: stretch; }
+    .align-row-start$(short) { justify-items: start; }
+    .align-row-end$(short) { justify-items: end; }
+    .align-row-center$(short) { justify-items: center; }
+  }
+}
+
 .align-col-stretch { align-items: stretch; } /* default */
 .align-col-start { align-items: start; }
 .align-col-end { align-items: end; }
 .align-col-center { align-items: center; }
+
+@each $long, $short in (var(--breakpoints-long)), (var(--breakpoints-short)) {
+  @media ($long) {
+    .align-col-stretch$(short) { align-items: stretch; }
+    .align-col-start$(short) { align-items: start; }
+    .align-col-end$(short) { align-items: end; }
+    .align-col-center$(short) { align-items: center; }
+  }
+}
 
 .align-item-row-stretch { justify-self: stretch; } /* default */
 .align-item-row-start { justify-self: start; }
 .align-item-row-end { justify-self: end; }
 .align-item-row-center { justify-self: center; }
 
+@each $long, $short in (var(--breakpoints-long)), (var(--breakpoints-short)) {
+  @media ($long) {
+    .align-item-row-stretch$(short) { justify-self: stretch; }
+    .align-item-row-start$(short) { justify-self: start; }
+    .align-item-row-end$(short) { justify-self: end; }
+    .align-item-row-center$(short) { justify-self: center; }
+  }
+}
+
 .align-item-col-stretch { align-self: stretch; } /* default */
 .align-item-col-start { align-self: start; }
 .align-item-col-end { align-self: end; }
 .align-item-col-center { align-self: center; }
+
+@each $long, $short in (var(--breakpoints-long)), (var(--breakpoints-short)) {
+  @media ($long) {
+    .align-item-col-stretch$(short) { align-self: stretch; }
+    .align-item-col-start$(short) { align-self: start; }
+    .align-item-col-end$(short) { align-self: end; }
+    .align-item-col-center$(short) { align-self: center; }
+  }
+}
 
 .justify-row-stretch { justify-content: stretch; } /* default */
 .justify-row-start { justify-content: start; }
@@ -137,6 +160,18 @@
 .justify-row-space-between { justify-content: space-between; }
 .justify-row-space-evenly { justify-content: space-evenly; }
 
+@each $long, $short in (var(--breakpoints-long)), (var(--breakpoints-short)) {
+  @media ($long) {
+    .justify-row-stretch$(short) { justify-content: stretch; }
+    .justify-row-start$(short) { justify-content: start; }
+    .justify-row-end$(short) { justify-content: end; }
+    .justify-row-center$(short) { justify-content: center; }
+    .justify-row-space-around$(short) { justify-content: space-around; }
+    .justify-row-space-between$(short) { justify-content: space-between; }
+    .justify-row-space-evenly$(short) { justify-content: space-evenly; }
+  }
+}
+
 .justify-col-stretch { align-content: stretch; } /* default */
 .justify-col-start { align-content: start; }
 .justify-col-end { align-content: end; }
@@ -145,7 +180,28 @@
 .justify-col-space-between { align-content: space-between; }
 .justify-col-space-evenly { align-content: space-evenly; }
 
+@each $long, $short in (var(--breakpoints-long)), (var(--breakpoints-short)) {
+  @media ($long) {
+    .justify-col-stretch$(short) { align-content: stretch; }
+    .justify-col-start$(short) { align-content: start; }
+    .justify-col-end$(short) { align-content: end; }
+    .justify-col-center$(short) { align-content: center; }
+    .justify-col-space-around$(short) { align-content: space-around; }
+    .justify-col-space-between$(short) { align-content: space-between; }
+    .justify-col-space-evenly$(short) { align-content: space-evenly; }
+  }
+}
+
 .flow-row { grid-auto-flow: row; } /* default */
 .flow-col { grid-auto-flow: column; }
 .flow-row-dense { grid-auto-flow: row dense; }
 .flow-col-dense { grid-auto-flow: column dense; }
+
+@each $long, $short in (var(--breakpoints-long)), (var(--breakpoints-short)) {
+  @media ($long) {
+    .flow-row$(short) { grid-auto-flow: row; }
+    .flow-col$(short) { grid-auto-flow: column; }
+    .flow-row-dense$(short) { grid-auto-flow: row dense; }
+    .flow-col-dense$(short) { grid-auto-flow: column dense; }
+  }
+}
