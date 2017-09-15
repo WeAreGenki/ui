@@ -20,51 +20,6 @@ a {
   }
 }
 
-/* // FIXME: Use a different hover animation, and specifically use high performance gpu rendered CSS transform + translate/opacity/ scale(?) */
-/*
-// a {
-//   display: inline-block;
-//   vertical-align: bottom; // ORIGINAL: middle
-//   // -webkit-transform: translateZ(0); // Safari & Android =< 4.4.4
-//   transform: translateZ(0);
-//   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-//   // -webkit-backface-visibility: hidden; // Safari & Android =< 4.4.4
-//   backface-visibility: hidden;
-//   -moz-osx-font-smoothing: grayscale;
-//   margin: -0.5em;
-//   padding: 0.5em;
-//   position: relative;
-//   overflow: hidden;
-
-//   &::before {
-//     content: "";
-//     position: absolute;
-//     z-index: -1;
-//     left: 50%;
-//     right: 50%;
-//     bottom: 0.5em;
-//     background: #2098d1;
-//     height: 4px;
-
-//     // -webkit-transition-property: left, right; // Android =< 4.3
-//     // -webkit-transition-duration: var(--duration; // Android =< 4.)3
-//     // -webkit-transition-timing-function: ease-out; // Android =< 4.3
-
-//     transition-property: left, right;
-//     transition-duration: 0.3s;
-//     transition-timing-function: ease-out;
-//   }
-
-//   &:hover::before,
-//   &:focus::before,
-//   &:active::before {
-//     left: 0.5em;
-//     right: 0.5em;
-//     bottom: 0.5em;
-//   }
-// }
-*/
-
 li {
   margin-bottom: 0.5rem; /* Extra space between list items */
 }
@@ -78,6 +33,16 @@ li {
   font-weight: var(--font-weight-light);
 }
 
-.text-center {
-  text-align: center;
+.tl { text-align: left; } /* default */
+.tr { text-align: right; }
+.tc { text-align: center; }
+.tj { text-align: justify; }
+
+@each $media, $ext in (var(--breakpoint-media)), (var(--breakpoints)) {
+  @media ($media) {
+    .tl$(ext) { text-align: left; }
+    .tr$(ext) { text-align: right; }
+    .tc$(ext) { text-align: center; }
+    .tj$(ext) { text-align: justify; }
+  }
 }

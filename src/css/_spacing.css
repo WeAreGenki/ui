@@ -1,0 +1,79 @@
+/*
+  .m = margin
+  .p = padding
+
+  h = horizontal
+  v = vertical
+  t = top
+  r = right
+  b = bottom
+  l = left
+
+  0, 1, 2, 3, 4, 5, 6, 7
+
+  -ns = not small (both medium and large)
+  -m = medium
+  -l = large
+*/
+
+@each $step, $val in (var(--spacing-steps)), (var(--spacing-values)) {
+  .mt$(step) { margin-top: $val; }
+  .mr$(step) { margin-right: $val; }
+  .mb$(step) { margin-bottom: $val; }
+  .ml$(step) { margin-left: $val; }
+
+  .pt$(step) { padding-top: $val; }
+  .pr$(step) { padding-right: $val; }
+  .pb$(step) { padding-bottom: $val; }
+  .pl$(step) { padding-left: $val; }
+
+  @each $media, $ext in (var(--breakpoint-media)), (var(--breakpoints)) {
+    @media ($media) {
+      .mt$(step)$(ext) { margin-top: $val; }
+      .mr$(step)$(ext) { margin-right: $val; }
+      .mb$(step)$(ext) { margin-bottom: $val; }
+      .ml$(step)$(ext) { margin-left: $val; }
+
+      .pt$(step)$(ext) { padding-top: $val; }
+      .pr$(step)$(ext) { padding-right: $val; }
+      .pb$(step)$(ext) { padding-bottom: $val; }
+      .pl$(step)$(ext) { padding-left: $val; }
+    }
+  }
+}
+
+/* Auto margin */
+
+.mh-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.mv-auto {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.mt-auto { margin-top: auto !important; }
+.mr-auto { margin-right: auto !important; }
+.mb-auto { margin-bottom: auto !important; }
+.ml-auto { margin-left: auto !important; }
+
+@each $media, $ext in (var(--breakpoint-media)), (var(--breakpoints)) {
+  @media ($media) {
+    .mh-auto$(ext) {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+
+    .mv-auto$(ext) {
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .mt-auto$(ext) { margin-top: auto !important; }
+    .mr-auto$(ext) { margin-right: auto !important; }
+    .mb-auto$(ext) { margin-bottom: auto !important; }
+    .ml-auto$(ext) { margin-left: auto !important; }
+  }
+}

@@ -1,6 +1,5 @@
-/* TODO: Go through the bootstrap reboot file and incorporate anything that may be useful */
+/* Reboot */
 
-/* From tachyons */
 html,
 body,
 div,
@@ -73,10 +72,12 @@ body {
   }
 }
 
-button {
+button,
+.btn {
   font-family: var(--font-family);
   font-size: var(--font-size);
   font-weight: var(--font-weight);
+  cursor: pointer;
 
   @media (--breakpoint-not-small) {
     @if var(--font-size-ns) != var(--font-size) {

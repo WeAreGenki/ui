@@ -1,13 +1,8 @@
-/* FIXME: Stylelint in both VS Code and webpack setup */
-
 .btn {
   padding: 0.4rem 0.9rem;
-  /* margin: 0; */
   margin: 0.2rem 0;
-  font-size: var(--font-size);
   line-height: 1;
   color: var(--body-colour);
-  cursor: pointer;
   background-color: var(--white);
   border: 1px solid var(--grey-500);
   border-radius: var(--radius);
@@ -33,6 +28,7 @@
   margin-left: 0.15rem;
 }
 
+/* FIXME: Better naming convention so it's not confusing with responsive breakpoint names */
 .btn-lg {
-  font-size: calc(var(--font-size) * 1.2); /* FIXME: Simplify in compiled output; can postcss do calculation like SCSS? */
+  font-size: calc(var(--font-size) * 1.2);
 }

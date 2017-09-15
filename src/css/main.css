@@ -1,14 +1,17 @@
 /*! WAG GRID v1.0.0-beta1 | https://wearegenki.com */
 
+/* @import-normalize; */
+
 /* @import "_variables-colours"; */ /* Colours are imported inside the _variables file */
 @import "_variables";
 @import "_reboot";
 @import "_typography";
 @import "_grid";
 @import "_flex";
-@import "_forms";
 @import "_display";
-@import "_utils";
-@import "_buttons";
+@import "_spacing";
+@import "_form";
+@import "_button";
 @import "_card";
 @import "_nav";
+@import "_utils";

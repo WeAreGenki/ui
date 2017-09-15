@@ -1,6 +1,8 @@
 /* TODO: Create some premade grid templates (each in its own class) */
 
-.container {
+/* Container */
+
+.con {
   padding-right: calc(var(--gutter-col) / 2);
   padding-left: calc(var(--gutter-col) / 2);
   margin-right: auto;
@@ -12,6 +14,8 @@
     padding-left: var(--gutter-col);
   }
 }
+
+/* Grid */
 
 .grid,
 .grid-inline {
@@ -30,68 +34,46 @@
   display: inline-grid;
 }
 
-/* Number of columns in grid */
-@for $i from 1 to var(--max-cols) {
-  .x$(i) { grid-template-columns: repeat($i, var(--item-size)); }
+/*
+  .x = number of columns in grid
+  .y = number of rows in grid
+  .c = starting column
+  .r = starting row
+  .w = item width
+  .h = item height
 
-  @each $long, $short in (var(--breakpoints-long)), (var(--breakpoints-short)) {
-    @media ($long) {
-      .x$(i)$(short) { grid-template-columns: repeat($i, var(--item-size)); }
+  cols = 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
+  rows = 1, 2, 3, 4, 5, 6
+
+  -ns = not small (both medium and large)
+  -m = medium
+  -l = large
+*/
+
+@each $step in var(--col-steps) {
+  .x$(step) { grid-template-columns: repeat($step, var(--item-size)); }
+  .c$(step) { grid-column-start: $step; }
+  .w$(step) { grid-column-end: span $step; }
+
+  @each $media, $ext in (var(--breakpoint-media)), (var(--breakpoints)) {
+    @media ($media) {
+      .x$(step)$(ext) { grid-template-columns: repeat($step, var(--item-size)); }
+      .c$(step)$(ext) { grid-column-start: $step; }
+      .w$(step)$(ext) { grid-column-end: span $step; }
     }
   }
 }
 
-/* Number of rows in grid */
-@for $i from 2 to var(--max-rows) {
-  .y$(i) { grid-template-rows: repeat($i, auto); }
+@each $step in var(--row-steps) {
+  .y$(step) { grid-template-rows: repeat($step, auto); }
+  .r$(step) { grid-row-start: $step; }
+  .h$(step) { grid-row-end: span $step; }
 
-  @each $long, $short in (var(--breakpoints-long)), (var(--breakpoints-short)) {
-    @media ($long) {
-      .y$(i)$(short) { grid-template-rows: repeat($i, auto); }
-    }
-  }
-}
-
-/* Starting column */
-@for $i from 1 to var(--max-cols) {
-  .c$(i) { grid-column-start: $i; }
-
-  @each $long, $short in (var(--breakpoints-long)), (var(--breakpoints-short)) {
-    @media ($long) {
-      .c$(i)$(short) { grid-column-start: $i; }
-    }
-  }
-}
-
-/* Starting row */
-@for $i from 1 to var(--max-rows) {
-  .r$(i) { grid-row-start: $i; }
-
-  @each $long, $short in (var(--breakpoints-long)), (var(--breakpoints-short)) {
-    @media ($long) {
-      .r$(i)$(short) { grid-row-start: $i; }
-    }
-  }
-}
-
-/* Item width */
-@for $i from 1 to var(--max-cols) {
-  .w$(i) { grid-column-end: span $i; }
-
-  @each $long, $short in (var(--breakpoints-long)), (var(--breakpoints-short)) {
-    @media ($long) {
-      .w$(i)$(short) { grid-column-end: span $i; }
-    }
-  }
-}
-
-/* Item height */
-@for $i from 1 to var(--max-rows) {
-  .h$(i) { grid-row-end: span $i; }
-
-  @each $long, $short in (var(--breakpoints-long)), (var(--breakpoints-short)) {
-    @media ($long) {
-      .h$(i)$(short) { grid-row-end: span $i; }
+  @each $media, $ext in (var(--breakpoint-media)), (var(--breakpoints)) {
+    @media ($media) {
+      .y$(step)$(ext) { grid-template-rows: repeat($step, auto); }
+      .r$(step)$(ext) { grid-row-start: $step; }
+      .h$(step)$(ext) { grid-row-end: span $step; }
     }
   }
 }
@@ -101,56 +83,20 @@
 .align-row-end { justify-items: end; }
 .align-row-center { justify-items: center; }
 
-@each $long, $short in (var(--breakpoints-long)), (var(--breakpoints-short)) {
-  @media ($long) {
-    .align-row-stretch$(short) { justify-items: stretch; }
-    .align-row-start$(short) { justify-items: start; }
-    .align-row-end$(short) { justify-items: end; }
-    .align-row-center$(short) { justify-items: center; }
-  }
-}
-
 .align-col-stretch { align-items: stretch; } /* default */
 .align-col-start { align-items: start; }
 .align-col-end { align-items: end; }
 .align-col-center { align-items: center; }
-
-@each $long, $short in (var(--breakpoints-long)), (var(--breakpoints-short)) {
-  @media ($long) {
-    .align-col-stretch$(short) { align-items: stretch; }
-    .align-col-start$(short) { align-items: start; }
-    .align-col-end$(short) { align-items: end; }
-    .align-col-center$(short) { align-items: center; }
-  }
-}
 
 .align-item-row-stretch { justify-self: stretch; } /* default */
 .align-item-row-start { justify-self: start; }
 .align-item-row-end { justify-self: end; }
 .align-item-row-center { justify-self: center; }
 
-@each $long, $short in (var(--breakpoints-long)), (var(--breakpoints-short)) {
-  @media ($long) {
-    .align-item-row-stretch$(short) { justify-self: stretch; }
-    .align-item-row-start$(short) { justify-self: start; }
-    .align-item-row-end$(short) { justify-self: end; }
-    .align-item-row-center$(short) { justify-self: center; }
-  }
-}
-
 .align-item-col-stretch { align-self: stretch; } /* default */
 .align-item-col-start { align-self: start; }
 .align-item-col-end { align-self: end; }
 .align-item-col-center { align-self: center; }
-
-@each $long, $short in (var(--breakpoints-long)), (var(--breakpoints-short)) {
-  @media ($long) {
-    .align-item-col-stretch$(short) { align-self: stretch; }
-    .align-item-col-start$(short) { align-self: start; }
-    .align-item-col-end$(short) { align-self: end; }
-    .align-item-col-center$(short) { align-self: center; }
-  }
-}
 
 .justify-row-stretch { justify-content: stretch; } /* default */
 .justify-row-start { justify-content: start; }
@@ -160,18 +106,6 @@
 .justify-row-space-between { justify-content: space-between; }
 .justify-row-space-evenly { justify-content: space-evenly; }
 
-@each $long, $short in (var(--breakpoints-long)), (var(--breakpoints-short)) {
-  @media ($long) {
-    .justify-row-stretch$(short) { justify-content: stretch; }
-    .justify-row-start$(short) { justify-content: start; }
-    .justify-row-end$(short) { justify-content: end; }
-    .justify-row-center$(short) { justify-content: center; }
-    .justify-row-space-around$(short) { justify-content: space-around; }
-    .justify-row-space-between$(short) { justify-content: space-between; }
-    .justify-row-space-evenly$(short) { justify-content: space-evenly; }
-  }
-}
-
 .justify-col-stretch { align-content: stretch; } /* default */
 .justify-col-start { align-content: start; }
 .justify-col-end { align-content: end; }
@@ -180,28 +114,52 @@
 .justify-col-space-between { align-content: space-between; }
 .justify-col-space-evenly { align-content: space-evenly; }
 
-@each $long, $short in (var(--breakpoints-long)), (var(--breakpoints-short)) {
-  @media ($long) {
-    .justify-col-stretch$(short) { align-content: stretch; }
-    .justify-col-start$(short) { align-content: start; }
-    .justify-col-end$(short) { align-content: end; }
-    .justify-col-center$(short) { align-content: center; }
-    .justify-col-space-around$(short) { align-content: space-around; }
-    .justify-col-space-between$(short) { align-content: space-between; }
-    .justify-col-space-evenly$(short) { align-content: space-evenly; }
-  }
-}
-
 .flow-row { grid-auto-flow: row; } /* default */
 .flow-col { grid-auto-flow: column; }
 .flow-row-dense { grid-auto-flow: row dense; }
 .flow-col-dense { grid-auto-flow: column dense; }
 
-@each $long, $short in (var(--breakpoints-long)), (var(--breakpoints-short)) {
-  @media ($long) {
-    .flow-row$(short) { grid-auto-flow: row; }
-    .flow-col$(short) { grid-auto-flow: column; }
-    .flow-row-dense$(short) { grid-auto-flow: row dense; }
-    .flow-col-dense$(short) { grid-auto-flow: column dense; }
+@each $media, $ext in (var(--breakpoint-media)), (var(--breakpoints)) {
+  @media ($media) {
+    .align-row-stretch$(ext) { justify-items: stretch; }
+    .align-row-start$(ext) { justify-items: start; }
+    .align-row-end$(ext) { justify-items: end; }
+    .align-row-center$(ext) { justify-items: center; }
+
+    .align-col-stretch$(ext) { align-items: stretch; }
+    .align-col-start$(ext) { align-items: start; }
+    .align-col-end$(ext) { align-items: end; }
+    .align-col-center$(ext) { align-items: center; }
+
+    .align-item-row-stretch$(ext) { justify-self: stretch; }
+    .align-item-row-start$(ext) { justify-self: start; }
+    .align-item-row-end$(ext) { justify-self: end; }
+    .align-item-row-center$(ext) { justify-self: center; }
+
+    .align-item-col-stretch$(ext) { align-self: stretch; }
+    .align-item-col-start$(ext) { align-self: start; }
+    .align-item-col-end$(ext) { align-self: end; }
+    .align-item-col-center$(ext) { align-self: center; }
+
+    .justify-row-stretch$(ext) { justify-content: stretch; }
+    .justify-row-start$(ext) { justify-content: start; }
+    .justify-row-end$(ext) { justify-content: end; }
+    .justify-row-center$(ext) { justify-content: center; }
+    .justify-row-space-around$(ext) { justify-content: space-around; }
+    .justify-row-space-between$(ext) { justify-content: space-between; }
+    .justify-row-space-evenly$(ext) { justify-content: space-evenly; }
+
+    .justify-col-stretch$(ext) { align-content: stretch; }
+    .justify-col-start$(ext) { align-content: start; }
+    .justify-col-end$(ext) { align-content: end; }
+    .justify-col-center$(ext) { align-content: center; }
+    .justify-col-space-around$(ext) { align-content: space-around; }
+    .justify-col-space-between$(ext) { align-content: space-between; }
+    .justify-col-space-evenly$(ext) { align-content: space-evenly; }
+
+    .flow-row$(ext) { grid-auto-flow: row; }
+    .flow-col$(ext) { grid-auto-flow: column; }
+    .flow-row-dense$(ext) { grid-auto-flow: row dense; }
+    .flow-col-dense$(ext) { grid-auto-flow: column dense; }
   }
 }
