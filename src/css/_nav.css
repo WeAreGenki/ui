@@ -1,9 +1,5 @@
 /* Navbar */
 
-body {
-  /* margin-top: 5rem; */ /* FIXME: Not necessary with sidebar nav but worth including probably (?)*/
-}
-
 .nav {
   display: flex;
 }
@@ -25,8 +21,8 @@ body {
     color: var(--white);
 
     &:hover {
-      /* TODO: Change */
-      /* background-color: var(--primary); */
+      /* TODO: */
+      /* background-color: var(--primary-dark); */
       background-color: var(--primary);
     }
   }
@@ -37,7 +33,7 @@ body {
   margin: 0; /* Necessary due to larger click area on <a> links */
   cursor: pointer;
 
-&:hover {
+  &:hover {
     text-decoration: none;
   }
 }
@@ -68,4 +64,5 @@ body {
   margin-top: 3rem;
   margin-bottom: 1rem;
   color: var(--grey-500);
+  text-align: center;
 }
