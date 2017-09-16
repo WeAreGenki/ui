@@ -6,4 +6,4 @@ TODO: Write a nice readme :)
 
 -----
 
-© 2017 We Are Genki
+© 2017 [We Are Genki](https://wearegenki.com)
