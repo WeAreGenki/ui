@@ -1,14 +1,14 @@
-/*! WAG GRID v1.0.0-beta1 | https://wearegenki.com */
+/*! WAG GRID v1.0.0-beta1 | https://wearegenki.com/tools#FOSS */
 
 /* @import-normalize; */
 
-/* @import "_variables-colours"; */ /* Colours are imported inside the _variables file */
-@import "_variables";
+@import "_variables"; /* Colours are also imported here */
 @import "_reboot";
 @import "_typography";
 @import "_grid";
 @import "_flex";
 @import "_display";
+@import "_width";
 @import "_spacing";
 @import "_form";
 @import "_button";

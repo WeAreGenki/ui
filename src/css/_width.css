@@ -1,0 +1,38 @@
+/* Width */
+
+/*
+  NOTE: This is different from grid item width:
+    .w3 = grid item width (3 grid columns wide)
+    .w-75 = element width (75% wide)
+
+  BASE:
+    .w = width
+
+  VALUE:
+    -100 = 100%
+    -75 = 75%
+    -50 = 50%
+    -25 = 25%
+    -a = auto
+
+  RESPONSIVE:
+    -ns = not small (both medium and large)
+    -m = medium
+    -l = large
+*/
+
+.w-100 { width: 100%; }
+.w-75 { width: 75%; }
+.w-50 { width: 50%; }
+.w-25 { width: 25%; }
+.w-a { width: auto; } /* default */
+
+@each $media, $ext in (var(--breakpoint-media)), (var(--breakpoints)) {
+  @media ($media) {
+    .w-100$(ext) { width: 100%; }
+    .w-75$(ext) { width: 75%; }
+    .w-50$(ext) { width: 50%; }
+    .w-25$(ext) { width: 25%; }
+    .w-a$(ext) { width: auto; }
+  }
+}
