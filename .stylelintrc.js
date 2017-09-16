@@ -1,6 +1,6 @@
 module.exports = {
   cache: true,
-  // ignoreFiles: ['./src/css/framework/**/*.postcss'],
+  // ignoreFiles: ['./src/css/framework/**/*.css'],
   processors: ['stylelint-processor-html'],
   extends: 'stylelint-config-standard',
   plugins: [
@@ -10,7 +10,7 @@ module.exports = {
     'no-empty-source': null,            // Allow .vue files without <style/>
     'comment-empty-line-before': null,  // Not helpful for rapid development
     'property-no-unknown': true,
-    'at-rule-no-unknown': [true, { ignoreAtRules: ['if', 'for', 'each'] }],
+    'at-rule-no-unknown': [true, { ignoreAtRules: ['if', 'each'] }],
     'order/properties-order': [         // Based on https://github.com/twbs/bootstrap/blob/v4-dev/.scss-lint.yml
       'position',
       'top',

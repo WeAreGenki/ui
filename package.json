@@ -1,26 +1,26 @@
 {
-  "name": "wag-framework",
+  "name": "wag-grid",
   "version": "0.0.0",
-  "description": "We Are Genki CSS Framework",
+  "description": "CSS Grid based CSS library + Vue.js framework",
   "scripts": {
     "dev": "",
     "build": "",
+    "lint": "",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WeAreGenki/wag-framework.git"
+    "url": "git+https://github.com/WeAreGenki/WAG-GRID.git"
   },
   "author": "Max Milton <max@wearegenki.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/WeAreGenki/wag-framework/issues"
+    "url": "https://github.com/WeAreGenki/WAG-GRID/issues"
   },
-  "homepage": "https://labs.wearegenki.com/framework",
-  "dependencies": {
-    "raven-js": "^3.17.0",
-    "vue": "^2.4.2",
-    "vue-router": "^2.7.0"
+  "homepage": "https://wearegenki.com/tools#FOSS",
+  "peerDependencies": {
+    "vue": "^2.0.0",
+    "vue-router": "^2.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.4",
@@ -28,11 +28,11 @@
     "babel-eslint": "^7.2.3",
     "babel-preset-env": "^1.6.0",
     "babel-preset-stage-2": "^6.24.1",
-    "clean-css": "^4.1.8",
     "css-mqpacker": "^6.0.1",
     "eslint": "^4.6.1",
     "eslint-config-airbnb-base": "^11.3.2",
     "eslint-friendly-formatter": "^3.0.0",
+    "eslint-plugin-compat": "^1.0.4",
     "eslint-plugin-html": "^3.2.1",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-vue": "^3.13.0",
@@ -43,7 +43,6 @@
     "postcss-css-variables": "^0.8.0",
     "postcss-custom-media": "^6.0.0",
     "postcss-each": "^0.10.0",
-    "postcss-for": "^2.1.1",
     "postcss-import": "^10.0.0",
     "postcss-nested": "^2.1.2",
     "rollup": "^0.47.6",
@@ -51,5 +50,14 @@
     "stylelint-config-standard": "^17.0.0",
     "stylelint-order": "^0.6.0",
     "stylelint-processor-html": "^1.0.0"
-  }
+  },
+  "engines": {
+    "node": ">= 8.0.0",
+    "npm": ">= 5.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 10"
+  ]
 }

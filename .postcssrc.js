@@ -4,7 +4,6 @@ module.exports = {
   plugins: {
     'postcss-import': { path: ['src'] },
     'postcss-at-rules-variables': {},
-    'postcss-for': {},
     'postcss-each': {},
     // 'postcss-mixins': {},
     'postcss-nested': {},
@@ -15,5 +14,7 @@ module.exports = {
     // 'postcss-color-function': {},
     'css-mqpacker': {},
     'autoprefixer': {},
+    // 'postcss-normalise': {}, // FIXME: Couldn't get this to work
+    'postcss-reporter': { filter: msg => msg.type !== 'dependency' },
   }
 }

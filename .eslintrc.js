@@ -11,22 +11,21 @@ module.exports = {
   },
   extends: [
     'airbnb-base',
-    'plugin:vue/recommended'
+    'plugin:vue/recommended',
   ],
-  // required to lint *.vue files
   plugins: [
-    'html'
+    'compat', // find out when using functionality which will need to be transpiled
+    'html' // required to lint *.vue files
   ],
-  // check if imports actually resolve
+  // Check if imports actually resolve
   'settings': {
-    // "html/html-extensions": [".html"],  // don't include .vue
+    'html/html-extensions': ['.html', '.vue'],  // fixes linting in .vue
     'import/resolver': {
       'webpack': {
         'config': 'build/webpack.base.conf.js'
       }
     }
   },
-  // add your custom rules here
   'rules': {
     // don't require .vue extension when importing
     'import/extensions': ['error', 'always', {
@@ -38,6 +37,9 @@ module.exports = {
       'optionalDependencies': ['test/unit/index.js']
     }],
     // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
+    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
+    // We Are Genki rules
+    'compat/compat': 'warn',
+    'object-curly-newline': ['error', { 'consistent': true }],
   }
 }
