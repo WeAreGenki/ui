@@ -1,10 +1,10 @@
 .btn {
-  padding: 0.4rem 0.9rem;
+  padding: 0.75rem 2rem;
   margin: 0.2rem 0;
   line-height: 1;
-  color: var(--body-colour);
-  background-color: var(--white);
-  border: 1px solid var(--grey-500);
+  color: var(--white);
+  background-color: var(--blue-a400);
+  border: 1px solid transparent;
   border-radius: var(--radius);
 
   &:hover,
@@ -28,7 +28,7 @@
   margin-left: 0.15rem;
 }
 
-/* FIXME: Better naming convention so it's not confusing with responsive breakpoint names */
-.btn-lg {
+.btn-large {
+  /* FIXME: Font size calculation at breakpoints */
   font-size: calc(var(--font-size) * 1.2);
 }

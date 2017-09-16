@@ -17,8 +17,8 @@
 
 /* Grid */
 
-.grid,
-.grid-inline {
+.dg,
+.dig {
   grid-template-columns: var(--cols);
   grid-template-rows: var(--rows);
   grid-auto-columns: var(--item-size);
@@ -26,11 +26,11 @@
   grid-gap: var(--gutter-row) var(--gutter-col);
 }
 
-.grid {
+.dg {
   display: grid;
 }
 
-.grid-inline {
+.dig {
   display: inline-grid;
 }
 

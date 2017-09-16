@@ -1,16 +1,34 @@
 /* README: Some typographic styles are in _reboot */
 
+/* Headings */
+
 h1 {
   font-weight: var(--font-weight-light);
 }
+
+/* Paragraphs */
 
 p {
   line-height: 1.5;
 }
 
+.lead {
+  font-size: 1.625rem;
+  font-weight: var(--font-weight-light);
+}
+
+/* Special sizing */
+/* TODO: Improve or remove */
+
+.display1 {
+  font-size: 5rem;
+}
+
+/* Links */
+
 a {
-  padding: 0.5rem 1rem;
-  margin: -0.5rem -1rem;
+  padding: 0.25rem 0.5rem;
+  margin: -0.25rem -0.5rem;
   color: var(--link-colour);
   text-decoration: none;
   word-wrap: break-word;
@@ -18,20 +36,20 @@ a {
   &:hover {
     color: var(--primary);
   }
+
+  @media (--breakpoint-not-small) {
+    padding: 0.5rem 1rem;
+    margin: -0.5rem -1rem;
+  }
 }
+
+/* Lists */
 
 li {
   margin-bottom: 0.5rem; /* Extra space between list items */
 }
 
-.display1 {
-  font-size: 5rem;
-}
-
-.lead {
-  font-size: 1.9rem;
-  font-weight: var(--font-weight-light);
-}
+/* Text alignment */
 
 .tl { text-align: left; } /* default */
 .tr { text-align: right; }
@@ -45,4 +63,14 @@ li {
     .tc$(ext) { text-align: center; }
     .tj$(ext) { text-align: justify; }
   }
+}
+
+/* Colour */
+
+.grey {
+  color: var(--blue-grey-800);
+}
+
+.body-colour {
+  color: var(--body-colour);
 }

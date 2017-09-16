@@ -1,13 +1,29 @@
-/* TODO: Put these in a better file/place (?) */
+/* Responsive images */
+
+img { /* highly opinionated */
+  max-width: 100%;
+  height: auto;
+}
+
+/* Simple horizontal rule */
+
 hr {
   width: 100%;
-  margin: 1rem 0;
-  color: transparent;
+  margin: 4rem 0;
   border-top: 1px solid var(--grey-300);
+  border-bottom: 0;
 }
+
+/* Disabled elements */
 
 .disabled,
 [disabled],
 :disabled {
   cursor: not-allowed;
+}
+
+/* Border radius */
+
+.rad {
+  border-radius: var(--radius);
 }

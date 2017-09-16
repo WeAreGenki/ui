@@ -1,6 +1,8 @@
 @import "_variables-colours";
 
 /* Media Queries */
+/* FIXME: 30em might actually be too small OR we need a new breakpoint */
+/* FIXME: Research bootstraps breakpoints and the em equivalent */
 @custom-media --breakpoint-not-small screen and (min-width: 30em);
 @custom-media --breakpoint-medium screen and (min-width: 30em) and (max-width: 60em);
 @custom-media --breakpoint-large screen and (min-width: 60em);
@@ -21,11 +23,13 @@
   --gutter-row: calc(var(--gutter-col) / 2);
 
   /* Colours */
-  --primary: var(--blue-500);
+  --primary: var(--blue-a400);
   --body-bg: var(--white);
   --body-colour: var(--grey-900);
   --link-colour: var(--primary);
-  --shadow: rgba(0, 0, 0, 0.5);
+  --shadow-light1: rgba(62, 57, 107, 0.07);
+  --shadow-light2: rgba(62, 57, 107, 0.06);
+  --shadow: rgba(62, 57, 107, 0.28);
 
   /* Z-index */
   --toast-z-index: 1080;

@@ -1,7 +1,9 @@
-.flex {
-  display: flex;
-}
+.df { display: flex; }
+.flex-col { flex-direction: column; }
 
-.flex-col {
-  flex-direction: column;
+@each $media, $ext in (var(--breakpoint-media)), (var(--breakpoints)) {
+  @media ($media) {
+    .df$(ext) { display: flex; }
+    .flex-col$(ext) { flex-direction: column; }
+  }
 }

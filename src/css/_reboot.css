@@ -1,5 +1,7 @@
 /* Reboot */
 
+@import-normalize;
+
 html,
 body,
 div,
@@ -44,7 +46,7 @@ input[type="url"],
 
 body {
   margin: 0;
-  overflow-x: hidden; /* Highly opinionated */
+  overflow-x: hidden; /* highly opinionated */
   overflow-y: scroll;
   font-family: var(--font-family);
   font-size: var(--font-size);

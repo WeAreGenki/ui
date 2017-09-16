@@ -1,32 +1,22 @@
-/* FIXME: Look for inspiration from other projects; bootstrap */
+/* Cards */
 
 .card {
   display: block;
   padding: 1.2rem 1.3rem;
   margin: 0;
   border: 1px solid var(--blue-grey-100);
-  border-radius: var(--radius);
-
-  /* TODO: Might not need this once we have the grid working */
-  &:first-of-type {
-    margin-left: 0;
-  }
-
-  &:last-of-type {
-    margin-right: 0;
-  }
-
-  &:hover {
-    background-color: var(--grey-300);
-  }
-
-  > h3 {
-    margin-top: 0;
-  }
 }
 
-/* TODO: Update to be similar to alogia.com's homepage cards */
 .card-shadow {
   border: 1px solid var(--blue-grey-50);
-  box-shadow: 0.12rem 0.13rem 0.9rem rgba(0, 0, 0, 0.06);
+  box-shadow:
+    0 0.625rem 2.5rem 0 var(--shadow-light1),
+    0 0.125rem 0.625rem 0 var(--shadow-light2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  will-change: transform, box-shadow;
+
+  &:hover {
+    box-shadow: 0 1rem 2rem 0 var(--shadow), 0 0 0 transparent;
+    transform: translateY(-5px) translateZ(0);
+  }
 }
