@@ -14,20 +14,27 @@
 import { mapActions } from 'vuex';
 
 export default {
-  name: 'toast',
-  data() {
-    return {
-      dismissible: this.canDismiss,
-    };
-  },
+  name: 'Toast',
   props: {
-    id: Number,
-    link: String,
-    'link-text': String,
-    text: String, // Text only, no HTML
+    id: {
+      type: Number,
+      default: undefined,
+    },
+    link: {
+      type: String,
+      default: '',
+    },
+    'link-text': {
+      type: String,
+      default: '',
+    },
+    text: {
+      type: String, // Text only, no HTML allowed
+      default: '',
+    },
     timeout: {
       type: Number,
-      default: 6000
+      default: 6000,
     },
     canDismiss: {
       type: Boolean,
@@ -39,19 +46,10 @@ export default {
       default: false,
     },
   },
-  methods: {
-    ...mapActions([
-      'removeToast',
-    ]),
-    destroy() {
-      this.removeToast({ id: this.id });
-    },
-    setTimeoutHandler() {
-      window.setTimeout(() => { this.destroy() }, this.timeout);
-    },
-    reloadPage() {
-      location.reload()
-    },
+  data() {
+    return {
+      dismissible: this.canDismiss,
+    };
   },
   mounted() {
     // A timeout value of -1 means it's a permanent toast
@@ -62,6 +60,20 @@ export default {
       this.dismissible = true;
     }
   },
+  methods: {
+    ...mapActions([
+      'removeToast',
+    ]),
+    destroy() {
+      this.removeToast({ id: this.id });
+    },
+    setTimeoutHandler() {
+      window.setTimeout(() => { this.destroy(); }, this.timeout);
+    },
+    reloadPage() {
+      location.reload(); // eslint-disable-line no-restricted-globals
+    },
+  },
 };
 </script>
 
@@ -69,6 +81,7 @@ export default {
 @import "css/import";
 
 /* TODO: Toast stacking (?) */
+/* FIXME: Permanent toast gets dismissed by another toast */
 
 .toast {
   position: absolute;
