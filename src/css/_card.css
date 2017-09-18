@@ -1,9 +1,10 @@
 /* Cards */
 
 .card {
-  display: block;
+  /* display: grid; */
   padding: 1.2rem 1.3rem;
   margin: 0;
+  /* background-color: var(--body-bg); */
   border: 1px solid var(--blue-grey-100);
 }
 
@@ -16,7 +17,9 @@
   will-change: transform, box-shadow;
 
   &:hover {
-    box-shadow: 0 1rem 2rem 0 var(--shadow), 0 0 0 transparent;
-    transform: translateY(-5px) translateZ(0);
+    box-shadow:
+      0 1rem 2rem 0 var(--shadow),
+      0 0 0 transparent;
+    transform: translateY(-5px) translateZ(0); /* translateZ forces GPU rendered layer on browsers which don't support will-change */
   }
 }

@@ -29,10 +29,10 @@
 
 @each $media, $ext in (var(--breakpoint-media)), (var(--breakpoints)) {
   @media ($media) {
-    .w-100$(ext) { width: 100%; }
-    .w-75$(ext) { width: 75%; }
-    .w-50$(ext) { width: 50%; }
-    .w-25$(ext) { width: 25%; }
-    .w-a$(ext) { width: auto; }
+    .w-100-$(ext) { width: 100%; }
+    .w-75-$(ext) { width: 75%; }
+    .w-50-$(ext) { width: 50%; }
+    .w-25-$(ext) { width: 25%; }
+    .w-a-$(ext) { width: auto; }
   }
 }

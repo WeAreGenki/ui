@@ -1,6 +1,7 @@
 /*! WAG GRID v1.0.0-beta1 | https://wearegenki.com/tools#FOSS */
 
-@import "_variables"; /* Colours are also imported here */
+@import "_variables"; /* colours also imported in here */
+@import '_normalize.css';
 @import "_reboot";
 @import "_typography";
 @import "_form";
@@ -9,10 +10,11 @@
 @import "_alert";
 @import "_nav";
 @import "_card";
-@import "_width";
-@import "_spacing";
 @import "_flex";
 @import "_grid";
+@import "_grid-templates";
 @import "_grid-compat";
+@import "_width";
+@import "_spacing";
 @import "_display";
 @import "_utils";

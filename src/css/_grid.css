@@ -1,17 +1,18 @@
-/* TODO: Create some premade grid templates (each in its own class) */
-
 /* Container */
 
 .con {
-  padding-right: calc(var(--gutter-col) / 2);
-  padding-left: calc(var(--gutter-col) / 2);
+  padding-right: var(--gutter-col);
+  padding-left: var(--gutter-col);
   margin-right: auto;
   margin-left: auto;
 
+  @media (--breakpoint-not-small) {
+    padding-right: calc(var(--gutter-col) * 2);
+    padding-left: calc(var(--gutter-col) * 2);
+  }
+
   @media (--breakpoint-large) {
-    max-width: 70em;
-    padding-right: var(--gutter-col);
-    padding-left: var(--gutter-col);
+    max-width: 70rem;
   }
 }
 
@@ -21,18 +22,19 @@
 .dig {
   grid-template-columns: var(--cols);
   grid-template-rows: var(--rows);
-  grid-auto-columns: var(--item-size);
-  grid-auto-rows: var(--item-size);
+  grid-auto-columns: var(--auto-cols);
+  grid-auto-rows: var(--auto-rows);
   grid-gap: var(--gutter-row) var(--gutter-col);
+
+  @media (--breakpoint-not-small) {
+    grid-gap: var(--gutter-row-ns) var(--gutter-col-ns);
+  }
 }
 
-.dg {
-  display: grid;
-}
-
-.dig {
-  display: inline-grid;
-}
+/* For a consistent item size */
+/* FIXME: Doesn't seem to be doing anything */
+.g-col-set { grid-auto-columns: min-content; }
+.g-row-set { grid-auto-rows: min-content; }
 
 /*
   .x = number of columns in grid
@@ -59,9 +61,9 @@
 
   @each $media, $ext in (var(--breakpoint-media)), (var(--breakpoints)) {
     @media ($media) {
-      .x$(step)$(ext) { grid-template-columns: repeat($step, var(--item-size)); }
-      .c$(step)$(ext) { grid-column-start: $step; }
-      .w$(step)$(ext) { grid-column-end: span $step; }
+      .x$(step)-$(ext) { grid-template-columns: repeat($step, var(--item-size)); }
+      .c$(step)-$(ext) { grid-column-start: $step; }
+      .w$(step)-$(ext) { grid-column-end: span $step; }
     }
   }
 }
@@ -73,9 +75,9 @@
 
   @each $media, $ext in (var(--breakpoint-media)), (var(--breakpoints)) {
     @media ($media) {
-      .y$(step)$(ext) { grid-template-rows: repeat($step, auto); }
-      .r$(step)$(ext) { grid-row-start: $step; }
-      .h$(step)$(ext) { grid-row-end: span $step; }
+      .y$(step)-$(ext) { grid-template-rows: repeat($step, auto); }
+      .r$(step)-$(ext) { grid-row-start: $step; }
+      .h$(step)-$(ext) { grid-row-end: span $step; }
     }
   }
 }
@@ -117,53 +119,53 @@
 .justify-col-stretch { align-content: stretch; } /* default */
 
 .flow-row-dense { grid-auto-flow: row dense; }
-.flow-row { grid-auto-flow: row; } /* default */
+.flow-row { grid-auto-flow: row; }
 
 .flow-col-dense { grid-auto-flow: column dense; }
 .flow-col { grid-auto-flow: column; } /* default */
 
 @each $media, $ext in (var(--breakpoint-media)), (var(--breakpoints)) {
   @media ($media) {
-    .align-row-start$(ext) { justify-items: start; }
-    .align-row-end$(ext) { justify-items: end; }
-    .align-row-center$(ext) { justify-items: center; }
-    .align-row-stretch$(ext) { justify-items: stretch; }
+    .align-row-start-$(ext) { justify-items: start; }
+    .align-row-end-$(ext) { justify-items: end; }
+    .align-row-center-$(ext) { justify-items: center; }
+    .align-row-stretch-$(ext) { justify-items: stretch; }
 
-    .align-col-start$(ext) { align-items: start; }
-    .align-col-end$(ext) { align-items: end; }
-    .align-col-center$(ext) { align-items: center; }
-    .align-col-stretch$(ext) { align-items: stretch; }
+    .align-col-start-$(ext) { align-items: start; }
+    .align-col-end-$(ext) { align-items: end; }
+    .align-col-center-$(ext) { align-items: center; }
+    .align-col-stretch-$(ext) { align-items: stretch; }
 
-    .align-item-row-start$(ext) { justify-self: start; }
-    .align-item-row-end$(ext) { justify-self: end; }
-    .align-item-row-center$(ext) { justify-self: center; }
-    .align-item-row-stretch$(ext) { justify-self: stretch; }
+    .align-item-row-start-$(ext) { justify-self: start; }
+    .align-item-row-end-$(ext) { justify-self: end; }
+    .align-item-row-center-$(ext) { justify-self: center; }
+    .align-item-row-stretch-$(ext) { justify-self: stretch; }
 
-    .align-item-col-start$(ext) { align-self: start; }
-    .align-item-col-end$(ext) { align-self: end; }
-    .align-item-col-center$(ext) { align-self: center; }
-    .align-item-col-stretch$(ext) { align-self: stretch; }
+    .align-item-col-start-$(ext) { align-self: start; }
+    .align-item-col-end-$(ext) { align-self: end; }
+    .align-item-col-center-$(ext) { align-self: center; }
+    .align-item-col-stretch-$(ext) { align-self: stretch; }
 
-    .justify-row-start$(ext) { justify-content: start; }
-    .justify-row-end$(ext) { justify-content: end; }
-    .justify-row-center$(ext) { justify-content: center; }
-    .justify-row-space-around$(ext) { justify-content: space-around; }
-    .justify-row-space-between$(ext) { justify-content: space-between; }
-    .justify-row-space-evenly$(ext) { justify-content: space-evenly; }
-    .justify-row-stretch$(ext) { justify-content: stretch; }
+    .justify-row-start-$(ext) { justify-content: start; }
+    .justify-row-end-$(ext) { justify-content: end; }
+    .justify-row-center-$(ext) { justify-content: center; }
+    .justify-row-space-around-$(ext) { justify-content: space-around; }
+    .justify-row-space-between-$(ext) { justify-content: space-between; }
+    .justify-row-space-evenly-$(ext) { justify-content: space-evenly; }
+    .justify-row-stretch-$(ext) { justify-content: stretch; }
 
-    .justify-col-start$(ext) { align-content: start; }
-    .justify-col-end$(ext) { align-content: end; }
-    .justify-col-center$(ext) { align-content: center; }
-    .justify-col-space-around$(ext) { align-content: space-around; }
-    .justify-col-space-between$(ext) { align-content: space-between; }
-    .justify-col-space-evenly$(ext) { align-content: space-evenly; }
-    .justify-col-stretch$(ext) { align-content: stretch; }
+    .justify-col-start-$(ext) { align-content: start; }
+    .justify-col-end-$(ext) { align-content: end; }
+    .justify-col-center-$(ext) { align-content: center; }
+    .justify-col-space-around-$(ext) { align-content: space-around; }
+    .justify-col-space-between-$(ext) { align-content: space-between; }
+    .justify-col-space-evenly-$(ext) { align-content: space-evenly; }
+    .justify-col-stretch-$(ext) { align-content: stretch; }
 
-    .flow-row-dense$(ext) { grid-auto-flow: row dense; }
-    .flow-row$(ext) { grid-auto-flow: row; }
+    .flow-row-dense-$(ext) { grid-auto-flow: row dense; }
+    .flow-row-$(ext) { grid-auto-flow: row; }
 
-    .flow-col-dense$(ext) { grid-auto-flow: column dense; }
-    .flow-col$(ext) { grid-auto-flow: column; }
+    .flow-col-dense-$(ext) { grid-auto-flow: column dense; }
+    .flow-col-$(ext) { grid-auto-flow: column; }
   }
 }

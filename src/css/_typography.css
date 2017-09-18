@@ -1,10 +1,71 @@
-/* README: Some typographic styles are in _reboot */
+/* TYPOGRAPHY */
+
+/* Fluid font size (experimental) */
+/* REF: https://www.smashingmagazine.com/2016/05/fluid-typography/ */
+@if var(--font-size-fluid-enabled) {
+  html {
+    --font-size-min: 16;
+    --font-size-min-px: 16px;
+    --font-size-max: 19;
+    --font-size-max-px: 19px;
+    --screen-size-min: 480; /* 30em */
+    --screen-size-min-px: 320px;
+    --screen-size-max: 1440; /* 90em */
+
+    @media screen and (max-width: 30em) {
+      font-size: var(--font-size-min-px);
+    }
+
+    @media screen and (min-width: 30em) and (max-width: 90em) {
+      font-size: calc(var(--font-size-min-px) + (var(--font-size-max) - var(--font-size-min)) * (100vw - var(--screen-size-min-px)) / (var(--screen-size-max) - var(--screen-size-min)));
+    }
+
+    @media screen and (min-width: 90em) {
+      font-size: var(--font-size-max-px);
+    }
+  }
+}
+
+/* Font base */
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  color: var(--body-colour);
+  background-color: var(--body-bg);
+
+  @media (--breakpoint-small) {
+    font-size: var(--font-size-s);
+  }
+
+  @media (--breakpoint-not-small) {
+    font-size: var(--font-size-ns);
+  }
+}
 
 /* Headings */
 
+.card { word-wrap: break-word; }
+
 h1 {
+  font-size: var(--h1-font-size);
   font-weight: var(--font-weight-light);
 }
+
+h2 { font-size: var(--h2-font-size); }
+h3 { font-size: var(--h3-font-size); }
+h4 { font-size: var(--h4-font-size); }
+h5 { font-size: var(--h5-font-size); }
+h6 { font-size: var(--h6-font-size); }
+
+/* @media (--breakpoint-not-small) {
+  h1 { font-size: var(--h1-font-size-ns); }
+  h2 { font-size: var(--h2-font-size-ns); }
+  h3 { font-size: var(--h3-font-size-ns); }
+  h4 { font-size: var(--h4-font-size-ns); }
+  h5 { font-size: var(--h5-font-size-ns); }
+  h6 { font-size: var(--h6-font-size-ns); }
+} */
 
 /* Paragraphs */
 
@@ -20,12 +81,13 @@ p {
 /* Special sizing */
 /* TODO: Improve or remove */
 
-.display1 {
-  font-size: 5rem;
-}
+.headline1 { font-size: 6rem; }
+.headline2 { font-size: 5rem; }
+.headline3 { font-size: 4rem; }
 
 /* Links */
 
+.link,
 a {
   padding: 0.25rem 0.5rem;
   margin: -0.25rem -0.5rem;
@@ -58,19 +120,15 @@ li {
 
 @each $media, $ext in (var(--breakpoint-media)), (var(--breakpoints)) {
   @media ($media) {
-    .tl$(ext) { text-align: left; }
-    .tr$(ext) { text-align: right; }
-    .tc$(ext) { text-align: center; }
-    .tj$(ext) { text-align: justify; }
+    .tl-$(ext) { text-align: left; }
+    .tr-$(ext) { text-align: right; }
+    .tc-$(ext) { text-align: center; }
+    .tj-$(ext) { text-align: justify; }
   }
 }
 
 /* Colour */
 
-.grey {
-  color: var(--blue-grey-800);
-}
-
-.body-colour {
+.colour {
   color: var(--body-colour);
 }

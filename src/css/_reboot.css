@@ -1,10 +1,14 @@
-/* Reboot */
+/*
+  REBOOT
 
-@import-normalize;
+  README:
+    Extra browser resets on top of our _normalize.css
+*/
 
 html,
 body,
 div,
+nav,
 article,
 section,
 main,
@@ -46,56 +50,36 @@ input[type="url"],
 
 body {
   margin: 0;
-  overflow-x: hidden; /* highly opinionated */
+  overflow-x: hidden; /* opinionated */
   overflow-y: scroll;
-  font-family: var(--font-family);
-  font-size: var(--font-size);
-  font-weight: var(--font-weight);
-  line-height: var(--line-height);
-  color: var(--body-colour);
-  background-color: var(--body-bg);
+}
 
-  @media (--breakpoint-not-small) {
-    @if var(--font-size-ns) != var(--font-size) {
-      font-size: var(--font-size-ns);
-    }
-  }
+/* Responsive images (opinionated) */
+img {
+  max-width: 100%;
+  height: auto;
+}
 
-  @media (--breakpoint-medium) {
-    @if var(--font-size-m) != var(--font-size) {
-      font-size: var(--font-size-m);
-    }
-  }
-
-  @media (--breakpoint-large) {
-    @if var(--font-size-l) != var(--font-size) {
-      font-size: var(--font-size-l);
-    }
-  }
+/* Simple horizontal rule */
+hr {
+  width: 100%;
+  margin: 4rem 0;
+  border-top: 1px solid var(--grey-300);
+  border-bottom: 0;
 }
 
 button,
 .btn {
-  font-family: var(--font-family);
-  font-size: var(--font-size);
-  font-weight: var(--font-weight);
   cursor: pointer;
 
-  @media (--breakpoint-not-small) {
-    @if var(--font-size-ns) != var(--font-size) {
-      font-size: var(--font-size-ns);
-    }
+  &:focus {
+    outline: 0; /* FIXME: Something which is better for usability and accessibility (e.g. when tabbing) */
   }
+}
 
-  @media (--breakpoint-medium) {
-    @if var(--font-size-m) != var(--font-size) {
-      font-size: var(--font-size-m);
-    }
-  }
-
-  @media (--breakpoint-large) {
-    @if var(--font-size-l) != var(--font-size) {
-      font-size: var(--font-size-l);
-    }
-  }
+/* Disabled elements */
+.disabled,
+[disabled],
+:disabled {
+  cursor: not-allowed;
 }

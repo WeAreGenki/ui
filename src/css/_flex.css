@@ -1,9 +1,15 @@
-.df { display: flex; }
-.flex-col { flex-direction: column; }
+/* TODO: We may need to use postcss-flexbugs-fixes if we build out a lot of flexbox stuff and need wide browser compatibility */
+
+.f-col { flex-direction: column; }
+.f-colr { flex-direction: column-reverse; }
+.f-row { flex-direction: row; }
+.f-rowr { flex-direction: row-reverse; }
 
 @each $media, $ext in (var(--breakpoint-media)), (var(--breakpoints)) {
   @media ($media) {
-    .df$(ext) { display: flex; }
-    .flex-col$(ext) { flex-direction: column; }
+    .f-col-$(ext) { flex-direction: column; }
+    .f-colr-$(ext) { flex-direction: column-reverse; }
+    .f-row-$(ext) { flex-direction: row; }
+    .f-rowr-$(ext) { flex-direction: row-reverse; }
   }
 }

@@ -1,15 +1,43 @@
 /* Display */
 
-.db { display: none; }
+/*
+  BASE:
+    .d = display
+
+  TYPE:
+    n = none
+    b = block
+    i = inline
+    ib = inline block
+    f = flex
+    if = inline flex
+    g = grid
+    ig = inline grid
+
+  RESPONSIVE:
+  -ns = not small (both medium and large)
+  -m = medium
+  -l = large
+*/
+
+.dn { display: none; }
 .db { display: block; }
 .di { display: inline; }
 .dib { display: inline-block; }
+.df { display: flex; }
+.dif { display: inline-flex; }
+.dg { display: grid; }
+.dig { display: inline-grid; }
 
 @each $media, $ext in (var(--breakpoint-media)), (var(--breakpoints)) {
   @media ($media) {
-    .db$(ext) { display: none; }
-    .db$(ext) { display: block; }
-    .di$(ext) { display: inline; }
-    .dib$(ext) { display: inline-block; }
+    .dn-$(ext) { display: none; }
+    .db-$(ext) { display: block; }
+    .di-$(ext) { display: inline; }
+    .dib-$(ext) { display: inline-block; }
+    .df-$(ext) { display: flex; }
+    .dif-$(ext) { display: inline-flex; }
+    .dg-$(ext) { display: grid; }
+    .dig-$(ext) { display: inline-grid; }
   }
 }

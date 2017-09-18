@@ -1,0 +1,34 @@
+.alert {
+  padding: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-left: 4px solid transparent;
+
+  > a {
+    text-decoration: underline; /* FIXME: ? */
+  }
+}
+
+.alert-tip {
+  color: var(--green-800);
+  background-color: var(--green-100);
+  border-left-color: var(--green-500);
+}
+
+.alert-info {
+  color: var(--blue-800);
+  background-color: var(--blue-100);
+  border-left-color: var(--blue-500);
+}
+
+.alert-warn {
+  color: var(--amber-900);
+  background-color: var(--amber-100);
+  border-left-color: var(--amber-500);
+}
+
+.alert-error {
+  color: var(--red-700);
+  background-color: var(--red-100);
+  border-left-color: var(--red-500);
+}

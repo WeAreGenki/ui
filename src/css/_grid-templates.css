@@ -1,0 +1,82 @@
+/* Grid Templates */
+
+/* TODO: Might want to use long form instead of this shorthand for IE compatibility */
+
+/* Side nav menu */
+/* .nav-t {
+  grid-template:
+    "menu logo" auto
+    "link link" span 2
+    "link link" span 2
+    "link link" span 2
+    / auto auto;
+
+  @media (--breakpoint-not-small) {
+    grid-template:
+      "logo link link link"
+      / auto 1fr 1fr 1fr;
+  }
+}
+
+.nav-menu {
+  grid-area: menu;
+
+  @media (--breakpoint-not-small) {
+    display: none;
+  }
+}
+
+.nav-logo {
+  grid-area: logo;
+}
+
+.nav-link {
+  grid-area: link;
+  display: none;
+
+  .show-nav & {
+    display: block;
+  }
+
+  @media (--breakpoint-not-small) {
+    display: flex;
+  }
+} */
+
+/* Horizontal card */
+.card-t-h {
+  grid-template:
+    "img"
+    "body"
+    "btn"
+    / auto;
+
+  @media (--breakpoint-medium) {
+    grid-column-gap: 0;
+  }
+
+  @media (--breakpoint-not-small) {
+    grid-template:
+      "img body"
+      "img btn"
+      / minmax(auto, 55%) 1fr;
+  }
+}
+
+.card-img {
+  grid-area: img;
+  width: 100%;
+  background-color: var(--grey-700);
+}
+
+.card-body {
+  grid-area: body;
+  align-self: start;
+  padding: 1rem 1rem 0;
+}
+
+.card-btn {
+  grid-area: btn;
+  align-self: end;
+  padding: 0 1rem 1rem;
+}
