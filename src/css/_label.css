@@ -1,3 +1,5 @@
+/* LABELS */
+
 .label {
   display: inline-block;
   padding: 0.04rem 0.4rem 0.08rem;
@@ -7,3 +9,6 @@
   border: 1px solid var(--blue-500);
   border-radius: var(--radius);
 }
+
+/* Spacing between labels */
+.label + .label { margin-left: 1rem; }

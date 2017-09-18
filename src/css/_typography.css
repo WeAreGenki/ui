@@ -79,9 +79,10 @@ p {
 }
 
 /* Special sizing */
-/* TODO: Improve or remove */
 
-.headline1 { font-size: 6rem; }
+.headline { font-size: 6rem; }
+
+/* TODO: Improve or remove */
 .headline2 { font-size: 5rem; }
 .headline3 { font-size: 4rem; }
 
@@ -89,14 +90,14 @@ p {
 
 .link,
 a {
-  padding: 0.25rem 0.5rem;
-  margin: -0.25rem -0.5rem;
+  padding: var(--link-click-area); /* larger link click area size */
+  margin: calc(-1 * var(--link-click-area));
   color: var(--link-colour);
   text-decoration: none;
   word-wrap: break-word;
 
   &:hover {
-    color: var(--primary);
+    color: var(--red-500); /* FIXME: */
   }
 
   @media (--breakpoint-not-small) {
@@ -125,10 +126,4 @@ li {
     .tc-$(ext) { text-align: center; }
     .tj-$(ext) { text-align: justify; }
   }
-}
-
-/* Colour */
-
-.colour {
-  color: var(--body-colour);
 }

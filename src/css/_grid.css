@@ -31,10 +31,12 @@
   }
 }
 
+.col-fluid { grid-template-columns: auto; }
+
 /* For a consistent item size */
 /* FIXME: Doesn't seem to be doing anything */
-.g-col-set { grid-auto-columns: min-content; }
-.g-row-set { grid-auto-rows: min-content; }
+.col-set { grid-auto-columns: min-content; }
+.row-set { grid-auto-rows: min-content; }
 
 /*
   .x = number of columns in grid

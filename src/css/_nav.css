@@ -109,10 +109,10 @@
 .footer {
   margin-top: 5rem;
   margin-bottom: 5rem;
-  color: var(--subtile-colour);
+  color: var(--subtle);
 
   > .nav-link {
-    margin: -0.5rem; /* offset large link click area */
+    margin: calc(-1 * var(--link-click-area)); /* offset large link click area */
 
     &:first-of-type {
       margin-left: -1rem;

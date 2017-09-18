@@ -1,0 +1,4 @@
+/* Colour */
+
+.plain { color: var(--body-colour); }
+.subtle { color: var(--subtle); }

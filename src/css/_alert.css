@@ -1,11 +1,14 @@
-.alert {
+.alert-tip,
+.alert-info,
+.alert-warn,
+.alert-error {
   padding: 1rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
   border-left: 4px solid transparent;
 
   > a {
-    text-decoration: underline; /* FIXME: ? */
+    text-decoration: underline; /* FIXME: Keep? */
   }
 }
 

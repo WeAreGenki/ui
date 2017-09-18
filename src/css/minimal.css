@@ -1,0 +1,14 @@
+/*! WAG GRID (minimal) v0.0.0 | https://wearegenki.com/tools#FOSS */
+
+/*
+  README:
+    This is a reduced version of WAG GRID that only includes grid related
+    functionality. It's intended to be used as an add-on to another library or as
+    a simple starting point.
+*/
+
+@import "_variables"; /* colour variables also imported here */
+@import "_flex";
+@import "_grid-templates";
+@import "_grid";
+@import "_grid-compat";
