@@ -11,6 +11,9 @@
 </template>
 
 <script>
+// TODO: Remove vuex dependency for better portability (?)
+//  ↳ May need to create a wrapper component "Toaster"
+
 import { mapActions } from 'vuex';
 
 export default {
