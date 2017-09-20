@@ -9,7 +9,7 @@
     --font-size-max: 19;
     --font-size-max-px: 19px;
     --screen-size-min: 480; /* 30em */
-    --screen-size-min-px: 320px;
+    --screen-size-min-px: 480px;
     --screen-size-max: 1440; /* 90em */
 
     @media screen and (max-width: 30em) {
@@ -80,7 +80,7 @@ p {
 
 /* Special sizing */
 
-.headline { font-size: 6rem; }
+.headline { font-size: var(--headline-font-size); }
 
 /* TODO: Improve or remove */
 .headline2 { font-size: 5rem; }

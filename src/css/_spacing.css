@@ -15,7 +15,8 @@
     l = left
 
   VALUE:
-    -1 = -1rem (margin only + no 'a' direction )
+    -auto = auto (margin only + no 'a' direction)
+    -1 = -1rem (margin only + no 'a' direction)
     0 = 0
     1 = 0.25rem
     2 = 0.5rem
@@ -24,7 +25,6 @@
     5 = 4rem
     6 = 8rem
     7 = 16rem
-    -auto = auto
 
   RESPONSIVE:
     -ns = not small (both medium and large)

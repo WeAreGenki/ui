@@ -1,14 +1,14 @@
 /* Cards */
 
 .card {
-  /* display: grid; */
   padding: 1.2rem 1.3rem;
   margin: 0;
-  /* background-color: var(--body-bg); */
-  border: 1px solid var(--blue-grey-100);
+  background-color: var(--blue-grey-100);
+  box-shadow: 0 5px 15px var(--shadow-subtle);
 }
 
 .card-shadow {
+  background-color: var(--body-bg);
   border: 1px solid var(--blue-grey-50);
   box-shadow:
     0 0.625rem 2.5rem 0 var(--shadow-light1),
@@ -23,3 +23,7 @@
     transform: translateY(-5px) translateZ(0); /* translateZ forces GPU rendered layer on browsers which don't support will-change */
   }
 }
+
+/* TODO: Image vailed overlay + reveal on hover -- works to bring focus on card body first before looking at the image (but what about the touch device experience?) */
+/* REF: https://www.algolia.com/customers */
+/*  ↳ + them badges are nice yo! */

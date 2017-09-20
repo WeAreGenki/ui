@@ -1,3 +1,3 @@
 /* Grid compatibility fallback */
 
-/* TODO: */
+/* TODO: Should we attempt to load this only only browsers which don't support CSS Grid? Or always load the fallback CSS? Or use a combination of fallback CSS + conditionally loaded? */

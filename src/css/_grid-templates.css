@@ -1,47 +1,7 @@
 /* Grid Templates */
 
 /* TODO: Might want to use long form instead of this shorthand for IE compatibility */
-
-/* Side nav menu */
-/* .nav-t {
-  grid-template:
-    "menu logo" auto
-    "link link" span 2
-    "link link" span 2
-    "link link" span 2
-    / auto auto;
-
-  @media (--breakpoint-not-small) {
-    grid-template:
-      "logo link link link"
-      / auto 1fr 1fr 1fr;
-  }
-}
-
-.nav-menu {
-  grid-area: menu;
-
-  @media (--breakpoint-not-small) {
-    display: none;
-  }
-}
-
-.nav-logo {
-  grid-area: logo;
-}
-
-.nav-link {
-  grid-area: link;
-  display: none;
-
-  .show-nav & {
-    display: block;
-  }
-
-  @media (--breakpoint-not-small) {
-    display: flex;
-  }
-} */
+/* TODO: I highly suspect we may need to use @supports (display: grid) {} here eventually */
 
 /* Horizontal card */
 .card-t-h {
