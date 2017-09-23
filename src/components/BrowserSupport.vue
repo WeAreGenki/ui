@@ -11,7 +11,7 @@
 
     <p class="lead">You're using an unsupported browser.</p>
 
-    <p>You can continue however our site may not work properly. For your end-users we maintain a wide range of browser support but this admin interface we keep simple.</p>
+    <p>You can continue however our site may not work properly. For your end-users we maintain a wide range of browser support but this app interface we keep simple.</p>
 
     <p><a href="https://wearegenki.com/legal/browser-support" target="_blank" rel="noopener">Learn more about our browser support</a>.</p>
 
@@ -66,18 +66,18 @@ export default {
   },
   methods: {
     ...mapMutations([
-      'toggleScrollLock',
+      'setScrollLock',
     ]),
     show() {
       this.active = true;
-      this.toggleScrollLock();
+      this.setScrollLock(true);
     },
     hide() {
       this.active = false;
-      this.toggleScrollLock();
+      this.setScrollLock(false);
 
       // Disable compatibility check
-      window.localStorage.setItem('bypassCompat', true);
+      window.localStorage.setItem('bypassCompat', 1);
     },
   },
 };
