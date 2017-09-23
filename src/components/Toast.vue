@@ -3,9 +3,8 @@
 <template>
 <div class="toast">
   <button v-if="reload" @click="reloadPage" class="toast-link">RELOAD</button>
-  <button v-else-if="dismissible" @click="destroy" class="toast-link">DISMISS</button>
-  <!-- TODO: Link to reload the page -->
-  <a v-if="link" :href="link" class="toast-link">{{ linkText || 'LINK' }}</a>
+  <button v-else-if="canDismiss" @click="destroy" class="toast-link">DISMISS</button>
+  <a v-if="link" :href="link" class="toast-link">{{ typeof link === String ? link : 'LINK' }}</a>
   <span class="toast-msg">{{ text }}</span>
 </div>
 </template>
@@ -24,11 +23,7 @@ export default {
       default: undefined,
     },
     link: {
-      type: String,
-      default: '',
-    },
-    'link-text': {
-      type: String,
+      type: [Boolean, String],
       default: '',
     },
     text: {
@@ -48,11 +43,6 @@ export default {
       type: Boolean,
       default: false,
     },
-  },
-  data() {
-    return {
-      dismissible: this.canDismiss,
-    };
   },
   mounted() {
     // A timeout value of -1 means it's a permanent toast
@@ -84,24 +74,24 @@ export default {
 @import "css/import";
 
 /* TODO: Toast stacking (?) */
-/* FIXME: Permanent toast gets dismissed by another toast */
+/* FIXME: Permanent toast can be dismissed by other toasts */
 
 .toast {
-  position: absolute;
+  position: fixed;
   bottom: 0;
-  left: 100px;
+  left: 6rem;
   z-index: var(--toast-z-index);
   padding: 1.2rem 1.5rem 1rem;
   color: var(--white);
   background-color: var(--blue-600);
-  box-shadow: 0 0 1rem var(--shadow); /* FIXME: Better aesthetics; layered shadow effect? */
-  transition: transform 0.15s ease-out; /* Animate in */
+  box-shadow: 0 1rem 2rem 0 var(--shadow);
+  transition: transform 0.15s ease-out; /* animate in */
   transform: translateY(0);
   will-change: transform;
 
   &.v-enter,
   &.v-leave-to {
-    transition: transform 0.3s ease-in; /* Animate out */
+    transition: transform 0.3s ease-in; /* animate out */
     transform: translateY(102%);
   }
 }
