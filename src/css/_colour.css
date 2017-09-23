@@ -3,3 +3,7 @@
 .plain { color: var(--body-colour); }
 .subtle { color: var(--subtle); }
 .inherit { color: inherit; }
+
+.red { color: var(--red-500); }
+.green { color: var(--green-500); }
+.blue { color: var(--blue-500); }

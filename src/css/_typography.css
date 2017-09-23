@@ -43,6 +43,8 @@ body {
   }
 }
 
+.code { font-family: monospace; }
+
 /* Headings */
 
 .card { word-wrap: break-word; }
@@ -113,6 +115,9 @@ a {
 /* Lists */
 
 li { margin-bottom: 0.5rem; } /* extra space between list items */
+
+/* dl::after { clear: both; } */ /* TODO: necessary? */
+dt { float: left; }
 
 /* Text alignment */
 
