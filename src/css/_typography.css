@@ -50,6 +50,10 @@ body {
 h1 {
   font-size: var(--h1-font-size);
   font-weight: var(--font-weight-light);
+
+  & > small {
+    color: var(--grey-500);
+  }
 }
 
 h2 { font-size: var(--h2-font-size); }
@@ -108,9 +112,7 @@ a {
 
 /* Lists */
 
-li {
-  margin-bottom: 0.5rem; /* Extra space between list items */
-}
+li { margin-bottom: 0.5rem; } /* extra space between list items */
 
 /* Text alignment */
 
@@ -119,11 +121,49 @@ li {
 .tc { text-align: center; }
 .tj { text-align: justify; }
 
+/* Text transform */
+
+.ttc { text-transform: capitalize; }
+.ttl { text-transform: lowercase; }
+.ttu { text-transform: uppercase; }
+.ttn { text-transform: none; }
+
 @each $media, $ext in (var(--breakpoint-media)), (var(--breakpoints)) {
   @media ($media) {
     .tl-$(ext) { text-align: left; }
     .tr-$(ext) { text-align: right; }
     .tc-$(ext) { text-align: center; }
     .tj-$(ext) { text-align: justify; }
+
+    .ttc-$(ext) { text-transform: capitalize; }
+    .ttl-$(ext) { text-transform: lowercase; }
+    .ttu-$(ext) { text-transform: uppercase; }
+    .ttn-$(ext) { text-transform: none; }
   }
+}
+
+/* Quotes */
+
+blockquote {
+  /* xxx */
+}
+
+.quote {
+  &::before {
+    content: '“';
+  }
+
+  &::after {
+    content: '”';
+  }
+}
+
+/* Font varients */
+
+.bold { font-weight: bold; }
+.italic { font-style: italic; }
+
+.normal {
+  font-style: normal;
+  font-weight: var(--font-weight);
 }

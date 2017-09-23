@@ -22,8 +22,25 @@
       0 0 0 transparent;
     transform: translateY(-5px) translateZ(0); /* translateZ forces GPU rendered layer on browsers which don't support will-change */
   }
+
+  .btn-clear:hover {
+    background-color: inherit;
+  }
+
+  &:hover .btn-clear {
+    color: var(--red-500);
+  }
+
+  .btn-arrow {
+    display: inline-block;
+    transition: transform 0.2s ease;
+  }
+
+  &:hover .btn-arrow {
+    transform: translateX(0.3rem) translateZ(0);
+  }
 }
 
-/* TODO: Image vailed overlay + reveal on hover -- works to bring focus on card body first before looking at the image (but what about the touch device experience?) */
+/* TODO: Image veiled overlay + reveal on hover -- works to bring focus on card body first before looking at the image (but what about the touch device experience?) */
 /* REF: https://www.algolia.com/customers */
 /*  ↳ + them badges are nice yo! */

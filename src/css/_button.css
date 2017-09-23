@@ -2,25 +2,25 @@
 /* REF: https://getuikit.com/docs/button */
 
 .btn {
+  --shadow-light3: rgba(62, 57, 107, 0.12);
+
   display: inline-block;
   padding: 0.75rem 2rem;
-  /* font-weight: bold; */ /* FIXME: Remove, looks a bit crap */
   line-height: 1;
-  color: var(--white);
   color: var(--primary);
-  background-color: var(--primary);
   background-color: var(--body-bg);
-  /* background-image: linear-gradient(80deg, #00aeff, #3369e7); */
-  /* border: 1px solid transparent; */
-  border: 1px solid var(--blue-600);
+  border: 1px solid var(--blue-grey-50);
   border-radius: var(--radius);
-  /* box-shadow: 0 2px 6px 0 rgba(51, 65, 97, 0.4); */
+  box-shadow: 0 2px 6px 0 rgba(51, 65, 97, 0.4);
+  box-shadow:
+    0 0.625rem 2.5rem 0 var(--shadow-light1),
+    0 0.125rem 0.56rem 0 var(--shadow-light2);
 
   &:hover,
   &:active {
-    color: var(--body-colour);
+    color: var(--white);
     text-decoration: none;
-    background-color: var(--blue-grey-300);
+    background-color: var(--blue-600);
   }
 }
 
@@ -42,16 +42,25 @@
   box-shadow: 0 4px 12px rgba(45, 222, 152, 0.4);
 }
 
+.btn-outline {
+  border: 2px solid var(--blue-500);
+  box-shadow: none;
+}
+
+/* Remove browser default button styles */
 .btn-clear {
   background: transparent;
   border: 0;
+  box-shadow: none;
 }
 
+/* Spacing between buttons */
 .btn + .btn {
-  margin-left: 0.15rem;
+  margin-left: 1.5rem;
 }
 
+/* FIXME: Remove if unnused */
 .btn-large {
-  /* FIXME: Font size calculation at breakpoints */
+  /* TODO: Font size calculation at breakpoints */
   font-size: calc(var(--font-size) * 1.2);
 }

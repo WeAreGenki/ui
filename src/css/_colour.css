@@ -2,3 +2,4 @@
 
 .plain { color: var(--body-colour); }
 .subtle { color: var(--subtle); }
+.inherit { color: inherit; }

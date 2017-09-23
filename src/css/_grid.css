@@ -12,7 +12,7 @@
   }
 
   @media (--breakpoint-large) {
-    max-width: 70rem;
+    max-width: var(--container-max-width);
   }
 }
 

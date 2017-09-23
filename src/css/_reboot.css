@@ -52,6 +52,11 @@ body {
   margin: 0;
   overflow-x: hidden; /* opinionated */
   overflow-y: scroll;
+
+  /* FIXME: Keep? */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 /* Responsive images (opinionated) */
@@ -64,8 +69,8 @@ img {
 hr {
   width: 100%;
   margin: 4rem 0;
+  border: 0;
   border-top: 1px solid var(--grey-300);
-  border-bottom: 0;
 }
 
 button,
