@@ -13,8 +13,7 @@ module.exports = {
     'postcss-calc': { warnWhenCannotResolve: true },
     // 'postcss-color-function': {},
     'css-mqpacker': {},
-    'autoprefixer': {},
-    // 'postcss-normalise': {}, // FIXME: Couldn't get this to work
+    'autoprefixer': { remove: false },
     'postcss-reporter': { filter: msg => msg.type !== 'dependency' },
   }
 }

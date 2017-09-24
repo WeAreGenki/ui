@@ -7,11 +7,24 @@
     // words - list of words to be always considered correct
     "words": [
         "browserslist",
+        "buble",
         "compat",
+        "dialog",
+        "futurelink",
+        "jsnext",
         "linting",
         "mixins",
         "mqpacker",
-        "transpiled"
+        "noopener",
+        "ontouchstart",
+        "plusplus",
+        "preload",
+        "presets",
+        "rgba",
+        "transpiled",
+        "typeof",
+        "vuex",
+        "xlink"
     ],
     // flagWords - list of words to be always considered incorrect
     // This is useful for offensive words and common spelling errors.

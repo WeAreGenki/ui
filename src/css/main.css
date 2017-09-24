@@ -1,7 +1,7 @@
 /*! WAG GRID v0.0.0 | https://wearegenki.com/tools#FOSS */
 
 @import "_variables"; /* colour variables also imported here */
-@import '_normalize.css';
+@import "_normalize.css";
 @import "_reboot";
 @import "_typography";
 @import "_colour";

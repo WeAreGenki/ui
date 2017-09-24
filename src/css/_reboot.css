@@ -52,6 +52,8 @@ body {
   margin: 0;
   overflow-x: hidden; /* opinionated */
   overflow-y: scroll;
+  /* FIXME: Is this even neceesary? */
+  -webkit-overflow-scroll: touch; /* FIXME: Is this the right property? -webkit-overflow-scrolling? */
 
   /* FIXME: Keep? */
   -webkit-font-smoothing: antialiased;
