@@ -4,19 +4,20 @@
   "description": "CSS Grid based CSS library + Vue.js framework",
   "main": "src/index.js",
   "scripts": {
-    "dev": "echo \"TODO\"",
-    "build": "node build/build.js",
+    "start": "npm run dev",
+    "dev": "NODE_ENV='development' node build/build.js",
+    "build": "NODE_ENV='production' node build/build.js",
     "lint": "stylelint 'src/**/*.css' 'src/**/*.vue' && eslint --ext .js,.vue src test/unit/specs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WeAreGenki/WAG-GRID.git"
+    "url": "git+https://github.com/WeAreGenki/wag-ui.git"
   },
   "author": "Max Milton <max@wearegenki.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/WeAreGenki/WAG-GRID/issues"
+    "url": "https://github.com/WeAreGenki/wag-ui/issues"
   },
   "homepage": "https://wearegenki.com/tools#FOSS",
   "peerDependencies": {
@@ -46,6 +47,7 @@
     "postcss-custom-media": "^6.0.0",
     "postcss-each": "^0.10.0",
     "postcss-import": "^11.0.0",
+    "postcss-mixins": "^6.1.0",
     "postcss-nested": "^2.1.0",
     "postcss-reporter": "^5.0.0",
     "rollup": "^0.50.0",
@@ -70,11 +72,6 @@
     "not ie <= 10"
   ],
   "dependencies": {
-    "babel-loader": "^7.1.2",
-    "css-loader": "^0.28.7",
-    "futurelink": "^0.2.1",
-    "vue": "^2.4.4",
-    "vue-hot-reload-api": "^2.1.0",
-    "vue-style-loader": "^3.0.3"
+    "futurelink": "^0.2.1"
   }
 }
