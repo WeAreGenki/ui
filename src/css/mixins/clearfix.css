@@ -1,3 +1,12 @@
+/*
+  FLOAT CLEARFIX
+
+  USAGE:
+    .example {
+      @mixin clearfix
+    }
+*/
+
 @define-mixin clearfix {
   &::after {
     display: block;

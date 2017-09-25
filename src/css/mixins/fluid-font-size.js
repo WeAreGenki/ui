@@ -1,10 +1,21 @@
 /*
-  Fluid font size (experimental)
+  FLUID FONT SIZE (experimental)
 
   README:
     TODO: Write readme.
 
   REF: https://www.smashingmagazine.com/2016/05/fluid-typography/
+
+  USAGE:
+    .example {
+      @mixin fluid-font-size min-font-size, max-font-size, from-screen-width, until-screen-width, [use-px];
+    }
+
+    min-font-size = font size below from-screen-width
+    max-font-size = font size above until-screen-width
+    from-screen-width = start growing font size from this screen viewport width
+    until-screen-width = stop growing font size at this screen viewport width
+    [use-px] = if true output results with px value, or default is rem (optional)
 */
 
 function getUnit(value) {
