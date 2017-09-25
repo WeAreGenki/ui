@@ -13,8 +13,8 @@ label {
 input,
 textarea,
 select {
-  display: block;
-  width: 100%;
+  /* display: block;
+  width: 100%; */
 }
 /* FIXME: Select doesn't stresh all the way to the right like other inputs */
 

@@ -59,7 +59,13 @@
   margin-left: 1.5rem;
 }
 
-/* FIXME: Remove if unnused */
+/* FIXME: Remove below if unused */
+
+.btn-group {
+  display: flex;
+  /* flex-direction: row; */
+}
+
 .btn-large {
   /* TODO: Font size calculation at breakpoints */
   font-size: calc(var(--font-size) * 1.2);
