@@ -1,3 +1,8 @@
+<!--
+  Based on vue-futurelink with customisations for simplicity and performance
+  REF: https://github.com/SamKnows/vue-futurelink
+-->
+
 <template>
 <div class="dn" aria-hidden="true">
   <component :is="load"/>
