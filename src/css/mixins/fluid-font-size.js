@@ -1,51 +1,58 @@
-/* Fluid font size (experimental) */
-/* REF: https://www.smashingmagazine.com/2016/05/fluid-typography/ */
+/*
+  Fluid font size (experimental)
 
-// font-size: calc( 12px + (24 - 12) * ( (100vw - 400px) / ( 800 - 400) ));
+  README:
+    TODO: Write readme.
 
-const baseFontSize = '16'; // px, browser default font size
+  REF: https://www.smashingmagazine.com/2016/05/fluid-typography/
+*/
 
 function getUnit(value) {
-  const match = value.match(/px|rem|em/);
+  const match = value.match(/px|rem|em$/);
 
-  if (match) {
-    return match.toString();
+  return match ? match.toString() : null;
+}
+
+function convertSize(size, outputPx) {
+  const baseSize = 16; // 16px is the normal browser default font size
+  const unit = getUnit(size);
+
+  if (unit === null) throw new Error('Only px, rem, and em units are supported');
+
+  if (outputPx && (unit === 'rem' || unit === 'em')) {
+    // convert rem or em into px
+    return `${parseFloat(size) * baseSize}px`;
+  } else if (!outputPx && unit === 'px') {
+    // convert px into rem
+    return `${parseFloat(size) / baseSize}rem`;
+  } else if (!outputPx && unit === 'em') {
+    // change unit from em to rem
+    return `${parseFloat(size)}rem`;
   }
-  return null;
+  // doesn't need converting so return as is
+  return size;
 }
 
-function remToPx(size) {
-  return `${parseFloat(size) * baseFontSize}px`;
-}
-
-const fluidFontSize = (mixin, minFontSize, maxFontSize, fromScreenWidth, toScreenWidth) => {
-  const minFont = getUnit(minFontSize) === 'rem' ? remToPx(minFontSize) : minFontSize;
-  const maxFont = getUnit(maxFontSize) === 'rem' ? remToPx(maxFontSize) : maxFontSize;
-  const minMedia = getUnit(fromScreenWidth) === 'em' ? remToPx(fromScreenWidth) : fromScreenWidth;
-  const maxMedia = getUnit(toScreenWidth) === 'em' ? remToPx(toScreenWidth) : toScreenWidth;
-
-  // console.log('minFontSize', minFontSize);
-  // console.log('maxFontSize', maxFontSize);
-  // console.log('minFont', minFont);
-  // console.log('maxFont', maxFont);
-  // console.log('minMedia', minMedia);
-  // console.log('maxMedia', maxMedia);
-
+const fluidFontSize = (mixin, minFontSize, maxFontSize, fromScreenWidth, untilScreenWidth, usePxUnit = false) => {
+  const minFont = convertSize(minFontSize, usePxUnit);
+  const maxFont = convertSize(maxFontSize, usePxUnit);
+  const minMedia = convertSize(fromScreenWidth, usePxUnit);
+  const maxMedia = convertSize(untilScreenWidth, usePxUnit);
   const fontRange = parseFloat(maxFont) - parseFloat(minFont);
   const mediaRange = parseFloat(maxMedia) - parseFloat(minMedia);
-  const sizeCalc = `calc(${minFont} + (${fontRange}) * (100vw - ${minMedia}) / (${mediaRange}));`;
+  const sizeCalc = `calc(${minFont} + ${fontRange} * (100vw - ${minMedia}) / ${mediaRange});`;
 
   return {
     '&': {
-      [`@media screen and (max-width: ${minMedia})`]: {
+      [`@media screen and (max-width: ${fromScreenWidth})`]: {
         'font-size': minFont,
       },
 
-      [`@media screen and (min-width: ${minMedia}) and (max-width: ${maxMedia})`]: {
+      [`@media screen and (min-width: ${fromScreenWidth}) and (max-width: ${untilScreenWidth})`]: {
         'font-size': sizeCalc,
       },
 
-      [`@media screen and (min-width: ${maxMedia})`]: {
+      [`@media screen and (min-width: ${untilScreenWidth})`]: {
         'font-size': maxFont,
       },
     },

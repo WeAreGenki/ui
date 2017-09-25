@@ -1,17 +1,12 @@
 /* TYPOGRAPHY */
 
 /* Fluid font size (experimental) */
-/* XXX: Might not be the best for usability since it forces the font to be a particular size */
-/*  ↳ If it has a usability impact then it's probably worth adding a comment to the variables file */
+/* TODO: Extensive cross browser testing */
 @if var(--font-size-fluid-enabled) {
   html {
-    @mixin fluid-font-size var(--font-size), var(--font-size-fluid-max), 30em, 90em;
+    @mixin fluid-font-size var(--font-size), var(--font-size-fluid-max), var(--font-size-fluid-from), var(--font-size-fluid-until);
   }
 }
-
-/* .testtest {
-  @mixin fluid-font-size var(--font-size), var(--font-size-fluid-max), 30em, 90em;
-} */
 
 /* Font base */
 body {
@@ -21,12 +16,14 @@ body {
   color: var(--body-colour);
   background-color: var(--body-bg);
 
-  @media (--breakpoint-small) {
-    font-size: var(--font-size-s);
-  }
+  @if NOT (var(--font-size-fluid-enabled)) {
+    @media (--breakpoint-small) {
+      font-size: var(--font-size-s);
+    }
 
-  @media (--breakpoint-not-small) {
-    font-size: var(--font-size-ns);
+    @media (--breakpoint-not-small) {
+      font-size: var(--font-size-ns);
+    }
   }
 }
 
