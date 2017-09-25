@@ -2,7 +2,7 @@
 
 /* Media Queries */
 @custom-media --breakpoint-small screen and (min-width: 30em) and (max-width: 48em);
-@custom-media --breakpoint-not-small screen and (min-width: 48.01em); /* .01 to prevent match at exactly 768px */
+@custom-media --breakpoint-not-small screen and (min-width: 48.01em); /* .01 to prevent match at the same time as previous breakpoint */
 @custom-media --breakpoint-medium screen and (min-width: 48.01em) and (max-width: 64em);
 @custom-media --breakpoint-large screen and (min-width: 64.01em);
 
@@ -41,6 +41,8 @@
 
   /* Typography */
   --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-size-fluid-enabled: false; /* dynamic font size based on viewport width (experimental) */
+  --font-size-fluid-max: 1.4rem; /* font size will grow from --font-size to this */
   --font-size: 1rem; /* use the browser's default font size, normally 16px */
   --font-size-s: 1.125rem;
   --font-size-ns: 1.125rem;
@@ -55,9 +57,6 @@
   --h4-font-size: 1.25rem;
   --h5-font-size: 1rem;
   --h6-font-size: 0.875rem;
-  /* Fluid typography (experimental, dynamic font size based on viewport width) */
-  --font-size-fluid-enabled: false;
-  --font-size-fluid-max: 1.4rem; /* font size will grow from --font-size to this */
 
   /* Boarders */
   --radius: 0.15rem;
