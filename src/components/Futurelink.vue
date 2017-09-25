@@ -13,12 +13,14 @@
 import futurelink from 'futurelink';
 
 export default {
-  data: () => ({
-    load: undefined,
-    options: {
-      links: [],
-    },
-  }),
+  data() {
+    return {
+      load: undefined,
+      options: {
+        links: [],
+      },
+    };
+  },
   mounted() {
     // Don't run on the server
     if (typeof window === 'undefined') {
@@ -51,7 +53,7 @@ export default {
     futurelink(this.options);
 
     this.init();
-    this.$router.afterEach(() => this.init());
+    this.$router.afterEach(this.init);
   },
   methods: {
     init() {
