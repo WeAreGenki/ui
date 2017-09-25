@@ -37,6 +37,14 @@
   }
 }
 
+/* Clearfix */
+
+.clr {
+  @mixin clearfix;
+}
+
+/* Background colour */
+/* FIXME: Remove if unused; intended for debugging */
 .bg-blue {
   background-color: var(--blue-500);
 
