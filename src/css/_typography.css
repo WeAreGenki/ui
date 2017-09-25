@@ -2,6 +2,7 @@
 
 /* Fluid font size (experimental) */
 /* TODO: Extensive cross browser testing */
+
 @if var(--font-size-fluid-enabled) {
   html {
     @mixin fluid-font-size var(--font-size), var(--font-size-fluid-max), var(--font-size-fluid-from), var(--font-size-fluid-until);
@@ -101,7 +102,7 @@ a {
 li { margin-bottom: 0.5rem; } /* extra space between list items */
 
 /* dl::after { clear: both; } */ /* TODO: necessary? */
-dt { float: left; }
+dt { float: left; } /* TODO: Could this be achived with flex or grid somehow? */
 
 /* Text alignment */
 

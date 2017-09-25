@@ -19,7 +19,7 @@ export default {
     },
     link: {
       type: [Boolean, String],
-      default: '',
+      default: false,
     },
     text: {
       type: String, // Text only, no HTML allowed
@@ -53,7 +53,7 @@ export default {
       this.$emit('destroy', this.id);
     },
     setTimeoutHandler() {
-      window.setTimeout(() => { this.destroy(); }, this.timeout);
+      window.setTimeout(this.destroy, this.timeout);
     },
     reloadPage() {
       location.reload(); // eslint-disable-line no-restricted-globals
@@ -93,7 +93,6 @@ export default {
   margin: -1rem 0 -1rem -1rem;
   font-weight: bold;
   color: var(--blue-100);
-  cursor: pointer;
   background-color: transparent;
   border: 0;
 

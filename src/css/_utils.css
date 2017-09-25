@@ -52,3 +52,11 @@
     color: var(--white);
   }
 }
+
+.bg-red {
+  background-color: var(--red-500);
+
+  a {
+    color: var(--white);
+  }
+}
