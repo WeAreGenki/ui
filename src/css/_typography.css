@@ -1,30 +1,17 @@
 /* TYPOGRAPHY */
 
 /* Fluid font size (experimental) */
-/* REF: https://www.smashingmagazine.com/2016/05/fluid-typography/ */
+/* XXX: Might not be the best for usability since it forces the font to be a particular size */
+/*  ↳ If it has a usability impact then it's probably worth adding a comment to the variables file */
 @if var(--font-size-fluid-enabled) {
   html {
-    --font-size-min: 16;
-    --font-size-min-px: 16px;
-    --font-size-max: 19;
-    --font-size-max-px: 19px;
-    --screen-size-min: 480; /* 30em */
-    --screen-size-min-px: 480px;
-    --screen-size-max: 1440; /* 90em */
-
-    @media screen and (max-width: 30em) {
-      font-size: var(--font-size-min-px);
-    }
-
-    @media screen and (min-width: 30em) and (max-width: 90em) {
-      font-size: calc(var(--font-size-min-px) + (var(--font-size-max) - var(--font-size-min)) * (100vw - var(--screen-size-min-px)) / (var(--screen-size-max) - var(--screen-size-min)));
-    }
-
-    @media screen and (min-width: 90em) {
-      font-size: var(--font-size-max-px);
-    }
+    @mixin fluid-font-size var(--font-size), var(--font-size-fluid-max), 30em, 90em;
   }
 }
+
+/* .testtest {
+  @mixin fluid-font-size var(--font-size), var(--font-size-fluid-max), 30em, 90em;
+} */
 
 /* Font base */
 body {
@@ -149,11 +136,17 @@ dt { float: left; }
 
 /* Quotes */
 
-blockquote {
-  /* xxx */
-}
+/* blockquote {} */
 
 .quote {
+  font-size: 2rem;
+
+  &::before,
+  &::after {
+    position: absolute;
+    font-size: 3em; /* em (not rem) so it's relative to the parent font size */
+  }
+
   &::before {
     content: '“';
   }
@@ -163,7 +156,7 @@ blockquote {
   }
 }
 
-/* Font varients */
+/* Font variants */
 
 .bold { font-weight: bold; }
 .italic { font-style: italic; }
