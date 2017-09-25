@@ -26,7 +26,6 @@
 
     <a href="https://www.google.com/chrome" class="btn btn-main ml1" target="_blank" rel="noopener">Download Chrome</a>
     <button @click="hide" class="btn ml3">
-      <!-- <svg class="icon"><use xlink:href="~@/assets/icons/x.svg"/></svg> -->
       Continue
     </button>
   </dialog>
@@ -34,12 +33,8 @@
 </template>
 
 <script>
-/* eslint-disable no-use-before-define */
-
-import { mapMutations } from 'vuex';
-
 export default {
-  name: 'BrowserSupport',
+  name: 'browser-support',
   data() {
     return {
       active: false,
@@ -62,22 +57,25 @@ export default {
   mounted() {
     if (!this.isSupported) {
       this.show();
+    } else {
+      this.$destroy();
     }
   },
   methods: {
-    ...mapMutations([
-      'setScrollLock',
-    ]),
     show() {
       this.active = true;
-      this.setScrollLock(true);
+      this.$emit('show');
     },
     hide() {
       this.active = false;
-      this.setScrollLock(false);
+      this.$emit('hide');
 
       // Disable compatibility check
       window.localStorage.setItem('bypassCompat', 1);
+
+      this.$nextTick(() => {
+        this.$destroy();
+      });
     },
   },
 };

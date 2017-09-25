@@ -10,17 +10,12 @@
 </template>
 
 <script>
-// TODO: Remove vuex dependency for better portability (?)
-//  ↳ May need to create a wrapper component "Toaster"
-
-import { mapActions } from 'vuex';
-
 export default {
-  name: 'Toast',
+  name: 'toast',
   props: {
     id: {
       type: Number,
-      default: undefined,
+      required: true,
     },
     link: {
       type: [Boolean, String],
@@ -54,11 +49,8 @@ export default {
     }
   },
   methods: {
-    ...mapActions([
-      'removeToast',
-    ]),
     destroy() {
-      this.removeToast({ id: this.id });
+      this.$emit('destroy', this.id);
     },
     setTimeoutHandler() {
       window.setTimeout(() => { this.destroy(); }, this.timeout);
