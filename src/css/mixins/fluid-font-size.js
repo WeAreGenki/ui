@@ -19,34 +19,34 @@ function remToPx(size) {
 }
 
 const fluidFontSize = (mixin, minFontSize, maxFontSize, fromScreenWidth, toScreenWidth) => {
-  const min = getUnit(minFontSize) === 'rem' ? remToPx(minFontSize) : minFontSize;
-  const max = getUnit(maxFontSize) === 'rem' ? remToPx(maxFontSize) : maxFontSize;
-  const fromWidth = getUnit(fromScreenWidth) === 'em' ? remToPx(fromScreenWidth) : fromScreenWidth;
-  const toWidth = getUnit(toScreenWidth) === 'em' ? remToPx(toScreenWidth) : toScreenWidth;
+  const minFont = getUnit(minFontSize) === 'rem' ? remToPx(minFontSize) : minFontSize;
+  const maxFont = getUnit(maxFontSize) === 'rem' ? remToPx(maxFontSize) : maxFontSize;
+  const minMedia = getUnit(fromScreenWidth) === 'em' ? remToPx(fromScreenWidth) : fromScreenWidth;
+  const maxMedia = getUnit(toScreenWidth) === 'em' ? remToPx(toScreenWidth) : toScreenWidth;
 
   // console.log('minFontSize', minFontSize);
   // console.log('maxFontSize', maxFontSize);
-  // console.log('min', min);
-  // console.log('max', max);
-  // console.log('fromWidth', fromWidth);
-  // console.log('toWidth', toWidth);
+  // console.log('minFont', minFont);
+  // console.log('maxFont', maxFont);
+  // console.log('minMedia', minMedia);
+  // console.log('maxMedia', maxMedia);
 
-  const fontRange = parseFloat(max) - parseFloat(min);
-  const mediaRange = parseFloat(toWidth) - parseFloat(fromWidth);
-  const sizeCalc = `calc(${min} + (${fontRange}) * (100vw - ${fromWidth}) / (${mediaRange}));`;
+  const fontRange = parseFloat(maxFont) - parseFloat(minFont);
+  const mediaRange = parseFloat(maxMedia) - parseFloat(minMedia);
+  const sizeCalc = `calc(${minFont} + (${fontRange}) * (100vw - ${minMedia}) / (${mediaRange}));`;
 
   return {
     '&': {
-      [`@media screen and (max-width: ${fromWidth})`]: {
-        'font-size': min,
+      [`@media screen and (max-width: ${minMedia})`]: {
+        'font-size': minFont,
       },
 
-      [`@media screen and (min-width: ${fromWidth}) and (max-width: ${toWidth})`]: {
+      [`@media screen and (min-width: ${minMedia}) and (max-width: ${maxMedia})`]: {
         'font-size': sizeCalc,
       },
 
-      [`@media screen and (min-width: ${toWidth})`]: {
-        'font-size': max,
+      [`@media screen and (min-width: ${maxMedia})`]: {
+        'font-size': maxFont,
       },
     },
   };
