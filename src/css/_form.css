@@ -3,6 +3,8 @@ form {
 }
 
 .form-row {
+  display: flex;
+  align-items: center;
   margin-bottom: 1rem;
 }
 
@@ -13,8 +15,11 @@ label {
 input,
 textarea,
 select {
-  /* display: block;
-  width: 100%; */
+  padding: 0.6rem 1rem;
+  font-size: 1.2rem;
+  border: 0;
+  border-radius: var(--radius);
+  outline: none; /* FIXME: This is a bad idea */
 }
 /* FIXME: Select doesn't stresh all the way to the right like other inputs */
 
