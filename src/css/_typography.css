@@ -1,7 +1,7 @@
 /* TYPOGRAPHY */
 
 /* Fluid font size (experimental) */
-/* TODO: Extensive cross browser testing */
+/* TODO: Extensive cross browser testing because rem fonts on <html> is uncommon */
 
 @if var(--font-size-fluid-enabled) {
   html {
@@ -31,11 +31,7 @@ body {
   }
 }
 
-.code { font-family: monospace; }
-
 /* Headings */
-
-.card { word-wrap: break-word; }
 
 h1 {
   font-size: var(--h1-font-size);
@@ -52,14 +48,7 @@ h4 { font-size: var(--h4-font-size); }
 h5 { font-size: var(--h5-font-size); }
 h6 { font-size: var(--h6-font-size); }
 
-/* @media (--breakpoint-not-small) {
-  h1 { font-size: var(--h1-font-size-ns); }
-  h2 { font-size: var(--h2-font-size-ns); }
-  h3 { font-size: var(--h3-font-size-ns); }
-  h4 { font-size: var(--h4-font-size-ns); }
-  h5 { font-size: var(--h5-font-size-ns); }
-  h6 { font-size: var(--h6-font-size-ns); }
-} */
+.headline { font-size: var(--headline-font-size); }
 
 /* Paragraphs */
 
@@ -72,14 +61,6 @@ p {
   font-weight: var(--font-weight-light);
 }
 
-/* Special sizing */
-
-.headline { font-size: var(--headline-font-size); }
-
-/* TODO: Improve or remove */
-.headline2 { font-size: 5rem; }
-.headline3 { font-size: 4rem; }
-
 /* Links */
 
 .link,
@@ -89,15 +70,19 @@ a {
   color: var(--link-colour);
   text-decoration: none;
   word-wrap: break-word;
+  transition: color var(--link-animate-out-speed) var(--link-animate-out-curve);
 
   &:hover {
-    color: var(--red-500); /* FIXME: */
+    color: var(--link-hover-colour);
+    text-decoration: underline;
+    transition-duration: var(--link-animate-in-speed);
+    /* transition-timing-function: var(--link-animate-in-curve); */
   }
 
-  @media (--breakpoint-not-small) {
+  /* @media (--breakpoint-not-small) {
     padding: 0.5rem 1rem;
     margin: -0.5rem -1rem;
-  }
+  } */
 }
 
 /* Lists */
@@ -105,7 +90,7 @@ a {
 li { margin-bottom: 0.5rem; } /* extra space between list items */
 
 /* dl::after { clear: both; } */ /* TODO: necessary? */
-dt { float: left; } /* TODO: Could this be achived with flex or grid somehow? */
+dt { float: left; } /* TODO: Could this be achieved with flex or grid somehow? */
 
 /* Text alignment */
 
