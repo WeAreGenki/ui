@@ -6,6 +6,7 @@
     "language": "en",
     // words - list of words to be always considered correct
     "words": [
+        "Segoe",
         "antialiased",
         "browserslist",
         "buble",
@@ -19,6 +20,7 @@
         "noopener",
         "ontouchstart",
         "plusplus",
+        "polyfill",
         "preload",
         "presets",
         "rgba",
