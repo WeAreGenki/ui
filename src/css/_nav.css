@@ -3,59 +3,15 @@
 /* Top navbar menu */
 
 .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  width: 100%;
-}
-
-.navbar-glide {
-  background-color: var(--body-bg);
-
-  > .con {
-    transition: transform 0.2s ease-in-out;
-    will-change: transform;
-  }
-
-  &.active > .con {
-    transform: translateY(-2px) translateZ(0); /* translateZ forces GPU rendered layer on browsers which don't support will-change */
-  }
-
-  &::after {
-    position: absolute;
-    bottom: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    content: '';
-    box-shadow: 0 0.5rem 2rem 0 var(--shadow);
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    will-change: opacity;
-  }
-
-  &.active::after {
-    opacity: 1;
-  }
-
-  .nav-link {
-    margin-top: 0.2rem;
-  }
-}
-
-.navbar-bg {
   color: var(--white);
   background-color: var(--primary);
-  box-shadow: 0 0 0.5rem var(--shadow);
+  box-shadow: 0 0 0.5rem var(--shadow-colour);
 
   .nav-link {
     color: var(--white);
 
     &:hover {
-      /* TODO: */
-      /* background-color: var(--primary-dark); */
-      background-color: var(--primary);
+      background-color: var(--red-500);
     }
   }
 }
@@ -64,10 +20,6 @@
   padding: 0.9rem 1.3rem;
   margin: 0; /* offset large link click area */
   cursor: pointer;
-
-  &:hover {
-    text-decoration: none;
-  }
 }
 
 /* Hamburger menu */
