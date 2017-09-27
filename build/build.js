@@ -63,7 +63,7 @@ const inputOptions = {
         // require('postcss-color-function')(),
         require('css-mqpacker')(),
         require('autoprefixer')(),
-        require('postcss-clean')(),
+        // require('postcss-clean')(),
         require('postcss-reporter')({ filter: msg => msg.type !== 'dependency' }),
       ],
       sourceMap: true, // true, "inline" or false
