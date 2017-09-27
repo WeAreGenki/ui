@@ -100,7 +100,7 @@ export default {
     left: 0;
     z-index: -1;
     content: '';
-    background-color: var(--shadow);
+    background-color: var(--shadow-colour);
     backdrop-filter: blur(4px);
   }
 }
@@ -117,6 +117,6 @@ dialog {
   color: var(--body-colour);
   background-color: var(--body-bg);
   border: 0;
-  box-shadow: 0 1rem 2rem 0 var(--shadow);
+  box-shadow: var(--shadow);
 }
 </style>

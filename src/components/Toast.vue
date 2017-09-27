@@ -76,7 +76,7 @@ export default {
   padding: 1.2rem 1.5rem 1rem;
   color: var(--white);
   background-color: var(--blue-600);
-  box-shadow: 0 1rem 2rem 0 var(--shadow);
+  box-shadow: var(--shadow);
   transition: transform 0.15s ease-out; /* animate in */
   transform: translateY(0);
   will-change: transform;

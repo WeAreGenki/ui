@@ -1,6 +1,6 @@
 @import "_variables-colour";
 
-/* Media Queries */
+/* Media queries */
 @custom-media --breakpoint-small screen and (min-width: 30em) and (max-width: 48em);
 @custom-media --breakpoint-not-small screen and (min-width: 48.01em); /* .01 to prevent match at the same time as previous breakpoint */
 @custom-media --breakpoint-medium screen and (min-width: 48.01em) and (max-width: 64em);
@@ -26,18 +26,22 @@
   --gutter-row-ns: var(--gutter-row);
 
   /* Colours */
+  /* FIXME: Default --primary and --secondary could be better -- generic blue-ish colour should be fine */
   --primary: var(--blue-a700); /* links, buttons */
-  --secondary: var(--blue-a700); /* highlights, CTAs */
+  --secondary: var(--blue-a700); /* highlights, call to action */ /* FIXME: Incorporate this colour into various places */
   --subtle: var(--blue-grey-200); /* footer */
   --body-bg: var(--grey-50);
   --body-colour: var(--blue-grey-900);
   --link-colour: var(--primary);
+  --link-hover-colour: var(--red-500); /* FIXME: */
 
   /* Shadows */
-  --shadow-subtle: rgba(112, 128, 175, 0.2);
-  --shadow-light1: rgba(62, 57, 107, 0.07);
-  --shadow-light2: rgba(62, 57, 107, 0.06);
-  --shadow: rgba(62, 57, 107, 0.28);
+  --shadow-subtle: 0 0.3125rem 1rem rgba(112, 128, 175, 0.2);
+  --shadow-light:
+    0 0.625rem 2.5rem 0 rgba(62, 57, 107, 0.07),
+    0 0.125rem 0.56rem 0 rgba(62, 57, 107, 0.06);
+  --shadow-colour: rgba(62, 57, 107, 0.28);
+  --shadow: 0 1rem 2rem 0 var(--shadow-colour);
 
   /* Typography */
   --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -64,7 +68,7 @@
   --radius: 0.15rem;
 
   /* Spacing */
-  --link-click-area: 0.25rem; /* increase if you don't have links close to each other */
+  --link-click-area: 0.25rem; /* increase if you don't have links close to each other (otherwise they may overlap) */
   --spacing-steps: 0, 1, 2, 3, 4, 5, 6, 7;
   --spacing-values: 0, 0.25rem, 0.5rem, 1rem, 2rem, 4rem, 8rem, 16rem;
 
@@ -73,4 +77,10 @@
 
   /* Navigation */
   --menu-colour: var(--primary);
+
+  /* Animation */
+  --link-animate-in-speed: 0s;
+  /* --link-animate-in-curve: ease-in; */
+  --link-animate-out-speed: 1s;
+  --link-animate-out-curve: ease-out;
 }

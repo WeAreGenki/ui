@@ -12,9 +12,7 @@
   border: 1px solid var(--blue-grey-50);
   border-radius: var(--radius);
   box-shadow: 0 2px 6px 0 rgba(51, 65, 97, 0.4);
-  box-shadow:
-    0 0.625rem 2.5rem 0 var(--shadow-light1),
-    0 0.125rem 0.56rem 0 var(--shadow-light2);
+  box-shadow: var(--shadow-light);
 
   &:hover,
   &:active {

@@ -4,6 +4,9 @@
 .subtle { color: var(--subtle); }
 .inherit { color: inherit; }
 
+.white { color: var(--white); }
+.black { color: var(--black); }
 .red { color: var(--red-500); }
 .green { color: var(--green-500); }
 .blue { color: var(--blue-500); }
+.yellow { color: var(--amber-500); }

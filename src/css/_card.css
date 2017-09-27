@@ -3,32 +3,29 @@
 .card {
   padding: 1.2rem 1.3rem;
   margin: 0;
+  word-wrap: break-word;
   background-color: var(--blue-grey-100);
-  box-shadow: 0 5px 15px var(--shadow-subtle);
+  box-shadow: var(--shadow-subtle);
 }
+
+/* FIXME: Convert many animation values to variables */
 
 .card-shadow {
   background-color: var(--body-bg);
   border: 1px solid var(--blue-grey-50);
-  box-shadow:
-    0 0.625rem 2.5rem 0 var(--shadow-light1),
-    0 0.125rem 0.625rem 0 var(--shadow-light2);
+  box-shadow: var(--shadow-light);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   will-change: transform, box-shadow;
 
   &:hover {
     box-shadow:
-      0 1rem 2rem 0 var(--shadow),
+      var(--shadow),
       0 0 0 transparent;
     transform: translateY(-5px) translateZ(0); /* translateZ forces GPU rendered layer on browsers which don't support will-change */
   }
 
-  .btn-clear:hover {
-    background-color: inherit;
-  }
-
   &:hover .btn-clear {
-    color: var(--red-500);
+    color: var(--link-hover-colour);
   }
 
   .btn-arrow {

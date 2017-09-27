@@ -84,6 +84,8 @@
   }
 }
 
+/* FIXME: Rename these to make them easier to understand and shorter too, ideally */
+
 .align-row-start { justify-items: start; }
 .align-row-end { justify-items: end; }
 .align-row-center { justify-items: center; }
