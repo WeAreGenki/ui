@@ -21,7 +21,8 @@
       menu  = assets/icons/menu.svg
       close = assets/icons/x.svg
 
-    You'll need to adjust .nav-logo padding to suit your logo.
+    You need to adjust .nav-icon + .logo width/height and .nav-logo padding to suit
+    your SVGs.
 
 -->
 <template>
@@ -160,15 +161,19 @@ export default {
   }
 }
 
+.nav-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.logo {
+  width: 2rem;
+  height: 2rem;
+}
+
 .nav-logo {
   display: inline-block;
   margin: 0;
   padding: 0.65rem 0 0;
-}
-
-.nav-icon {
-  width: 2rem;
-  height: 2rem;
-  stroke-width: 2; /* FIXME: Necessary until issue is resolved: https://github.com/kisenka/svg-sprite-loader/issues/191 */
 }
 </style>
