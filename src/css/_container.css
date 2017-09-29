@@ -1,0 +1,17 @@
+/* Container */
+
+.con {
+  padding-right: var(--gutter-col);
+  padding-left: var(--gutter-col);
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (--breakpoint-not-small) {
+    padding-right: calc(var(--gutter-col) * 2);
+    padding-left: calc(var(--gutter-col) * 2);
+  }
+
+  @media (--breakpoint-large) {
+    max-width: var(--container-max-width);
+  }
+}

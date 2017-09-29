@@ -2,6 +2,7 @@
 
 /* Top navbar menu */
 
+/* For minimal navbar when not using the Navbar component */
 .navbar {
   color: var(--white);
   background-color: var(--primary);
@@ -19,13 +20,11 @@
 .nav-link {
   padding: 0.9rem 1.3rem;
   margin: 0; /* offset large link click area */
-  cursor: pointer;
 }
 
 /* Hamburger menu */
 
-/* TODO: Implement menu button which morphs from hamburger to close cross */
-
+/* For minimal navbar when not using the Navbar component */
 .menu {
   display: inline-block;
   width: 1.25rem;
