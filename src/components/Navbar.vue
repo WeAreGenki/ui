@@ -1,11 +1,40 @@
+<!--
+
+  NAVBAR COMPONENT
+
+    A simple fixed top navigation bar with a floating effect upon scrolling. Will
+    collapse into a hamburger menu when the screen width is small.
+
+  README:
+    The `items` property should be an array of objects with a url and name key, e.g.:
+
+      <navbar :items="[
+        { url: '/our-brands', name: 'Our Brands' },
+        { url: '/ecommerce-tools', name: 'Ecommerce Tools' },
+        { url: '/consulting', name: 'Consulting' },
+      ]"/>
+
+    You need to supply a logo and menu/close icons as SVG (since each project will
+    likely have its own icon set):
+
+      logo  = assets/logo.svg
+      menu  = assets/icons/menu.svg
+      close = assets/icons/x.svg
+
+    You'll need to adjust .nav-logo padding to suit your logo.
+
+-->
 <template>
 <header class="navbar-fixed" :class="{ 'active': scrolled || showNav }">
     <div class="df-ns con">
-      <button @click.stop="showNav = !showNav" class="dn-ns btn-clear nav-link ml-1">
-        <i class="menu"></i>
+      <button @click.stop="showNav = !showNav" class="dn-ns btn-clear mr3">
+        <svg class="nav-icon link">
+          <use v-if="showNav" xlink:href="~@/assets/icons/x.svg"/>
+          <use v-else xlink:href="~@/assets/icons/menu.svg"/>
+        </svg>
       </button>
 
-      <router-link to="/" class="nav-link ml-1-ns">
+      <router-link to="/" class="nav-logo ml-1-ns">
         <svg class="logo"><use xlink:href="~@/assets/logo.svg"/></svg>
       </router-link>
 
@@ -54,6 +83,7 @@ export default {
     },
   },
   watch: {
+    // Set up click handler to close the menu but only when necessary
     showNav(active) {
       if (active) {
         const listener = () => {
@@ -128,5 +158,17 @@ export default {
   .nav-link {
     margin-top: 0.2rem;
   }
+}
+
+.nav-logo {
+  display: inline-block;
+  margin: 0;
+  padding: 0.65rem 0 0;
+}
+
+.nav-icon {
+  width: 2rem;
+  height: 2rem;
+  stroke-width: 2; /* FIXME: Necessary until issue is resolved: https://github.com/kisenka/svg-sprite-loader/issues/191 */
 }
 </style>
