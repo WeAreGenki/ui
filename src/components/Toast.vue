@@ -1,7 +1,7 @@
 <!-- TODO: Read through material design docs about toasts -->
 
 <template>
-<div class="toast">
+<div class="toast" :class="type">
   <button v-if="reload" @click="reloadPage" class="toast-link">RELOAD</button>
   <button v-else-if="canDismiss" @click="destroy" class="toast-link">DISMISS</button>
   <a v-if="link" :href="link" class="toast-link">{{ typeof link === String ? link : 'LINK' }}</a>
@@ -16,6 +16,10 @@ export default {
     id: {
       type: Number,
       required: true,
+    },
+    type: { // toast-error, toast-warn
+      type: String,
+      default: undefined,
     },
     link: {
       type: [Boolean, String],
@@ -86,6 +90,16 @@ export default {
     transition: transform 0.3s ease-in; /* animate out */
     transform: translateY(102%);
   }
+}
+
+.toast-warn {
+  color: var(--body-colour);
+  background-color: var(--amber-600);
+}
+
+.toast-error {
+  color: var(--white);
+  background-color: var(--red-600);
 }
 
 .toast-link {

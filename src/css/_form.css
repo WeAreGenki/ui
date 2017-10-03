@@ -8,6 +8,10 @@ form {
   margin-bottom: 1rem;
 }
 
+.form-help {
+  color: var(--grey-600);
+}
+
 label {
   display: block;
 }
@@ -15,6 +19,7 @@ label {
 input,
 textarea,
 select {
+  min-width: 17rem;
   padding: 0.6rem 1rem;
   font-size: 1.2rem;
   border: 0;

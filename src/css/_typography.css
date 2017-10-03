@@ -89,6 +89,11 @@ a {
 
 li { margin-bottom: 0.5rem; } /* extra space between list items */
 
+.lsn {
+  padding-left: 0;
+  list-style: none;
+}
+
 /* dl::after { clear: both; } */ /* TODO: necessary? */
 dt { float: left; } /* TODO: Could this be achieved with flex or grid somehow? */
 
@@ -150,4 +155,22 @@ dt { float: left; } /* TODO: Could this be achieved with flex or grid somehow? *
 .normal {
   font-style: normal;
   font-weight: var(--font-weight);
+}
+
+/* Abbreviations */
+
+abbr[title] {
+  text-decoration: none;
+
+  /* TODO: So many styles feels a bit over the top -- refactor while keeping the same effect */
+  &::after {
+    position: relative;
+    display: block;
+    content: '';
+    bottom: 0.4rem;
+    margin-bottom: -0.3rem;
+    background: var(--yellow-400);
+    height: 0.3rem;
+    z-index: -1;
+  }
 }

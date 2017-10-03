@@ -1,6 +1,6 @@
 <template>
 <div id="debug-breakpoints">
-  <dl class="code mt0">
+  <dl class="code mv0">
     <dt>xs</dt>
     <dd :class="xs ? 'green' : 'red'">{{ xs }}</dd>
     <dt>s</dt>
