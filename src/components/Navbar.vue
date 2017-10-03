@@ -43,9 +43,7 @@
       <transition>
         <nav class="dn df-ns f-col f-row-ns ml-auto-ns mh-1" :class="{ 'df': showNav }">
           <hr class="dn-ns mv0">
-          <router-link v-for="item in items" :key="item.url"
-            to="/our-brands" class="nav-link"
-          >
+          <router-link v-for="item in items" :key="item.url" :to="item.url" class="nav-link">
             {{ item.name }}
           </router-link>
         </nav>
