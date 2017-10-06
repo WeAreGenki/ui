@@ -13,12 +13,13 @@
   border-radius: var(--radius);
   box-shadow: 0 2px 6px 0 rgba(51, 65, 97, 0.4);
   box-shadow: var(--shadow-light);
+  transition: color 0s; /* TODO: Remove if we don't keep <a> colour transition */
 
   &:hover,
   &:active {
     color: var(--white);
     text-decoration: none;
-    background-color: var(--blue-600);
+    background-color: var(--primary);
   }
 }
 

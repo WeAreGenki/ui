@@ -10,4 +10,4 @@
 .plain { color: var(--body-colour); }
 .subtle { color: var(--subtle); }
 .inherit { color: inherit; }
-.inherit-i { color: inherit !important; } /* !important to override and :hover etc. states too */
+.inherit-i { color: inherit !important; } /* important to override and :hover etc. states too */

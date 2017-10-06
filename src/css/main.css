@@ -1,7 +1,7 @@
 /*! wag-ui v0.0.0 | https://wearegenki.com/tools#FOSS */
 
 @import "_variables"; /* colour variables also imported here */
-@import "_normalize.css";
+@import "_normalize";
 @import "_reboot";
 @import "_typography";
 @import "_colour";
@@ -20,4 +20,5 @@
 @import "_width";
 @import "_spacing";
 @import "_display";
+@import "_z-index";
 @import "_utils";

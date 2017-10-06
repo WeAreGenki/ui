@@ -69,6 +69,11 @@
 /* FIXME: Rename these to make them easier to understand and shorter too, ideally */
 /*  ↳ Probably start with g- to differentiate from flex with f- OR will there be overlap!? */
 
+.middle {
+  align-items: center;
+  justify-content: center;
+}
+
 .align-row-start { justify-items: start; }
 .align-row-end { justify-items: end; }
 .align-row-center { justify-items: center; }
@@ -113,6 +118,11 @@
 
 @each $media, $ext in (var(--breakpoint-media)), (var(--breakpoints)) {
   @media ($media) {
+    .middle-$(ext) {
+      align-items: center;
+      justify-content: center;
+    }
+
     .align-row-start-$(ext) { justify-items: start; }
     .align-row-end-$(ext) { justify-items: end; }
     .align-row-center-$(ext) { justify-items: center; }

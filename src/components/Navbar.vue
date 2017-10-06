@@ -26,7 +26,7 @@
 
 -->
 <template>
-<header class="navbar-fixed" :class="{ 'active': scrolled || showNav }">
+<header class="navbar-fixed z3" :class="{ 'active': scrolled || showNav }">
     <div class="df-ns con">
       <button @click.stop="showNav = !showNav" class="dn-ns btn-clear mr3">
         <svg class="nav-icon link">
@@ -125,7 +125,6 @@ export default {
   top: 0;
   right: 0;
   left: 0;
-  z-index: 10;
   background-color: var(--body-bg);
 
   > .con {

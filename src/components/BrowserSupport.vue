@@ -1,7 +1,9 @@
+// TODO: Testing -- will the app even load before this component is ever rendered
+//  on unsupported browsers? Maybe this should be an independent thing?
 // FIXME: Small screen responsive buttons
 
 <template>
-<div v-if="active" id="browser-support">
+<div v-if="active" id="browser-support" class="z9999">
   <dialog>
     <button @click="hide" class="btn btn-clear float-r">
       <svg class="icon"><use xlink:href="~@/assets/icons/x.svg"/></svg>
@@ -43,7 +45,7 @@ export default {
   computed: {
     isSupported() {
       // Skip if user has already bypassed
-      if (!window.localStorage.getItem('bypassCompat')) {
+      if (!window.localStorage.getItem('no_compat')) {
         const ua = window.navigator.userAgent;
         console.log(ua); // eslint-disable-line
 
@@ -71,7 +73,7 @@ export default {
       this.$emit('hide');
 
       // Disable compatibility check
-      window.localStorage.setItem('bypassCompat', 1);
+      window.localStorage.setItem('no_compat', 1);
 
       this.$nextTick(() => {
         this.$destroy();
@@ -90,7 +92,6 @@ export default {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 9999;
 
   &::after {
     position: fixed;
