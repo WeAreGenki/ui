@@ -13,14 +13,17 @@ module.exports = {
   },
   env: {
     browser: true,
+    'jest/globals': true
   },
   plugins: [
     'vue',
+    'jest',
   ],
   extends: [
     'airbnb-base',
     'plugin:import/errors',
     'plugin:vue/recommended',
+    'plugin:jest/recommended',
   ],
   rules: {
     // don't require .vue extension when importing

@@ -8,7 +8,7 @@
     "dev": "NODE_ENV='development' node build/build.js",
     "build": "NODE_ENV='production' node build/build.js",
     "lint": "stylelint 'src/**/*.css' 'src/**/*.vue' && eslint --ext .js,.vue src test/unit/specs",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -21,23 +21,25 @@
   },
   "homepage": "https://wearegenki.com/tools#FOSS",
   "peerDependencies": {
-    "vue": "^2.4.0",
     "vue-router": "^2.0.0"
+  },
+  "dependencies": {
+    "futurelink": "^0.2.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.0.0",
-    "babel-core": "^6.26.0",
-    "babel-eslint": "^8.0.0",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-env": "^1.6.0",
-    "babel-preset-stage-2": "^6.24.1",
+    "buble": "^0.16.0",
     "clean-css": "^4.1.9",
     "css-mqpacker": "^6.0.0",
     "eslint": "^4.8.0",
     "eslint-config-airbnb-base": "^12.0.0",
     "eslint-friendly-formatter": "^3.0.0",
     "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jest": "^21.2.0",
     "eslint-plugin-vue": "^3.13.0",
+    "jest": "^21.2.1",
+    "jest-buble": "^2.0.0",
+    "jest-vue": "^0.7.2",
     "postcss": "^6.0.0",
     "postcss-at-rules-variables": "^0.1.1",
     "postcss-calc": "^6.0.0",
@@ -60,7 +62,10 @@
     "stylelint-config-standard": "^17.0.0",
     "stylelint-order": "^0.7.0",
     "stylelint-processor-html": "^1.0.0",
-    "uglify-js": "^3.1.3"
+    "uglify-js": "^3.1.3",
+    "vue": "^2.4.4",
+    "vue-template-compiler": "^2.4.4",
+    "vue-test-utils": "^1.0.0-beta.1"
   },
   "engines": {
     "node": ">= 8.0.0",
@@ -71,7 +76,19 @@
     "last 2 versions",
     "not ie <= 10"
   ],
-  "dependencies": {
-    "futurelink": "^0.2.1"
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue"
+    ],
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1"
+    },
+    "transform": {
+      ".*\\.(vue)$": "<rootDir>/node_modules/jest-vue",
+      "^.+\\.js$": "jest-buble"
+    },
+    "mapCoverage": true
   }
 }
