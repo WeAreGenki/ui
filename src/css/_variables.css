@@ -12,7 +12,8 @@
   --breakpoints: s, ns, m, l;
 
   /* Grid */
-  --container-max-width: 70rem;
+  --container-width-max: 70rem;
+  --container-width-narrow: 30rem;
   --item-size: 1fr;
   --cols: auto;
   --rows: auto;
