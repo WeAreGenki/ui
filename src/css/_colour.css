@@ -2,6 +2,7 @@
 
 .white { color: var(--white); }
 .black { color: var(--black); }
+.grey { color: var(--grey-500); }
 .red { color: var(--red-500); }
 .green { color: var(--green-500); }
 .blue { color: var(--blue-500); }

@@ -16,6 +16,10 @@ label {
   display: block;
 }
 
+.form-label {
+  min-width: 6.5rem;
+}
+
 input,
 textarea,
 select {
@@ -24,13 +28,43 @@ select {
   font-size: 1.2rem;
   border: 0;
   border-radius: var(--radius);
-  outline: none; /* FIXME: This is a bad idea */
+
+  &:focus,
+  &:active {
+    /* TODO: Better styling or a different approach */
+    outline: 2px solid var(--blue-500);
+    /* outline: none; */
+    /* box-shadow: 0 0 0.5rem 0 var(--blue-500); */
+  }
 }
-/* FIXME: Select doesn't stresh all the way to the right like other inputs */
+
+textarea {
+  min-width: 19rem; /* TODO: Why is textarea width different from other inputs? */
+}
 
 /* TODO: Padding between options */
 select {
   padding: 0.2rem 0.4rem;
   background-color: var(--white);
   border: 1px solid var(--grey-500);
+}
+
+.input-small {
+  min-width: 5rem;
+  max-width: 7rem;
+}
+
+input[type=checkbox] {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+
+  input[type=checkbox] {
+    min-width: unset;
+    margin-right: 0.5rem;
+  }
 }

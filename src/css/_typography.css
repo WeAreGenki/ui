@@ -147,7 +147,7 @@ dt { float: left; } /* TODO: Could this be achieved with flex or grid somehow? *
   }
 }
 
-/* Font variants */
+/* Font/decoration variants */
 
 .bold { font-weight: bold; }
 .italic { font-style: italic; }
@@ -156,6 +156,8 @@ dt { float: left; } /* TODO: Could this be achieved with flex or grid somehow? *
   font-style: normal;
   font-weight: var(--font-weight);
 }
+
+.underline { text-decoration: underline; }
 
 /* Abbreviations */
 

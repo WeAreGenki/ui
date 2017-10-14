@@ -4,7 +4,6 @@
 @import "_normalize";
 @import "_reboot";
 @import "_typography";
-@import "_colour";
 @import "_form";
 @import "_button";
 @import "_label";
@@ -17,6 +16,7 @@
 @import "_grid-compat";
 @import "_grid-templates";
 @import "_grid";
+@import "_colour";
 @import "_width";
 @import "_spacing";
 @import "_display";

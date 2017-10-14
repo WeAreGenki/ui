@@ -35,3 +35,15 @@
   background-color: var(--red-100);
   border-left-color: var(--red-500);
 }
+
+/* Close button */
+.btn-close {
+  margin: -1rem;
+  color: inherit;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: unset;
+  }
+}
