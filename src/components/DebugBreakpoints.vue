@@ -57,7 +57,7 @@ export default {
 
 #debug-breakpoints {
   position: fixed;
-  top: 0;
+  bottom: 0;
   right: 0;
   padding: 0.5rem 1rem;
   font-weight: bold;
