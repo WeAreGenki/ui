@@ -26,7 +26,7 @@
 
 -->
 <template>
-<header class="navbar-fixed z3" :class="{ 'active': scrolled || showNav }">
+<header class="navbar-fixed z5" :class="{ 'active': scrolled || showNav }">
     <div class="df-ns con">
       <button @click.stop="showNav = !showNav" class="dn-ns btn-clear mr3">
         <svg class="nav-icon link">
