@@ -1,22 +1,20 @@
-// TODO: Testing -- will the app even load before this component is ever rendered
+// TODO: @Testing: will the app even load before this component is ever rendered
 //  on unsupported browsers? Maybe this should be an independent thing?
+
 // FIXME: Small screen responsive buttons
 
 <template>
-<div v-if="active" id="browser-support" class="z9999">
-  <dialog>
+<div id="browser-support" class="z9999">
+  <dialog open class="pa3">
     <button @click="hide" class="btn btn-clear float-r">
       <svg class="icon"><use xlink:href="~@/assets/icons/x.svg"/></svg>
     </button>
 
-    <h2 class="mt1">Warning!</h2>
+    <h2 class="mv1">Warning!</h2>
 
-    <p class="lead">You're using an unsupported browser.</p>
-
+    <p class="lead red">Your browser is not supported</p>
     <p>You can continue however our site may not work properly. For your end-users we maintain a wide range of browser support but this app interface we keep simple.</p>
-
     <p><a href="https://wearegenki.com/legal/browser-support" target="_blank" rel="noopener">Learn more about our browser support</a>.</p>
-
     <p>Please upgrade to a modern web browser. We <em>highly recommend</em> you use the latest version of Google Chrome.</p>
 
     <!-- TODO: Enterprise users may not have the ability to install software so put a notice about what to tell your IT support/team -->
@@ -37,47 +35,14 @@
 <script>
 export default {
   name: 'browser-support',
-  data() {
-    return {
-      active: false,
-    };
-  },
-  computed: {
-    isSupported() {
-      // Skip if user has already bypassed
-      if (!window.localStorage.getItem('no_compat')) {
-        const ua = window.navigator.userAgent;
-        console.log(ua); // eslint-disable-line
-
-        // FIXME: Implement browser detection
-
-        return false;
-      }
-      return true;
-    },
-  },
   mounted() {
-    if (!this.isSupported) {
-      this.show();
-    } else {
-      this.$destroy();
-    }
+    this.$emit('open');
   },
   methods: {
-    show() {
-      this.active = true;
-      this.$emit('show');
-    },
     hide() {
-      this.active = false;
-      this.$emit('hide');
-
-      // Disable compatibility check
-      window.localStorage.setItem('no_compat', 1);
-
-      this.$nextTick(() => {
-        this.$destroy();
-      });
+      window.localStorage.setItem('compat', 1); // Disable compatibility check
+      this.$emit('close');
+      this.$destroy();
     },
   },
 };
@@ -87,37 +52,28 @@ export default {
 @import "css/import";
 
 #browser-support {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  content: '';
+  background: var(--shadow-colour);
+  backdrop-filter: blur(4px);
 
-  &::after {
-    position: fixed;
+  > dialog {
+    position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: -1;
-    content: '';
-    background-color: var(--shadow-colour);
-    backdrop-filter: blur(4px);
+    display: block;
+    max-width: 30rem;
+    margin: auto;
+    color: var(--body-colour);
+    background: var(--body-bg);
+    border: 0;
+    box-shadow: var(--shadow);
   }
-}
-
-dialog {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: block;
-  max-width: 30rem;
-  margin: auto;
-  color: var(--body-colour);
-  background-color: var(--body-bg);
-  border: 0;
-  box-shadow: var(--shadow);
 }
 </style>
