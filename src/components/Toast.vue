@@ -1,11 +1,10 @@
-<!-- TODO: Read through material design docs about toasts -->
+// REF: https://material.io/guidelines/components/snackbars-toasts.html#snackbars-toasts-usage
 
 <template>
-<div class="toast" :class="type">
-  <button v-if="reload" @click="reloadPage" class="toast-link">RELOAD</button>
-  <button v-else-if="canDismiss" @click="destroy" class="toast-link">DISMISS</button>
-  <a v-if="link" :href="link" class="toast-link">{{ typeof link === String ? link : 'LINK' }}</a>
+<div class="toast df" :class="`toast-${type}`">
   <span class="toast-msg">{{ text }}</span>
+  <button v-if="action === 'reload'" @click="reload" class="toast-action">RELOAD</button>
+  <button v-else-if="action" @click="destroy" class="toast-action ttu">{{ action }}</button>
 </div>
 </template>
 
@@ -14,53 +13,58 @@ export default {
   name: 'toast',
   props: {
     id: {
-      type: Number,
+      type: [Number, String],
       required: true,
-    },
-    type: { // toast-error, toast-warn
-      type: String,
-      default: undefined,
-    },
-    link: {
-      type: [Boolean, String],
-      default: false,
     },
     text: {
       type: String, // Text only, no HTML allowed
-      default: '',
+      required: true,
+    },
+    type: { // error, warn
+      type: String,
+      default: undefined,
+    },
+    action: {
+      type: String,
+      default: undefined,
+    },
+    callback: { // called when component is destroyed
+      type: Function,
+      default: undefined,
     },
     timeout: {
       type: Number,
-      default: 6000,
-    },
-    canDismiss: {
-      type: Boolean,
-      default: false,
-    },
-    // Useful when the app has gone offline and hasn't auto healed itself
-    reload: {
-      type: Boolean,
-      default: false,
+      default: 8, // seconds
     },
   },
   mounted() {
-    // A timeout value of -1 means it's a permanent toast
-    if (this.timeout !== -1) {
+    if (!document.hidden) {
       this.setTimeoutHandler();
     } else {
-      // Without a timeout the toast must be user dismissible
-      this.dismissible = true;
+      const vm = this;
+
+      // wait for user to view the page before triggering the toast
+      document.addEventListener('visibilitychange', function visHandler() {
+        vm.setTimeoutHandler();
+        document.removeEventListener('visibilitychange', visHandler);
+      });
     }
   },
+  destroyed() {
+    // run callback function and pass if the action button was clicked
+    if (this.callback) this.callback(this.clicked);
+  },
   methods: {
-    destroy() {
-      this.$emit('destroy', this.id);
+    destroy(event) {
+      if (event && event.type === 'click') this.clicked = true;
+
+      this.$emit('destroy', { id: this.id });
     },
     setTimeoutHandler() {
-      window.setTimeout(this.destroy, this.timeout);
+      window.setTimeout(this.destroy, this.timeout * 1000);
     },
-    reloadPage() {
-      location.reload(); // eslint-disable-line no-restricted-globals
+    reload() {
+      window.location.reload();
     },
   },
 };
@@ -69,17 +73,16 @@ export default {
 <style>
 @import "css/import";
 
-/* TODO: Toast stacking (?) */
-/* FIXME: Permanent toast can be dismissed by other toasts */
-
 .toast {
   position: fixed;
-  bottom: 0;
-  left: 6rem;
+  bottom: 1.2rem;
+  left: 2rem;
+  min-width: 24rem;
+  max-width: 100%;
   z-index: var(--toast-z-index);
-  padding: 1.2rem 1.5rem 1rem;
+  padding: 1.1rem 1.5rem;
   color: var(--white);
-  background-color: var(--blue-600);
+  background-color: var(--grey-900);
   box-shadow: var(--shadow);
   transition: transform 0.15s ease-out; /* animate in */
   transform: translateY(0);
@@ -92,32 +95,29 @@ export default {
   }
 }
 
-.toast-warn {
-  color: var(--body-colour);
-  background-color: var(--amber-600);
-}
-
-.toast-error {
-  color: var(--white);
-  background-color: var(--red-600);
-}
-
-.toast-link {
+.toast-action {
   padding: 1rem 1.4rem;
-  margin: -1rem 0 -1rem -1rem;
-  font-weight: bold;
-  color: var(--blue-100);
+  margin: -1rem -1rem -1rem auto;
+  color: var(--blue-500);
   background-color: transparent;
   border: 0;
 
   &:hover,
   &:focus,
   &:active {
-    color: var(--blue-200);
+    color: var(--blue-400);
+  }
+
+  .toast-warn > & {
+    color: var(--amber-400);
+  }
+
+  .toast-error > & {
+    color: var(--red-400);
   }
 }
 
 .toast-msg {
-  font-size: 1.13rem;
+  font-size: 1.1rem;
 }
 </style>
