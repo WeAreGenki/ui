@@ -6,11 +6,11 @@
     "language": "en",
     // words - list of words to be always considered correct
     "words": [
-        "SVGs",
-        "Segoe",
         "antialiased",
         "browserslist",
         "buble",
+        "checkbox",
+        "codemirror",
         "compat",
         "dialog",
         "futurelink",
@@ -24,10 +24,14 @@
         "polyfill",
         "preload",
         "presets",
+        "readonly",
         "rgba",
+        "Segoe",
+        "SVGs",
         "transpiled",
         "typeof",
         "upsert",
+        "visibilitychange",
         "vuex",
         "xlink",
         "xsite"

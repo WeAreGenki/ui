@@ -4,7 +4,7 @@ module.exports = {
   root: true,
   parser: 'vue-eslint-parser',
   parserOptions: {
-    parser: 'babel-eslint',
+    // parser: 'babel-eslint',
     ecmaVersion: 2017,
     ecmaFeatures: {
       experimentalObjectRestSpread: true
@@ -13,17 +13,17 @@ module.exports = {
   },
   env: {
     browser: true,
-    'jest/globals': true
+    // 'jest/globals': true
   },
   plugins: [
     'vue',
-    'jest',
+    // 'jest',
   ],
   extends: [
     'airbnb-base',
     'plugin:import/errors',
     'plugin:vue/recommended',
-    'plugin:jest/recommended',
+    // 'plugin:jest/recommended',
   ],
   rules: {
     // don't require .vue extension when importing
@@ -55,7 +55,7 @@ module.exports = {
     // Vue
     // FIXME: Remove require-v-for-key once it's possible to ignore rules in <template> blocks
     'vue/require-v-for-key': 'off', // not strictly necessary BUT you need to know what you're doing
-    'vue/name-property-casing': ['error', 'kebab-case'], // same as in official repos
+    'vue/name-property-casing': ['error', 'kebab-case'], // same as in official repositories
     'vue/max-attributes-per-line': 'off', // easier to read in a single line
     'vue/no-dupe-keys': 'error',
     'vue/no-reserved-keys': 'error',

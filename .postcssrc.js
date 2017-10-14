@@ -4,7 +4,7 @@ const path = require('path');
 
 module.exports = {
   plugins: {
-    'postcss-import': { path: ['src'] },
+    'postcss-import': { path: ['src', 'node_modules'] },
     'postcss-at-rules-variables': {},
     'postcss-each': {},
     'postcss-mixins': { mixinsDir: path.join(__dirname, 'src/css/mixins') },
