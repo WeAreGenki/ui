@@ -1,9 +1,16 @@
 /* TODO: We may need to use postcss-flexbugs-fixes if we build out a lot of flexbox stuff and need wide browser compatibility */
+/* TThings that are shared between both flexbox and CSS grid are found in _grid.css because this framework is mostly focussed on CSS grid */
 
 .f-col { flex-direction: column; }
 .f-colr { flex-direction: column-reverse; }
 .f-row { flex-direction: row; }
 .f-rowr { flex-direction: row-reverse; }
+
+/* Most of the time when using flexbox you really just want to vertically align things, so this serves as a shortcut to that */
+.dfc {
+  display: flex;
+  align-items: center;
+}
 
 @each $media, $ext in (var(--breakpoint-media)), (var(--breakpoints)) {
   @media ($media) {
@@ -11,5 +18,10 @@
     .f-colr-$(ext) { flex-direction: column-reverse; }
     .f-row-$(ext) { flex-direction: row; }
     .f-rowr-$(ext) { flex-direction: row-reverse; }
+
+    .dfc-$(ext) {
+      display: flex;
+      align-items: center;
+    }
   }
 }
