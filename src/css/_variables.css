@@ -27,21 +27,32 @@
   --gutter-row-ns: var(--gutter-row);
 
   /* Colours */
-  /* FIXME: Default --primary and --secondary could be better -- generic blue-ish colour should be fine */
-  --primary: var(--blue-a700); /* links, buttons */
-  --secondary: var(--blue-a700); /* highlights, call to action */ /* FIXME: Incorporate this colour into various places */
-  --subtle: var(--blue-grey-200); /* footer */
+  --primary-gradient-0: #02e8ff;
+  --primary-gradient-100: #0060df;
+  --primary-gradient-35: color(var(--primary-gradient-0) blend(var(--primary-gradient-100) 35%));
+  --primary-gradient-60: color(var(--primary-gradient-0) blend(var(--primary-gradient-100) 60%));
+  --primary-gradient-80: color(var(--primary-gradient-0) blend(var(--primary-gradient-100) 80%));
+  --primary-gradient-90: color(var(--primary-gradient-0) blend(var(--primary-gradient-100) 90%));
+  --primary: var(--primary-gradient-80); /* links, buttons */
+  /* FIXME: --secondary should be contrasting to --primary -- green is ideal for CTA */
+  /* FIXME: Incorporate --secondary into various places */
+  --secondary-0: #30cde2;
+  --secondary-100: #306efe;
+  --secondary: var(--purple-a700); /* call to action, highlights */
+  --secondary-accent: var(--purple-a200);
+  --subtle: var(--blue-grey-200); /* footer, title subheading */
   --body-bg: var(--grey-50);
   --body-colour: var(--blue-grey-900);
   --link-colour: var(--primary);
-  --link-hover-colour: var(--red-500); /* FIXME: */
+  --link-hover-colour: var(--primary-gradient-100);
 
   /* Shadows */
   --shadow-subtle: 0 0.3125rem 1rem rgba(112, 128, 175, 0.2);
+  --shadow-base: rgb(62, 57, 107);
   --shadow-light:
-    0 0.625rem 2.5rem 0 rgba(62, 57, 107, 0.07),
-    0 0.125rem 0.56rem 0 rgba(62, 57, 107, 0.06);
-  --shadow-colour: rgba(62, 57, 107, 0.28);
+    0 0.625rem 2.5rem 0 color(var(--shadow-base) alpha(0.07)),
+    0 0.125rem 0.56rem 0 color(var(--shadow-base) alpha(0.06));
+  --shadow-colour: color(var(--shadow-base) alpha(0.28));
   --shadow: 0 1rem 2rem 0 var(--shadow-colour);
 
   /* Typography */
