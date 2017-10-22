@@ -21,11 +21,12 @@
     box-shadow:
       var(--shadow),
       0 0 0 transparent;
-    transform: translateY(-5px) translateZ(0); /* translateZ forces GPU rendered layer on browsers which don't support will-change */
+    transform: translateY(-5px);
   }
 
   &:hover .btn-clear {
     color: var(--link-hover-colour);
+    background-color: unset;
   }
 
   .btn-arrow {
@@ -34,7 +35,7 @@
   }
 
   &:hover .btn-arrow {
-    transform: translateX(0.3rem) translateZ(0);
+    transform: translateX(0.3rem);
   }
 }
 

@@ -133,7 +133,7 @@ export default {
   }
 
   &.active > .con {
-    transform: translateY(-2px) translateZ(0); /* translateZ forces GPU rendered layer on browsers which don't support will-change */
+    transform: translateY(-2px);
   }
 
   &::after {
