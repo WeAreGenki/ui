@@ -42,8 +42,7 @@
   color: inherit;
 
   &:hover,
-  &:focus,
-  &:active {
+  &:focus {
     background-color: unset;
   }
 }

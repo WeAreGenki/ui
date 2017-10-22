@@ -103,8 +103,7 @@ export default {
   border: 0;
 
   &:hover,
-  &:focus,
-  &:active {
+  &:focus {
     color: var(--blue-400);
   }
 
