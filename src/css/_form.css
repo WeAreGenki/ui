@@ -26,20 +26,20 @@ select {
   min-width: 17rem;
   padding: 0.6rem 1rem;
   font-size: 1.2rem;
+  color: var(--body-colour);
+  background-color: var(--white);
   border: 0;
   border-radius: var(--radius);
 
   &:focus,
   &:active {
-    /* TODO: Better styling or a different approach */
-    outline: 2px solid var(--blue-500);
-    /* outline: none; */
-    /* box-shadow: 0 0 0.5rem 0 var(--blue-500); */
+    outline: 2px solid var(--primary);
   }
-}
 
-textarea {
-  min-width: 19rem; /* TODO: Why is textarea width different from other inputs? */
+  &.input-small {
+    min-width: 5rem;
+    max-width: 7rem;
+  }
 }
 
 /* TODO: Padding between options */
@@ -49,22 +49,9 @@ select {
   border: 1px solid var(--grey-500);
 }
 
-.input-small {
-  min-width: 5rem;
-  max-width: 7rem;
-}
-
 input[type=checkbox] {
   width: 1.6rem;
+  min-width: unset;
   height: 1.6rem;
-}
-
-.checkbox {
-  display: flex;
-  align-items: center;
-
-  input[type=checkbox] {
-    min-width: unset;
-    margin-right: 0.5rem;
-  }
+  margin-right: 0.5rem;
 }
