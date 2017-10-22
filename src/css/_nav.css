@@ -48,9 +48,12 @@
 
     &.active {
       text-decoration: none;
-      cursor: default;
       /* TODO: Change */
       background-color: var(--grey-300);
+    }
+
+    &.exact {
+      cursor: default;
     }
   }
 }

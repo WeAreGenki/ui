@@ -1,8 +1,9 @@
-// TODO: @Testing: will the app even load before this component is ever rendered
-//  on unsupported browsers? Maybe this should be an independent thing?
+<!-- TODO: @Testing: will the app even load before this component is ever rendered on unsupported browsers? Maybe this should be an independent thing? -->
 
-// FIXME: Small screen responsive buttons
+<!-- FIXME: Small screen responsive buttons -->
 
+<!-- TODO: Turn this into a functional component if possible for better performance -->
+<!-- <template functional> -->
 <template>
 <div id="browser-support" class="z9999">
   <dialog open class="pa3">

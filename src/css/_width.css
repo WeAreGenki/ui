@@ -27,6 +27,8 @@
 .w-25 { width: 25%; }
 .w-a { width: auto; } /* default */
 
+.wmu { min-width: unset; }
+
 @each $media, $ext in (var(--breakpoint-media)), (var(--breakpoints)) {
   @media ($media) {
     .w-100-$(ext) { width: 100%; }
@@ -34,5 +36,7 @@
     .w-50-$(ext) { width: 50%; }
     .w-25-$(ext) { width: 25%; }
     .w-a-$(ext) { width: auto; }
+
+    .wmu-$(ext) { min-width: unset; }
   }
 }
