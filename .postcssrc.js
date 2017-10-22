@@ -13,7 +13,7 @@ module.exports = {
     'postcss-conditionals': {},
     'postcss-custom-media': {},
     'postcss-calc': { warnWhenCannotResolve: true },
-    // 'postcss-color-function': {},
+    'postcss-color-function': {},
     'css-mqpacker': {},
     'autoprefixer': { remove: false },
     // 'postcss-clean': {},

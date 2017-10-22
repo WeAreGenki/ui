@@ -39,6 +39,7 @@
     "postcss-at-rules-variables": "^0.1.1",
     "postcss-calc": "^6.0.0",
     "postcss-clean": "^1.1.0",
+    "postcss-color-function": "^4.0.0",
     "postcss-conditionals": "^2.1.0",
     "postcss-css-variables": "^0.8.0",
     "postcss-custom-media": "^6.0.0",
@@ -60,6 +61,7 @@
   "browserslist": [
     "> 1%",
     "last 2 major versions",
-    "not ie <= 11"
+    "not ie <= 11",
+    "not ie_mob <= 11"
   ]
 }
