@@ -18,6 +18,7 @@
   will-change: transform, box-shadow;
 
   &:hover {
+    text-decoration: unset;
     box-shadow:
       var(--shadow),
       0 0 0 transparent;

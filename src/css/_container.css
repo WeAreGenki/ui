@@ -17,6 +17,10 @@
   }
 }
 
+.fluid {
+  min-width: unset;
+}
+
 .narrow {
   max-width: var(--container-width-narrow);
 }

@@ -6,9 +6,11 @@
   background-color: var(--body-bg);
   border: 1px solid var(--blue-grey-50);
   border-radius: var(--radius);
+  /* FIXME: Remove this box shadow if it's not necessary */
   box-shadow:
     0 0.2rem 1rem 0 color(var(--shadow-base) alpha(0.1)),
     0 0.125rem 0.175rem 0 color(var(--shadow-base) alpha(0.06));
+  box-shadow: 0 0.125rem 0.375rem 0 color(var(--shadow-base) alpha(0.14));
   transition: color 0s;
 
   &:hover,
@@ -16,6 +18,19 @@
     color: var(--white);
     text-decoration: none;
     background-color: var(--link-hover-colour);
+  }
+}
+
+/* FIXME: IMPROVE OR REMOVE */
+.btn-test {
+  box-shadow:
+    0 0 0 0 transparent,
+    0 0 0 0 transparent;
+
+  &:hover {
+    box-shadow:
+      0 0.25rem 1rem 0 color(var(--shadow-base) alpha(0.11)),
+      0 0.075rem 0.175rem 0 color(var(--shadow-base) alpha(0.09));
   }
 }
 
@@ -52,6 +67,10 @@
 /* Spacing between buttons */
 .btn + .btn {
   margin-left: 1.5rem;
+}
+
+.btn-clear + .btn-clear {
+  margin-left: 0;
 }
 
 /* FIXME: Remove below if unused */
