@@ -2,11 +2,11 @@
 
 .dg,
 .dig {
-  grid-template-columns: var(--cols);
-  grid-template-rows: var(--rows);
-  grid-auto-columns: var(--auto-cols);
   grid-auto-rows: var(--auto-rows);
+  grid-auto-columns: var(--auto-cols);
   grid-gap: var(--gutter-row) var(--gutter-col);
+  grid-template-rows: var(--rows);
+  grid-template-columns: var(--cols);
 
   @media (--breakpoint-not-small) {
     grid-gap: var(--gutter-row-ns) var(--gutter-col-ns);

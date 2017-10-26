@@ -53,14 +53,14 @@ export default {
 </script>
 
 <style>
-@import 'css/import';
+@import "css/import";
 
-#debug-breakpoints {
+#debug-breakpoints { /* stylelint-disable-line selector-max-id */
   position: fixed;
-  bottom: 0;
   right: 0;
+  bottom: 0;
   padding: 0.5rem 1rem;
-  font-weight: bold;
+  font-weight: 700;
   color: var(--white);
   background-color: rgba(0, 0, 0, 0.6);
 }

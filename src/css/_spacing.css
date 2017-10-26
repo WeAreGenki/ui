@@ -32,7 +32,7 @@
     -l = large
 */
 
-/* stylelint-disable declaration-block-single-line-max-declarations */
+/* stylelint-disable declaration-block-single-line-max-declarations, declaration-no-important */
 
 @each $step, $val in (var(--spacing-steps)), (var(--spacing-values)) {
   .ma$(step) { margin: $val; }

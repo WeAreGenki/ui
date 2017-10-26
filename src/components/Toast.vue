@@ -77,9 +77,9 @@ export default {
   position: fixed;
   bottom: 1.2rem;
   left: 2rem;
+  z-index: var(--toast-z-index);
   min-width: 24rem;
   max-width: 100%;
-  z-index: var(--toast-z-index);
   padding: 1.1rem 1.5rem;
   color: var(--white);
   background-color: var(--grey-900);

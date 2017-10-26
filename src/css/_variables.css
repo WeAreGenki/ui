@@ -1,8 +1,9 @@
 @import "_variables-colour";
 
 /* Media queries */
+/* Add .01 to prevent match at the same time as previous breakpoint */
 @custom-media --breakpoint-small screen and (min-width: 30em) and (max-width: 48em);
-@custom-media --breakpoint-not-small screen and (min-width: 48.01em); /* .01 to prevent match at the same time as previous breakpoint */
+@custom-media --breakpoint-not-small screen and (min-width: 48.01em);
 @custom-media --breakpoint-medium screen and (min-width: 48.01em) and (max-width: 64em);
 @custom-media --breakpoint-large screen and (min-width: 64.01em);
 

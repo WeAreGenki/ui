@@ -1,43 +1,11 @@
 /* NAVIGATION */
 
-/* Top navbar menu */
-
-/* For minimal navbar when not using the Navbar component */
-.navbar {
-  color: var(--white);
-  background-color: var(--primary);
-  box-shadow: 0 0 0.5rem var(--shadow-colour);
-
-  .nav-link {
-    color: var(--white);
-
-    &:hover {
-      background-color: var(--red-500);
-    }
-  }
-}
-
 .nav-link {
   padding: 0.9rem 1.3rem;
   margin: 0; /* offset large link click area */
 }
 
-/* Hamburger menu */
-
-/* For minimal navbar when not using the Navbar component */
-.menu {
-  display: inline-block;
-  width: 1.25rem;
-  height: 0.125rem;
-  /* margin: 0.5rem; */ /* use margin because padding breaks it */
-  vertical-align: 5px;
-  box-shadow:
-    inset 0 0 0 2rem var(--primary),
-    0 -0.375rem var(--primary),
-    0 0.375rem var(--primary);
-}
-
-/* Side navigation */
+/* Side menu */
 
 .side-nav {
   display: flex;
@@ -72,4 +40,34 @@
       margin-left: -1rem;
     }
   }
+}
+
+/* Minimal navbar when not using the Navbar component */
+
+/* top navbar menu */
+.navbar {
+  color: var(--white);
+  background-color: var(--primary);
+  box-shadow: 0 0 0.5rem var(--shadow-colour);
+
+  .nav-link { /* stylelint-disable-line no-descending-specificity */
+    color: var(--white);
+
+    &:hover {
+      background-color: var(--link-hover-colour);
+    }
+  }
+}
+
+/* hamburger menu icon */
+.menu {
+  display: inline-block;
+  width: 1.25rem;
+  height: 0.125rem;
+  /* margin: 0.5rem; */ /* use margin here because padding breaks the icon */
+  vertical-align: 5px;
+  box-shadow:
+    inset 0 0 0 2rem var(--primary),
+    0 -0.375rem var(--primary),
+    0 0.375rem var(--primary);
 }

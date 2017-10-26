@@ -6,7 +6,7 @@
 <!-- <template functional> -->
 <template>
 <div id="browser-support" class="z9999">
-  <dialog open class="pa3">
+  <dialog id="browser-support-dialog" class="pa3" open>
     <button @click="hide" class="btn btn-clear float-r">
       <svg class="icon"><use xlink:href="~@/assets/icons/x.svg"/></svg>
     </button>
@@ -52,29 +52,29 @@ export default {
 <style>
 @import "css/import";
 
-#browser-support {
+#browser-support { /* stylelint-disable-line selector-max-id */
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  content: '';
+  content: "";
   background: var(--shadow-colour);
   backdrop-filter: blur(4px);
+}
 
-  > dialog {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: block;
-    max-width: 30rem;
-    margin: auto;
-    color: var(--body-colour);
-    background: var(--body-bg);
-    border: 0;
-    box-shadow: var(--shadow);
-  }
+#browser-support-dialog { /* stylelint-disable-line selector-max-id */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  max-width: 30rem;
+  margin: auto;
+  color: var(--body-colour);
+  background: var(--body-bg);
+  border: 0;
+  box-shadow: var(--shadow);
 }
 </style>

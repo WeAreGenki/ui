@@ -18,7 +18,7 @@
     display: block;
     width: 100%;
     height: 12rem;
-    content: '';
+    content: "";
     background-color: var(--blue-grey-700);
     transform: skewY(-6deg);
 

@@ -142,7 +142,7 @@ export default {
     bottom: 0;
     z-index: -1;
     width: 100%;
-    content: '';
+    content: "";
     box-shadow: 0 0.5rem 2rem 0 var(--shadow-colour);
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
@@ -170,7 +170,7 @@ export default {
 
 .nav-logo {
   display: inline-block;
-  margin: 0;
   padding: 0.65rem 0 0;
+  margin: 0;
 }
 </style>

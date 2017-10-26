@@ -20,6 +20,13 @@ label {
   min-width: 6.5rem;
 }
 
+/* TODO: Padding between options */
+select {
+  padding: 0.6rem 0.4rem; /* same height as buttons */
+  background-color: var(--white);
+  border: 1px solid var(--grey-500);
+}
+
 input,
 textarea,
 select {
@@ -36,20 +43,13 @@ select {
     outline: 2px solid var(--primary);
   }
 
-  &.input-small {
+  &.input-small { /* stylelint-disable-line selector-no-qualifying-type */
     min-width: 5rem;
     max-width: 7rem;
   }
 }
 
-/* TODO: Padding between options */
-select {
-  padding: 0.2rem 0.4rem;
-  background-color: var(--white);
-  border: 1px solid var(--grey-500);
-}
-
-input[type=checkbox] {
+input[type="checkbox"] {
   width: 1.6rem;
   min-width: unset;
   height: 1.6rem;

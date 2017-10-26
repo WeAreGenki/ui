@@ -27,7 +27,7 @@ import 'codemirror/mode/javascript/javascript';
 // import 'codemirror/addon/lint/json-lint';
 import 'codemirror/addon/edit/matchbrackets';
 import 'codemirror/addon/edit/closebrackets';
-import 'codemirror/addon/selection/active-line.js';
+import 'codemirror/addon/selection/active-line';
 
 // window.jsonlint = jsonlint;
 
@@ -119,10 +119,10 @@ export default {
 </script>
 
 <style>
-@import 'codemirror/lib/codemirror';
-@import 'codemirror/theme/dracula';
-/* @import 'codemirror/addon/lint/lint'; */
-@import 'css/import';
+@import "codemirror/lib/codemirror";
+@import "codemirror/theme/dracula";
+/* @import "codemirror/addon/lint/lint"; */
+@import "css/import";
 
 .CodeMirror {
   min-width: 100%;
