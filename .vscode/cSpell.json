@@ -3,7 +3,7 @@
     // Version of the setting file.  Always 0.1
     "version": "0.1",
     // language - current active spelling language
-    "language": "en",
+    "language": "en-GB",
     // words - list of words to be always considered correct
     "words": [
         "antialiased",
@@ -13,9 +13,12 @@
         "codemirror",
         "compat",
         "dialog",
+        "dropdown",
+        "flexbox",
         "futurelink",
         "jsnext",
         "linting",
+        "minmax",
         "mixins",
         "mqpacker",
         "noopener",
