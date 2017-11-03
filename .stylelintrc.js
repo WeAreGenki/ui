@@ -20,7 +20,7 @@ module.exports = {
     'font-weight-notation': 'numeric',
     'function-url-no-scheme-relative': true,
     'function-url-quotes': 'always',
-    'max-line-length': [120, { ignore: 'comments' }],
+    'max-line-length': [120, { ignore: ['comments'] }],
     'media-feature-name-no-vendor-prefix': true,
     'media-feature-parentheses-space-inside': 'never',
     'media-feature-range-operator-space-after': 'always',
