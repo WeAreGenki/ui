@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: 'input-toggle',
+  name: 'InputToggle',
   props: {
     value: {
       type: Boolean,

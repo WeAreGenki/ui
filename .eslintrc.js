@@ -55,7 +55,7 @@ module.exports = {
     // Vue
     // FIXME: Remove require-v-for-key once it's possible to ignore rules in <template> blocks
     'vue/require-v-for-key': 'off', // not strictly necessary BUT you need to know what you're doing
-    'vue/name-property-casing': ['error', 'kebab-case'], // same as in official repositories
+    'vue/name-property-casing': 'error', // default; PascalCase
     'vue/max-attributes-per-line': 'off', // easier to read in a single line
     'vue/no-dupe-keys': 'error',
     'vue/no-reserved-keys': 'error',

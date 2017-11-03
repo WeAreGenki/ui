@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: 'dropdown',
+  name: 'Dropdown',
   props: {
     icon: {
       type: String,

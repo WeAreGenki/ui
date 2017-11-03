@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: 'toast',
+  name: 'Toast',
   props: {
     id: {
       type: [Number, String],

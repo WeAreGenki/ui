@@ -5,7 +5,7 @@
 
 <template>
 <div class="dn" aria-hidden="true">
-  <component :is="load"/>
+  <Component :is="load"/>
 </div>
 </template>
 
@@ -13,6 +13,7 @@
 import futurelink from 'futurelink';
 
 export default {
+  name: 'Futurelink',
   data() {
     return {
       load: undefined,

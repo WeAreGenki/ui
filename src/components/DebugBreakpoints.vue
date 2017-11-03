@@ -24,7 +24,7 @@ const m = window.matchMedia('(min-width: 48.01em) and (max-width: 64em)');
 const l = window.matchMedia('(min-width: 64.01em)');
 
 export default {
-  name: 'debug-breakpoints',
+  name: 'DebugBreakpoints',
   data() {
     return {
       xs: xs.matches,

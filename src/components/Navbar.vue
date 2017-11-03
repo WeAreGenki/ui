@@ -54,7 +54,7 @@
 
 <script>
 export default {
-  name: 'navbar',
+  name: 'Navbar',
   props: {
     items: {
       type: Array,

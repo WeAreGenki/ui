@@ -32,7 +32,7 @@ import 'codemirror/addon/selection/active-line';
 // window.jsonlint = jsonlint;
 
 export default {
-  name: 'code-editor',
+  name: 'CodeEditor',
   props: {
     mode: {
       type: String,

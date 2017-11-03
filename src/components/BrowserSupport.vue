@@ -35,7 +35,7 @@
 
 <script>
 export default {
-  name: 'browser-support',
+  name: 'BrowserSupport',
   mounted() {
     this.$emit('open');
   },
