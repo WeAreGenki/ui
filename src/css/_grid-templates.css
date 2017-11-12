@@ -5,11 +5,13 @@
 
 /* Horizontal card */
 .card-t-h {
+  /* position: relative; */ /* XXX: Related to below */
   grid-template:
     "img"
     "body"
     "btn"
     / auto;
+  /* overflow: hidden; */ /* XXX: Related to below */
 
   @media (--breakpoint-medium) {
     grid-column-gap: 0;
@@ -26,7 +28,16 @@
 .card-img {
   grid-area: img;
   width: 100%;
-  background-color: var(--grey-700);
+  /* XXX: Like background-size:cover but using a foreground <img> */
+  /* position: absolute;
+  grid-area: img;
+  top: -9999px;
+  right: -9999px;
+  bottom: -9999px;
+  left: -9999px;
+  min-width: 100%;
+  min-height: 100%;
+  margin: auto; */
 }
 
 .card-body {

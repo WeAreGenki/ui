@@ -45,6 +45,15 @@
 
 /* Background colour */
 /* FIXME: Remove if unused; intended for debugging */
+.bg-dark {
+  background-color: var(--blue-grey-800);
+
+  &,
+  a {
+    color: var(--white);
+  }
+}
+
 .bg-blue {
   background-color: var(--blue-500);
 
@@ -61,4 +70,9 @@
   a {
     color: var(--white);
   }
+}
+
+/* FIXME: Put in a better place */
+.bg-hover:hover {
+  background-color: var(--blue-grey-50);
 }
