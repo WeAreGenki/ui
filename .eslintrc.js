@@ -1,30 +1,35 @@
-// http://eslint.org/docs/user-guide/configuring
+// https://eslint.org/docs/user-guide/configuring
 
 module.exports = {
   root: true,
   parser: 'vue-eslint-parser',
   parserOptions: {
-    // parser: 'babel-eslint',
+    parser: 'babel-eslint',
     ecmaVersion: 2017,
+    sourceType: 'module',
     ecmaFeatures: {
       experimentalObjectRestSpread: true
     },
-    sourceType: 'module',
   },
   env: {
     browser: true,
-    // 'jest/globals': true
+    'jest/globals': true
   },
   plugins: [
     'vue',
-    // 'jest',
+    'html',
+    // 'compat',
+    'jest',
   ],
   extends: [
     'airbnb-base',
     'plugin:import/errors',
     'plugin:vue/recommended',
-    // 'plugin:jest/recommended',
+    'plugin:jest/recommended',
   ],
+  settings: {
+    'html/html-extensions': ['.html'], // don't lint *.vue files with html plugin, use vue plugin
+  },
   rules: {
     // don't require .vue extension when importing
     'import/extensions': ['error', 'always', {
@@ -37,7 +42,13 @@ module.exports = {
     }],
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
+
+    // FIXME: REMOVE BEFORE GOING LIVE
+    'no-console': 'off',
+
     // We Are Genki
+    // 'compat/compat': 'warn', // find out which features need a polyfill
+    'no-param-reassign': ['error', { props: false }],
     'no-underscore-dangle': 'off', // needed for PouchDB
     'no-use-before-define': 'off', // FIXME: Currently broken with destructuring
     'max-len': 'off', // FIXME: Currently broken with vue template blocks
@@ -52,6 +63,24 @@ module.exports = {
     // }],
     'object-curly-spacing': ['error', 'always', { objectsInObjects: false }],
     'object-curly-newline': ['error', { consistent: true }],
+
+    // edit airbnb-base to remove ForOfStatement restriction
+    'no-restricted-syntax': [
+      'error',
+      {
+        selector: 'ForInStatement',
+        message: 'for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array.',
+      },
+      {
+        selector: 'LabeledStatement',
+        message: 'Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.',
+      },
+      {
+        selector: 'WithStatement',
+        message: '`with` is disallowed in strict mode because it makes code impossible to predict and optimize.',
+      },
+    ],
+
     // Vue
     // FIXME: Remove require-v-for-key once it's possible to ignore rules in <template> blocks
     'vue/require-v-for-key': 'off', // not strictly necessary BUT you need to know what you're doing

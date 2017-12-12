@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = {
   cache: true,
   // ignoreFiles: ['./src/css/custom/**/*.css'],

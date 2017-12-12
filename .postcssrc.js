@@ -7,7 +7,9 @@ module.exports = {
     'postcss-import': { path: ['src', 'node_modules'] },
     'postcss-at-rules-variables': {},
     'postcss-each': {},
-    'postcss-mixins': { mixinsDir: path.join(__dirname, 'src/css/mixins') },
+    'postcss-mixins': {
+      mixinsDir: [path.join(__dirname, 'src/css/mixins')]
+    },
     'postcss-nested': {},
     'postcss-css-variables': {},
     'postcss-conditionals': {},
@@ -16,7 +18,7 @@ module.exports = {
     'postcss-color-function': {},
     'css-mqpacker': {},
     'autoprefixer': { remove: false },
-    // 'postcss-clean': {},
+    // FIXME: Get reporter messages in webpack errors
     'postcss-reporter': { filter: msg => msg.type !== 'dependency' },
   }
 };
