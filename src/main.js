@@ -1,5 +1,3 @@
-// ENTRY POINT FOR ROLLUP COMPILATION
-
 /**
  * @wearegenki/ui
  * @author: Max Milton <max@wearegenki.com>
@@ -24,24 +22,42 @@ import './css/main.css';
 
 import {
   BrowserSupport,
+  CodeEditor,
   DebugBreakpoints,
-  Futurelink,
-  Toast,
-} from './index';
+  InputDropdown,
+  InputToggle,
+  ModalItem,
+  TabGroup,
+  TheFuturelink,
+  TheNavbar,
+  ToastGroup,
+} from './components';
 
 const WagUi = {
   BrowserSupport,
+  CodeEditor,
   DebugBreakpoints,
-  Futurelink,
-  Toast,
+  InputDropdown,
+  InputToggle,
+  ModalItem,
+  TabGroup,
+  TheFuturelink,
+  TheNavbar,
+  ToastGroup,
 
   install(Vue) {
     if (this.installed) return;
 
-    Vue.component('browser-support', BrowserSupport);
-    Vue.component('debug-breakpoints', DebugBreakpoints);
-    Vue.component('futurelink', Futurelink);
-    Vue.component('toast', Toast);
+    Vue.component('BrowserSupport', BrowserSupport);
+    Vue.component('CodeEditor', CodeEditor);
+    Vue.component('DebugBreakpoints', DebugBreakpoints);
+    Vue.component('InputDropdown', InputDropdown);
+    Vue.component('InputToggle', InputToggle);
+    Vue.component('ModalItem', ModalItem);
+    Vue.component('TabGroup', TabGroup);
+    Vue.component('TheFuturelink', TheFuturelink);
+    Vue.component('TheNavbar', TheNavbar);
+    Vue.component('ToastGroup', ToastGroup);
   },
 };
 
