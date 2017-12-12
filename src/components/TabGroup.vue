@@ -1,7 +1,9 @@
-<template>
-<div class="tab-group">
+<!-- TODO: Should TabItem be intergrated into this? Should it be a js based render function instead? -->
 
-</div>
+<template>
+  <div class="tab-group">
+
+  </div>
 </template>
 
 <script>
