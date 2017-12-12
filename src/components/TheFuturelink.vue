@@ -13,15 +13,13 @@
 import futurelink from 'futurelink';
 
 export default {
-  name: 'Futurelink',
-  data() {
-    return {
-      load: undefined,
-      options: {
-        links: [],
-      },
-    };
-  },
+  name: 'TheFuturelink',
+  data: () => ({
+    load: undefined,
+    options: {
+      links: [],
+    },
+  }),
   mounted() {
     // Don't run on the server
     if (typeof window === 'undefined') {

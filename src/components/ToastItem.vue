@@ -1,4 +1,6 @@
-// REF: https://material.io/guidelines/components/snackbars-toasts.html#snackbars-toasts-usage
+<!-- REF: https://material.io/guidelines/components/snackbars-toasts.html#snackbars-toasts-usage -->
+
+<!-- FIXME: Need a visual way to differenciate toast types, especially error toasts -->
 
 <template>
 <div class="toast df" :class="`toast-${type}`">
@@ -10,14 +12,14 @@
 
 <script>
 export default {
-  name: 'Toast',
+  name: 'ToastItem',
   props: {
     id: {
       type: [Number, String],
       required: true,
     },
     text: {
-      type: String, // Text only, no HTML allowed
+      type: String, // text only, no HTML allowed
       required: true,
     },
     type: { // error, warn
@@ -28,7 +30,7 @@ export default {
       type: String,
       default: undefined,
     },
-    callback: { // called when component is destroyed
+    cb: { // callback, run when component is destroyed
       type: Function,
       default: undefined,
     },
@@ -52,7 +54,7 @@ export default {
   },
   destroyed() {
     // run callback function and pass if the action button was clicked
-    if (this.callback) this.callback(this.clicked);
+    if (this.cb) this.cb(this.clicked);
   },
   methods: {
     destroy(event) {
@@ -61,7 +63,7 @@ export default {
       this.$emit('destroy', { id: this.id });
     },
     setTimeoutHandler() {
-      window.setTimeout(this.destroy, this.timeout * 1000);
+      setTimeout(this.destroy, this.timeout * 1000);
     },
     reload() {
       window.location.reload();

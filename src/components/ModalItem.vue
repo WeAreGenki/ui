@@ -1,5 +1,3 @@
-<!-- TODO: Turn this into a functional component if possible for better performance -->
-<!-- <template functional> -->
 <template>
 <div v-if="show" class="modal">
   <button v-if="closeBtn" @click="close" class="btn btn-clear float-r">
@@ -14,7 +12,7 @@
 
 <script>
 export default {
-  name: 'Modal',
+  name: 'ModalItem',
   props: {
     closeBtn: {
       type: Boolean,
@@ -29,11 +27,9 @@ export default {
       default: undefined,
     },
   },
-  data() {
-    return {
-      show: false,
-    };
-  },
+  data: () => ({
+    show: false,
+  }),
   methods: {
     open() {
       this.show = true;

@@ -67,11 +67,9 @@ export default {
     //   default: true,
     // },
   },
-  data() {
-    return {
-      skipNextChangeEvent: false,
-    };
-  },
+  data: () => ({
+    skipNextChangeEvent: false,
+  }),
   watch: {
     // value(newVal, oldVal) {
     value(newVal) {
@@ -88,7 +86,7 @@ export default {
   mounted() {
     this.editor = CodeMirror.fromTextArea(this.$el, {
       mode: this.mode,
-      readOnly: this.readOnly ? 'nocursor' : false,
+      readOnly: this.readOnly,
       lineNumbers: this.lineNumbers,
       lineWrapping: this.lineWrapping,
       matchBrackets: this.matchBrackets,

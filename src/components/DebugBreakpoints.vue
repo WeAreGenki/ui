@@ -18,21 +18,19 @@
 <script>
 // Define breakpoints
 // TODO: Can these be extracted from the CSS custom media variables?
-const xs = window.matchMedia('(max-width: 29.999em)');
-const s = window.matchMedia('(min-width: 30em) and (max-width: 48em)');
-const m = window.matchMedia('(min-width: 48.01em) and (max-width: 64em)');
-const l = window.matchMedia('(min-width: 64.01em)');
+const xs = matchMedia('(max-width: 29.999em)');
+const s = matchMedia('(min-width: 30em) and (max-width: 48em)');
+const m = matchMedia('(min-width: 48.01em) and (max-width: 64em)');
+const l = matchMedia('(min-width: 64.01em)');
 
 export default {
   name: 'DebugBreakpoints',
-  data() {
-    return {
-      xs: xs.matches,
-      s: s.matches,
-      m: m.matches,
-      l: l.matches,
-    };
-  },
+  data: () => ({
+    xs: xs.matches,
+    s: s.matches,
+    m: m.matches,
+    l: l.matches,
+  }),
   computed: {
     ns() {
       return this.m || this.l;

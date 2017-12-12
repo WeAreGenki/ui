@@ -8,16 +8,14 @@
 
 <script>
 export default {
-  name: 'Dropdown',
+  name: 'InputDropdown',
   props: {
     icon: {
       type: String,
       default: 'more-vertical',
     },
   },
-  // data() {
-  //   return {};
-  // },
+  // data: () => ({}),
 };
 </script>
 

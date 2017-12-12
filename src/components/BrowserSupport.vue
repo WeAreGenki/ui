@@ -1,9 +1,9 @@
 <!-- TODO: @Testing: will the app even load before this component is ever rendered on unsupported browsers? Maybe this should be an independent thing? -->
 
+<!-- FIXME: Refactor this into a self contained thing and focus on making it super browser compatible (probably no frameworks, just custom code) -->
+
 <!-- FIXME: Small screen responsive buttons -->
 
-<!-- TODO: Turn this into a functional component if possible for better performance -->
-<!-- <template functional> -->
 <template>
 <div id="browser-support" class="z9999">
   <dialog id="browser-support-dialog" class="pa3" open>
@@ -41,7 +41,7 @@ export default {
   },
   methods: {
     hide() {
-      window.localStorage.setItem('compat', 1); // Disable compatibility check
+      localStorage.setItem('compat', 1); // Disable compatibility check
       this.$emit('close');
       this.$destroy();
     },

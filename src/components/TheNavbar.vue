@@ -54,19 +54,17 @@
 
 <script>
 export default {
-  name: 'Navbar',
+  name: 'TheNavbar',
   props: {
     items: {
       type: Array,
       required: true,
     },
   },
-  data() {
-    return {
-      showNav: false,
-      scrolled: false,
-    };
-  },
+  data: () => ({
+    showNav: false,
+    scrolled: false,
+  }),
   computed: {
     // Check for passive eventListener support
     // FIXME: Might not be necessary for regular scroll, what about touch scroll?
@@ -76,7 +74,7 @@ export default {
         const options = Object.defineProperty({}, 'passive', {
           get() { support = true; }, // eslint-disable-line getter-return
         });
-        window.addEventListener('test', null, options);
+        document.addEventListener('test', null, options);
       } catch (e) {} // eslint-disable-line no-empty
       return support;
     },
@@ -87,9 +85,9 @@ export default {
       if (active) {
         const listener = () => {
           this.showNav = false;
-          window.removeEventListener('click', listener);
+          document.removeEventListener('click', listener);
         };
-        window.addEventListener('click', listener);
+        document.addEventListener('click', listener);
       }
     },
   },
@@ -101,9 +99,9 @@ export default {
       let ticking = false;
 
       // Listen to scroll events using requestAnimationFrame to debounce
-      window.addEventListener('scroll', () => {
+      document.addEventListener('scroll', () => {
         if (!ticking) {
-          window.requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
             // Set property used to conditionally add a class in the component template
             this.scrolled = window.scrollY > 10;
             ticking = false;
