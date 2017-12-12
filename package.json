@@ -1,6 +1,6 @@
 {
   "name": "@wearegenki/ui",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "CSS Grid based CSS library + Vue.js framework",
   "repository": "https://github.com/WeAreGenki/ui",
   "author": "Max Milton <max@wearegenki.com>",
