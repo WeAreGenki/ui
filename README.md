@@ -1,6 +1,6 @@
-# wag-ui
+# @wearegenki/ui
 
-> CSS Grid based CSS library + Vue.js framework — https://wearegenki.com/tools#FOSS
+> CSS Grid based CSS library + Vue.js framework — https://wearegenki.com/pro-tools#FOSS
 
 TODO: Write a nice readme :)
 
@@ -17,7 +17,7 @@ Because this framework uses [CSS Grid Layout](https://developer.mozilla.org/en-U
 * Edge 16
 * Opera 46
 
-Older browser compatibility will be added in future.
+Older browser compatibility is planned and will be added in future.
 
 -----
 
