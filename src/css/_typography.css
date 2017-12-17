@@ -5,7 +5,7 @@
 
 @if var(--font-size-fluid-enabled) {
   html {
-    @mixin fluid-font-size var(--font-size), var(--font-size-fluid-max), var(--font-size-fluid-from), var(--font-size-fluid-until);
+    @mixin font-size-fluid var(--font-size), var(--font-size-fluid-max), var(--font-size-fluid-from), var(--font-size-fluid-until);
   }
 }
 
@@ -16,6 +16,11 @@ body {
   font-size: var(--font-size);
   font-weight: var(--font-weight);
   color: var(--body-colour);
+  text-rendering: optimizeLegibility;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  ‑webkit‑text‑size‑adjust: 100%; /* Prevent automatic font scaling on iOS */
   background-color: var(--body-bg);
 }
 
@@ -178,4 +183,12 @@ abbr[title] {
 }
 
 /* Code */
-/* TODO */
+/* TODO: Change to use colour variables */
+code {
+  display: inline-block;
+  padding: 0.1em 0.4em;
+  color: #d03;
+  background-color: #f9f9f9;
+  border: 1px solid #e5e5e5;
+  border-radius: 0.15em;
+}
