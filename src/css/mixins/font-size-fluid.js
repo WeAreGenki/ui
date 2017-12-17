@@ -44,7 +44,14 @@ function convertSize(size, outputPx) {
   return size;
 }
 
-const fluidFontSize = (mixin, minFontSize, maxFontSize, fromScreenWidth, untilScreenWidth, usePxUnit = false) => {
+module.exports = (
+  mixin,
+  minFontSize,
+  maxFontSize,
+  fromScreenWidth,
+  untilScreenWidth,
+  usePxUnit = false,
+) => {
   const minFont = convertSize(minFontSize, usePxUnit);
   const maxFont = convertSize(maxFontSize, usePxUnit);
   const minMedia = convertSize(fromScreenWidth, usePxUnit);
@@ -69,5 +76,3 @@ const fluidFontSize = (mixin, minFontSize, maxFontSize, fromScreenWidth, untilSc
     },
   };
 };
-
-module.exports = fluidFontSize;
