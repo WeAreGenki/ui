@@ -13,6 +13,7 @@
     "dropdown",
     "flexbox",
     "futurelink",
+    "marko",
     "minmax",
     "mixins",
     "mqpacker",
@@ -30,6 +31,7 @@
     "upsert",
     "visibilitychange",
     "vuex",
+    "woff",
     "xlink",
     "xsite"
   ]
