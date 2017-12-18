@@ -12,5 +12,4 @@
 .plain { color: var(--body-colour); }
 .subtle { color: var(--subtle); }
 .inherit { color: inherit; }
-/* !important version to override :hover etc. states too */
-.inherit-i { color: inherit !important; } /* stylelint-disable-line declaration-no-important */
+[class="inherit!"] { color: inherit !important; } /* stylelint-disable-line declaration-no-important */
