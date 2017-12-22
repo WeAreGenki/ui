@@ -16,11 +16,6 @@ body {
   font-size: var(--font-size);
   font-weight: var(--font-weight);
   color: var(--body-colour);
-  text-rendering: optimizeLegibility;
-  font-smooth: always;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  ‑webkit‑text‑size‑adjust: 100%; /* Prevent automatic font scaling on iOS */
   background-color: var(--body-bg);
 }
 
