@@ -1,6 +1,6 @@
 .btn {
   display: inline-block;
-  padding: 0.75rem 1.875rem;
+  padding: var(--btn-padding);
   line-height: 1;
   color: var(--primary);
   background-color: var(--body-bg);
@@ -62,6 +62,14 @@
   &:focus {
     color: var(--white);
   }
+}
+
+/* Make links whitespace same as buttons */
+.btn-link {
+  display: inline-block;
+  padding: var(--btn-padding);
+  margin: 0;
+  line-height: 1;
 }
 
 /* Spacing between buttons */

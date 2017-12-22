@@ -91,6 +91,9 @@
   /* Navigation */
   --menu-colour: var(--primary);
 
+  /* Buttons */
+  --btn-padding: 0.75rem 1.875rem;
+
   /* Animation */
   --link-animate-in-speed: 0s;
   /* --link-animate-in-curve: ease-in; */
