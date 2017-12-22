@@ -84,6 +84,7 @@
   --link-click-area: 0.25rem; /* increase if you don't have links close to each other (otherwise they may overlap) */
   --spacing-steps: 0, 1, 2, 3, 4, 5, 6, 7;
   --spacing-values: 0, 0.25rem, 0.5rem, 1rem, 2rem, 4rem, 8rem, 16rem;
+  --hr-margin: 3rem 0;
 
   /* Z-index */
   --toast-z-index: 1080;
