@@ -1,6 +1,6 @@
 <template>
-  <transition-group>
-    <ToastItem @destroy="hide" v-for="toast in toasts" :key="toast.id"
+  <transition-group name="toast">
+    <ToastItem @destroy="$store.commit('toasts/hide')" v-for="toast in $store.state.toasts" :key="toast.id"
       :id="toast.id"
       :text="toast.text"
       :type="toast.type"
@@ -12,7 +12,6 @@
 </template>
 
 <script>
-import { mapState, mapMutations } from 'vuex';
 import ToastItem from './ToastItem';
 
 let count = 0;
@@ -22,9 +21,6 @@ export default {
   components: {
     ToastItem,
   },
-  computed: mapState([
-    'toasts',
-  ]),
   created() {
     this.$store.registerModule('toasts', {
       namespaced: true,
@@ -32,10 +28,11 @@ export default {
       mutations: {
         /* eslint-disable no-return-assign, no-param-reassign */
         show: (state, toast) => state.push(toast),
-        // hide: state => state.shift(),
-        hide: (state, id) => id !== undefined // eslint-disable-line no-confusing-arrow
-          ? state.shift()
-          : state.filter(toast => toast.id !== id),
+        // TODO: Don't dismiss by ID, instead use a que
+        // hide: (state, id) => id !== undefined // eslint-disable-line no-confusing-arrow
+        //   ? state.shift()
+        //   : state.filter(toast => toast.id !== id),
+        hide: state => state.shift(),
         /* eslint-enable no-return-assign, no-param-reassign */
       },
       actions: {
@@ -43,7 +40,7 @@ export default {
           commit('hide', id);
         },
 
-        // TODO: May be worth setting up a que in case there's a high priority
+        // TODO: Implement a que in case there's a high priority
         //  toast that needs a certain amount of user attention/time
         createToast({ commit, state }, { text, type, action, cb, timeout }) {
           // dismiss existing toast (only one toast at a time)
@@ -56,8 +53,5 @@ export default {
       },
     });
   },
-  methods: mapMutations('toasts', [
-    'hide',
-  ]),
 };
 </script>

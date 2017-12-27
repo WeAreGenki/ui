@@ -3,7 +3,7 @@
 <!-- FIXME: Need a visual way to differenciate toast types, especially error toasts -->
 
 <template>
-<div class="toast df" :class="`toast-${type}`">
+<div class="toast df" :class="{ [`toast-${type}`]: type !== undefined }">
   <span class="toast-msg">{{ text }}</span>
   <button v-if="action === 'reload'" @click="reload" class="toast-action">RELOAD</button>
   <button v-else-if="action" @click="destroy" class="toast-action ttu">{{ action }}</button>
@@ -89,12 +89,12 @@ export default {
   transition: transform 0.15s ease-out; /* animate in */
   transform: translateY(0);
   will-change: transform;
+}
 
-  &.v-enter,
-  &.v-leave-to {
-    transition: transform 0.3s ease-in; /* animate out */
-    transform: translateY(102%);
-  }
+.toast-enter,
+.toast-leave-to {
+  transition: transform 0.3s ease-in; /* animate out */
+  transform: translateY(102%);
 }
 
 .toast-action {
