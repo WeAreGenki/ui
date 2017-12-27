@@ -3,7 +3,9 @@
 
   README:
     Generates a @font-face rule for a font. You need to call this mixin as many
-    times as you have fonts.
+    times as you have fonts. This uses the `font-display: optional` property
+    which means unless the font is already downloaded and loads instantly, it
+    will not flash from unstyled to styled (no FOUT).
 
   USAGE:
     @mixin font-face <family>, <name>, <style>, <weight>, [<directory>];
@@ -26,6 +28,7 @@ module.exports = (mixin, fontFamily, fontName, fontStyle, fontWeight, fontDir) =
         url("${dir}/${fontName}.woff") format("woff")`,
       'font-style': fontStyle,
       'font-weight': fontWeight,
+      'font-display': 'optional',
     },
   };
 };
