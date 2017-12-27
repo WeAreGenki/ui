@@ -14,6 +14,7 @@
   "scripts": {
     "start": "npm run dev",
     "dev": "NODE_ENV=development rollup -c -w",
+    "debug:css": "node ./debug-postcss.js",
     "test": "npm run lint && npm run unit",
     "pretest": "npm run build",
     "build": "rm -rf lib/* && npm run build:css && npm run build:js",
@@ -67,6 +68,7 @@
     "postcss-conditionals": "^2.1.0",
     "postcss-css-variables": "^0.8.0",
     "postcss-custom-media": "^6.0.0",
+    "postcss-debug": "^0.4.2",
     "postcss-each": "^0.10.0",
     "postcss-import": "^11.0.0",
     "postcss-mixins": "^6.2.0",
