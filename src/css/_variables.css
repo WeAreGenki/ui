@@ -35,7 +35,7 @@
   --primary-gradient-80: color(var(--primary-gradient-0) blend(var(--primary-gradient-100) 80%));
   --primary-gradient-90: color(var(--primary-gradient-0) blend(var(--primary-gradient-100) 90%));
   --primary: var(--primary-gradient-80); /* links, buttons */
-  /* FIXME: --secondary should be contrasting to --primary -- green is ideal for CTA */
+  /* FIXME: --secondary should be contrasting to --primary -- green is ideal for CTAs */
   /* FIXME: Incorporate --secondary into various places */
   --secondary-0: #30cde2;
   --secondary-100: #306efe;

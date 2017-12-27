@@ -1,5 +1,5 @@
 /* TODO: We may need to use postcss-flexbugs-fixes if we build out a lot of flexbox stuff and need wide browser compatibility */
-/* TThings that are shared between both flexbox and CSS grid are found in _grid.css because this framework is mostly focussed on CSS grid */
+/* TThings that are shared between both flexbox and CSS grid are found in _grid.css because this framework is mostly focused on CSS grid */
 
 .f-col { flex-direction: column; }
 .f-colr { flex-direction: column-reverse; }

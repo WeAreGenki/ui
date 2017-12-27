@@ -1,6 +1,6 @@
 # @wearegenki/ui
 
-> CSS Grid based CSS library + Vue.js framework — [https://wearegenki.com/pro-tools#FOSS](https://wearegenki.com/pro-tools#FOSS)
+> CSS Grid based CSS library + Vue.js framework — [https://wearegenki.com/pro#OpenSource](https://wearegenki.com/pro#OpenSource)
 
 TODO: Write a nice readme :)
 
@@ -52,4 +52,4 @@ Builds are designed to run on *nix systems and will likely fail on Windows machi
 
 -----
 
-© 2017 [We Are Genki](https://wearegenki.com)
+© 2018 [We Are Genki](https://wearegenki.com)
