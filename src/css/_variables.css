@@ -1,5 +1,3 @@
-@import "_variables-colour";
-
 /* Media queries */
 /* Add .01 to prevent match at the same time as previous breakpoint */
 @custom-media --breakpoint-small screen and (min-width: 30em) and (max-width: 48em);
@@ -37,8 +35,12 @@
   --primary: var(--primary-gradient-80); /* links, buttons */
   /* FIXME: --secondary should be contrasting to --primary -- green is ideal for CTAs */
   /* FIXME: Incorporate --secondary into various places */
-  --secondary-0: #30cde2;
-  --secondary-100: #306efe;
+  --secondary-gradient-0: #30cde2;
+  --secondary-gradient-100: #306efe;
+  --secondary-gradient-35: color(var(--secondary-gradient-0) blend(var(--secondary-gradient-100) 35%));
+  --secondary-gradient-60: color(var(--secondary-gradient-0) blend(var(--secondary-gradient-100) 60%));
+  --secondary-gradient-80: color(var(--secondary-gradient-0) blend(var(--secondary-gradient-100) 80%));
+  --secondary-gradient-90: color(var(--secondary-gradient-0) blend(var(--secondary-gradient-100) 90%));
   --secondary: var(--purple-a700); /* call to action, highlights */
   --secondary-accent: var(--purple-a200);
   --subtle: var(--blue-grey-200); /* footer, title subheading */
