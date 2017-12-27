@@ -1,38 +1,8 @@
 {
-  "cSpell.language": "en-GB",
-  "cSpell.words": [
-    "Firefox",
-    "SVGs",
-    "Segoe",
-    "antialiased",
-    "browserslist",
-    "checkbox",
-    "codemirror",
-    "compat",
-    "dialog",
-    "dropdown",
-    "flexbox",
-    "futurelink",
+  "eslint.enable": true,
+  "eslint.validate": [
     "marko",
-    "minmax",
-    "mixins",
-    "mqpacker",
-    "noopener",
-    "ontouchstart",
-    "plusplus",
-    "polyfill",
-    "precompiled",
-    "preload",
-    "presets",
-    "readonly",
-    "rgba",
-    "transpiled",
-    "typeof",
-    "upsert",
-    "visibilitychange",
-    "vuex",
-    "woff",
-    "xlink",
-    "xsite"
+    "javascript",
+    "vue"
   ]
 }
