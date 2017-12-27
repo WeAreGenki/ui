@@ -17,7 +17,7 @@
  */
 
 @import "_variables"; /* colour variables also imported here */
-@import "_normalize";
+@import "_normalise";
 @import "_reboot";
 @import "_typography";
 @import "_form";
