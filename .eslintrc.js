@@ -28,13 +28,16 @@ module.exports = {
     'plugin:jest/recommended',
   ],
   settings: {
+    'import/resolver': {
+      node: { extensions: ['.js', '.vue', '.marko', '.json'] }
+    },
     'html/html-extensions': ['.html'], // don't lint *.vue files with html plugin, use vue plugin
   },
   rules: {
-    // don't require .vue extension when importing
     'import/extensions': ['error', 'always', {
       js: 'never',
       vue: 'never',
+      marko: 'never',
     }],
     // allow optionalDependencies
     'import/no-extraneous-dependencies': ['error', {
@@ -42,9 +45,6 @@ module.exports = {
     }],
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
-
-    // FIXME: REMOVE BEFORE GOING LIVE
-    'no-console': 'off',
 
     // We Are Genki
     // 'compat/compat': 'warn', // find out which features need a polyfill
@@ -64,22 +64,22 @@ module.exports = {
     'object-curly-spacing': ['error', 'always', { objectsInObjects: false }],
     'object-curly-newline': ['error', { consistent: true }],
 
-    // edit airbnb-base to remove ForOfStatement restriction
-    'no-restricted-syntax': [
-      'error',
-      {
-        selector: 'ForInStatement',
-        message: 'for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array.',
-      },
-      {
-        selector: 'LabeledStatement',
-        message: 'Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.',
-      },
-      {
-        selector: 'WithStatement',
-        message: '`with` is disallowed in strict mode because it makes code impossible to predict and optimize.',
-      },
-    ],
+    // // edit airbnb-base to remove ForOfStatement restriction
+    // 'no-restricted-syntax': [
+    //   'error',
+    //   {
+    //     selector: 'ForInStatement',
+    //     message: 'for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array.',
+    //   },
+    //   {
+    //     selector: 'LabeledStatement',
+    //     message: 'Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.',
+    //   },
+    //   {
+    //     selector: 'WithStatement',
+    //     message: '`with` is disallowed in strict mode because it makes code impossible to predict and optimize.',
+    //   },
+    // ],
 
     // Vue
     // FIXME: Remove require-v-for-key once it's possible to ignore rules in <template> blocks
