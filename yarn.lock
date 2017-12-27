@@ -4671,13 +4671,13 @@ postcss-color-function@^4.0.1:
     postcss-message-helpers "^2.0.0"
     postcss-value-parser "^3.3.0"
 
-postcss-conditionals@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/postcss-conditionals/-/postcss-conditionals-2.1.0.tgz#4d1f62aa540458ce7ab779f71656901c8f8e929a"
+postcss-conditionals@^3.0.0-beta.0:
+  version "3.0.0-beta.0"
+  resolved "https://registry.yarnpkg.com/postcss-conditionals/-/postcss-conditionals-3.0.0-beta.0.tgz#9f40a24ebeb05e4d05607403079e01333c942f21"
   dependencies:
     css-color-converter "^1.0.2"
     css-unit-converter "^1.0.0"
-    postcss "^5.0.4"
+    postcss "^6.0.1"
 
 postcss-css-variables@^0.8.0:
   version "0.8.0"
@@ -4692,6 +4692,13 @@ postcss-custom-media@^6.0.0:
   resolved "https://registry.yarnpkg.com/postcss-custom-media/-/postcss-custom-media-6.0.0.tgz#be532784110ecb295044fb5395a18006eb21a737"
   dependencies:
     postcss "^6.0.1"
+
+postcss-custom-properties@^6.2.0:
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/postcss-custom-properties/-/postcss-custom-properties-6.2.0.tgz#5d929a7f06e9b84e0f11334194c0ba9a30acfbe9"
+  dependencies:
+    balanced-match "^1.0.0"
+    postcss "^6.0.13"
 
 postcss-debug@^0.4.2:
   version "0.4.2"
@@ -6476,8 +6483,8 @@ vue-template-validator@^1.1.5:
     chalk "^1.1.1"
 
 vue-test-utils@^1.0.0-beta.8:
-  version "1.0.0-beta.8"
-  resolved "https://registry.yarnpkg.com/vue-test-utils/-/vue-test-utils-1.0.0-beta.8.tgz#b4f84ce36f7ae457cdbab9ba21771f4a50d4dabd"
+  version "1.0.0-beta.9"
+  resolved "https://registry.yarnpkg.com/vue-test-utils/-/vue-test-utils-1.0.0-beta.9.tgz#bb67c01e2386f85c3ffbceae460b6e785eb7f81a"
   dependencies:
     lodash "^4.17.4"
 
