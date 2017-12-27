@@ -23,7 +23,8 @@
  * limitations under the License.
  */
 
-@import "_variables"; /* colour variables also imported here */
+@import "_variables-colour";
+@import "_variables";
 @import "_container";
 @import "_flex";
 @import "_grid-templates";
