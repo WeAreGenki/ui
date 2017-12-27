@@ -3,19 +3,19 @@
 module.exports = {
   semi: true,
   singleQuote: true,
-  trailingComma: "es5",
+  trailingComma: 'es5',
   overrides: [
     {
-      files: "*.css",
+      files: '*.css',
       options: {
-        singleQuote: false
-      }
+        singleQuote: false,
+      },
     },
     {
-      files: "*.md",
+      files: '*.md',
       options: {
-        proseWrap: "never"
-      }
-    }
-  ]
+        proseWrap: 'never',
+      },
+    },
+  ],
 };
