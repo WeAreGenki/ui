@@ -1,6 +1,6 @@
 {
   "name": "@wearegenki/ui",
-  "version": "0.2.0-alpha.69446252",
+  "version": "0.2.0-alpha.6c23d605",
   "description": "CSS Grid based CSS library + Vue.js framework",
   "keywords": [
     "css",
@@ -18,18 +18,18 @@
   "license": "Apache-2.0",
   "style": "index.css",
   "scripts": {
-    "build": "true",
+    "build": "exit 0",
     "prepare": "npm run build",
     "lint": "stylelint \"**/*.css\"",
-    "test": "true"
+    "test": "exit 0"
   },
   "dependencies": {
-    "@wearegenki/css": "^0.2.0-alpha.69446252",
-    "@wearegenki/fonts": "^0.2.0-alpha.69446252",
-    "@wearegenki/icons": "^0.2.0-alpha.69446252",
-    "@wearegenki/ui-marko": "^0.2.0-alpha.69446252",
-    "@wearegenki/ui-postcss": "^0.2.0-alpha.69446252",
-    "@wearegenki/ui-vue": "^0.2.0-alpha.69446252"
+    "@wearegenki/css": "^0.2.0-alpha.6c23d605",
+    "@wearegenki/fonts": "^0.2.0-alpha.6c23d605",
+    "@wearegenki/icons": "^0.2.0-alpha.6c23d605",
+    "@wearegenki/ui-marko": "^0.2.0-alpha.6c23d605",
+    "@wearegenki/ui-postcss": "^0.2.0-alpha.6c23d605",
+    "@wearegenki/ui-vue": "^0.2.0-alpha.6c23d605"
   },
   "publishConfig": {
     "access": "public"

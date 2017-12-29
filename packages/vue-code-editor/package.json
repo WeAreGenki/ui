@@ -1,6 +1,6 @@
 {
   "name": "@wearegenki/vue-code-editor",
-  "version": "0.2.0-alpha.69446252",
+  "version": "0.2.0-alpha.6c23d605",
   "description": "CSS Grid based CSS library + Vue.js framework",
   "keywords": [
     "css",
@@ -23,15 +23,15 @@
     "src"
   ],
   "scripts": {
-    "build": "true",
+    "build": "exit 0",
     "prepare": "npm run build",
     "lint": "npm run lint:css && npm run lint:js",
     "lint:css": "stylelint \"src/**/*.vue\" \"src/**/*.css\"",
     "lint:js": "eslint --ext .js,.vue src test",
-    "test": "true"
+    "test": "exit 0"
   },
   "dependencies": {
-    "@wearegenki/css": "^0.2.0-alpha.69446252",
+    "@wearegenki/css": "^0.2.0-alpha.6c23d605",
     "codemirror": "^5.33.0"
   },
   "peerDependencies": {

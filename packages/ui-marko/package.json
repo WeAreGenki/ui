@@ -1,6 +1,6 @@
 {
   "name": "@wearegenki/ui-marko",
-  "version": "0.2.0-alpha.69446252",
+  "version": "0.2.0-alpha.6c23d605",
   "description": "CSS Grid based CSS library + Marko.js framework",
   "keywords": [
     "css",
@@ -20,15 +20,15 @@
   "main": "index.js",
   "style": "index.css",
   "scripts": {
-    "build": "true",
+    "build": "exit 0",
     "prepare": "npm run build",
     "lint": "npm run lint:css && npm run lint:js",
     "lint:css": "stylelint \"src/**/*.marko\" \"src/**/*.css\"",
     "lint:js": "eslint --ext .js,.marko src test",
-    "test": "true"
+    "test": "exit 0"
   },
   "dependencies": {
-    "@wearegenki/marko-modal": "^0.2.0-alpha.69446252"
+    "@wearegenki/marko-modal": "^0.2.0-alpha.6c23d605"
   },
   "engines": {
     "node": "> 8.0.0"
