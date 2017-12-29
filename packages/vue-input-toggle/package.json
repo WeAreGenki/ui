@@ -1,6 +1,6 @@
 {
   "name": "@wearegenki/vue-input-toggle",
-  "version": "0.2.0-alpha.6c23d605",
+  "version": "0.2.0-alpha.0",
   "description": "CSS Grid based CSS library + Vue.js framework",
   "keywords": [
     "css",
@@ -31,8 +31,8 @@
     "test": "exit 0"
   },
   "dependencies": {
-    "@wearegenki/css": "^0.2.0-alpha.6c23d605",
-    "@wearegenki/icons": "^0.2.0-alpha.6c23d605"
+    "@wearegenki/css": "^0.2.0-alpha.0",
+    "@wearegenki/icons": "^0.2.0-alpha.0"
   },
   "peerDependencies": {
     "vue": "^2.5.13"
