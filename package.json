@@ -1,4 +1,5 @@
 {
+  "name": "wearegenki-ui-monorepo",
   "private": true,
   "license": "Apache-2.0",
   "scripts": {
@@ -8,11 +9,11 @@
     "clean": "lerna clean",
     "clean:dist": "lerna clean --yes && rm -rf node_modules",
     "publish:canary": "lerna publish --canary",
-    "diff": "lerna diff",
     "lint": "lerna run lint",
     "unit": "jest --config test/unit/jest.conf.js --coverage",
     "test": "npm run lint && npm run unit",
     "pretest": "npm run build",
+    "prepublish": "npm run build",
     "build": "lerna run build"
   },
   "devDependencies": {

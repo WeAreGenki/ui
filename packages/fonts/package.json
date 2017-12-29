@@ -1,6 +1,6 @@
 {
   "name": "@wearegenki/fonts",
-  "version": "0.2.0-alpha.90335e50",
+  "version": "0.2.0-alpha.32e1ac3b",
   "description": "CSS Grid based CSS library + Vue.js framework",
   "keywords": [
     "css",
@@ -27,5 +27,8 @@
     "lint:css": "stylelint \"src/**/*.vue\" \"src/**/*.css\"",
     "lint:js": "eslint --ext .js,.vue src test",
     "test": "true"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

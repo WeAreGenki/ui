@@ -1,5 +1,5 @@
 {
-  "name": "@wearegenki/ui-vue",
+  "name": "@wearegenki/ui-postcss",
   "version": "0.2.0-alpha.32e1ac3b",
   "description": "CSS Grid based CSS library + Vue.js framework",
   "keywords": [
@@ -10,14 +10,13 @@
     "vue",
     "wearegenki"
   ],
-  "repository": "https://github.com/WeAreGenki/ui/tree/master/packages/ui-vue",
+  "repository": "https://github.com/WeAreGenki/ui/tree/master/packages/ui-postcss",
   "bugs": {
     "url": "https://github.com/WeAreGenki/ui/issues"
   },
   "author": "Max Milton <max@wearegenki.com>",
   "license": "Apache-2.0",
   "main": "index.js",
-  "style": "index.css",
   "scripts": {
     "build": "true",
     "prepare": "npm run build",
@@ -27,15 +26,22 @@
     "test": "true"
   },
   "dependencies": {
-    "@wearegenki/vue-code-editor": "^0.2.0-alpha.32e1ac3b",
-    "@wearegenki/vue-debug-breakpoints": "^0.2.0-alpha.32e1ac3b",
-    "@wearegenki/vue-input-dropdown": "^0.2.0-alpha.32e1ac3b",
-    "@wearegenki/vue-input-toggle": "^0.2.0-alpha.32e1ac3b",
-    "@wearegenki/vue-link-preload": "^0.2.0-alpha.32e1ac3b",
-    "@wearegenki/vue-modal": "^0.2.0-alpha.32e1ac3b",
-    "@wearegenki/vue-navbar": "^0.2.0-alpha.32e1ac3b",
-    "@wearegenki/vue-tabs": "^0.2.0-alpha.32e1ac3b",
-    "@wearegenki/vue-toasts": "^0.2.0-alpha.32e1ac3b"
+    "autoprefixer": "^7.2.3",
+    "clean-css": "^4.1.9",
+    "css-mqpacker": "^6.0.1",
+    "postcss": "^6.0.14",
+    "postcss-at-rules-variables": "^0.1.2",
+    "postcss-calc": "^6.0.1",
+    "postcss-color-function": "^4.0.1",
+    "postcss-conditionals": "^3.0.0-beta.0",
+    "postcss-css-variables": "^0.8.0",
+    "postcss-custom-media": "^6.0.0",
+    "postcss-custom-properties": "^6.2.0",
+    "postcss-each": "^0.10.0",
+    "postcss-import": "^11.0.0",
+    "postcss-load-config": "^1.2.0",
+    "postcss-mixins": "^6.2.0",
+    "postcss-nested": "^3.0.0"
   },
   "engines": {
     "node": "> 8.0.0"

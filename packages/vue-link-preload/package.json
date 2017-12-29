@@ -1,6 +1,6 @@
 {
   "name": "@wearegenki/vue-link-preload",
-  "version": "0.2.0-alpha.90335e50",
+  "version": "0.2.0-alpha.32e1ac3b",
   "description": "CSS Grid based CSS library + Vue.js framework",
   "keywords": [
     "css",
@@ -31,11 +31,14 @@
     "test": "true"
   },
   "dependencies": {
-    "@wearegenki/css": "^0.2.0-alpha.90335e50",
+    "@wearegenki/css": "^0.2.0-alpha.32e1ac3b",
     "futurelink": "^0.2.1"
   },
   "peerDependencies": {
     "vue": "^2.5.13",
     "vue-router": "^3.0.1"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
