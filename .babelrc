@@ -1,8 +1,7 @@
 {
   "presets": [
     ["@babel/env", {
-      // "debug": true,
-      // "shippedProposals": true,
+      "debug": true,
       "modules": false,
       "loose": true
     }],

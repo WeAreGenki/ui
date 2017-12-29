@@ -1,3 +1,9 @@
+/*
+ * FIXME: Review how we're using breakpoints and attempt to bring the number of
+ * breakpoints down to the minimum. Can we get away with only 2 (+ the default xs/s) and make
+ * everything very adaptive?
+ */
+
 /* Media queries */
 /* Add .01 to prevent match at the same time as previous breakpoint */
 @custom-media --breakpoint-small screen and (min-width: 30em) and (max-width: 48em);
