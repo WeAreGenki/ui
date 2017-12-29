@@ -1,6 +1,7 @@
 node_modules/
 dist/
 test/unit/coverage/
+yarn.lock*
 package-lock.json*
 *.log
 .cache/
@@ -9,5 +10,5 @@ package-lock.json*
 *.marko.js
 *.bak.js
 *.bak
-dump.rdb
 *.lerna_backup
+dump.rdb
