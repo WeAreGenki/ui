@@ -1,6 +1,6 @@
 {
   "name": "@wearegenki/ui-vue",
-  "version": "0.2.0-alpha.beb850eb",
+  "version": "0.2.0-alpha.f73c632a",
   "description": "CSS Grid based CSS library + Vue.js framework",
   "keywords": [
     "css",
@@ -27,15 +27,15 @@
     "test": "true"
   },
   "dependencies": {
-    "@wearegenki/vue-code-editor": "^0.2.0-alpha.beb850eb",
-    "@wearegenki/vue-debug-breakpoints": "^0.2.0-alpha.beb850eb",
-    "@wearegenki/vue-input-dropdown": "^0.2.0-alpha.beb850eb",
-    "@wearegenki/vue-input-toggle": "^0.2.0-alpha.beb850eb",
-    "@wearegenki/vue-link-preload": "^0.2.0-alpha.beb850eb",
-    "@wearegenki/vue-modal": "^0.2.0-alpha.beb850eb",
-    "@wearegenki/vue-navbar": "^0.2.0-alpha.beb850eb",
-    "@wearegenki/vue-tabs": "^0.2.0-alpha.beb850eb",
-    "@wearegenki/vue-toasts": "^0.2.0-alpha.beb850eb"
+    "@wearegenki/vue-code-editor": "^0.2.0-alpha.f73c632a",
+    "@wearegenki/vue-debug-breakpoints": "^0.2.0-alpha.f73c632a",
+    "@wearegenki/vue-input-dropdown": "^0.2.0-alpha.f73c632a",
+    "@wearegenki/vue-input-toggle": "^0.2.0-alpha.f73c632a",
+    "@wearegenki/vue-link-preload": "^0.2.0-alpha.f73c632a",
+    "@wearegenki/vue-modal": "^0.2.0-alpha.f73c632a",
+    "@wearegenki/vue-navbar": "^0.2.0-alpha.f73c632a",
+    "@wearegenki/vue-tabs": "^0.2.0-alpha.f73c632a",
+    "@wearegenki/vue-toasts": "^0.2.0-alpha.f73c632a"
   },
   "engines": {
     "node": "> 8.0.0"
