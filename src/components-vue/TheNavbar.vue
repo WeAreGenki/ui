@@ -29,14 +29,19 @@
 <header class="navbar-fixed z5" :class="{ 'active': scrolled || showNav }">
     <div class="df-ns con">
       <button @click.stop="showNav = !showNav" class="dn-ns btn-clear mr3">
-        <svg class="nav-icon link">
+        <!-- <svg class="nav-icon link">
           <use v-if="showNav" xlink:href="~@/assets/icons/x.svg"/>
           <use v-else xlink:href="~@/assets/icons/menu.svg"/>
+        </svg> -->
+        <svg class="nav-icon link">
+          <use v-if="showNav" xlink:href="../assets/icons/x.svg"/>
+          <use v-else xlink:href="../assets/icons/menu.svg"/>
         </svg>
       </button>
 
       <router-link to="/" class="nav-logo ml-1-ns">
-        <svg class="logo"><use xlink:href="~@/assets/logo.svg"/></svg>
+        <!-- <svg class="logo"><use xlink:href="~@/assets/logo.svg"/></svg> -->
+        <svg class="logo"><use xlink:href="../assets/logo.svg"/></svg>
       </router-link>
 
       <!-- TODO: Add expand side nav animation OR remove <transition> -->
