@@ -1,16 +1,13 @@
 {
-  "name": "wearegenki-ui",
-  "version": "0.2.0-alpha.0",
-  "author": "Max Milton <max@wearegenki.com>",
-  "license": "Apache-2.0",
   "private": true,
+  "license": "Apache-2.0",
   "scripts": {
-    "postinstall": "npm run bootstrap",
+    "setup": "yarn && lerna bootstrap --use-workspaces",
     "start": "npm run dev",
-    "dev": "echo 'TODO...'",
-    "bootstrap": "lerna bootstrap --hoist",
+    "dev": "false",
     "clean": "lerna clean",
     "clean:dist": "lerna clean --yes && rm -rf node_modules",
+    "publish:canary": "lerna publish --canary",
     "diff": "lerna diff",
     "lint": "lerna run lint",
     "unit": "jest --config test/unit/jest.conf.js --coverage",
@@ -41,7 +38,10 @@
     "eslint-plugin-vue": "^3.13.0",
     "jest": "^22.0.4",
     "jest-serializer-vue": "^0.3.0",
+    "lasso-marko": "^2.4.0",
+    "lasso-postcss": "^0.3.0",
     "lerna": "^2.5.1",
+    "marko": "^4.7.4",
     "postcss": "^6.0.14",
     "postcss-at-rules-variables": "^0.1.2",
     "postcss-calc": "^6.0.1",
@@ -74,6 +74,9 @@
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
   },
+  "workspaces": [
+    "packages/*"
+  ],
   "engines": {
     "node": "> 8.0.0"
   }
