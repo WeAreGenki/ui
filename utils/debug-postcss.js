@@ -13,8 +13,8 @@ const debug = createDebugger();
 
 const ctx = {
   map: { inline: false },
-  from: './src/css/main.css',
-  to: './lib/index.css',
+  from: './packages/css/src/index.css',
+  to: './packages/css/dist/index.css',
 };
 
 const css = fs.readFileSync(ctx.from, 'utf8');
