@@ -2,7 +2,7 @@
   REBOOT
 
   README:
-    Extra browser resets on top of our _normalize.css
+    Extra browser resets on top of our _normalise.css
 */
 
 html,
@@ -57,7 +57,6 @@ body {
   /* font-smooth: always; */ /* TODO: Enable once it's recognised in browsers */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  ‑webkit‑text‑size‑adjust: 100%; /* prevent font scaling on iOS (TODO: Keep? Which iOS?) */
 }
 
 /* Responsive images (opinionated) */
