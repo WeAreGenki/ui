@@ -14,6 +14,7 @@
         { url: '/consulting', name: 'Consulting' },
       ]"/>
 
+TODO: Rewrite this:
     You need to supply a logo and menu/close icons as SVG (since each project will
     likely have its own icon set):
 
@@ -29,19 +30,15 @@
 <header class="navbar-fixed z5" :class="{ 'active': scrolled || showNav }">
     <div class="df-ns con">
       <button @click.stop="showNav = !showNav" class="dn-ns btn-clear mr3">
-        <!-- <svg class="nav-icon link">
-          <use v-if="showNav" xlink:href="~@/assets/icons/x.svg"/>
-          <use v-else xlink:href="~@/assets/icons/menu.svg"/>
-        </svg> -->
         <svg class="nav-icon link">
-          <use v-if="showNav" xlink:href="../assets/icons/x.svg"/>
-          <use v-else xlink:href="../assets/icons/menu.svg"/>
+          <use v-if="showNav" xlink:href="~@wearegenki/icons/src/x.svg"/>
+          <use v-else xlink:href="~@wearegenki/icons/src/menu.svg"/>
         </svg>
       </button>
 
       <router-link to="/" class="nav-logo ml-1-ns">
         <!-- <svg class="logo"><use xlink:href="~@/assets/logo.svg"/></svg> -->
-        <svg class="logo"><use xlink:href="../assets/logo.svg"/></svg>
+        <svg class="logo"><use xlink:href="~@wearegenki/icons/src/logo.svg"/></svg>
       </router-link>
 
       <!-- TODO: Add expand side nav animation OR remove <transition> -->
@@ -121,7 +118,7 @@ export default {
 </script>
 
 <style>
-@import "css/import";
+@import "@wearegenki/ui/import";
 
 .navbar-fixed {
   position: fixed;
