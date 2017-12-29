@@ -27,7 +27,6 @@
   },
   "dependencies": {
     "autoprefixer": "^7.2.3",
-    "clean-css": "^4.1.9",
     "css-mqpacker": "^6.0.1",
     "postcss": "^6.0.14",
     "postcss-at-rules-variables": "^0.1.2",
