@@ -1,13 +1,7 @@
-/*! wag-ui (minimal) v0.2.0 | https://wearegenki.com/tools#FOSS */
-
-/*
-  README:
-    This is a reduced version of wag-ui that only includes grid related
-    functionality. It's intended to be used as an add-on to another library
-    or as a simple starting point.
-*/
-
 /**
+ * @wearegenki/css (mini version)
+ * @author: Max Milton <max@wearegenki.com>
+ *
  * Copyright 2018 We Are Genki
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -22,6 +16,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
+/*
+
+  README:
+    This is a minimal version of @wearegenki/css that only includes grid related
+    functionality. It's intended to be used as an add-on to another library
+    or as a simple starting point.
+
+*/
 
 @import "_variables-colour";
 @import "_variables";
