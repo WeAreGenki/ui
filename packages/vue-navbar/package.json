@@ -1,6 +1,6 @@
 {
   "name": "@wearegenki/vue-navbar",
-  "version": "0.2.0-alpha.0",
+  "version": "0.2.0-alpha.90335e50",
   "description": "CSS Grid based CSS library + Vue.js framework",
   "keywords": [
     "css",
@@ -23,16 +23,16 @@
     "src"
   ],
   "scripts": {
-    "build": "echo \"TODO\" && exit 0",
+    "build": "true",
     "prepare": "npm run build",
     "lint": "npm run lint:css && npm run lint:js",
     "lint:css": "stylelint \"src/**/*.vue\" \"src/**/*.css\"",
     "lint:js": "eslint --ext .js,.vue src test",
-    "test": "echo \"TODO\" && exit 0"
+    "test": "true"
   },
   "dependencies": {
-    "@wearegenki/css": "*",
-    "@wearegenki/icons": "*"
+    "@wearegenki/css": "^0.2.0-alpha.90335e50",
+    "@wearegenki/icons": "^0.2.0-alpha.90335e50"
   },
   "peerDependencies": {
     "vue": "^2.5.13"

@@ -1,6 +1,6 @@
 {
   "name": "@wearegenki/ui",
-  "version": "0.2.0-alpha.0",
+  "version": "0.2.0-alpha.90335e50",
   "description": "CSS Grid based CSS library + Vue.js framework",
   "keywords": [
     "css",
@@ -18,15 +18,15 @@
   "license": "Apache-2.0",
   "style": "index.css",
   "scripts": {
-    "build": "echo \"TODO\" && exit 0",
+    "build": "true",
     "prepare": "npm run build",
     "lint": "stylelint \"**/*.css\"",
-    "test": "echo \"TODO\" && exit 0"
+    "test": "true"
   },
   "dependencies": {
-    "@wearegenki/css": "*",
-    "@wearegenki/fonts": "*",
-    "@wearegenki/icons": "*",
-    "@wearegenki/ui-build-postcss": "*"
+    "@wearegenki/css": "^0.2.0-alpha.90335e50",
+    "@wearegenki/fonts": "^0.2.0-alpha.90335e50",
+    "@wearegenki/icons": "^0.2.0-alpha.90335e50",
+    "@wearegenki/ui-build-postcss": "^0.2.0-alpha.90335e50"
   }
 }
