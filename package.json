@@ -9,7 +9,6 @@
     "clean": "lerna clean",
     "clean:dist": "lerna clean --yes && rm -rf node_modules",
     "publish:canary": "lerna publish --canary",
-    "publish:canary_manual": "lerna publish --canary --skip-npm && lerna exec --bail=false -- npm publish --tag canary",
     "FIXME_lint": "lerna run lint",
     "FIXME_unit": "jest --config test/unit/jest.conf.js --coverage",
     "FIXME_test": "npm run lint && npm run unit",
