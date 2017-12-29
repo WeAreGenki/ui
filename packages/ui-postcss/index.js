@@ -21,7 +21,7 @@ const mixinsPath = path.join(
 );
 
 module.exports = postcss.plugin('ui-postcss', (opts = {}) => {
-  const mixinsDir = [opts.mixinsDir] || [];
+  const mixinsDir = opts.mixinsDir ? [opts.mixinsDir] : [];
   mixinsDir.push(mixinsPath);
 
   return postcss()
