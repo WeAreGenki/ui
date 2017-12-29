@@ -1,5 +1,5 @@
 /**
- * @wearegenki/ui (precompiled css)
+ * @wearegenki/ui (source code)
  * @author: Max Milton <max@wearegenki.com>
  *
  * Copyright 2018 We Are Genki
@@ -17,4 +17,4 @@
  * limitations under the License.
  */
 
-@import "@wearegenki/css";
+@import "@wearegenki/css/src";

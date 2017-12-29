@@ -1,6 +1,7 @@
-/*! @wearegenki/ui v0.2.0 - https://wearegenki.com/tools#FOSS */
-
 /**
+ * @wearegenki/ui (variables import)
+ * @author: Max Milton <max@wearegenki.com>
+ *
  * Copyright 2018 We Are Genki
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,5 +17,20 @@
  * limitations under the License.
  */
 
-@import "@wearegenki/css/src/main";
+/*
 
+  README:
+    Import this into your Vue component styles for variables access, e.g.:
+
+    <style>
+      @import "@wearegenki/ui/import";
+
+      footer {
+        color: var(--blue-500);
+      }
+    </style>
+
+*/
+
+@import "@wearegenki/css/src/_variables-colour";
+@import "@wearegenki/css/src/_variables";
