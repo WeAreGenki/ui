@@ -17,11 +17,10 @@
  * limitations under the License.
  */
 
-const TheNavbar = require('./TheNavbar');
+import TheNavbar from './TheNavbar';
 
 TheNavbar.install = (Vue) => {
   Vue.component(TheNavbar.name, TheNavbar);
 };
 
-// eslint-disable-next-line import/prefer-default-export
-export { TheNavbar };
+export default { TheNavbar };

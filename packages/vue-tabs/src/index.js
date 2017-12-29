@@ -1,5 +1,5 @@
 /**
- * @wearegenki/vue-code-editor
+ * @wearegenki/vue-tabs
  * @author: Max Milton <max@wearegenki.com>
  *
  * Copyright 2018 We Are Genki
@@ -17,5 +17,16 @@
  * limitations under the License.
  */
 
-// FIXME: Allow importing the src e.g.:
-//  import { CodeEditor } from '@wearegenki/vue-code-editor/src';
+import TabGroup from './TabGroup';
+// import TabItem from './TabItem';
+const TabItem = { name: 'TabItem' }; // FIXME: Should we have 2 separate components? If so import it
+
+TabGroup.install = (Vue) => {
+  Vue.component(TabGroup.name, TabGroup);
+};
+
+TabItem.install = (Vue) => {
+  Vue.component(TabItem.name, TabItem);
+};
+
+export default { TabGroup, TabItem };

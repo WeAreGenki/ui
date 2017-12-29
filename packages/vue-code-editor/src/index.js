@@ -17,5 +17,10 @@
  * limitations under the License.
  */
 
-// FIXME: Allow importing the src e.g.:
-//  import { CodeEditor } from '@wearegenki/vue-code-editor/src';
+import CodeEditor from './CodeEditor';
+
+CodeEditor.install = (Vue) => {
+  Vue.component(CodeEditor.name, CodeEditor);
+};
+
+export default { CodeEditor };

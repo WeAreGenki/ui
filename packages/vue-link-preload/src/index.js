@@ -17,7 +17,10 @@
  * limitations under the License.
  */
 
-const TheLinkPreload = require('./TheLinkPreload');
+import TheLinkPreload from './TheLinkPreload';
 
-// eslint-disable-next-line import/prefer-default-export
-export { TheLinkPreload };
+TheLinkPreload.install = (Vue) => {
+  Vue.component(TheLinkPreload.name, TheLinkPreload);
+};
+
+export default { TheLinkPreload };

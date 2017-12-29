@@ -1,5 +1,5 @@
 /**
- * @wearegenki/vue-code-editor
+ * @wearegenki/vue-input-toggle
  * @author: Max Milton <max@wearegenki.com>
  *
  * Copyright 2018 We Are Genki
@@ -17,5 +17,10 @@
  * limitations under the License.
  */
 
-// FIXME: Allow importing the src e.g.:
-//  import { CodeEditor } from '@wearegenki/vue-code-editor/src';
+import InputToggle from './InputToggle';
+
+InputToggle.install = (Vue) => {
+  Vue.component(InputToggle.name, InputToggle);
+};
+
+export default { InputToggle };
