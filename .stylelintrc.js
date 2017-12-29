@@ -1,17 +1,15 @@
 'use strict';
 
 module.exports = {
-  cache: true,
-  // ignoreFiles: ['./src/css/custom/**/*.css'],
-  processors: ['stylelint-processor-html'],
   extends: 'stylelint-config-standard',
-  plugins: [
-    'stylelint-order',
-  ],
+  plugins: ['stylelint-order'],
   rules: {
-    'no-empty-source': null,            // Allow .vue files without <style/>
-    'comment-empty-line-before': null,  // Not helpful for rapid development
-    'at-rule-no-unknown': [true, { ignoreAtRules: ['if', 'each', 'mixin', 'define-mixin'] }],
+    'no-empty-source': null, // Allow .vue files without <style/>
+    'comment-empty-line-before': null, // Not helpful for rapid development
+    'at-rule-no-unknown': [
+      true,
+      { ignoreAtRules: ['if', 'each', 'mixin', 'define-mixin'] },
+    ],
     'at-rule-no-vendor-prefix': true,
     'at-rule-semicolon-space-before': 'never',
     'color-named': 'never',
@@ -22,7 +20,7 @@ module.exports = {
     'font-weight-notation': 'numeric',
     'function-url-no-scheme-relative': true,
     'function-url-quotes': 'always',
-    'max-line-length': [120, { ignore: ['comments'] }],
+    // 'max-line-length': [120, { ignore: ['comments'] }],
     'media-feature-name-no-vendor-prefix': true,
     'media-feature-parentheses-space-inside': 'never',
     'media-feature-range-operator-space-after': 'always',
@@ -297,7 +295,7 @@ module.exports = {
       'animation-timing-function',
       'animation-delay',
       'animation-iteration-count',
-      'animation-direction'
+      'animation-direction',
     ],
-  }
+  },
 };

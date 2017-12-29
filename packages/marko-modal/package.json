@@ -1,0 +1,39 @@
+{
+  "name": "@wearegenki/marko-modal",
+  "version": "0.2.0-alpha0",
+  "description": "CSS Grid based CSS library + Vue.js framework",
+  "keywords": [
+    "css",
+    "cssgrid",
+    "design-system",
+    "postcss",
+    "marko",
+    "wearegenki"
+  ],
+  "repository": "https://github.com/WeAreGenki/ui/tree/master/packages/marko-modal",
+  "bugs": {
+    "url": "https://github.com/WeAreGenki/ui/issues"
+  },
+  "author": "Max Milton <max@wearegenki.com>",
+  "license": "Apache-2.0",
+  "main": "dist/index.js",
+  "style": "dist/index.css",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "echo \"TODO\" && exit 0",
+    "prepare": "npm run build",
+    "lint": "npm run lint:css && npm run lint:js",
+    "lint:css": "stylelint \"src/**/*.marko\" \"src/**/*.css\"",
+    "lint:js": "eslint --ext .js,.marko src test",
+    "test": "echo \"TODO\" && exit 0"
+  },
+  "dependencies": {
+    "@wearegenki/css": "*"
+  },
+  "peerDependencies": {
+    "marko": "^4.7.4"
+  }
+}

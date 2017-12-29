@@ -10,7 +10,10 @@
   "plugins": ["@babel/transform-runtime"],
   "env": {
     "test": {
-      "presets": ["@babel/env", "@babel/stage-2"],
+      "presets": [
+        ["@babel/env", { "targets": { "node": "current" }}],
+        "@babel/stage-2"
+      ],
       "plugins": ["@babel/transform-modules-commonjs", "dynamic-import-node"]
     }
   }

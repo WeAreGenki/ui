@@ -1,0 +1,32 @@
+{
+  "name": "@wearegenki/fonts",
+  "version": "0.2.0-alpha0",
+  "description": "CSS Grid based CSS library + Vue.js framework",
+  "keywords": [
+    "css",
+    "cssgrid",
+    "design-system",
+    "postcss",
+    "vue",
+    "wearegenki"
+  ],
+  "repository": "https://github.com/WeAreGenki/ui/tree/master/packages/fonts",
+  "bugs": {
+    "url": "https://github.com/WeAreGenki/ui/issues"
+  },
+  "author": "Max Milton <max@wearegenki.com>",
+  "license": "Apache-2.0",
+  "style": "dist/index.css",
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "build": "echo \"TODO\" && exit 0",
+    "prepare": "npm run build",
+    "lint": "npm run lint:css && npm run lint:js",
+    "lint:css": "stylelint \"src/**/*.vue\" \"src/**/*.css\"",
+    "lint:js": "eslint --ext .js,.vue src test",
+    "test": "echo \"TODO\" && exit 0"
+  },
+  "dependencies": {}
+}

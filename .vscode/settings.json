@@ -1,8 +1,60 @@
+// README: You need to copy the section below into your global config!
 {
   "eslint.enable": true,
+  "eslint.options": {
+    "extensions": [
+      ".html",
+      ".js",
+      ".marko",
+      ".vue"
+    ]
+  },
   "eslint.validate": [
-    "marko",
+    "html",
     "javascript",
+    "marko",
     "vue"
-  ]
+  ],
+  "spellright.language": "en_AU",
+  "spellright.documentTypes": [
+    "css",
+    "html",
+    "javascript",
+    "json",
+    "markdown",
+    "marko",
+    "plaintext",
+    "postcss",
+    "text",
+    "vue",
+    "yml"
+  ],
+  "spellright.spellContext": "body code comments strings",
+  "css.validate": false,
+  "scss.validate": false,
+
+  // ↓↓↓ COPY BELOW HERE INTO GLOBAL CONFIG ↓↓↓
+
+  "stylelint.enable": true,
+  "todohighlight.keywords": [
+    {
+      "text": "XXX:", // for implementation details or notes
+      "color": "#ecf2fa",
+      "backgroundColor": "#3477ca"
+    },
+    "README:",
+    "NOTE:",
+    "REF:" // reference (e.g. a link to an article)
+  ],
+  "todohighlight.defaultStyle": {
+    "color": "unset",
+    "backgroundColor": "unset",
+    "overviewRulerColor": "grey"
+  },
+  "vetur.format.scriptInitialIndent": true,
+  "vetur.format.styleInitialIndent": true,
+  "vetur.validation.style": false,
+  "vetur.validation.template": false, // use project based linting instead
+
+  // ↑↑↑ COPY ABOVE HERE INTO GLOBAL CONFIG ↑↑↑
 }

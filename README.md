@@ -1,6 +1,8 @@
 # @wearegenki/ui
 
-> CSS Grid based CSS library + Vue.js framework — [https://wearegenki.com/pro#OpenSource](https://wearegenki.com/pro#OpenSource)
+CSS Grid based CSS library + Vue.js framework — <https://wearegenki.com/pro#OpenSource>
+
+_NOTE: This is currently a work in progress and not recommended for production applications... unless you love living on the bleeding edge!_
 
 TODO: Write a nice readme :)
 
@@ -13,10 +15,17 @@ Includes a precompiled copy of the CSS framework but does not include any Vue co
 Useful for quick hacks or for simple projects when you don't need any framework customisation or you don't want to include all the build dependencies.
 
 ```bash
-#TODO: Write me
+# Install
+yarn add @wearegenki/ui
+
+# Or install with Vue components included
+yarn add @wearegenki/ui-vue
+
+# Or install with Marko components included
+yarn add @wearegenki/ui-marko
 ```
 
-### Pro
+### Production
 
 ```bash
 #TODO: Write me
@@ -28,8 +37,8 @@ It's **highly recommended** to do post-processing of your CSS to remove any unus
 
 The recommended tools to do this are:
 
-* [UnCSS](https://github.com/giakki/uncss) — reliable but only works with static html files (not with Webpack etc.) so it requires a separate step in your build process
-* [PurgeCSS](https://github.com/FullHuman/purgecss) — is compatible with various build systems including Webpack and Rollup
+* [PurgeCSS](https://github.com/FullHuman/purgecss) — is compatible with various build systems including Webpack and Rollup or standalone.
+* [UnCSS](https://github.com/giakki/uncss) — only works with static html files (not with Webpack etc.) so it requires a separate step in your build process.
 
 ## Browser compatibility
 
@@ -44,7 +53,11 @@ Because this framework uses [CSS Grid Layout](https://developer.mozilla.org/en-U
 * Edge 16
 * Opera 46
 
-Older browser compatibility is planned and will be added in future.
+_NOTE: Older browser compatibility via progressive fallback is planned and will be added in the near future._
+
+## Development environment setup
+
+TODO: Write me.
 
 ## Known issues
 
