@@ -1,6 +1,6 @@
 {
   "name": "@wearegenki/ui-marko",
-  "version": "0.2.0-alpha.f73c632a",
+  "version": "0.2.0-alpha.69446252",
   "description": "CSS Grid based CSS library + Marko.js framework",
   "keywords": [
     "css",
@@ -28,7 +28,7 @@
     "test": "true"
   },
   "dependencies": {
-    "@wearegenki/marko-modal": "^0.2.0-alpha.f73c632a"
+    "@wearegenki/marko-modal": "^0.2.0-alpha.69446252"
   },
   "engines": {
     "node": "> 8.0.0"
