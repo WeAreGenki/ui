@@ -1,6 +1,6 @@
 {
   "name": "@wearegenki/vue-input-dropdown",
-  "version": "0.2.0-alpha.32e1ac3b",
+  "version": "0.2.0-alpha.beb850eb",
   "description": "CSS Grid based CSS library + Vue.js framework",
   "keywords": [
     "css",
@@ -31,8 +31,8 @@
     "test": "true"
   },
   "dependencies": {
-    "@wearegenki/css": "^0.2.0-alpha.32e1ac3b",
-    "@wearegenki/icons": "^0.2.0-alpha.32e1ac3b"
+    "@wearegenki/css": "^0.2.0-alpha.beb850eb",
+    "@wearegenki/icons": "^0.2.0-alpha.beb850eb"
   },
   "peerDependencies": {
     "vue": "^2.5.13"
