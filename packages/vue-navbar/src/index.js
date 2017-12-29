@@ -1,5 +1,5 @@
 /**
- * @wearegenki/vue-link-preload
+ * @wearegenki/vue-navbar
  * @author: Max Milton <max@wearegenki.com>
  *
  * Copyright 2018 We Are Genki
@@ -17,7 +17,11 @@
  * limitations under the License.
  */
 
-const TheLinkPreload = require('./TheLinkPreload');
+const TheNavbar = require('./TheNavbar');
+
+TheNavbar.install = (Vue) => {
+  Vue.component(TheNavbar.name, TheNavbar);
+};
 
 // eslint-disable-next-line import/prefer-default-export
-export { TheLinkPreload };
+export { TheNavbar };
