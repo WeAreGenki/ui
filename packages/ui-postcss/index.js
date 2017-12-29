@@ -20,7 +20,7 @@ const mixinsPath = path.join(
   'src/mixins',
 );
 
-module.exports = postcss.plugin('uiPostcssPreset', (opts = {}) => {
+module.exports = postcss.plugin('ui-postcss', (opts = {}) => {
   const mixinsDir = [opts.mixinsDir] || [];
   mixinsDir.push(mixinsPath);
 
