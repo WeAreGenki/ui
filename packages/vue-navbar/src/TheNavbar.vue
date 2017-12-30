@@ -37,8 +37,7 @@ TODO: Rewrite this:
       </button>
 
       <router-link to="/" class="nav-logo ml-1-ns">
-        <!-- <svg class="logo"><use xlink:href="~@/assets/logo.svg"/></svg> -->
-        <svg class="logo"><use xlink:href="~@wearegenki/icons/src/logo.svg"/></svg>
+        <svg class="logo"><use xlink:href="~@/assets/logo.svg"/></svg>
       </router-link>
 
       <!-- TODO: Add expand side nav animation OR remove <transition> -->
