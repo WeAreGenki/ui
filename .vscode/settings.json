@@ -1,5 +1,5 @@
-// README: You need to copy the section below into your global config!
 {
+  "javascript.implicitProjectConfig.checkJs": true,
   "eslint.enable": true,
   "eslint.options": {
     "extensions": [
@@ -32,9 +32,6 @@
   "spellright.spellContext": "body code comments strings",
   "css.validate": false,
   "scss.validate": false,
-
-  // ↓↓↓ COPY BELOW HERE INTO GLOBAL CONFIG ↓↓↓
-
   "stylelint.enable": true,
   "todohighlight.keywords": [
     {
@@ -55,6 +52,4 @@
   "vetur.format.styleInitialIndent": true,
   "vetur.validation.style": false,
   "vetur.validation.template": false, // use project based linting instead
-
-  // ↑↑↑ COPY ABOVE HERE INTO GLOBAL CONFIG ↑↑↑
 }

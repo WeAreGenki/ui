@@ -1,7 +1,7 @@
 {
   "name": "@wearegenki/ui-vue",
   "version": "0.2.0-alpha.0",
-  "description": "CSS Grid based CSS library + Vue.js framework",
+  "description": "We Are Genki UI meta package which bundles all Vue components",
   "keywords": [
     "css",
     "cssgrid",

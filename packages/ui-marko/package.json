@@ -1,7 +1,7 @@
 {
   "name": "@wearegenki/ui-marko",
   "version": "0.2.0-alpha.0",
-  "description": "CSS Grid based CSS library + Marko.js framework",
+  "description": "We Are Genki UI meta package which bundles all Marko components",
   "keywords": [
     "css",
     "cssgrid",
