@@ -15,7 +15,7 @@
     "marko",
     "vue"
   ],
-  "spellright.language": "en_AU",
+  "spellright.language": "en_AU", // recommended dictionary: https://github.com/MaxMilton/hunspell-dictionary
   "spellright.documentTypes": [
     "css",
     "html",
@@ -41,7 +41,7 @@
     },
     "README:",
     "NOTE:",
-    "REF:" // reference (e.g. a link to an article)
+    "REF:" // for references (e.g. a link to an article)
   ],
   "todohighlight.defaultStyle": {
     "color": "unset",
