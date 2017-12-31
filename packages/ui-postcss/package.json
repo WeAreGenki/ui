@@ -28,7 +28,6 @@
   "dependencies": {
     "autoprefixer": "^7.2.3",
     "css-mqpacker": "^6.0.1",
-    "postcss": "^6.0.14",
     "postcss-at-rules-variables": "^0.1.2",
     "postcss-calc": "^6.0.1",
     "postcss-color-function": "^4.0.1",
@@ -41,6 +40,9 @@
     "postcss-load-config": "^1.2.0",
     "postcss-mixins": "^6.2.0",
     "postcss-nested": "^3.0.0"
+  },
+  "peerDependencies": {
+    "postcss": "^6.0.14"
   },
   "engines": {
     "node": "> 8.0.0"
