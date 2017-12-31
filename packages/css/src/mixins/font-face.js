@@ -14,11 +14,11 @@
 const path = require('path');
 
 module.exports = (mixin, fontFamily, fontName, fontStyle, fontWeight, fontDir) => {
-  /**
-   * XXX: This path may not be ideal for all build tools, especially when using
-   * symlinks, it's better to specify fontDir.
-   */
-  const dir = fontDir || path.join(__dirname, '../../fonts');
+  // use @wearegenki/fonts if no fontDir specified
+  const dir = fontDir || path.relative(
+    process.cwd(),
+    path.join(path.dirname(require.resolve('@wearegenki/fonts')), 'src'),
+  );
 
   return {
     '@font-face': {
