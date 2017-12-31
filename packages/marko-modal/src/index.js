@@ -1,5 +1,5 @@
 /**
- * @wearegenki/vue-code-editor
+ * @wearegenki/marko-modal
  * @author: Max Milton <max@wearegenki.com>
  *
  * Copyright 2018 We Are Genki
@@ -17,5 +17,6 @@
  * limitations under the License.
  */
 
-// FIXME: Allow importing the src e.g.:
-//  import { CodeEditor } from '@wearegenki/vue-code-editor/src';
+import ModalItem from './ModalItem';
+
+export default { ModalItem };

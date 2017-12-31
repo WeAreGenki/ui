@@ -1,6 +1,5 @@
 /**
  * @wearegenki/ui-marko
- *
  * @author: Max Milton <max@wearegenki.com>
  *
  * Copyright 2018 We Are Genki
@@ -18,6 +17,8 @@
  * limitations under the License.
  */
 
-// TODO
+import { ModalItem } from '@wearegenki/marko-modal/src';
 
-export default {};
+export {
+  ModalItem,
+};
