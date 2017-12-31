@@ -1,0 +1,43 @@
+{
+  "name": "@wearegenki/ui-eslint",
+  "version": "0.2.0-alpha.0",
+  "description": "CSS Grid based CSS library + Vue.js framework",
+  "keywords": [
+    "css",
+    "cssgrid",
+    "design-system",
+    "eslint",
+    "wearegenki"
+  ],
+  "repository": "https://github.com/WeAreGenki/ui/tree/master/packages/ui-eslint",
+  "bugs": {
+    "url": "https://github.com/WeAreGenki/ui/issues"
+  },
+  "author": "Max Milton <max@wearegenki.com>",
+  "license": "Apache-2.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "exit 0",
+    "prepare": "npm run build",
+    "lint": "npm run lint:css && npm run lint:js",
+    "lint:css": "stylelint \"src/**/*.vue\" \"src/**/*.css\"",
+    "lint:js": "eslint --ext .js,.vue src test",
+    "test": "exit 0"
+  },
+  "dependencies": {
+    "eslint": "^4.14.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-plugin-compat": "^2.1.0",
+    "eslint-plugin-html": "^4.0.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jest": "^21.5.0",
+    "eslint-plugin-vue": "^3.13.0"
+  },
+  "engines": {
+    "node": "> 8.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
