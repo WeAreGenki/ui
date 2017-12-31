@@ -1,7 +1,7 @@
 <template>
 <div v-if="show" class="modal">
   <button v-if="closeBtn" @click="close" class="btn btn-clear float-r">
-    <svg class="icon"><use xlink:href="~@/assets/icons/x.svg"/></svg>
+    <svg class="icon"><use xlink:href="~@wearegenki/icons/src/x.svg"/></svg>
   </button>
 
   <slot></slot>
