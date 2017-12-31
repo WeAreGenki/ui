@@ -1,0 +1,38 @@
+{
+  "name": "@wearegenki/ui-stylelint",
+  "version": "0.2.0-alpha.0",
+  "description": "CSS Grid based CSS library + Vue.js framework",
+  "keywords": [
+    "css",
+    "cssgrid",
+    "design-system",
+    "stylelint",
+    "wearegenki"
+  ],
+  "repository": "https://github.com/WeAreGenki/ui/tree/master/packages/ui-stylelint",
+  "bugs": {
+    "url": "https://github.com/WeAreGenki/ui/issues"
+  },
+  "author": "Max Milton <max@wearegenki.com>",
+  "license": "Apache-2.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "exit 0",
+    "prepare": "npm run build",
+    "lint": "npm run lint:css && npm run lint:js",
+    "lint:css": "stylelint \"src/**/*.vue\" \"src/**/*.css\"",
+    "lint:js": "eslint --ext .js,.vue src test",
+    "test": "exit 0"
+  },
+  "dependencies": {
+    "stylelint": "^8.4.0",
+    "stylelint-config-standard": "^18.0.0",
+    "stylelint-order": "^0.8.0"
+  },
+  "engines": {
+    "node": "> 8.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

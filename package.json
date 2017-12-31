@@ -51,8 +51,6 @@
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-vue": "^3.0.0",
     "stylelint": "^8.4.0",
-    "stylelint-config-standard": "^18.0.0",
-    "stylelint-order": "^0.8.0",
     "vue": "^2.5.13",
     "vue-jest": "^1.4.0",
     "vue-template-compiler": "^2.5.13",
