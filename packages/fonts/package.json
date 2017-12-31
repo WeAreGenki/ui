@@ -16,6 +16,7 @@
   },
   "author": "Max Milton <max@wearegenki.com>",
   "license": "Apache-2.0",
+  "main": "index.js",
   "style": "dist/index.css",
   "files": [
     "src"
