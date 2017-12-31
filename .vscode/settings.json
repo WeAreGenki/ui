@@ -1,14 +1,6 @@
 {
   "javascript.implicitProjectConfig.checkJs": true,
   "eslint.enable": true,
-  "eslint.options": {
-    "extensions": [
-      ".html",
-      ".js",
-      ".marko",
-      ".vue"
-    ]
-  },
   "eslint.validate": [
     "html",
     "javascript",
