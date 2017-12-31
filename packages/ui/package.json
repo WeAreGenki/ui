@@ -26,8 +26,10 @@
   "dependencies": {
     "@wearegenki/css": "^0.2.0-alpha.0",
     "@wearegenki/icons": "^0.2.0-alpha.0",
+    "@wearegenki/ui-eslint": "^0.2.0-alpha.0",
     "@wearegenki/ui-marko": "^0.2.0-alpha.0",
     "@wearegenki/ui-postcss": "^0.2.0-alpha.0",
+    "@wearegenki/ui-stylelint": "^0.2.0-alpha.0",
     "@wearegenki/ui-vue": "^0.2.0-alpha.0"
   },
   "optionalDependencies": {
