@@ -1,3 +1,5 @@
+/* FIXME: Better hover state -- should also be applied to toggle, maybe inputs, etc. */
+
 .btn {
   display: inline-block;
   padding: var(--btn-padding-y) var(--btn-padding-x);
@@ -7,31 +9,13 @@
   border: 0;
   border-radius: var(--btn-radius);
   box-shadow: var(--btn-shadow);
-  transition: color 0s;
-
-  /* TODO: Get rid of this once the hover state is refined */
-  position: relative;
-
-  /* &:hover,
-  &:focus {
-    color: var(--white);
-    text-decoration: none;
-    background-color: var(--btn-hover-colour);
-  } */
+  transition: background-color 150ms;
 
   &:hover,
   &:focus {
-    &::after {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      display: block;
-      content: "";
-      border: 2px solid var(--link-hover-colour);
-      border-radius: var(--btn-radius);
-    }
+    text-decoration: none;
+    background-color: var(--blue-grey-100);
+    transition: background-color 50ms;
   }
 }
 
@@ -56,11 +40,6 @@
   background: transparent;
   border: 0;
   box-shadow: none;
-
-  &:hover,
-  &:focus {
-    color: var(--white);
-  }
 }
 
 /* Make links whitespace same as buttons */
