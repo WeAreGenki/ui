@@ -111,7 +111,7 @@
   --input-toggle-width: 8rem;
   --input-toggle-on-text-colour: var(--white);
   --input-toggle-on-bg-colour: var(--green-500);
-  --input-toggle-slider-gradient: linear-gradient(180deg, var(--grey-50) 10%, var(--blue-grey-50) 75%, var(--grey-50));
+  --input-toggle-slider-gradient: linear-gradient(180deg, var(--white) 10%, var(--grey-100) 75%, var(--white));
   --input-toggle-slider-edge-colour: var(--blue-grey-50);
   --input-toggle-slide-speed: 200ms;
   --input-toggle-fade-in-speed: var(--input-toggle-slide-speed);
