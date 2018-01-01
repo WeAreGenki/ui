@@ -1,10 +1,10 @@
 <!-- TODO: Allow user to drag the toggle from one side to the other (mouse or touch), must be high performance and not jank the UI -->
 
 <template>
-<div @click="toggle" class="input-toggle tc" :class="{'checked': value}" :checked="value">
+<div @click="toggle" class="input-toggle tc" :class="{'checked': value}">
+  <div class="input-toggle-slider"></div>
   <div class="input-toggle-on">ON</div>
   <div class="input-toggle-off">OFF</div>
-  <div class="input-toggle-slider"></div>
 </div>
 </template>
 
@@ -83,6 +83,13 @@ export default {
 
   .input-toggle.checked & {
     transform: translateX(100%);
+  }
+
+  .input-toggle:hover &,
+  .input-toggle:focus & {
+    background-image: var(--input-toggle-slider-gradient-hover);
+    border-right-color: var(--input-toggle-slider-hover-edge-colour);
+    border-left-color: var(--input-toggle-slider-hover-edge-colour);
   }
 }
 </style>
