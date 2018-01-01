@@ -11,6 +11,7 @@ TODO: Write a nice readme :)
 Features:
 
 * semi-flat design
+* subtle colour transitions
 * microinteractions
 * Vue components
 * Marko components

@@ -22,7 +22,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   - @wearegenki/ui-eslint (work in progress)
   - @wearegenki/ui-postcss
   - @wearegenki/ui-stylelint
-- New early access channel for NPM. Install via `yarn add @wearegenki/ui@next`.
+- @wearegenki/vue-toggle is now visually pure CSS and doesn't use SVGs anymore. For basic functionality this component is feature complete. Mouse/touch drag capability will be adding in future.
 
 ### Changed
 
@@ -30,6 +30,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Each component now lives in its own package so they have to be installed and imported separately or via a meta package.
 - Reduced the number of breakpoints down to only 2, small and large. It's simple to use but your content will need to be adaptive.
 - Many CSS values are now variables for easier customisation.
+- Button style refinements.
 
 ### Removed
 
