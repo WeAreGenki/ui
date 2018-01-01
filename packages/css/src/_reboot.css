@@ -74,7 +74,8 @@ hr {
 }
 
 button,
-.btn {
+.btn,
+select {
   cursor: pointer;
 
   &:focus {

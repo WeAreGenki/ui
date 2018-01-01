@@ -13,8 +13,9 @@
 
   &:hover,
   &:focus {
+    color: unset; /* prevent change when applied to links */
     text-decoration: none;
-    background-color: var(--blue-grey-100);
+    background-color: var(--btn-bg-hover-colour);
     transition: background-color 50ms;
   }
 }
@@ -43,7 +44,7 @@
 
   &:hover,
   &:focus {
-    color: unset; /* prevent colour change when applied to links */
+    color: unset; /* prevent change when applied to links */
   }
 }
 
