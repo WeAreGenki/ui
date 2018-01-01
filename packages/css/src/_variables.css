@@ -112,9 +112,9 @@
   --input-toggle-on-text-colour: var(--white);
   --input-toggle-on-bg-colour: var(--green-500);
   --input-toggle-slider-gradient: linear-gradient(180deg, var(--white) 10%, var(--grey-100) 75%, var(--white));
-  --input-toggle-slider-gradient-hover: linear-gradient(180deg, var(--grey-100) 10%, var(--grey-200) 75%, var(--grey-100));
+  --input-toggle-slider-gradient-hover: linear-gradient(180deg, var(--grey-300) 10%, var(--blue-grey-100) 75%, var(--grey-300));
   --input-toggle-slider-edge-colour: var(--blue-grey-50);
-  --input-toggle-slider-hover-edge-colour: var(--grey-200);
+  --input-toggle-slider-hover-edge-colour: var(--blue-grey-100);
   --input-toggle-slide-speed: 200ms;
   --input-toggle-fade-in-speed: var(--input-toggle-slide-speed);
   --input-toggle-fade-out-speed: calc(var(--input-toggle-slide-speed) * 0.7);
