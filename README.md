@@ -1,44 +1,27 @@
 # @wearegenki/ui
 
-CSS Grid based CSS library + Vue.js framework — <https://wearegenki.com/pro#OpenSource>
+A futuristic UI framework which aims to be straightforward and intuitive. Intended to be used in Vue or Marko projects.
 
 _NOTE: This is currently a work in progress and not recommended for production applications... unless you love living on the bleeding edge!_
 
+## Overview
+
 TODO: Write a nice readme :)
+
+Features:
+
+* semi-flat design
+* microinteractions
+* Vue components
+* Marko components
+* high performance
+* great developer experience
 
 ## Usage
 
-### Simple
-
-Includes a precompiled copy of the CSS framework but does not include any Vue components.
-
-Useful for quick hacks or for simple projects when you don't need any framework customisation or you don't want to include all the build dependencies.
-
 ```bash
-# Install
 yarn add @wearegenki/ui
-
-# Or install with Vue components included
-yarn add @wearegenki/ui-vue
-
-# Or install with Marko components included
-yarn add @wearegenki/ui-marko
 ```
-
-### Production
-
-```bash
-#TODO: Write me
-```
-
-### Removing unused CSS
-
-It's **highly recommended** to do post-processing of your CSS to remove any unused CSS styles. The framework is design to be powerful and flexible but this comes at the cost of a slightly large file size, however, removing unused CSS will drastically reduce the final size of your CSS.
-
-The recommended tools to do this are:
-
-* [PurgeCSS](https://github.com/FullHuman/purgecss) — is compatible with various build systems including Webpack and Rollup or standalone.
-* [UnCSS](https://github.com/giakki/uncss) — only works with static html files (not with Webpack etc.) so it requires a separate step in your build process.
 
 ## Browser compatibility
 
@@ -54,10 +37,6 @@ Because this framework uses [CSS Grid Layout](https://developer.mozilla.org/en-U
 * Opera 46
 
 _NOTE: Older browser compatibility via progressive fallback is planned and will be added in the near future._
-
-## Development environment setup
-
-TODO: Write me.
 
 ## Known issues
 
