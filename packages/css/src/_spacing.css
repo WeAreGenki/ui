@@ -27,8 +27,8 @@
     7 = 16rem
 
   RESPONSIVE:
-    -ns = not small (both medium and large)
-    -m = medium
+       = (default, no suffix) anything smaller than small
+    -s = small
     -l = large
 */
 

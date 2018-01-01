@@ -25,8 +25,8 @@ body {
       font-size: var(--font-size-s);
     }
 
-    @media (--breakpoint-not-small) {
-      font-size: var(--font-size-ns);
+    @media (--breakpoint-large) {
+      font-size: var(--font-size-l);
     }
   }
 }
@@ -139,17 +139,17 @@ dt { float: left; } /* TODO: Could this be achieved with flex or grid somehow? *
   }
 
   &::before {
-    content: '“';
+    content: "“";
   }
 
   &::after {
-    content: '”';
+    content: "”";
   }
 }
 
 /* Font/decoration variants */
 
-.bold { font-weight: bold; }
+.bold { font-weight: 700; }
 .italic { font-style: italic; }
 
 .normal {
@@ -167,18 +167,18 @@ abbr[title] {
   /* TODO: So many styles feels a bit over the top -- refactor while keeping the same effect */
   &::after {
     position: relative;
-    display: block;
-    content: '';
     bottom: 0.4rem;
-    margin-bottom: -0.3rem;
-    background: var(--yellow-400);
-    height: 0.3rem;
     z-index: -1;
+    display: block;
+    height: 0.3rem;
+    margin-bottom: -0.3rem;
+    content: "";
+    background: var(--yellow-400);
   }
 }
 
 /* Code */
-/* TODO: Change to use colour variables */
+/* FIXME: Use colour variables */
 code {
   display: inline-block;
   padding: 0.1em 0.4em;

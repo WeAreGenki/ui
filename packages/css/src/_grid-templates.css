@@ -13,11 +13,11 @@
     / auto;
   /* overflow: hidden; */ /* XXX: Related to below */
 
-  @media (--breakpoint-medium) {
+  @media (--breakpoint-small) {
     grid-column-gap: 0;
   }
 
-  @media (--breakpoint-not-small) {
+  @media (--breakpoint-large) {
     grid-template:
       "img body"
       "img btn"

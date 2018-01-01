@@ -15,9 +15,9 @@
     ig = inline grid
 
   RESPONSIVE:
-  -ns = not small (both medium and large)
-  -m = medium
-  -l = large
+       = (default, no suffix) anything smaller than small
+    -s = small
+    -l = large
 */
 
 .dn { display: none; }

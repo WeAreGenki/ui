@@ -14,7 +14,7 @@
         { url: '/consulting', name: 'Consulting' },
       ]"/>
 
-TODO: Rewrite this:
+TODO: Rewrite this: new changes since we now have @wearegenki/icons
     You need to supply a logo and menu/close icons as SVG (since each project will
     likely have its own icon set):
 
@@ -26,29 +26,27 @@ TODO: Rewrite this:
     your SVGs.
 
 -->
+
 <template>
-<header class="navbar-fixed z5" :class="{ 'active': scrolled || showNav }">
-    <div class="df-ns con">
-      <button @click.stop="showNav = !showNav" class="dn-ns btn-clear mr3">
+  <header class="navbar-fixed z5" :class="{ 'active': scrolled || showNav }">
+    <div class="df-l con">
+      <button @click.stop="showNav = !showNav" class="dn-l btn-clear mr3">
         <svg class="nav-icon link">
           <use v-if="showNav" xlink:href="~@wearegenki/icons/src/x.svg"/>
           <use v-else xlink:href="~@wearegenki/icons/src/menu.svg"/>
         </svg>
       </button>
 
-      <router-link to="/" class="nav-logo ml-1-ns">
+      <router-link to="/" class="nav-logo ml-1-l">
         <svg class="logo"><use xlink:href="~@/assets/logo.svg"/></svg>
       </router-link>
 
-      <!-- TODO: Add expand side nav animation OR remove <transition> -->
-      <transition>
-        <nav class="dn df-ns f-col f-row-ns ml-auto-ns mh-1" :class="{ 'df': showNav }">
-          <hr class="dn-ns mv0">
-          <router-link v-for="item in items" :key="item.url" :to="item.url" class="nav-link">
-            {{ item.name }}
-          </router-link>
-        </nav>
-      </transition>
+      <nav class="dn df-l f-col f-row-l ml-auto-l mh-1" :class="{ 'df': showNav }">
+        <hr class="dn-l mv0">
+        <router-link v-for="item in items" :key="item.url" :to="item.url" class="nav-link">
+          {{ item.name }}
+        </router-link>
+      </nav>
     </div>
   </header>
 </template>

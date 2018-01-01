@@ -1,20 +1,11 @@
-/*
- * FIXME: Review how we're using breakpoints and attempt to bring the number of
- * breakpoints down to the minimum. Can we get away with only 2 (+ the default xs/s) and make
- * everything very adaptive?
- */
-
 /* Media queries */
-/* Add .01 to prevent match at the same time as previous breakpoint */
 @custom-media --breakpoint-small screen and (min-width: 30em) and (max-width: 48em);
-@custom-media --breakpoint-not-small screen and (min-width: 48.01em);
-@custom-media --breakpoint-medium screen and (min-width: 48.01em) and (max-width: 64em);
-@custom-media --breakpoint-large screen and (min-width: 64.01em);
+@custom-media --breakpoint-large screen and (min-width: 48.01em); /* .01 so both are not active at 48rem */
 
 :root {
   /* Breakpoints */
-  --breakpoint-media: --breakpoint-small, --breakpoint-not-small, --breakpoint-medium, --breakpoint-large;
-  --breakpoints: s, ns, m, l;
+  --breakpoint-media: --breakpoint-small, --breakpoint-large;
+  --breakpoints: s, l;
 
   /* Grid */
   --container-width-max: 70rem;
@@ -27,9 +18,9 @@
   --col-steps: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
   --row-steps: 1, 2, 3, 4, 5, 6;
   --gutter-col: 1rem;
-  --gutter-col-ns: calc(var(--gutter-col) * 2);
+  --gutter-col-l: calc(var(--gutter-col) * 2);
   --gutter-row: var(--gutter-col);
-  --gutter-row-ns: var(--gutter-row);
+  --gutter-row-l: var(--gutter-row);
 
   /* Colours */
   --primary-gradient-0: #02e8ff;
@@ -72,7 +63,7 @@
   --font-size-fluid-until: 90em; /* finish growing font size at this screen width */
   --font-size: 1rem; /* use the browser's default font size, normally 16px */
   --font-size-s: 1.125rem; /* only used when --font-size-fluid-enabled is false */
-  --font-size-ns: 1.125rem; /* only used when --font-size-fluid-enabled is false */
+  --font-size-l: 1.125rem; /* only used when --font-size-fluid-enabled is false */
   --font-weight-light: 300;
   --font-weight: 500;
   --font-weight-heavy: 700;

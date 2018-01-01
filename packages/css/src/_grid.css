@@ -8,8 +8,9 @@
   grid-template-rows: var(--rows);
   grid-template-columns: var(--cols);
 
-  @media (--breakpoint-not-small) {
-    grid-gap: var(--gutter-row-ns) var(--gutter-col-ns);
+  /* @media (--breakpoint-not-small) { */
+  @media (--breakpoint-large) {
+    grid-gap: var(--gutter-row-l) var(--gutter-col-l);
   }
 }
 
@@ -31,8 +32,8 @@
   cols = 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
   rows = 1, 2, 3, 4, 5, 6
 
-  -ns = not small (both medium and large)
-  -m = medium
+     = (default, no suffix) anything smaller than small
+  -s = small
   -l = large
 */
 
