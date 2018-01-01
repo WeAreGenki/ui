@@ -4,6 +4,7 @@
   "license": "Apache-2.0",
   "scripts": {
     "setup": "yarn && lerna bootstrap --use-workspaces",
+    "update": "lerna exec --parallel -- ncu --reject /wearegenki/",
     "FIXME_start": "npm run dev",
     "FIXME_dev": "false",
     "clean": "lerna clean",
