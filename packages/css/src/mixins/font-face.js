@@ -9,16 +9,18 @@
 
   USAGE:
     @mixin font-face <family>, <name>, <style>, <weight>, [<directory>];
+
+  NOTE:
+    If you're using the @wearegenki/fonts package, you need to create a symlink
+    in your project static directory, e.g.:
+
+    cd static
+    ln -s ../node_modules/@wearegenki/fonts/src fonts
 */
 
-const path = require('path');
-
 module.exports = (mixin, fontFamily, fontName, fontStyle, fontWeight, fontDir) => {
-  // use @wearegenki/fonts if no fontDir specified
-  const dir = fontDir || path.relative(
-    process.cwd(),
-    path.join(path.dirname(require.resolve('@wearegenki/fonts')), 'src'),
-  );
+  // assume fonts are in static directory
+  const dir = fontDir || '/static/fonts';
 
   return {
     '@font-face': {

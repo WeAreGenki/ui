@@ -30,6 +30,9 @@
     "lint:js": "eslint --ext .js,.vue src test",
     "test": "exit 0"
   },
+  "optionalDependencies": {
+    "@wearegenki/fonts": "0.2.0-alpha.0"
+  },
   "devDependencies": {
     "@wearegenki/ui-postcss": "^0.2.0-alpha.0"
   },
