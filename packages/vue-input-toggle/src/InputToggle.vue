@@ -18,8 +18,8 @@
 
       <InputToggle v-model="toggle"/>
 
-    If the default toggle size is too big then you can add the .mini class for a
-    compact version. Example:
+    The default toggle is the same size as buttons. If this is too big, you can
+    add the .mini class for a compact version. Example:
 
       <InputToggle v-model="toggle" class="mini"/>
 
