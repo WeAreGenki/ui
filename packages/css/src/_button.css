@@ -43,7 +43,7 @@
 
   &:hover,
   &:focus {
-    background-color: unset;
+    color: unset; /* prevent colour change when applied to links */
   }
 }
 
