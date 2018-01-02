@@ -1,6 +1,6 @@
 {
   "name": "@wearegenki/css",
-  "version": "0.2.0-alpha.0",
+  "version": "0.2.0",
   "description": "CSS Grid based CSS library + Vue.js framework",
   "keywords": [
     "css",
@@ -34,7 +34,7 @@
     "@wearegenki/fonts": "0.2.0-alpha.0"
   },
   "devDependencies": {
-    "@wearegenki/ui-postcss": "^0.2.0-alpha.0"
+    "@wearegenki/ui-postcss": "^0.2.0"
   },
   "publishConfig": {
     "access": "public"
