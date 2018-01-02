@@ -3,11 +3,11 @@
 <!-- FIXME: Need a visual way to differenciate toast types, especially error toasts -->
 
 <template>
-<div class="toast df" :class="{ [`toast-${type}`]: type !== undefined }">
-  <span class="toast-msg">{{ text }}</span>
-  <button v-if="action === 'reload'" @click="reload" class="toast-action">RELOAD</button>
-  <button v-else-if="action" @click="destroy" class="toast-action ttu">{{ action }}</button>
-</div>
+  <div class="toast df" :class="{ [`toast-${type}`]: type !== undefined }">
+    <span class="toast-msg">{{ text }}</span>
+    <button v-if="action === 'reload'" @click="reload" class="toast-action">RELOAD</button>
+    <button v-else-if="action" @click="destroy" class="toast-action ttu">{{ action }}</button>
+  </div>
 </template>
 
 <script>

@@ -4,9 +4,9 @@
 -->
 
 <template>
-<div class="dn" aria-hidden="true">
-  <Component :is="load"/>
-</div>
+  <div class="dn" aria-hidden="true">
+    <Component :is="load"/>
+  </div>
 </template>
 
 <script>

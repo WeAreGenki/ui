@@ -1,18 +1,18 @@
 <template>
-<div id="debug-breakpoints">
-  <dl class="code mv0">
-    <dt>xs</dt>
-    <dd :class="xs ? 'green' : 'red'">{{ xs }}</dd>
-    <dt>s</dt>
-    <dd :class="s ? 'green' : 'red'">{{ s }}</dd>
-    <dt>ns</dt>
-    <dd :class="ns ? 'green' : 'red'">{{ ns }}</dd>
-    <dt>m</dt>
-    <dd :class="m ? 'green' : 'red'">{{ m }}</dd>
-    <dt>l</dt>
-    <dd :class="l ? 'green' : 'red'">{{ l }}</dd>
-  </dl>
-</div>
+  <div id="debug-breakpoints">
+    <dl class="code mv0">
+      <dt>xs</dt>
+      <dd :class="xs ? 'green' : 'red'">{{ xs }}</dd>
+      <dt>s</dt>
+      <dd :class="s ? 'green' : 'red'">{{ s }}</dd>
+      <dt>ns</dt>
+      <dd :class="ns ? 'green' : 'red'">{{ ns }}</dd>
+      <dt>m</dt>
+      <dd :class="m ? 'green' : 'red'">{{ m }}</dd>
+      <dt>l</dt>
+      <dd :class="l ? 'green' : 'red'">{{ l }}</dd>
+    </dl>
+  </div>
 </template>
 
 <script>

@@ -20,5 +20,5 @@
 import { ModalItem } from '@wearegenki/marko-modal/src';
 
 export {
-  ModalItem,
+  ModalItem, // eslint-disable-line import/prefer-default-export
 };

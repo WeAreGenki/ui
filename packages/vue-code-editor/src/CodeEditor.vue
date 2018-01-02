@@ -16,7 +16,7 @@
     />
 -->
 <template>
-<textarea :readonly="readOnly"></textarea>
+  <textarea :readonly="readOnly"/>
 </template>
 
 <script>

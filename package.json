@@ -11,6 +11,7 @@
     "clean:dist": "lerna clean --yes && rm -rf node_modules",
     "publish:canary": "lerna publish --canary",
     "publish:next": "lerna publish --npm-tag=next",
+    "lint:js": "eslint --ext .js,.vue,.marko packages test/unit/specs",
     "FIXME_lint": "lerna run lint",
     "FIXME_unit": "jest --config test/unit/jest.conf.js --coverage",
     "FIXME_test": "npm run lint && npm run unit",
