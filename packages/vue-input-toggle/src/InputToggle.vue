@@ -2,15 +2,15 @@
   INPUT TOGGLE COMPONENT
 
   README:
-    This component is intended to be an alterntive to checkbox inputs in forms
+    This component is intended to be an alternative to checkbox inputs in forms
     when there's a need to toggle something with an on and off state. From a UX
-    perspective it should be clearly understood that something is being turnned
+    perspective, it should be clearly understood that something is being turned
     on or off.
 
     An example of this is a switch to turn on or off sound in an interactive web
-    app. As a counter example, you should use a checkbox when users are
-    accustomed to seeing a checkbox such as an input to accept terms and
-    conditions in a transaction flow.
+    app. On the other hand, you should use a checkbox when users are accustomed
+    to seeing a checkbox such as an input to accept terms and conditions in a
+    transaction flow.
 
   USAGE:
     Simply import this component into your vue file and use it in your template
@@ -32,9 +32,11 @@
   NOTES:
     * All the CSS variables for this component are in:
       @wearegenki/css/src/_variables.css
-    * If following accessability guidelines it's recommened to label the purpose
-      of the toggle by adding a aria-label or aria-labelledby attribute.
-    * If used in a form this component wont send any data by default. If you wish
+    * It's a good idea to add a title attribute so desktop users can understand
+      the elements purpose more clearly.
+    * If following accessibility guidelines it's recommended to label the purpose
+      of the toggle by adding an aria-label or aria-labelledby attribute.
+    * If used in a form this component won't send any data by default. If you wish
       to use it as a form input you'll need to bind the v-model to a hidden input.
     * Only <input> can use the [disabled] attribute so we have to use a class.
 
