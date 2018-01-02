@@ -55,7 +55,7 @@
     role="button"
     :aria-pressed="value.toString()"
   >
-    <div class="input-toggle-slider"></div>
+    <div class="input-toggle-slider"/>
     <div class="input-toggle-on">{{ textOn }}</div>
     <div class="input-toggle-off">{{ textOff }}</div>
   </div>
