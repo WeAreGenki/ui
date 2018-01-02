@@ -39,7 +39,8 @@
     "postcss-import": "^11.0.0",
     "postcss-load-config": "^1.2.0",
     "postcss-mixins": "^6.2.0",
-    "postcss-nested": "^3.0.0"
+    "postcss-nested": "^3.0.0",
+    "postcss-url": "^7.3.0"
   },
   "peerDependencies": {
     "postcss": "^6.0.14"

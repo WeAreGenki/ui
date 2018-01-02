@@ -3,6 +3,7 @@
 const path = require('path');
 const postcss = require('postcss');
 const cssImport = require('postcss-import');
+const url = require('postcss-url');
 const atRulesVars = require('postcss-at-rules-variables');
 const each = require('postcss-each');
 const mixins = require('postcss-mixins');
@@ -26,6 +27,7 @@ module.exports = postcss.plugin('ui-postcss', (opts = {}) => {
 
   return postcss()
     .use(cssImport({ path: opts.importPath || ['src'] }))
+    .use(url)
     .use(atRulesVars)
     .use(each)
     .use(mixins({ mixinsDir }))
