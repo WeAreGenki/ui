@@ -1,6 +1,6 @@
 {
   "name": "@wearegenki/vue-toasts",
-  "version": "0.2.0",
+  "version": "0.2.0-next.1",
   "description": "CSS Grid based CSS library + Vue.js framework",
   "keywords": [
     "css",
@@ -31,7 +31,7 @@
     "test": "exit 0"
   },
   "dependencies": {
-    "@wearegenki/css": "^0.2.0"
+    "@wearegenki/css": "^0.2.0-next.1"
   },
   "peerDependencies": {
     "vue": "^2.5.13",
