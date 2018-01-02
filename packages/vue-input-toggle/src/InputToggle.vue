@@ -27,7 +27,7 @@
     and textOff. If you change this you'll likely need to modify the width too,
     which can be done via the --input-toggle-width CSS variable. Example:
 
-      <InputToggle v-model="toggle" textOn="YES" textOff="NO"/>
+      <InputToggle v-model="toggle" text-on="YES" text-off="NO"/>
 
   NOTES:
     * All the CSS variables for this component are in:
