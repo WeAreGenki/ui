@@ -86,7 +86,7 @@ a {
 }
 
 /* Lists */
-
+/* TODO: Move to a better place */
 li { margin-bottom: 0.5rem; } /* extra space between list items */
 
 .lsn {
@@ -178,12 +178,11 @@ abbr[title] {
 }
 
 /* Code */
-/* FIXME: Use colour variables */
 code {
   display: inline-block;
   padding: 0.1em 0.4em;
-  color: #d03;
-  background-color: #f9f9f9;
-  border: 1px solid #e5e5e5;
+  color: var(--red-500);
+  background-color: var(--grey-100);
+  border: 1px solid var(--grey-300);
   border-radius: 0.15em;
 }

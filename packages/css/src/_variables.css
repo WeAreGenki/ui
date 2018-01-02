@@ -45,6 +45,8 @@
   --body-colour: var(--blue-grey-900);
   --link-colour: var(--primary);
   --link-hover-colour: var(--primary-gradient-100);
+  --bg-alt-colour: var(--grey-100); /* alternating background in lists, tables, etc. */
+  --dark: var(--blue-grey-800);
 
   /* Shadows */
   /* FIXME: Reduce and/or simplify the shadow variables */
