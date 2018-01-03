@@ -1,0 +1,43 @@
+{
+  "name": "@wearegenki/vue-input-select",
+  "version": "0.2.0-next.1",
+  "description": "CSS Grid based CSS library + Vue.js framework",
+  "keywords": [
+    "css",
+    "cssgrid",
+    "design-system",
+    "postcss",
+    "vue",
+    "wearegenki"
+  ],
+  "repository": "https://github.com/WeAreGenki/ui/tree/master/packages/vue-input-select",
+  "bugs": {
+    "url": "https://github.com/WeAreGenki/ui/issues"
+  },
+  "author": "Max Milton <max@wearegenki.com>",
+  "license": "Apache-2.0",
+  "main": "dist/index.js",
+  "style": "dist/index.css",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "exit 0",
+    "prepare": "npm run build",
+    "lint": "npm run lint:css && npm run lint:js",
+    "lint:css": "stylelint \"src/**/*.vue\" \"src/**/*.css\"",
+    "lint:js": "eslint --ext .js,.vue src test",
+    "test": "exit 0"
+  },
+  "dependencies": {
+    "@wearegenki/css": "^0.2.0-next.1",
+    "@wearegenki/icons": "^0.2.0-next.1"
+  },
+  "peerDependencies": {
+    "vue": "^2.5.13"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
