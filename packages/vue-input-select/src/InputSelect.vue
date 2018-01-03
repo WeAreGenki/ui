@@ -1,4 +1,4 @@
-<!-- FIXME: Disable attr should go on input -->
+<!-- FIXME: Skip over disabled option when using keyboard input -->
 <!-- TODO: Check all events etc. are actually necessary -->
 <!-- TODO: Add animation, something like Google play music search -->
 
@@ -14,26 +14,27 @@
 <template>
   <div class="pos-r dif f-col" :class="{ 'input-select-active': active }">
     <input
+      @click="active ? false : open()"
       @focus="open"
       @blur="blur"
-      @keydown.space="active ? false : open"
+      @keydown.space="active ? false : open()"
       @keydown.enter.prevent="active ? select('enter') : toggle()"
       @keydown.esc="close"
       @keydown.up="up"
-      @keydown.down="down"
+      @keydown.down="active ? down() : open()"
       v-model="text"
       class="select"
       :tabindex="this.$attrs.disabled === undefined ? 0 : -1"
       role="listbox"
       placeholder="Search..."
-      :readonly="!active"
+      :readonly="this.$attrs.readonly || !active"
       :disabled="this.$attrs.disabled !== undefined"
     >
     <span class="input-select-caret"/>
 
     <div
       v-show="active"
-      @click="select"
+      @mousedown.prevent="select"
       class="input-select-dropdown w-100 z1"
     >
       <option
@@ -111,20 +112,16 @@ export default {
       }
     },
     select(event) {
-      if (event.target && event.target.dataset.id) {
+      if (event.target && !event.target.disabled && event.target.dataset.id) {
         this.$emit('input', event.target.dataset.id);
-      } else if (event === 'enter') {
+        this.close();
+      } else if (event === 'enter' && !this.options[this.selected].disabled) {
         this.$emit('input', this.options[this.selected].id);
+        this.close();
       }
-      this.close();
     },
-    blur(event) {
-      // FIXME: Don't use a timer!!
-      setTimeout(() => {
-        if (this.active) {
-          this.close();
-        }
-      }, 100);
+    blur() {
+      this.close();
     },
     up() {
       this.selected -= 1;
