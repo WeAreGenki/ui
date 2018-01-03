@@ -10,7 +10,7 @@
     An example of this is a switch to turn on or off sound in an interactive web
     app. On the other hand, you should use a checkbox when users are accustomed
     to seeing a checkbox such as an input to accept terms and conditions in a
-    transaction flow.
+    transaction flow. That said, most of the time this is a great option.
 
   USAGE:
     Simply import this component into your vue file and use it in your template
@@ -67,7 +67,7 @@ export default {
   props: {
     value: {
       type: Boolean,
-      default: false,
+      required: true,
     },
     textOn: {
       type: String,
