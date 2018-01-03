@@ -106,6 +106,12 @@
   --btn-radius: var(--radius);
   --btn-shadow: 0 0.125rem 0.375rem 0 color(var(--shadow-base) alpha(0.18));
 
+  /* Forms */
+  --input-padding-x: 1rem;
+  --input-padding-y: 0.6rem;
+  --input-bg-colour: var(--white);
+  --input-border: 1px solid var(--grey-300);
+
   /* Animation */
   --link-animate-in-speed: 0s;
   /* --link-animate-in-curve: ease-in; */

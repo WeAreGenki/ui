@@ -42,3 +42,7 @@
 .clr {
   @mixin clearfix;
 }
+
+/* Box model */
+.content-box { box-sizing: content-box; }
+.border-box { box-sizing: border-box; }

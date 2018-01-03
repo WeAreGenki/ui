@@ -73,8 +73,9 @@ hr {
   border-top: 1px solid var(--grey-300);
 }
 
-button,
 .btn,
+.pointer,
+button,
 select {
   cursor: pointer;
 

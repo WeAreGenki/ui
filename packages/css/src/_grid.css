@@ -14,6 +14,10 @@
   }
 }
 
+.compact {
+  grid-gap: calc(var(--gutter-row) / 2) 0 !important; /* stylelint-disable-line declaration-no-important */
+}
+
 .col-fluid { grid-template-columns: auto; }
 
 /* For a consistent item size */
