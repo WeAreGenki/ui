@@ -1,3 +1,8 @@
+<!--
+  TODO:
+    - Write about components for people who don't know anything about Vue or Marko (most devs will never have seen Marko in particular).
+-->
+
 # @wearegenki/ui
 
 A futuristic UI framework which aims to be straightforward and intuitive. Intended to be used in Vue or Marko projects.
