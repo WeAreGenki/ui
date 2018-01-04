@@ -1,12 +1,14 @@
 <template>
   <div v-if="show" class="modal">
-    <button v-if="closeBtn" @click="close" class="btn btn-clear float-r">
+    <button v-if="closeBtn" @click="close" class="btn btn-clear float-r" type="button">
       <svg class="icon"><use xlink:href="~@wearegenki/icons/src/x.svg"/></svg>
     </button>
 
     <slot/>
 
-    <button @click="close" class="btn btn-main">{{ action }}</button>
+    <button @click="close" class="btn btn-main" type="button">
+      {{ action }}
+    </button>
   </div>
 </template>
 

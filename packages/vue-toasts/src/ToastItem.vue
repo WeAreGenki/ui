@@ -5,9 +5,16 @@
 
 <template>
   <div class="toast df" :class="{ [`toast-${type}`]: type !== undefined }">
-    <span class="toast-msg">{{ text }}</span>
-    <button v-if="action === 'reload'" @click="reload" class="toast-action">RELOAD</button>
-    <button v-else-if="action" @click="destroy" class="toast-action ttu">{{ action }}</button>
+    <span class="toast-msg">
+      {{ text }}
+    </span>
+
+    <button v-if="action === 'reload'" @click="reload" class="toast-action" type="button">
+      RELOAD
+    </button>
+    <button v-else-if="action" @click="destroy" class="toast-action ttu" type="button">
+      {{ action }}
+    </button>
   </div>
 </template>
 

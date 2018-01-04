@@ -30,7 +30,7 @@ TODO: Rewrite this: new changes since we now have @wearegenki/icons
 <template>
   <header class="navbar-fixed z5" :class="{ 'active': scrolled || showNav }">
     <div class="df-l con">
-      <button @click.stop="showNav = !showNav" class="dn-l btn-clear mr3">
+      <button @click.stop="showNav = !showNav" class="dn-l btn-clear mr3" type="button">
         <svg class="nav-icon link">
           <use v-if="showNav" xlink:href="~@wearegenki/icons/src/x.svg"/>
           <use v-else xlink:href="~@wearegenki/icons/src/menu.svg"/>

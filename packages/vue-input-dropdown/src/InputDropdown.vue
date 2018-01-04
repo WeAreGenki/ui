@@ -1,6 +1,6 @@
 <template>
   <span class="dropdown">
-    <button class="btn btn-clear ml-auto" title="Org options">
+    <button class="btn btn-clear ml-auto" title="Org options" type="button">
       <svg class="icon-small"><use :xlink:href="`~@wearegenki/icons/src/${ icon }.svg`"/></svg>
     </button>
   </span>
