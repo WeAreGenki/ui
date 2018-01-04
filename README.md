@@ -11,7 +11,7 @@ _NOTE: This is currently a work in progress and not recommended for production a
 
 ## Overview
 
-TODO: Write a nice readme :)
+The styles are very much designed around the things we do at [We Are Genki](https://wearegenki.com) — ecommerce, microsites, and next-gen web apps — but are intentionally flexible enough for general purpose use.
 
 Features:
 
@@ -24,6 +24,8 @@ Features:
 * great developer experience
 
 ## Usage
+
+TODO: Write me :)
 
 ```bash
 yarn add @wearegenki/ui
