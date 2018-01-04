@@ -9,7 +9,7 @@
 
   /* Grid */
   --container-width-max: 70rem;
-  --container-width-narrow: 30rem;
+  --container-narrow-width-max: 30rem;
   --item-size: 1fr;
   --cols: auto;
   --rows: auto;
@@ -21,6 +21,11 @@
   --gutter-col-l: calc(var(--gutter-col) * 2);
   --gutter-row: var(--gutter-col);
   --gutter-row-l: var(--gutter-row);
+
+  /* General */
+  --spacing-steps: 0, 1, 2, 3, 4, 5, 6, 7;
+  --spacing-values: 0, 0.25rem, 0.5rem, 1rem, 2rem, 4rem, 8rem, 16rem;
+  --radius: 0.15rem;
 
   /* Colours */
   /* FIXME: Do we really need so many gradient steps? Simplify! */
@@ -79,18 +84,34 @@
   --h4-font-size: 1.25rem;
   --h5-font-size: 1rem;
   --h6-font-size: 0.875rem;
+  --heading-small-text-colour: var(--grey-500);
+  --paragraph-line-height: 1.5;
+  --paragraph-lead-text-size: 1.625rem;
   --link-click-area: 0.25rem; /* increase if you don't have links close to each other (otherwise they may overlap) */
   --link-animate-in-speed: 0s;
   --link-animate-out-speed: 1s;
   --hr-margin: 3rem 0;
+  --quote-text-size: 2rem;
+  --quote-mark-text-size: 3em; /* em (not rem) so it's relative to the parent font size */
 
-  /* General */
-  --spacing-steps: 0, 1, 2, 3, 4, 5, 6, 7;
-  --spacing-values: 0, 0.25rem, 0.5rem, 1rem, 2rem, 4rem, 8rem, 16rem;
-  --radius: 0.15rem;
+  /* Lists */
+  --li-margin-between: 0.5rem;
 
   /* Navigation */
-  --menu-text-colour: var(--primary);
+  --nav-link-padding-x: 1.3rem;
+  --nav-link-padding-y: 0.9rem;
+  --side-nav-active-bg-colour: var(--grey-300);
+  --side-nav-link-margin-y: 0.2rem;
+  --footer-margin-y: 5rem;
+  --footer-text-colour: var(--subtle);
+
+  /* Minimal navbar (lightweight alternative to navbar component) */
+  --navbar-text-colour: var(--white);
+  --navbar-bg-colour: var(--primary);
+  --navbar-shadow: 0 0 0.5rem var(--shadow-colour);
+  --navbar-hover-bg-colour: var(--link-hover-text-colour);
+  --navbar-hamurger-size-x: 1.25rem;
+  --navbar-hamurger-text-colour: var(--primary);
 
   /* Buttons */
   --btn-padding-x: 1.875rem;
@@ -102,6 +123,7 @@
   --btn-hover-text-colour: var(--link-hover-text-colour);
   --btn-hover-bg-colour: var(--blue-grey-100);
   --btn-disabled-text-colour: var(--blue-grey-200);
+  --btn-arrow-animate-speed: 200ms;
   --btn-margin-between: 1.5rem; /* space between buttons */
 
   /* Forms */
@@ -114,6 +136,58 @@
   --input-border: 1px solid var(--grey-300);
   --input-disabled-bg-colour: var(--grey-200);
   --input-focus-outline: 2px solid var(--primary);
+
+  /* Cards */
+  --card-padding-x: 1.3rem;
+  --card-padding-y: 1.2rem;
+  --card-bg-colour: var(--blue-grey-100);
+  --card-shadow: var(--shadow-subtle);
+  --card-touch-bg-colour: var(--body-bg-colour);
+  --card-touch-shadow: var(--shadow-light);
+  --card-touch-animate-speed: 200ms;
+  --card-touch-hover-shadow:
+    var(--shadow),
+    0 0 0 transparent;
+
+  /* Alerts */
+  --alert-padding: 1rem;
+  --alert-margin-y: 2rem;
+  --alert-border-size: 4px;
+  --alert-tip-text-colour: var(--green-800);
+  --alert-tip-bg-colour: var(--green-100);
+  --alert-tip-border-colour: var(--green-500);
+  --alert-info-text-colour: var(--blue-800);
+  --alert-info-bg-colour: var(--blue-100);
+  --alert-info-border-colour: var(--blue-500);
+  --alert-warning-text-colour: var(--amber-900);
+  --alert-warning-bg-colour: var(--amber-100);
+  --alert-warning-border-colour: var(--amber-500);
+  --alert-error-text-colour: var(--red-700);
+  --alert-error-bg-colour: var(--red-100);
+  --alert-error-border-colour: var(--red-500);
+
+  /* Labels */
+  --label-padding: 0.04rem 0.4rem 0.08rem;
+  --label-text-size: 90%;
+  --label-text-colour: var(--primary-gradient-100);
+  --label-bg-colour: var(--body-bg-colour);
+  --label-border: 1px solid var(--primary);
+  --label-border-radius: var(--radius);
+  --label-margin-between: var(--btn-margin-between);
+
+  /* Grid templates */
+  --template-card-body-padding: 1rem 1rem 0;
+  --template-card-button-padding: 0 1rem 1rem;
+
+  /* vue-navbar component */
+  --navbar-bg-colour: var(--body-bg-colour);
+  --navbar-animate-speed: 200ms;
+  --navbar-shadow-fade-speed: 300ms;
+  --navbar-shadow: 0 0.5rem 2rem 0 var(--shadow-colour);
+  --navbar-icon-size: 2rem;
+  --navbar-logo-size-x: 2rem;
+  --navbar-logo-size-y: 2rem;
+  --navbar-logo-padding: 0.65rem 0 0;
 
   /* vue-input-toggle component */
   --input-toggle-width: 8rem;

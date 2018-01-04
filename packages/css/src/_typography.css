@@ -36,7 +36,7 @@ h1 {
   font-weight: var(--font-weight-light);
 
   & > small {
-    color: var(--grey-500);
+    color: var(--heading-small-text-colour);
   }
 }
 
@@ -51,11 +51,11 @@ h6 { font-size: var(--h6-font-size); }
 /* Paragraphs */
 
 p {
-  line-height: 1.5;
+  line-height: var(--paragraph-line-height);
 }
 
 .lead {
-  font-size: 1.625rem;
+  font-size: var(--paragraph-lead-text-size);
   font-weight: var(--font-weight-light);
 }
 
@@ -76,18 +76,6 @@ a {
     transition-duration: var(--link-animate-in-speed);
   }
 }
-
-/* Lists */
-/* TODO: Move to a better place */
-li { margin-bottom: 0.5rem; } /* extra space between list items */
-
-.lsn {
-  padding-left: 0;
-  list-style: none;
-}
-
-/* dl::after { clear: both; } */ /* TODO: necessary? */
-dt { float: left; } /* TODO: Could this be achieved with flex or grid somehow? */
 
 /* Text alignment */
 
@@ -122,12 +110,12 @@ dt { float: left; } /* TODO: Could this be achieved with flex or grid somehow? *
 /* blockquote {} */
 
 .quote {
-  font-size: 2rem;
+  font-size: var(--quote-text-size);
 
   &::before,
   &::after {
     position: absolute;
-    font-size: 3em; /* em (not rem) so it's relative to the parent font size */
+    font-size: var(--quote-mark-text-size);
   }
 
   &::before {
@@ -141,7 +129,7 @@ dt { float: left; } /* TODO: Could this be achieved with flex or grid somehow? *
 
 /* Font variants and decoration */
 
-.bold { font-weight: 700; }
+.bold { font-weight: var(--font-weight-heavy); }
 .italic { font-style: italic; }
 
 .normal {
@@ -151,12 +139,23 @@ dt { float: left; } /* TODO: Could this be achieved with flex or grid somehow? *
 
 .underline { text-decoration: underline; }
 
+/* Lists */
+
+li { margin-bottom: var(--li-margin-between); } /* extra space between list items */
+
+.lsn {
+  padding-left: 0;
+  list-style: none;
+}
+
+/* dl::after { clear: both; } */ /* TODO: necessary? */
+dt { float: left; } /* TODO: Could this be achieved with flex or grid instead? */
+
 /* Abbreviations */
 
 abbr[title] {
   text-decoration: none;
 
-  /* TODO: So many styles feels a bit over the top -- refactor while keeping the same effect */
   &::after {
     position: relative;
     bottom: 0.4rem;
@@ -170,11 +169,12 @@ abbr[title] {
 }
 
 /* Code */
+
 code {
   display: inline-block;
-  padding: 0.1em 0.4em;
+  padding: 0.1rem 0.4rem;
   color: var(--red-500);
   background-color: var(--grey-100);
   border: 1px solid var(--grey-300);
-  border-radius: 0.15em;
+  border-radius: var(--radius);
 }

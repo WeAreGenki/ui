@@ -22,5 +22,5 @@
 }
 
 .narrow {
-  max-width: var(--container-width-narrow);
+  max-width: var(--container-narrow-width-max);
 }

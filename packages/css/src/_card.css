@@ -1,42 +1,28 @@
 /* Cards */
 
 .card {
-  padding: 1.2rem 1.3rem;
+  padding: var(--card-padding-y) var(--card-padding-x);
   margin: 0;
   word-wrap: break-word;
-  background-color: var(--blue-grey-100);
-  box-shadow: var(--shadow-subtle);
+  background-color: var(--card-bg-colour);
+  box-shadow: var(--card-shadow);
 }
 
-/* FIXME: Convert many animation values to variables */
-
-.card-shadow {
-  background-color: var(--body-bg-colour);
-  border: 1px solid var(--blue-grey-50);
-  box-shadow: var(--shadow-light);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+.card-touch {
+  background-color: var(--card-touch-bg-colour);
+  box-shadow: var(--card-touch-shadow);
+  transition: transform var(--card-touch-animate-speed) ease, box-shadow var(--card-touch-animate-speed) ease;
   will-change: transform, box-shadow;
 
   &:hover {
-    text-decoration: unset;
-    box-shadow:
-      var(--shadow),
-      0 0 0 transparent;
+    text-decoration: unset; /* no need to underline links as it's obvious this element is interactive */
+    box-shadow: var(--card-touch-hover-shadow);
     transform: translateY(-5px);
   }
 
   &:hover .btn-clear {
     color: var(--link-hover-text-colour);
     background-color: unset;
-  }
-
-  .btn-arrow {
-    display: inline-block;
-    transition: transform 0.2s ease;
-  }
-
-  &:hover .btn-arrow {
-    transform: translateX(0.3rem);
   }
 }
 

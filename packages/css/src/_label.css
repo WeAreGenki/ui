@@ -2,13 +2,13 @@
 
 .label {
   display: inline-block;
-  padding: 0.04rem 0.4rem 0.08rem;
-  font-size: 90%;
-  color: var(--primary-gradient-100);
-  background-color: var(--body-bg-colour);
-  border: 1px solid var(--primary);
-  border-radius: var(--radius);
+  padding: var(--label-padding);
+  font-size: var(--label-text-size);
+  color: var(--label-text-colour);
+  background-color: var(--label-bg-colour);
+  border: var(--label-border);
+  border-radius: var(--label-border-radius);
 }
 
 /* Spacing between labels */
-.label + .label { margin-left: 1rem; }
+.label + .label { margin-left: var(--label-margin-between); }

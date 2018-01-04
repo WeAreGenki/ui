@@ -1,5 +1,9 @@
+/* FIXME: Better approach at custom input and label sizing */
+
 /* TODO: Hover state so it's obvious inputs can be used — also style input relevant components */
+
 /* TODO: Create variables for relevant properties */
+
 /* TODO: Custom checkbox */
 
 form {
@@ -21,7 +25,7 @@ label {
 }
 
 .form-label {
-  min-width: 6.5rem;
+  /* min-width: 6.5rem; */
 }
 
 .input,
@@ -44,9 +48,8 @@ textarea {
   }
 
   &.input-small { /* stylelint-disable-line selector-no-qualifying-type */
-    /* TODO: Better approach at custom input sizing */
-    min-width: 5rem;
-    max-width: 7rem;
+    /* min-width: 5rem; */
+    /* max-width: 7rem; */
   }
 
   &[disabled] {

@@ -99,6 +99,15 @@
   line-height: 1;
 }
 
+.btn-arrow {
+  display: inline-block;
+  transition: transform var(--btn-arrow-animate-speed) ease;
+
+  .btn:hover & {
+    transform: translateX(0.3rem);
+  }
+}
+
 /* Spacing between buttons */
 .btn + .btn {
   margin-left: var(--btn-margin-between);

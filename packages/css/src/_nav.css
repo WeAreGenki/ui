@@ -1,23 +1,23 @@
 /* NAVIGATION */
 
 .nav-link {
-  padding: 0.9rem 1.3rem;
+  padding: var(--nav-link-padding-y) var(--nav-link-padding-x);
   margin: 0; /* offset large link click area */
 }
 
 /* Side menu */
 
+/* TODO: Change how the sidebar looks; more functional */
 .side-nav {
   display: flex;
   flex-direction: column;
 
   > .nav-link {
-    margin: 0.2rem 0;
+    margin: var(--side-nav-link-margin-y) 0;
 
     &.active {
       text-decoration: none;
-      /* TODO: Change */
-      background-color: var(--grey-300);
+      background-color: var(--side-nav-active-bg-colour);
     }
 
     &.exact {
@@ -29,45 +29,45 @@
 /* Footer */
 
 .footer {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-  color: var(--subtle);
+  margin-top: var(--footer-margin-y);
+  margin-bottom: var(--footer-margin-y);
+  color: var(--footer-text-colour);
 
   > .nav-link {
     margin: calc(-1 * var(--link-click-area)); /* offset large link click area */
 
     &:first-of-type {
-      margin-left: -1rem;
+      margin-left: calc(-1 * var(--gutter-col));
     }
   }
 }
 
-/* Minimal navbar when not using the Navbar component */
+/* Minimal navbar (lightweight alternative to navbar component) */
 
 /* top navbar menu */
 .navbar {
-  color: var(--white);
-  background-color: var(--primary);
-  box-shadow: 0 0 0.5rem var(--shadow-colour);
+  color: var(--navbar-text-colour);
+  background-color: var(--navbar-bg-colour);
+  box-shadow: var(--navbar-shadow);
 
   .nav-link { /* stylelint-disable-line no-descending-specificity */
-    color: var(--white);
+    color: var(--navbar-text-colour);
 
     &:hover {
-      background-color: var(--link-hover-text-colour);
+      background-color: var(--navbar-hover-bg-colour);
     }
   }
 }
 
 /* hamburger menu icon */
-.menu {
+.icon-menu {
   display: inline-block;
-  width: 1.25rem;
+  width: var(--navbar-hamurger-size-x);
   height: 0.125rem;
   /* margin: 0.5rem; */ /* use margin here because padding breaks the icon */
   vertical-align: 5px;
   box-shadow:
-    inset 0 0 0 2rem var(--primary),
-    0 -0.375rem var(--primary),
-    0 0.375rem var(--primary);
+    inset 0 0 0 2rem var(--navbar-hamurger-text-colour),
+    0 -0.375rem var(--navbar-hamurger-text-colour),
+    0 0.375rem var(--navbar-hamurger-text-colour);
 }

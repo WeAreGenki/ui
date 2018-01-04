@@ -18,7 +18,7 @@
 
 -->
 
-<!-- TODO: How can we make it more obvious that the input is only for filtering and users can't create new options -->
+<!-- TODO: How might we make it more obvious that the input is only for filtering and users can't create new options? -->
 
 <template>
   <div class="pos-r dif f-col">

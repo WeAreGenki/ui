@@ -43,11 +43,11 @@
 .card-body {
   grid-area: body;
   align-self: start;
-  padding: 1rem 1rem 0;
+  padding: var(--template-card-body-padding);
 }
 
 .card-btn {
   grid-area: btn;
   align-self: end;
-  padding: 0 1rem 1rem;
+  padding: var(--template-card-button-padding);
 }

@@ -122,10 +122,10 @@ export default {
   top: 0;
   right: 0;
   left: 0;
-  background-color: var(--body-bg-colour);
+  background-color: var(--navbar-bg-colour);
 
   > .con {
-    transition: transform 0.2s ease-in-out;
+    transition: transform var(--navbar-animate-speed) ease-in-out;
     will-change: transform;
   }
 
@@ -140,9 +140,9 @@ export default {
     z-index: -1;
     width: 100%;
     content: "";
-    box-shadow: 0 0.5rem 2rem 0 var(--shadow-colour);
+    box-shadow: var(--navbar-shadow);
     opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity var(--navbar-shadow-fade-speed) ease-in-out;
     will-change: opacity;
   }
 
@@ -156,18 +156,18 @@ export default {
 }
 
 .nav-icon {
-  width: 2rem;
-  height: 2rem;
+  width: var(--navbar-icon-size);
+  height: var(--navbar-icon-size);
 }
 
 .logo {
-  width: 2rem;
-  height: 2rem;
+  width: var(--navbar-logo-size-x);
+  height: var(--navbar-logo-size-y);
 }
 
 .nav-logo {
   display: inline-block;
-  padding: 0.65rem 0 0;
+  padding: var(--navbar-logo-padding);
   margin: 0;
 }
 </style>
