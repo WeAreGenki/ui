@@ -22,6 +22,8 @@
 
 <!-- TODO: How might we make it more obvious that the input is only for filtering and users can't create new options? -->
 
+<!-- TODO: Should very long lists be scrollable or should they just overflow the page? -->
+
 <template>
   <div class="pos-r dif f-col">
     <!--
@@ -31,7 +33,7 @@
     <input
       @click="active ? false : open()"
       @focus="open"
-      @blur="false || close"
+      @blur="close"
       @keydown.space="active ? false : open()"
       @keydown.enter.prevent="active ? select('enter') : open()"
       @keydown.esc="close"
