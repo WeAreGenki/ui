@@ -31,8 +31,7 @@
     "test": "exit 0"
   },
   "dependencies": {
-    "@wearegenki/css": "^0.2.0-next.1",
-    "@wearegenki/icons": "^0.2.0-next.1"
+    "@wearegenki/css": "^0.2.0-next.1"
   },
   "peerDependencies": {
     "vue": "^2.5.13"

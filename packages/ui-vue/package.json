@@ -30,6 +30,7 @@
     "@wearegenki/vue-code-editor": "^0.2.0-next.1",
     "@wearegenki/vue-debug-breakpoints": "^0.2.0-next.1",
     "@wearegenki/vue-input-dropdown": "^0.2.0-next.1",
+    "@wearegenki/vue-input-select": "^0.2.0-next.1",
     "@wearegenki/vue-input-toggle": "^0.2.0-next.1",
     "@wearegenki/vue-link-preload": "^0.2.0-next.1",
     "@wearegenki/vue-modal": "^0.2.0-next.1",
