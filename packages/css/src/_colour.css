@@ -24,7 +24,7 @@
 .blue-grey { color: var(--blue-grey-500); }
 
 /* Utility colours */
-.plain { color: var(--body-colour); }
+.plain { color: var(--body-text-colour); }
 .subtle { color: var(--subtle); }
 .inherit { color: inherit; }
 [class="inherit!"] { color: inherit !important; } /* stylelint-disable-line declaration-no-important */
@@ -58,7 +58,7 @@
 }
 
 .bg-alt:nth-child(even) {
-  background-color: var(--bg-alt-colour);
+  background-color: var(--alt-bg-colour);
 }
 
 .bg-hover:hover {

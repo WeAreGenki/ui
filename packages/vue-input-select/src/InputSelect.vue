@@ -18,12 +18,14 @@
 
 -->
 
+<!-- TODO: How can we make it more obvious that the input is only for filtering and users can't create new options -->
+
 <template>
   <div class="pos-r dif f-col">
     <input
       @click="active ? false : open()"
       @focus="open"
-      @blur="close"
+      @blur="false || close"
       @keydown.space="active ? false : open()"
       @keydown.enter.prevent="active ? select('enter') : open()"
       @keydown.esc="close"
@@ -56,7 +58,7 @@
         >
           {{ option.text }}
         </option>
-        <div v-if="!list.length" class="pv2 ph3 grey">
+        <div v-if="!list.length" class="pa3 grey">
           No matches
         </div>
       </div>
@@ -76,7 +78,7 @@ export default {
       type: Array,
       required: true,
     },
-    placeholder: { // for search input
+    placeholder: { // for filter input
       type: String,
       default: 'Filter...',
     },
@@ -190,7 +192,7 @@ export default {
   }
 
   [disabled] + & {
-    border-top-color: var(--input-select-caret-colour-disabled);
+    border-top-color: var(--input-select-disabled-caret-colour);
   }
 }
 
@@ -198,9 +200,9 @@ export default {
   position: absolute;
   top: 100%;
   left: 0;
-  font-size: 1.2rem;
-  color: var(--body-colour);
-  background-color: var(--white);
+  font-size: var(--input-text-size);
+  color: var(--input-text-colour);
+  background-color: var(--input-bg-colour);
   box-shadow: var(--shadow);
   transition:
     transform var(--input-select-animate-speed) ease,
@@ -219,12 +221,12 @@ export default {
 
   &.selected,
   &:not([disabled]):hover {
-    color: var(--input-select-selected-colour);
+    color: var(--input-select-selected-text-colour);
     background-color: var(--input-select-selected-bg-colour);
   }
 
   &[disabled] {
-    color: var(--input-select-colour-disabled);
+    color: var(--input-select-disabled-text-colour);
   }
 }
 </style>

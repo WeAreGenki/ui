@@ -117,12 +117,12 @@ export default {
   }
 
   &.mini {
-    width: var(--input-toggle-width-mini);
+    width: var(--input-toggle-mini-width);
     padding: calc(var(--btn-padding-y) / 2) 0;
   }
 
   &[disabled] {
-    color: var(--btn-text-colour-disabled);
+    color: var(--btn-disabled-text-colour);
     cursor: not-allowed;
     background-color: var(--btn-bg-colour);
     box-shadow: var(--btn-shadow);
@@ -149,7 +149,7 @@ export default {
   color: var(--input-toggle-on-text-colour);
 
   .input-toggle[disabled] > & {
-    color: var(--btn-text-colour-disabled);
+    color: var(--btn-disabled-text-colour);
   }
 }
 
@@ -170,12 +170,12 @@ export default {
 
   .input-toggle:hover > &,
   .input-toggle:focus > & {
-    background: var(--input-toggle-slider-colour);
+    background: var(--input-toggle-hover-slider-bg-colour);
   }
 
   .input-toggle[disabled] > &,
   .input-toggle[disabled]:hover > & {
-    background: var(--input-toggle-slider-colour-disabled);
+    background: var(--input-toggle-disabled-slider-bg-colour);
     box-shadow: none;
   }
 }

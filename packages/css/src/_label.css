@@ -5,7 +5,7 @@
   padding: 0.04rem 0.4rem 0.08rem;
   font-size: 90%;
   color: var(--primary-gradient-100);
-  background-color: var(--body-bg);
+  background-color: var(--body-bg-colour);
   border: 1px solid var(--primary);
   border-radius: var(--radius);
 }

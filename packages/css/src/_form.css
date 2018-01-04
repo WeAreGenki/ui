@@ -13,7 +13,7 @@ form {
 }
 
 .form-help {
-  color: var(--grey-600);
+  color: var(--form-help-text-colour);
 }
 
 label {
@@ -32,24 +32,25 @@ select,
 textarea {
   /* min-width: 17rem; */
   padding: var(--input-padding-y) var(--input-padding-x);
-  font-size: 1.2rem;
-  color: var(--body-colour);
+  font-size: var(--input-text-size);
+  color: var(--input-text-colour);
   background-color: var(--input-bg-colour);
   border: var(--input-border);
   border-radius: var(--radius);
 
   &:focus,
   &:active {
-    outline: 2px solid var(--primary);
+    outline: var(--input-focus-outline);
   }
 
   &.input-small { /* stylelint-disable-line selector-no-qualifying-type */
+    /* TODO: Better approach at custom input sizing */
     min-width: 5rem;
     max-width: 7rem;
   }
 
   &[disabled] {
-    background-color: var(--input-bg-colour-disabled);
+    background-color: var(--input-disabled-bg-colour);
   }
 }
 

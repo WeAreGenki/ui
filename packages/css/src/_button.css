@@ -19,7 +19,7 @@
   &:focus {
     color: unset; /* prevent change when applied to links */
     text-decoration: none;
-    background-color: var(--btn-bg-hover-colour);
+    background-color: var(--btn-hover-bg-colour);
     transition: background-color 50ms;
   }
 }
@@ -42,7 +42,7 @@
   &:focus {
     color: unset; /* prevent change when applied to links */
     text-decoration: none;
-    background-color: var(--btn-bg-hover-colour);
+    background-color: var(--btn-hover-bg-colour);
     transition: background-color 50ms;
   }
 }

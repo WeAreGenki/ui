@@ -42,12 +42,12 @@
   --secondary: var(--purple-a700); /* call to action, highlights */
   --secondary-accent: var(--purple-a200);
   --subtle: var(--blue-grey-200); /* footer, title subheading */
-  --body-bg: var(--grey-50);
-  --body-colour: var(--blue-grey-900);
-  --link-colour: var(--primary);
-  --link-hover-colour: var(--primary-gradient-100);
-  --bg-alt-colour: var(--grey-100); /* alternating background in lists, tables, etc. */
   --dark: var(--blue-grey-800);
+  --body-bg-colour: var(--grey-50);
+  --body-text-colour: var(--blue-grey-900);
+  --link-text-colour: var(--primary);
+  --link-hover-text-colour: var(--primary-gradient-100);
+  --alt-bg-colour: var(--grey-100); /* alternating background in lists, tables, etc. */
 
   /* Shadows */
   /* FIXME: Reduce and/or simplify the shadow variables */
@@ -90,67 +90,71 @@
   --radius: 0.15rem;
 
   /* Navigation */
-  --menu-colour: var(--primary);
+  --menu-text-colour: var(--primary);
 
   /* Buttons */
   --btn-padding-x: 1.875rem;
   --btn-padding-y: 0.75rem;
   --btn-text-colour: var(--blue-grey-800);
-  --btn-text-colour-disabled: var(--blue-grey-200);
   --btn-bg-colour: var(--white);
-  --btn-bg-hover-colour: var(--blue-grey-100);
-  --btn-hover-colour: var(--link-hover-colour);
   --btn-radius: var(--radius);
   --btn-shadow: 0 0.125rem 0.375rem 0 color(var(--shadow-base) alpha(0.18));
-  --btn-margin-between: 1.5rem;
+  --btn-hover-text-colour: var(--link-hover-text-colour);
+  --btn-hover-bg-colour: var(--blue-grey-100);
+  --btn-disabled-text-colour: var(--blue-grey-200);
+  --btn-margin-between: 1.5rem; /* space between buttons */
 
   /* Forms */
+  --form-help-text-colour: var(--grey-600);
   --input-padding-x: 1rem;
   --input-padding-y: 0.6rem;
+  --input-text-size: 1.2rem;
+  --input-text-colour: var(--body-text-colour);
   --input-bg-colour: var(--white);
-  --input-bg-colour-disabled: var(--grey-200);
   --input-border: 1px solid var(--grey-300);
+  --input-disabled-bg-colour: var(--grey-200);
+  --input-focus-outline: 2px solid var(--primary);
 
   /* vue-input-toggle component */
   --input-toggle-width: 8rem;
-  --input-toggle-width-mini: calc(var(--input-toggle-width) / 1.7);
   --input-toggle-on-text-colour: var(--white);
   --input-toggle-on-bg-colour: var(--green-500);
   --input-toggle-off-text-colour: var(--btn-text-colour);
   --input-toggle-off-bg-colour: var(--grey-400);
-  --input-toggle-slider-colour: var(--grey-200);
-  --input-toggle-slider-colour-disabled: var(--grey-100);
   --input-toggle-shadow: inset 0 -0.125rem 0.6rem 0 color(var(--shadow-base) alpha(0.15));
   --input-toggle-slider-shadow: inset 0 -1rem 0.4rem 0 color(var(--shadow-base) alpha(0.05));
   --input-toggle-slider-speed: 180ms;
   --input-toggle-fade-in-speed: var(--input-toggle-slider-speed);
   --input-toggle-fade-out-speed: calc(var(--input-toggle-slider-speed) * 0.7);
+  --input-toggle-hover-slider-bg-colour: var(--grey-200);
+  --input-toggle-disabled-slider-bg-colour: var(--grey-100);
+  --input-toggle-mini-width: calc(var(--input-toggle-width) / 1.7);
 
   /* vue-input-select component */
   --input-select-bg-colour: var(--white);
-  --input-select-selected-colour: var(--white);
-  --input-select-selected-bg-colour: var(--link-hover-colour);
-  --input-select-colour-disabled: var(--btn-text-colour-disabled);
+  --input-select-selected-text-colour: var(--white);
+  --input-select-selected-bg-colour: var(--link-hover-text-colour);
   --input-select-caret-colour: var(--blue-grey-800);
-  --input-select-caret-colour-disabled: var(--grey-500);
   --input-select-caret-size: 0.3rem;
   --input-select-animate-speed: 150ms;
+  --input-select-disabled-text-colour: var(--btn-disabled-text-colour);
+  --input-select-disabled-caret-colour: var(--grey-500);
 
   /* vue-toasts component */
   --toast-item-width: 24rem;
-  --toast-item-botom: 1.2rem;
+  --toast-item-bottom: 1.2rem;
   --toast-item-left: 2rem;
   --toast-item-padding-x: 1.5rem;
   --toast-item-padding-y: 1.1rem;
-  --toast-item-colour: var(--white);
+  --toast-item-text-colour: var(--white);
   --toast-item-bg-colour: var(--grey-900);
   --toast-item-shadow: var(--shadow);
   --toast-item-slide-in-speed: 150ms;
   --toast-item-slide-out-speed: 300ms;
   --toast-item-zindex: 999;
   --toast-item-text-size: 1.1rem;
-  --toast-item-action-colour: var(--blue-500);
-  --toast-item-action-colour-hover: var(--blue-400);
-  --toast-item-warning-colour: var(--amber-400);
-  --toast-item-error-colour: var(--red-400);
+  --toast-item-action-text-colour: var(--blue-500);
+  --toast-item-action-hover-text-colour: var(--blue-400);
+  --toast-item-warning-text-colour: var(--amber-400);
+  --toast-item-error-text-colour: var(--red-400);
 }

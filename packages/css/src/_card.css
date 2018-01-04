@@ -11,7 +11,7 @@
 /* FIXME: Convert many animation values to variables */
 
 .card-shadow {
-  background-color: var(--body-bg);
+  background-color: var(--body-bg-colour);
   border: 1px solid var(--blue-grey-50);
   box-shadow: var(--shadow-light);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -26,7 +26,7 @@
   }
 
   &:hover .btn-clear {
-    color: var(--link-hover-colour);
+    color: var(--link-hover-text-colour);
     background-color: unset;
   }
 

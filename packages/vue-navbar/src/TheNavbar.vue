@@ -122,7 +122,7 @@ export default {
   top: 0;
   right: 0;
   left: 0;
-  background-color: var(--body-bg);
+  background-color: var(--body-bg-colour);
 
   > .con {
     transition: transform 0.2s ease-in-out;

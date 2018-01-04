@@ -78,13 +78,13 @@ export default {
 
 .toast {
   position: fixed;
-  bottom: var(--toast-item-botom);
+  bottom: var(--toast-item-bottom);
   left: var(--toast-item-left);
   z-index: var(--toast-item-zindex);
   min-width: var(--toast-item-width);
   max-width: 100%;
   padding: var(--toast-item-padding-y) var(--toast-item-padding-x);
-  color: var(--toast-item-colour);
+  color: var(--toast-item-text-colour);
   background-color: var(--toast-item-bg-colour);
   box-shadow: var(--toast-item-shadow);
   transition: transform var(--toast-item-slide-in-speed) ease-out;
@@ -100,21 +100,21 @@ export default {
 .toast-action {
   padding: 1rem 1.4rem;
   margin: -1rem -1rem -1rem auto;
-  color: var(--toast-item-action-colour);
+  color: var(--toast-item-action-text-colour);
   background-color: transparent;
   border: 0;
 
   &:hover,
   &:focus {
-    color: var(--toast-item-action-colour-hover);
+    color: var(--toast-item-action-hover-text-colour);
   }
 
   .toast-warn > & {
-    color: var(--toast-item-warning-colour);
+    color: var(--toast-item-warning-text-colour);
   }
 
   .toast-error > & {
-    color: var(--toast-item-error-colour);
+    color: var(--toast-item-error-text-colour);
   }
 }
 

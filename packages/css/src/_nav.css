@@ -54,7 +54,7 @@
     color: var(--white);
 
     &:hover {
-      background-color: var(--link-hover-colour);
+      background-color: var(--link-hover-text-colour);
     }
   }
 }
