@@ -18,10 +18,16 @@
 
 -->
 
+<!-- TODO: Incorporate ARIA best practices -->
+
 <!-- TODO: How might we make it more obvious that the input is only for filtering and users can't create new options? -->
 
 <template>
   <div class="pos-r dif f-col">
+    <!--
+      XXX: Used .prevent on enter so the form isn't submitted and on up/down so
+        the cursor doesn't move user has typed in filter input.
+    -->
     <input
       @click="active ? false : open()"
       @focus="open"
@@ -100,7 +106,10 @@ export default {
     list() {
       const search = this.filter.toLowerCase();
       const list = this.options.filter(option => option.text.toLowerCase().indexOf(search) > -1);
+
+      // recalculate current item index after filtering
       this.setIndex(list);
+
       return list;
     },
     valueText: {
@@ -123,7 +132,7 @@ export default {
       this.i = list.findIndex(option => option.id === this.value);
     },
     open() {
-      if (this.$attrs.disabled === undefined) {
+      if (this.disabled === undefined) {
         this.setIndex();
         this.active = true;
       }
@@ -150,6 +159,7 @@ export default {
 
       let steps = 1;
 
+      // skip over disabled items or if there's no items left
       while (this.list[this.i - steps].disabled) {
         steps += 1;
         if (this.list[this.i - steps] === undefined) return;
@@ -163,6 +173,7 @@ export default {
 
       let steps = 1;
 
+      // skip over disabled items or if there's no items left
       while (this.list[this.i + steps].disabled) {
         steps += 1;
         if (this.list[this.i + steps] === undefined) return;
