@@ -18,15 +18,9 @@
  */
 
 import TabGroup from './TabGroup';
-// import TabItem from './TabItem';
-const TabItem = { name: 'TabItem' }; // FIXME: Should we have 2 separate components? If so import it
 
 TabGroup.install = (Vue) => {
   Vue.component(TabGroup.name, TabGroup);
 };
 
-TabItem.install = (Vue) => {
-  Vue.component(TabItem.name, TabItem);
-};
-
-export default { TabGroup, TabItem };
+export default { TabGroup };

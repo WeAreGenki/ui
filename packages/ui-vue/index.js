@@ -24,7 +24,7 @@ import { InputToggle } from '@wearegenki/vue-input-toggle/src';
 import { TheLinkPreload } from '@wearegenki/vue-link-preload/src';
 import { ModalItem } from '@wearegenki/vue-modal/src';
 import { TheNavbar } from '@wearegenki/vue-navbar/src';
-import { TabGroup, TabItem } from '@wearegenki/vue-tabs/src';
+import { TabGroup } from '@wearegenki/vue-tabs/src';
 import { ToastGroup } from '@wearegenki/vue-toasts/src';
 
 export {
@@ -36,6 +36,5 @@ export {
   ModalItem,
   TheNavbar,
   TabGroup,
-  TabItem,
   ToastGroup,
 };
