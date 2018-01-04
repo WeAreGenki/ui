@@ -17,10 +17,8 @@ body {
   font-weight: var(--font-weight);
   color: var(--body-colour);
   background-color: var(--body-bg);
-}
 
-@if NOT (var(--font-size-fluid-enabled)) {
-  body {
+  @if NOT (var(--font-size-fluid-enabled)) {
     @media (--breakpoint-small) {
       font-size: var(--font-size-s);
     }
@@ -70,19 +68,13 @@ a {
   color: var(--link-colour);
   text-decoration: none;
   word-wrap: break-word;
-  transition: color var(--link-animate-out-speed) var(--link-animate-out-curve);
+  transition: color var(--link-animate-out-speed) ease-out;
 
   &:hover {
     color: var(--link-hover-colour);
     text-decoration: underline;
     transition-duration: var(--link-animate-in-speed);
-    /* transition-timing-function: var(--link-animate-in-curve); */
   }
-
-  /* @media (--breakpoint-not-small) {
-    padding: 0.5rem 1rem;
-    margin: -0.5rem -1rem;
-  } */
 }
 
 /* Lists */
@@ -147,7 +139,7 @@ dt { float: left; } /* TODO: Could this be achieved with flex or grid somehow? *
   }
 }
 
-/* Font/decoration variants */
+/* Font variants and decoration */
 
 .bold { font-weight: 700; }
 .italic { font-style: italic; }

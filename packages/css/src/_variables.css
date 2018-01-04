@@ -23,6 +23,7 @@
   --gutter-row-l: var(--gutter-row);
 
   /* Colours */
+  /* FIXME: Do we really need so many gradient steps? Simplify! */
   --primary-gradient-0: #02e8ff;
   --primary-gradient-100: #0060df;
   --primary-gradient-35: color(var(--primary-gradient-0) blend(var(--primary-gradient-100) 35%));
@@ -78,19 +79,15 @@
   --h4-font-size: 1.25rem;
   --h5-font-size: 1rem;
   --h6-font-size: 0.875rem;
-
-  /* General */
-  --radius: 0.15rem;
-
-  /* Spacing */
   --link-click-area: 0.25rem; /* increase if you don't have links close to each other (otherwise they may overlap) */
-  --spacing-steps: 0, 1, 2, 3, 4, 5, 6, 7;
-  --spacing-values: 0, 0.25rem, 0.5rem, 1rem, 2rem, 4rem, 8rem, 16rem;
-  --btn-margin-between: 1.5rem;
+  --link-animate-in-speed: 0s;
+  --link-animate-out-speed: 1s;
   --hr-margin: 3rem 0;
 
-  /* Z-index */
-  --toast-z-index: 1080;
+  /* General */
+  --spacing-steps: 0, 1, 2, 3, 4, 5, 6, 7;
+  --spacing-values: 0, 0.25rem, 0.5rem, 1rem, 2rem, 4rem, 8rem, 16rem;
+  --radius: 0.15rem;
 
   /* Navigation */
   --menu-colour: var(--primary);
@@ -105,18 +102,14 @@
   --btn-hover-colour: var(--link-hover-colour);
   --btn-radius: var(--radius);
   --btn-shadow: 0 0.125rem 0.375rem 0 color(var(--shadow-base) alpha(0.18));
+  --btn-margin-between: 1.5rem;
 
   /* Forms */
   --input-padding-x: 1rem;
   --input-padding-y: 0.6rem;
   --input-bg-colour: var(--white);
+  --input-bg-colour-disabled: var(--grey-200);
   --input-border: 1px solid var(--grey-300);
-
-  /* Animation */
-  --link-animate-in-speed: 0s;
-  /* --link-animate-in-curve: ease-in; */
-  --link-animate-out-speed: 1s;
-  --link-animate-out-curve: ease-out;
 
   /* vue-input-toggle component */
   --input-toggle-width: 8rem;
@@ -132,4 +125,32 @@
   --input-toggle-slider-speed: 180ms;
   --input-toggle-fade-in-speed: var(--input-toggle-slider-speed);
   --input-toggle-fade-out-speed: calc(var(--input-toggle-slider-speed) * 0.7);
+
+  /* vue-input-select component */
+  --input-select-bg-colour: var(--white);
+  --input-select-selected-colour: var(--white);
+  --input-select-selected-bg-colour: var(--link-hover-colour);
+  --input-select-colour-disabled: var(--btn-text-colour-disabled);
+  --input-select-caret-colour: var(--blue-grey-800);
+  --input-select-caret-colour-disabled: var(--grey-500);
+  --input-select-caret-size: 0.3rem;
+  --input-select-animate-speed: 150ms;
+
+  /* vue-toasts component */
+  --toast-item-width: 24rem;
+  --toast-item-botom: 1.2rem;
+  --toast-item-left: 2rem;
+  --toast-item-padding-x: 1.5rem;
+  --toast-item-padding-y: 1.1rem;
+  --toast-item-colour: var(--white);
+  --toast-item-bg-colour: var(--grey-900);
+  --toast-item-shadow: var(--shadow);
+  --toast-item-slide-in-speed: 150ms;
+  --toast-item-slide-out-speed: 300ms;
+  --toast-item-zindex: 999;
+  --toast-item-text-size: 1.1rem;
+  --toast-item-action-colour: var(--blue-500);
+  --toast-item-action-colour-hover: var(--blue-400);
+  --toast-item-warning-colour: var(--amber-400);
+  --toast-item-error-colour: var(--red-400);
 }

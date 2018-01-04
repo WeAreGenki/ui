@@ -1,6 +1,7 @@
 <!-- REF: https://material.io/guidelines/components/snackbars-toasts.html#snackbars-toasts-usage -->
 
 <!-- FIXME: Need a visual way to differenciate toast types, especially error toasts -->
+<!-- TODO: Work on action toasts-->
 
 <template>
   <div class="toast df" :class="{ [`toast-${type}`]: type !== undefined }">
@@ -73,52 +74,51 @@ export default {
 </script>
 
 <style>
-@import "css/import";
+@import "@wearegenki/ui/import";
 
 .toast {
   position: fixed;
-  bottom: 1.2rem;
-  left: 2rem;
-  z-index: var(--toast-z-index);
-  min-width: 24rem;
+  bottom: var(--toast-item-botom);
+  left: var(--toast-item-left);
+  z-index: var(--toast-item-zindex);
+  min-width: var(--toast-item-width);
   max-width: 100%;
-  padding: 1.1rem 1.5rem;
-  color: var(--white);
-  background-color: var(--grey-900);
-  box-shadow: var(--shadow);
-  transition: transform 0.15s ease-out; /* animate in */
-  transform: translateY(0);
+  padding: var(--toast-item-padding-y) var(--toast-item-padding-x);
+  color: var(--toast-item-colour);
+  background-color: var(--toast-item-bg-colour);
+  box-shadow: var(--toast-item-shadow);
+  transition: transform var(--toast-item-slide-in-speed) ease-out;
   will-change: transform;
 }
 
 .toast-enter,
 .toast-leave-to {
-  transition: transform 0.3s ease-in; /* animate out */
+  transition: transform var(--toast-item-slide-out-speed) ease-in;
   transform: translateY(102%);
 }
 
 .toast-action {
   padding: 1rem 1.4rem;
   margin: -1rem -1rem -1rem auto;
-  color: var(--blue-500);
+  color: var(--toast-item-action-colour);
   background-color: transparent;
   border: 0;
 
   &:hover,
   &:focus {
-    color: var(--blue-400);
+    color: var(--toast-item-action-colour-hover);
   }
 
   .toast-warn > & {
-    color: var(--amber-400);
+    color: var(--toast-item-warning-colour);
   }
 
   .toast-error > & {
-    color: var(--red-400);
+    color: var(--toast-item-error-colour);
   }
 }
 
 .toast-msg {
-  font-size: 1.1rem;
+  font-size: var(--toast-item-text-size);
 }
 </style>

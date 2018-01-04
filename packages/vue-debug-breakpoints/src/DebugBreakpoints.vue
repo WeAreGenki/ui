@@ -51,7 +51,7 @@ export default {
 </script>
 
 <style>
-@import "css/import";
+@import "@wearegenki/ui/import";
 
 #debug-breakpoints { /* stylelint-disable-line selector-max-id */
   position: fixed;

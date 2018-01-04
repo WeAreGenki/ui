@@ -120,7 +120,7 @@ export default {
 @import "codemirror/lib/codemirror";
 @import "codemirror/theme/dracula";
 /* @import "codemirror/addon/lint/lint"; */
-@import "css/import";
+@import "@wearegenki/ui/import";
 
 .CodeMirror {
   min-width: 100%;

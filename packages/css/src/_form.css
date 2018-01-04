@@ -1,3 +1,4 @@
+/* TODO: Hover state so it's obvious inputs can be used — also style input relevant components */
 /* TODO: Create variables for relevant properties */
 /* TODO: Custom checkbox */
 
@@ -45,6 +46,10 @@ textarea {
   &.input-small { /* stylelint-disable-line selector-no-qualifying-type */
     min-width: 5rem;
     max-width: 7rem;
+  }
+
+  &[disabled] {
+    background-color: var(--input-bg-colour-disabled);
   }
 }
 

@@ -89,7 +89,7 @@ export default {
 </script>
 
 <style>
-@import "css/import";
+@import "@wearegenki/ui/import";
 
 /* the toggle purpsourly looks like .btn and uses many of the button variables */
 .input-toggle {
