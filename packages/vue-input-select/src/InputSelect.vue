@@ -213,6 +213,7 @@ export default {
   position: absolute;
   top: 100%;
   left: 0;
+  padding: var(--input-padding-y) 0;
   font-size: var(--input-text-size);
   color: var(--input-text-colour);
   background-color: var(--input-bg-colour);
