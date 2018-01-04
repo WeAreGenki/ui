@@ -24,11 +24,13 @@
 
 <!-- TODO: Should very long lists be scrollable or should they just overflow the page? -->
 
+<!-- TODO: Add tests inc. disabled, readonly, disabled options -->
+
 <template>
   <div class="pos-r dif f-col">
     <!--
-      XXX: Used .prevent on enter so the form isn't submitted and on up/down so
-        the cursor doesn't move user has typed in filter input.
+      Prevent default on enter so the form isn't submitted and on up/down so the
+      cursor doesn't move user has typed in filter input.
     -->
     <input
       @click="active ? false : open()"
@@ -50,6 +52,10 @@
     <span class="input-select-caret" :class="{ 'input-select-active': active }"/>
 
     <transition name="input-select">
+      <!--
+        Use mousedown event and prevent default so that clicks doesn't trigger
+        the above input's blur event.
+      -->
       <div
         v-show="active"
         @mousedown.prevent="select"
@@ -102,7 +108,7 @@ export default {
   data: () => ({
     active: false,
     filter: '',
-    i: 0,
+    i: 0, // index of the currently selected item
   }),
   computed: {
     list() {
