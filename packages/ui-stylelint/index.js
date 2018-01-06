@@ -4,7 +4,7 @@ module.exports = {
   rules: {
     'no-empty-source': null, // allow .vue files without <style/>
     'comment-empty-line-before': null, // not helpful for rapid development
-    'at-rule-no-unknown': [true, { ignoreAtRules: ['if', 'each', 'mixin', 'define-mixin'] }],
+    'at-rule-no-unknown': [true, { ignoreAtRules: ['if', 'else', 'each', 'mixin', 'define-mixin'] }],
     'at-rule-no-vendor-prefix': true,
     'at-rule-semicolon-space-before': 'never',
     'color-named': 'never',
