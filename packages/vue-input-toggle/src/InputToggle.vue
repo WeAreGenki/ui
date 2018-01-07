@@ -95,6 +95,7 @@ export default {
 .input-toggle {
   position: relative;
   display: inline-flex;
+  z-index: 1; /* force new stacking-context so the component doesn't cause repaint of other inputs/buttons */
   align-items: center;
   width: var(--input-toggle-width);
   padding: var(--btn-padding-y) 0;
@@ -131,8 +132,10 @@ export default {
   }
 
   &[disabled],
+  &[disabled].checked,
   &[disabled]:hover,
   &[disabled]:focus {
+    z-index: -1;
     color: var(--btn-disabled-text-colour);
     border: 1px solid var(--btn-disabled-border-colour);
     cursor: not-allowed;
