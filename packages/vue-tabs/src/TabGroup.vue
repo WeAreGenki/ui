@@ -1,35 +1,38 @@
-<!-- TODO: Add other ARIA recommendations + role=tablist might not be correct on <nav> -->
+<!--
+  TAB GROUP COMPONENT
+
+  README:
+    TODO: Write me.
+
+  USAGE:
+    TODO: Write me.
+
+-->
+
+<!-- TODO: Add ARIA recommendations + role=tablist might not be correct on <nav> -->
 
 <template>
-  <div class="tab-group">
-    <!--
-    <div class="tab-header">
-      <button v-for="slot in $slots.tab" class="btn-clear" type="button">
-        {{ slot.data.attrs.name }}
-      </button>
-    </div>
-
-    <div v-for="slot in $slots.tab" class="tab-content">
-      <slot name="tab"/>
-    </div>
-    -->
-
-    <nav class="nav-tabs df mb4" role="tablist">
-      <a @click="active = 0" href="#tab1" class="btn-tab ttu" :class="{ 'active': active === 0}" role="tab">Tab title 1</a>
-      <a @click="active = 1" href="#tab2" class="btn-tab ttu" :class="{ 'active': active === 1}" role="tab">Tab title 2</a>
-      <a @click="active = 2" href="#tab3" class="btn-tab ttu" :class="{ 'active': active === 2}" role="tab">Tab title 3</a>
+  <div>
+    <nav class="df mb4" role="tablist">
+      <a
+        v-for="(slot, name) in $slots"
+        @click="active = name"
+        :href="`#${name}`"
+        class="btn-tab ttu"
+        :class="{ 'active': active === name }"
+        role="tab"
+      >
+        {{ slot[0].data.attrs.title }}
+      </a>
     </nav>
 
-    <div v-show="active === 0" id="tab1" class="tab-content" role="tabpanel">
-      Content 1
-    </div>
-
-    <div v-show="active === 1" id="tab2" class="tab-content" role="tabpanel">
-      Content 2
-    </div>
-
-    <div v-show="active === 2" id="tab3" class="tab-content" role="tabpanel">
-      Content 3
+    <div
+      v-for="(slot, name) in $slots"
+      v-show="active === name"
+      :id="name"
+      role="tabpanel"
+    >
+      <slot :name="slot[0].data.slot"/>
     </div>
   </div>
 </template>
@@ -37,11 +40,11 @@
 <script>
 export default {
   name: 'TabGroup',
-  data: () => ({
-    active: 0,
-  }),
-  mounted() {
-    console.log('@@ THIS', this);
+  data() {
+    return {
+      // XXX: Since hash is used, vue-router must not be running in hash mode.
+      active: window.location.hash.substr(1) || Object.keys(this.$slots)[0],
+    };
   },
 };
 </script>
@@ -49,20 +52,11 @@ export default {
 <style>
 @import "@wearegenki/ui/import";
 
-/* .tab-group {} */
-
-.nav-tabs {}
-
 .btn-tab {
   padding: 1rem 1.5rem;
   font-size: 1.2rem;
   font-weight: bold;
   border-bottom: 4px solid transparent;
-
-  /* border: 1px solid var(--grey-500); */
-
-  /* DELME; for testing */
-  /* background-color: var(--red-50); */
 
   &:hover,
   &:focus {
@@ -75,6 +69,4 @@ export default {
     cursor: default;
   }
 }
-
-/* .tab-content {} */
 </style>
