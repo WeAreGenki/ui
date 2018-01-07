@@ -125,6 +125,11 @@ export default {
 .CodeMirror {
   min-width: 100%;
   height: auto;
-  box-shadow: var(--shadow-subtle);
+
+  @if var(--use-filter-shadow) {
+    filter: drop-shadow(var(--shadow-subtle));
+  } @else { /* stylelint-disable-line */
+    box-shadow: var(--shadow-subtle-nofilter);
+  }
 }
 </style>
