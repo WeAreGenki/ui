@@ -58,32 +58,30 @@
     >
     <span class="input-select-caret" :class="{ 'input-select-active': active }"/>
 
-    <transition name="input-select">
-      <!--
-        Use mousedown event and prevent default so that clicks doesn't trigger
-        the above input's blur event.
-      -->
-      <div
-        v-show="active"
-        @mousedown.prevent="select"
-        class="input-select-dropdown w-100 z5 tl"
+    <!--
+      Use mousedown event and prevent default so that clicks doesn't trigger
+      the above input's blur event.
+    -->
+    <div
+      v-view="active"
+      @mousedown.prevent="select"
+      class="input-select-dropdown w-100 z5 tl"
+    >
+      <option
+        v-for="(option, index) in list"
+        :key="option.id"
+        :data-id="option.id"
+        class="input-select-option"
+        :class="{ 'selected': index === i}"
+        role="option"
+        :disabled="option.disabled"
       >
-        <option
-          v-for="(option, index) in list"
-          :key="option.id"
-          :data-id="option.id"
-          class="input-select-option"
-          :class="{ 'selected': index === i}"
-          role="option"
-          :disabled="option.disabled"
-        >
-          {{ option.text }}
-        </option>
-        <div v-if="!list.length" class="pa3 grey">
-          No matches
-        </div>
+        {{ option.text }}
+      </option>
+      <div v-if="!list.length" class="pa3 grey">
+        No matches
       </div>
-    </transition>
+    </div>
   </div>
 </template>
 
@@ -221,6 +219,7 @@ export default {
   border-top: var(--input-select-caret-size) solid var(--input-select-caret-colour);
   border-right: var(--input-select-caret-size) solid transparent;
   border-left: var(--input-select-caret-size) solid transparent;
+  will-change: transform;
 
   &.input-select-active {
     transform: rotate(180deg);
@@ -231,6 +230,7 @@ export default {
   }
 }
 
+/* NOTE: Opacity is controlled by custom directive; v-view */
 .input-select-dropdown {
   position: absolute;
   top: 100%;
@@ -250,9 +250,7 @@ export default {
     box-shadow: var(--input-select-shadow-nofilter);
   }
 
-  &.input-select-enter,
-  &.input-select-leave-to {
-    opacity: 0;
+  &.hide {
     transform: translateY(-1rem);
   }
 }
