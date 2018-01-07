@@ -216,6 +216,7 @@ export default {
   right: 0.75rem;
   width: 0;
   height: 0;
+  pointer-events: none;
   border-top: var(--input-select-caret-size) solid var(--input-select-caret-colour);
   border-right: var(--input-select-caret-size) solid transparent;
   border-left: var(--input-select-caret-size) solid transparent;
