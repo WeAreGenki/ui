@@ -8,7 +8,7 @@
       - Automatically opens on focus for taster form input when using a keyboard for navigating.
 
   USAGE:
-    TODO: Add documentation, especially options stucture.
+    TODO: Add documentation, especially options structure.
 
     [
       { id: 'ex1', text: 'Example 1' },
@@ -18,19 +18,25 @@
 
 -->
 
-<!-- TODO: Incorporate ARIA best practices -->
+<!-- FIXME: Avoid using data-id="" and `dataset` - doesn't feel right when using vue -->
 
-<!-- TODO: How might we make it more obvious that the input is only for filtering and users can't create new options? -->
+<!-- FIXME: Add tests inc. disabled, readonly, disabled options -->
 
-<!-- TODO: Should very long lists be scrollable or should they just overflow the page? -->
+<!-- FIXME: How might we make it more obvious that the input is only for filtering and users can't create new options? -->
 
-<!-- TODO: Add tests inc. disabled, readonly, disabled options -->
+<!--
+  TODO: Possible future features (but avoid bloat and negative performance impact):
+    - Incorporate remaining WAI-ARIA recommendations
+    - Default option/placeholder which doesn't appear in the options
+    - Horizontal divider to visually group options (maybe with optional title)
+    - Different dropdown position when not enough space
+-->
 
 <template>
   <div class="pos-r dif f-col">
     <!--
       Prevent default on enter so the form isn't submitted and on up/down so the
-      cursor doesn't move user has typed in filter input.
+      cursor doesn't move when the user has entered text in the input.
     -->
     <input
       @click="active ? false : open()"
@@ -43,10 +49,11 @@
       @keydown.down.prevent="active ? down() : open()"
       v-model="valueText"
       class="select"
+      :id="id"
       :tabindex="disabled ? -1 : 0"
       role="listbox"
       :placeholder="placeholder"
-      :readonly="readonly || !active"
+      :readonly="!hasFilter || readonly || !active"
       :disabled="disabled"
     >
     <span class="input-select-caret" :class="{ 'input-select-active': active }"/>
@@ -59,7 +66,7 @@
       <div
         v-show="active"
         @mousedown.prevent="select"
-        class="input-select-dropdown w-100 z5"
+        class="input-select-dropdown w-100 z5 tl"
       >
         <option
           v-for="(option, index) in list"
@@ -92,16 +99,25 @@ export default {
       type: Array,
       required: true,
     },
-    placeholder: { // for filter input
+    hasFilter: { // to disable filtering when necessary
+      type: Boolean,
+      default: true,
+    },
+    placeholder: { // text when filter input is empty
       type: String,
       default: 'Filter...',
     },
+    // the below props will be attached to the input (rather than the wrapper div)
+    id: {
+      type: String,
+      default: undefined,
+    },
     readonly: {
-      type: Boolean,
+      type: [String, Boolean],
       default: undefined,
     },
     disabled: {
-      type: Boolean,
+      type: [String, Boolean],
       default: undefined,
     },
   },
@@ -122,7 +138,7 @@ export default {
     },
     valueText: {
       get() {
-        if (this.active) {
+        if (this.hasFilter && this.active) {
           return this.filter;
         }
 
@@ -223,11 +239,16 @@ export default {
   font-size: var(--input-text-size);
   color: var(--input-text-colour);
   background-color: var(--input-bg-colour);
-  box-shadow: var(--shadow);
   transition:
     transform var(--input-select-animate-speed) ease,
     opacity var(--input-select-animate-speed) ease;
   will-change: transform, opacity;
+
+  @if var(--use-filter-shadow) {
+    filter: drop-shadow(var(--input-select-shadow));
+  } @else { /* stylelint-disable-line */
+    box-shadow: var(--input-select-shadow-nofilter);
+  }
 
   &.input-select-enter,
   &.input-select-leave-to {
