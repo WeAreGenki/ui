@@ -5,23 +5,27 @@
 
 # @wearegenki/ui
 
-A futuristic UI framework which aims to be straightforward and intuitive. Intended to be used in Vue or Marko projects.
+A futuristic UI framework which aims to be straightforward, intuitive, and high performance. Intended to be used in Vue or Marko projects.
 
 _NOTE: This is currently a work in progress and not recommended for production applications... unless you love living on the bleeding edge!_
 
 ## Overview
 
-The styles are very much designed around the things we do at [We Are Genki](https://wearegenki.com) — ecommerce, microsites, and next-gen web apps — but are intentionally flexible enough for general purpose use.
+The styles are designed around things we do at [We Are Genki](https://wearegenki.com) — ecommerce, microsites, next-gen web apps — but are intentionally flexible enough for general web design use.
 
 Features:
 
 * semi-flat design
-* subtle colour transitions
 * microinteractions
-* Vue components
-* Marko components
 * high performance
 * great developer experience
+
+Technologies:
+
+* CSS grid layout
+* [PostCSS](http://postcss.org)
+* [Vue](https://vuejs.org/) components
+* [Marko](https://markojs.com) components
 
 ## Usage
 

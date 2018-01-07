@@ -22,9 +22,6 @@
 <script>
 import CodeMirror from 'codemirror/lib/codemirror';
 import 'codemirror/mode/javascript/javascript';
-// import 'codemirror/addon/lint/lint';
-// import jsonlint from 'jsonlint';
-// import 'codemirror/addon/lint/json-lint';
 import 'codemirror/addon/edit/matchbrackets';
 import 'codemirror/addon/edit/closebrackets';
 import 'codemirror/addon/selection/active-line';
@@ -84,6 +81,8 @@ export default {
     },
   },
   mounted() {
+    // FIXME: Don't render the editor if it's hidden, wait until it's visible (otherwise it breaks rendering)
+
     this.editor = CodeMirror.fromTextArea(this.$el, {
       mode: this.mode,
       readOnly: this.readOnly,
@@ -91,13 +90,11 @@ export default {
       lineWrapping: this.lineWrapping,
       matchBrackets: this.matchBrackets,
       styleActiveLine: this.styleActiveLine,
-      // lint: this.lint,
-      // gutters: ['CodeMirror-lint-markers'],
       theme: 'dracula',
       tabSize: 2,
       viewportMargin: Infinity,
       autoCloseBrackets: true,
-      // hint: true,
+      hint: true,
     });
     this.editor.setValue(this.value);
     this.editor.on('change', (cm) => {
@@ -119,7 +116,6 @@ export default {
 <style>
 @import "codemirror/lib/codemirror";
 @import "codemirror/theme/dracula";
-/* @import "codemirror/addon/lint/lint"; */
 @import "@wearegenki/ui/import";
 
 .CodeMirror {
