@@ -35,8 +35,9 @@
 <template>
   <div class="pos-r dif f-col">
     <!--
-      Prevent default on enter so the form isn't submitted and on up/down so the
-      cursor doesn't move when the user has entered text in the input.
+      * Prevent default on enter so the form isn't submitted
+      * And on up/down too so the cursor doesn't move when the user has entered
+        text in the input.
     -->
     <input
       @click="active ? false : open()"
@@ -59,8 +60,9 @@
     <span class="input-select-caret" :class="{ 'input-select-active': active }"/>
 
     <!--
-      Use mousedown event and prevent default so that clicks doesn't trigger
+      * Use mousedown event and prevent default so that clicks doesn't trigger
       the above input's blur event.
+      * Uses custom directive v-view which must be installed globally
     -->
     <div
       v-view="active"
