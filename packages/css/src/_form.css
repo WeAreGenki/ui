@@ -49,6 +49,10 @@ textarea {
     outline: var(--input-focus-outline);
   }
 
+  &::placeholder {
+    color: var(--input-placeholder-text-colour);
+  }
+
   &.input-small { /* stylelint-disable-line selector-no-qualifying-type */
     /* min-width: 5rem; */
     /* max-width: 7rem; */
