@@ -18,24 +18,15 @@
  */
 
 function install(Vue, options = {}) {
-  const name = options.className || 'hide';
+  const name = options.name || 'view';
+  const className = options.class || 'hide';
 
-  Vue.directive('view', {
-    bind(el) {
-      el.classList.add(name);
-    },
-
-    update(el, { value }) {
-      if (value) {
-        el.classList.remove(name);
-      } else {
-        el.classList.add(name);
-      }
-    },
-
-    unbind(el) {
-      el.classList.remove(name);
-    },
+  Vue.directive(name, (el, { value }) => {
+    if (value) {
+      el.classList.remove(className);
+    } else {
+      el.classList.add(className);
+    }
   });
 }
 
