@@ -10,7 +10,8 @@ _NOTE: This plugin is a dependency a some of the [@wearegenki/ui](https://www.np
 
 ### Differences to `v-show`
 
-* Only adds or removes a class.
+* When used with other package in the @wearegenki/ui framework it results in significantly faster animation and rendering performance due to using CSS opacity instead of v-show's `display:none`.
+* Only adds or removes a `hide` class on the element.
 * Doesn't trigger `<transition>` animations.
 
 ## Usage

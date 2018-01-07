@@ -9,6 +9,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+
+- New package [@wearegenki/vue-directive-view](https://www.npmjs.com/package/@wearegenki/vue-directive-view) which add the `v-view` custom directive. This needs to be manually installed when using vue components which depend on it.
+
+### Changed
+
+- Various CSS performance improvements by using hardware acceleration where possible and practical.
+
 ## [0.2.0] - 2018-01-07
 
 ### Added
