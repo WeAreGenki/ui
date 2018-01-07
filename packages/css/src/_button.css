@@ -10,21 +10,20 @@
   background-color: var(--btn-bg-colour);
   border: 0;
   border-radius: var(--btn-radius);
-  transition: background-color 150ms;
+  transition: background-color 200ms ease;
 
   @if var(--use-filter-shadow) {
     filter: drop-shadow(var(--btn-shadow));
-    /* filter: drop-shadow(var(--shadow-subtle)); */
   } @else { /* stylelint-disable-line */
     box-shadow: var(--btn-shadow-nofilter);
   }
 
   &:hover,
   &:focus {
-    color: unset; /* prevent change when applied to links */
+    color: var(--btn-text-colour); /* prevent links from changing the colour */
     text-decoration: none;
     background-color: var(--btn-hover-bg-colour);
-    transition: background-color 50ms;
+    transition: background-color 50ms ease;
   }
 
   &[disabled],
