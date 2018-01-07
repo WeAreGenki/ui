@@ -18,16 +18,9 @@
 
 -->
 
-<!-- FIXME: Avoid using data-id="" and `dataset` - doesn't feel right when using vue -->
-
-<!-- FIXME: Add tests inc. disabled, readonly, disabled options -->
-
-<!-- FIXME: How might we make it more obvious that the input is only for filtering and users can't create new options? -->
-
 <!--
   TODO: Possible future features (but avoid bloat and negative performance impact):
     - Incorporate remaining WAI-ARIA recommendations
-    - Default option/placeholder which doesn't appear in the options
     - Horizontal divider to visually group options (maybe with optional title)
     - Different dropdown position when not enough space
 -->
