@@ -53,11 +53,11 @@
       :id="id"
       :tabindex="disabled ? -1 : 0"
       role="listbox"
-      :placeholder="placeholder"
+      :placeholder="hasFilter && active ? filterHelp : placeholder"
       :readonly="!hasFilter || readonly || !active"
       :disabled="disabled"
     >
-    <span class="input-select-caret" :class="{ 'input-select-active': active }"/>
+    <span class="input-select-caret" :class="{ 'active': active }"/>
 
     <!--
       * Use mousedown event and prevent default so that clicks doesn't trigger
@@ -74,7 +74,7 @@
         :key="option.id"
         :data-id="option.id"
         class="input-select-option"
-        :class="{ 'selected': index === i}"
+        :class="{ 'selected': index === i }"
         role="option"
         :disabled="option.disabled"
       >
@@ -103,9 +103,13 @@ export default {
       type: Boolean,
       default: true,
     },
-    placeholder: { // text when filter input is empty
+    filterHelp: { // text when filter input is empty
       type: String,
       default: 'Filter...',
+    },
+    placeholder: { // text when no option is selected
+      type: String,
+      default: 'Choose...',
     },
     // the below props will be attached to the input (rather than the wrapper div)
     id: {
@@ -143,7 +147,8 @@ export default {
         }
 
         const current = this.options.find(option => option.id === this.value);
-        return current.text;
+
+        return current ? current.text : '';
       },
       set(value) {
         this.filter = value;
@@ -224,7 +229,7 @@ export default {
   border-left: var(--input-select-caret-size) solid transparent;
   will-change: transform;
 
-  &.input-select-active {
+  &.active {
     transform: rotate(180deg);
   }
 
