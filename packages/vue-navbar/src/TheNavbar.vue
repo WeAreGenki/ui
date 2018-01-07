@@ -124,30 +124,44 @@ export default {
   left: 0;
   background-color: var(--navbar-bg-colour);
 
-  > .con {
-    transition: transform var(--navbar-animate-speed) ease-in-out;
-    will-change: transform;
-  }
+  @if var(--use-filter-shadow) {
+    filter: drop-shadow(var(--navbar-shadow-before));
+    transition:
+      filter var(--navbar-shadow-fade-speed) ease,
+      transform var(--navbar-animate-speed) ease;
+    will-change: filter, transform;
 
-  &.active > .con {
-    transform: translateY(-2px);
-  }
+    &.active {
+      filter: drop-shadow(var(--navbar-shadow));
+      transform: translateY(-3px);
+    }
+  } @else { /* stylelint-disable-line */
+    > .con {
+      transition: transform var(--navbar-animate-speed) ease;
+      will-change: transform;
+    }
 
-  &::after {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    z-index: -1;
-    width: 100%;
-    content: "";
-    box-shadow: var(--navbar-shadow);
-    opacity: 0;
-    transition: opacity var(--navbar-shadow-fade-speed) ease-in-out;
-    will-change: opacity;
-  }
+    &.active > .con {
+      transform: translateY(-3px);
+    }
 
-  &.active::after {
-    opacity: 1;
+    &::after {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      content: "";
+      box-shadow: var(--navbar-shadow-nofilter);
+      opacity: 0;
+      transition: opacity var(--navbar-shadow-fade-speed) ease;
+      will-change: opacity;
+    }
+
+    &.active::after {
+      opacity: 1;
+    }
   }
 
   .nav-link {

@@ -93,9 +93,14 @@ export default {
   padding: var(--toast-item-padding-y) var(--toast-item-padding-x);
   color: var(--toast-item-text-colour);
   background-color: var(--toast-item-bg-colour);
-  box-shadow: var(--toast-item-shadow);
   transition: transform var(--toast-item-slide-in-speed) ease-out;
   will-change: transform;
+
+  @if var(--use-filter-shadow) {
+    filter: drop-shadow(var(--toast-item-shadow));
+  } @else { /* stylelint-disable-line */
+    box-shadow: var(--toast-item-shadow-nofilter);
+  }
 }
 
 .toast-enter,

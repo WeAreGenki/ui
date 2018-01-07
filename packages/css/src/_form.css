@@ -17,6 +17,8 @@ form {
 }
 
 .form-help {
+  display: block;
+  margin-top: 0.25rem;
   color: var(--form-help-text-colour);
 }
 
@@ -53,7 +55,13 @@ textarea {
   }
 
   &[disabled] {
-    background-color: var(--input-disabled-bg-colour);
+    color: var(--input-disabled-text-colour);
+    background-color: var(--input-bg-colour);
+    border: 1px solid var(--input-disabled-border-colour);
+
+    &::placeholder {
+      color: var(--input-disabled-placeholder-text-colour);
+    }
   }
 }
 

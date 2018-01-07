@@ -1,5 +1,3 @@
-/* FIXME: Decide on which button style to use */
-
 /* FIXME: Better hover state -- should also be applied to toggle, maybe inputs, etc. */
 
 /* TODO: Active (clicked on) state -- think microinteraction */
@@ -12,8 +10,14 @@
   background-color: var(--btn-bg-colour);
   border: 0;
   border-radius: var(--btn-radius);
-  box-shadow: var(--btn-shadow);
   transition: background-color 150ms;
+
+  @if var(--use-filter-shadow) {
+    filter: drop-shadow(var(--btn-shadow));
+    /* filter: drop-shadow(var(--shadow-subtle)); */
+  } @else { /* stylelint-disable-line */
+    box-shadow: var(--btn-shadow-nofilter);
+  }
 
   &:hover,
   &:focus {
@@ -22,28 +26,19 @@
     background-color: var(--btn-hover-bg-colour);
     transition: background-color 50ms;
   }
-}
 
-.btn2 {
-  display: inline-block;
-  padding: var(--btn-padding-y) var(--btn-padding-x);
-  line-height: 1;
-  color: var(--btn-text-colour);
-  background-color: var(--btn-bg-colour);
-  border: 0;
-  border-radius: var(--btn-radius);
-  /* FIXME: Not sure how I feel about the inner shadow... */
-  box-shadow:
-    inset 0 -1rem 0.4rem 0 color(var(--shadow-base) alpha(0.02)),
-    var(--btn-shadow);
-  transition: background-color 150ms;
+  &[disabled],
+  &[disabled]:hover,
+  &[disabled]:focus {
+    color: var(--btn-disabled-text-colour);
+    background-color: var(--btn-bg-colour);
+    border: 1px solid var(--btn-disabled-border-colour);
 
-  &:hover,
-  &:focus {
-    color: unset; /* prevent change when applied to links */
-    text-decoration: none;
-    background-color: var(--btn-hover-bg-colour);
-    transition: background-color 50ms;
+    @if var(--use-filter-shadow) {
+      filter: none;
+    } @else { /* stylelint-disable-line */
+      box-shadow: none;
+    }
   }
 }
 
@@ -52,38 +47,37 @@
   color: var(--white);
 }
 
-.btn-main2,
-.btn-cta2 {
-  color: var(--white);
-}
-
 .btn-main {
   background-image: linear-gradient(115deg, var(--primary-gradient-35), var(--primary-gradient-90));
-  box-shadow: 0 0.125rem 0.375rem 0 color(var(--primary-gradient-90) alpha(0.4));
+
+  @if var(--use-filter-shadow) {
+    filter: drop-shadow(0 0.125rem 0.375rem color(var(--primary-gradient-90) alpha(0.4)));
+  } @else { /* stylelint-disable-line */
+    box-shadow: 0 0.125rem 0.375rem color(var(--primary-gradient-90) alpha(0.4));
+  }
 }
 
 .btn-cta {
   background-image: linear-gradient(115deg, var(--secondary-gradient-35), var(--secondary-gradient-90));
   background-image: linear-gradient(284deg, #1cc7d0, #2dde98);
-  box-shadow: 0 0.25rem 0.75rem rgba(45, 222, 152, 0.4);
-}
 
-.btn-main2 {
-  background-image: linear-gradient(115deg, var(--primary-gradient-35), var(--primary-gradient-90));
-  box-shadow: inset 0 -1rem 0.4rem 0 color(var(--shadow-base) alpha(0.05)), 0 0.125rem 0.375rem 0 color(var(--primary-gradient-90) alpha(0.4));
-}
-
-.btn-cta2 {
-  background-image: linear-gradient(115deg, var(--secondary-gradient-35), var(--secondary-gradient-90));
-  background-image: linear-gradient(284deg, #1cc7d0, #2dde98);
-  box-shadow: inset 0 -1rem 0.4rem 0 color(var(--shadow-base) alpha(0.05)), 0 0.25rem 0.75rem rgba(45, 222, 152, 0.4);
+  @if var(--use-filter-shadow) {
+    filter: drop-shadow(0 0.25rem 0.75rem rgba(45, 222, 152, 0.4));
+  } @else { /* stylelint-disable-line */
+    box-shadow: 0 0.25rem 0.75rem rgba(45, 222, 152, 0.4);
+  }
 }
 
 /* Remove browser default button styles */
 .btn-clear {
   background: transparent;
   border: 0;
-  box-shadow: none;
+
+  @if var(--use-filter-shadow) {
+    filter: none;
+  } @else { /* stylelint-disable-line */
+    box-shadow: none;
+  }
 
   &:hover,
   &:focus {
@@ -111,12 +105,4 @@
 /* Spacing between buttons */
 .btn + .btn {
   margin-left: var(--btn-margin-between);
-}
-
-.btn2 + .btn2 {
-  margin-left: var(--btn-margin-between);
-}
-
-.btn-clear + .btn-clear {
-  margin-left: 0;
 }

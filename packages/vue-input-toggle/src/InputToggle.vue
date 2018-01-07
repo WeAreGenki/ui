@@ -91,7 +91,7 @@ export default {
 <style>
 @import "@wearegenki/ui/import";
 
-/* the toggle purpsourly looks like .btn and uses many of the button variables */
+/* the toggle purposely looks like .btn and uses many of the button variables */
 .input-toggle {
   position: relative;
   display: inline-flex;
@@ -103,12 +103,16 @@ export default {
   cursor: pointer;
   background-color: var(--input-toggle-off-bg-colour);
   border-radius: var(--btn-radius);
-  box-shadow:
-    var(--input-toggle-shadow),
-    var(--btn-shadow);
+  box-shadow: var(--input-toggle-shadow); /* inner shadow */
   transition: background-color var(--input-toggle-fade-out-speed) ease-out;
   transition-delay: 0s;
   will-change: background-color;
+
+  @if var(--use-filter-shadow) {
+    filter: drop-shadow(var(--btn-shadow));
+  } @else { /* stylelint-disable-line */
+    box-shadow: var(--btn-shadow-nofilter);
+  }
 
   &.checked {
     background-color: var(--input-toggle-on-bg-colour);
@@ -121,16 +125,25 @@ export default {
     padding: calc(var(--btn-padding-y) / 2) 0;
   }
 
-  &[disabled] {
-    color: var(--btn-disabled-text-colour);
-    cursor: not-allowed;
-    background-color: var(--btn-bg-colour);
-    box-shadow: var(--btn-shadow);
-  }
-
   &:hover,
   &:focus {
     outline: none;
+  }
+
+  &[disabled],
+  &[disabled]:hover,
+  &[disabled]:focus {
+    color: var(--btn-disabled-text-colour);
+    border: 1px solid var(--btn-disabled-border-colour);
+    cursor: not-allowed;
+    background-color: var(--btn-bg-colour);
+
+    @if var(--use-filter-shadow) {
+      filter: none;
+      box-shadow: none; /* inner shadow */
+    } @else {
+      box-shadow: none;
+    }
   }
 
   /* spacing when next to buttons */
@@ -160,7 +173,7 @@ export default {
   width: 50%;
   background: var(--btn-bg-colour);
   border-radius: var(--btn-radius);
-  box-shadow: var(--input-toggle-slider-shadow);
+  box-shadow: var(--input-toggle-slider-shadow); /* inner shadow */
   transition: transform var(--input-toggle-slider-speed) ease-out;
   will-change: transform;
 

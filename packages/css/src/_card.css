@@ -5,19 +5,45 @@
   margin: 0;
   word-wrap: break-word;
   background-color: var(--card-bg-colour);
-  box-shadow: var(--card-shadow);
+
+  @if var(--use-filter-shadow) {
+    filter: drop-shadow(var(--card-shadow));
+  } @else { /* stylelint-disable-line */
+    box-shadow: var(--card-shadow-nofilter);
+  }
 }
 
 .card-touch {
   background-color: var(--card-touch-bg-colour);
-  box-shadow: var(--card-touch-shadow);
-  transition: transform var(--card-touch-animate-speed) ease, box-shadow var(--card-touch-animate-speed) ease;
-  will-change: transform, box-shadow;
+
+  @if var(--use-filter-shadow) {
+    filter:
+      drop-shadow(var(--card-touch-shadow1))
+      drop-shadow(var(--card-touch-shadow2));
+    transition: transform var(--card-touch-animate-speed) ease, filter var(--card-touch-animate-speed) ease;
+    will-change: transform, filter;
+  } @else { /* stylelint-disable-line */
+    box-shadow:
+      var(--card-touch-shadow1-nofilter),
+      var(--card-touch-shadow2-nofilter);
+    transition: transform var(--card-touch-animate-speed) ease, box-shadow var(--card-touch-animate-speed) ease;
+    will-change: transform, box-shadow;
+  }
 
   &:hover {
     text-decoration: unset; /* no need to underline links as it's obvious this element is interactive */
-    box-shadow: var(--card-touch-hover-shadow);
-    transform: translateY(-5px);
+
+    @if var(--use-filter-shadow) {
+      filter:
+        drop-shadow(var(--card-touch-hover-shadow1))
+        drop-shadow(var(--card-touch-hover-shadow2));
+      transform: translateY(-7px);
+    } @else { /* stylelint-disable-line */
+      box-shadow:
+        var(--card-touch-hover-shadow1-nofilter),
+        var(--card-touch-hover-shadow2-nofilter);
+      transform: translateY(-5px);
+    }
   }
 
   &:hover .btn-clear {
