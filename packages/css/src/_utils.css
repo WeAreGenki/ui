@@ -1,10 +1,3 @@
-/* Scroll prevention */
-
-.scroll-lock {
-  height: 100%;
-  overflow-y: hidden;
-}
-
 /* Position */
 
 .pos-f { position: fixed; }
@@ -35,6 +28,20 @@
     .float-l-$(ext) { float: left; }
     .float-r-$(ext) { float: right; }
   }
+}
+
+/* Visibility (for use with @wearegenki/vue-directive-view) */
+
+.hide {
+  pointer-events: none;
+  opacity: 0;
+}
+
+/* Scroll prevention */
+
+.scroll-lock {
+  height: 100%;
+  overflow-y: hidden;
 }
 
 /* Clearfix */
