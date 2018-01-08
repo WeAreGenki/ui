@@ -36,6 +36,9 @@
   "peerDependencies": {
     "vue": "^2.5.13"
   },
+  "optionalDependencies": {
+    "vue-router": "^3.0.1"
+  },
   "publishConfig": {
     "access": "public"
   }

@@ -42,8 +42,9 @@ export default {
   name: 'TabGroup',
   data() {
     return {
-      // XXX: Since hash is used, vue-router must not be running in hash mode.
-      active: window.location.hash.substr(1) || Object.keys(this.$slots)[0],
+      active: this.$route && this.$route.hash
+        ? this.$route.hash.substr(1)
+        : Object.keys(this.$slots)[0],
     };
   },
 };
