@@ -63,7 +63,7 @@
       @mousedown.prevent="select"
       class="input-select-dropdown w-100 z5 tl"
     >
-      <option
+      <div
         v-for="(option, index) in list"
         :key="option.id"
         :data-id="option.id"
@@ -73,7 +73,7 @@
         :disabled="option.disabled"
       >
         {{ option.text }}
-      </option>
+      </div>
       <div v-if="!list.length" class="pa3 grey">
         No matches
       </div>
