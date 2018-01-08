@@ -31,20 +31,22 @@ body {
 
 /* Headings */
 
-h1 {
-  font-size: var(--h1-font-size);
-  font-weight: var(--font-weight-light);
+h1 > small,
+h2 > small,
+h3 > small,
+h4 > small,
+h5 > small,
+h6 > small { color: var(--heading-small-text-colour); }
 
-  & > small {
-    color: var(--heading-small-text-colour);
-  }
-}
-
+h1 { font-size: var(--h1-font-size); }
 h2 { font-size: var(--h2-font-size); }
 h3 { font-size: var(--h3-font-size); }
 h4 { font-size: var(--h4-font-size); }
 h5 { font-size: var(--h5-font-size); }
 h6 { font-size: var(--h6-font-size); }
+
+h1,
+h3 { font-weight: var(--font-weight-light); }
 
 .headline { font-size: var(--headline-font-size); }
 

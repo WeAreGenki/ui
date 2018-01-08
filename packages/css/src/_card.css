@@ -11,6 +11,10 @@
   } @else { /* stylelint-disable-line */
     box-shadow: var(--card-shadow-nofilter);
   }
+
+  & > .card-body > h3 { /* TODO: Keep? */
+    font-weight: var(--font-weight-heavy);
+  }
 }
 
 .card-touch {
