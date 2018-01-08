@@ -1,0 +1,42 @@
+{
+  "name": "@wearegenki/vue-directive-tooltip",
+  "version": "0.2.0",
+  "description": "CSS Grid based CSS library + Vue.js framework",
+  "keywords": [
+    "css",
+    "cssgrid",
+    "design-system",
+    "postcss",
+    "vue",
+    "wearegenki"
+  ],
+  "repository": "https://github.com/WeAreGenki/ui/tree/master/packages/vue-directive-tooltip",
+  "bugs": {
+    "url": "https://github.com/WeAreGenki/ui/issues"
+  },
+  "author": "Max Milton <max@wearegenki.com>",
+  "license": "Apache-2.0",
+  "main": "index.js",
+  "style": "index.css",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "exit 0",
+    "prepare": "npm run build",
+    "lint": "npm run lint:css && npm run lint:js",
+    "lint:css": "stylelint \"src/**/*.vue\" \"src/**/*.css\"",
+    "lint:js": "eslint --ext .js,.vue src test",
+    "test": "exit 0"
+  },
+  "dependencies": {
+    "@wearegenki/css": "^0.2.0"
+  },
+  "peerDependencies": {
+    "vue": "^2.5.13"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

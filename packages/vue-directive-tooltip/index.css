@@ -1,0 +1,45 @@
+@import "@wearegenki/ui/import";
+
+.tooltip {
+  position: absolute;
+  padding: var(--tooltip-padding-y) var(--tooltip-padding-x);
+  color: var(--tooltip-text-colour);
+  white-space: nowrap;
+  background: var(--tooltip-bg-colour);
+  transition:
+    transform var(--tooltip-animate-speed) ease,
+    opacity var(--tooltip-animate-speed) ease;
+  transform: scale(0.85);
+
+  @if var(--use-filter-shadow) {
+    filter: drop-shadow(var(--tooltip-shadow));
+  } @else { /* stylelint-disable-line */
+    box-shadow: var(--tooltip-shadow-nofilter);
+  }
+}
+
+.has-tooltip {
+  position: relative;
+
+  &:hover,
+  &:focus {
+    > .tooltip {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+.tooltip-top {
+  bottom: 125%;
+  left: calc(-50% + (var(--tooltip-padding-x) / 2));
+
+  @mixin triangle bottom, var(--tooltip-triangle-size), var(--tooltip-bg-colour), true;
+}
+
+.tooltip-right {
+  top: calc(50% - (var(--tooltip-padding-y) + 0.5rem));
+  left: 125%;
+
+  @mixin triangle left, var(--tooltip-triangle-size), var(--tooltip-bg-colour), true;
+}
