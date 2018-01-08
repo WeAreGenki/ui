@@ -17,19 +17,24 @@
  * limitations under the License.
  */
 
+let className = 'hide';
+
+const vView = (el, { value }) => {
+  if (value) {
+    el.classList.remove(className);
+  } else {
+    el.classList.add(className);
+  }
+};
+
 function install(Vue, options = {}) {
   const name = options.name || 'view';
-  const className = options.class || 'hide';
+  className = options.class || className;
 
-  Vue.directive(name, (el, { value }) => {
-    if (value) {
-      el.classList.remove(className);
-    } else {
-      el.classList.add(className);
-    }
-  });
+  Vue.directive(name, vView);
 }
 
 export default {
   install,
+  vView,
 };
