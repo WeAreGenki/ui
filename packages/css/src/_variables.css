@@ -56,22 +56,24 @@
 
   /* Shadows */
   --use-filter-shadow: true; /* use filter:drop-shadow() instead of box-shadow for better performance */
-  /* --use-filter-shadow: false; */
-  /* FIXME: Reduce and/or simplify the shadow variables */
-  --shadow-base: rgb(50, 50, 110);
-  --shadow-colour: color(var(--shadow-base) alpha(0.33));
-  --shadow-colour-nofilter: color(var(--shadow-base) alpha(0.28));
-  --shadow: 0 1rem 0.95rem var(--shadow-colour);
-  --shadow-nofilter: 0 1rem 2rem var(--shadow-colour-nofilter);
-  --shadow-subtle: 0 0.3125rem 0.28rem rgba(112, 128, 175, 0.2);
-  --shadow-subtle-nofilter: 0 0.3125rem 1rem rgba(112, 128, 175, 0.2);
-  --shadow-light1: 0 0.625rem 1.5rem color(var(--shadow-base) alpha(0.06));
-  --shadow-light2: 0 0.125rem 0.25rem color(var(--shadow-base) alpha(0.076));
-  --shadow-light1-nofilter: 0 0.625rem 2.5rem color(var(--shadow-base) alpha(0.07));
-  --shadow-light2-nofilter: 0 0.125rem 0.56rem color(var(--shadow-base) alpha(0.06));
+  --shadow-colour: rgb(50, 50, 110);
+  --shadow-colour: rgb(40, 40, 100);
+  --shadow-colour-subtle: rgb(112, 128, 175);
+  /* filter:drop-shadow() */
+  --shadow-base: color(var(--shadow-colour) alpha(0.33));
+  --shadow: 0 1rem 0.95rem var(--shadow-base);
+  --shadow-subtle: 0 0.3125rem 0.28rem color(var(--shadow-colour-subtle) alpha(0.2));
+  --shadow-light1: 0 0.625rem 1.5rem color(var(--shadow-colour) alpha(0.06));
+  --shadow-light2: 0 0.125rem 0.25rem color(var(--shadow-colour) alpha(0.076));
+  /* box-shadow */
+  --shadow-base-nofilter: color(var(--shadow-colour) alpha(0.28));
+  --shadow-nofilter: 0 1rem 2rem var(--shadow-base-nofilter);
+  --shadow-subtle-nofilter: 0 0.3125rem 1rem color(var(--shadow-colour-subtle) alpha(0.2));
+  --shadow-light1-nofilter: 0 0.625rem 2.5rem color(var(--shadow-colour) alpha(0.07));
+  --shadow-light2-nofilter: 0 0.125rem 0.56rem color(var(--shadow-colour) alpha(0.06));
 
   /* Typography */
-  --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Cantarell, "Helvetica Neue", sans-serif;
   --font-size-fluid-enabled: false; /* dynamic font size based on viewport width (experimental) */
   --font-size-fluid-max: 1.3125rem; /* font size will grow from --font-size to this */
   --font-size-fluid-from: 30em; /* start growing font from this screen width */
@@ -83,6 +85,7 @@
   --font-weight: 500;
   --font-weight-heavy: 700;
   --line-height: 1.25;
+  /* headings */
   --headline-font-size: 6rem;
   --h1-font-size: 3rem;
   --h2-font-size: 2.25rem;
@@ -91,11 +94,14 @@
   --h5-font-size: 1rem;
   --h6-font-size: 0.875rem;
   --heading-small-text-colour: var(--grey-500);
+  /* paragraphs */
   --paragraph-line-height: 1.5;
   --paragraph-lead-text-size: 1.625rem;
+  /* links */
   --link-click-area: 0.25rem; /* increase if you don't have links close to each other (otherwise they may overlap) */
   --link-animate-in-speed: 0s;
   --link-animate-out-speed: 1s;
+  /* other */
   --hr-margin: 3rem 0;
   --quote-text-size: 2rem;
   --quote-mark-text-size: 3em; /* em (not rem) so it's relative to the parent font size */
@@ -111,23 +117,15 @@
   --footer-margin-y: 5rem;
   --footer-text-colour: var(--subtle);
 
-  /* Minimal navbar (lightweight alternative to navbar component) */
-  --navbar-text-colour: var(--white);
-  --navbar-bg-colour: var(--primary);
-  --navbar-shadow: 0 0 0.5rem var(--shadow-colour);
-  --navbar-hover-bg-colour: var(--link-hover-text-colour);
-  --navbar-hamurger-size-x: 1.25rem;
-  --navbar-hamurger-text-colour: var(--primary);
-
   /* Buttons */
   --btn-padding-x: 1.875rem;
   --btn-padding-y: 0.75rem;
   --btn-text-colour: var(--blue-grey-800);
   --btn-bg-colour: var(--white);
   --btn-radius: var(--radius);
-  --btn-shadow: 0 0.125rem 0.18rem color(var(--shadow-base) alpha(0.18));
-  --btn-shadow: 0 0.18rem 0.18rem color(var(--shadow-base) alpha(0.16));
-  --btn-shadow-nofilter: 0 0.125rem 0.375rem color(var(--shadow-base) alpha(0.18));
+  --btn-shadow: 0 0.125rem 0.18rem color(var(--shadow-colour) alpha(0.18));
+  --btn-shadow: 0 0.18rem 0.18rem color(var(--shadow-colour) alpha(0.16));
+  --btn-shadow-nofilter: 0 0.125rem 0.375rem color(var(--shadow-colour) alpha(0.18));
   --btn-hover-text-colour: var(--link-hover-text-colour);
   --btn-hover-bg-colour: var(--blue-grey-100);
   --btn-disabled-text-colour: var(--blue-grey-200);
@@ -162,7 +160,7 @@
   --card-touch-shadow2-nofilter: var(--shadow-light2-nofilter);
   --card-touch-animate-speed: 200ms;
   --card-touch-hover-shadow1: var(--shadow);
-  --card-touch-hover-shadow2: 0 0.125rem 0.25rem color(var(--shadow-base) alpha(0));
+  --card-touch-hover-shadow2: 0 0.125rem 0.25rem color(var(--shadow-colour) alpha(0));
   --card-touch-hover-shadow1-nofilter: var(--shadow-nofilter);
   --card-touch-hover-shadow2-nofilter: 0 0 0 transparent;
 
@@ -196,13 +194,21 @@
   --template-card-body-padding: 1rem 1rem 0;
   --template-card-button-padding: 0 1rem 1rem;
 
+  /* Minimal navbar (lightweight alternative to navbar component) */
+  --navbar-text-colour: var(--white);
+  --navbar-bg-colour: var(--primary);
+  --navbar-shadow: 0 0 0.5rem var(--shadow-base);
+  --navbar-hover-bg-colour: var(--link-hover-text-colour);
+  --navbar-hamurger-size-x: 1.25rem;
+  --navbar-hamurger-text-colour: var(--primary);
+
   /* vue-navbar component */
   --navbar-bg-colour: var(--body-bg-colour);
   --navbar-animate-speed: 200ms;
   --navbar-shadow-fade-speed: 300ms;
-  --navbar-shadow: 0 0.5rem 1rem var(--shadow-colour);
-  --navbar-shadow-nofilter: 0 0.5rem 2rem var(--shadow-colour-nofilter);
-  --navbar-shadow-before: 0 0.5rem 1.8rem color(var(--shadow-base) alpha(0));
+  --navbar-shadow: 0 0.5rem 1rem var(--shadow-base);
+  --navbar-shadow-nofilter: 0 0.5rem 2rem var(--shadow-base-nofilter);
+  --navbar-shadow-before: 0 0.5rem 1.8rem color(var(--shadow-colour) alpha(0));
   --navbar-icon-size: 2rem;
   --navbar-logo-size-x: 2rem;
   --navbar-logo-size-y: 2rem;
@@ -214,8 +220,8 @@
   --input-toggle-on-bg-colour: var(--green-500);
   --input-toggle-off-text-colour: var(--btn-text-colour);
   --input-toggle-off-bg-colour: var(--grey-400);
-  --input-toggle-shadow: inset 0 -0.125rem 0.6rem color(var(--shadow-base) alpha(0.15));
-  --input-toggle-slider-shadow: inset 0 -1rem 0.4rem color(var(--shadow-base) alpha(0.05));
+  --input-toggle-inner-shadow: inset 0 -0.125rem 0.6rem color(var(--shadow-colour) alpha(0.15));
+  --input-toggle-slider-inner-shadow: inset 0 -1rem 0.4rem color(var(--shadow-colour) alpha(0.05));
   --input-toggle-slider-speed: 180ms;
   --input-toggle-fade-in-speed: var(--input-toggle-slider-speed);
   --input-toggle-fade-out-speed: calc(var(--input-toggle-slider-speed) * 0.7);
@@ -253,4 +259,17 @@
   --toast-item-action-hover-text-colour: var(--blue-400);
   --toast-item-warning-text-colour: var(--amber-400);
   --toast-item-error-text-colour: var(--red-400);
+
+  /* vue-tooltip component */
+  --tooltip-padding-x: 1rem;
+  --tooltip-padding-y: 0.75rem;
+  --tooltip-text-colour: var(--white);
+  --tooltip-bg-colour: var(--grey-800);
+  --tooltip-bg-colour: var(--black);
+  --tooltip-bg-colour: var(--grey-900);
+  --tooltip-shadow: var(--shadow);
+  --tooltip-shadow: 0 0.4rem 0.3rem var(--shadow-base);
+  --tooltip-shadow-nofilter: var(--shadow-nofilter);
+  --tooltip-animate-speed: 200ms;
+  --tooltip-triangle-size: 0.5rem;
 }

@@ -104,7 +104,7 @@ export default {
   cursor: pointer;
   background-color: var(--input-toggle-off-bg-colour);
   border-radius: var(--btn-radius);
-  box-shadow: var(--input-toggle-shadow); /* inner shadow */
+  box-shadow: var(--input-toggle-inner-shadow);
   transition: background-color var(--input-toggle-fade-out-speed) ease-out;
   transition-delay: 0s;
   will-change: background-color;
@@ -176,7 +176,7 @@ export default {
   width: 50%;
   background: var(--btn-bg-colour);
   border-radius: var(--btn-radius);
-  box-shadow: var(--input-toggle-slider-shadow); /* inner shadow */
+  box-shadow: var(--input-toggle-slider-inner-shadow);
   transition: transform var(--input-toggle-slider-speed) ease-out;
   will-change: transform;
 
