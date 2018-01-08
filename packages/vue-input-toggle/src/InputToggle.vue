@@ -50,7 +50,7 @@
     @keydown.space="toggle"
     @keydown.enter="toggle"
     class="input-toggle tc"
-    :class="{ 'checked': value }"
+    :class="{ 'input-toggle-checked': value }"
     :tabindex="this.$attrs.disabled === undefined ? 0 : -1"
     role="button"
     :aria-pressed="value.toString()"
@@ -94,8 +94,8 @@ export default {
 /* the toggle purposely looks like .btn and uses many of the button variables */
 .input-toggle {
   position: relative;
+  z-index: 1; /* prevent repaint of other elements; promote to new stacking context */
   display: inline-flex;
-  z-index: 1; /* force new stacking-context so the component doesn't cause repaint of other inputs/buttons */
   align-items: center;
   width: var(--input-toggle-width);
   padding: var(--btn-padding-y) 0;
@@ -115,7 +115,7 @@ export default {
     box-shadow: var(--btn-shadow-nofilter);
   }
 
-  &.checked {
+  &.input-toggle-checked {
     background-color: var(--input-toggle-on-bg-colour);
     transition: background-color var(--input-toggle-fade-in-speed) ease-in;
     transition-delay: var(--input-toggle-fade-out-speed);
@@ -131,30 +131,26 @@ export default {
     outline: none;
   }
 
-  &[disabled],
-  &[disabled].checked,
-  &[disabled]:hover,
-  &[disabled]:focus {
-    z-index: -1;
-    color: var(--btn-disabled-text-colour);
-    border: 1px solid var(--btn-disabled-border-colour);
-    cursor: not-allowed;
-    background-color: var(--btn-bg-colour);
-
-    @if var(--use-filter-shadow) {
-      filter: none;
-      box-shadow: none; /* inner shadow */
-    } @else {
-      box-shadow: none;
-    }
-  }
-
   /* spacing when next to buttons */
   & + .btn,
   .btn + & {
     margin-left: var(--btn-margin-between);
   }
+
+  &[disabled] {
+    color: var(--btn-disabled-text-colour);
+    background-color: var(--btn-bg-colour);
+    border: 1px solid var(--btn-disabled-border-colour);
+    box-shadow: none; /* inner shadow */
+    transition: none;
+    will-change: auto;
+
+    @if var(--use-filter-shadow) {
+      filter: none;
+    }
+  }
 }
+
 
 .input-toggle-on,
 .input-toggle-off {
@@ -180,7 +176,7 @@ export default {
   transition: transform var(--input-toggle-slider-speed) ease-out;
   will-change: transform;
 
-  .input-toggle.checked & {
+  .input-toggle-checked > & {
     transform: translateX(100%);
   }
 
@@ -189,10 +185,17 @@ export default {
     background: var(--input-toggle-hover-slider-bg-colour);
   }
 
-  .input-toggle[disabled] > &,
-  .input-toggle[disabled]:hover > & {
+  [disabled] > & {
+    box-shadow: none; /* inner shadow */
+    transition: none;
+    will-change: auto;
+  }
+
+  /* stylelint-disable-next-line no-descending-specificity */
+  [disabled] > &,
+  [disabled]:hover > &,
+  [disabled]:focus > & {
     background: var(--input-toggle-disabled-slider-bg-colour);
-    box-shadow: none;
   }
 }
 </style>
