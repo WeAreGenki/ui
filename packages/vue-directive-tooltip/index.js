@@ -17,30 +17,59 @@
  * limitations under the License.
  */
 
+// TODO: Handle long multi line text
+
 // TODO: Add ARIA recommendations: http://accessibility.athena-ict.com/aria/examples/tooltip.shtml
+
+const tooltips = new WeakMap();
+let tooltipClass = 'tooltip';
+let wrapperClass = 'has-tooltip';
 
 const vTooltip = {
   bind(el, { value, modifiers }) {
+    // default to top tooltip if no modifier is used
     const direction = Object.keys(modifiers)[0] || 'top';
 
+    // create the tooltip element
     const tooltip = document.createElement('span');
-    tooltip.classList.add('hide', 'tooltip', `tooltip-${direction}`); // TODO: @TESTING: IE compatibility with multiple arguments
-    tooltip.setAttribute('role', 'tooltip');
+    tooltip.classList.add('hide', tooltipClass, `${tooltipClass}-${direction}`); // TODO: @TESTING: IE compatibility with multiple arguments
+    tooltip.setAttribute('role', tooltipClass);
     tooltip.innerText = value;
 
-    el.appendChild(tooltip);
+    // inject into the page and track a reference for fast access during updates
+    tooltips.set(el, el.appendChild(tooltip));
 
-    el.classList.add('has-tooltip');
+    // add class to trigger on hover etc.
+    el.classList.add(wrapperClass);
+  },
+
+  update(el, { value, oldValue }) {
+    if (value === oldValue) return;
+
+    // get the actual tooltip element from stored reference + update text
+    const tooltip = tooltips.get(el);
+    tooltip.innerText = value;
+  },
+
+  unbind(el, binding, vnode, oldVnode, isDestroy) {
+    // explicitly remove the tooltip element reference when the element is destroyed
+    if (!isDestroy) {
+      el.classList.remove(wrapperClass);
+    } else {
+      tooltips.delete(el);
+    }
   },
 };
 
 function install(Vue, options = {}) {
   const name = options.name || 'tooltip';
+  tooltipClass = options.tooltipClass || tooltipClass;
+  wrapperClass = options.wrapperClass || wrapperClass;
 
   Vue.directive(name, vTooltip);
 }
 
 export default {
-  install,
-  vTooltip,
+  install, // for global install
+  vTooltip, // for local install
 };

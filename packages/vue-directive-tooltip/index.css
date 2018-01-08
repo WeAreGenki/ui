@@ -1,8 +1,31 @@
-@import "@wearegenki/ui/import";
+/*
+  V-TOOLTIP VUE CUSTOM DIRECTIVE
+
+  README:
+    TODO: Write me!
+
+  USAGE:
+    Add the "tooltip-fix" class on any elements which are not displaying their
+    tooltip correctly. This should fix 80% of use cases.
+
+  NOTE:
+    When two elements with tooltips are next to each other, a tooltip may appear
+    under under the other element. In this case you need to manually increase the
+    z-index of the element with the covered tooltip — simply add the class "z1",
+    "z2", etc. to the same element as you added v-tooltip too. Example:
+
+      <div class="form-row">
+        <button v-tooltip="Text 1" class="z1 tooltip-fix">Button 1</button>
+        <button v-tooltip="Text 2" class="tooltip-fix">Button 2</button>
+      </div>
+
+*/
 
 .tooltip {
   position: absolute;
+  z-index: var(--tooltip-zindex);
   padding: var(--tooltip-padding-y) var(--tooltip-padding-x);
+  line-height: normal; /* prevent squashed appearance when used in .btn */
   color: var(--tooltip-text-colour);
   white-space: nowrap;
   background: var(--tooltip-bg-colour);
@@ -10,6 +33,7 @@
     transform var(--tooltip-animate-speed) ease,
     opacity var(--tooltip-animate-speed) ease;
   transform: scale(0.85);
+  will-change: transform, opacity;
 
   @if var(--use-filter-shadow) {
     filter: drop-shadow(var(--tooltip-shadow));
@@ -18,8 +42,22 @@
   }
 }
 
+.tooltip-top {
+  bottom: calc(100% + (var(--tooltip-triangle-size) * 2));
+
+  @mixin triangle bottom, var(--tooltip-triangle-size), var(--tooltip-bg-colour), true;
+}
+
+.tooltip-right {
+  left: calc(100% + (var(--tooltip-triangle-size) * 2));
+
+  @mixin triangle left, var(--tooltip-triangle-size), var(--tooltip-bg-colour), true;
+}
+
 .has-tooltip {
-  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
   &:hover,
   &:focus {
@@ -30,16 +68,25 @@
   }
 }
 
-.tooltip-top {
-  bottom: 125%;
-  left: calc(-50% + (var(--tooltip-padding-x) / 2));
+/*
+  TOOLTIP BUG WORKAROUNDS
+*/
 
-  @mixin triangle bottom, var(--tooltip-triangle-size), var(--tooltip-bg-colour), true;
-}
+.tooltip-fix {
+  &.has-tooltip {
+    position: relative;
+  }
 
-.tooltip-right {
-  top: calc(50% - (var(--tooltip-padding-y) + 0.5rem));
-  left: 125%;
+  /* fix vertical alignment */
+  & > .tooltip-right {
+    margin-top: calc(-1 * var(--tooltip-padding-y));
+  }
 
-  @mixin triangle left, var(--tooltip-triangle-size), var(--tooltip-bg-colour), true;
+  /* center correctly */
+  & > .tooltip-top {
+    right: -5rem;
+    left: -5rem;
+    text-align: center;
+    white-space: normal;
+  }
 }
