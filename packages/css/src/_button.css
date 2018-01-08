@@ -5,12 +5,10 @@
 .btn {
   display: inline-block;
   padding: var(--btn-padding-y) var(--btn-padding-x);
-  line-height: 1;
   color: var(--btn-text-colour);
   background-color: var(--btn-bg-colour);
   border: 0;
   border-radius: var(--btn-radius);
-  transition: background-color 200ms ease;
 
   @if var(--use-filter-shadow) {
     filter: drop-shadow(var(--btn-shadow));
@@ -20,17 +18,14 @@
 
   &:hover,
   &:focus {
-    color: var(--btn-text-colour); /* prevent links from changing the colour */
+    color: var(--btn-text-colour); /* prevents repaint on hover */
     text-decoration: none;
-    background-color: var(--btn-hover-bg-colour);
-    transition: background-color 50ms ease;
   }
 
   &[disabled],
   &[disabled]:hover,
   &[disabled]:focus {
     color: var(--btn-disabled-text-colour);
-    background-color: var(--btn-bg-colour);
     border: 1px solid var(--btn-disabled-border-colour);
 
     @if var(--use-filter-shadow) {
@@ -67,7 +62,7 @@
   }
 }
 
-/* Remove browser default button styles */
+/* remove browser default button styles */
 .btn-clear {
   background: transparent;
   border: 0;
@@ -84,7 +79,7 @@
   }
 }
 
-/* Make links whitespace same as buttons */
+/* make a link's whitespace the same as .btn */
 .btn-link {
   display: inline-block;
   padding: var(--btn-padding-y) var(--btn-padding-x);
@@ -101,7 +96,12 @@
   }
 }
 
-/* Spacing between buttons */
+/* spacing between buttons */
 .btn + .btn {
   margin-left: var(--btn-margin-between);
+
+  /* not when in a flex column */
+  .f-col & {
+    margin-left: unset;
+  }
 }
