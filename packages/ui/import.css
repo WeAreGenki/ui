@@ -34,3 +34,6 @@
 
 @import "@wearegenki/css/src/_variables-colour";
 @import "@wearegenki/css/src/_variables";
+
+/* FIXME: May fail to compile if developer doesn't have a configuration like we suggest */
+@import "css/_variables";
