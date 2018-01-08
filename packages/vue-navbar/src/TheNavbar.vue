@@ -153,7 +153,7 @@ export default {
       width: 100%;
       height: 100%;
       content: "";
-      box-shadow: var(--navbar-shadow-nofilter);
+      box-shadow: var(--navbar-shadow-legacy);
       opacity: 0;
       transition: opacity var(--navbar-shadow-fade-speed) ease;
       will-change: opacity;

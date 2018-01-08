@@ -112,7 +112,7 @@ export default {
   @if var(--use-drop-shadow) {
     filter: drop-shadow(var(--btn-shadow));
   } @else { /* stylelint-disable-line */
-    box-shadow: var(--btn-shadow-nofilter);
+    box-shadow: var(--btn-shadow-legacy);
   }
 
   &.input-toggle-checked {

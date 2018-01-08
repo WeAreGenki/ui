@@ -125,7 +125,7 @@ export default {
   @if var(--use-drop-shadow) {
     filter: drop-shadow(var(--shadow-subtle));
   } @else { /* stylelint-disable-line */
-    box-shadow: var(--shadow-subtle-nofilter);
+    box-shadow: var(--shadow-subtle-legacy);
   }
 }
 </style>

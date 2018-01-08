@@ -39,7 +39,7 @@
   @if var(--use-drop-shadow) {
     filter: drop-shadow(var(--tooltip-shadow));
   } @else { /* stylelint-disable-line */
-    box-shadow: var(--tooltip-shadow-nofilter);
+    box-shadow: var(--tooltip-shadow-legacy);
   }
 }
 
@@ -73,6 +73,8 @@
 /*
   TOOLTIP BUG WORKAROUNDS
 */
+
+/* stylelint-disable no-descending-specificity */
 
 .tooltip-fix {
   &.has-tooltip {

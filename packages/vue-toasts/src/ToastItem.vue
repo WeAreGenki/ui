@@ -99,7 +99,7 @@ export default {
   @if var(--use-drop-shadow) {
     filter: drop-shadow(var(--toast-item-shadow));
   } @else { /* stylelint-disable-line */
-    box-shadow: var(--toast-item-shadow-nofilter);
+    box-shadow: var(--toast-item-shadow-legacy);
   }
 }
 
