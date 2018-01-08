@@ -38,5 +38,5 @@ module.exports = postcss.plugin('ui-postcss', (opts = {}) => {
     .use(calc({ warnWhenCannotResolve: opts.verbose }))
     .use(colorFunction)
     .use(mediaQueryPacker)
-    .use(autoprefixer({ cascade: false, remove: false, grid: true }));
+    .use(autoprefixer({ remove: false, flexbox: 'no-2009' }));
 });
