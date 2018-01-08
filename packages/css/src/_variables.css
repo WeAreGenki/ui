@@ -242,6 +242,7 @@
   --input-select-disabled-caret-colour: var(--grey-500);
 
   /* vue-toasts component */
+  --toast-item-zindex: 999;
   --toast-item-width: 24rem;
   --toast-item-bottom: 1.2rem;
   --toast-item-left: 2rem;
@@ -253,7 +254,6 @@
   --toast-item-shadow-nofilter: var(--shadow-nofilter);
   --toast-item-slide-in-speed: 150ms;
   --toast-item-slide-out-speed: 300ms;
-  --toast-item-zindex: 999;
   --toast-item-text-size: 1.1rem;
   --toast-item-action-text-colour: var(--blue-500);
   --toast-item-action-hover-text-colour: var(--blue-400);
@@ -261,6 +261,7 @@
   --toast-item-error-text-colour: var(--red-400);
 
   /* vue-tooltip component */
+  --tooltip-zindex: 1; /* relative to the parent element */
   --tooltip-padding-x: 1rem;
   --tooltip-padding-y: 0.75rem;
   --tooltip-text-colour: var(--white);

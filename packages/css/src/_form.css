@@ -68,12 +68,18 @@ textarea {
     background-color: var(--input-bg-colour);
     border: 1px solid var(--input-disabled-border-colour);
 
+    &:focus,
+    &:active {
+      outline: none;
+    }
+
     &::placeholder {
       color: var(--input-disabled-placeholder-text-colour);
     }
   }
 }
 
+/* FIXME: Something better */
 input[type="checkbox"] {
   width: 1.6rem;
   min-width: unset;

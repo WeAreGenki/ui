@@ -74,6 +74,7 @@ hr {
 }
 
 .btn,
+.select,
 button,
 select {
   cursor: pointer;
@@ -87,5 +88,5 @@ select {
 .disabled,
 [disabled],
 :disabled {
-  cursor: not-allowed;
+  cursor: not-allowed !important; /* stylelint-disable-line declaration-no-important */
 }

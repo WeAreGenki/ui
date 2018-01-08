@@ -44,5 +44,11 @@
 }
 
 /* Box model */
+
 .content-box { box-sizing: content-box; }
 .border-box { box-sizing: border-box; }
+
+/* Cursors */
+
+.pointer { cursor: pointer; }
+.help { cursor: help; } /* useful with the v-tooltip Vue custom directive */
