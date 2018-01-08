@@ -43,14 +43,15 @@
       @keydown.down.prevent="active ? down() : open()"
       v-model="valueText"
       class="select"
+      :class="{ 'input-select-active': active }"
       :id="id"
       :tabindex="disabled ? -1 : 0"
       role="listbox"
       :placeholder="hasFilter && active ? filterHelp : placeholder"
-      :readonly="!hasFilter || readonly || !active"
+      :readonly="disabled === undefined && (!hasFilter || readonly || !active)"
       :disabled="disabled"
     >
-    <span class="input-select-caret" :class="{ 'active': active }"/>
+    <span class="input-select-caret"/>
 
     <!--
       * Use mousedown event and prevent default so that clicks doesn't trigger
@@ -67,7 +68,7 @@
         :key="option.id"
         :data-id="option.id"
         class="input-select-option"
-        :class="{ 'selected': index === i }"
+        :class="{ 'input-select-active': index === i }"
         role="option"
         :disabled="option.disabled"
       >
@@ -210,19 +211,20 @@ export default {
 <style>
 @import "@wearegenki/ui/import";
 
+.input-select-active {
+  cursor: auto;
+}
+
 .input-select-caret {
   position: absolute;
   top: calc(50% - (var(--input-select-caret-size) / 2));
   right: 0.75rem;
-  width: 0;
-  height: 0;
   pointer-events: none;
-  border-top: var(--input-select-caret-size) solid var(--input-select-caret-colour);
-  border-right: var(--input-select-caret-size) solid transparent;
-  border-left: var(--input-select-caret-size) solid transparent;
   will-change: transform;
 
-  &.active {
+  @mixin triangle bottom, var(--input-select-caret-size), var(--input-select-caret-colour);
+
+  .input-select-active + & {
     transform: rotate(180deg);
   }
 
@@ -254,12 +256,18 @@ export default {
   &.hide {
     transform: translateY(-1rem);
   }
+
+  /* don't render the dropdown when disabled to free memory */
+  [disabled] ~ & {
+    display: none;
+    will-change: auto;
+  }
 }
 
 .input-select-option {
   padding: var(--input-padding-y) var(--input-padding-x);
 
-  &.selected,
+  &.input-select-active,
   &:not([disabled]):hover {
     color: var(--input-select-selected-text-colour);
     background-color: var(--input-select-selected-bg-colour);
