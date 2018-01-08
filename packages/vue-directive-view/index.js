@@ -19,7 +19,9 @@
 
 let className = 'hide';
 
-const vView = (el, { value }) => {
+const vView = (el, { value, oldValue }) => {
+  if (value === oldValue) return;
+
   if (value) {
     el.classList.remove(className);
   } else {
@@ -35,6 +37,6 @@ function install(Vue, options = {}) {
 }
 
 export default {
-  install,
-  vView,
+  install, // for global install
+  vView, // for local install
 };
