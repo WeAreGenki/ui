@@ -55,7 +55,8 @@
   --alt-bg-colour: var(--grey-100); /* alternating background in lists, tables, etc. */
 
   /* Shadows */
-  --use-filter-shadow: true; /* use filter:drop-shadow() instead of box-shadow for better performance */
+  --use-drop-shadow: false; /* buggy but better performance by using filter:drop-shadow() for shadows */
+  --use-drop-shadow: true;
   --shadow-colour: rgb(50, 50, 110);
   --shadow-colour: rgb(40, 40, 100);
   --shadow-colour-subtle: rgb(112, 128, 175);

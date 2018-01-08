@@ -109,7 +109,7 @@ export default {
   transition-delay: 0s;
   will-change: background-color;
 
-  @if var(--use-filter-shadow) {
+  @if var(--use-drop-shadow) {
     filter: drop-shadow(var(--btn-shadow));
   } @else { /* stylelint-disable-line */
     box-shadow: var(--btn-shadow-nofilter);
@@ -145,7 +145,7 @@ export default {
     transition: none;
     will-change: auto;
 
-    @if var(--use-filter-shadow) {
+    @if var(--use-drop-shadow) {
       filter: none;
     }
   }

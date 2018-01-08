@@ -122,7 +122,7 @@ export default {
   min-width: 100%;
   height: auto;
 
-  @if var(--use-filter-shadow) {
+  @if var(--use-drop-shadow) {
     filter: drop-shadow(var(--shadow-subtle));
   } @else { /* stylelint-disable-line */
     box-shadow: var(--shadow-subtle-nofilter);

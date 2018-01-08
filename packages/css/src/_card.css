@@ -6,7 +6,7 @@
   word-wrap: break-word;
   background-color: var(--card-bg-colour);
 
-  @if var(--use-filter-shadow) {
+  @if var(--use-drop-shadow) {
     filter: drop-shadow(var(--card-shadow));
   } @else { /* stylelint-disable-line */
     box-shadow: var(--card-shadow-nofilter);
@@ -21,7 +21,7 @@
   z-index: 1;
   background-color: var(--card-touch-bg-colour);
 
-  @if var(--use-filter-shadow) {
+  @if var(--use-drop-shadow) {
     filter:
       drop-shadow(var(--card-touch-shadow1))
       drop-shadow(var(--card-touch-shadow2));
@@ -38,7 +38,7 @@
   &:hover {
     text-decoration: unset; /* no need to underline links as it's obvious this element is interactive */
 
-    @if var(--use-filter-shadow) {
+    @if var(--use-drop-shadow) {
       filter:
         drop-shadow(var(--card-touch-hover-shadow1))
         drop-shadow(var(--card-touch-hover-shadow2));

@@ -96,7 +96,7 @@ export default {
   transition: transform var(--toast-item-slide-in-speed) ease-out;
   will-change: transform;
 
-  @if var(--use-filter-shadow) {
+  @if var(--use-drop-shadow) {
     filter: drop-shadow(var(--toast-item-shadow));
   } @else { /* stylelint-disable-line */
     box-shadow: var(--toast-item-shadow-nofilter);

@@ -247,7 +247,7 @@ export default {
     opacity var(--input-select-animate-speed) ease;
   will-change: transform, opacity;
 
-  @if var(--use-filter-shadow) {
+  @if var(--use-drop-shadow) {
     filter: drop-shadow(var(--input-select-shadow));
   } @else { /* stylelint-disable-line */
     box-shadow: var(--input-select-shadow-nofilter);

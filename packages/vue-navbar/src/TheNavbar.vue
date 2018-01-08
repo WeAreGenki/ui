@@ -124,7 +124,7 @@ export default {
   left: 0;
   background-color: var(--navbar-bg-colour);
 
-  @if var(--use-filter-shadow) {
+  @if var(--use-drop-shadow) {
     filter: drop-shadow(var(--navbar-shadow-before));
     transition:
       filter var(--navbar-shadow-fade-speed) ease,
