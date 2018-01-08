@@ -56,8 +56,7 @@
 
   /* Shadows */
   --use-drop-shadow: false; /* buggy but better performance by using filter:drop-shadow() for shadows */
-  --shadow-colour: rgb(50, 50, 110);
-  --shadow-colour: rgb(40, 40, 100);
+  --shadow-colour: rgb(42, 42, 104);
   --shadow-colour-subtle: rgb(112, 128, 175);
   /* filter:drop-shadow() */
   --shadow-base: color(var(--shadow-colour) alpha(0.33));
