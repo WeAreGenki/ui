@@ -37,12 +37,17 @@ input,
 select,
 textarea {
   /* min-width: 17rem; */
+  /* max-width: 100%; */
   padding: var(--input-padding-y) var(--input-padding-x);
   font-size: var(--input-text-size);
   color: var(--input-text-colour);
   background-color: var(--input-bg-colour);
   border: var(--input-border);
   border-radius: var(--radius);
+
+  &:hover {
+    border-color: var(--grey-400);
+  }
 
   &:focus,
   &:active {
