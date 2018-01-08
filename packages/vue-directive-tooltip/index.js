@@ -22,7 +22,7 @@
 // TODO: Add ARIA recommendations: http://accessibility.athena-ict.com/aria/examples/tooltip.shtml
 
 const tooltips = new WeakMap();
-let tooltipClass = 'tooltip';
+let baseClass = 'tooltip';
 let wrapperClass = 'has-tooltip';
 
 const vTooltip = {
@@ -32,8 +32,8 @@ const vTooltip = {
 
     // create the tooltip element
     const tooltip = document.createElement('span');
-    tooltip.classList.add('hide', tooltipClass, `${tooltipClass}-${direction}`); // TODO: @TESTING: IE compatibility with multiple arguments
-    tooltip.setAttribute('role', tooltipClass);
+    tooltip.classList.add('hide', `${baseClass}-${direction}`); // TODO: @TESTING: IE compatibility with multiple arguments
+    tooltip.setAttribute('role', 'tooltip');
     tooltip.innerText = value;
 
     // inject into the page and track a reference for fast access during updates
@@ -63,7 +63,7 @@ const vTooltip = {
 
 function install(Vue, options = {}) {
   const name = options.name || 'tooltip';
-  tooltipClass = options.tooltipClass || tooltipClass;
+  baseClass = options.baseClass || baseClass;
   wrapperClass = options.wrapperClass || wrapperClass;
 
   Vue.directive(name, vTooltip);

@@ -21,7 +21,8 @@
 
 */
 
-.tooltip {
+.tooltip-top,
+.tooltip-right {
   position: absolute;
   z-index: var(--tooltip-zindex);
   padding: var(--tooltip-padding-y) var(--tooltip-padding-x);
@@ -61,7 +62,8 @@
 
   &:hover,
   &:focus {
-    > .tooltip {
+    > .tooltip-top,
+    > .tooltip-right {
       opacity: 1;
       transform: scale(1);
     }
