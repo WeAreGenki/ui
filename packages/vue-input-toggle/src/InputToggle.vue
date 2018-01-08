@@ -105,7 +105,7 @@ export default {
   background-color: var(--input-toggle-off-bg-colour);
   border-radius: var(--btn-radius);
   box-shadow: var(--input-toggle-inner-shadow);
-  transition: background-color var(--input-toggle-fade-out-speed) ease-out;
+  transition: background-color var(--input-toggle-animate-out-speed) ease-out;
   transition-delay: 0s;
   will-change: background-color;
 
@@ -117,8 +117,8 @@ export default {
 
   &.input-toggle-checked {
     background-color: var(--input-toggle-on-bg-colour);
-    transition: background-color var(--input-toggle-fade-in-speed) ease-in;
-    transition-delay: var(--input-toggle-fade-out-speed);
+    transition: background-color var(--input-toggle-animate-in-speed) ease-in;
+    transition-delay: var(--input-toggle-animate-out-speed);
   }
 
   &.mini {
@@ -173,7 +173,7 @@ export default {
   background: var(--btn-bg-colour);
   border-radius: var(--btn-radius);
   box-shadow: var(--input-toggle-slider-inner-shadow);
-  transition: transform var(--input-toggle-slider-speed) ease-out;
+  transition: transform var(--input-toggle-animate-in-speed) ease-out;
   will-change: transform;
 
   .input-toggle-checked > & {

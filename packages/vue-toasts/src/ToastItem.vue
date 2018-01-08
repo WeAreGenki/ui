@@ -93,7 +93,7 @@ export default {
   font-size: var(--toast-item-text-size);
   color: var(--toast-item-text-colour);
   background-color: var(--toast-item-bg-colour);
-  transition: transform var(--toast-item-slide-in-speed) ease-out;
+  transition: transform var(--toast-item-animate-in-speed) ease-out;
   will-change: transform;
 
   @if var(--use-drop-shadow) {
@@ -105,7 +105,7 @@ export default {
 
 .toast-enter,
 .toast-leave-to {
-  transition: transform var(--toast-item-slide-out-speed) ease-in;
+  transition: transform var(--toast-item-animate-out-speed) ease-in;
   transform: translateY(102%);
 }
 

@@ -220,9 +220,8 @@
   --input-toggle-off-bg-colour: var(--grey-400);
   --input-toggle-inner-shadow: inset 0 -0.125rem 0.6rem color(var(--shadow-colour) alpha(0.15));
   --input-toggle-slider-inner-shadow: inset 0 -1rem 0.4rem color(var(--shadow-colour) alpha(0.05));
-  --input-toggle-slider-speed: 180ms;
-  --input-toggle-fade-in-speed: var(--input-toggle-slider-speed);
-  --input-toggle-fade-out-speed: calc(var(--input-toggle-slider-speed) * 0.7);
+  --input-toggle-animate-in-speed: 180ms;
+  --input-toggle-animate-out-speed: 130ms;
   --input-toggle-hover-slider-bg-colour: var(--grey-200);
   --input-toggle-disabled-slider-bg-colour: var(--grey-100);
   --input-toggle-mini-width: calc(var(--input-toggle-width) / 1.7);
@@ -250,8 +249,8 @@
   --toast-item-bg-colour: var(--grey-900);
   --toast-item-shadow: var(--shadow);
   --toast-item-shadow-legacy: var(--shadow-legacy);
-  --toast-item-slide-in-speed: 150ms;
-  --toast-item-slide-out-speed: 300ms;
+  --toast-item-animate-in-speed: 150ms;
+  --toast-item-animate-out-speed: 300ms;
   --toast-item-text-size: 1.1rem;
   --toast-item-action-text-colour: var(--blue-500);
   --toast-item-action-hover-text-colour: var(--blue-400);
@@ -269,6 +268,7 @@
   --tooltip-shadow: var(--shadow);
   --tooltip-shadow: 0 0.4rem 0.3rem var(--shadow-base);
   --tooltip-shadow-legacy: var(--shadow-legacy);
-  --tooltip-animate-speed: 200ms;
+  --tooltip-animate-in-speed: 150ms;
+  --tooltip-animate-out-speed: 200ms;
   --tooltip-triangle-size: 0.5rem;
 }
