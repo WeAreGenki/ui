@@ -30,13 +30,6 @@
   }
 }
 
-/* Visibility (for use with @wearegenki/vue-directive-view) */
-
-.hide {
-  pointer-events: none;
-  opacity: 0;
-}
-
 /* Scroll prevention */
 
 .scroll-lock {
