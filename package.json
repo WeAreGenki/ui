@@ -18,7 +18,8 @@
     "FIXME_pretest": "npm run build",
     "FIXME_prepublish": "npm run build",
     "FIXME_build": "lerna run build",
-    "debug:css": "node ./utils/debug-postcss.js"
+    "debug:css": "node ./utils/debug-postcss.js",
+    "debug:prefixes": "npx autoprefixer-info"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.36",
