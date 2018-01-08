@@ -1,5 +1,5 @@
 /**
- * @wearegenki/ui (precompiled css)
+ * @wearegenki/ui-vue (precompiled css)
  * @author: Max Milton <max@wearegenki.com>
  *
  * Copyright 2018 We Are Genki
@@ -17,6 +17,15 @@
  * limitations under the License.
  */
 
-@import "@wearegenki/css";
-@import "@wearegenki/ui-vue";
-@import "@wearegenki/ui-marko";
+@import "@wearegenki/vue-directive-tooltip";
+@import "@wearegenki/vue-directive-view";
+@import "@wearegenki/vue-code-editor";
+@import "@wearegenki/vue-debug-breakpoints";
+@import "@wearegenki/vue-input-dropdown";
+@import "@wearegenki/vue-input-select";
+@import "@wearegenki/vue-input-toggle";
+@import "@wearegenki/vue-link-preload";
+@import "@wearegenki/vue-modal";
+@import "@wearegenki/vue-navbar";
+@import "@wearegenki/vue-tabs";
+@import "@wearegenki/vue-toasts";
