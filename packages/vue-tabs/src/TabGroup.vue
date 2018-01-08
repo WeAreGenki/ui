@@ -28,7 +28,7 @@
 
     <div
       v-for="(slot, name) in $slots"
-      v-show="active === name"
+      v-if="active === name"
       :id="name"
       role="tabpanel"
     >
