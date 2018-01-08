@@ -31,7 +31,7 @@ export default {
       mutations: {
         /* eslint-disable no-return-assign, no-param-reassign */
         show: (state, toast) => state.push(toast),
-        // TODO: Don't dismiss by ID, instead use a que
+        // TODO: Don't dismiss by ID, instead use a queue
         // hide: (state, id) => id !== undefined // eslint-disable-line no-confusing-arrow
         //   ? state.shift()
         //   : state.filter(toast => toast.id !== id),
@@ -43,7 +43,7 @@ export default {
           commit('hide', id);
         },
 
-        // TODO: Implement a que in case there's a high priority
+        // TODO: Implement a queue in case there's a high priority
         //  toast that needs a certain amount of user attention/time
         createToast({ commit, state }, { text, type, action, cb, timeout }) {
           // dismiss existing toast (only one toast at a time)

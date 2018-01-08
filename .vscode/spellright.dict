@@ -12,6 +12,7 @@ bg
 breakpoint
 btn
 Builtins
+cb
 codemirror
 cssgrid
 dataset
@@ -38,5 +39,6 @@ tooltips
 UnCSS
 unstyled
 visibilitychange
+vm
 workspaces
 zindex

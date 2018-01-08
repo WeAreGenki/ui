@@ -1,13 +1,12 @@
 <!-- REF: https://material.io/guidelines/components/snackbars-toasts.html#snackbars-toasts-usage -->
 
-<!-- FIXME: Need a visual way to differenciate toast types, especially error toasts -->
+<!-- FIXME: Need a visual way to differentiate toast types, especially error toasts -->
+
 <!-- TODO: Work on action toasts-->
 
 <template>
   <div class="toast df" :class="{ [`toast-${type}`]: type !== undefined }">
-    <span class="toast-msg">
-      {{ text }}
-    </span>
+    {{ text }}
 
     <button v-if="action === 'reload'" @click="reload" class="toast-action" type="button">
       RELOAD
@@ -54,9 +53,9 @@ export default {
       const vm = this;
 
       // wait for user to view the page before triggering the toast
-      document.addEventListener('visibilitychange', function visHandler() {
+      document.addEventListener('visibilitychange', function visibilityHandler() {
         vm.setTimeoutHandler();
-        document.removeEventListener('visibilitychange', visHandler);
+        document.removeEventListener('visibilitychange', visibilityHandler);
       });
     }
   },
@@ -91,6 +90,7 @@ export default {
   min-width: var(--toast-item-width);
   max-width: 100%;
   padding: var(--toast-item-padding-y) var(--toast-item-padding-x);
+  font-size: var(--toast-item-text-size);
   color: var(--toast-item-text-colour);
   background-color: var(--toast-item-bg-colour);
   transition: transform var(--toast-item-slide-in-speed) ease-out;
@@ -128,9 +128,5 @@ export default {
   .toast-error > & {
     color: var(--toast-item-error-text-colour);
   }
-}
-
-.toast-msg {
-  font-size: var(--toast-item-text-size);
 }
 </style>
