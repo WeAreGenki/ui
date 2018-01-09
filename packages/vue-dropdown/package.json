@@ -1,5 +1,5 @@
 {
-  "name": "@wearegenki/vue-input-dropdown",
+  "name": "@wearegenki/vue-dropdown",
   "version": "0.2.0",
   "description": "A friendly UI framework which aims to be straightforward, intuitive, and high performance.",
   "keywords": [
@@ -10,7 +10,7 @@
     "vue",
     "wearegenki"
   ],
-  "repository": "https://github.com/WeAreGenki/ui/tree/master/packages/vue-input-dropdown",
+  "repository": "https://github.com/WeAreGenki/ui/tree/master/packages/vue-dropdown",
   "bugs": {
     "url": "https://github.com/WeAreGenki/ui/issues"
   },
