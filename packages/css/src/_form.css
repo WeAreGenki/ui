@@ -43,10 +43,10 @@ textarea {
   color: var(--input-text-colour);
   background-color: var(--input-bg-colour);
   border: var(--input-border);
-  border-radius: var(--radius);
+  border-radius: var(--input-radius);
 
   &:hover {
-    border-color: var(--grey-400);
+    border-color: var(--input-hover-border-colour);
   }
 
   &:focus,
