@@ -11,7 +11,7 @@ _NOTE: This is currently a work in progress and not recommended for production a
 
 ## Overview
 
-The styles are designed around things we do at [We Are Genki](https://wearegenki.com) — ecommerce, microsites, next-gen web apps — but are intentionally flexible enough for general web design use.
+The styles are designed around the types of projects we do at [We Are Genki](https://wearegenki.com) — ecommerce, microsites, next-gen web apps — but are flexible enough for any web design use.
 
 Features:
 
