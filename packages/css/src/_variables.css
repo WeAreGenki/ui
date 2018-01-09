@@ -272,7 +272,6 @@
   --tooltip-shadow: var(--shadow);
   --tooltip-shadow: 0 0.4rem 0.3rem var(--shadow-base);
   --tooltip-shadow-legacy: var(--shadow-legacy);
-  --tooltip-animate-in-speed: 150ms;
-  --tooltip-animate-out-speed: 200ms;
+  --tooltip-animate-speed: 150ms;
   --tooltip-triangle-size: 0.5rem;
 }

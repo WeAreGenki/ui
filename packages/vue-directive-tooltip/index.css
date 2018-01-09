@@ -31,8 +31,8 @@
   white-space: nowrap;
   background: var(--tooltip-bg-colour);
   transition:
-    transform var(--tooltip-animate-out-speed) ease,
-    opacity var(--tooltip-animate-out-speed) ease;
+    transform var(--tooltip-animate-speed) ease-in,
+    opacity var(--tooltip-animate-speed) ease-in;
   transform: scale(0.85);
   will-change: transform, opacity;
 
@@ -65,7 +65,7 @@
     > .tooltip-top,
     > .tooltip-right {
       opacity: 1;
-      transition-duration: var(--tooltip-animate-in-speed);
+      transition-timing-function: ease-out;
       transform: scale(1);
     }
   }
