@@ -2,6 +2,8 @@
 
 TODO: Write me!
 
+Part of [@wearegenki/ui](https://github.com/WeAreGenki/ui) — a friendly UI framework which aims to be straightforward, intuitive, and high performance.
+
 NOTES:
 
 * Adds a class to the element which sets styles that may break the layout/flow — it needs to taken into account.

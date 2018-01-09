@@ -1,7 +1,7 @@
 {
   "name": "@wearegenki/fonts",
   "version": "0.2.0",
-  "description": "CSS Grid based CSS library + Vue.js framework",
+  "description": "A friendly UI framework which aims to be straightforward, intuitive, and high performance.",
   "keywords": [
     "css",
     "cssgrid",

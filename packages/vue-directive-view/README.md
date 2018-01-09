@@ -6,6 +6,8 @@
 
 A very simple Vue custom directive to show or hide an element. It's a simpler alternative to using Vue' native `v-show`.
 
+Part of [@wearegenki/ui](https://github.com/WeAreGenki/ui) — a friendly UI framework which aims to be straightforward, intuitive, and high performance.
+
 _NOTE: This plugin is a dependency a some of the [@wearegenki/ui](https://www.npmjs.com/package/@wearegenki/ui) vue components and is required for them to work correctly._
 
 ### Differences to `v-show`

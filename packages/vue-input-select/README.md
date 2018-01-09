@@ -1,6 +1,8 @@
-# @wearegenki/ui
+# @wearegenki/vue-input-select
 
 TODO: Write me!
+
+Part of [@wearegenki/ui](https://github.com/WeAreGenki/ui) — a friendly UI framework which aims to be straightforward, intuitive, and high performance.
 
 -----
 
