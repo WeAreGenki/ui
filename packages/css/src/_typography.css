@@ -150,9 +150,6 @@ li { margin-bottom: var(--li-margin-between); } /* extra space between list item
   list-style: none;
 }
 
-/* dl::after { clear: both; } */ /* TODO: necessary? */
-dt { float: left; } /* TODO: Could this be achieved with flex or grid instead? */
-
 /* Abbreviations */
 
 abbr[title] {
