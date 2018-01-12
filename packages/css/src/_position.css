@@ -1,0 +1,45 @@
+/* Position */
+
+.pos-f { position: fixed; }
+.pos-a { position: absolute; }
+.pos-r { position: relative; }
+.pos-s { position: static; }
+.pos-i { position: initial; } /* default */
+
+/* Floats */
+
+.float-l { float: left; }
+.float-r { float: right; }
+
+@each $media, $ext in (var(--breakpoint-media)), (var(--breakpoints)) {
+  @media ($media) {
+    .pos-f-$(ext) { position: fixed; }
+    .pos-a-$(ext) { position: absolute; }
+    .pos-r-$(ext) { position: relative; }
+    .pos-s-$(ext) { position: static; }
+    .pos-i-$(ext) { position: initial; }
+
+    .float-l-$(ext) { float: left; }
+    .float-r-$(ext) { float: right; }
+  }
+}
+
+/* Direction */
+
+/* TODO: If we never use anything other than .t0, .r0, .b0, l0 then remove the other steps here */
+
+@each $step, $val in (var(--spacing-steps)), (var(--spacing-values)) {
+  .t$(step) { top: $val; }
+  .r$(step) { right: $val; }
+  .b$(step) { bottom: $val; }
+  .l$(step) { left: $val; }
+
+  @each $media, $ext in (var(--breakpoint-media)), (var(--breakpoints)) {
+    @media ($media) {
+      .t$(step)-$(ext) { top: $val; }
+      .r$(step)-$(ext) { right: $val; }
+      .b$(step)-$(ext) { bottom: $val; }
+      .l$(step)-$(ext) { left: $val; }
+    }
+  }
+}

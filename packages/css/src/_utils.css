@@ -1,33 +1,7 @@
-/* Position */
-
-.pos-f { position: fixed; }
-.pos-a { position: absolute; }
-.pos-r { position: relative; }
-.pos-s { position: static; }
-.pos-i { position: initial; } /* default */
-
 /* Border radius */
 
 .rad {
   border-radius: var(--radius);
-}
-
-/* Floats */
-
-.float-l { float: left; }
-.float-r { float: right; }
-
-@each $media, $ext in (var(--breakpoint-media)), (var(--breakpoints)) {
-  @media ($media) {
-    .pos-f-$(ext) { position: fixed; }
-    .pos-a-$(ext) { position: absolute; }
-    .pos-r-$(ext) { position: relative; }
-    .pos-s-$(ext) { position: static; }
-    .pos-i-$(ext) { position: initial; }
-
-    .float-l-$(ext) { float: left; }
-    .float-r-$(ext) { float: right; }
-  }
 }
 
 /* Scroll prevention */
