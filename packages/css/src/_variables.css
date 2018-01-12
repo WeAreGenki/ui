@@ -1,6 +1,6 @@
 /* Media queries */
-@custom-media --breakpoint-small screen and (min-width: 30em) and (max-width: 48em);
-@custom-media --breakpoint-large screen and (min-width: 48.01em); /* .01 so both are not active at 48rem */
+@custom-media --breakpoint-small screen and (min-width: 30.01em) and (max-width: 48em);
+@custom-media --breakpoint-large screen and (min-width: 48.01em);
 
 :root {
   /* Breakpoints */
