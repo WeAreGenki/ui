@@ -5,14 +5,14 @@
       "modules": false,
       "loose": true
     }],
-    "@babel/stage-2"
+    ["@babel/stage-2", { "loose": true }]
   ],
   "plugins": ["@babel/transform-runtime"],
   "env": {
     "test": {
       "presets": [
         ["@babel/env", { "targets": { "node": "current" }}],
-        "@babel/stage-2"
+        ["@babel/stage-2", { "loose": true }]
       ],
       "plugins": ["@babel/transform-modules-commonjs", "dynamic-import-node"]
     }
