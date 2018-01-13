@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD024 -->
+<!-- markdownlint-disable MD024 MD033 -->
 
 # Changelog
 
@@ -11,11 +11,20 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
-- New package [@wearegenki/vue-directive-view](https://www.npmjs.com/package/@wearegenki/vue-directive-view) which add the `v-view` custom directive. This needs to be manually installed when using vue components which depend on it.
+- New package [@wearegenki/vue-directive-view](https://www.npmjs.com/package/@wearegenki/vue-directive-view) which add the `v-view` custom directive. This needs to be manually installed when using vue components which depend on it (vue-select, vue-directive-tooltip, and more in future).
+  - _NOTE: This package has installation steps which must be done manually, see the [package readme](https://github.com/WeAreGenki/ui/blob/master/packages/vue-directive-view/README.md)._
+- New package [@wearegenki/vue-directive-tooltip](https://www.npmjs.com/package/@wearegenki/vue-directive-view) that adds an easy way to add tooltips to elements. A good use case example is a minimal menu which uses only icons and no text — tooltips on menu items show a description or title of what the menu item is.
+  - _NOTE: This package has installation steps which must be done manually, see the [package readme](https://github.com/WeAreGenki/ui/blob/master/packages/vue-directive-tooltip/README.md)._
+- CSS rules for directional position, e.g. `right:0` = `.r0`, `bottom:2rem` = `.b4`.
+- Basic readme in each package. We'll add a more comprehensive readme to each package over time.
+- New examples of how to do a CSS custom build or how to set custom breakpoints. All examples can now be found in the [docs/examples directory](./docs/examples).
 
 ### Changed
 
-- Various CSS performance improvements by using hardware acceleration where possible and practical.
+- Various CSS performance improvements by using hardware acceleration where possible and practical. In particular the new `--use-drop-shadow` variable that when set to true will use `filter:drop-shadow()` instead of `box-shadow` when a shadow needs to be drawn. This is somewhat experimental because it can be buggy on old browsers and actually cause degraded performance. On modern browsers <abbr title="frames per second">FPS</abbr> may be unstable in some scenarios so make sure you test this before enabling in production.
+- Continued refinement of CSS including buttons, colours, shadows, and much more.
+- Renamed many CSS variables for consistency and ease of understanding.
+- Updated dependencies.
 
 ## [0.2.0] - 2018-01-07
 
