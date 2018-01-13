@@ -1,0 +1,5 @@
+/* README: Import this file into Vue components for access to CSS variables */
+
+@import "@wearegenki/css/src/_variables-colour";
+@import "@wearegenki/css/src/_variables";
+@import "_variables";

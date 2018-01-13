@@ -1,0 +1,17 @@
+/*
+  XXX: Only include the fonts you need; remove unused fonts.
+
+  XXX: These fonts are from @wearegenki/fonts but require manual setup, see the
+  @wearegenki/fonts package readme for information.
+*/
+
+@mixin font-face Rubik, Rubik-Light, normal, 300;
+@mixin font-face Rubik, Rubik-LightItalic, italic, 300;
+@mixin font-face Rubik, Rubik-Regular, normal, 400;
+@mixin font-face Rubik, Rubik-Italic, italic, 400;
+@mixin font-face Rubik, Rubik-Medium, normal, 500;
+@mixin font-face Rubik, Rubik-MediumItalic, italic, 500;
+@mixin font-face Rubik, Rubik-Bold, normal, 700;
+@mixin font-face Rubik, Rubik-Italic, italic, 700;
+@mixin font-face Rubik, Rubik-Black, normal, 900;
+@mixin font-face Rubik, Rubik-BlackItalic, italic, 900;
