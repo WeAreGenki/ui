@@ -1,0 +1,40 @@
+/*
+  CUSTOM BREAKPOINTS EXAMPLE
+
+  README:
+    By default the framework only comes with small/s and large/l breakpoints but
+    it's easy to add new breakpoints or to change the existing ones.
+
+    There are 3 steps we recommend:
+      1. Copy the existing breakpoint into your custom variables file. You'll
+        need both the @custom-media rules and the CSS variables.
+      2. Make any required changes or additions.
+      3. Set a custom font size for any new breakpoints.
+
+    In this example we add a new xlarge/xl breakpoint:
+
+*/
+
+/* Media queries */
+@custom-media --breakpoint-small screen and (min-width: 30.01em) and (max-width: 48em);
+@custom-media --breakpoint-large screen and (min-width: 48.01em) and (max-width: 67.5em);
+@custom-media --breakpoint-xlarge screen and (min-width: 67.51em); /* 1080p */
+
+:root {
+  /* Breakpoints */
+  --breakpoint-media: --breakpoint-small, --breakpoint-large, --breakpoint-xlarge;
+  --breakpoints: s, l, xl;
+  --font-size-xl: 1.25rem; /* Optional */
+}
+
+/* Custom font size for xlarge */
+body {
+  @if NOT (var(--use-font-size-fluid)) {
+    @media (--breakpoint-xlarge) {
+      font-size: var(--font-size-xl);
+
+      /* OR use the existing --font-size-l */
+      /* font-size: var(--font-size-l); */
+    }
+  }
+}
