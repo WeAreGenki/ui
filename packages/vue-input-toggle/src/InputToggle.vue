@@ -100,7 +100,7 @@ export default {
   width: var(--input-toggle-width);
   padding: var(--btn-padding-y) 0;
   line-height: 1;
-  color: var(--input-toggle-off-text-colour);
+  color: var(--input-toggle-off-font-colour);
   cursor: pointer;
   background-color: var(--input-toggle-off-bg-colour);
   border-radius: var(--btn-radius);
@@ -138,7 +138,7 @@ export default {
   }
 
   &[disabled] {
-    color: var(--btn-disabled-text-colour);
+    color: var(--btn-disabled-font-colour);
     background-color: var(--btn-bg-colour);
     border: 1px solid var(--btn-disabled-border-colour);
     box-shadow: none; /* inner shadow */
@@ -158,10 +158,10 @@ export default {
 }
 
 .input-toggle-on {
-  color: var(--input-toggle-on-text-colour);
+  color: var(--input-toggle-on-font-colour);
 
   .input-toggle[disabled] > & {
-    color: var(--btn-disabled-text-colour);
+    color: var(--btn-disabled-font-colour);
   }
 }
 

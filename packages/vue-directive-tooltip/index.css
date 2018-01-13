@@ -27,7 +27,7 @@
   z-index: var(--tooltip-zindex);
   padding: var(--tooltip-padding-y) var(--tooltip-padding-x);
   line-height: normal; /* prevent squashed appearance when used in .btn */
-  color: var(--tooltip-text-colour);
+  color: var(--tooltip-font-colour);
   white-space: nowrap;
   background: var(--tooltip-bg-colour);
   transition:

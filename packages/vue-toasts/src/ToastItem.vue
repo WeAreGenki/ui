@@ -90,8 +90,8 @@ export default {
   min-width: var(--toast-item-width);
   max-width: 100%;
   padding: var(--toast-item-padding-y) var(--toast-item-padding-x);
-  font-size: var(--toast-item-text-size);
-  color: var(--toast-item-text-colour);
+  font-size: var(--toast-item-font-size);
+  color: var(--toast-item-font-colour);
   background-color: var(--toast-item-bg-colour);
   transition: transform var(--toast-item-animate-in-speed) ease-out;
   will-change: transform;
@@ -112,21 +112,21 @@ export default {
 .toast-action {
   padding: 1rem 1.4rem;
   margin: -1rem -1rem -1rem auto;
-  color: var(--toast-item-action-text-colour);
+  color: var(--toast-item-action-font-colour);
   background-color: transparent;
   border: 0;
 
   &:hover,
   &:focus {
-    color: var(--toast-item-action-hover-text-colour);
+    color: var(--toast-item-action-hover-font-colour);
   }
 
   .toast-warn > & {
-    color: var(--toast-item-warning-text-colour);
+    color: var(--toast-item-warning-font-colour);
   }
 
   .toast-error > & {
-    color: var(--toast-item-error-text-colour);
+    color: var(--toast-item-error-font-colour);
   }
 }
 </style>

@@ -49,9 +49,9 @@
   --subtle: var(--blue-grey-200); /* footer, title subheading */
   --dark: var(--blue-grey-800);
   --body-bg-colour: var(--grey-50);
-  --body-text-colour: var(--blue-grey-900);
-  --link-text-colour: var(--primary);
-  --link-hover-text-colour: var(--primary-gradient-100);
+  --body-font-colour: var(--blue-grey-900);
+  --link-font-colour: var(--primary);
+  --link-hover-font-colour: var(--primary-gradient-100);
   --alt-bg-colour: var(--grey-100); /* alternating background in lists, tables, etc. */
 
   /* Shadows */
@@ -75,13 +75,13 @@
 
   /* Typography */
   --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Cantarell, "Helvetica Neue", sans-serif;
-  --font-size-fluid-enabled: false; /* dynamic font size based on viewport width (experimental) */
+  --use-font-size-fluid: false; /* dynamic font size based on viewport width (experimental) */
   --font-size-fluid-max: 1.3125rem; /* font size will grow from --font-size to this */
   --font-size-fluid-from: 30em; /* start growing font from this screen width */
   --font-size-fluid-until: 90em; /* finish growing font size at this screen width */
   --font-size: 1rem; /* use the browser's default font size, normally 16px */
-  --font-size-s: 1.125rem; /* only used when --font-size-fluid-enabled is false */
-  --font-size-l: 1.125rem; /* only used when --font-size-fluid-enabled is false */
+  --font-size-s: 1.125rem; /* only used when --use-font-size-fluid is false */
+  --font-size-l: 1.125rem; /* only used when --use-font-size-fluid is false */
   --font-weight-light: 300;
   --font-weight: 500;
   --font-weight-heavy: 700;
@@ -94,18 +94,18 @@
   --h4-font-size: 1.25rem;
   --h5-font-size: 1rem;
   --h6-font-size: 0.875rem;
-  --heading-small-text-colour: var(--grey-500);
+  --heading-small-font-colour: var(--grey-500);
   /* paragraphs */
   --paragraph-line-height: 1.5;
-  --paragraph-lead-text-size: 1.625rem;
+  --paragraph-lead-font-size: 1.625rem;
   /* links */
   --link-click-area: 0.25rem; /* increase if you don't have links close to each other (otherwise they may overlap) */
   --link-animate-in-speed: 0s;
   --link-animate-out-speed: 1s;
   /* other */
   --hr-margin: 3rem 0;
-  --quote-text-size: 2rem;
-  --quote-mark-text-size: 3em; /* em (not rem) so it's relative to the parent font size */
+  --quote-font-size: 2rem;
+  --quote-mark-font-size: 3em; /* em (not rem) so it's relative to the parent font size */
 
   /* Lists */
   --li-margin-between: 0.5rem;
@@ -116,38 +116,38 @@
   --side-nav-active-bg-colour: var(--grey-300);
   --side-nav-link-margin-y: 0.2rem;
   --footer-margin-y: 5rem;
-  --footer-text-colour: var(--subtle);
+  --footer-font-colour: var(--subtle);
 
   /* Buttons */
   --btn-padding-x: 1.875rem;
   --btn-padding-y: 0.75rem;
-  --btn-text-colour: var(--blue-grey-800);
+  --btn-font-colour: var(--blue-grey-800);
   --btn-bg-colour: var(--white);
   --btn-radius: var(--radius);
   --btn-shadow: 0 0.18rem 0.18rem color(var(--shadow-colour) alpha(0.16));
   --btn-shadow-legacy: 0 0.125rem 0.375rem color(var(--shadow-colour) alpha(0.18));
-  --btn-hover-text-colour: var(--link-hover-text-colour);
+  --btn-hover-font-colour: var(--link-hover-font-colour);
   --btn-hover-bg-colour: var(--blue-grey-100);
-  --btn-disabled-text-colour: var(--blue-grey-200);
+  --btn-disabled-font-colour: var(--blue-grey-200);
   --btn-disabled-border-colour: var(--blue-grey-50);
   --btn-arrow-animate-speed: 200ms;
   --btn-margin-between: 1.5rem; /* space between buttons */
 
   /* Forms */
-  --form-help-text-colour: var(--grey-600);
+  --form-help-font-colour: var(--grey-600);
   --input-padding-x: 1rem;
   --input-padding-y: 0.6rem;
-  --input-text-size: 1.2rem;
-  --input-text-colour: var(--body-text-colour);
+  --input-font-size: 1.2rem;
+  --input-font-colour: var(--body-font-colour);
   --input-bg-colour: var(--white);
   --input-border: 1px solid var(--grey-300);
   --input-radius: var(--radius);
   --input-hover-border-colour: var(--grey-400);
   --input-focus-outline: 2px solid var(--primary);
-  --input-placeholder-text-colour: var(--blue-grey-400);
-  --input-disabled-text-colour: var(--blue-grey-200);
+  --input-placeholder-font-colour: var(--blue-grey-400);
+  --input-disabled-font-colour: var(--blue-grey-200);
   --input-disabled-border-colour: var(--blue-grey-50);
-  --input-disabled-placeholder-text-colour: var(--blue-grey-100);
+  --input-disabled-placeholder-font-colour: var(--blue-grey-100);
 
   /* Cards */
   --card-padding-x: 1.3rem;
@@ -162,7 +162,7 @@
   --card-touch-shadow2-legacy: var(--shadow-light2-legacy);
   --card-touch-animate-speed: 200ms;
   --card-touch-hover-shadow1: var(--shadow);
-  --card-touch-hover-shadow2: 0 0.125rem 0.25rem color(var(--shadow-colour) alpha(0));
+  --card-touch-hover-shadow2: 0 0.125rem 0.25rem color(var(--shadow-colour) alpha(0.07));
   --card-touch-hover-shadow1-legacy: var(--shadow-legacy);
   --card-touch-hover-shadow2-legacy: 0 0 0 transparent;
 
@@ -170,23 +170,23 @@
   --alert-padding: 1rem;
   --alert-margin-y: 2rem;
   --alert-border-size: 4px;
-  --alert-tip-text-colour: var(--green-800);
+  --alert-tip-font-colour: var(--green-800);
   --alert-tip-bg-colour: var(--green-100);
   --alert-tip-border-colour: var(--green-500);
-  --alert-info-text-colour: var(--blue-800);
+  --alert-info-font-colour: var(--blue-800);
   --alert-info-bg-colour: var(--blue-100);
   --alert-info-border-colour: var(--blue-500);
-  --alert-warning-text-colour: var(--amber-900);
+  --alert-warning-font-colour: var(--amber-900);
   --alert-warning-bg-colour: var(--amber-100);
   --alert-warning-border-colour: var(--amber-500);
-  --alert-error-text-colour: var(--red-700);
+  --alert-error-font-colour: var(--red-700);
   --alert-error-bg-colour: var(--red-100);
   --alert-error-border-colour: var(--red-500);
 
   /* Labels */
   --label-padding: 0.04rem 0.4rem 0.08rem;
-  --label-text-size: 90%;
-  --label-text-colour: var(--primary-gradient-100);
+  --label-font-size: 90%;
+  --label-font-colour: var(--primary-gradient-100);
   --label-bg-colour: var(--body-bg-colour);
   --label-border: 1px solid var(--primary);
   --label-border-radius: var(--radius);
@@ -197,12 +197,12 @@
   --template-card-button-padding: 0 1rem 1rem;
 
   /* Minimal navbar (lightweight alternative to navbar component) */
-  --navbar-text-colour: var(--white);
+  --navbar-font-colour: var(--white);
   --navbar-bg-colour: var(--primary);
   --navbar-shadow: 0 0 0.5rem var(--shadow-base);
-  --navbar-hover-bg-colour: var(--link-hover-text-colour);
+  --navbar-hover-bg-colour: var(--link-hover-font-colour);
   --navbar-hamurger-size-x: 1.25rem;
-  --navbar-hamurger-text-colour: var(--primary);
+  --navbar-hamurger-font-colour: var(--primary);
 
   /* vue-navbar component */
   --navbar-bg-colour: var(--body-bg-colour);
@@ -218,9 +218,9 @@
 
   /* vue-input-toggle component */
   --input-toggle-width: 8rem;
-  --input-toggle-on-text-colour: var(--white);
+  --input-toggle-on-font-colour: var(--white);
   --input-toggle-on-bg-colour: var(--green-500);
-  --input-toggle-off-text-colour: var(--btn-text-colour);
+  --input-toggle-off-font-colour: var(--btn-font-colour);
   --input-toggle-off-bg-colour: var(--grey-400);
   --input-toggle-inner-shadow: inset 0 -0.125rem 0.6rem color(var(--shadow-colour) alpha(0.15));
   --input-toggle-slider-inner-shadow: inset 0 -1rem 0.4rem color(var(--shadow-colour) alpha(0.05));
@@ -234,12 +234,12 @@
   --input-select-bg-colour: var(--white);
   --input-select-shadow: var(--shadow);
   --input-select-shadow-legacy: var(--shadow-legacy);
-  --input-select-selected-text-colour: var(--white);
-  --input-select-selected-bg-colour: var(--link-hover-text-colour);
+  --input-select-selected-font-colour: var(--white);
+  --input-select-selected-bg-colour: var(--link-hover-font-colour);
   --input-select-caret-colour: var(--blue-grey-800);
   --input-select-caret-size: 0.3rem;
   --input-select-animate-speed: 150ms;
-  --input-select-disabled-text-colour: var(--btn-disabled-text-colour);
+  --input-select-disabled-font-colour: var(--btn-disabled-font-colour);
   --input-select-disabled-caret-colour: var(--grey-500);
 
   /* vue-toasts component */
@@ -249,23 +249,23 @@
   --toast-item-left: 2rem;
   --toast-item-padding-x: 1.5rem;
   --toast-item-padding-y: 1.1rem;
-  --toast-item-text-colour: var(--white);
+  --toast-item-font-colour: var(--white);
   --toast-item-bg-colour: var(--grey-900);
   --toast-item-shadow: var(--shadow);
   --toast-item-shadow-legacy: var(--shadow-legacy);
   --toast-item-animate-in-speed: 150ms;
   --toast-item-animate-out-speed: 300ms;
-  --toast-item-text-size: 1.1rem;
-  --toast-item-action-text-colour: var(--blue-500);
-  --toast-item-action-hover-text-colour: var(--blue-400);
-  --toast-item-warning-text-colour: var(--amber-400);
-  --toast-item-error-text-colour: var(--red-400);
+  --toast-item-font-size: 1.1rem;
+  --toast-item-action-font-colour: var(--blue-500);
+  --toast-item-action-hover-font-colour: var(--blue-400);
+  --toast-item-warning-font-colour: var(--amber-400);
+  --toast-item-error-font-colour: var(--red-400);
 
   /* vue-tooltip component */
   --tooltip-zindex: 1; /* relative to the parent element */
   --tooltip-padding-x: 1rem;
   --tooltip-padding-y: 0.75rem;
-  --tooltip-text-colour: var(--white);
+  --tooltip-font-colour: var(--white);
   --tooltip-bg-colour: var(--grey-800);
   --tooltip-bg-colour: var(--black);
   --tooltip-bg-colour: var(--grey-900);

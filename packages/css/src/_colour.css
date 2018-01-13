@@ -24,7 +24,7 @@
 .blue-grey { color: var(--blue-grey-500); }
 
 /* Utility colours */
-.plain { color: var(--body-text-colour); }
+.plain { color: var(--body-font-colour); }
 .subtle { color: var(--subtle); }
 .inherit { color: inherit; }
 [class="inherit!"] { color: inherit !important; } /* stylelint-disable-line declaration-no-important */

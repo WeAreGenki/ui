@@ -3,8 +3,8 @@
 .label {
   display: inline-block;
   padding: var(--label-padding);
-  font-size: var(--label-text-size);
-  color: var(--label-text-colour);
+  font-size: var(--label-font-size);
+  color: var(--label-font-colour);
   background-color: var(--label-bg-colour);
   border: var(--label-border);
   border-radius: var(--label-border-radius);

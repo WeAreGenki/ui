@@ -239,8 +239,8 @@ export default {
   top: 100%;
   left: 0;
   padding: var(--input-padding-y) 0;
-  font-size: var(--input-text-size);
-  color: var(--input-text-colour);
+  font-size: var(--input-font-size);
+  color: var(--input-font-colour);
   background-color: var(--input-bg-colour);
   transition:
     transform var(--input-select-animate-speed) ease,
@@ -269,12 +269,12 @@ export default {
 
   &.input-select-active,
   &:not([disabled]):hover {
-    color: var(--input-select-selected-text-colour);
+    color: var(--input-select-selected-font-colour);
     background-color: var(--input-select-selected-bg-colour);
   }
 
   &[disabled] {
-    color: var(--input-select-disabled-text-colour);
+    color: var(--input-select-disabled-font-colour);
   }
 }
 </style>

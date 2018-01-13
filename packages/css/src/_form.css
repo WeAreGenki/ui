@@ -19,7 +19,7 @@ form {
 .form-help {
   display: block;
   margin-top: 0.25rem;
-  color: var(--form-help-text-colour);
+  color: var(--form-help-font-colour);
 }
 
 label {
@@ -39,8 +39,8 @@ textarea {
   /* min-width: 17rem; */
   /* max-width: 100%; */
   padding: var(--input-padding-y) var(--input-padding-x);
-  font-size: var(--input-text-size);
-  color: var(--input-text-colour);
+  font-size: var(--input-font-size);
+  color: var(--input-font-colour);
   background-color: var(--input-bg-colour);
   border: var(--input-border);
   border-radius: var(--input-radius);
@@ -55,7 +55,7 @@ textarea {
   }
 
   &::placeholder {
-    color: var(--input-placeholder-text-colour);
+    color: var(--input-placeholder-font-colour);
   }
 
   &.input-small { /* stylelint-disable-line selector-no-qualifying-type */
@@ -64,7 +64,7 @@ textarea {
   }
 
   &[disabled] {
-    color: var(--input-disabled-text-colour);
+    color: var(--input-disabled-font-colour);
     background-color: var(--input-bg-colour);
     border: 1px solid var(--input-disabled-border-colour);
 
@@ -74,7 +74,7 @@ textarea {
     }
 
     &::placeholder {
-      color: var(--input-disabled-placeholder-text-colour);
+      color: var(--input-disabled-placeholder-font-colour);
     }
   }
 }

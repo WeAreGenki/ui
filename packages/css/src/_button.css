@@ -5,7 +5,7 @@
 .btn {
   display: inline-block;
   padding: var(--btn-padding-y) var(--btn-padding-x);
-  color: var(--btn-text-colour);
+  color: var(--btn-font-colour);
   background-color: var(--btn-bg-colour);
   border: 0;
   border-radius: var(--btn-radius);
@@ -18,14 +18,14 @@
 
   &:hover,
   &:focus {
-    color: var(--btn-text-colour); /* prevents repaint on hover */
+    color: var(--btn-font-colour); /* prevents repaint on hover */
     text-decoration: none;
   }
 
   &[disabled],
   &[disabled]:hover,
   &[disabled]:focus {
-    color: var(--btn-disabled-text-colour);
+    color: var(--btn-disabled-font-colour);
     border: 1px solid var(--btn-disabled-border-colour);
 
     @if var(--use-drop-shadow) {

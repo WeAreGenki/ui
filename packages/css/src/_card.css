@@ -52,7 +52,7 @@
   }
 
   &:hover .btn-clear {
-    color: var(--link-hover-text-colour);
+    color: var(--link-hover-font-colour);
     background-color: unset;
   }
 }

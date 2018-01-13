@@ -13,25 +13,25 @@
 }
 
 .alert-tip {
-  color: var(--alert-tip-text-colour);
+  color: var(--alert-tip-font-colour);
   background-color: var(--alert-tip-bg-colour);
   border-left-color: var(--alert-tip-border-colour);
 }
 
 .alert-info {
-  color: var(--alert-info-text-colour);
+  color: var(--alert-info-font-colour);
   background-color: var(--alert-info-bg-colour);
   border-left-color: var(--alert-info-border-colour);
 }
 
 .alert-warn {
-  color: var(--alert-warning-text-colour);
+  color: var(--alert-warning-font-colour);
   background-color: var(--alert-warning-bg-colour);
   border-left-color: var(--alert-warning-border-colour);
 }
 
 .alert-error {
-  color: var(--alert-error-text-colour);
+  color: var(--alert-error-font-colour);
   background-color: var(--alert-error-bg-colour);
   border-left-color: var(--alert-error-border-colour);
 }

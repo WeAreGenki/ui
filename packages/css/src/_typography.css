@@ -3,7 +3,7 @@
 /* Fluid font size (experimental) */
 /* TODO: Extensive cross browser testing because rem fonts on <html> is uncommon */
 
-@if var(--font-size-fluid-enabled) {
+@if var(--use-font-size-fluid) {
   html {
     @mixin font-size-fluid var(--font-size), var(--font-size-fluid-max), var(--font-size-fluid-from), var(--font-size-fluid-until);
   }
@@ -15,10 +15,10 @@ body {
   font-family: var(--font-family);
   font-size: var(--font-size);
   font-weight: var(--font-weight);
-  color: var(--body-text-colour);
+  color: var(--body-font-colour);
   background-color: var(--body-bg-colour);
 
-  @if NOT (var(--font-size-fluid-enabled)) {
+  @if NOT (var(--use-font-size-fluid)) {
     @media (--breakpoint-small) {
       font-size: var(--font-size-s);
     }
@@ -36,7 +36,7 @@ h2 > small,
 h3 > small,
 h4 > small,
 h5 > small,
-h6 > small { color: var(--heading-small-text-colour); }
+h6 > small { color: var(--heading-small-font-colour); }
 
 /* stylelint-disable-next-line declaration-block-single-line-max-declarations */
 h1 { font-size: var(--h1-font-size); font-weight: var(--font-weight-light); }
@@ -55,7 +55,7 @@ p {
 }
 
 .lead {
-  font-size: var(--paragraph-lead-text-size);
+  font-size: var(--paragraph-lead-font-size);
   font-weight: var(--font-weight-light);
 }
 
@@ -65,13 +65,13 @@ p {
 a {
   padding: var(--link-click-area); /* larger link click area size */
   margin: calc(-1 * var(--link-click-area));
-  color: var(--link-text-colour);
+  color: var(--link-font-colour);
   text-decoration: none;
   word-wrap: break-word;
   transition: color var(--link-animate-out-speed) ease-out;
 
   &:hover {
-    color: var(--link-hover-text-colour);
+    color: var(--link-hover-font-colour);
     text-decoration: underline;
     transition-duration: var(--link-animate-in-speed);
   }
@@ -110,12 +110,12 @@ a {
 /* blockquote {} */
 
 .quote {
-  font-size: var(--quote-text-size);
+  font-size: var(--quote-font-size);
 
   &::before,
   &::after {
     position: absolute;
-    font-size: var(--quote-mark-text-size);
+    font-size: var(--quote-mark-font-size);
   }
 
   &::before {
@@ -143,7 +143,7 @@ a {
 
 li { margin-bottom: var(--li-margin-between); } /* extra space between list items */
 
-.lsn {
+.lsn { /* list style none */
   padding-left: 0;
   list-style: none;
 }
