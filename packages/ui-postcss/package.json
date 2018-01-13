@@ -26,7 +26,7 @@
     "test": "exit 0"
   },
   "dependencies": {
-    "autoprefixer": "^7.2.4",
+    "autoprefixer": "^7.2.5",
     "css-mqpacker": "^6.0.1",
     "postcss-at-rules-variables": "^0.1.2",
     "postcss-calc": "^6.0.1",

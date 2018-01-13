@@ -2,12 +2,14 @@ _
 “
 ”
 @
+@custom
 @else
 @font-face
 @if
 @media
 @mixin
 @supports
+Adaptiveness
 bg
 breakpoint
 btn
@@ -41,4 +43,6 @@ unstyled
 visibilitychange
 vm
 workspaces
+xl
+xlarge
 zindex
