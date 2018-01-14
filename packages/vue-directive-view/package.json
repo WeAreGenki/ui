@@ -1,6 +1,6 @@
 {
   "name": "@wearegenki/vue-directive-view",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Vue custom directive to show/hide elements using opacity",
   "keywords": [
     "css",
@@ -26,7 +26,6 @@
     "lint:js": "eslint --ext .js,.vue src test",
     "test": "exit 0"
   },
-  "dependencies": {},
   "peerDependencies": {
     "vue": "^2.5.13"
   },
