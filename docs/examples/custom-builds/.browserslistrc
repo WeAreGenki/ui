@@ -1,0 +1,6 @@
+# XXX: Which browsers you support. This will effect the output of your CSS
+#   bundles due to the "autoprefixer" and "cssnano" packages.
+
+> 1%
+last 2 versions
+not IE <= 10

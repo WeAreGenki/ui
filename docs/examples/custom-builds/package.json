@@ -1,0 +1,24 @@
+{
+  "name": "wearegenki-ui-custom-build",
+  "private": true,
+  "version": "1.0.0",
+  "description": "An example custom CSS build based on the @wearegenki/ui framework.",
+  "author": "Max Milton <max@wearegenki.com>",
+  "license": "Apache-2.0",
+  "style": "dist/index.css",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "postcss src/css/main.css -d dist/css/ -c .postcssrc.js --watch",
+    "build": "NODE_ENV=production postcss src/css/main.css -d dist/css/ -c .postcssrc.js"
+  },
+  "dependencies": {
+    "@wearegenki/css": "^0.2.0",
+    "@wearegenki/ui": "^0.2.0"
+  },
+  "devDependencies": {
+    "@wearegenki/ui-postcss": "^0.2.0",
+    "cssnano": "^3.10.0",
+    "postcss": "^6.0.16",
+    "postcss-cli": "^4.1.1"
+  }
+}

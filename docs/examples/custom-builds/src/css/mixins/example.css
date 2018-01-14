@@ -1,0 +1,22 @@
+/*
+  EXAMPLE MIXIN
+
+  README:
+    This example mixin is useless (it just adds a black border) but shows it's
+    possible to load an additional directory of custom mixins. The configuration
+    option is in the ".postcssrc.js" file.
+
+  USAGE:
+    .your-css-rule {
+      @mixin example;
+    }
+
+  NOTE:
+    For information about how to write your own mixins, see:
+    https://github.com/postcss/postcss-mixins
+
+*/
+
+@define-mixin example {
+  border: 1px solid var(--black);
+}
