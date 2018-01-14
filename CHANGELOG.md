@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.3.0] - 2018-01-14
+
 ### Added
 
 - New package [@wearegenki/vue-directive-view](https://www.npmjs.com/package/@wearegenki/vue-directive-view) which add the `v-view` custom directive. This needs to be manually installed when using vue components which depend on it (vue-select, vue-directive-tooltip, and more in future).
@@ -80,7 +82,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Initial public release with a base set of styles, Vue components, and dev configs but without a working build system so only source files are usable.
 
-[Unreleased]: https://github.com/olivierlacan/keep-a-changelog/compare/v0.2.0...HEAD
+[Unreleased]: https://github.com/olivierlacan/keep-a-changelog/compare/v0.3.0...HEAD
+[0.3.0]: https://github.com/olivierlacan/keep-a-changelog/compare/v0.3.0...v0.2.0
 [0.2.0]: https://github.com/olivierlacan/keep-a-changelog/compare/v0.2.0...v0.1.1
 [0.1.1]: https://github.com/olivierlacan/keep-a-changelog/compare/v0.1.1...v0.1.0
 [0.1.0]: https://github.com/olivierlacan/keep-a-changelog/compare/v0.1.0...v0.0.0
