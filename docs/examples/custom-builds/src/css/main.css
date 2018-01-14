@@ -1,4 +1,8 @@
-/* XXX: Import all the files required for a custom build */
+/*
+  XXX: Import all the files required for a custom build.
+
+  XXX: "@wearegenki/css" is installed as a dependency of "@wearegenki/ui".
+*/
 
 @import "@wearegenki/css/src/_variables-colour";
 @import "@wearegenki/css/src/_variables";
@@ -8,7 +12,7 @@
 @import "@wearegenki/vue-directive-tooltip"; /* include if you're using v-tooltip */
 @import "@wearegenki/vue-directive-view"; /* include if you're using v-view */
 
-/* XXX: Your app's global styles should go here */
+/* XXX: Your app's global styles should go here. */
 
 h2 {
   text-transform: uppercase;

@@ -12,11 +12,9 @@
     "build": "NODE_ENV=production postcss src/css/main.css -d dist/css/ -c .postcssrc.js"
   },
   "dependencies": {
-    "@wearegenki/css": "^0.2.0",
     "@wearegenki/ui": "^0.2.0"
   },
   "devDependencies": {
-    "@wearegenki/ui-postcss": "^0.2.0",
     "cssnano": "^3.10.0",
     "postcss": "^6.0.16",
     "postcss-cli": "^4.1.1"

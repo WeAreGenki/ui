@@ -3,6 +3,8 @@
  *  a JavaScript bundler you typically don't need many of these options as your
  *  bundler will take care of these things — you can use a simpler configuration
  *  like the the commented out example below.
+ *
+ * XXX: "@wearegenki/ui-postcss" is installed as a dependency of "@wearegenki/ui".
  */
 
 const isProduction = process.env.NODE_ENV === 'production';
