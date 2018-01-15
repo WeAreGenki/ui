@@ -30,20 +30,31 @@ TODO: Rewrite this: new changes since we now have @wearegenki/icons
 <template>
   <header class="navbar-fixed z5" :class="{ 'active': scrolled || showNav }">
     <div class="df-l con">
-      <button @click.stop="showNav = !showNav" class="dn-l btn-clear mr3" type="button">
+      <button
+        @click.stop="showNav = !showNav"
+        type="button"
+        class="dn-l btn-clear mr3"
+      >
         <svg class="nav-icon link">
           <use v-if="showNav" xlink:href="~@wearegenki/icons/src/x.svg"/>
           <use v-else xlink:href="~@wearegenki/icons/src/menu.svg"/>
         </svg>
       </button>
 
-      <router-link to="/" class="nav-logo ml-1-l">
+      <router-link v-once to="/" class="nav-logo ml-1-l">
         <svg class="logo"><use xlink:href="~@/assets/logo.svg"/></svg>
       </router-link>
 
       <nav class="dn df-l f-col f-row-l ml-auto-l mh-1" :class="{ 'df': showNav }">
         <hr class="dn-l mv0">
-        <router-link v-for="item in items" :key="item.url" :to="item.url" class="nav-link">
+
+        <router-link
+          v-once
+          v-for="item in items"
+          :key="item.url"
+          :to="item.url"
+          class="nav-link"
+        >
           {{ item.name }}
         </router-link>
       </nav>
@@ -66,7 +77,6 @@ export default {
   }),
   computed: {
     // Check for passive eventListener support
-    // FIXME: Might not be necessary for regular scroll, what about touch scroll?
     supportsPassive() {
       let support = false;
       try {
@@ -102,7 +112,7 @@ export default {
         if (!ticking) {
           requestAnimationFrame(() => {
             // Set property used to conditionally add a class in the component template
-            this.scrolled = window.scrollY > 10;
+            this.scrolled = window.scrollY > 10; // px before triggering
             ticking = false;
           });
         }
