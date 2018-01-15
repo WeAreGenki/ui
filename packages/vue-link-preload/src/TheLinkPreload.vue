@@ -1,5 +1,5 @@
 <!--
-  Based on vue-futurelink with customisations for simplicity and performance
+  Based on vue-futurelink with customisation for simplicity and performance
   REF: https://github.com/SamKnows/vue-futurelink
 -->
 

@@ -585,6 +585,20 @@
   version "0.0.30"
   resolved "https://registry.yarnpkg.com/@types/strip-json-comments/-/strip-json-comments-0.0.30.tgz#9aa30c04db212a9a0649d6ae6fd50accc40748a1"
 
+"@wearegenki/css@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@wearegenki/css/-/css-0.2.0.tgz#c566eb75db61b9e5542d281417786c59864aa640"
+  optionalDependencies:
+    "@wearegenki/fonts" "0.2.0"
+
+"@wearegenki/fonts@0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@wearegenki/fonts/-/fonts-0.2.0.tgz#d5028bcc4a8614848a90a3e7e3f8847d9026973d"
+
+"@wearegenki/icons@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@wearegenki/icons/-/icons-0.2.0.tgz#4facec5e864c2f4d45ab7dd869d9496ea762a710"
+
 "@wearegenki/vue-input-dropdown@^0.2.0":
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/@wearegenki/vue-input-dropdown/-/vue-input-dropdown-0.2.0.tgz#1454fae1b87b231f025d6f0ab943d63d042db487"
@@ -6748,8 +6762,8 @@ typescript@^2.4.1:
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.6.2.tgz#3c5b6fd7f6de0914269027f03c0946758f7673a4"
 
 uglify-js@3.3.x:
-  version "3.3.6"
-  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.3.6.tgz#3ca624e713f1981df455d72a02ab6ffe632b5d2d"
+  version "3.3.7"
+  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.3.7.tgz#28463e7c7451f89061d2b235e30925bf5625e14d"
   dependencies:
     commander "~2.13.0"
     source-map "~0.6.1"
