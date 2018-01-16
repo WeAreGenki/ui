@@ -2,7 +2,11 @@
   TAB GROUP COMPONENT
 
   README:
-    TODO: Write me.
+    Puts your content into interactive tabs; loads the content the just the active
+    tab at a time. A useful way to split up a user interface so some content is
+    visible while the rest is hidden. In general, if you can get away without
+    using tabs it's better because often users won't realise they can click on
+    the tabs so your content goes to waste.
 
   USAGE:
 
@@ -24,6 +28,7 @@
 
 -->
 
+<!-- TODO: Make it more visually obvious that the tabs are clickable -->
 <!-- TODO: Add ARIA recommendations + role=tablist might not be correct on <nav> -->
 
 <template>
