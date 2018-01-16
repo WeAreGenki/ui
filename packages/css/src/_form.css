@@ -1,10 +1,5 @@
 /* FIXME: Better approach at custom input and label sizing */
-
-/* TODO: Hover state so it's obvious inputs can be used — also style input relevant components */
-
 /* TODO: Create variables for relevant properties */
-
-/* TODO: Custom checkbox */
 
 form {
   margin-top: 1rem;
@@ -79,7 +74,7 @@ textarea {
   }
 }
 
-/* FIXME: Something better */
+/* TODO: Style better; this sucks */
 input[type="checkbox"] {
   width: 1.6rem;
   min-width: unset;
@@ -100,10 +95,8 @@ input[type="checkbox"] {
   }
 
   & > input {
-    margin-right: -2px; /* so outline doesn't look strange when active */
-    border-right: none;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+    /* so outline doesn't look strange when active + hide rounded corners */
+    @mixin min margin-right, -2px, var(--radius-negative);
 
     &:focus + .btn,
     &:active + .btn {

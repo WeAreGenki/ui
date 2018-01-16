@@ -26,6 +26,7 @@
   --spacing-steps: 0, 1, 2, 3, 4, 5, 6, 7;
   --spacing-values: 0, 0.25rem, 0.5rem, 1rem, 2rem, 4rem, 8rem, 16rem;
   --radius: 0.1875rem; /* 3px at root */
+  --radius-negative: -0.1875rem; /* used to calculate negative offsets e.g. for .input-group */
 
   /* Colours */
   /* FIXME: Do we really need so many gradient steps? Simplify! */
@@ -264,7 +265,7 @@
   /* vue-tabs component */
   --tab-font-size: 1.1rem;
   --tab-border-width: 0.25rem;
-  --tab-border-colour: var(--link-hover-font-colour);
+  --tab-border-colour: var(--link-font-colour);
   --tab-hover-border-colour: var(--grey-400);
 
   /* v-tooltip custom directive */
