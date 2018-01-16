@@ -86,3 +86,41 @@ input[type="checkbox"] {
   height: 1.6rem;
   margin-right: 0.5rem;
 }
+
+/* visually join an input and button together */
+/* FIXME: .btn needs an active state (globally they still need both hover and active) */
+.input-group {
+  display: inline-flex;
+
+  &:hover {
+    & > input,
+    & > .btn {
+      border-color: var(--input-hover-border-colour);
+    }
+  }
+
+  & > input {
+    margin-right: -2px; /* so outline doesn't look strange when active */
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+
+    &:focus + .btn,
+    &:active + .btn {
+      outline: var(--input-focus-outline);
+      outline-offset: -2px; /* same as input */
+    }
+  }
+
+  & > .btn {
+    border: var(--input-border);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
+    @if var(--use-drop-shadow) {
+      filter: none;
+    } @else { /* stylelint-disable-line */
+      box-shadow: none;
+    }
+  }
+}
