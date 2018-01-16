@@ -28,7 +28,6 @@ module.exports = postcss.plugin('ui-postcss', (opts = {}) => {
   return postcss()
     .use(cssImport({ path: opts.importPath || ['src'] }))
     .use(atVariables)
-    .use(atVariables) // listed twice as a workaround to bug: https://github.com/GitScrum/postcss-at-rules-variables/issues/181
     .use(each)
     .use(mixins({ mixinsDir }))
     .use(nested)
