@@ -72,7 +72,7 @@ input {
 .select,
 button,
 select,
-textarea, {
+textarea {
   cursor: pointer;
 
   &:focus {
