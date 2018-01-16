@@ -4,7 +4,7 @@ const path = require('path');
 const postcss = require('postcss');
 const cssImport = require('postcss-import');
 const url = require('postcss-url');
-const atRulesVars = require('postcss-at-rules-variables');
+const atVariables = require('postcss-at-rules-variables');
 const each = require('postcss-each');
 const mixins = require('postcss-mixins');
 const nested = require('postcss-nested');
@@ -27,8 +27,8 @@ module.exports = postcss.plugin('ui-postcss', (opts = {}) => {
 
   return postcss()
     .use(cssImport({ path: opts.importPath || ['src'] }))
-    .use(url)
-    .use(atRulesVars)
+    .use(atVariables)
+    .use(atVariables) // listed twice as a workaround to bug: https://github.com/GitScrum/postcss-at-rules-variables/issues/181
     .use(each)
     .use(mixins({ mixinsDir }))
     .use(nested)
@@ -38,5 +38,6 @@ module.exports = postcss.plugin('ui-postcss', (opts = {}) => {
     .use(calc({ warnWhenCannotResolve: opts.verbose }))
     .use(colorFunction)
     .use(mediaQueryPacker)
-    .use(autoprefixer({ remove: false, flexbox: 'no-2009' }));
+    .use(autoprefixer({ remove: false, flexbox: 'no-2009' }))
+    .use(url);
 });
