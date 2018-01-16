@@ -59,24 +59,20 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Responsive images (opinionated) */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Simple horizontal rule */
-hr {
-  width: 100%;
-  margin: var(--hr-margin);
-  border: 0;
-  border-top: 1px solid var(--grey-300);
+.btn,
+.select,
+button,
+select,
+textarea,
+input {
+  outline-offset: -2px; /* consistency between browsers */
 }
 
 .btn,
 .select,
 button,
-select {
+select,
+textarea, {
   cursor: pointer;
 
   &:focus {
@@ -84,9 +80,23 @@ select {
   }
 }
 
-/* Disabled elements */
+/* disabled elements */
 .disabled,
 [disabled],
 :disabled {
   cursor: not-allowed !important; /* stylelint-disable-line declaration-no-important */
+}
+
+/* simple horizontal rule */
+hr {
+  width: 100%;
+  margin: var(--hr-margin);
+  border: 0;
+  border-top: 1px solid var(--grey-300);
+}
+
+/* responsive images (opinionated) */
+img {
+  max-width: 100%;
+  height: auto;
 }
