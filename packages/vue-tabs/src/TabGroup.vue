@@ -5,7 +5,22 @@
     TODO: Write me.
 
   USAGE:
-    TODO: Write me.
+
+    <TabGroup>
+      <template slot="title of tab">
+        tab 1 contents
+      </template>
+
+      <template slot="another tab title">
+        tab 2 contents
+      </template>
+
+      <template slot="tab 3">
+        <div class="con">
+          tab 3 contents
+        </div>
+      </template>
+    </TabGroup>
 
 -->
 
@@ -16,23 +31,25 @@
     <nav class="df mb4" role="tablist">
       <a
         v-for="(slot, name) in $slots"
+        :key="name"
         @click="active = name"
-        :href="`#${name}`"
-        class="btn-tab ttu"
+        :href="`#${encodeURIComponent(name)}`"
+        class="btn-tab ttu bold"
         :class="{ 'active': active === name }"
         role="tab"
       >
-        {{ slot[0].data.attrs.title }}
+        {{ name }}
       </a>
     </nav>
 
     <div
       v-for="(slot, name) in $slots"
+      :key="name"
       v-if="active === name"
       :id="name"
       role="tabpanel"
     >
-      <slot :name="slot[0].data.slot"/>
+      <slot :name="name"/>
     </div>
   </div>
 </template>
@@ -43,7 +60,7 @@ export default {
   data() {
     return {
       active: this.$route && this.$route.hash
-        ? this.$route.hash.substr(1)
+        ? decodeURIComponent(this.$route.hash.substr(1))
         : Object.keys(this.$slots)[0],
     };
   },
@@ -54,19 +71,18 @@ export default {
 @import "@wearegenki/ui/import";
 
 .btn-tab {
-  padding: 1rem 1.5rem;
-  font-size: 1.2rem;
-  font-weight: bold;
-  border-bottom: 4px solid transparent;
+  padding: var(--btn-padding-y) var(--btn-padding-x);
+  font-size: var(--tab-font-size);
+  border-bottom: var(--tab-border-width) solid transparent;
 
   &:hover,
   &:focus {
     text-decoration: none;
-    border-bottom-color: var(--grey-400);
+    border-bottom-color: var(--tab-hover-border-colour);
   }
 
   &.active {
-    border-bottom-color: var(--primary);
+    border-bottom-color: var(--tab-border-colour);
     cursor: default;
   }
 }

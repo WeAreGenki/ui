@@ -50,8 +50,6 @@
   --dark: var(--blue-grey-800);
   --body-bg-colour: var(--grey-50);
   --body-font-colour: var(--blue-grey-900);
-  --link-font-colour: var(--primary);
-  --link-hover-font-colour: var(--primary-gradient-100);
   --alt-bg-colour: var(--grey-100); /* alternating background in lists, tables, etc. */
 
   /* Shadows */
@@ -100,6 +98,8 @@
   --paragraph-lead-font-size: 1.625rem;
   /* links */
   --link-click-area: 0.25rem; /* increase if you don't have links close to each other (otherwise they may overlap) */
+  --link-font-colour: var(--primary);
+  --link-hover-font-colour: var(--primary-gradient-100);
   --link-animate-in-speed: 0s;
   --link-animate-out-speed: 1s;
   /* other */
@@ -261,7 +261,13 @@
   --toast-item-warning-font-colour: var(--amber-400);
   --toast-item-error-font-colour: var(--red-400);
 
-  /* vue-tooltip component */
+  /* vue-tabs component */
+  --tab-font-size: 1.1rem;
+  --tab-border-width: 0.25rem;
+  --tab-border-colour: var(--link-hover-font-colour);
+  --tab-hover-border-colour: var(--grey-400);
+
+  /* v-tooltip custom directive */
   --tooltip-zindex: 1; /* relative to the parent element */
   --tooltip-padding-x: 1rem;
   --tooltip-padding-y: 0.75rem;
