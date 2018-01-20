@@ -27,6 +27,8 @@ TODO: Rewrite this: new changes since we now have @wearegenki/icons
 
 -->
 
+<!-- TODO: Use v-once in a more logical way (how might we run perf benchmarks?) -->
+
 <template>
   <header class="navbar-fixed z5" :class="{ 'active': scrolled || showNav }">
     <div class="df-l con">
@@ -41,7 +43,7 @@ TODO: Rewrite this: new changes since we now have @wearegenki/icons
         </svg>
       </button>
 
-      <router-link v-once to="/" class="nav-logo ml-1-l">
+      <router-link to="/" class="nav-logo ml-1-l">
         <svg class="logo"><use xlink:href="~@/assets/logo.svg"/></svg>
       </router-link>
 
@@ -49,7 +51,6 @@ TODO: Rewrite this: new changes since we now have @wearegenki/icons
         <hr class="dn-l mv0">
 
         <router-link
-          v-once
           v-for="item in items"
           :key="item.url"
           :to="item.url"
