@@ -1,0 +1,23 @@
+/*
+  DEBUG
+
+  README:
+    Extra features for debugging use. This file is disabled by default, you need
+    to manually include this file to use these styles.
+
+*/
+
+/* stylelint-disable declaration-no-important */
+
+:root {
+  --use-animations: true; /* provides a way to disable animations (for debugging) */
+}
+
+/* Disable animations override */
+
+@if NOT (var(--use-animations)) {
+  html,
+  body {
+    transition: none !important;
+  }
+}

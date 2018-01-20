@@ -20,9 +20,9 @@
 /*
 
   README:
-    This is a minimal version of @wearegenki/css that only includes grid related
-    functionality. It's intended to be used as an add-on to another library
-    or as a simple starting point.
+    This is a minimal version of @wearegenki/css that only includes flexbox and
+    grid related functionality. It's intended to be used as an add-on to another
+    library or as a simple starting point.
 
 */
 
@@ -33,3 +33,4 @@
 @import "_grid-templates";
 @import "_grid";
 @import "_grid-compat";
+/* @import "debug"; */
