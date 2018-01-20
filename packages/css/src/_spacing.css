@@ -74,10 +74,15 @@
 
 .mh-auto { margin-right: auto; margin-left: auto; }
 .mv-auto { margin-top: auto; margin-bottom: auto; }
-.mt-auto { margin-top: auto !important; }
-.mr-auto { margin-right: auto !important; }
-.mb-auto { margin-bottom: auto !important; }
-.ml-auto { margin-left: auto !important; }
+.mt-auto { margin-top: auto; }
+.mr-auto { margin-right: auto; }
+.mb-auto { margin-bottom: auto; }
+.ml-auto { margin-left: auto; }
+/* FIXME: @TESTING: Check these are still automatically removed by PurgeCSS */
+[class="mt-auto!"] { margin-top: auto !important; }
+[class="mr-auto!"] { margin-right: auto !important; }
+[class="mb-auto!"] { margin-bottom: auto !important; }
+[class="ml-auto!"] { margin-left: auto !important; }
 
 .mh-1 { margin-right: -1rem; margin-left: -1rem; }
 .mv-1 { margin-top: -1rem; margin-bottom: -1rem; }

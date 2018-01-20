@@ -43,3 +43,15 @@
     }
   }
 }
+
+.t-unset { top: unset; }
+.r-unset { right: unset; }
+.b-unset { bottom: unset; }
+.l-unset { left: unset; }
+/* FIXME: These aren't working! */
+/* stylelint-disable declaration-no-important */
+[class="t-unset!"] { top: unset !important; }
+[class="r-unset!"] { right: unset !important; }
+[class="b-unset!"] { bottom: unset !important; }
+[class="l-unset!"] { left: unset !important; }
+/* stylelint-enable declaration-no-important */
