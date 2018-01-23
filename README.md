@@ -11,7 +11,7 @@ _NOTE: This is currently a work in progress and is not recommended for productio
 
 ## Overview
 
-The styles are designed around the types of projects we do at [We Are Genki](https://wearegenki.com) — ecommerce, microsites, next-gen web apps — but are flexible enough for any web design use.
+The framework is designed around the types of projects we do at [We Are Genki](https://wearegenki.com) — ecommerce, microsites, and next-gen web apps — but are flexible enough for any web design use.
 
 Features:
 
@@ -22,7 +22,7 @@ Features:
 
 Technologies:
 
-* CSS grid layout
+* CSS Grid Layout
 * [PostCSS](http://postcss.org)
 * [Vue](https://vuejs.org/) components
 * [Marko](https://markojs.com) components
