@@ -40,7 +40,7 @@
         @click="active = name"
         :href="`#${encodeURIComponent(name)}`"
         class="btn-tab ttu bold"
-        :class="{ 'active': active === name }"
+        :class="{ 'btn-tab-active': active === name }"
         role="tab"
       >
         {{ name }}
@@ -85,10 +85,10 @@ export default {
     text-decoration: none;
     border-bottom-color: var(--tab-hover-border-colour);
   }
+}
 
-  &.active {
-    border-bottom-color: var(--tab-border-colour);
-    cursor: default;
-  }
+.btn-tab-active {
+  border-bottom-color: var(--tab-border-colour);
+  cursor: default;
 }
 </style>

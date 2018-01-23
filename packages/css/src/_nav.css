@@ -45,7 +45,7 @@
 /* Minimal navbar (lightweight alternative to navbar component) */
 
 /* top navbar menu */
-.navbar {
+.navbar-mini {
   color: var(--navbar-font-colour);
   background-color: var(--navbar-bg-colour);
   box-shadow: var(--navbar-shadow);

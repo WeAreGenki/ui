@@ -30,7 +30,7 @@ TODO: Rewrite this: new changes since we now have @wearegenki/icons
 <!-- TODO: Use v-once in a more logical way (how might we run perf benchmarks?) -->
 
 <template>
-  <header class="navbar-fixed z5" :class="{ 'active': scrolled || showNav }">
+  <header class="navbar z5" :class="{ 'active': scrolled || showNav }">
     <div class="df-l con">
       <button
         @click.stop="showNav = !showNav"
@@ -128,7 +128,7 @@ export default {
 <style>
 @import "@wearegenki/ui/import";
 
-.navbar-fixed {
+.navbar {
   position: fixed;
   top: 0;
   right: 0;

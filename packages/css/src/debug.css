@@ -5,15 +5,22 @@
     Extra features for debugging use. This file is disabled by default, you need
     to manually include this file to use these styles.
 
+  TIP:
+    To debug layout issues, try the pesticide chrome extension:
+    https://github.com/mrmrs/pesticide
 */
 
 /* stylelint-disable declaration-no-important */
 
 :root {
-  --use-animations: true; /* provides a way to disable animations (for debugging) */
+  /*
+   * A way to disable CSS animations -- this doesn't remove the animation styles,
+   * it just overrides them globally so it's not intended for production use.
+   */
+  --use-animations: true;
 }
 
-/* Disable animations override */
+/* Disable animations */
 
 @if NOT (var(--use-animations)) {
   html,
