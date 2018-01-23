@@ -192,7 +192,10 @@ export default {
     },
     down() {
       // jump to last availiable item if index is out of bounds (e,g, after filtering)
-      if (this.i >= this.list.length - 1) this.i = this.list.length - 1;
+      if (this.i >= this.list.length - 1) {
+        this.i = this.list.length - 1;
+        return;
+      }
 
       let steps = 1;
 
