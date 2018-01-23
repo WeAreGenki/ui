@@ -34,7 +34,10 @@
     transform var(--tooltip-animate-speed) ease-in,
     opacity var(--tooltip-animate-speed) ease-in;
   transform: scale(0.85);
-  will-change: transform, opacity;
+
+  @if var(--tooltip-optimize) {
+    will-change: transform, opacity;
+  }
 
   @if var(--use-drop-shadow) {
     filter: drop-shadow(var(--tooltip-shadow));

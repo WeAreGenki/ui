@@ -26,13 +26,19 @@
       drop-shadow(var(--card-touch-shadow1))
       drop-shadow(var(--card-touch-shadow2));
     transition: transform var(--card-touch-animate-speed) ease, filter var(--card-touch-animate-speed) ease;
-    will-change: transform, filter;
+
+    @if var(--card-touch-optimize) {
+      will-change: transform, filter;
+    }
   } @else { /* stylelint-disable-line */
     box-shadow:
       var(--card-touch-shadow1-legacy),
       var(--card-touch-shadow2-legacy);
     transition: transform var(--card-touch-animate-speed) ease, box-shadow var(--card-touch-animate-speed) ease;
-    will-change: transform, box-shadow;
+
+    @if var(--card-touch-optimize) {
+      will-change: transform, box-shadow;
+    }
   }
 
   &:hover {

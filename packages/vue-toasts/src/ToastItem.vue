@@ -94,7 +94,10 @@ export default {
   color: var(--toast-item-font-colour);
   background-color: var(--toast-item-bg-colour);
   transition: transform var(--toast-item-animate-in-speed) ease-out;
-  will-change: transform;
+
+  @if var(--toast-item-optimize) {
+    will-change: transform;
+  }
 
   @if var(--use-drop-shadow) {
     filter: drop-shadow(var(--toast-item-shadow));

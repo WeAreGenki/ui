@@ -107,7 +107,10 @@ export default {
   box-shadow: var(--input-toggle-inner-shadow);
   transition: background-color var(--input-toggle-animate-out-speed) ease-out;
   transition-delay: 0s;
-  will-change: background-color;
+
+  @if var(--input-toggle-optimize) {
+    will-change: background-color;
+  }
 
   @if var(--use-drop-shadow) {
     filter: drop-shadow(var(--btn-shadow));
@@ -143,7 +146,10 @@ export default {
     border: 1px solid var(--btn-disabled-border-colour);
     box-shadow: none; /* inner shadow */
     transition: none;
-    will-change: auto;
+
+    @if var(--input-toggle-optimize) {
+      will-change: auto;
+    }
 
     @if var(--use-drop-shadow) {
       filter: none;
@@ -174,7 +180,10 @@ export default {
   border-radius: var(--btn-radius);
   box-shadow: var(--input-toggle-slider-inner-shadow);
   transition: transform var(--input-toggle-animate-in-speed) ease-out;
-  will-change: transform;
+
+  @if var(--input-toggle-optimize) {
+    will-change: transform;
+  }
 
   .input-toggle-checked > & {
     transform: translateX(100%);
@@ -188,7 +197,10 @@ export default {
   [disabled] > & {
     box-shadow: none; /* inner shadow */
     transition: none;
-    will-change: auto;
+
+    @if var(--input-toggle-optimize) {
+      will-change: auto;
+    }
   }
 
   /* stylelint-disable-next-line no-descending-specificity */

@@ -30,7 +30,7 @@ TODO: Rewrite this: new changes since we now have @wearegenki/icons
 <!-- TODO: Use v-once in a more logical way (how might we run perf benchmarks?) -->
 
 <template>
-  <header class="navbar z5" :class="{ 'active': scrolled || showNav }">
+  <header class="navbar z5" :class="{ 'navbar-active': scrolled || showNav }">
     <div class="df-l con">
       <button
         @click.stop="showNav = !showNav"
@@ -140,20 +140,17 @@ export default {
     transition:
       filter var(--navbar-shadow-fade-speed) ease,
       transform var(--navbar-animate-speed) ease;
-    will-change: filter, transform;
 
-    &.active {
-      filter: drop-shadow(var(--navbar-shadow));
-      transform: translateY(-3px);
-    }
+      @if var(--navbar-optimize) {
+        will-change: filter, transform;
+      }
   } @else { /* stylelint-disable-line */
     > .con {
       transition: transform var(--navbar-animate-speed) ease;
-      will-change: transform;
-    }
 
-    &.active > .con {
-      transform: translateY(-3px);
+      @if var(--navbar-optimize) {
+        will-change: transform;
+      }
     }
 
     &::after {
@@ -167,16 +164,32 @@ export default {
       box-shadow: var(--navbar-shadow-legacy);
       opacity: 0;
       transition: opacity var(--navbar-shadow-fade-speed) ease;
-      will-change: opacity;
-    }
 
-    &.active::after {
-      opacity: 1;
+      @if var(--navbar-optimize) {
+        will-change: opacity;
+      }
     }
   }
 
   .nav-link {
     margin-top: 0.2rem;
+  }
+}
+
+.navbar-active {
+  @if var(--use-drop-shadow) {
+    & {
+      filter: drop-shadow(var(--navbar-shadow));
+      transform: translateY(-3px);
+    }
+  } @else { /* stylelint-disable-line */
+    & > .con {
+      transform: translateY(-3px);
+    }
+
+    &::after {
+      opacity: 1;
+    }
   }
 }
 

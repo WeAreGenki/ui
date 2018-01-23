@@ -223,7 +223,10 @@ export default {
   top: calc(50% - (var(--input-select-caret-size) / 2));
   right: 0.75rem;
   pointer-events: none;
-  will-change: transform;
+
+  @if var(--input-select-optimize) {
+    will-change: transform;
+  }
 
   @mixin triangle bottom, var(--input-select-caret-size), var(--input-select-caret-colour);
 
@@ -248,7 +251,10 @@ export default {
   transition:
     transform var(--input-select-animate-speed) ease,
     opacity var(--input-select-animate-speed) ease;
-  will-change: transform, opacity;
+
+  @if var(--input-select-optimize) {
+    will-change: transform, opacity;
+  }
 
   @if var(--use-drop-shadow) {
     filter: drop-shadow(var(--input-select-shadow));
@@ -263,7 +269,10 @@ export default {
   /* don't render the dropdown when disabled to free memory */
   [disabled] ~ & {
     display: none;
-    will-change: auto;
+
+    @if var(--input-select-optimize) {
+      will-change: auto;
+    }
   }
 }
 
