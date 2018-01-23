@@ -28,7 +28,8 @@
   "dependencies": {
     "autoprefixer": "^7.2.5",
     "css-mqpacker": "^6.0.1",
-    "postcss-at-rules-variables": "0.1.2",
+    "cssstats": "^3.1.0",
+    "postcss-at-rules-variables": "^0.1.4",
     "postcss-calc": "^6.0.1",
     "postcss-color-function": "^4.0.1",
     "postcss-conditionals": "^3.0.0-beta.0",

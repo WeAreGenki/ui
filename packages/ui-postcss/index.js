@@ -3,7 +3,6 @@
 const path = require('path');
 const postcss = require('postcss');
 const cssImport = require('postcss-import');
-const url = require('postcss-url');
 const atVariables = require('postcss-at-rules-variables');
 const each = require('postcss-each');
 const mixins = require('postcss-mixins');
@@ -15,13 +14,16 @@ const calc = require('postcss-calc');
 const colorFunction = require('postcss-color-function');
 const mediaQueryPacker = require('css-mqpacker');
 const autoprefixer = require('autoprefixer');
+const url = require('postcss-url');
+const cssstats = require('cssstats');
 
 const mixinsPath = path.join(
   path.dirname(require.resolve('@wearegenki/css')),
   'src/mixins',
 );
 
-module.exports = postcss.plugin('ui-postcss', (opts = {}) => {
+// PostCSS presets plugin
+module.exports.default = postcss.plugin('ui-postcss', (opts = {}) => {
   const mixinsDir = opts.mixinsDir ? [opts.mixinsDir] : [];
   mixinsDir.push(mixinsPath);
 
@@ -40,3 +42,16 @@ module.exports = postcss.plugin('ui-postcss', (opts = {}) => {
     .use(autoprefixer({ remove: false, flexbox: 'no-2009' }))
     .use(url);
 });
+
+// generate stats about the CSS
+module.exports.stats = function getStats(css) {
+  postcss()
+    // .use(cssstats())
+    .use(cssstats)
+    .process(css)
+    .then((result) => {
+      result.messages.forEach((message) => {
+        console.log(message); // eslint-disable-line no-console
+      });
+    });
+};
