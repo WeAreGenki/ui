@@ -27,6 +27,10 @@ Technologies:
 * [Vue](https://vuejs.org/) components
 * [Marko](https://markojs.com) components
 
+## Documentation
+
+To see [live examples](https://labs.wearegenki.com/ui/examples) and the docs, visit [labs.wearegenki.com/ui](https://labs.wearegenki.com/ui).
+
 ## Usage
 
 TODO: Write me :)
@@ -53,6 +57,10 @@ _NOTE: Older browser compatibility via progressive fallback is planned and will 
 ## Known issues
 
 Builds are designed to run on *nix systems and will likely fail on Windows machines.
+
+## Licence
+
+`@wearegenki/ui` is an Apache-2.0 licensed open source project. See [LICENCE](https://github.com/WeAreGenki/ui/blob/master/LICENCE).
 
 -----
 
