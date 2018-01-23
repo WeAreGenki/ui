@@ -96,6 +96,11 @@
   }
 }
 
+/* smaller button size */
+.btn-mini {
+  padding: calc(var(--btn-padding-y) / 2) calc(var(--btn-padding-x) / 2);
+}
+
 /* spacing between buttons */
 .btn + .btn {
   margin-left: var(--btn-margin-between);
