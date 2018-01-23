@@ -31,14 +31,6 @@ Technologies:
 
 To see [live examples](https://labs.wearegenki.com/ui/examples) and the docs, visit [labs.wearegenki.com/ui](https://labs.wearegenki.com/ui).
 
-## Usage
-
-TODO: Write me :)
-
-```bash
-yarn add @wearegenki/ui
-```
-
 ## Browser compatibility
 
 Because this framework uses [CSS Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) it's limited to [browsers that support it](http://caniuse.com/#feat=css-grid), which currently include:
@@ -56,7 +48,7 @@ _NOTE: Older browser compatibility via progressive fallback is planned and will 
 
 ## Known issues
 
-Builds are designed to run on *nix systems and will likely fail on Windows machines.
+Builds are designed to run on *nix systems and may fail on Windows machines.
 
 ## Licence
 
