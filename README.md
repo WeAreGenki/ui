@@ -1,8 +1,3 @@
-<!--
-  TODO:
-    - Write about components for people who don't know anything about Vue or Marko (most devs will never have seen Marko in particular).
--->
-
 # @wearegenki/ui
 
 A friendly UI framework which aims to be straightforward, intuitive, and high performance. Uses modern and futuristic tools and approach. Intended to be used in Vue or Marko projects or as standalone CSS.
