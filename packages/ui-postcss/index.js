@@ -44,6 +44,7 @@ module.exports.default = postcss.plugin('ui-postcss', (opts = {}) => {
 });
 
 // generate stats about the CSS
+// REF: https://github.com/cssstats/core
 module.exports.stats = function getStats(css) {
   postcss()
     // .use(cssstats())

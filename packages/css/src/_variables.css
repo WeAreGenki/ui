@@ -66,8 +66,8 @@
   --secondary-accent: var(--purple-a200);
   --subtle: var(--blue-grey-200); /* footer, title subheading */
   --dark: var(--blue-grey-800);
-  --body-bg-colour: var(--grey-50);
   --body-font-colour: var(--blue-grey-900);
+  --body-bg-colour: var(--grey-50);
   --alt-bg-colour: var(--grey-100); /* alternating background in lists, tables, etc. */
 
   /* Shadows */
@@ -289,7 +289,7 @@
   --tab-hover-border-colour: var(--grey-400);
 
   /* @wearegenki/vue-directive-tooltip custom directive */
-  --tooltip-optimize: var(--optimize);
+  --tooltip-optimize: var(--optimize); /* setting this to true is recommended for old browsers in some use cases to prevent rendering bugs */
   --tooltip-zindex: 1; /* relative to the parent element */
   --tooltip-padding-x: 1rem;
   --tooltip-padding-y: 0.75rem;
