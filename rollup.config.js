@@ -11,8 +11,8 @@ import pkg from './package.json';
 
 const banner = `/*!
 * @wearegenki/ui v${pkg.version} (${pkg.homepage})
-* Copyright 2017-${new Date().getFullYear()} ${pkg.author}
-* Licensed under Apache-2.0 (https://github.com/WeAreGenki/ui/blob/master/LICENSE)
+* Copyright ${new Date().getFullYear()} ${pkg.author}
+* Apache-2.0 Licensed (https://github.com/WeAreGenki/ui/blob/master/LICENSE)
 */`;
 
 // FIXME: Iterate over each component, process, and output render function to it's own directory (?) in ./lib
