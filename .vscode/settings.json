@@ -7,7 +7,8 @@
     "marko",
     "vue"
   ],
-  "spellright.language": "en_AU", // recommended dictionary: https://github.com/MaxMilton/hunspell-dictionary
+  // recommended dictionary: https://github.com/MaxMilton/hunspell-dictionary
+  // "spellright.language": "en_AU",
   "spellright.documentTypes": [
     "css",
     "html",
