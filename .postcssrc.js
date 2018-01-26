@@ -1,6 +1,8 @@
+'use strict';
+
 module.exports = {
   plugins: {
-    '@wearegenki/ui-postcss': {},
+    '@wearegenki/postcss-config': {},
   },
 };
 
