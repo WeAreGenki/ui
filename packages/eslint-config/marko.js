@@ -1,4 +1,4 @@
-// extra settings for Vue components
+// extra settings for Marko components
 
 module.exports = {
   extends: [
