@@ -45,10 +45,10 @@ module.exports.default = postcss.plugin('ui-postcss', (opts = {}) => {
 
 // generate stats about the CSS
 // REF: https://github.com/cssstats/core
+// FIXME: Finish this implementation and write a usage guide
 module.exports.stats = function getStats(css) {
   postcss()
-    // .use(cssstats())
-    .use(cssstats)
+    .use(cssstats) // TODO: If this doesn't work then use cssstats()
     .process(css)
     .then((result) => {
       result.messages.forEach((message) => {
