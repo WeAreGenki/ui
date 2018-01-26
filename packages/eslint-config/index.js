@@ -11,8 +11,8 @@ module.exports = {
     'html',
   ],
   parserOptions: {
-    ecmaVersion: 8,
-    sourceType: 'module',
+    ecmaVersion: 5,
+    sourceType: 'script',
   },
   settings: {
     'import/resolver': {
@@ -26,22 +26,6 @@ module.exports = {
     'html/html-extensions': ['.html', '.marko'], // not .vue; it has its own parser
   },
   rules: {
-    'import/extensions': ['error', 'always', {
-      js: 'never',
-      json: 'never',
-      marko: 'never',
-      vue: 'never',
-    }],
-    'no-param-reassign': ['error', {
-      props: true,
-      ignorePropertyModificationsFor: [
-        'state', // vuex state
-      ],
-    }],
-    'no-debugger': isProduction ? 'error' : 'off',
-    'no-underscore-dangle': 'off',
-    'object-curly-spacing': ['error', 'always', { objectsInObjects: false }],
-    'object-curly-newline': ['error', { consistent: true }],
     'comma-dangle': ['error', {
       arrays: 'always-multiline',
       objects: 'always-multiline',
@@ -49,5 +33,21 @@ module.exports = {
       exports: 'always-multiline',
       functions: 'only-multiline', // optional awkward comma on multiline function params
     }],
+    'import/extensions': ['error', 'always', {
+      js: 'never',
+      json: 'never',
+      marko: 'never',
+      vue: 'never',
+    }],
+    'no-debugger': isProduction ? 'error' : 'off',
+    'no-param-reassign': ['error', {
+      props: true,
+      ignorePropertyModificationsFor: [
+        'state', // vuex state
+      ],
+    }],
+    'no-underscore-dangle': 'off',
+    'object-curly-newline': ['error', { consistent: true }],
+    'object-curly-spacing': ['error', 'always', { objectsInObjects: false }],
   },
 };
