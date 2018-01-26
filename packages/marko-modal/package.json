@@ -1,6 +1,6 @@
 {
   "name": "@wearegenki/marko-modal",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "A friendly UI framework which aims to be straightforward, intuitive, and high performance.",
   "keywords": [
     "css",
@@ -31,7 +31,7 @@
     "test": "exit 0"
   },
   "dependencies": {
-    "@wearegenki/css": "^0.3.0"
+    "@wearegenki/css": "^0.4.0"
   },
   "peerDependencies": {
     "marko": "^4.7.4"
