@@ -22,7 +22,8 @@
   },
   "exclude": [
     "node_modules",
-    "dist"
+    "dist",
+    ".cache"
   ],
   "typeAcquisition": {
     "enable": true
