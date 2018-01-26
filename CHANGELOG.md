@@ -9,6 +9,27 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.4.0] - 2018-01-27
+
+### Added
+
+- Disable _forced_ CSS hardware acceleration by default but allow enabling it via a new CSS variable `--optimize`. It's better to let the browser handle when something is hardware accelerated which, most of the time, results in smoother animations and better memory consumption.
+- New `min` CSS mixin.
+- New package [@wearegenki/eslint-config](https://www.npmjs.com/package/@wearegenki/eslint-config) which provides ESLint configuration presets. Currently comes with 3 variants, default/base, vue, and marko config.
+- Internal development tooling improvements; use `tsconfig.js` and `*.d.ts` files for a better development experience in VS Code.
+
+### Changed
+
+- BREAKING CHANGES:
+  - `@wearegenki/ui-postcss` renamed to `@wearegenki/postcss-config`.
+  - `@wearegenki/ui-stylelint` renamed to `@wearegenki/stylelint-config`.
+- Continued improvements to CSS styles.
+- Updated dependencies.
+
+### Fixed
+
+- Links in changelog
+
 ## [0.3.0] - 2018-01-14
 
 ### Added
@@ -82,8 +103,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Initial public release with a base set of styles, Vue components, and dev configs but without a working build system so only source files are usable.
 
-[Unreleased]: https://github.com/olivierlacan/keep-a-changelog/compare/v0.3.0...HEAD
-[0.3.0]: https://github.com/olivierlacan/keep-a-changelog/compare/v0.3.0...v0.2.0
-[0.2.0]: https://github.com/olivierlacan/keep-a-changelog/compare/v0.2.0...v0.1.1
-[0.1.1]: https://github.com/olivierlacan/keep-a-changelog/compare/v0.1.1...v0.1.0
-[0.1.0]: https://github.com/olivierlacan/keep-a-changelog/compare/v0.1.0...v0.0.0
+[Unreleased]: https://github.com/WeAreGenki/ui/compare/v0.4.0...HEAD
+[0.4.0]: https://github.com/WeAreGenki/ui/compare/v0.4.0...v0.3.0
+[0.3.0]: https://github.com/WeAreGenki/ui/compare/v0.3.0...v0.2.0
+[0.2.0]: https://github.com/WeAreGenki/ui/compare/v0.2.0...v0.1.1
+[0.1.1]: https://github.com/WeAreGenki/ui/compare/v0.1.1...v0.1.0
+[0.1.0]: https://github.com/WeAreGenki/ui/compare/v0.1.0...v0.0.0
