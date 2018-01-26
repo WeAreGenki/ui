@@ -1,7 +1,7 @@
 {
-  "name": "@wearegenki/ui-eslint",
+  "name": "@wearegenki/eslint-config",
   "version": "0.3.0",
-  "description": "A friendly UI framework which aims to be straightforward, intuitive, and high performance.",
+  "description": "ESLint presets for use in We Are Genki projects.",
   "keywords": [
     "eslint",
     "vue",

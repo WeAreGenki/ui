@@ -3,7 +3,7 @@
 module.exports = {
   root: true,
   extends: [
-    '@wearegenki/ui-eslint/vue',
+    '@wearegenki/eslint-config/vue',
   ],
   settings: {
     rules: {
