@@ -1,7 +1,7 @@
 {
-  "name": "@wearegenki/ui-postcss",
+  "name": "@wearegenki/postcss-config",
   "version": "0.3.0",
-  "description": "A friendly UI framework which aims to be straightforward, intuitive, and high performance.",
+  "description": "PostCSS config preset and tools for use in We Are Genki projects.",
   "keywords": [
     "css",
     "cssgrid",
