@@ -1,14 +1,16 @@
 # @wearegenki/ui-eslint
 
-ESLint presets for use in We Are Genki projects.
+ESLint config presets for use in We Are Genki projects.
 
 ## Overview
 
-FIXME: Deprecate `@wearegenki/ui-eslint`, redirect it to this!
+FIXME: Deprecate `@wearegenki/ui-eslint` + redirect it to this!
 
 TODO: Write me!
 
-Part of [@wearegenki/ui](https://github.com/WeAreGenki/ui) — a friendly UI framework which aims to be straightforward, intuitive, and high performance.
+## Licence
+
+This package is part of `@wearegenki/ui`, an Apache-2.0 licensed open source project. See [LICENCE](https://github.com/WeAreGenki/ui/blob/master/LICENCE).
 
 -----
 

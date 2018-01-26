@@ -1,7 +1,7 @@
 {
   "name": "@wearegenki/eslint-config",
   "version": "0.3.0",
-  "description": "ESLint presets for use in We Are Genki projects.",
+  "description": "ESLint config presets for use in We Are Genki projects.",
   "keywords": [
     "eslint",
     "vue",
