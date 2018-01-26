@@ -23,7 +23,7 @@ const mixinsPath = path.join(
 );
 
 // PostCSS presets plugin
-module.exports.default = postcss.plugin('ui-postcss', (opts = {}) => {
+module.exports.default = postcss.plugin('postcss-config', (opts = {}) => {
   const mixinsDir = opts.mixinsDir ? [opts.mixinsDir] : [];
   mixinsDir.push(mixinsPath);
 

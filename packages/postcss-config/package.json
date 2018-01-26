@@ -10,7 +10,7 @@
     "vue",
     "wearegenki"
   ],
-  "repository": "https://github.com/WeAreGenki/ui/tree/master/packages/ui-postcss",
+  "repository": "https://github.com/WeAreGenki/ui/tree/master/packages/postcss-config",
   "bugs": {
     "url": "https://github.com/WeAreGenki/ui/issues"
   },

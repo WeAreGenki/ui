@@ -26,11 +26,11 @@
   },
   "dependencies": {
     "@wearegenki/css": "^0.3.0",
+    "@wearegenki/eslint-config": "^0.3.0",
     "@wearegenki/icons": "^0.3.0",
-    "@wearegenki/ui-eslint": "^0.3.0",
+    "@wearegenki/postcss-config": "^0.3.0",
+    "@wearegenki/stylelint-config": "^0.3.0",
     "@wearegenki/ui-marko": "^0.3.0",
-    "@wearegenki/ui-postcss": "^0.3.0",
-    "@wearegenki/ui-stylelint": "^0.3.0",
     "@wearegenki/ui-vue": "^0.3.0"
   },
   "optionalDependencies": {

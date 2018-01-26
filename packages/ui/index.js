@@ -2,7 +2,7 @@
 
 'use-strict';
 
-const uiPostcssPreset = require('@wearegenki/ui-postcss');
+const uiPostcssPreset = require('@wearegenki/postcss-config');
 
 module.exports = {
   uiPostcssPreset,

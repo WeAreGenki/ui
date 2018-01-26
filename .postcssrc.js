@@ -24,7 +24,7 @@ module.exports = {
 
 // module.exports = {
 //   plugins: {
-//     '@wearegenki/ui-postcss': {
+//     '@wearegenki/postcss-config': {
 //       // importPath: ['src'],
 //       mixinsDir: 'src/css/mixins',
 //       // verbose: true,

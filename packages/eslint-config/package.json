@@ -9,7 +9,7 @@
     "markojs",
     "wearegenki"
   ],
-  "repository": "https://github.com/WeAreGenki/ui/tree/master/packages/ui-eslint",
+  "repository": "https://github.com/WeAreGenki/ui/tree/master/packages/eslint-config",
   "bugs": {
     "url": "https://github.com/WeAreGenki/ui/issues"
   },

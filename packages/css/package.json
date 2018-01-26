@@ -34,7 +34,7 @@
     "@wearegenki/fonts": "0.3.0"
   },
   "devDependencies": {
-    "@wearegenki/ui-postcss": "^0.3.0"
+    "@wearegenki/postcss-config": "^0.3.0"
   },
   "publishConfig": {
     "access": "public"

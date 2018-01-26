@@ -2,7 +2,7 @@
 
 module.exports = {
   extends: [
-    '@wearegenki/ui-eslint',
+    '@wearegenki/eslint-config',
     'plugin:vue/recommended',
   ],
   plugins: [

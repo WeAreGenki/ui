@@ -9,7 +9,7 @@
     "stylelint",
     "wearegenki"
   ],
-  "repository": "https://github.com/WeAreGenki/ui/tree/master/packages/ui-stylelint",
+  "repository": "https://github.com/WeAreGenki/ui/tree/master/packages/stylelint-config",
   "bugs": {
     "url": "https://github.com/WeAreGenki/ui/issues"
   },
