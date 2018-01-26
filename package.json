@@ -40,7 +40,7 @@
     "postcss": "^6.0.16",
     "postcss-debug": "^0.4.2",
     "postcss-load-config": "^1.2.0",
-    "rollup": "^0.54.1",
+    "rollup": "^0.55.0",
     "rollup-plugin-alias": "^1.4.0",
     "rollup-plugin-babel": "^3.0.3",
     "rollup-plugin-commonjs": "^8.2.6",
