@@ -15,10 +15,9 @@ const colorFunction = require('postcss-color-function');
 const mediaQueryPacker = require('css-mqpacker');
 const autoprefixer = require('autoprefixer');
 const url = require('postcss-url');
-const cssstats = require('cssstats');
 
 /** PostCSS configuration preset. */
-module.exports.default = postcss.plugin('postcss-config', (opts = {}) => {
+module.exports = postcss.plugin('postcss-config', (opts = {}) => {
   const mixinsDir = [];
 
   if (opts.minimal || !opts.standalone) {
@@ -57,20 +56,3 @@ module.exports.default = postcss.plugin('postcss-config', (opts = {}) => {
       .use(autoprefixer({ remove: false, flexbox: 'no-2009' }))
       .use(url);
 });
-
-/**
- * Generate statistics about input CSS.
- * @see https://github.com/cssstats/core
- * @param {string} css The CSS to evaluate.
- */
-// FIXME: Finish this implementation and write a usage guide
-module.exports.getStats = function getStats(css) {
-  postcss()
-    .use(cssstats) // TODO: If this doesn't work then use cssstats()
-    .process(css)
-    .then((result) => {
-      result.messages.forEach((message) => {
-        console.log(message);
-      });
-    });
-};
