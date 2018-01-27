@@ -28,6 +28,10 @@
 
 -->
 
+<!--
+  TODO: Better looking tab UI
+  ↳ REF: https://cloud.google.com/vision/
+-->
 <!-- TODO: Make it more visually obvious that the tabs are clickable -->
 <!-- TODO: Add ARIA recommendations + role=tablist might not be correct on <nav> -->
 
