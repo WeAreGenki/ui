@@ -59,7 +59,7 @@ module.exports.default = postcss.plugin('postcss-config', (opts = {}) => {
 });
 
 /**
- * Generate stats about CSS.
+ * Generate statistics about input CSS.
  * @see https://github.com/cssstats/core
  * @param {string} css The CSS to evaluate.
  */
