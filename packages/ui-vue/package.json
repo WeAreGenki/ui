@@ -29,6 +29,7 @@
   "dependencies": {
     "@wearegenki/vue-code-editor": "^0.4.0",
     "@wearegenki/vue-debug-breakpoints": "^0.4.0",
+    "@wearegenki/vue-directive-tooltip": "^0.4.0",
     "@wearegenki/vue-directive-view": "^0.4.0",
     "@wearegenki/vue-input-dropdown": "^0.2.0",
     "@wearegenki/vue-input-select": "^0.4.0",
