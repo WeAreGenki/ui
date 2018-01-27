@@ -37,7 +37,6 @@ module.exports = postcss.plugin('postcss-config', (opts = {}) => {
       .use(atImport)
       .use(nested)
       .use(customMedia)
-      .use(mediaQueryPacker)
       .use(autoprefixer)
 
     // full featured version
