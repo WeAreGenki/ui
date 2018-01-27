@@ -9,6 +9,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.4.1] - 2018-01-28
+
+### Changed
+
+- Small change to eslint preset for better compatibility with vuex mutations.
+
+### Fixed
+
+- Bug in @wearegenki/postcss-config which prevented use when used with the `minimal: true` option.
+- Add missing dependency `@wearegenki/vue-directive-tooltip` in `@wearegenki/ui-vue`.
+
 ## [0.4.0] - 2018-01-27
 
 ### Added
@@ -103,7 +114,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Initial public release with a base set of styles, Vue components, and dev configs but without a working build system so only source files are usable.
 
-[Unreleased]: https://github.com/WeAreGenki/ui/compare/v0.4.0...HEAD
+[Unreleased]: https://github.com/WeAreGenki/ui/compare/v0.4.1...HEAD
+[0.4.1]: https://github.com/WeAreGenki/ui/compare/v0.4.1...v0.4.0
 [0.4.0]: https://github.com/WeAreGenki/ui/compare/v0.4.0...v0.3.0
 [0.3.0]: https://github.com/WeAreGenki/ui/compare/v0.3.0...v0.2.0
 [0.2.0]: https://github.com/WeAreGenki/ui/compare/v0.2.0...v0.1.1
