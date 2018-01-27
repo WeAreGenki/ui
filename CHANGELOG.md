@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Fixed
+
+- Stabilise @wearegenki/postcss-config minimal mode. Should work in all cases now.
+
 ## [0.4.1] - 2018-01-28
 
 ### Changed
@@ -17,7 +21,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 
-- Bug in @wearegenki/postcss-config which prevented use when used with the `minimal: true` option.
+- Bug in `@wearegenki/postcss-config` which prevented use when used with the `minimal: true` option.
 - Add missing dependency `@wearegenki/vue-directive-tooltip` in `@wearegenki/ui-vue`.
 
 ## [0.4.0] - 2018-01-27
