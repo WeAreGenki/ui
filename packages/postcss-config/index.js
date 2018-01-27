@@ -18,9 +18,18 @@ const url = require('postcss-url');
 
 /** PostCSS configuration preset. */
 module.exports = postcss.plugin('postcss-config', (opts = {}) => {
+  if (opts.minimal) {
+    // reduced features version
+    return postcss()
+      .use(atImport)
+      .use(nested)
+      .use(customMedia)
+      .use(autoprefixer);
+  }
+
   const mixinsDir = [];
 
-  if (opts.minimal || !opts.standalone) {
+  if (!opts.standalone) {
     mixinsDir.push(path.join(
       path.dirname(require.resolve('@wearegenki/css')),
       'src/mixins'
@@ -31,27 +40,19 @@ module.exports = postcss.plugin('postcss-config', (opts = {}) => {
     }
   }
 
-  return opts.minimal
-    // reduced features version
-    ? postcss()
-      .use(atImport)
-      .use(nested)
-      .use(customMedia)
-      .use(autoprefixer)
-
-    // full featured version
-    : postcss()
-      .use(atImport({ path: opts.importPath || ['src'] }))
-      .use(atVariables)
-      .use(each)
-      .use(mixins({ mixinsDir }))
-      .use(nested)
-      .use(customProperties)
-      .use(conditionals)
-      .use(customMedia)
-      .use(calc({ warnWhenCannotResolve: opts.verbose }))
-      .use(colorFunction)
-      .use(mediaQueryPacker)
-      .use(autoprefixer({ remove: false, flexbox: 'no-2009' }))
-      .use(url);
+  // default full featured version
+  return postcss()
+    .use(atImport({ path: opts.importPath || ['src'] }))
+    .use(atVariables)
+    .use(each)
+    .use(mixins({ mixinsDir }))
+    .use(nested)
+    .use(customProperties)
+    .use(conditionals)
+    .use(customMedia)
+    .use(calc({ warnWhenCannotResolve: opts.verbose }))
+    .use(colorFunction)
+    .use(mediaQueryPacker)
+    .use(autoprefixer({ remove: false, flexbox: 'no-2009' }))
+    .use(url);
 });
