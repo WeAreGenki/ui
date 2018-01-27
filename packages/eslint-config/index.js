@@ -46,6 +46,7 @@ module.exports = {
         'state', // vuex state
       ],
     }],
+    'no-return-assign': ['error', 'except-parens'],
     'no-underscore-dangle': 'off',
     'object-curly-newline': ['error', { consistent: true }],
     'object-curly-spacing': ['error', 'always', { objectsInObjects: false }],
