@@ -29,7 +29,7 @@
     "@wearegenki/eslint-config": "^0.4.1",
     "@wearegenki/icons": "^0.4.0",
     "@wearegenki/postcss-config": "^0.4.1",
-    "@wearegenki/stylelint-config": "^0.4.0",
+    "@wearegenki/stylelint-config": "^0.4.1",
     "@wearegenki/ui-marko": "^0.4.1",
     "@wearegenki/ui-vue": "^0.4.1"
   },
