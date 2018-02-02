@@ -9,9 +9,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.4.2] - 2018-02-03
+
+### Changed
+
+- Updated dependencies.
+
 ### Fixed
 
-- Stabilise @wearegenki/postcss-config minimal mode. Should work in all cases now.
+- Many v0.4.1 packages didn't get versioned or published possibly due to trying to publish from the `devel` branch (oops!). This release publishes those packages correctly.
+- Stabilise `@wearegenki/postcss-config` minimal mode. Should now work in all cases.
 
 ## [0.4.1] - 2018-01-28
 
@@ -118,7 +125,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Initial public release with a base set of styles, Vue components, and dev configs but without a working build system so only source files are usable.
 
-[Unreleased]: https://github.com/WeAreGenki/ui/compare/v0.4.1...HEAD
+[Unreleased]: https://github.com/WeAreGenki/ui/compare/v0.4.2...HEAD
+[0.4.2]: https://github.com/WeAreGenki/ui/compare/v0.4.2...v0.4.1
 [0.4.1]: https://github.com/WeAreGenki/ui/compare/v0.4.1...v0.4.0
 [0.4.0]: https://github.com/WeAreGenki/ui/compare/v0.4.0...v0.3.0
 [0.3.0]: https://github.com/WeAreGenki/ui/compare/v0.3.0...v0.2.0
