@@ -1,6 +1,6 @@
 {
   "name": "@wearegenki/eslint-config",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "ESLint config presets for use in We Are Genki projects.",
   "keywords": [
     "eslint",
