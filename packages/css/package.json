@@ -31,7 +31,7 @@
     "test": "exit 0"
   },
   "optionalDependencies": {
-    "@wearegenki/fonts": "0.4.0"
+    "@wearegenki/fonts": "0.4.2"
   },
   "devDependencies": {
     "@wearegenki/postcss-config": "^0.4.1"
