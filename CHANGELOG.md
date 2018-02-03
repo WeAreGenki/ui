@@ -126,10 +126,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Initial public release with a base set of styles, Vue components, and dev configs but without a working build system so only source files are usable.
 
 [Unreleased]: https://github.com/WeAreGenki/ui/compare/v0.4.2...HEAD
-[0.4.2]: https://github.com/WeAreGenki/ui/compare/v0.4.2...v0.4.1
-[0.4.1]: https://github.com/WeAreGenki/ui/compare/v0.4.1...v0.4.0
-[0.4.0]: https://github.com/WeAreGenki/ui/compare/v0.4.0...v0.3.0
-[0.3.0]: https://github.com/WeAreGenki/ui/compare/v0.3.0...v0.2.0
-[0.2.0]: https://github.com/WeAreGenki/ui/compare/v0.2.0...v0.1.1
-[0.1.1]: https://github.com/WeAreGenki/ui/compare/v0.1.1...v0.1.0
-[0.1.0]: https://github.com/WeAreGenki/ui/compare/v0.1.0...v0.0.0
+[0.4.2]: https://github.com/WeAreGenki/ui/compare/v0.4.1...v0.4.2
+[0.4.1]: https://github.com/WeAreGenki/ui/compare/v0.4.0...v0.4.1
+[0.4.0]: https://github.com/WeAreGenki/ui/compare/v0.3.0...v0.4.0
+[0.3.0]: https://github.com/WeAreGenki/ui/compare/v0.2.0...v0.3.0
+[0.2.0]: https://github.com/WeAreGenki/ui/compare/v0.1.1...v0.2.0
+[0.1.1]: https://github.com/WeAreGenki/ui/compare/v0.1.0...v0.1.1
+[0.1.0]: https://github.com/WeAreGenki/ui/compare/v0.0.0...v0.1.0
