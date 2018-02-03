@@ -2,6 +2,7 @@
   "name": "wearegenki-ui-monorepo",
   "private": true,
   "license": "Apache-2.0",
+  "homepage": "https://ui.wearegenki.com",
   "scripts": {
     "setup": "yarn && lerna bootstrap --use-workspaces",
     "update": "ncu && lerna exec --parallel -- ncu --reject /wearegenki/",
