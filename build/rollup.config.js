@@ -1,3 +1,12 @@
+// FIXME: Implement a proper build chain (this file is a legacy experiment)
+//  ↳ Probably a good idea to have a separate build flow for each type of package:
+//    - Vue component
+//    - Vue plugin
+//    - Marko component
+//    - Anything else or supplementary packages
+
+// REF: https://github.com/developit/microbundle (amazing package builder based on rollup)
+
 // REF: http://vuejs.github.io/rollup-plugin-vue/#/en/2.3/
 // REF: https://github.com/rollup/rollup-plugin-commonjs
 // REF: https://github.com/rollup/rollup-plugin-node-resolve
