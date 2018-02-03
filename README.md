@@ -24,7 +24,7 @@ Technologies:
 
 ## Documentation
 
-To see [live examples](https://labs.wearegenki.com/ui/examples) and the docs, visit [labs.wearegenki.com/ui](https://labs.wearegenki.com/ui).
+To see [live examples](https://ui.wearegenki.com/examples) and the docs, visit [ui.wearegenki.com](https://ui.wearegenki.com).
 
 ## Browser compatibility
 
