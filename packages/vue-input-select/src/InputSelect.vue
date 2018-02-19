@@ -1,4 +1,5 @@
 <!--
+
   INPUT SELECT COMPONENT
 
   README:
@@ -16,13 +17,19 @@
       { id: 'ex3', text: 'Example 3', disabled: true },
     ]
 
+  NOTE:
+    Object properties beginning or ending with __ are marked safe to mangle; the
+    name can be shortened at build time for smaller file size.
+
 -->
 
 <!--
   TODO: Possible future features (but avoid bloat and negative performance impact):
-    - Incorporate remaining WAI-ARIA recommendations
-    - Horizontal divider to visually group options (maybe with optional title)
-    - Different dropdown position when not enough space
+    - Incorporate remaining WAI-ARIA recommendations.
+    - Horizontal divider to visually group options (maybe with optional title).
+    - Different dropdown position when not enough space OR maybe just move the
+      viewport to be able to see the currently selected item if it's outside the
+      viewport.
 -->
 
 <template>
@@ -33,22 +40,22 @@
         text in the input.
     -->
     <input
-      @click="active ? false : open()"
-      @focus="open"
-      @blur="close"
-      @keydown.space="active ? false : open()"
-      @keydown.enter.prevent="active ? select('enter') : open()"
-      @keydown.esc="close"
-      @keydown.up.prevent="active ? up() : open()"
-      @keydown.down.prevent="active ? down() : open()"
-      v-model="valueText"
+      @click="active__ ? false : __open()"
+      @focus="__open"
+      @blur="__close"
+      @keydown.space="active__ ? false : __open()"
+      @keydown.enter.prevent="active__ ? __select('enter') : __open()"
+      @keydown.esc="__close"
+      @keydown.up.prevent="active__ ? __up() : __open()"
+      @keydown.down.prevent="active__ ? __down() : __open()"
+      v-model="__valueText"
       class="select"
-      :class="{ 'input-select-active': active }"
+      :class="{ 'input-select-active': active__ }"
       :id="id"
       :tabindex="disabled ? -1 : 0"
       role="listbox"
-      :placeholder="hasFilter && active ? filterHelp : placeholder"
-      :readonly="disabled === undefined && (!hasFilter || readonly || !active)"
+      :placeholder="filterable && active__ ? filterHelp : placeholder"
+      :readonly="disabled === undefined && (!filterable || readonly || !active__)"
       :disabled="disabled"
     >
     <span class="input-select-caret"/>
@@ -59,12 +66,12 @@
       * Uses custom directive v-view which must be installed globally
     -->
     <div
-      v-view="active"
-      @mousedown.prevent="select"
+      v-view="active__"
+      @mousedown.prevent="__select"
       class="input-select-dropdown w-100 z5 tl"
     >
       <div
-        v-for="(option, index) in list"
+        v-for="(option, index) in __list"
         :key="option.id"
         :data-id="option.id"
         class="input-select-option"
@@ -74,7 +81,7 @@
       >
         {{ option.text }}
       </div>
-      <div v-if="!list.length" class="pa3 grey">
+      <div v-if="!__list.length" class="pa3 grey">
         No matches
       </div>
     </div>
@@ -93,7 +100,7 @@ export default {
       type: Array,
       required: true,
     },
-    hasFilter: { // to disable filtering when necessary
+    filterable: { // to disable filtering when unnecessary
       type: Boolean,
       default: true,
     },
@@ -120,24 +127,24 @@ export default {
     },
   },
   data: () => ({
-    active: false,
-    filter: '',
+    active__: false,
+    filter__: '',
     i: 0, // index of the currently selected item
   }),
   computed: {
-    list() {
-      const search = this.filter.toLowerCase();
+    __list() {
+      const search = this.filter__.toLowerCase();
       const list = this.options.filter(option => option.text.toLowerCase().indexOf(search) > -1);
 
       // recalculate current item index after filtering
-      this.setIndex(list);
+      this.__setIndex(list);
 
       return list;
     },
-    valueText: {
+    __valueText: {
       get() {
-        if (this.hasFilter && this.active) {
-          return this.filter;
+        if (this.filterable && this.active__) {
+          return this.filter__;
         }
 
         const current = this.options.find(option => option.id === this.value);
@@ -145,64 +152,64 @@ export default {
         return current ? current.text : '';
       },
       set(value) {
-        this.filter = value;
+        this.filter__ = value;
       },
     },
   },
   methods: {
-    setIndex(list = this.list) {
+    __setIndex(list = this.__list) {
       // save the current item's index so we can highlight it in the list
       this.i = list.findIndex(option => option.id === this.value);
     },
-    open() {
+    __open() {
       if (this.disabled === undefined) {
-        this.setIndex();
-        this.active = true;
+        this.__setIndex();
+        this.active__ = true;
       }
     },
-    close() {
-      this.active = false;
-      this.filter = '';
+    __close() {
+      this.active__ = false;
+      this.filter__ = '';
     },
-    select(event) {
+    __select(event) {
       if (
         event.target
         && !event.target.disabled
         && event.target.dataset.id
       ) {
         this.$emit('input', event.target.dataset.id);
-        this.close();
-      } else if (event === 'enter' && !this.list[this.i].disabled) {
-        this.$emit('input', this.list[this.i].id);
-        this.close();
+        this.__close();
+      } else if (event === 'enter' && !this.__list[this.i].disabled) {
+        this.$emit('input', this.__list[this.i].id);
+        this.__close();
       }
     },
-    up() {
+    __up() {
       if (this.i <= 0) return;
 
       let steps = 1;
 
       // skip over disabled items or if there's no items left
-      while (this.list[this.i - steps].disabled) {
+      while (this.__list[this.i - steps].disabled) {
         steps += 1;
-        if (this.list[this.i - steps] === undefined) return;
+        if (this.__list[this.i - steps] === undefined) return;
       }
 
       this.i -= steps;
     },
-    down() {
+    __down() {
       // jump to last availiable item if index is out of bounds (e,g, after filtering)
-      if (this.i >= this.list.length - 1) {
-        this.i = this.list.length - 1;
+      if (this.i >= this.__list.length - 1) {
+        this.i = this.__list.length - 1;
         return;
       }
 
       let steps = 1;
 
       // skip over disabled items or if there's no items left
-      while (this.list[this.i + steps].disabled) {
+      while (this.__list[this.i + steps].disabled) {
         steps += 1;
-        if (this.list[this.i + steps] === undefined) return;
+        if (this.__list[this.i + steps] === undefined) return;
       }
 
       this.i += steps;
