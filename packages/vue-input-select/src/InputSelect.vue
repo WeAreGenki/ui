@@ -33,22 +33,22 @@
         text in the input.
     -->
     <input
-      @click="active ? false : open()"
+      @click="isOpen ? false : open()"
       @focus="open"
       @blur="close"
-      @keydown.space="active ? false : open()"
-      @keydown.enter.prevent="active ? select('enter') : open()"
+      @keydown.space="isOpen ? false : open()"
+      @keydown.enter.prevent="isOpen ? select('enter') : open()"
       @keydown.esc="close"
-      @keydown.up.prevent="active ? up() : open()"
-      @keydown.down.prevent="active ? down() : open()"
+      @keydown.up.prevent="isOpen ? up() : open()"
+      @keydown.down.prevent="isOpen ? down() : open()"
       v-model="valueText"
       class="select"
-      :class="{ 'input-select-active': active }"
+      :class="{ 'input-select-active': isOpen }"
       :id="id"
       :tabindex="disabled ? -1 : 0"
       role="listbox"
-      :placeholder="hasFilter && active ? filterHelp : placeholder"
-      :readonly="disabled === undefined && (!hasFilter || readonly || !active)"
+      :placeholder="filterable && isOpen ? filterHelp : placeholder"
+      :readonly="disabled === undefined && (!filterable || readonly || !isOpen)"
       :disabled="disabled"
     >
     <span class="input-select-caret"/>
@@ -59,7 +59,7 @@
       * Uses custom directive v-view which must be installed globally
     -->
     <div
-      v-view="active"
+      v-view="isOpen"
       @mousedown.prevent="select"
       class="input-select-dropdown w-100 z5 tl"
     >
@@ -105,22 +105,31 @@ export default {
       type: String,
       default: 'Choose...',
     },
-    // the below props will be attached to the input (rather than the wrapper div)
-    id: {
-      type: String,
-      default: undefined,
-    },
-    readonly: {
-      type: [String, Boolean],
-      default: undefined,
-    },
-    disabled: {
-      type: [String, Boolean],
-      default: undefined,
-    },
+
+    /**
+     * Native element attributes.
+     * These should to be attached to <input> rather than the wrapping <div>
+     * which is what Vue defaults to.
+     */
+    /* eslint-disable vue/require-default-prop */
+    id: String,
+    readonly: [String, Boolean],
+    disabled: [String, Boolean],
+    // id: {
+    //   type: String,
+    //   default: undefined,
+    // },
+    // readonly: {
+    //   type: [String, Boolean],
+    //   default: undefined,
+    // },
+    // disabled: {
+    //   type: [String, Boolean],
+    //   default: undefined,
+    // },
   },
   data: () => ({
-    active: false,
+    isOpen: false,
     filter: '',
     i: 0, // index of the currently selected item
   }),
@@ -134,9 +143,10 @@ export default {
 
       return list;
     },
+
     valueText: {
       get() {
-        if (this.hasFilter && this.active) {
+        if (this.filterable && this.isOpen) {
           return this.filter;
         }
 
@@ -150,20 +160,23 @@ export default {
     },
   },
   methods: {
-    setIndex(list = this.list) {
+    __setIndex(list = this.list) {
       // save the current item's index so we can highlight it in the list
       this.i = list.findIndex(option => option.id === this.value);
     },
+
     open() {
       if (this.disabled === undefined) {
-        this.setIndex();
-        this.active = true;
+        this.__setIndex();
+        this.isOpen = true;
       }
     },
+
     close() {
-      this.active = false;
+      this.isOpen = false;
       this.filter = '';
     },
+
     select(event) {
       if (
         event.target
