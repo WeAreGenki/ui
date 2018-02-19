@@ -62,7 +62,6 @@ TODO: Rewrite this: new changes since we now have @wearegenki/icons
         >
           {{ item.name }}
         </router-link>
-        scrolled: {{ hasScrolled__ }}
       </nav>
     </div>
   </header>
