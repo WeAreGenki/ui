@@ -37,7 +37,9 @@ ns
 parens
 postcssrc
 precompiled
+preconfigured
 preload
+preloader
 readonly
 Segoe
 serializer
