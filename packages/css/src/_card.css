@@ -43,6 +43,7 @@
 
   &:hover {
     text-decoration: unset; /* no need to underline links as it's obvious this element is interactive */
+    transition-duration: var(--card-touch-animate-speed); /* overrides <a> when .card-touch is used on a link */
 
     @if var(--use-drop-shadow) {
       filter:

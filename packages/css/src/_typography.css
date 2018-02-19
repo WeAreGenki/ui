@@ -107,9 +107,8 @@ a {
 
 /* Quotes */
 
-/* blockquote {} */
-
 .quote {
+  position: relative;
   font-size: var(--quote-font-size);
 
   &::before,
@@ -118,11 +117,17 @@ a {
     font-size: var(--quote-mark-font-size);
   }
 
+  /* use em not rem so it's relative to font size */
+  /* TODO: @TESTING: Check this works correctly with all fonts */
   &::before {
+    top: -0.28em;
+    left: -0.45em;
     content: "“";
   }
 
   &::after {
+    top: -0.25em;
+    margin-left: 0.1em;
     content: "”";
   }
 }

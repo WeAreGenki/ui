@@ -59,6 +59,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* TODO: Can the next 3 selectors/rules be merged more logically? */
 .btn,
 .select,
 button,
@@ -80,6 +81,10 @@ textarea {
   }
 }
 
+textarea {
+  cursor: text;
+}
+
 /* disabled elements */
 .disabled,
 [disabled],
@@ -89,7 +94,7 @@ textarea {
 
 /* simple horizontal rule */
 hr {
-  width: 100%;
+  /* width: 100%; *//* TODO: @TESTING: Check cross-browser + remove if unnecessary */
   margin: var(--hr-margin);
   border: 0;
   border-top: 1px solid var(--grey-300);

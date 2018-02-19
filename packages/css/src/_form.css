@@ -49,6 +49,15 @@ textarea {
     outline: var(--input-focus-outline);
   }
 
+  /* FIXME: Remove; failed experiment */
+  /* &:valid {
+    box-shadow: 0 0 0.5rem 0.15rem var(--input-valid-colour);
+  }
+
+  &:invalid {
+    box-shadow: 0 0 0.5rem 0.15rem var(--input-invalid-colour);
+  } */
+
   &::placeholder {
     color: var(--input-placeholder-font-colour);
   }

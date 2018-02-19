@@ -5,10 +5,9 @@
 .slant,
 .slant-cta {
   position: relative;
-  padding: 3rem 0;
-  /* padding: 13rem 0; */
+  padding: 2rem 0;
   margin: 8rem 0;
-  color: var(--white);
+  color: color(var(--white) alpha(0.9));
   background-color: var(--blue-grey-700);
 
   &::before,
@@ -33,10 +32,18 @@
     top: auto;
     bottom: -4rem;
   }
+
+  strong {
+    color: var(--white);
+  }
+
+  a {
+    color: color(var(--link-font-colour) lightness(65%));
+  }
 }
 
 .slant-cta {
-  color: var(--white);
+  /* color: var(--white); */
   background-color: var(--blue-grey-700);
   /* background-color: var(--blue-700); */
 
