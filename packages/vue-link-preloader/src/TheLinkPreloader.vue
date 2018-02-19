@@ -13,7 +13,7 @@
 import futurelink from 'futurelink';
 
 export default {
-  name: 'TheLinkPreload',
+  name: 'TheLinkPreloader',
   data: () => ({
     load: null,
     options: {

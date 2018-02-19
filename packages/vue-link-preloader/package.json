@@ -1,5 +1,5 @@
 {
-  "name": "@wearegenki/vue-link-preload",
+  "name": "@wearegenki/vue-link-preloader",
   "version": "0.4.2",
   "description": "A friendly UI framework which aims to be straightforward, intuitive, and high performance.",
   "keywords": [
@@ -10,7 +10,7 @@
     "vue",
     "wearegenki"
   ],
-  "repository": "https://github.com/WeAreGenki/ui/tree/master/packages/vue-link-preload",
+  "repository": "https://github.com/WeAreGenki/ui/tree/master/packages/vue-link-preloader",
   "bugs": {
     "url": "https://github.com/WeAreGenki/ui/issues"
   },

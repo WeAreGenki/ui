@@ -11,13 +11,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
-- `@wearegenki/stylelint-config` now comes with preconfigured caching for better dev time performance.
+- `@wearegenki/stylelint-config` now comes with preconfigured caching for better dev time intermittent build performance.
 
 ### Changed
 
 - BREAKING CHANGES:
   - `@wearegenki/vue-input-select` property `has-filter` renamed to `filterable`.
+  - Rename `@wearegenki/vue-link-preload` to `@wearegenki/vue-link-preloader`.
 - Many internal property names changed to indicate which are safe to mangle (shorten for smaller file size).
+- Updated dependencies.
 
 ## [0.4.2] - 2018-02-03
 
