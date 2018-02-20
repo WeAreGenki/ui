@@ -27,6 +27,7 @@
 .plain { color: var(--body-font-colour); }
 .subtle { color: var(--subtle); }
 .inherit { color: inherit; }
+/* FIXME: Not getting removed by PurgeCSS */
 [class="inherit!"] { color: inherit !important; } /* stylelint-disable-line declaration-no-important */
 
 /* Background colours */
