@@ -30,15 +30,15 @@ TODO: Rewrite this: new changes since we now have @wearegenki/icons
 <!-- TODO: Use v-once in a more logical way (how might we run perf benchmarks?) -->
 
 <template>
-  <header class="navbar z5" :class="{ 'navbar-active': scrolled || showNav }">
+  <header class="navbar z5" :class="{ 'navbar-active': hasScrolled__ || showNav__ }">
     <div class="df-l con">
       <button
-        @click.stop="showNav = !showNav"
+        @click.stop="showNav__ = !showNav__"
         type="button"
         class="dn-l btn-clear mr3"
       >
         <svg class="nav-icon link">
-          <use v-if="showNav" xlink:href="~@wearegenki/icons/src/x.svg"/>
+          <use v-if="showNav__" xlink:href="~@wearegenki/icons/src/x.svg"/>
           <use v-else xlink:href="~@wearegenki/icons/src/menu.svg"/>
         </svg>
       </button>
@@ -47,7 +47,7 @@ TODO: Rewrite this: new changes since we now have @wearegenki/icons
         <svg class="logo"><use xlink:href="~@/assets/logo.svg"/></svg>
       </router-link>
 
-      <nav class="dn df-l f-col f-row-l ml-auto-l mh-1" :class="{ 'df': showNav }">
+      <nav class="dn df-l f-col f-row-l ml-auto-l mh-1" :class="{ 'df': showNav__ }">
         <hr class="dn-l mv0">
 
         <router-link
@@ -73,12 +73,12 @@ export default {
     },
   },
   data: () => ({
-    showNav: false,
-    scrolled: false,
+    showNav__: false,
+    hasScrolled__: false,
   }),
   computed: {
     // Check for passive eventListener support
-    supportsPassive() {
+    supportsPassive__() {
       let support = false;
       try {
         const options = Object.defineProperty({}, 'passive', {
@@ -91,10 +91,10 @@ export default {
   },
   watch: {
     // Set up click handler to close the menu but only when necessary
-    showNav(active) {
+    showNav__(active) {
       if (active) {
         const listener = () => {
-          this.showNav = false;
+          this.showNav__ = false;
           document.removeEventListener('click', listener);
         };
         document.addEventListener('click', listener);
@@ -102,10 +102,10 @@ export default {
     },
   },
   mounted() {
-    this.scrollHandler();
+    this.scrollHandler__();
   },
   methods: {
-    scrollHandler() {
+    scrollHandler__() {
       let ticking = false;
 
       // Listen to scroll events using requestAnimationFrame to debounce
@@ -113,13 +113,13 @@ export default {
         if (!ticking) {
           requestAnimationFrame(() => {
             // Set property used to conditionally add a class in the component template
-            this.scrolled = window.scrollY > 10; // px before triggering
+            this.hasScrolled__ = window.scrollY > 10; // px before triggering
             ticking = false;
           });
         }
         ticking = true;
       // Use passive eventListener if supported for better performance
-      }, this.supportsPassive ? { passive: true } : false);
+      }, this.supportsPassive__ ? { passive: true } : false);
     },
   },
 };
