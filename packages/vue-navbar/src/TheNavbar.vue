@@ -15,6 +15,7 @@
       ]"/>
 
 TODO: Rewrite this: new changes since we now have @wearegenki/icons
+
     You need to supply a logo and menu/close icons as SVG (since each project will
     likely have its own icon set):
 
@@ -25,9 +26,11 @@ TODO: Rewrite this: new changes since we now have @wearegenki/icons
     You need to adjust .nav-icon + .logo width/height and .nav-logo padding to suit
     your SVGs.
 
--->
+  NOTE:
+    Object properties ending with __ are marked safe to mangle; the name can be
+    shortened at build time for smaller file size.
 
-<!-- TODO: Use v-once in a more logical way (how might we run perf benchmarks?) -->
+-->
 
 <template>
   <header class="navbar z5" :class="{ 'navbar-active': hasScrolled__ || showNav__ }">
@@ -38,19 +41,20 @@ TODO: Rewrite this: new changes since we now have @wearegenki/icons
         class="dn-l btn-clear mr3"
       >
         <svg class="nav-icon link">
-          <use v-if="showNav__" xlink:href="~@wearegenki/icons/src/x.svg"/>
-          <use v-else xlink:href="~@wearegenki/icons/src/menu.svg"/>
+          <use v-if="showNav__" :xlink:href="close__"/>
+          <use v-else :xlink:href="menu__"/>
         </svg>
       </button>
 
-      <router-link to="/" class="nav-logo ml-1-l">
-        <svg class="logo"><use xlink:href="~@/assets/logo.svg"/></svg>
+      <router-link to="/" class="nav-logo ml-1-l" title="home">
+        <svg class="logo"><use :xlink:href="logo__"/></svg>
       </router-link>
 
       <nav class="dn df-l f-col f-row-l ml-auto-l mh-1" :class="{ 'df': showNav__ }">
         <hr class="dn-l mv0">
 
         <router-link
+          v-once
           v-for="item in items"
           :key="item.url"
           :to="item.url"
@@ -64,6 +68,10 @@ TODO: Rewrite this: new changes since we now have @wearegenki/icons
 </template>
 
 <script>
+import menu from '@wearegenki/icons/src/menu.svg';
+import close from '@wearegenki/icons/src/x.svg';
+import logo from '@/assets/logo.svg';
+
 export default {
   name: 'TheNavbar',
   props: {
@@ -91,8 +99,8 @@ export default {
   },
   watch: {
     // Set up click handler to close the menu but only when necessary
-    showNav__(active) {
-      if (active) {
+    showNav__(isActive) {
+      if (isActive) {
         const listener = () => {
           this.showNav__ = false;
           document.removeEventListener('click', listener);
@@ -100,6 +108,11 @@ export default {
         document.addEventListener('click', listener);
       }
     },
+  },
+  beforeCreate() {
+    this.menu__ = menu;
+    this.close__ = close;
+    this.logo__ = logo;
   },
   mounted() {
     this.scrollHandler__();

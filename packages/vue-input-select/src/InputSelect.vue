@@ -17,13 +17,19 @@
       { id: 'ex3', text: 'Example 3', disabled: true },
     ]
 
+  NOTE:
+    Object properties ending with __ are marked safe to mangle; the name can be
+    shortened at build time for smaller file size.
+
 -->
 
 <!--
   TODO: Possible future features (but avoid bloat and negative performance impact):
-    - Incorporate remaining WAI-ARIA recommendations
-    - Horizontal divider to visually group options (maybe with optional title)
-    - Different dropdown position when not enough space
+    - Incorporate remaining WAI-ARIA recommendations.
+    - Horizontal divider to visually group options (maybe with optional title).
+    - Different dropdown position when not enough space OR maybe just move the
+      viewport to be able to see the currently selected item if it's outside the
+      viewport.
 -->
 
 <template>
@@ -94,7 +100,7 @@ export default {
       type: Array,
       required: true,
     },
-    hasFilter: { // to disable filtering when necessary
+    filterable: { // to disable filtering when unnecessary
       type: Boolean,
       default: true,
     },
