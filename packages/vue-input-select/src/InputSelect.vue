@@ -40,22 +40,22 @@
         text in the input.
     -->
     <input
-      @click="isOpen__ ? false : open__()"
+      @click="isOpen ? false : open__()"
       @focus="open__"
       @blur="close__"
-      @keydown.space="isOpen__ ? false : open__()"
-      @keydown.enter.prevent="isOpen__ ? select__('enter') : open__()"
+      @keydown.space="isOpen ? false : open__()"
+      @keydown.enter.prevent="isOpen ? select__('enter') : open__()"
       @keydown.esc="close__"
-      @keydown.up.prevent="isOpen__ ? up__() : open__()"
-      @keydown.down.prevent="isOpen__ ? down__() : open__()"
+      @keydown.up.prevent="isOpen ? up__() : open__()"
+      @keydown.down.prevent="isOpen ? down__() : open__()"
       v-model="valueText__"
       class="select"
-      :class="{ 'input-select-active': isOpen__ }"
+      :class="{ 'input-select-active': isOpen }"
       :id="id"
       :tabindex="disabled ? -1 : 0"
       role="listbox"
-      :placeholder="filterable && isOpen__ ? filterHelp : placeholder"
-      :readonly="disabled === undefined && (!filterable || readonly || !isOpen__)"
+      :placeholder="filterable && isOpen ? filterHelp : placeholder"
+      :readonly="disabled === undefined && (!filterable || readonly || !isOpen)"
       :disabled="disabled"
     >
     <span class="input-select-caret"/>
@@ -66,12 +66,12 @@
       * Uses custom directive v-view which must be installed globally
     -->
     <div
-      v-view="isOpen__"
+      v-view="isOpen"
       @mousedown.prevent="select__"
       class="input-select-dropdown w-100 z5 tl"
     >
       <div
-        v-for="(option, index) in list__"
+        v-for="(option, index) in list"
         :key="option.id"
         :data-id="option.id"
         class="input-select-option"
@@ -81,7 +81,7 @@
       >
         {{ option.text }}
       </div>
-      <div v-if="!list__.length" class="pa3 grey">
+      <div v-if="!list.length" class="pa3 grey">
         No matches
       </div>
     </div>
@@ -132,13 +132,13 @@ export default {
     },
   },
   data: () => ({
-    isOpen__: false,
-    filter__: '',
+    isOpen: false,
+    filter: '',
     i: 0, // index of the currently selected item
   }),
   computed: {
-    list__() {
-      const search = this.filter__.toLowerCase();
+    list() {
+      const search = this.filter.toLowerCase();
       const list = this.options.filter(option => option.text.toLowerCase().indexOf(search) > -1);
 
       // recalculate current item index after filtering
@@ -149,8 +149,8 @@ export default {
 
     valueText__: {
       get() {
-        if (this.filterable && this.isOpen__) {
-          return this.filter__;
+        if (this.filterable && this.isOpen) {
+          return this.filter;
         }
 
         const current = this.options.find(option => option.id === this.value);
@@ -158,12 +158,12 @@ export default {
         return current ? current.text : '';
       },
       set(value) {
-        this.filter__ = value;
+        this.filter = value;
       },
     },
   },
   methods: {
-    setIndex__(list = this.list__) {
+    setIndex__(list = this.list) {
       // save the current item's index so we can highlight it in the list
       this.i = list.findIndex(option => option.id === this.value);
     },
@@ -171,13 +171,13 @@ export default {
     open__() {
       if (this.disabled === undefined) {
         this.setIndex__();
-        this.isOpen__ = true;
+        this.isOpen = true;
       }
     },
 
     close__() {
-      this.isOpen__ = false;
-      this.filter__ = '';
+      this.isOpen = false;
+      this.filter = '';
     },
 
     select__(event) {
@@ -188,8 +188,8 @@ export default {
       ) {
         this.$emit('input', event.target.dataset.id);
         this.close__();
-      } else if (event === 'enter' && !this.list__[this.i].disabled) {
-        this.$emit('input', this.list__[this.i].id);
+      } else if (event === 'enter' && !this.list[this.i].disabled) {
+        this.$emit('input', this.list[this.i].id);
         this.close__();
       }
     },
@@ -199,26 +199,26 @@ export default {
       let steps = 1;
 
       // skip over disabled items or if there's no items left
-      while (this.list__[this.i - steps].disabled) {
+      while (this.list[this.i - steps].disabled) {
         steps += 1;
-        if (this.list__[this.i - steps] === undefined) return;
+        if (this.list[this.i - steps] === undefined) return;
       }
 
       this.i -= steps;
     },
     down__() {
       // jump to last availiable item if index is out of bounds (e,g, after filtering)
-      if (this.i >= this.list__.length - 1) {
-        this.i = this.list__.length - 1;
+      if (this.i >= this.list.length - 1) {
+        this.i = this.list.length - 1;
         return;
       }
 
       let steps = 1;
 
       // skip over disabled items or if there's no items left
-      while (this.list__[this.i + steps].disabled) {
+      while (this.list[this.i + steps].disabled) {
         steps += 1;
-        if (this.list__[this.i + steps] === undefined) return;
+        if (this.list[this.i + steps] === undefined) return;
       }
 
       this.i += steps;

@@ -33,15 +33,15 @@ TODO: Rewrite this: new changes since we now have @wearegenki/icons
 -->
 
 <template>
-  <header class="navbar z5" :class="{ 'navbar-active': hasScrolled__ || showNav__ }">
+  <header class="navbar z5" :class="{ 'navbar-active': nt || show }">
     <div class="df-l con">
       <button
-        @click.stop="showNav__ = !showNav__"
+        @click.stop="show = !show"
         type="button"
         class="dn-l btn-clear mr3"
       >
         <svg class="nav-icon link">
-          <use v-if="showNav__" :xlink:href="close__"/>
+          <use v-if="show" :xlink:href="close__"/>
           <use v-else :xlink:href="menu__"/>
         </svg>
       </button>
@@ -50,7 +50,7 @@ TODO: Rewrite this: new changes since we now have @wearegenki/icons
         <svg class="logo"><use :xlink:href="logo__"/></svg>
       </router-link>
 
-      <nav class="dn df-l f-col f-row-l ml-auto-l mh-1" :class="{ 'df': showNav__ }">
+      <nav class="dn df-l f-col f-row-l ml-auto-l mh-1" :class="{ 'df': show }">
         <hr class="dn-l mv0">
 
         <router-link
@@ -70,7 +70,7 @@ TODO: Rewrite this: new changes since we now have @wearegenki/icons
 <script>
 import menu from '@wearegenki/icons/src/menu.svg';
 import close from '@wearegenki/icons/src/x.svg';
-import logo from '@/assets/logo.svg';
+import logo from '@/assets/logo.svg'; // eslint-disable-line import/no-unresolved
 
 export default {
   name: 'TheNavbar',
@@ -81,8 +81,8 @@ export default {
     },
   },
   data: () => ({
-    showNav__: false,
-    hasScrolled__: false,
+    show: false, // should show mobile/hamberger menu?
+    nt: false, // is not at top?
   }),
   computed: {
     // Check for passive eventListener support
@@ -99,10 +99,10 @@ export default {
   },
   watch: {
     // Set up click handler to close the menu but only when necessary
-    showNav__(isActive) {
+    show(isActive) {
       if (isActive) {
         const listener = () => {
-          this.showNav__ = false;
+          this.show = false;
           document.removeEventListener('click', listener);
         };
         document.addEventListener('click', listener);
@@ -115,24 +115,34 @@ export default {
     this.logo__ = logo;
   },
   mounted() {
-    this.scrollHandler__();
+    this.checkScroll__();
+    this.setUpEventHandler__();
   },
   methods: {
-    scrollHandler__() {
+    checkScroll__() {
+      this.nt = window.scrollY > 10; // px before triggering
+    },
+
+    setUpEventHandler__() {
+      const usePassive = this.supportsPassive__ ? { passive: true } : false;
+      const _this = this;
       let ticking = false;
 
-      // Listen to scroll events using requestAnimationFrame to debounce
-      document.addEventListener('scroll', () => {
+      function step() {
+        _this.checkScroll__();
+        ticking = false;
+      }
+
+      // debounce using requestAnimationFrame
+      function scrollHandler() {
         if (!ticking) {
-          requestAnimationFrame(() => {
-            // Set property used to conditionally add a class in the component template
-            this.hasScrolled__ = window.scrollY > 10; // px before triggering
-            ticking = false;
-          });
+          requestAnimationFrame(step);
         }
         ticking = true;
-      // Use passive eventListener if supported for better performance
-      }, this.supportsPassive__ ? { passive: true } : false);
+      }
+
+      // use passive listener for better performance
+      document.addEventListener('scroll', scrollHandler, usePassive);
     },
   },
 };
