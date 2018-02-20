@@ -41,8 +41,7 @@ TODO: Rewrite this: new changes since we now have @wearegenki/icons
         class="dn-l btn-clear mr3"
       >
         <svg class="nav-icon link">
-          <use v-if="show" :xlink:href="close__"/>
-          <use v-else :xlink:href="menu__"/>
+          <use :xlink:href="show ? close__ : menu__"/>
         </svg>
       </button>
 
