@@ -1,6 +1,6 @@
 {
   "name": "@wearegenki/ui",
-  "version": "0.4.0",
+  "version": "0.4.2",
   "description": "A friendly UI framework which aims to be straightforward, intuitive, and high performance.",
   "keywords": [
     "css",
@@ -25,16 +25,16 @@
     "test": "exit 0"
   },
   "dependencies": {
-    "@wearegenki/css": "^0.4.0",
-    "@wearegenki/eslint-config": "^0.4.0",
+    "@wearegenki/css": "^0.4.2",
+    "@wearegenki/eslint-config": "^0.4.2",
     "@wearegenki/icons": "^0.4.0",
-    "@wearegenki/postcss-config": "^0.4.0",
-    "@wearegenki/stylelint-config": "^0.4.0",
-    "@wearegenki/ui-marko": "^0.4.0",
-    "@wearegenki/ui-vue": "^0.4.0"
+    "@wearegenki/postcss-config": "^0.4.2",
+    "@wearegenki/stylelint-config": "^0.4.2",
+    "@wearegenki/ui-marko": "^0.4.2",
+    "@wearegenki/ui-vue": "^0.4.2"
   },
   "optionalDependencies": {
-    "@wearegenki/fonts": "^0.4.0"
+    "@wearegenki/fonts": "^0.4.2"
   },
   "publishConfig": {
     "access": "public"

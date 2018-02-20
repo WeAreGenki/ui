@@ -1,5 +1,16 @@
+'use strict'; // eslint-disable-line
+
+const fs = require('fs');
+
+const tmpDirExists = fs.existsSync('/tmp/');
+
 module.exports = {
   extends: 'stylelint-config-standard',
+
+  // in-memory cache for better performance
+  cache: true,
+  cacheLocation: tmpDirExists ? '/tmp/' : false,
+
   plugins: ['stylelint-order'],
   rules: {
     'no-empty-source': null, // allow .vue files without <style/>

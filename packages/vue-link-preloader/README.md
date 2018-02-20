@@ -1,4 +1,4 @@
-# @wearegenki/vue-link-preload
+# @wearegenki/vue-link-preloader
 
 TODO: Write me!
 

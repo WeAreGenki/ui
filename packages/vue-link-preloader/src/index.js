@@ -1,5 +1,5 @@
 /**
- * @wearegenki/vue-link-preload
+ * @wearegenki/vue-link-preloader
  * @author: Max Milton <max@wearegenki.com>
  *
  * Copyright 2018 We Are Genki
@@ -17,10 +17,10 @@
  * limitations under the License.
  */
 
-import TheLinkPreload from './TheLinkPreload';
+import TheLinkPreloader from './TheLinkPreloader';
 
-TheLinkPreload.install = (Vue) => {
-  Vue.component(TheLinkPreload.name, TheLinkPreload);
+TheLinkPreloader.install = (Vue) => {
+  Vue.component(TheLinkPreloader.name, TheLinkPreloader);
 };
 
-export default { TheLinkPreload };
+export default { TheLinkPreloader };

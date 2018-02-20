@@ -336,3 +336,9 @@ summary {
 template {
   display: none;
 }
+
+/**
+ * Turn autoprefixer back on because this file will be inlined with all the other
+ * CSS before autoprefixer in run.
+ */
+/* autoprefixer: on */

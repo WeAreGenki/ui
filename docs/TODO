@@ -1,0 +1,7 @@
+* Create a base site
+* Design a custom minimal theme (using the framework, obviously)
+* Create a way to transform markdown into a format that can be consumed by the site
+  * Come up with a file/dir naming convention to generate site pages and sections
+  * Markdown is great for devs who want to read the docs as plain text and can be easily transformed for use on the actual site too
+* Create a docker image for easy site deployments
+* Publish the site

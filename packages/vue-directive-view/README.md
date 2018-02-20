@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD029 -->
+<!-- markdownlint-disable ol-prefix -->
 
 # @wearegenki/vue-directive-view
 
