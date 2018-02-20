@@ -89,11 +89,11 @@ export default {
     supportsPassive__() {
       let support = false;
       try {
-        const options = Object.defineProperty({}, 'passive', {
-          get() { support = true; }, // eslint-disable-line getter-return
+        document.addEventListener('test', null, {
+          get passive() { support = true; }, // eslint-disable-line getter-return
         });
-        document.addEventListener('test', null, options);
-      } catch (e) {} // eslint-disable-line no-empty
+      } catch (e) { /* noop */ }
+
       return support;
     },
   },
