@@ -41,12 +41,12 @@ TODO: Rewrite this: new changes since we now have @wearegenki/icons
         class="dn-l btn-clear mr3"
       >
         <svg class="nav-icon link">
-          <use :xlink:href="show ? close__ : menu__"/>
+          <use :xlink:href="show ? $options.close__ : $options.menu__"/>
         </svg>
       </button>
 
       <router-link to="/" class="nav-logo ml-1-l" title="home">
-        <svg class="logo"><use :xlink:href="logo__"/></svg>
+        <svg class="logo"><use :xlink:href="$options.logo__"/></svg>
       </router-link>
 
       <nav class="dn df-l f-col f-row-l ml-auto-l mh-1" :class="{ 'df': show }">
@@ -67,11 +67,16 @@ TODO: Rewrite this: new changes since we now have @wearegenki/icons
 </template>
 
 <script>
-import menu from '@wearegenki/icons/src/menu.svg';
-import close from '@wearegenki/icons/src/x.svg';
-import logo from '@/assets/logo.svg'; // eslint-disable-line import/no-unresolved
+import menu__ from '@wearegenki/icons/src/menu.svg';
+import close__ from '@wearegenki/icons/src/x.svg';
+import logo__ from '@/assets/logo.svg'; // eslint-disable-line import/no-unresolved
 
 export default {
+  // define static assets
+  logo__,
+  menu__,
+  close__,
+
   name: 'TheNavbar',
   props: {
     items: {
@@ -108,11 +113,6 @@ export default {
       }
     },
   },
-  beforeCreate() {
-    this.menu__ = menu;
-    this.close__ = close;
-    this.logo__ = logo;
-  },
   mounted() {
     this.checkScroll__();
     this.setUpEventHandler__();
@@ -133,15 +133,12 @@ export default {
       }
 
       // debounce using requestAnimationFrame
-      function scrollHandler() {
+      document.addEventListener('scroll', () => {
         if (!ticking) {
           requestAnimationFrame(step);
         }
         ticking = true;
-      }
-
-      // use passive listener for better performance
-      document.addEventListener('scroll', scrollHandler, usePassive);
+      }, usePassive); // use passive listener for better performance
     },
   },
 };
