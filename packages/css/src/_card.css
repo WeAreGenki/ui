@@ -56,11 +56,15 @@
         var(--card-touch-hover-shadow2-legacy);
       transform: translateY(-5px);
     }
+
+    .btn-clear {
+      color: var(--link-hover-font-colour);
+      background-color: unset;
+    }
   }
 
-  &:hover .btn-clear {
-    color: var(--link-hover-font-colour);
-    background-color: unset;
+  .btn-clear {
+    margin-left: calc(-1 * var(--btn-padding-x));
   }
 }
 
