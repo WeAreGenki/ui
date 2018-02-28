@@ -20,7 +20,7 @@ module.exports = {
         '.js',
         '.json',
         '.marko',
-        '.vue',
+        // '.vue', // TODO: Remove if unnecessary; should work via webpack's resolver anyway
       ]},
     },
     'html/html-extensions': ['.html', '.marko'], // not .vue; it has its own parser
