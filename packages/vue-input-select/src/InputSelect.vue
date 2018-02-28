@@ -70,9 +70,9 @@
       @mousedown.prevent="select__"
       class="input-select-dropdown w-100 z5 tl"
     >
+      <!-- eslint-disable-next-line vue/require-v-for-key -->
       <div
         v-for="(option, index) in list"
-        :key="option.id"
         :data-id="option.id"
         class="input-select-option"
         :class="{ 'input-select-active': index === i }"
