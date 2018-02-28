@@ -1,8 +1,6 @@
 'use strict'; // eslint-disable-line
 
-const fs = require('fs');
-
-const tmpDirExists = fs.existsSync('/tmp/');
+const tmpDirExists = require('fs').existsSync('/tmp/');
 
 module.exports = {
   extends: 'stylelint-config-standard',
