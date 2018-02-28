@@ -1,3 +1,5 @@
+// https://github.com/michael-ciniawsky/postcss-load-config
+
 'use strict';
 
 module.exports = {
