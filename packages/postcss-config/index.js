@@ -47,7 +47,7 @@ module.exports = postcss.plugin('postcss-config', (opts = {}) => {
     .use(each)
     .use(mixins({ mixinsDir }))
     .use(nested)
-    .use(customProperties)
+    .use(customProperties({ preserve: false, warnings: opts.verbose }))
     .use(conditionals)
     .use(customMedia)
     .use(calc({ warnWhenCannotResolve: opts.verbose }))
