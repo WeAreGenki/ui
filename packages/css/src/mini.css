@@ -26,11 +26,11 @@
 
 */
 
-@import "_variables-colour";
-@import "_variables";
-@import "_container";
-@import "_flex";
-@import "_grid-templates";
-@import "_grid";
-@import "_grid-compat";
-/* @import "debug"; */
+@import "./_variables-colour";
+@import "./_variables";
+@import "./_container";
+@import "./_flex";
+@import "./_grid-templates";
+@import "./_grid";
+@import "./_grid-compat";
+/* @import "./debug"; */

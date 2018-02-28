@@ -6,8 +6,8 @@
 
 @import "@wearegenki/css/src/_variables-colour";
 @import "@wearegenki/css/src/_variables";
-@import "_variables";
-@import "_fonts"; /* include if you're using self-hosted fonts */
+@import "./_variables";
+@import "./_fonts"; /* include if you're using self-hosted fonts */
 @import "@wearegenki/css/src";
 @import "@wearegenki/vue-directive-tooltip"; /* include if you're using v-tooltip */
 @import "@wearegenki/vue-directive-view"; /* include if you're using v-view */
