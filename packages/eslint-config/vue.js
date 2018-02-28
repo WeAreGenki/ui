@@ -21,9 +21,16 @@ module.exports = {
     es6: true,
     browser: true,
   },
+  settings: {
+    'import/resolver': {
+      webpack: {
+        config: 'build/webpack.base.conf.js',
+      },
+    },
+  },
   rules: {
     'vue/max-attributes-per-line': ['error', {
-      singleline: 5, // length of the line is more important than # attributes
+      singleline: 6, // length of the line is more important than # attributes
       multiline: {
         max: 1,
         allowFirstLine: false,
