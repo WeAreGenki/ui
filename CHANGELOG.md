@@ -19,7 +19,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   - `@wearegenki/vue-input-select` property `has-filter` renamed to `filterable`.
   - Rename `@wearegenki/vue-link-preload` to `@wearegenki/vue-link-preloader`.
 - Many internal property names changed to indicate which are safe to mangle (shorten for smaller file size).
+- Continued CSS style improvements.
 - Updated dependencies.
+
+## Fixed
+
+- Use relative paths for CSS imports for better compatability with some resource bundlers (e.g. package-bundler).
+- Vue resource resolving in `@wearegenki/eslint-config/vue`.
 
 ## [0.4.2] - 2018-02-03
 
