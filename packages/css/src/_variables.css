@@ -221,7 +221,8 @@
   --navbar-shadow: 0 0 0.5rem var(--shadow-base);
   --navbar-hover-bg-colour: var(--link-hover-font-colour);
   --navbar-hamurger-size-x: 1.25rem;
-  --navbar-hamurger-font-colour: var(--primary);
+  /* --navbar-hamurger-font-colour: var(--primary); */
+  --navbar-hamurger-font-colour: var(--navbar-font-colour);
 
   /* @wearegenki/vue-navbar component */
   --navbar-optimize: var(--optimize);
