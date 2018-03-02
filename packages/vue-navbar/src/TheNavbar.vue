@@ -1,4 +1,13 @@
 <!--
+  TODO: Rewrite readme: new changes since we now have @wearegenki/icons
+  ↳ Experimental input SVG sprite icon reference
+  ↳ Since the navbar makes up a critical part of the page UI we use [a page
+    embeded version of the SVG sprite icon technique]
+  ↳ [about inline SVG sprite technique] fast loading UI elements are important for
+    perceptual load performance...
+-->
+
+<!--
 
   NAVBAR COMPONENT
 
@@ -13,8 +22,6 @@
         { url: '/ecommerce-tools', name: 'Ecommerce Tools' },
         { url: '/consulting', name: 'Consulting' },
       ]"/>
-
-TODO: Rewrite this: new changes since we now have @wearegenki/icons
 
     You need to supply a logo and menu/close icons as SVG (since each project will
     likely have its own icon set):
@@ -33,28 +40,28 @@ TODO: Rewrite this: new changes since we now have @wearegenki/icons
 -->
 
 <template>
-  <header class="navbar z5" :class="{ 'navbar-active': nt || show }">
+  <header :class="{ 'navbar-active': nt || show }" class="navbar z5">
     <div class="df-l con">
       <button
-        @click.stop="show = !show"
         type="button"
         class="dn-l btn-clear mr3"
+        @click.stop="show = !show"
       >
         <svg class="nav-icon link">
-          <use :xlink:href="show ? $options.close__ : $options.menu__"/>
+          <use :xlink:href="show ? '#x' : '#menu'"/>
         </svg>
       </button>
 
       <router-link to="/" class="nav-logo ml-1-l" title="home">
-        <svg class="logo"><use :xlink:href="$options.logo__"/></svg>
+        <svg class="logo"><use xlink:href="#logo"/></svg>
       </router-link>
 
-      <nav class="dn df-l f-col f-row-l ml-auto-l mh-1" :class="{ 'df': show }">
+      <nav :class="{ 'df': show }" class="dn df-l f-col f-row-l ml-auto-l mh-1">
         <hr class="dn-l mv0">
 
         <router-link
-          v-once
           v-for="item in items"
+          v-once
           :key="item.url"
           :to="item.url"
           class="nav-link"
@@ -67,16 +74,11 @@ TODO: Rewrite this: new changes since we now have @wearegenki/icons
 </template>
 
 <script>
-import menu__ from '@wearegenki/icons/src/menu.svg';
-import close__ from '@wearegenki/icons/src/x.svg';
-import logo__ from '@/assets/logo.svg'; // eslint-disable-line import/no-unresolved
+import '@wearegenki/icons/src/menu.svg';
+import '@wearegenki/icons/src/x.svg';
+import '@/assets/logo.svg'; // eslint-disable-line import/no-unresolved
 
 export default {
-  // define static assets
-  logo__,
-  menu__,
-  close__,
-
   name: 'TheNavbar',
   props: {
     items: {
@@ -85,11 +87,11 @@ export default {
     },
   },
   data: () => ({
-    show: false, // should show mobile/hamberger menu?
+    show: false, // show hamberger menu?
     nt: false, // is not at top?
   }),
   computed: {
-    // Check for passive eventListener support
+    // check for passive eventListener support
     supportsPassive__() {
       let support = false;
       try {
@@ -102,7 +104,7 @@ export default {
     },
   },
   watch: {
-    // Set up click handler to close the menu but only when necessary
+    // set up click handler to close the menu but only when necessary
     show(isActive) {
       if (isActive) {
         const listener = () => {
