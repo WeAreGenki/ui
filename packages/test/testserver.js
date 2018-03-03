@@ -4,7 +4,9 @@
  * Minimal server for local, manual web page testing.
  */
 
-'use strict'; // eslint-disable-line
+/* eslint-disable strict, no-console *//* tslint:disable no-console */
+
+'use strict';
 
 const portfinder = require('portfinder');
 const http = require('http');
