@@ -2,6 +2,8 @@
 
 Test suite presets; Jest, Puppeteer, local test server, and more.
 
+<!-- REF: https://github.com/xfumihiro/jest-puppeteer-example -->
+
 ## Overview
 
 TODO: Write me.
