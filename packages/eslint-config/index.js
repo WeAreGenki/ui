@@ -1,4 +1,4 @@
-'use-strict';
+'use strict';
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -11,16 +11,19 @@ module.exports = {
     'html',
   ],
   parserOptions: {
-    ecmaVersion: 5,
-    sourceType: 'script',
+    ecmaVersion: 6,
+  },
+  env: {
+    es6: true,
   },
   settings: {
     'import/resolver': {
       node: { extensions: [
         '.js',
         '.json',
+        '.jsx',
         '.marko',
-        // '.vue', // TODO: Remove if unnecessary; should work via webpack's resolver anyway
+        '.vue',
       ]},
     },
     'html/html-extensions': ['.html', '.marko'], // not .vue; it has its own parser
@@ -36,9 +39,11 @@ module.exports = {
     'import/extensions': ['error', 'always', {
       js: 'never',
       json: 'never',
+      jsx: 'never',
       marko: 'never',
       vue: 'never',
     }],
+    'no-console': isProduction ? 'error' : 'off',
     'no-debugger': isProduction ? 'error' : 'off',
     'no-param-reassign': ['error', {
       props: true,

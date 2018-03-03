@@ -1,5 +1,7 @@
 // extra settings for Vue components
 
+'use strict';
+
 module.exports = {
   extends: [
     '@wearegenki/eslint-config',
@@ -11,14 +13,10 @@ module.exports = {
   parser: 'vue-eslint-parser',
   parserOptions: {
     parser: 'babel-eslint',
-    ecmaVersion: 8,
+    ecmaVersion: 9,
     sourceType: 'module',
-    ecmaFeatures: {
-      experimentalObjectRestSpread: true,
-    },
   },
   env: {
-    es6: true,
     browser: true,
   },
   settings: {

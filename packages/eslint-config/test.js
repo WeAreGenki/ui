@@ -2,11 +2,13 @@
  * ESLint preset to accompany our test suite; @wearegenki/test
  */
 
+'use strict';
+
 module.exports = {
   root: false, // this should extend the developer's project root config
   extends: ['plugin:jest/recommended'],
   parserOptions: {
-    ecmaVersion: 8,
+    ecmaVersion: 9,
     sourceType: 'module',
   },
   env: {
@@ -24,8 +26,5 @@ module.exports = {
         ],
       }],
     },
-  },
-  rules: {
-    'no-console': 'off',
   },
 };
