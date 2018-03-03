@@ -12,6 +12,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 
 - `@wearegenki/stylelint-config` now comes with preconfigured caching for better dev time intermittent build performance.
+- New package `@wearegenki/test` which contains a preconfigured testing suite using Jest and Puppeteer. Also includes a simple local server for doing manual testing.
+- New `@wearegenki/eslint-config` preset `test` to go along with the new test package.
 
 ### Changed
 
