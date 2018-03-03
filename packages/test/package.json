@@ -14,6 +14,9 @@
   },
   "author": "Max Milton <max@wearegenki.com>",
   "license": "Apache-2.0",
+  "bin": {
+    "testserver": "./testserver.js"
+  },
   "main": "lib/jest.config.js",
   "files": [
     "lib/",

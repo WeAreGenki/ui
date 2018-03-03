@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 /**
  * Minimal server for local, manual web page testing.
  */
@@ -6,9 +8,10 @@
 
 const portfinder = require('portfinder');
 const http = require('http');
+const path = require('path');
 const nodeStatic = require('node-static');
 
-const webroot = __dirname;
+const webroot = path.resolve(process.argv[2]);
 portfinder.basePort = Number(process.env.PORT) || 1234;
 
 const fileServer = new nodeStatic.Server(webroot, { cache: false });
