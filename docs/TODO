@@ -1,3 +1,7 @@
+* Create a docs website generator
+  * Something like https://docusaurus.io but more simple
+  * Which framework (if any)?
+  * Fun change to do something interesting
 * Create a base site
 * Design a custom minimal theme (using the framework, obviously)
 * Create a way to transform markdown into a format that can be consumed by the site
