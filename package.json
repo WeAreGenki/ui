@@ -27,11 +27,10 @@
     "babel-eslint": "8.2.2",
     "eslint": "4.18.2",
     "lerna": "2.9.0",
-    "marko": "4.7.5",
     "postcss": "6.0.19",
     "postcss-debug": "0.4.2",
     "postcss-load-config": "1.2.0",
-    "stylelint": "9.0.0"
+    "stylelint": "9.1.1"
   },
   "workspaces": [
     "packages/*"
