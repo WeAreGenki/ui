@@ -1,7 +1,7 @@
 {
   "globalSetup": "<rootDir>/node_modules/@wearegenki/test/lib/setup.js",
   "globalTeardown": "<rootDir>/node_modules/@wearegenki/test/lib/teardown.js",
-  "testEnvironment": "<rootDir>/node_modules/@wearegenki/test/lib/puppeteer_environment.js",
+  "testEnvironment": "<rootDir>/node_modules/@wearegenki/test/lib/puppeteer-environment.js",
   "testPathIgnorePatterns": [
     "/node_modules/",
     "/dist/",
@@ -15,7 +15,11 @@
     "src/**/*.js",
     "src/**/*.jsx",
     "src/**/*.marko",
-    "src/**/*.vue"
+    "src/**/*.vue",
+    "!**/node_modules/**",
+    "!build/**",
+    "!dist/**",
+    "!test/**"
   ],
   "coverageThreshold": {
     "global": {
