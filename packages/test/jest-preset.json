@@ -10,12 +10,17 @@
     "/\\.cache/",
     "/coverage/"
   ],
-
+  "moduleFileExtensions": [
+    "js",
+    "json",
+    "jsx",
+    "marko",
+    "node",
+    "vue"
+  ],
   "collectCoverageFrom": [
-    "**/*.js",
-    "**/*.jsx",
-    "**/*.marko",
-    "**/*.vue",
+    "**/*.{js,jsx,marko,vue}",
+    "!**/\\.*rc.js",
     "!**/*.marko.js",
     "!**/*.min.js",
     "!**/node_modules/**",
@@ -26,10 +31,14 @@
     "!**/test/**",
     "!**/tmp/**",
     "!**/types/**",
+    "!**/vendor/**",
     "!**/.cache/**",
     "!**/.esm-cache/**",
     "!**/.git/**",
     "!**/.vscode/**"
+  ],
+  "coveragePathIgnorePatterns": [
+    "/node_modules/"
   ],
   "coverageThreshold": {
     "global": {
