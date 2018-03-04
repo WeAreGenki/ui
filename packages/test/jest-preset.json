@@ -6,6 +6,7 @@
     "/node_modules/",
     "/dist/",
     "/manual-tests/",
+    "/mocks/",
     "/\\.vscode/",
     "/\\.cache/",
     "/coverage/"
@@ -19,14 +20,15 @@
     "vue"
   ],
   "collectCoverageFrom": [
-    "**/*.{js,jsx,marko,vue}",
+    "**/*.{js,jsx,marko,ts,tsx,vue}",
     "!**/\\.*rc.js",
     "!**/*.marko.js",
     "!**/*.min.js",
-    "!**/node_modules/**",
     "!**/build/**",
     "!**/config/**",
     "!**/dist/**",
+    "!**/mocks/**",
+    "!**/node_modules/**",
     "!**/public/**",
     "!**/test/**",
     "!**/tmp/**",
@@ -36,9 +38,6 @@
     "!**/.esm-cache/**",
     "!**/.git/**",
     "!**/.vscode/**"
-  ],
-  "coveragePathIgnorePatterns": [
-    "/node_modules/"
   ],
   "coverageThreshold": {
     "global": {
