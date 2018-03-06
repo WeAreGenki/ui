@@ -1,8 +1,8 @@
 language: node_js
 
 node_js:
-  - "node"
-  - "lts/*"
+  - node
+  - lts/*
 
 sudo: false
 
@@ -14,7 +14,11 @@ branches:
 cache:
   yarn: true
   directories:
-    - "node_modules"
+    - node_modules
 
 script:
   - yarn run test-ci
+
+notifications:
+  slack:
+    secure: CVGFw7n8BrRz2UzAduq2bi1iHA5cFTzefIbh2TEQjGXMEGgi1g11W5eEeIGZ23nvAIi4ClwYhtwUUGaVmHaTvOQkcEAVKiSXN18RR3H5I4mhGFLL7h0U+9Ecuvn6RUprw6WO3eWana0W11GMloABRb8EcZmize3ZLawq+mYWQbzU639NtIeYGlKeQ0Ci0UIq2dN9mgKXgy3yP+G+dYDcbflna9D/EvsNCEz8nbLFJQGKV1BuccZVwVUT5bKKC0j9YnZl0uAmbdSZW8fC/n1+t3HtWCt9QumiESPEhpEvYaWgFoZSOACl5jgirku10zuQcur7AdvxB6m4SeExMS/8Qrw9GtKdgnkezaJDQkC4fIzuCXFA8DHCvj1anwLzN1DAMH8K1MNZd5HXTs0YQLDLcbeFb5WV9DUVCcDQIRo9iuaeeyxTgLL5TjGCyX/AnwpJgi2UdnZD1mO0HG44okQ9/Kie+DfUIHjJgDgBoeeoHBdfUA4hpoEp+rSgHPHspmSZQ/U9d4HxHbFFpofZ9tzmTUDqhgT5exk9g1oZ6d5t+t+rxOqTS2JJVNAho8Si5mLYWg5O8xiFjxcaotHBb6bnRwF2EQF/lO+FgChH8KZiGqqzOg8lbmDMHlJhDhkzVs0KRG3O6R6yS8VZ3HfB9+YZ8yRikHaKkelTlWcuggnPOe0=
