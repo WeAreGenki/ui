@@ -1,31 +1,42 @@
 {
-  "globalSetup": "<rootDir>/node_modules/@wearegenki/test/lib/setup.js",
-  "globalTeardown": "<rootDir>/node_modules/@wearegenki/test/lib/teardown.js",
-  "testEnvironment": "<rootDir>/node_modules/@wearegenki/test/lib/puppeteer-environment.js",
+  "XX__globalSetup": "<rootDir>/node_modules/@wearegenki/test/lib/setup.js",
+  "XX__globalTeardown": "<rootDir>/node_modules/@wearegenki/test/lib/teardown.js",
+  "XX__testEnvironment": "<rootDir>/node_modules/@wearegenki/test/lib/puppeteer-environment.js",
+  "browser": true,
   "testPathIgnorePatterns": [
     "/node_modules/",
     "/dist/",
     "/manual-tests/",
+    "/mocks/",
     "/\\.vscode/",
     "/\\.cache/",
     "/coverage/"
   ],
-
+  "moduleFileExtensions": [
+    "js",
+    "json",
+    "jsx",
+    "marko",
+    "node",
+    "vue"
+  ],
   "collectCoverageFrom": [
-    "**/*.js",
-    "**/*.jsx",
-    "**/*.marko",
-    "**/*.vue",
+    "**/*.{js,jsx,marko,ts,tsx,vue}",
+    "!**/\\.*rc.js",
     "!**/*.marko.js",
     "!**/*.min.js",
-    "!**/node_modules/**",
+    "!**/*.{test,spec}.js",
+    "!**/__mocks__/**",
+    "!**/__tests__/**",
     "!**/build/**",
     "!**/config/**",
     "!**/dist/**",
+    "!**/node_modules/**",
     "!**/public/**",
     "!**/test/**",
     "!**/tmp/**",
     "!**/types/**",
+    "!**/vendor/**",
     "!**/.cache/**",
     "!**/.esm-cache/**",
     "!**/.git/**",
@@ -33,10 +44,11 @@
   ],
   "coverageThreshold": {
     "global": {
-      "branches": 100,
-      "functions": 100,
-      "lines": 100,
-      "statements": 100
+      "branches": 0,
+      "functions": 0,
+      "lines": 0,
+      "statements": 0
     }
-  }
+  },
+  "coverageReporters": ["text"]
 }
