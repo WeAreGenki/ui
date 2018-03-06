@@ -1,7 +1,8 @@
 {
-  "globalSetup": "<rootDir>/node_modules/@wearegenki/test/lib/setup.js",
-  "globalTeardown": "<rootDir>/node_modules/@wearegenki/test/lib/teardown.js",
-  "testEnvironment": "<rootDir>/node_modules/@wearegenki/test/lib/puppeteer-environment.js",
+  "XX__globalSetup": "<rootDir>/node_modules/@wearegenki/test/lib/setup.js",
+  "XX__globalTeardown": "<rootDir>/node_modules/@wearegenki/test/lib/teardown.js",
+  "XX__testEnvironment": "<rootDir>/node_modules/@wearegenki/test/lib/puppeteer-environment.js",
+  "browser": true,
   "testPathIgnorePatterns": [
     "/node_modules/",
     "/dist/",
@@ -24,10 +25,12 @@
     "!**/\\.*rc.js",
     "!**/*.marko.js",
     "!**/*.min.js",
+    "!**/*.{test,spec}.js",
+    "!**/__mocks__/**",
+    "!**/__tests__/**",
     "!**/build/**",
     "!**/config/**",
     "!**/dist/**",
-    "!**/mocks/**",
     "!**/node_modules/**",
     "!**/public/**",
     "!**/test/**",
@@ -41,10 +44,11 @@
   ],
   "coverageThreshold": {
     "global": {
-      "branches": 100,
-      "functions": 100,
-      "lines": 100,
-      "statements": 100
+      "branches": 0,
+      "functions": 0,
+      "lines": 0,
+      "statements": 0
     }
-  }
+  },
+  "coverageReporters": ["text"]
 }
