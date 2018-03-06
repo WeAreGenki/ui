@@ -1,8 +1,4 @@
 {
-  "XX__globalSetup": "<rootDir>/node_modules/@wearegenki/test/lib/setup.js",
-  "XX__globalTeardown": "<rootDir>/node_modules/@wearegenki/test/lib/teardown.js",
-  "XX__testEnvironment": "<rootDir>/node_modules/@wearegenki/test/lib/puppeteer-environment.js",
-  "browser": true,
   "testPathIgnorePatterns": [
     "/node_modules/",
     "/dist/",

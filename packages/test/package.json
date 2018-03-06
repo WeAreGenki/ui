@@ -17,8 +17,11 @@
   "bin": {
     "testserver": "./testserver.js"
   },
-  "main": "jest-preset.json",
+  "main": "index.js",
   "files": [
+    "jest-preset.json",
+    "index.js",
+    "testserver.js",
     "lib/",
     "server/"
   ],
