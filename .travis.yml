@@ -24,10 +24,9 @@ cache:
 branches:
   only:
     - master
-    - devel
+    - dev
 
 script:
-  # - lerna bootstrap --use-workspaces
   - lerna bootstrap
   - yarn run test-ci
 
