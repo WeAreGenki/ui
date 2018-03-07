@@ -7,7 +7,7 @@
     }],
     ["@babel/stage-2", { "loose": true }]
   ],
-  "plugins": ["@babel/transform-runtime"],
+  "plugins": ["@babel/plugin-transform-runtime"],
   "env": {
     "test": {
       "presets": [

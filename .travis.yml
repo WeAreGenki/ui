@@ -17,7 +17,7 @@ cache:
     - node_modules
 
 script:
-  - yarn setup
+  - lerna bootstrap --use-workspaces
   - yarn run test-ci
 
 notifications:
