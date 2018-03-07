@@ -13,7 +13,7 @@ module.exports = async function() {
   console.log(chalk.green('Setup Puppeteer'));
   const browser = await puppeteer.launch({
     // workaround for Puppeteer not launching correctly on Travis-CI
-    // args: ['--no-sandbox', '--disable-setuid-sandbox'],
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
   });
   global.__BROWSER__ = browser;
   mkdirp.sync(DIR);

@@ -1,18 +1,18 @@
 {
   "presets": [
-    ["@babel/env", {
+    ["@babel/preset-env", {
       "debug": true,
       "modules": false,
       "loose": true
     }],
-    ["@babel/stage-2", { "loose": true }]
+    ["@babel/preset-stage-2", { "loose": true }]
   ],
   "plugins": ["@babel/plugin-transform-runtime"],
   "env": {
     "test": {
       "presets": [
-        ["@babel/env", { "targets": { "node": "current" }}],
-        ["@babel/stage-2", { "loose": true }]
+        ["@babel/preset-env", { "targets": { "node": "current" }}],
+        ["@babel/preset-stage-2", { "loose": true }]
       ],
       "plugins": ["@babel/plugin-transform-modules-commonjs", "babel-plugin-dynamic-import-node"]
     }
