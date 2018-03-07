@@ -17,6 +17,7 @@ cache:
     - node_modules
 
 script:
+  - yarn setup
   - yarn run test-ci
 
 notifications:
