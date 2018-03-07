@@ -50,6 +50,6 @@
     "docs/website"
   ],
   "engines": {
-    "node": "> 8.10.0"
+    "node": "> 8.0.0"
   }
 }
