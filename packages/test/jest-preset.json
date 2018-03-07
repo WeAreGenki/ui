@@ -23,9 +23,9 @@
   "collectCoverageFrom": [
     "**/*.{js,jsx,marko,mjs,ts,tsx,vue}",
     "!**/\\.*rc.js",
-    "!**/*.marko.js",
-    "!**/*.min.js",
-    "!**/*.{test,spec}.js",
+    "!**/*\\.marko\\.js",
+    "!**/*\\.min\\.js",
+    "!**/*\\.{test,spec}\\.js",
     "!**/__mocks__/**",
     "!**/__tests__/**",
     "!**/build/**",
@@ -37,10 +37,10 @@
     "!**/tmp/**",
     "!**/types/**",
     "!**/vendor/**",
-    "!**/.cache/**",
-    "!**/.esm-cache/**",
-    "!**/.git/**",
-    "!**/.vscode/**"
+    "!**/\\.cache/**",
+    "!**/\\.esm-cache/**",
+    "!**/\\.git/**",
+    "!**/\\.vscode/**"
   ],
   "coverageThreshold": {
     "global": {

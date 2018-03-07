@@ -15,11 +15,15 @@ const markoCompiler = require('marko/compiler');
 module.exports = {
   canInstrument: true,
   process(source, filePath) {
-    const compiled = markoCompiler.compileForBrowser(source, filePath, {
+    // const compiled = markoCompiler.compileForBrowser(source, filePath, {
+    const compiled = markoCompiler.compile(source, filePath, {
       writeToDisk: false,
     });
 
-    return compiled.code;
+    console.log('!! COMPILED', compiled);
+
+    // return compiled.code;
+    return compiled;
   },
   getCacheKey: (fileData, filename, configString, options) => {
     const file = fs.readFileSync(__filename);

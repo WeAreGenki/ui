@@ -15,15 +15,13 @@
   "author": "Max Milton <max@wearegenki.com>",
   "license": "Apache-2.0",
   "bin": {
-    "testserver": "./testserver.js"
+    "testserver": "bin/testserver"
   },
-  "main": "index.js",
+  "main": "lib/server.js",
   "files": [
     "jest-preset.json",
-    "index.js",
-    "testserver.js",
-    "lib/",
-    "server/"
+    "bin/",
+    "lib/"
   ],
   "scripts": {
     "build": "exit 0",
@@ -49,6 +47,7 @@
     "mkdirp": "^0.5.1",
     "node-static": "^0.7.10",
     "portfinder": "^1.0.13",
+    "raptor-renderer": "^1.5.0",
     "rimraf": "^2.6.2"
   },
   "engines": {
