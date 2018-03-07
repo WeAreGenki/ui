@@ -19,22 +19,24 @@
 
 import { CodeEditor } from '@wearegenki/vue-code-editor/src';
 import { DebugBeakpoints } from '@wearegenki/vue-debug-breakpoints/src';
-import { InputDropdown } from '@wearegenki/vue-input-dropdown/src';
+import { InputDropdown } from '@wearegenki/vue-dropdown/src';
+import { InputSelect } from '@wearegenki/vue-input-select/src';
 import { InputToggle } from '@wearegenki/vue-input-toggle/src';
-import { TheLinkPreload } from '@wearegenki/vue-link-preload/src';
 import { ModalItem } from '@wearegenki/vue-modal/src';
-import { TheNavbar } from '@wearegenki/vue-navbar/src';
 import { TabGroup } from '@wearegenki/vue-tabs/src';
+import { TheLinkPreload } from '@wearegenki/vue-link-preloader/src';
+import { TheNavbar } from '@wearegenki/vue-navbar/src';
 import { ToastGroup } from '@wearegenki/vue-toasts/src';
 
 export {
   CodeEditor,
   DebugBeakpoints,
   InputDropdown,
+  InputSelect,
   InputToggle,
-  TheLinkPreload,
   ModalItem,
-  TheNavbar,
   TabGroup,
+  TheLinkPreload,
+  TheNavbar,
   ToastGroup,
 };

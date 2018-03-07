@@ -5,13 +5,23 @@
 <!-- TODO: Work on action toasts-->
 
 <template>
-  <div class="toast df" :class="{ [`toast-${type}`]: type !== undefined }">
+  <div :class="{ [`toast-${type}`]: type !== undefined }" class="toast df">
     {{ text }}
 
-    <button v-if="action === 'reload'" @click="reload" class="toast-action" type="button">
+    <button
+      v-if="action === 'reload'"
+      class="toast-action"
+      type="button"
+      @click="reload"
+    >
       RELOAD
     </button>
-    <button v-else-if="action" @click="destroy" class="toast-action ttu" type="button">
+    <button
+      v-else-if="action"
+      class="toast-action ttu"
+      type="button"
+      @click="destroy"
+    >
       {{ action }}
     </button>
   </div>
@@ -79,7 +89,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="postcss">
 @import "@wearegenki/ui/import";
 
 .toast {

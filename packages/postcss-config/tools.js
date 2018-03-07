@@ -1,4 +1,4 @@
-'use-strict';
+'use strict'; // eslint-disable-line
 
 const postcss = require('postcss');
 const cssstats = require('cssstats');

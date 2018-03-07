@@ -41,11 +41,11 @@
       <a
         v-for="(slot, name) in $slots"
         :key="name"
-        @click="active = name"
         :href="`#${encodeURIComponent(name)}`"
-        class="btn-tab ttu bold"
         :class="{ 'btn-tab-active': active === name }"
+        class="btn-tab ttu bold"
         role="tab"
+        @click="active = name"
       >
         {{ name }}
       </a>
@@ -53,8 +53,8 @@
 
     <div
       v-for="(slot, name) in $slots"
-      :key="name"
       v-if="active === name"
+      :key="name"
       :id="name"
       role="tabpanel"
     >
@@ -76,7 +76,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="postcss">
 @import "@wearegenki/ui/import";
 
 .btn-tab {

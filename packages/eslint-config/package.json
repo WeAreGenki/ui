@@ -16,6 +16,12 @@
   "author": "Max Milton <max@wearegenki.com>",
   "license": "Apache-2.0",
   "main": "index.js",
+  "files": [
+    "jest.js",
+    "marko.js",
+    "node.js",
+    "vue.js"
+  ],
   "scripts": {
     "build": "exit 0",
     "prepare": "npm run build",

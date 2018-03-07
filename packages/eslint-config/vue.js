@@ -1,6 +1,6 @@
 // extra settings for Vue components
 
-'use strict';
+'use strict'; // eslint-disable-line
 
 module.exports = {
   extends: [

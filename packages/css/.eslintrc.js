@@ -3,11 +3,10 @@
 'use-strict';
 
 module.exports = {
-  root: true,
   extends: [
-    '@wearegenki/eslint-config',
+    '@wearegenki/eslint-config/vue',
   ],
-  env: {
-    browser: true,
+  rules: {
+    'max-len': 'off',
   },
 };

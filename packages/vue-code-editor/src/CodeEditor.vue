@@ -81,7 +81,8 @@ export default {
     },
   },
   mounted() {
-    // FIXME: Don't render the editor if it's hidden, wait until it's visible (otherwise it breaks rendering)
+    // FIXME: Don't render the editor if it's hidden, wait until it's visible
+    // (otherwise it breaks rendering)
 
     this.editor = CodeMirror.fromTextArea(this.$el, {
       mode: this.mode,
@@ -113,7 +114,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="postcss">
 @import "codemirror/lib/codemirror";
 @import "codemirror/theme/dracula";
 @import "@wearegenki/ui/import";

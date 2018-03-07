@@ -19,7 +19,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="postcss">
 /* @import "@wearegenki/ui/import"; */
 
 /* #dropdown {} */

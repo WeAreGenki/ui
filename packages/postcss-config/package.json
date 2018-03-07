@@ -18,6 +18,7 @@
   "license": "Apache-2.0",
   "main": "index.js",
   "files": [
+    "debug.js",
     "tools.js"
   ],
   "scripts": {
@@ -42,6 +43,7 @@
     "postcss-css-variables": "^0.8.0",
     "postcss-custom-media": "^6.0.0",
     "postcss-custom-properties": "^7.0.0",
+    "postcss-debug": "0.4.2",
     "postcss-each": "^0.10.0",
     "postcss-import": "^11.1.0",
     "postcss-load-config": "^1.2.0",

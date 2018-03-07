@@ -87,7 +87,7 @@ export default {
     },
   },
   data: () => ({
-    show: false, // show hamberger menu?
+    show: false, // show hamburger menu?
     nt: false, // is not at top?
   }),
   computed: {
@@ -146,7 +146,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="postcss">
 @import "@wearegenki/ui/import";
 
 .navbar {

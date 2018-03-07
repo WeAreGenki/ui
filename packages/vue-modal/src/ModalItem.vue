@@ -1,12 +1,21 @@
 <template>
   <div v-if="show" class="modal">
-    <button v-if="closeBtn" @click="close" class="btn btn-clear float-r" type="button">
+    <button
+      v-if="closeBtn"
+      class="btn btn-clear float-r"
+      type="button"
+      @click="close"
+    >
       <svg class="icon"><use xlink:href="~@wearegenki/icons/src/x.svg"/></svg>
     </button>
 
     <slot/>
 
-    <button @click="close" class="btn btn-main" type="button">
+    <button
+      class="btn btn-main"
+      type="button"
+      @click="close"
+    >
       {{ action }}
     </button>
   </div>
@@ -44,7 +53,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="postcss">
 /* @import "@wearegenki/ui/import"; */
 
 /* .modal {} */

@@ -2,16 +2,22 @@
 
 const path = require('path');
 
-// const libDir = '<rootDir>/node_modules/@wearegenki/test/lib/vue';
-
 module.exports = {
   preset: '@wearegenki/test',
   rootDir: path.resolve(__dirname, '..'),
   coverageDirectory: '<rootDir>/test/coverage',
-  // resolver: `${libDir}/resolver.js`,
-  // transform: {
-  //   // '^.+\\.jsx?$': 'babel-jest', // don't use babel to transpile
-  //   // '^.+\\.(html|marko)$': `${libDir}/transform.js`,
-  // },
-  // browser: true, // use browser field in package.json
+
+  // FIXME: This needs to be relative to each package
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/src/$1',
+  },
+
+  // FIXME: Need a way to separate out Vue, Marko, etc. test setups
+  snapshotSerializers: ['<rootDir>/node_modules/jest-serializer-vue'],
+  transform: {
+    '^.+\\.js$': '<rootDir>/node_modules/babel-jest',
+    '^.+\\.(marko)$':
+      '<rootDir>/node_modules/@wearegenki/test/lib/marko/transform.js',
+    '.*\\.(vue)$': '<rootDir>/node_modules/vue-jest',
+  },
 };

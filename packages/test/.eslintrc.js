@@ -3,11 +3,7 @@
 'use-strict';
 
 module.exports = {
-  root: true,
   extends: [
-    '@wearegenki/eslint-config',
+    '@wearegenki/eslint-config/jest',
   ],
-  env: {
-    browser: true,
-  },
 };

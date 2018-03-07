@@ -22,7 +22,7 @@
   README:
     Import this into your Vue component styles for variables access, e.g.:
 
-    <style>
+    <style lang="postcss">
       @import "@wearegenki/ui/import";
 
       footer {

@@ -1,11 +1,19 @@
 <template>
-  <dl class="pos-f r0 b0 dg x2 compact pv2 ph3 mv0 white bold" id="breakpoints">
+  <dl id="breakpoints" class="pos-f r0 b0 dg x2 compact pv2 ph3 mv0 white bold">
     <dt>none</dt>
-    <dd class="ml2" :class="none ? 'green' : 'red'">{{ none }}</dd>
+    <dd :class="none ? 'green' : 'red'" class="ml2">
+      {{ none }}
+    </dd>
+
     <dt>s</dt>
-    <dd class="ml2" :class="s ? 'green' : 'red'">{{ s }}</dd>
+    <dd :class="s ? 'green' : 'red'" class="ml2">
+      {{ s }}
+    </dd>
+
     <dt>l</dt>
-    <dd class="ml2" :class="l ? 'green' : 'red'">{{ l }}</dd>
+    <dd :class="l ? 'green' : 'red'" class="ml2">
+      {{ l }}
+    </dd>
   </dl>
 </template>
 
@@ -34,7 +42,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="postcss">
 #breakpoints { /* stylelint-disable-line selector-max-id */
   background-color: rgba(0, 0, 0, 0.6);
 }

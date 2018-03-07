@@ -1,7 +1,6 @@
 <template>
   <transition-group name="toast">
     <ToastItem
-      @destroy="$store.commit('toasts/hide')"
       v-for="toast in $store.state.toasts"
       :key="toast.id"
       :id="toast.id"
@@ -10,6 +9,7 @@
       :action="toast.action"
       :cb="toast.cb"
       :timeout="toast.timeout"
+      @destroy="$store.commit('toasts/hide')"
     />
   </transition-group>
 </template>
