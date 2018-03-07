@@ -27,7 +27,8 @@ branches:
     - devel
 
 script:
-  - lerna bootstrap --use-workspaces
+  # - lerna bootstrap --use-workspaces
+  - lerna bootstrap
   - yarn run test-ci
 
 notifications:
