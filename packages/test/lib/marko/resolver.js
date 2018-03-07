@@ -1,9 +1,11 @@
-'use strict';
+'use strict';  // eslint-disable-line
 
-const resolve = require('browser-resolve'); // builtin
+const resolve = require('browser-resolve'); // eslint-disable-line
 
 module.exports = function resolver(file, options) {
-  const resv = options.browser ? resolve : require('resolve');
+  const resv = options.browser
+    ? resolve
+    : require('resolve');  // eslint-disable-line
 
   let filepath = resv.sync(file, {
     basedir: options.basedir,

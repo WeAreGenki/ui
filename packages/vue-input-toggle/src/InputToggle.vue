@@ -42,18 +42,21 @@
 
 -->
 
-<!-- TODO: Add ability to drag the toggle from one side to the other using mouse or touch — must be high performance and not cause UI jank -->
+<!--
+  TODO: Add ability to drag the toggle from one side to the other using mouse or
+  touch — must be high performance and not cause UI jank.
+-->
 
 <template>
   <div
+    :class="{ 'input-toggle-checked': value }"
+    :tabindex="this.$attrs.disabled === undefined ? 0 : -1"
+    :aria-pressed="value.toString()"
+    class="input-toggle tc"
+    role="button"
     @click="toggle"
     @keydown.space="toggle"
     @keydown.enter="toggle"
-    class="input-toggle tc"
-    :class="{ 'input-toggle-checked': value }"
-    :tabindex="this.$attrs.disabled === undefined ? 0 : -1"
-    role="button"
-    :aria-pressed="value.toString()"
   >
     <div class="input-toggle-slider"/>
     <div class="input-toggle-on">{{ textOn }}</div>

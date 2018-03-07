@@ -1,4 +1,4 @@
-'use strict';
+'use strict'; // eslint-disable-line
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -24,7 +24,7 @@ module.exports = {
         '.jsx',
         '.marko',
         '.vue',
-      ]},
+      ] },
     },
     'html/html-extensions': ['.html', '.marko'], // not .vue; it has its own parser
   },

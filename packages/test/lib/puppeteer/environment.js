@@ -1,4 +1,4 @@
-'use strict';
+'use strict'; // eslint-disable-line
 
 const chalk = require('chalk');
 const NodeEnvironment = require('jest-environment-node'); // eslint-disable-line import/no-extraneous-dependencies

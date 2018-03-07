@@ -1,6 +1,6 @@
 'use strict'; // eslint-disable-line
 
-const path = require('path')
+const path = require('path');
 
 module.exports = {
   preset: '@wearegenki/test',

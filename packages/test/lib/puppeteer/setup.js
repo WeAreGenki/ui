@@ -1,4 +1,4 @@
-'use strict';
+'use strict'; // eslint-disable-line
 
 const chalk = require('chalk');
 const puppeteer = require('puppeteer');
@@ -9,7 +9,7 @@ const path = require('path');
 
 const DIR = path.join(os.tmpdir(), 'jest_puppeteer_global_setup');
 
-module.exports = async function() {
+module.exports = async () => {
   console.log(chalk.green('Setup Puppeteer'));
   const browser = await puppeteer.launch({
     // workaround for Puppeteer not launching correctly on Travis-CI

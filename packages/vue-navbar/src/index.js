@@ -17,7 +17,7 @@
  * limitations under the License.
  */
 
-import TheNavbar from './TheNavbar';
+import TheNavbar from './TheNavbar'; // eslint-disable-line
 
 TheNavbar.install = (Vue) => {
   Vue.component(TheNavbar.name, TheNavbar);

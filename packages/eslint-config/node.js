@@ -1,6 +1,6 @@
 // extra settings for node modules
 
-'use strict';
+'use strict'; // eslint-disable-line
 
 module.exports = {
   extends: [

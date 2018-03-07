@@ -2,7 +2,7 @@
 
 // https://github.com/andywer/postcss-debug#js-code
 
-/* eslint-disable strict, no-console */
+/* eslint-disable strict, no-console, import/no-extraneous-dependencies */
 
 'use strict';
 
