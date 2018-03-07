@@ -1,5 +1,3 @@
-// FIXME: Move this functionality into @wearegenki/postcss-config
-
 // https://github.com/andywer/postcss-debug#js-code
 
 /* eslint-disable strict, no-console, import/no-extraneous-dependencies */
