@@ -88,7 +88,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="postcss">
 @import "@wearegenki/ui/import";
 
 /* the toggle purposely looks like .btn and uses many of the button variables */

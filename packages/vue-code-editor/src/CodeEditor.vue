@@ -113,7 +113,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="postcss">
 @import "codemirror/lib/codemirror";
 @import "codemirror/theme/dracula";
 @import "@wearegenki/ui/import";

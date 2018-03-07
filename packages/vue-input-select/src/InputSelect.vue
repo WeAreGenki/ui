@@ -40,6 +40,15 @@
         text in the input.
     -->
     <input
+      v-model="valueText__"
+      :id="id"
+      :class="{ 'input-select-active': isOpen }"
+      :tabindex="disabled ? -1 : 0"
+      :placeholder="filterable && isOpen ? filterHelp : placeholder"
+      :readonly="disabled === undefined && (!filterable || readonly || !isOpen)"
+      :disabled="disabled"
+      class="select"
+      role="listbox"
       @click="isOpen ? false : open__()"
       @focus="open__"
       @blur="close__"
@@ -48,15 +57,6 @@
       @keydown.esc="close__"
       @keydown.up.prevent="isOpen ? up__() : open__()"
       @keydown.down.prevent="isOpen ? down__() : open__()"
-      v-model="valueText__"
-      class="select"
-      :class="{ 'input-select-active': isOpen }"
-      :id="id"
-      :tabindex="disabled ? -1 : 0"
-      role="listbox"
-      :placeholder="filterable && isOpen ? filterHelp : placeholder"
-      :readonly="disabled === undefined && (!filterable || readonly || !isOpen)"
-      :disabled="disabled"
     >
     <span class="input-select-caret"/>
 
@@ -67,17 +67,17 @@
     -->
     <div
       v-view="isOpen"
-      @mousedown.prevent="select__"
       class="input-select-dropdown w-100 z5 tl"
+      @mousedown.prevent="select__"
     >
       <!-- eslint-disable-next-line vue/require-v-for-key -->
       <div
         v-for="(option, index) in list"
-        :data-id="option.id"
-        class="input-select-option"
         :class="{ 'input-select-active': index === i }"
-        role="option"
+        :data-id="option.id"
         :disabled="option.disabled"
+        class="input-select-option"
+        role="option"
       >
         {{ option.text }}
       </div>
@@ -227,7 +227,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="postcss">
 @import "@wearegenki/ui/import";
 
 .input-select-active {
