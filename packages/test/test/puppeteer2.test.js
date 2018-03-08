@@ -1,0 +1,11 @@
+// example test from https://github.com/smooth-code/jest-puppeteer
+
+describe('Google', () => {
+  beforeAll(async () => {
+    await page.goto('https://google.com');
+  });
+
+  it('should display "google" text on page', async () => {
+    await expect(page).toMatch('google');
+  });
+});

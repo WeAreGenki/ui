@@ -1,0 +1,19 @@
+{
+  "name": "website",
+  "version": "0.0.0",
+  "private": true,
+  "description": "We Are Genki UI framework documentation website.",
+  "repository": "https://github.com/WeAreGenki/ui/tree/master/docs/website",
+  "bugs": {
+    "url": "https://github.com/WeAreGenki/ui/issues"
+  },
+  "author": "Max Milton <max@wearegenki.com>",
+  "license": "Apache-2.0",
+  "main": "index.js",
+  "devDependencies": {
+    "markdownlint": "^0.7.0"
+  },
+  "dependencies": {
+    "@wearegenki/ui": "^0.4.2"
+  }
+}

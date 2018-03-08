@@ -17,13 +17,12 @@
   },
   "author": "Max Milton <max@wearegenki.com>",
   "license": "Apache-2.0",
+  "main": "index.js",
   "style": "index.css",
-  "scripts": {
-    "build": "exit 0",
-    "prepare": "npm run build",
-    "lint": "stylelint \"**/*.css\"",
-    "test": "exit 0"
-  },
+  "files": [
+    "import.css",
+    "src.css"
+  ],
   "dependencies": {
     "@wearegenki/css": "^0.4.2",
     "@wearegenki/eslint-config": "^0.4.2",

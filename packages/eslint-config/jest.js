@@ -12,19 +12,25 @@ module.exports = {
     sourceType: 'module',
   },
   env: {
-    browser: true,
+    // browser: true,
     jest: true,
-    'jest/globals': true,
+    // 'jest/globals': true,
+    // node: true,
+  },
+  globals: {
+    browser: true,
+    expectPage: true,
+    page: true,
   },
   plugins: ['jest'],
-  settings: {
-    rules: {
-      'import/no-extraneous-dependencies': ['error', {
-        optionalDependencies: [
-          'test/unit/index.js',
-          'test/index.js',
-        ],
-      }],
-    },
-  },
+  // settings: {
+  //   rules: {
+  //     'import/no-extraneous-dependencies': ['error', {
+  //       optionalDependencies: [
+  //         'test/unit/index.js',
+  //         'test/index.js',
+  //       ],
+  //     }],
+  //   },
+  // },
 };

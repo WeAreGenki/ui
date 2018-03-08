@@ -92,7 +92,7 @@ export default {
 }
 
 .btn-tab-active {
-  border-bottom-color: var(--tab-border-colour);
   cursor: default;
+  border-bottom-color: var(--tab-border-colour);
 }
 </style>

@@ -1,8 +1,9 @@
 {
-  "lerna": "2.5.1",
   "version": "0.4.2",
   "packages": [
-    "packages/*"
+    "docs/examples/*",
+    "packages/*",
+    "website"
   ],
   "command": {
     "publish": {

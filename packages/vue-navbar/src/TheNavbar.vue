@@ -162,9 +162,9 @@ export default {
       filter var(--navbar-shadow-fade-speed) ease,
       transform var(--navbar-animate-speed) ease;
 
-      @if var(--navbar-optimize) {
-        will-change: filter, transform;
-      }
+    @if var(--navbar-optimize) {
+      will-change: filter, transform;
+    }
   } @else { /* stylelint-disable-line */
     > .con {
       transition: transform var(--navbar-animate-speed) ease;

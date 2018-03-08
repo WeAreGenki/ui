@@ -1,5 +1,5 @@
 {
-  "name": "wearegenki-ui-custom-build",
+  "name": "example-custom-build",
   "private": true,
   "version": "1.0.0",
   "description": "An example custom CSS build based on the @wearegenki/ui framework.",
@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "cssnano": "^3.10.0",
-    "postcss": "^6.0.16",
-    "postcss-cli": "^4.1.1"
+    "postcss": "^6.0.19",
+    "postcss-cli": "^5.0.0"
   }
 }

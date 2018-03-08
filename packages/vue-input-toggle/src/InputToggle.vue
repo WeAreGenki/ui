@@ -160,7 +160,6 @@ export default {
   }
 }
 
-
 .input-toggle-on,
 .input-toggle-off {
   flex-basis: calc(var(--input-toggle-width) / 2);
@@ -197,6 +196,7 @@ export default {
     background: var(--input-toggle-hover-slider-bg-colour);
   }
 
+  /* stylelint-disable-next-line no-descending-specificity */
   [disabled] > & {
     box-shadow: none; /* inner shadow */
     transition: none;

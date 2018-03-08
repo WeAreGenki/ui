@@ -21,14 +21,6 @@
     "debug.js",
     "tools.js"
   ],
-  "scripts": {
-    "build": "exit 0",
-    "prepare": "npm run build",
-    "lint": "npm run lint:css && npm run lint:js",
-    "lint:css": "stylelint \"src/**/*.vue\" \"src/**/*.css\"",
-    "lint:js": "eslint --ext .js,.vue src test",
-    "test": "exit 0"
-  },
   "peerDependencies": {
     "postcss": "^6.0.14"
   },

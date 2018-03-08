@@ -16,14 +16,6 @@
   "author": "Max Milton <max@wearegenki.com>",
   "license": "Apache-2.0",
   "main": "index.js",
-  "scripts": {
-    "build": "exit 0",
-    "prepare": "npm run build",
-    "lint": "npm run lint:css && npm run lint:js",
-    "lint:css": "stylelint \"src/**/*.vue\" \"src/**/*.css\"",
-    "lint:js": "eslint --ext .js,.vue src test",
-    "test": "exit 0"
-  },
   "dependencies": {
     "stylelint-config-standard": "^18.2.0",
     "stylelint-order": "^0.8.1"
