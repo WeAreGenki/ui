@@ -49,6 +49,6 @@
       "statements": 0
     }
   },
-  "coverageDirectory": "<rootDir>/node_modules/.cache/coverage",
+  "coverageDirectory": "<rootDir>/test/coverage",
   "coverageReporters": ["json", "text"]
 }
