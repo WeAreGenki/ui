@@ -1,8 +1,13 @@
 {
   "name": "wearegenki-ui-monorepo",
-  "private": true,
-  "license": "Apache-2.0",
   "homepage": "https://ui.wearegenki.com",
+  "license": "Apache-2.0",
+  "private": true,
+  "workspaces": [
+    "docs/examples/*",
+    "packages/*",
+    "website"
+  ],
   "scripts": {
     "setup": "yarn; lerna bootstrap",
     "update": "ncu --error-level 2 && lerna exec --parallel -- ncu --error-level 2 --reject /wearegenki/",
@@ -33,7 +38,7 @@
     "eslint": "4.18.2",
     "jest": "22.4.2",
     "jest-serializer-vue": "0.3.0",
-    "lerna": "3.0.0-beta.0",
+    "lerna": "^3.0.0-beta.0",
     "marko": "4.9.1",
     "npm-check-updates": "^2.14.1",
     "postcss": "6.0.19",
@@ -44,11 +49,6 @@
     "vue-server-renderer": "2.5.13",
     "vue-template-compiler": "2.5.13"
   },
-  "workspaces": [
-    "packages/*",
-    "docs/examples/*",
-    "docs/website"
-  ],
   "engines": {
     "node": "> 8.0.0"
   }
