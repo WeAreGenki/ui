@@ -1,9 +1,9 @@
 node_modules/
 dist/
-test/unit/coverage/
+test/coverage/
+.cache/
 package-lock.json*
 *.log
-.cache/
 .stylelintcache
 .esm-cache
 *.marko.js

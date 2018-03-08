@@ -1,8 +1,4 @@
 {
-  "XX__globalSetup": "<rootDir>/node_modules/@wearegenki/test/lib/puppeteer/setup.js",
-  "XX__globalTeardown": "<rootDir>/node_modules/@wearegenki/test/lib/puppeteer/teardown.js",
-  "XX__testEnvironment": "<rootDir>/node_modules/@wearegenki/test/lib/puppeteer/environment.js",
-
   "testMatch": ["**/?(*.)(spec|test).js"],
   "testPathIgnorePatterns": [
     "/coverage/",
