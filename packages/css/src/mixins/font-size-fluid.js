@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /*
 
   FLUID FONT SIZE (experimental)
