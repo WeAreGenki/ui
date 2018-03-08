@@ -6,22 +6,20 @@
   "scripts": {
     "setup": "yarn && lerna bootstrap",
     "update": "ncu && lerna exec --parallel -- ncu --reject /wearegenki/",
+    "prepublish": "yarn test && yarn build",
     "publish:nightly": "lerna publish --canary=nightly --exact --npm-tag=next",
     "publish:beta": "lerna publish --canary=beta --exact --npm-tag=beta",
-    "prepublish": "yarn test",
-    "TODO__prepublish": "yarn test && yarn clean:dist && yarn build",
     "prebuild": "yarn clean",
     "build": "lerna run build",
-    "clean": "lerna clean",
-    "clean:dist": "yarn clean --yes && rm -rf node_modules",
+    "clean": "lerna clean --yes",
     "lint:css": "stylelint --cache --cache-location=/tmp/ \"**/*.{vue,html,css}\"",
     "lint:js": "eslint --ignore-path .gitignore --ext .js,.jsx,.vue,.marko packages docs test",
     "lint": "yarn lint:css && yarn lint:js",
     "pretest": "yarn lint:css",
     "test": "jest --config test/jest.config.js",
-    "test-ci": "yarn test --coverage --runInBand",
+    "test-ci": "yarn test --coverage --runInBand --ci",
     "test:watch": "yarn test --coverage --watch",
-    "debug:browsers": "npx autoprefixer-info"
+    "debug:browsers": "yarn autoprefixer --info"
   },
   "devDependencies": {
     "@babel/core": "7.0.0-beta.40",
