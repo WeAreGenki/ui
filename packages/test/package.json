@@ -23,12 +23,6 @@
     "bin/",
     "lib/"
   ],
-  "scripts": {
-    "build": "exit 0",
-    "prepare": "npm run build",
-    "lint": "eslint --ignore-path ../../.gitignore --ext .js lib test",
-    "test": "exit 0"
-  },
   "peerDependencies": {
     "eslint": "^4.18.2",
     "jest": "^22.4.2",

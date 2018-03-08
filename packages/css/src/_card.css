@@ -41,6 +41,10 @@
     }
   }
 
+  .btn-clear {
+    margin-left: calc(-1 * var(--btn-padding-x));
+  }
+
   &:hover {
     text-decoration: unset; /* no need to underline links as it's obvious this element is interactive */
     transition-duration: var(--card-touch-animate-speed); /* overrides <a> when .card-touch is used on a link */
@@ -61,10 +65,6 @@
       color: var(--link-hover-font-colour);
       background-color: unset;
     }
-  }
-
-  .btn-clear {
-    margin-left: calc(-1 * var(--btn-padding-x));
   }
 }
 

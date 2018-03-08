@@ -22,14 +22,6 @@
     "dist",
     "src"
   ],
-  "scripts": {
-    "build": "exit 0",
-    "prepare": "npm run build",
-    "lint": "npm run lint:css && npm run lint:js",
-    "lint:css": "stylelint \"src/**/*.marko\" \"src/**/*.css\"",
-    "lint:js": "eslint --ext .js,.marko src test",
-    "test": "exit 0"
-  },
   "dependencies": {
     "@wearegenki/css": "^0.4.2"
   },

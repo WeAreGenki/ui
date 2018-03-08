@@ -15,6 +15,7 @@ module.exports = {
     browser: true,
     jest: true,
     'jest/globals': true,
+    node: true,
   },
   plugins: ['jest'],
   settings: {

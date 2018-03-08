@@ -81,7 +81,7 @@ textarea {
   }
 }
 
-textarea {
+textarea { /* stylelint-disable-line no-descending-specificity */
   cursor: text;
 }
 

@@ -5,7 +5,7 @@
   "homepage": "https://ui.wearegenki.com",
   "scripts": {
     "setup": "yarn && lerna bootstrap",
-    "update": "ncu && lerna exec --parallel -- ncu --reject /wearegenki/",
+    "update": "npx ncu && lerna exec --parallel -- npx ncu --reject /wearegenki/",
     "prepublish": "yarn test && yarn build",
     "publish:nightly": "lerna publish --canary=nightly --exact --npm-tag=next",
     "publish:beta": "lerna publish --canary=beta --exact --npm-tag=beta",
@@ -15,8 +15,8 @@
     "lint:css": "stylelint --cache --cache-location=/tmp/ \"**/*.{vue,html,css}\"",
     "lint:js": "eslint --ignore-path .gitignore --ext .js,.jsx,.vue,.marko packages docs test",
     "lint": "yarn lint:css && yarn lint:js",
-    "pretest": "yarn lint:css",
-    "test": "jest --config test/jest.config.js",
+    "pretest": "yarn lint",
+    "test": "jest",
     "test-ci": "yarn test --coverage --runInBand --ci",
     "test:watch": "yarn test --coverage --watch",
     "debug:browsers": "yarn autoprefixer --info"
@@ -32,7 +32,6 @@
     "babel-jest": "22.4.1",
     "eslint": "4.18.2",
     "jest": "22.4.2",
-    "jest-runner-eslint": "0.4.0",
     "jest-serializer-vue": "0.3.0",
     "lerna": "3.0.0-beta.0",
     "marko": "4.9.1",

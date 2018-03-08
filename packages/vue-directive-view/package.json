@@ -18,14 +18,6 @@
   "license": "Apache-2.0",
   "main": "index.js",
   "style": "index.css",
-  "scripts": {
-    "build": "exit 0",
-    "prepare": "npm run build",
-    "lint": "npm run lint:css && npm run lint:js",
-    "lint:css": "stylelint \"src/**/*.vue\" \"src/**/*.css\"",
-    "lint:js": "eslint --ext .js,.vue src test",
-    "test": "exit 0"
-  },
   "peerDependencies": {
     "vue": "^2.5.13"
   },

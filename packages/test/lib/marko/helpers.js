@@ -33,47 +33,47 @@
 
 // // // // // // // // // // // // // // // // // // // // // // // // // // //
 
-const server = {
-  start() {
-    // x
-  },
-  end() {
-    // x
-  },
-};
+// const server = {
+//   start() {
+//     // x
+//   },
+//   end() {
+//     // x
+//   },
+// };
 
-function attachComponent(component, el, data = {}) {
-  // const renderResult = component.renderSync(data);
+// function attachComponent(component, el, data = {}) {
+//   // const renderResult = component.renderSync(data);
 
-  // const output = renderResult.getOutput();
-  // let html;
+//   // const output = renderResult.getOutput();
+//   // let html;
 
-  // if (output.actualize) {
-  //   const docFragment = output.actualize(document);
+//   // if (output.actualize) {
+//   //   const docFragment = output.actualize(document);
 
-  //   // generate html from childNodes
-  //   html = '';
-  //   if (docFragment.hasChildNodes()) {
-  //     const children = docFragment.childNodes;
-  //     for (let i = 0; i < children.length; i++) {
-  //       html += children[i].outerHTML;
-  //     }
-  //   }
-  // } else {
-  //   html = output.toString();
-  // }
+//   //   // generate html from childNodes
+//   //   html = '';
+//   //   if (docFragment.hasChildNodes()) {
+//   //     const children = docFragment.childNodes;
+//   //     for (let i = 0; i < children.length; i++) {
+//   //       html += children[i].outerHTML;
+//   //     }
+//   //   }
+//   // } else {
+//   //   html = output.toString();
+//   // }
 
-  // renderResult.html = html;
+//   // renderResult.html = html;
 
-  // console.log('@!@!@!', renderResult);
-  // return renderResult;
+//   // console.log('@!@!@!', renderResult);
+//   // return renderResult;
 
-  // const template = require('marko').load(require.resolve('./my-template.marko'));
-}
+//   // const template = require('marko').load(require.resolve('./my-template.marko'));
+// }
 
 module.exports = {
   // renderMarkoComponent,
 
-  server,
-  attachComponent,
+  // server,
+  // attachComponent,
 };

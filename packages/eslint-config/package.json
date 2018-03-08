@@ -22,12 +22,6 @@
     "node.js",
     "vue.js"
   ],
-  "scripts": {
-    "build": "exit 0",
-    "prepare": "npm run build",
-    "lint": "eslint --ignore-path ../../.gitignore --ext .js .",
-    "test": "exit 0"
-  },
   "peerDependencies": {
     "eslint": "^4.14.0"
   },
