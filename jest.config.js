@@ -16,8 +16,8 @@ module.exports = {
   snapshotSerializers: ['<rootDir>/node_modules/jest-serializer-vue'],
   transform: {
     '^.+\\.js$': '<rootDir>/node_modules/babel-jest',
-    '^.+\\.(marko)$': '<rootDir>/packages/test/lib/marko/transform.js',
-    '.*\\.(vue)$': '<rootDir>/node_modules/vue-jest',
+    '^.+\\.marko$': '<rootDir>/packages/test/lib/marko/transform.js',
+    '^.+\\.vue$': '<rootDir>/node_modules/vue-jest',
   },
 
   projects: [
