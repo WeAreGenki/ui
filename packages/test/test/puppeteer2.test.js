@@ -1,22 +1,11 @@
-const timeout = 5000;
+// example test from https://github.com/smooth-code/jest-puppeteer
 
-describe(
-  '/ (Home Page)',
-  () => {
-    let page;
-    beforeAll(async () => {
-      page = await global.__BROWSER__.newPage();
-      await page.goto('https://google.com');
-    }, timeout);
+describe('Google', () => {
+  beforeAll(async () => {
+    await page.goto('https://google.com');
+  });
 
-    afterAll(async () => {
-      await page.close();
-    });
-
-    it('should load without error', async () => {
-      const text = await page.evaluate(() => document.body.textContent);
-      expect(text).toContain('google');
-    });
-  },
-  timeout
-);
+  it('should display "google" text on page', async () => {
+    await expect(page).toMatch('google');
+  });
+});

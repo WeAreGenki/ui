@@ -1,22 +1,9 @@
-const timeout = 5000;
+// example test from https://github.com/xfumihiro/jest-puppeteer-example/blob/master/__tests__/test1.js
 
-describe(
-  '/ (Home Page)',
-  () => {
-    let page;
-    beforeAll(async () => {
-      page = await global.__BROWSER__.newPage();
-      await page.goto('https://google.com');
-    }, timeout);
-
-    afterAll(async () => {
-      await page.close();
-    });
-
-    it('should load without error', async () => {
-      const text = await page.evaluate(() => document.body.textContent);
-      expect(text).toContain('google');
-    });
-  },
-  timeout
-);
+describe('/ (Home Page)', () => {
+  it('should load without error', async () => {
+    await page.goto('https://google.com');
+    const text = await page.evaluate(() => document.body.textContent);
+    expect(text).toContain('google');
+  });
+});

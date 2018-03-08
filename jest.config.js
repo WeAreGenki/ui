@@ -4,18 +4,8 @@ const presetConfig = require('@wearegenki/test/jest-preset'); // eslint-disable-
 
 module.exports = {
   preset: '@wearegenki/test',
-
-  // TODO: Can we get away with not using puppeteer? Or maybe just use it for
-  // more e2e style test? The performance cost can be a bit much for this type
-  // of repo where there's a lot of small tests.
-  globalSetup: '<rootDir>/packages/test/lib/puppeteer/setup.js',
-  globalTeardown: '<rootDir>/packages/test/lib/puppeteer/teardown.js',
-  // testEnvironment: '<rootDir>/packages/test/lib/puppeteer/environment.js',
-
-  testPathIgnorePatterns: [
-    ...presetConfig.testPathIgnorePatterns,
-    '<rootDir>/packages/*',
-  ],
+  globalSetup: 'jest-environment-puppeteer/setup',
+  globalTeardown: 'jest-environment-puppeteer/teardown',
 
   // FIXME: This needs to be relative to each package
   // moduleNameMapper: {
