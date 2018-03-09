@@ -18,6 +18,12 @@
     "node",
     "vue"
   ],
+  "transform": {
+    "^.+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff2?)$": "<rootDir>/packages/test/lib/null-transform.js",
+    "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
+    "^.+\\.marko$": "<rootDir>/packages/test/lib/marko/transform.js",
+    "^.+\\.vue$": "<rootDir>/node_modules/vue-jest"
+  },
   "collectCoverageFrom": [
     "**/*.{js,jsx,marko,mjs,vue}",
     "!**/\\.*rc.js",
