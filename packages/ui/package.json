@@ -34,7 +34,7 @@
     "@wearegenki/ui-vue": "^0.4.2"
   },
   "optionalDependencies": {
-    "@wearegenki/fonts": "^0.4.2"
+    "@wearegenki/fonts": "^0.5.0"
   },
   "publishConfig": {
     "access": "public"
