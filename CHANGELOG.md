@@ -23,6 +23,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Many internal property names changed to indicate which are safe to mangle (shorten for smaller file size).
 - Continued CSS style improvements.
 - Small performance improvement to `@wearegenki/vue-input-select`; removed `:key` binding.
+- Moved `@wearegenki/fonts` into a separate repo.
 - Updated dependencies.
 
 ## Fixed
