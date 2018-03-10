@@ -12,9 +12,6 @@ module.exports = {
   //   '^@/(.*)$': '<rootDir>/src/$1',
   // },
 
-  // FIXME: Need a way to separate out Vue, Marko, and Node test setups (?)
-  snapshotSerializers: ['<rootDir>/node_modules/jest-serializer-vue'],
-
   projects: [
     // XXX: Manually list each package until they all have tests then use a glob to match
     // '<rootDir>/packages/*',
