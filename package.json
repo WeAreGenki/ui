@@ -38,16 +38,16 @@
     "eslint": "4.18.2",
     "jest": "22.4.2",
     "jest-serializer-vue": "1.0.0",
-    "lerna": "3.0.0-beta.1",
+    "lerna": "3.0.0-beta.2",
     "marko": "4.9.1",
     "npm-check-updates": "2.14.1",
     "postcss": "6.0.19",
     "puppeteer": "1.1.1",
     "stylelint": "9.1.1",
-    "vue": "2.5.13",
+    "vue": "2.5.14",
     "vue-jest": "2.1.1",
-    "vue-server-renderer": "2.5.13",
-    "vue-template-compiler": "2.5.13"
+    "vue-server-renderer": "2.5.14",
+    "vue-template-compiler": "2.5.14"
   },
   "engines": {
     "node": "> 8.0.0"
