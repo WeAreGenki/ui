@@ -27,6 +27,7 @@
     "debug:browsers": "yarn autoprefixer --info"
   },
   "devDependencies": {
+    "@wearegenki/ui": "*",
     "eslint": "4.18.2",
     "jest": "22.4.2",
     "lerna": "3.0.0-beta.2",
