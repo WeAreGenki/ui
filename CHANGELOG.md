@@ -12,8 +12,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 
 - `@wearegenki/stylelint-config` now comes with preconfigured caching for better dev time intermittent build performance.
-- New package `@wearegenki/test` which contains a preconfigured testing suite using Jest and Puppeteer. Also includes a simple local server for doing manual testing.
-- New `@wearegenki/eslint-config` preset `test` to go along with the new test package.
+- New package `@wearegenki/test` which contains a preconfigured testing suite using Jest and Puppeteer. Also includes a simple local server for doing manual testing. This release is more about the initial setup and we'll be slowly incorporating this into the other packages going forward.
+- New `@wearegenki/eslint-config` preset `jest` to go along with the new test package and many preset improvements.
 
 ### Changed
 
@@ -23,12 +23,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Many internal property names changed to indicate which are safe to mangle (shorten for smaller file size).
 - Continued CSS style improvements.
 - Small performance improvement to `@wearegenki/vue-input-select`; removed `:key` binding.
-- Moved `@wearegenki/fonts` into a separate repo.
+- Moved `@wearegenki/fonts` into a separate git repository.
 - Updated dependencies.
 
 ## Fixed
 
-- Use relative paths for CSS imports for better compatability with some resource bundlers (e.g. package-bundler).
+- Use relative paths for CSS imports for better compatibility with some resource bundlers (e.g. package-bundler).
 - Vue resource resolving in `@wearegenki/eslint-config/vue`.
 
 ## [0.4.2] - 2018-02-03
