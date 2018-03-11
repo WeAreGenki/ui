@@ -20,13 +20,13 @@
     "vue"
   ],
   "transform": {
-    "^.+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff2?)$": "<rootDir>/node_modules/@wearegenki/test/lib/null-transform.js",
-    "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
-    "^.+\\.marko$": "<rootDir>/node_modules/@wearegenki/test/lib/marko/transform.js",
-    "^.+\\.vue$": "<rootDir>/node_modules/vue-jest"
+    "^.+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff2?)$": "@wearegenki/test/lib/null-transform.js",
+    "^.+\\.js$": "babel-jest",
+    "^.+\\.marko$": "@wearegenki/test/lib/marko/transform.js",
+    "^.+\\.vue$": "vue-jest"
   },
-"  snapshotSerializers": [
-    "<rootDir>/node_modules/jest-serializer-vue"
+  "snapshotSerializers": [
+    "jest-serializer-vue"
   ],
   "collectCoverageFrom": [
     "**/*.{js,jsx,marko,mjs,vue}",
