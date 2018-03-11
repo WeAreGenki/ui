@@ -1,5 +1,6 @@
 {
-  "testMatch": ["**/?(*.)(spec|test).js"],
+  "XX__testMatch": ["**/?(*.)(spec|test).js"],
+
   "testPathIgnorePatterns": [
     "/coverage/",
     "/dist/",
@@ -17,6 +18,15 @@
     "mjs",
     "node",
     "vue"
+  ],
+  "transform": {
+    "^.+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff2?)$": "@wearegenki/test/lib/null-transform.js",
+    "^.+\\.js$": "babel-jest",
+    "^.+\\.marko$": "@wearegenki/test/lib/marko/transform.js",
+    "^.+\\.vue$": "vue-jest"
+  },
+  "snapshotSerializers": [
+    "jest-serializer-vue"
   ],
   "collectCoverageFrom": [
     "**/*.{js,jsx,marko,mjs,vue}",
