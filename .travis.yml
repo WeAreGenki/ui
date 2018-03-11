@@ -18,7 +18,7 @@ branches:
 
 script:
   # - lerna bootstrap
-  - yarn jest --showConfig
+  # - yarn jest --showConfig
   - yarn run test-ci
 
 notifications:
