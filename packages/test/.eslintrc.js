@@ -4,6 +4,7 @@
 
 module.exports = {
   extends: [
+    '@wearegenki/eslint-config/vue',
     '@wearegenki/eslint-config/jest',
   ],
 };
