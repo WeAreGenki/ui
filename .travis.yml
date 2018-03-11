@@ -6,16 +6,6 @@ node_js:
 
 sudo: false
 
-# addons:
-#   apt:
-#     packages:
-#       # This is required to run new chrome on old trusty
-#       - libnss3
-
-# before_install:
-#   - "export DISPLAY=:99.0"
-#   - "sh -e /etc/init.d/xvfb start"
-
 cache:
   yarn: true
   directories:
@@ -27,7 +17,8 @@ branches:
     - dev
 
 script:
-  - lerna bootstrap
+  - yarn jest --showConfig
+  # - lerna bootstrap
   - yarn run test-ci
 
 notifications:
