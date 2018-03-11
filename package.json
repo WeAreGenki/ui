@@ -41,9 +41,9 @@
     "postcss": "6.0.19",
     "puppeteer": "1.1.1",
     "stylelint": "9.1.1",
-    "vue": "2.5.14",
-    "vue-server-renderer": "2.5.14",
-    "vue-template-compiler": "2.5.14"
+    "vue": "2.5.15",
+    "vue-server-renderer": "2.5.15",
+    "vue-template-compiler": "2.5.15"
   },
   "engines": {
     "node": "> 8.0.0"
