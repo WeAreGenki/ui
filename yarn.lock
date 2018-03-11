@@ -2986,7 +2986,7 @@ eslint-plugin-import@^2.9.0:
     minimatch "^3.0.3"
     read-pkg-up "^2.0.0"
 
-eslint-plugin-jest@^21.13.0:
+eslint-plugin-jest@^21.14.0:
   version "21.14.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-21.14.0.tgz#ae1c2f9f8cc4ba389c824a5ba9414036b6d5ea5a"
 
@@ -4879,7 +4879,7 @@ jest-mock@^22.2.0:
   version "22.2.0"
   resolved "https://registry.yarnpkg.com/jest-mock/-/jest-mock-22.2.0.tgz#444b3f9488a7473adae09bc8a77294afded397a7"
 
-jest-puppeteer-preset@^2.0.0:
+jest-puppeteer-preset@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/jest-puppeteer-preset/-/jest-puppeteer-preset-2.0.1.tgz#7067525922a033179226f8878eb927b54ccd96f6"
   dependencies:
