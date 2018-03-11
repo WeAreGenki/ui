@@ -12,7 +12,7 @@
     "setup": "yarn; lerna bootstrap",
     "update": "ncu --error-level 2 && lerna exec --parallel -- ncu --error-level 2 --reject /wearegenki/",
     "publish:prerelease": "lerna publish --canary=prerelease --exact --npm-tag=next",
-    "publish:beta": "lerna publish --canary=beta --exact --npm-tag=beta",
+    "publish:beta": "lerna publish --cd-version=prerelease --preid=beta --npm-tag=beta",
     "prepack": "yarn test && yarn build",
     "prebuild": "yarn clean",
     "build": "lerna run build",
