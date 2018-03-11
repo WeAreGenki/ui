@@ -1,7 +1,7 @@
 {
   "name": "example-custom-build",
   "private": true,
-  "version": "1.0.0",
+  "version": "0.5.0",
   "description": "An example custom CSS build based on the @wearegenki/ui framework.",
   "author": "Max Milton <max@wearegenki.com>",
   "license": "Apache-2.0",
@@ -12,7 +12,7 @@
     "build": "NODE_ENV=production postcss src/css/main.css -d dist/css/ -c .postcssrc.js"
   },
   "dependencies": {
-    "@wearegenki/ui": "^0.4.2"
+    "@wearegenki/ui": "^0.5.0"
   },
   "devDependencies": {
     "cssnano": "^3.10.0",

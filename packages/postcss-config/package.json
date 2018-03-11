@@ -1,6 +1,6 @@
 {
   "name": "@wearegenki/postcss-config",
-  "version": "0.4.2",
+  "version": "0.5.0",
   "description": "PostCSS config preset and tools for use in We Are Genki projects.",
   "keywords": [
     "css",

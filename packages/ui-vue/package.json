@@ -1,6 +1,6 @@
 {
   "name": "@wearegenki/ui-vue",
-  "version": "0.4.2",
+  "version": "0.5.0",
   "description": "We Are Genki UI meta package which bundles all Vue components",
   "keywords": [
     "css",
@@ -19,18 +19,18 @@
   "main": "index.js",
   "style": "index.css",
   "dependencies": {
-    "@wearegenki/vue-code-editor": "^0.4.2",
-    "@wearegenki/vue-debug-breakpoints": "^0.4.2",
-    "@wearegenki/vue-directive-tooltip": "^0.4.2",
-    "@wearegenki/vue-directive-view": "^0.4.2",
-    "@wearegenki/vue-dropdown": "^0.4.2",
-    "@wearegenki/vue-input-select": "^0.4.2",
-    "@wearegenki/vue-input-toggle": "^0.4.2",
-    "@wearegenki/vue-link-preloader": "^0.4.2",
-    "@wearegenki/vue-modal": "^0.4.2",
-    "@wearegenki/vue-navbar": "^0.4.2",
-    "@wearegenki/vue-tabs": "^0.4.2",
-    "@wearegenki/vue-toasts": "^0.4.2"
+    "@wearegenki/vue-code-editor": "^0.5.0",
+    "@wearegenki/vue-debug-breakpoints": "^0.5.0",
+    "@wearegenki/vue-directive-tooltip": "^0.5.0",
+    "@wearegenki/vue-directive-view": "^0.5.0",
+    "@wearegenki/vue-dropdown": "^0.5.0",
+    "@wearegenki/vue-input-select": "^0.5.0",
+    "@wearegenki/vue-input-toggle": "^0.5.0",
+    "@wearegenki/vue-link-preloader": "^0.5.0",
+    "@wearegenki/vue-modal": "^0.5.0",
+    "@wearegenki/vue-navbar": "^0.5.0",
+    "@wearegenki/vue-tabs": "^0.5.0",
+    "@wearegenki/vue-toasts": "^0.5.0"
   },
   "engines": {
     "node": "> 8.0.0"

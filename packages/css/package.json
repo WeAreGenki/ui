@@ -1,6 +1,6 @@
 {
   "name": "@wearegenki/css",
-  "version": "0.4.2",
+  "version": "0.5.0",
   "description": "A friendly UI framework which aims to be straightforward, intuitive, and high performance.",
   "keywords": [
     "css",
@@ -26,7 +26,7 @@
     "@wearegenki/fonts": "0.5.0"
   },
   "devDependencies": {
-    "@wearegenki/postcss-config": "^0.4.2"
+    "@wearegenki/postcss-config": "^0.5.0"
   },
   "publishConfig": {
     "access": "public"
