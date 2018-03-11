@@ -240,7 +240,7 @@
   version "7.0.0-beta.40"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-class-properties/-/plugin-syntax-class-properties-7.0.0-beta.40.tgz#ff82c04c6d97cdb947dc64e3f3d4bc791e85a16f"
 
-"@babel/plugin-syntax-dynamic-import@7.0.0-beta.40":
+"@babel/plugin-syntax-dynamic-import@7.0.0-beta.40", "@babel/plugin-syntax-dynamic-import@^7.0.0-beta.40":
   version "7.0.0-beta.40"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-dynamic-import/-/plugin-syntax-dynamic-import-7.0.0-beta.40.tgz#5d9b58d4fbe1dfabbd44dee2eb267c466d7e9b87"
 
@@ -491,6 +491,13 @@
     "@babel/plugin-proposal-unicode-property-regex" "7.0.0-beta.40"
     "@babel/plugin-syntax-dynamic-import" "7.0.0-beta.40"
     "@babel/plugin-syntax-import-meta" "7.0.0-beta.40"
+
+"@babel/runtime@^7.0.0-beta.40":
+  version "7.0.0-beta.40"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.0.0-beta.40.tgz#8e3b8f1d2d8639d010e991a7e99c1d9ef578f886"
+  dependencies:
+    core-js "^2.5.3"
+    regenerator-runtime "^0.11.1"
 
 "@babel/template@7.0.0-beta.40":
   version "7.0.0-beta.40"
@@ -981,46 +988,9 @@
   dependencies:
     lodash "^4.17.4"
 
-"@wearegenki/eslint-config@file:packages/eslint-config":
-  version "0.4.2"
-  dependencies:
-    babel-eslint "^8.2.2"
-    eslint-config-airbnb-base "^12.1.0"
-    eslint-plugin-compat "^2.2.0"
-    eslint-plugin-html "^4.0.2"
-    eslint-plugin-import "^2.9.0"
-    eslint-plugin-jest "^21.14.0"
-    eslint-plugin-vue "^4.3.0"
-
 "@wearegenki/fonts@0.5.0", "@wearegenki/fonts@^0.5.0":
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/@wearegenki/fonts/-/fonts-0.5.0.tgz#e6848b3bd0d73bc0890ba0ecc2d31722a46897bc"
-
-"@wearegenki/stylelint-config@file:packages/stylelint-config":
-  version "0.4.2"
-  dependencies:
-    stylelint-config-standard "^18.2.0"
-    stylelint-order "^0.8.1"
-
-"@wearegenki/test@file:packages/test":
-  version "0.4.2"
-  dependencies:
-    "@babel/core" "^7.0.0-beta.40"
-    "@babel/plugin-transform-modules-commonjs" "^7.0.0-beta.40"
-    "@babel/plugin-transform-runtime" "^7.0.0-beta.40"
-    "@babel/preset-env" "^7.0.0-beta.40"
-    "@babel/preset-stage-2" "^7.0.0-beta.40"
-    "@types/jest" "^22.2.0"
-    "@vue/test-utils" "^1.0.0-beta.12"
-    babel-core "^7.0.0-bridge.0"
-    babel-jest "^22.4.1"
-    babel-plugin-dynamic-import-node "^1.2.0"
-    jest-environment-node "^22.4.1"
-    jest-puppeteer-preset "^2.0.1"
-    jest-serializer-vue "^1.0.0"
-    node-static "^0.7.10"
-    portfinder "^1.0.13"
-    vue-jest "^2.1.1"
 
 JSONStream@^1.0.4:
   version "1.3.2"
@@ -1403,7 +1373,7 @@ babel-core@^6.0.0, babel-core@^6.26.0:
     slash "^1.0.0"
     source-map "^0.5.6"
 
-babel-core@^7.0.0-bridge.0:
+babel-core@^7.0.0-0:
   version "7.0.0-bridge.0"
   resolved "https://registry.yarnpkg.com/babel-core/-/babel-core-7.0.0-bridge.0.tgz#95a492ddd90f9b4e9a4a1da14eb335b87b634ece"
 
@@ -1451,11 +1421,11 @@ babel-messages@^6.23.0:
   dependencies:
     babel-runtime "^6.22.0"
 
-babel-plugin-dynamic-import-node@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-dynamic-import-node/-/babel-plugin-dynamic-import-node-1.2.0.tgz#f91631e703e0595e47d4beafbb088576c87fbeee"
+babel-plugin-dynamic-import-node-babel-7@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/babel-plugin-dynamic-import-node-babel-7/-/babel-plugin-dynamic-import-node-babel-7-2.0.6.tgz#6e01713b602a3130d98c5e25877c9eb28f79fc8c"
   dependencies:
-    babel-plugin-syntax-dynamic-import "^6.18.0"
+    "@babel/plugin-syntax-dynamic-import" "^7.0.0-beta.40"
 
 babel-plugin-istanbul@^4.1.5:
   version "4.1.5"
@@ -1468,10 +1438,6 @@ babel-plugin-istanbul@^4.1.5:
 babel-plugin-jest-hoist@^22.4.1:
   version "22.4.1"
   resolved "https://registry.yarnpkg.com/babel-plugin-jest-hoist/-/babel-plugin-jest-hoist-22.4.1.tgz#d712fe5da8b6965f3191dacddbefdbdf4fb66d63"
-
-babel-plugin-syntax-dynamic-import@^6.18.0:
-  version "6.18.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-syntax-dynamic-import/-/babel-plugin-syntax-dynamic-import-6.18.0.tgz#8d6a26229c83745a9982a441051572caa179b1da"
 
 babel-plugin-syntax-object-rest-spread@^6.13.0:
   version "6.13.0"
@@ -2348,7 +2314,7 @@ copy-descriptor@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/copy-descriptor/-/copy-descriptor-0.1.1.tgz#676f6eb3c39997c2ee1ac3a924fd6124748f578d"
 
-core-js@^2.4.0, core-js@^2.5.0:
+core-js@^2.4.0, core-js@^2.5.0, core-js@^2.5.3:
   version "2.5.3"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.5.3.tgz#8acc38345824f16d8365b7c9b4259168e8ed603e"
 
@@ -7468,7 +7434,7 @@ regenerate@^1.2.1, regenerate@^1.3.3:
   version "1.3.3"
   resolved "https://registry.yarnpkg.com/regenerate/-/regenerate-1.3.3.tgz#0c336d3980553d755c39b586ae3b20aa49c82b7f"
 
-regenerator-runtime@^0.11.0:
+regenerator-runtime@^0.11.0, regenerator-runtime@^0.11.1:
   version "0.11.1"
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.11.1.tgz#be05ad7f9bf7d22e056f9726cee5017fbf19e2e9"
 
