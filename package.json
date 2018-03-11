@@ -47,7 +47,7 @@
     "vue": "2.5.15",
     "vue-jest": "2.1.1",
     "vue-server-renderer": "2.5.14",
-    "vue-template-compiler": "2.5.14"
+    "vue-template-compiler": "2.5.15"
   },
   "engines": {
     "node": "> 8.0.0"
