@@ -23,12 +23,15 @@
     "lib/"
   ],
   "peerDependencies": {
+    "@lasso/marko-taglib": "^1.0.10",
     "jest": "^22.4.2",
+    "lasso": "^3.1.3",
+    "lasso-marko": "^2.4.0",
     "marko": "^4.9.0",
     "puppeteer": "^1.1.1",
-    "vue": "^2.5.14",
-    "vue-server-renderer": "^2.5.14",
-    "vue-template-compiler": "^2.5.14"
+    "vue": "^2.5.15",
+    "vue-server-renderer": "^2.5.15",
+    "vue-template-compiler": "^2.5.15"
   },
   "dependencies": {
     "@babel/core": "^7.0.0-beta.40",
@@ -38,6 +41,7 @@
     "@babel/preset-stage-2": "^7.0.0-beta.40",
     "@babel/runtime": "^7.0.0-beta.40",
     "@types/jest": "^22.2.0",
+    "@types/lasso": "^2.4.0",
     "@vue/test-utils": "^1.0.0-beta.12",
     "babel-core": "^7.0.0-0",
     "babel-jest": "^22.4.1",
