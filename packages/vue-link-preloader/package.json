@@ -2,6 +2,11 @@
   "name": "@wearegenki/vue-link-preloader",
   "version": "0.5.0",
   "description": "A friendly UI framework which aims to be straightforward, intuitive, and high performance.",
+  "repository": "https://github.com/WeAreGenki/ui/tree/master/packages/vue-link-preloader",
+  "bugs": "https://github.com/WeAreGenki/ui/issues",
+  "homepage": "https://ui.wearegenki.com",
+  "author": "Max Milton <max@wearegenki.com>",
+  "license": "Apache-2.0",
   "keywords": [
     "css",
     "cssgrid",
@@ -10,12 +15,6 @@
     "vue",
     "wearegenki"
   ],
-  "repository": "https://github.com/WeAreGenki/ui/tree/master/packages/vue-link-preloader",
-  "bugs": {
-    "url": "https://github.com/WeAreGenki/ui/issues"
-  },
-  "author": "Max Milton <max@wearegenki.com>",
-  "license": "Apache-2.0",
   "main": "dist/index.js",
   "style": "dist/index.css",
   "files": [
