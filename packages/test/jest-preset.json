@@ -55,6 +55,5 @@
       "statements": 0
     }
   },
-  "coverageDirectory": "<rootDir>/test/coverage",
-  "coverageReporters": ["json", "text"]
+  "coverageDirectory": "<rootDir>/test/coverage"
 }
