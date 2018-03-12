@@ -1,7 +1,7 @@
 /** @jest-environment jsdom */
 
 import { mount } from '@vue/test-utils';
-import NoScript from './fixtures/NoScript';
+import NoScript from './fixtures/VueNoScript';
 
 describe('NoScript', () => {
   it('renders', () => {

@@ -2,6 +2,11 @@
   "name": "@wearegenki/ui-vue",
   "version": "0.5.0",
   "description": "We Are Genki UI meta package which bundles all Vue components",
+  "repository": "https://github.com/WeAreGenki/ui/tree/master/packages/ui-vue",
+  "bugs": "https://github.com/WeAreGenki/ui/issues",
+  "homepage": "https://ui.wearegenki.com",
+  "author": "Max Milton <max@wearegenki.com>",
+  "license": "Apache-2.0",
   "keywords": [
     "css",
     "cssgrid",
@@ -10,12 +15,6 @@
     "vue",
     "wearegenki"
   ],
-  "repository": "https://github.com/WeAreGenki/ui/tree/master/packages/ui-vue",
-  "bugs": {
-    "url": "https://github.com/WeAreGenki/ui/issues"
-  },
-  "author": "Max Milton <max@wearegenki.com>",
-  "license": "Apache-2.0",
   "main": "index.js",
   "style": "index.css",
   "dependencies": {

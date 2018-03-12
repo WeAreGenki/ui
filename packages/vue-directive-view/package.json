@@ -2,6 +2,11 @@
   "name": "@wearegenki/vue-directive-view",
   "version": "0.5.0",
   "description": "Vue custom directive to show/hide elements using opacity",
+  "repository": "https://github.com/WeAreGenki/ui/tree/master/packages/vue-directive-view",
+  "bugs": "https://github.com/WeAreGenki/ui/issues",
+  "homepage": "https://ui.wearegenki.com",
+  "author": "Max Milton <max@wearegenki.com>",
+  "license": "Apache-2.0",
   "keywords": [
     "css",
     "cssgrid",
@@ -10,12 +15,6 @@
     "vue",
     "wearegenki"
   ],
-  "repository": "https://github.com/WeAreGenki/ui/tree/master/packages/vue-directive-view",
-  "bugs": {
-    "url": "https://github.com/WeAreGenki/ui/issues"
-  },
-  "author": "Max Milton <max@wearegenki.com>",
-  "license": "Apache-2.0",
   "main": "index.js",
   "style": "index.css",
   "peerDependencies": {

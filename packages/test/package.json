@@ -2,18 +2,17 @@
   "name": "@wearegenki/test",
   "version": "0.5.0",
   "description": "Test suite presets for use in We Are Genki projects.",
+  "repository": "https://github.com/WeAreGenki/ui/tree/master/packages/test",
+  "bugs": "https://github.com/WeAreGenki/ui/issues",
+  "homepage": "https://ui.wearegenki.com",
+  "author": "Max Milton <max@wearegenki.com>",
+  "license": "Apache-2.0",
   "keywords": [
     "jest",
     "puppeteer",
     "unit-testing",
     "wearegenki"
   ],
-  "repository": "https://github.com/WeAreGenki/ui/tree/master/packages/test",
-  "bugs": {
-    "url": "https://github.com/WeAreGenki/ui/issues"
-  },
-  "author": "Max Milton <max@wearegenki.com>",
-  "license": "Apache-2.0",
   "bin": {
     "testserver": "bin/testserver"
   },
@@ -27,9 +26,9 @@
     "jest": "^22.4.2",
     "marko": "^4.9.0",
     "puppeteer": "^1.1.1",
-    "vue": "^2.5.14",
-    "vue-server-renderer": "^2.5.14",
-    "vue-template-compiler": "^2.5.14"
+    "vue": "^2.5.15",
+    "vue-server-renderer": "^2.5.15",
+    "vue-template-compiler": "^2.5.15"
   },
   "dependencies": {
     "@babel/core": "^7.0.0-beta.40",

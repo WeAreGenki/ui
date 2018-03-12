@@ -1,7 +1,7 @@
 /** @jest-environment jsdom */
 
 import { shallow } from '@vue/test-utils';
-import Css from './fixtures/Css';
+import Css from './fixtures/VueCss';
 
 describe('processes .vue file with Css style', () => {
   let wrapper;

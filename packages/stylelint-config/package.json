@@ -2,6 +2,11 @@
   "name": "@wearegenki/stylelint-config",
   "version": "0.5.0",
   "description": "Stylelint config preset for use in We Are Genki projects.",
+  "repository": "https://github.com/WeAreGenki/ui/tree/master/packages/stylelint-config",
+  "bugs": "https://github.com/WeAreGenki/ui/issues",
+  "homepage": "https://ui.wearegenki.com",
+  "author": "Max Milton <max@wearegenki.com>",
+  "license": "Apache-2.0",
   "keywords": [
     "css",
     "cssgrid",
@@ -9,12 +14,6 @@
     "stylelint",
     "wearegenki"
   ],
-  "repository": "https://github.com/WeAreGenki/ui/tree/master/packages/stylelint-config",
-  "bugs": {
-    "url": "https://github.com/WeAreGenki/ui/issues"
-  },
-  "author": "Max Milton <max@wearegenki.com>",
-  "license": "Apache-2.0",
   "main": "index.js",
   "dependencies": {
     "stylelint-config-standard": "^18.2.0",
