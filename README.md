@@ -1,3 +1,5 @@
+<!-- markdownlint-disable first-line-h1 -->
+
 [![Build Status](https://travis-ci.org/WeAreGenki/ui.svg?branch=master)](https://travis-ci.org/WeAreGenki/ui)
 [![Known Vulnerabilities](https://snyk.io/test/github/WeAreGenki/ui/badge.svg)](https://snyk.io/test/github/WeAreGenki/ui)
 
