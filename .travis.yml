@@ -18,6 +18,7 @@ cache:
 
 script:
   - yarn run test-ci
+  - codecov
 
 notifications:
   slack:
