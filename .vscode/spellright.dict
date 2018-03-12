@@ -13,6 +13,7 @@ Builtins
 bundler
 cb
 ci
+codecov
 codemirror
 cssgrid
 cssnano
