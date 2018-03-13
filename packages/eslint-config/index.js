@@ -19,6 +19,7 @@ module.exports = {
   settings: {
     'import/resolver': {
       node: { extensions: [
+        '.css',
         '.js',
         '.json',
         '.jsx',
@@ -37,6 +38,7 @@ module.exports = {
       functions: 'only-multiline', // optional awkward comma on multiline function params
     }],
     'import/extensions': ['error', 'always', {
+      css: 'never',
       js: 'never',
       json: 'never',
       jsx: 'never',
