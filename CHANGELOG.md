@@ -9,12 +9,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+
+- Codecov to see how code coverage grows over time. Automatically generated in the Travis CI builds.
+
 ## [0.5.0] - 2018-03-12
 
 ### Added
 
 - New package `@wearegenki/test` which contains a preconfigured testing suite using Jest and Puppeteer. Also includes a simple local server for doing manual testing. This release is more about the initial setup and we'll be slowly incorporating this into the other packages going forward.
 - New `@wearegenki/eslint-config` preset `jest` to go along with the new test package and many preset improvements.
+- Travis CI to automate testing.
 
 ### Changed
 
