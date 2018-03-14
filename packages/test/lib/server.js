@@ -13,6 +13,8 @@ const nodeStatic = require('node-static');
 
 exports.run = (argv) => {
   const webroot = path.resolve(argv[2]);
+  if (!webroot) throw new Error('Path to serve is required');
+
   portfinder.basePort = Number(process.env.PORT) || 1234;
 
   const fileServer = new nodeStatic.Server(webroot, { cache: false });
