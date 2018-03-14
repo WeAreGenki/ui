@@ -21,7 +21,7 @@
     "vue": "^2.5.13"
   },
   "engines": {
-    "node": "> 8.0.0"
+    "node": ">= 6.9.0"
   },
   "publishConfig": {
     "access": "public"
