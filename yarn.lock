@@ -1003,9 +1003,48 @@
   dependencies:
     lodash "^4.17.4"
 
+"@wearegenki/eslint-config@file:packages/eslint-config":
+  version "0.5.0"
+  dependencies:
+    babel-eslint "^8.2.2"
+    eslint-config-airbnb-base "^12.1.0"
+    eslint-plugin-compat "^2.2.0"
+    eslint-plugin-html "^4.0.2"
+    eslint-plugin-import "^2.9.0"
+    eslint-plugin-jest "^21.14.0"
+    eslint-plugin-vue "^4.3.0"
+
 "@wearegenki/fonts@0.5.0", "@wearegenki/fonts@^0.5.0":
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/@wearegenki/fonts/-/fonts-0.5.0.tgz#e6848b3bd0d73bc0890ba0ecc2d31722a46897bc"
+
+"@wearegenki/stylelint-config@file:packages/stylelint-config":
+  version "0.5.0"
+  dependencies:
+    stylelint-config-standard "^18.2.0"
+    stylelint-order "^0.8.1"
+
+"@wearegenki/test@file:packages/test":
+  version "0.5.0"
+  dependencies:
+    "@babel/core" "^7.0.0-beta.40"
+    "@babel/plugin-transform-modules-commonjs" "^7.0.0-beta.40"
+    "@babel/plugin-transform-runtime" "^7.0.0-beta.40"
+    "@babel/preset-env" "^7.0.0-beta.40"
+    "@babel/preset-stage-2" "^7.0.0-beta.40"
+    "@babel/runtime" "^7.0.0-beta.40"
+    "@types/jest" "^22.2.0"
+    "@types/puppeteer" "^1.1.0"
+    "@vue/test-utils" "^1.0.0-beta.12"
+    babel-core "^7.0.0-0"
+    babel-jest "^22.4.1"
+    babel-plugin-dynamic-import-node-babel-7 "^2.0.6"
+    jest-environment-node "^22.4.1"
+    jest-puppeteer-preset "^2.0.1"
+    jest-serializer-vue "^1.0.0"
+    node-static "^0.7.10"
+    portfinder "^1.0.13"
+    vue-jest "^2.1.1"
 
 JSONStream@^1.0.4:
   version "1.3.2"
