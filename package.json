@@ -5,8 +5,7 @@
   "private": true,
   "workspaces": [
     "docs/examples/*",
-    "packages/*",
-    "website"
+    "packages/*"
   ],
   "scripts": {
     "setup": "yarn; lerna bootstrap",
