@@ -106,11 +106,6 @@ export default {
   transition: transform var(--toast-item-animate-in-speed) ease-out;
 
   @if var(--toast-item-optimize) {
-    /*
-     * FIXME: It's better to have this enabled by default, but have it inserted
-     * by JS only for the time it's necessary.
-     * TODO: @TESTING: Check if we really need this ^ ^ ^.
-     */
     will-change: transform;
   }
 
