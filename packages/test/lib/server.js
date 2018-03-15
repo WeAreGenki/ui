@@ -48,7 +48,7 @@ exports.run = (argv) => {
     .getPortPromise()
     .then((port) => {
       server.listen(port, () => {
-        console.debug(`\nLocal server running on http://localhost:${port}`);
+        console.log(`\nLocal server running on http://localhost:${port}`);
       });
     })
     .catch((err) => {

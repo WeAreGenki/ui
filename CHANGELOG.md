@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
+
+- Improvements to test server; SPA mode with index.html fallback and better logging.
+
 ### Added
 
 - Codecov to see how code coverage grows over time. Automatically generated in the Travis CI builds.
