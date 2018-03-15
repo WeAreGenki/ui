@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.5.1] - 2018-03-16
+
 ### Added
 
 - Codecov to see how code coverage grows over time. Automatically generated in the Travis CI builds.
@@ -16,6 +18,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 
 - Improvements to test server; SPA mode with index.html fallback and better logging.
+- Continued work on test suite but still not stable yet.
+- Remove website directory — it wasn't being used anyway.
+- Refactor badges in readme.
+- Updated dependencies.
 
 ## Fixed
 
@@ -162,7 +168,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Initial public release with a base set of styles, Vue components, and dev configs but without a working build system so only source files are usable.
 
-[Unreleased]: https://github.com/WeAreGenki/ui/compare/v0.5.0...HEAD
+[Unreleased]: https://github.com/WeAreGenki/ui/compare/v0.5.1...HEAD
+[0.5.1]: https://github.com/WeAreGenki/ui/compare/v0.5.0...v0.5.1
 [0.5.0]: https://github.com/WeAreGenki/ui/compare/v0.4.2...v0.5.0
 [0.4.2]: https://github.com/WeAreGenki/ui/compare/v0.4.1...v0.4.2
 [0.4.1]: https://github.com/WeAreGenki/ui/compare/v0.4.0...v0.4.1
