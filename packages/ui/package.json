@@ -1,6 +1,6 @@
 {
   "name": "@wearegenki/ui",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "A friendly UI framework which aims to be straightforward, intuitive, and high performance.",
   "repository": "https://github.com/WeAreGenki/ui/tree/master/packages/ui",
   "bugs": "https://github.com/WeAreGenki/ui/issues",
