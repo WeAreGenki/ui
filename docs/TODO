@@ -1,7 +1,11 @@
 * Create a docs website generator
   * Something like https://docusaurus.io but more simple
-  * Which framework (if any)?
-  * Fun change to do something interesting
+  * Static site generator -- could we leverage Hugo?
+  * Should support versioning, search, i18n?
+  * Which framework (if any)? Hyperapp? Vue? Marko?
+  * Should be zero-conf but allow changing colours etc. via a simple config file
+  * Fun chance to do something interesting
+  * We have a placeholder for "docs-maker" on npmjs
 * Create a base site
 * Design a custom minimal theme (using the framework, obviously)
 * Create a way to transform markdown into a format that can be consumed by the site

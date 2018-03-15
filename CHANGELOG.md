@@ -13,6 +13,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Codecov to see how code coverage grows over time. Automatically generated in the Travis CI builds.
 
+### Changed
+
+- Improvements to test server; SPA mode with index.html fallback and better logging.
+
+## Fixed
+
+- Toasts are now always GPU accelerated by default to prevent stuttering while animating.
+
 ## [0.5.0] - 2018-03-12
 
 ### Added

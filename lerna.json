@@ -2,8 +2,7 @@
   "version": "0.5.0",
   "packages": [
     "docs/examples/*",
-    "packages/*",
-    "website"
+    "packages/*"
   ],
   "command": {
     "publish": {
