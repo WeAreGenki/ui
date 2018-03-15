@@ -1,6 +1,6 @@
 {
   "name": "@wearegenki/stylelint-config",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Stylelint config preset for use in We Are Genki projects.",
   "repository": "https://github.com/WeAreGenki/ui/tree/master/packages/stylelint-config",
   "bugs": "https://github.com/WeAreGenki/ui/issues",

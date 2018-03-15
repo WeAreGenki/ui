@@ -1,6 +1,6 @@
 {
   "name": "@wearegenki/icons",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "A friendly UI framework which aims to be straightforward, intuitive, and high performance.",
   "repository": "https://github.com/WeAreGenki/ui/tree/master/packages/icons",
   "bugs": "https://github.com/WeAreGenki/ui/issues",
