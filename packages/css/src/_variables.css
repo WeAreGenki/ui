@@ -220,9 +220,9 @@
   --navbar-bg-colour: var(--primary);
   --navbar-shadow: 0 0 0.5rem var(--shadow-base);
   --navbar-hover-bg-colour: var(--link-hover-font-colour);
-  --navbar-hamurger-size-x: 1.25rem;
-  /* --navbar-hamurger-font-colour: var(--primary); */
-  --navbar-hamurger-font-colour: var(--navbar-font-colour);
+  --navbar-hamburger-size-x: 1.25rem;
+  /* --navbar-hamburger-font-colour: var(--primary); */
+  --navbar-hamburger-font-colour: var(--navbar-font-colour);
 
   /* @wearegenki/vue-navbar component */
   --navbar-optimize: var(--optimize);
@@ -292,7 +292,7 @@
   --tab-hover-border-colour: var(--grey-400);
 
   /* @wearegenki/vue-directive-tooltip custom directive */
-  --tooltip-optimize: var(--optimize); /* setting this to true is recommended for old browsers in some use cases to prevent rendering bugs */
+  --tooltip-optimize: true; /* enabled by default to prevent stuttering */
   --tooltip-zindex: 1; /* relative to the parent element */
   --tooltip-padding-x: 1rem;
   --tooltip-padding-y: 0.75rem;
