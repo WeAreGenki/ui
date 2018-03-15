@@ -10,9 +10,12 @@ const portfinder = require('portfinder');
 const http = require('http');
 const path = require('path');
 const nodeStatic = require('node-static');
+const chalk = require('chalk');
 
 exports.run = (argv) => {
   const webroot = path.resolve(argv[2]);
+  const isSpaMode = argv[3] || true;
+
   if (!webroot) throw new Error('Path to serve is required');
 
   portfinder.basePort = Number(process.env.PORT) || 1234;
@@ -22,13 +25,21 @@ exports.run = (argv) => {
   const server = http.createServer((req, res) => {
     req
       .on('end', () => {
-        fileServer.serve(req, res, (err) => {
-          if (err) {
-            console.error(`Error serving ${req.url} - ${err.message}`);
+        const cb = (err) => {
+          if (err && err.status === 404) {
             res.writeHead(err.status, err.headers);
-            res.end();
+            res.end('Not Found');
+            console.error(chalk.bold.red(`ERROR ${res.statusCode}`), `- ${req.url} -`, chalk.bold.yellow(err.message));
+          } else {
+            console.log(chalk.green(`OK ${res.statusCode}`), `- ${req.url}`);
           }
-        });
+        };
+
+        if (isSpaMode && req.url.indexOf('.') === -1) {
+          fileServer.serveFile('/index.html', 200, {}, req, res);
+        } else {
+          fileServer.serve(req, res, cb);
+        }
       })
       .resume();
   });
@@ -37,7 +48,7 @@ exports.run = (argv) => {
     .getPortPromise()
     .then((port) => {
       server.listen(port, () => {
-        console.debug(`\nTesting server running on http://localhost:${port}`);
+        console.debug(`\nLocal server running on http://localhost:${port}`);
       });
     })
     .catch((err) => {
