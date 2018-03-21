@@ -23,7 +23,7 @@
   ],
   "dependencies": {
     "@wearegenki/css": "^0.5.1",
-    "codemirror": "^5.35.0"
+    "codemirror": "^5.36.0"
   },
   "peerDependencies": {
     "vue": "^2.5.13"
