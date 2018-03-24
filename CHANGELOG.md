@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Fixed
 
 - Issues with dependency graph.
+- Bugs in test suite packages.
 
 ## [0.6.0] - 2018-03-25
 
