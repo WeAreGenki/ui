@@ -45,7 +45,6 @@
     "portfinder": "^1.0.13"
   },
   "optionalDependencies": {
-    "@wearegenki/test": "^0.5.1",
     "@wearegenki/ui": "^0.5.2"
   },
   "engines": {
