@@ -53,6 +53,10 @@ _NOTE: Older browser compatibility via progressive fallback is planned and will 
 
 Builds are designed to run on *nix systems and may fail on Windows machines.
 
+## Changelog
+
+See [CHANGELOG.md](https://github.com/WeAreGenki/ui/blob/master/CHANGELOG.md).
+
 ## Licence
 
 `@wearegenki/ui` is an Apache-2.0 licensed open source project. See [LICENCE](https://github.com/WeAreGenki/ui/blob/master/LICENCE).
