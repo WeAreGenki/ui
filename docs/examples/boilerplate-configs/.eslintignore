@@ -1,5 +1,4 @@
 build/
+config/
 dist/
-lib/
-node_modules/
 test/coverage/

@@ -1,3 +1,5 @@
+// https://facebook.github.io/jest/docs/en/configuration.html
+
 'use strict'; // eslint-disable-line
 
 const preset = require('@wearegenki/test/jest-preset'); // eslint-disable-line import/no-extraneous-dependencies
@@ -12,7 +14,7 @@ module.exports = {
     '<rootDir>/packages/test-vue',
 
     {
-      displayName: 'test',
+      displayName: 'global',
 
       testPathIgnorePatterns: [
         ...preset.testPathIgnorePatterns,

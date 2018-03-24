@@ -2,4 +2,5 @@
 
 module.exports = {
   preset: '@wearegenki/test',
+  displayName: '@/test',
 };

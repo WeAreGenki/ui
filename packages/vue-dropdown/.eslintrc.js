@@ -1,6 +1,6 @@
 // https://eslint.org/docs/user-guide/configuring
 
-'use-strict';
+'use strict';
 
 module.exports = {
   extends: [
