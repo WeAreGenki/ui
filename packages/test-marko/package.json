@@ -22,7 +22,7 @@
     "marko": "^4.9.0"
   },
   "dependencies": {
-    "@types/jest": "^22.2.2"
+    "@types/jest": "22.2.2"
   },
   "optionalDependencies": {
     "@wearegenki/test": "^0.5.1",
