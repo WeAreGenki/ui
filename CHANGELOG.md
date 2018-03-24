@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - BREAKING CHANGES:
   - Changed dependency graph. `@wearegenki/icons` and `@wearegenki/test` are no longer bundled with `@wearegenki/ui` and need to be installed separately.
+- Remove `coverageThreshold` from Jest presets. It should be manually added per project instead.
 
 ### Fixed
 
