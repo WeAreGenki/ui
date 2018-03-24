@@ -1,5 +1,8 @@
 {
-  "preset": "jest-puppeteer",
+  "globalSetup": "jest-environment-puppeteer/setup",
+  "globalTeardown": "jest-environment-puppeteer/teardown",
+  "testEnvironment": "jest-environment-puppeteer",
+  "setupTestFrameworkScriptFile": "expect-puppeteer",
   "transform": {
     "^.+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff2?)$": "@wearegenki/test/lib/null-transform.js",
     "^.+\\.js$": "babel-jest"
