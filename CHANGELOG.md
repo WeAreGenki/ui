@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.6.2] - 2018-03-25
+
 ### Added
 
 - New "quick start" section in readme + example boilerplate development configuration files.
@@ -203,8 +205,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Initial public release with a base set of styles, Vue components, and dev configs but without a working build system so only source files are usable.
 
-[Unreleased]: https://github.com/WeAreGenki/ui/compare/v0.6.1...HEAD
-[0.6.0]: https://github.com/WeAreGenki/ui/compare/v0.6.0...v0.6.1
+[Unreleased]: https://github.com/WeAreGenki/ui/compare/v0.6.2...HEAD
+[0.6.2]: https://github.com/WeAreGenki/ui/compare/v0.6.1...v0.6.2
+[0.6.1]: https://github.com/WeAreGenki/ui/compare/v0.6.0...v0.6.1
 [0.6.0]: https://github.com/WeAreGenki/ui/compare/v0.5.2...v0.6.0
 [0.5.2]: https://github.com/WeAreGenki/ui/compare/v0.5.1...v0.5.2
 [0.5.1]: https://github.com/WeAreGenki/ui/compare/v0.5.0...v0.5.1
