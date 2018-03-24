@@ -4,7 +4,7 @@
 
 module.exports = {
   extends: [
-    '@wearegenki/eslint-config/jest',
     '@wearegenki/eslint-config/marko',
+    '@wearegenki/eslint-config/jest', // XXX: Should always be last
   ],
 };

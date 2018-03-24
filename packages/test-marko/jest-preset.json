@@ -1,13 +1,8 @@
 {
-  "globalSetup": "jest-environment-puppeteer/setup",
-  "globalTeardown": "jest-environment-puppeteer/teardown",
-  "testEnvironment": "jest-environment-puppeteer",
-  "setupTestFrameworkScriptFile": "expect-puppeteer",
   "transform": {
     "^.+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff2?)$": "@wearegenki/test/lib/null-transform.js",
     "^.+\\.js$": "babel-jest",
-    "^.+\\.marko$": "@wearegenki/test/lib/marko/transform.js",
-    "^.+\\.vue$": "vue-jest"
+    "^.+\\.marko$": "@wearegenki/test-marko/lib/transform.js"
   },
   "testPathIgnorePatterns": [
     "/coverage/",
@@ -23,13 +18,10 @@
     "json",
     "jsx",
     "marko",
-    "mjs",
-    "node",
-    "vue"
+    "mjs"
   ],
-  "snapshotSerializers": ["jest-serializer-vue"],
   "collectCoverageFrom": [
-    "**/*.{js,jsx,marko,mjs,vue}",
+    "**/*.{js,jsx,marko,mjs}",
     "!**/\\.*rc.js",
     "!**/*\\.{config,marko}\\.js",
     "!**/*\\.{test,spec}\\.js",
