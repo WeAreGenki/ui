@@ -23,17 +23,11 @@
     "src.css"
   ],
   "dependencies": {
-    "@wearegenki/css": "^0.5.1",
     "@wearegenki/eslint-config": "^0.5.1",
     "@wearegenki/icons": "^0.5.1",
     "@wearegenki/postcss-config": "^0.5.1",
     "@wearegenki/stylelint-config": "^0.5.1",
-    "@wearegenki/test": "^0.5.1",
-    "@wearegenki/ui-marko": "^0.5.1",
-    "@wearegenki/ui-vue": "^0.5.1"
-  },
-  "optionalDependencies": {
-    "@wearegenki/fonts": "^0.5.0"
+    "@wearegenki/test": "^0.5.1"
   },
   "publishConfig": {
     "access": "public"

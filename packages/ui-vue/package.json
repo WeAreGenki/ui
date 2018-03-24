@@ -18,6 +18,7 @@
   "main": "index.js",
   "style": "index.css",
   "dependencies": {
+    "@wearegenki/css": "^0.5.1",
     "@wearegenki/vue-code-editor": "^0.5.1",
     "@wearegenki/vue-debug-breakpoints": "^0.5.1",
     "@wearegenki/vue-directive-tooltip": "^0.5.1",
@@ -30,6 +31,11 @@
     "@wearegenki/vue-navbar": "^0.5.1",
     "@wearegenki/vue-tabs": "^0.5.1",
     "@wearegenki/vue-toasts": "^0.5.1"
+  },
+  "optionalDependencies": {
+    "@wearegenki/fonts": "^0.5.0",
+    "@wearegenki/test-vue": "^0.5.1",
+    "@wearegenki/ui": "^0.5.2"
   },
   "engines": {
     "node": ">= 6.9.0"

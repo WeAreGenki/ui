@@ -1,0 +1,59 @@
+{
+  "globalSetup": "jest-environment-puppeteer/setup",
+  "globalTeardown": "jest-environment-puppeteer/teardown",
+  "testEnvironment": "jest-environment-puppeteer",
+  "setupTestFrameworkScriptFile": "expect-puppeteer",
+  "transform": {
+    "^.+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff2?)$": "@wearegenki/test/lib/null-transform.js",
+    "^.+\\.js$": "babel-jest",
+    "^.+\\.marko$": "@wearegenki/test/lib/marko/transform.js",
+    "^.+\\.vue$": "vue-jest"
+  },
+  "testPathIgnorePatterns": [
+    "/coverage/",
+    "/dist/",
+    "/node_modules/",
+    "/\\.vscode/",
+    "/\\.cache/",
+    "/\\.eslintcache/",
+    "/\\.git/"
+  ],
+  "moduleFileExtensions": [
+    "js",
+    "json",
+    "jsx",
+    "marko",
+    "mjs",
+    "node",
+    "vue"
+  ],
+  "snapshotSerializers": ["jest-serializer-vue"],
+  "collectCoverageFrom": [
+    "**/*.{js,jsx,marko,mjs,vue}",
+    "!**/\\.*rc.js",
+    "!**/*\\.{config,marko}\\.js",
+    "!**/*\\.{test,spec}\\.js",
+    "!**/__mocks__/**",
+    "!**/build/**",
+    "!**/config/**",
+    "!**/dist/**",
+    "!**/fixtures/**",
+    "!**/node_modules/**",
+    "!**/public/**",
+    "!**/test/**",
+    "!**/types/**",
+    "!**/\\.cache/**",
+    "!**/\\.esm-cache/**",
+    "!**/\\.git/**",
+    "!**/\\.vscode/**"
+  ],
+  "coverageThreshold": {
+    "global": {
+      "branches": 0,
+      "functions": 0,
+      "lines": 0,
+      "statements": 0
+    }
+  },
+  "coverageDirectory": "<rootDir>/test/coverage"
+}
