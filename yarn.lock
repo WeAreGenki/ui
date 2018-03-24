@@ -1185,10 +1185,10 @@
     "@types/jest" "^22.2.2"
     "@types/puppeteer" "^1.2.0"
     babel-core "^7.0.0-0"
-    babel-jest "^23.0.0-alpha.0"
+    babel-jest "^22.4.3"
     babel-plugin-dynamic-import-node-babel-7 "^2.0.7"
     chalk "^2.3.2"
-    jest-environment-node "^23.0.0-alpha.0"
+    jest-environment-node "^22.4.3"
     jest-puppeteer "^2.2.0"
     node-static "^0.7.10"
     portfinder "^1.0.13"
@@ -1613,13 +1613,6 @@ babel-jest@^22.4.3:
     babel-plugin-istanbul "^4.1.5"
     babel-preset-jest "^22.4.3"
 
-babel-jest@^23.0.0-alpha.0:
-  version "23.0.0-alpha.1"
-  resolved "https://registry.yarnpkg.com/babel-jest/-/babel-jest-23.0.0-alpha.1.tgz#ecd83afa5ebd759e17548e55cb58d143ca62c63a"
-  dependencies:
-    babel-plugin-istanbul "^4.1.5"
-    babel-preset-jest "^23.0.0-alpha.1"
-
 babel-messages@^6.23.0:
   version "6.23.0"
   resolved "https://registry.yarnpkg.com/babel-messages/-/babel-messages-6.23.0.tgz#f3cdf4703858035b2a2951c6ec5edf6c62f2630e"
@@ -1643,10 +1636,6 @@ babel-plugin-istanbul@^4.1.5:
 babel-plugin-jest-hoist@^22.4.3:
   version "22.4.3"
   resolved "https://registry.yarnpkg.com/babel-plugin-jest-hoist/-/babel-plugin-jest-hoist-22.4.3.tgz#7d8bcccadc2667f96a0dcc6afe1891875ee6c14a"
-
-babel-plugin-jest-hoist@^23.0.0-alpha.1:
-  version "23.0.0-alpha.1"
-  resolved "https://registry.yarnpkg.com/babel-plugin-jest-hoist/-/babel-plugin-jest-hoist-23.0.0-alpha.1.tgz#b22e1008129cac02a63a4a1c274a5835ae61e87e"
 
 babel-plugin-syntax-object-rest-spread@^6.13.0:
   version "6.13.0"
@@ -1673,13 +1662,6 @@ babel-preset-jest@^22.4.3:
   resolved "https://registry.yarnpkg.com/babel-preset-jest/-/babel-preset-jest-22.4.3.tgz#e92eef9813b7026ab4ca675799f37419b5a44156"
   dependencies:
     babel-plugin-jest-hoist "^22.4.3"
-    babel-plugin-syntax-object-rest-spread "^6.13.0"
-
-babel-preset-jest@^23.0.0-alpha.1:
-  version "23.0.0-alpha.1"
-  resolved "https://registry.yarnpkg.com/babel-preset-jest/-/babel-preset-jest-23.0.0-alpha.1.tgz#57ecc8d3ef3186621355eefc72cff53e78920ed5"
-  dependencies:
-    babel-plugin-jest-hoist "^23.0.0-alpha.1"
     babel-plugin-syntax-object-rest-spread "^6.13.0"
 
 babel-register@^6.26.0:
@@ -5055,13 +5037,6 @@ jest-environment-node@^22.4.3:
     jest-mock "^22.4.3"
     jest-util "^22.4.3"
 
-jest-environment-node@^23.0.0-alpha.0:
-  version "23.0.0-alpha.1"
-  resolved "https://registry.yarnpkg.com/jest-environment-node/-/jest-environment-node-23.0.0-alpha.1.tgz#49ed173cc57d77611827bb4dc357e50bcb7aba79"
-  dependencies:
-    jest-mock "^23.0.0-alpha.1"
-    jest-util "^23.0.0-alpha.1"
-
 jest-environment-puppeteer@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/jest-environment-puppeteer/-/jest-environment-puppeteer-2.0.0.tgz#9dfcd2df2bba1d8e39723626f49323b62ec2bdf3"
@@ -5129,23 +5104,9 @@ jest-message-util@^22.4.3:
     slash "^1.0.0"
     stack-utils "^1.0.1"
 
-jest-message-util@^23.0.0-alpha.1:
-  version "23.0.0-alpha.1"
-  resolved "https://registry.yarnpkg.com/jest-message-util/-/jest-message-util-23.0.0-alpha.1.tgz#40a80945f17ffa11eb759cea4bee25622fd7fa28"
-  dependencies:
-    "@babel/code-frame" "^7.0.0-beta.35"
-    chalk "^2.0.1"
-    micromatch "^2.3.11"
-    slash "^1.0.0"
-    stack-utils "^1.0.1"
-
 jest-mock@^22.4.3:
   version "22.4.3"
   resolved "https://registry.yarnpkg.com/jest-mock/-/jest-mock-22.4.3.tgz#f63ba2f07a1511772cdc7979733397df770aabc7"
-
-jest-mock@^23.0.0-alpha.1:
-  version "23.0.0-alpha.1"
-  resolved "https://registry.yarnpkg.com/jest-mock/-/jest-mock-23.0.0-alpha.1.tgz#11720d649dd5878db129d8f4f73fa4ddfc3da382"
 
 jest-puppeteer@^2.2.0:
   version "2.2.0"
@@ -5242,18 +5203,6 @@ jest-util@^22.4.3:
     graceful-fs "^4.1.11"
     is-ci "^1.0.10"
     jest-message-util "^22.4.3"
-    mkdirp "^0.5.1"
-    source-map "^0.6.0"
-
-jest-util@^23.0.0-alpha.1:
-  version "23.0.0-alpha.1"
-  resolved "https://registry.yarnpkg.com/jest-util/-/jest-util-23.0.0-alpha.1.tgz#0b87a1110936c516de0cfc66bc69ec4685fecadd"
-  dependencies:
-    callsites "^2.0.0"
-    chalk "^2.0.1"
-    graceful-fs "^4.1.11"
-    is-ci "^1.0.10"
-    jest-message-util "^23.0.0-alpha.1"
     mkdirp "^0.5.1"
     source-map "^0.6.0"
 
