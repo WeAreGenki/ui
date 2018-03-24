@@ -1,6 +1,6 @@
 {
   "name": "@wearegenki/test-marko",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "Test suite presets for use in We Are Genki projects.",
   "repository": "https://github.com/WeAreGenki/ui/tree/master/packages/test-marko",
   "bugs": "https://github.com/WeAreGenki/ui/issues",

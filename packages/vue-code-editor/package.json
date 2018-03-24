@@ -1,6 +1,6 @@
 {
   "name": "@wearegenki/vue-code-editor",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "A friendly UI framework which aims to be straightforward, intuitive, and high performance.",
   "repository": "https://github.com/WeAreGenki/ui/tree/master/packages/vue-code-editor",
   "bugs": "https://github.com/WeAreGenki/ui/issues",
@@ -22,7 +22,7 @@
     "src"
   ],
   "dependencies": {
-    "@wearegenki/css": "^0.6.0",
+    "@wearegenki/css": "^0.6.1",
     "codemirror": "^5.36.0"
   },
   "peerDependencies": {

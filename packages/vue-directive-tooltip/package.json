@@ -1,6 +1,6 @@
 {
   "name": "@wearegenki/vue-directive-tooltip",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "A friendly UI framework which aims to be straightforward, intuitive, and high performance.",
   "repository": "https://github.com/WeAreGenki/ui/tree/master/packages/vue-directive-tooltip",
   "bugs": "https://github.com/WeAreGenki/ui/issues",
@@ -18,7 +18,7 @@
   "main": "index.js",
   "style": "index.css",
   "dependencies": {
-    "@wearegenki/css": "^0.6.0"
+    "@wearegenki/css": "^0.6.1"
   },
   "peerDependencies": {
     "vue": "^2.5.13"
