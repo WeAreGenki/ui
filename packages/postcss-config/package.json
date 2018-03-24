@@ -1,6 +1,6 @@
 {
   "name": "@wearegenki/postcss-config",
-  "version": "0.5.1",
+  "version": "0.6.0-beta.0",
   "description": "PostCSS config preset and tools for use in We Are Genki projects.",
   "repository": "https://github.com/WeAreGenki/ui/tree/master/packages/postcss-config",
   "bugs": "https://github.com/WeAreGenki/ui/issues",
