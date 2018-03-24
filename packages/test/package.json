@@ -1,6 +1,6 @@
 {
   "name": "@wearegenki/test",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "description": "Test suite presets for use in We Are Genki projects.",
   "repository": "https://github.com/WeAreGenki/ui/tree/master/packages/test",
   "bugs": "https://github.com/WeAreGenki/ui/issues",
