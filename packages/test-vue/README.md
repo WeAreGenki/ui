@@ -1,10 +1,4 @@
-# `@wearegenki/test`
-
-Test suite presets; Jest, Puppeteer, local test server, and more.
-
-<!-- REF: https://github.com/xfumihiro/jest-puppeteer-example -->
-
-<!-- TODO: Consider spliting this up into sub packages so devs don't have to install so many deps -->
+# `@wearegenki/test-vue`
 
 ## Overview
 
@@ -18,7 +12,7 @@ TODO: Write me.
 
 ## Licence
 
-`@wearegenki/test` is an Apache-2.0 licensed open source project. See [LICENCE](https://github.com/WeAreGenki/test/blob/master/LICENCE).
+`@wearegenki/test-vue` is an Apache-2.0 licensed open source project. See [LICENCE](https://github.com/WeAreGenki/test/blob/master/LICENCE).
 
 -----
 
