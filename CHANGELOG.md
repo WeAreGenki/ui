@@ -9,6 +9,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+
+- New "quick start" section in readme + example boilerplate development configuration files.
+
+### Changed
+
+- BREAKING CHANGES:
+  - Changed dependency graph. `@wearegenki/icons` and `@wearegenki/test` are no longer bundled with `@wearegenki/ui` and need to be installed separately.
+
+### Fixed
+
+- Some uses of `'use strict';`.
+
 ## [0.6.1] - 2018-03-25
 
 ### Fixed

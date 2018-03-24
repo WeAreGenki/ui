@@ -34,6 +34,37 @@ Technologies:
 
 To see [live examples](https://ui.wearegenki.com/examples) and the docs, visit [ui.wearegenki.com](https://ui.wearegenki.com).
 
+### Quick start
+
+#### 1. Install dependencies
+
+```bash
+# development configuration files only
+yarn install -D "@wearegenki/ui" "@wearegenki/test" eslint stylelint jest puppeteer
+
+# CSS + compilation only
+yarn install "@wearegenki/css" \
+  && yarn install -D "@wearegenki/postcss-config" postcss
+
+# all Vue.js packages (includes CSS)
+yarn install "@wearegenki/ui-vue" vue vue-router vuex \
+  && yarn install -D "@wearegenki/ui" "@wearegenki/test-vue" vue-server-renderer vue-template-compiler postcss eslint stylelint jest
+
+# all Marko.js packages (includes CSS)
+yarn install "@wearegenki/ui-marko" marko \
+  && yarn install -D "@wearegenki/ui" "@wearegenki/test-marko" marko-lasso postcss-lasso lasso postcss eslint stylelint jest
+```
+
+#### 2. Copy boilerplate configuration
+
+```bash
+# get latest copy of the repository
+git clone --depth 1 https://github.com/WeAreGenki/ui.git <TEMPORARY_LOCATION>
+
+# copy configuration files
+cp -rf <TEMPORARY_LOCATION>/docs/examples/boilerplate-configs/. <YOUR_PROJECT_LOCATION>
+```
+
 ## Browser compatibility
 
 Because this framework uses [CSS Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) it's limited to [browsers that support it](http://caniuse.com/#feat=css-grid), which currently include:
