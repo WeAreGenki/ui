@@ -31,7 +31,7 @@
     "postcss-calc": "^6.0.1",
     "postcss-color-function": "^4.0.1",
     "postcss-conditionals": "^3.0.0-beta.0",
-    "postcss-css-variables": "^0.8.0",
+    "postcss-css-variables": "^0.8.1",
     "postcss-custom-media": "^6.0.0",
     "postcss-custom-properties": "^7.0.0",
     "postcss-debug": "0.4.2",
