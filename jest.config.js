@@ -8,6 +8,9 @@ module.exports = {
     // XXX: Manually list each package until they all have tests then use a glob to match
     // '<rootDir>/packages/*',
     '<rootDir>/packages/test',
+    '<rootDir>/packages/test-marko',
+    '<rootDir>/packages/test-vue',
+
     {
       displayName: 'test',
 
