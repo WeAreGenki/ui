@@ -9,6 +9,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.6.0] - 2018-03-25
+
+### Changed
+
+- BREAKING CHANGES:
+  - Changed dependency graph. The `@wearegenki/ui` meta-package only installs the development configs and now it's also necessary to manually install the meta package specific to the JavaScript framework you're using, e.g `@wearegenki/ui-vue` or `@wearegenki/ui-marko`. This helps to limit the number of dependencies which need to be installed; there's no point installing Vue.js packages if you're using Marko.
+  - Test suite presets have also been split into their own packages. `@wearegenki/test` is now a generic test suite using Jest + Puppeteer. Vue and Marko suites spilt into `@wearegenki/test-vue` and `@wearegenki/test-marko` respectively.
+
 ## [0.5.2] - 2018-03-16
 
 ## Fixed
@@ -174,7 +182,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Initial public release with a base set of styles, Vue components, and dev configs but without a working build system so only source files are usable.
 
-[Unreleased]: https://github.com/WeAreGenki/ui/compare/v0.5.2...HEAD
+[Unreleased]: https://github.com/WeAreGenki/ui/compare/v0.6.0...HEAD
+[0.6.0]: https://github.com/WeAreGenki/ui/compare/v0.5.2...v0.6.0
 [0.5.2]: https://github.com/WeAreGenki/ui/compare/v0.5.1...v0.5.2
 [0.5.1]: https://github.com/WeAreGenki/ui/compare/v0.5.0...v0.5.1
 [0.5.0]: https://github.com/WeAreGenki/ui/compare/v0.4.2...v0.5.0

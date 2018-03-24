@@ -5,5 +5,6 @@
 module.exports = {
   extends: [
     '@wearegenki/eslint-config/jest',
+    '@wearegenki/eslint-config/marko',
   ],
 };
