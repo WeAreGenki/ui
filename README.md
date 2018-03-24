@@ -62,7 +62,7 @@ yarn install "@wearegenki/ui-marko" marko \
 git clone --depth 1 https://github.com/WeAreGenki/ui.git <TEMPORARY_LOCATION>
 
 # copy configuration files
-cp -rf <TEMPORARY_LOCATION>/docs/examples/boilerplate-configs/. <YOUR_PROJECT_LOCATION>
+cp -r <TEMPORARY_LOCATION>/docs/examples/boilerplate-configs/. <YOUR_PROJECT_LOCATION>
 ```
 
 ## Browser compatibility
