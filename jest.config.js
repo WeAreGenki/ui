@@ -6,6 +6,14 @@ const preset = require('@wearegenki/test/jest-preset'); // eslint-disable-line i
 
 module.exports = {
   preset: '@wearegenki/test',
+  coverageThreshold: {
+    global: {
+      branches: 0,
+      functions: 0,
+      lines: 0,
+      statements: 0,
+    },
+  },
   projects: [
     // XXX: Manually list each package until they all have tests then use a glob to match
     // '<rootDir>/packages/*',

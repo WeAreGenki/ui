@@ -42,13 +42,5 @@
     "!**/\\.git/**",
     "!**/\\.vscode/**"
   ],
-  "coverageThreshold": {
-    "global": {
-      "branches": 0,
-      "functions": 0,
-      "lines": 0,
-      "statements": 0
-    }
-  },
   "coverageDirectory": "<rootDir>/test/coverage"
 }
