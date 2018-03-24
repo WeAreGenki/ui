@@ -14,7 +14,7 @@ module.exports = {
     '<rootDir>/packages/test-vue',
 
     {
-      displayName: 'test',
+      displayName: 'global',
 
       testPathIgnorePatterns: [
         ...preset.testPathIgnorePatterns,
