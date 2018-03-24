@@ -30,7 +30,7 @@
     "vue-jest": "2.3.0"
   },
   "optionalDependencies": {
-    "@wearegenki/test": "^0.5.1",
+    "@wearegenki/test": "^0.6.0",
     "@wearegenki/ui": "^0.5.2"
   },
   "engines": {
