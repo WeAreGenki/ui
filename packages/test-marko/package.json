@@ -24,10 +24,6 @@
   "dependencies": {
     "@types/jest": "22.2.2"
   },
-  "optionalDependencies": {
-    "@wearegenki/test": "^0.5.1",
-    "@wearegenki/ui": "^0.5.2"
-  },
   "engines": {
     "node": ">= 6.9.0"
   },

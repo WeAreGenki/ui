@@ -21,9 +21,6 @@
     "dist",
     "src"
   ],
-  "optionalDependencies": {
-    "@wearegenki/fonts": "0.5.0"
-  },
   "devDependencies": {
     "@wearegenki/postcss-config": "^0.6.0"
   },
