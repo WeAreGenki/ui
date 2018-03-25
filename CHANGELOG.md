@@ -11,9 +11,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
+- BREAKING CHANGES:
+  - Rename `_width.css` to `_measure.css` as it now contains height classes too.
 - More CSS improvements. Many changes including:
   - Refactor classes with `!important`, now uses the new `-i` modifier.
-  - New transparency classes. New utility classes.
+  - New transparency classes. New utility and border classes.
   - Simplify monospace font family; just use the browser default.
 
 ### Fixed
