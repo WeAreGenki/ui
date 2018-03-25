@@ -65,6 +65,8 @@ git clone --depth 1 https://github.com/WeAreGenki/ui.git <TEMPORARY_LOCATION>
 cp -r <TEMPORARY_LOCATION>/docs/examples/boilerplate-configs/. <YOUR_PROJECT_LOCATION>
 ```
 
+See [config boilerplate readme](https://github.com/WeAreGenki/ui/blob/master/docs/examples/boilerplate-configs/README.md) for more tips.
+
 ## Browser compatibility
 
 Because this framework uses [CSS Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) it's limited to [browsers that support it](http://caniuse.com/#feat=css-grid), which currently include:
