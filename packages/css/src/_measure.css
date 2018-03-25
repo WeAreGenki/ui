@@ -1,0 +1,64 @@
+/* MEASURE */
+
+/*
+  NOTE:
+    This is different from grid item width or height:
+      .w3 = grid item width (3 grid columns wide)
+      .h3 = grid item height (3 grid columns high)
+      .w-75 = element width (75% wide)
+      .h-75 = element height (75% wide)
+
+  NOTE:
+    In CSS the width and height properties of an element are relative to its
+    parent element and not necessarily relative to the window or document.
+
+  BASE:
+    .w = width
+    .h = height
+
+  VALUE:
+    -100 = 100%
+    -75 = 75%
+    -50 = 50%
+    -25 = 25%
+    -a = auto
+
+  RESPONSIVE:
+       = (default, no suffix) anything smaller than small
+    -s = small
+    -l = large
+*/
+
+.w-100 { width: 100%; }
+.w-75 { width: 75%; }
+.w-50 { width: 50%; }
+.w-25 { width: 25%; }
+.w-a { width: auto; } /* default */
+
+.h-100 { height: 100%; }
+.h-75 { height: 75%; }
+.h-50 { height: 50%; }
+.h-25 { height: 25%; }
+.h-a { height: auto; } /* default */
+
+.wmu { min-width: unset; }
+.hmu { min-height: unset; }
+
+@each $media, $ext in (var(--breakpoint-media)), (var(--breakpoints)) {
+  @media ($media) {
+    .w-100-$(ext) { width: 100%; }
+    .w-75-$(ext) { width: 75%; }
+    .w-50-$(ext) { width: 50%; }
+    .w-25-$(ext) { width: 25%; }
+    .w-a-$(ext) { width: auto; }
+
+    .h-100-$(ext) { height: 100%; }
+    .h-75-$(ext) { height: 75%; }
+    .h-50-$(ext) { height: 50%; }
+    .h-25-$(ext) { height: 25%; }
+    .h-a-$(ext) { height: auto; }
+
+    .wmu-$(ext) { min-width: unset; }
+    .hmu-$(ext) { min-height: unset; }
+  }
+}
