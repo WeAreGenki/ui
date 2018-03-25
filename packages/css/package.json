@@ -1,6 +1,6 @@
 {
   "name": "@wearegenki/css",
-  "version": "0.6.2",
+  "version": "0.7.0",
   "description": "A friendly UI framework which aims to be straightforward, intuitive, and high performance.",
   "repository": "https://github.com/WeAreGenki/ui/tree/master/packages/css",
   "bugs": "https://github.com/WeAreGenki/ui/issues",
@@ -23,7 +23,7 @@
     "src"
   ],
   "devDependencies": {
-    "@wearegenki/postcss-config": "^0.6.2"
+    "@wearegenki/postcss-config": "^0.7.0"
   },
   "publishConfig": {
     "access": "public"
