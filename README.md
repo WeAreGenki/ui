@@ -55,7 +55,7 @@ yarn install "@wearegenki/ui-marko" marko \
   && yarn install -D "@wearegenki/ui" "@wearegenki/test-marko" marko-lasso postcss-lasso lasso postcss eslint stylelint jest
 ```
 
-#### 2. Copy boilerplate configuration
+#### 2. Copy config boilerplate
 
 ```bash
 # get latest copy of the repository
