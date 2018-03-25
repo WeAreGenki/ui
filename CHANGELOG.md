@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
+
+- More CSS improvements. Many changes including refactor how to declare a style `!important`, now uses the new `-i` modifier.
+
 ## [0.6.2] - 2018-03-25
 
 ### Added
