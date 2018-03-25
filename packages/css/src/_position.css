@@ -51,7 +51,15 @@
 /* FIXME: These aren't working! */
 /* FIXME: Not getting removed by PurgeCSS */
 /* stylelint-disable declaration-no-important */
-[class="t-unset!"] { top: unset !important; }
-[class="r-unset!"] { right: unset !important; }
-[class="b-unset!"] { bottom: unset !important; }
-[class="l-unset!"] { left: unset !important; }
+.t-unset-i { top: unset !important; }
+.r-unset-i { right: unset !important; }
+.b-unset-i { bottom: unset !important; }
+.l-unset-i { left: unset !important; }
+
+.a-unset-i {
+  top: unset !important;
+  right: unset !important;
+  bottom: unset !important;
+  left: unset !important;
+}
+/* stylelint-enable declaration-no-important */

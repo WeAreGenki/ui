@@ -31,6 +31,9 @@
        = (default, no suffix) anything smaller than small
     -s = small
     -l = large
+
+  MODIFIER:
+    -i = force using !important (only available on margin auto directions)
 */
 
 /* stylelint-disable declaration-block-single-line-max-declarations, declaration-no-important */
@@ -79,11 +82,11 @@
 .mr-auto { margin-right: auto; }
 .mb-auto { margin-bottom: auto; }
 .ml-auto { margin-left: auto; }
-/* FIXME: Not getting removed by PurgeCSS */
-[class="mt-auto!"] { margin-top: auto !important; }
-[class="mr-auto!"] { margin-right: auto !important; }
-[class="mb-auto!"] { margin-bottom: auto !important; }
-[class="ml-auto!"] { margin-left: auto !important; }
+
+.mt-auto-i { margin-top: auto !important; }
+.mr-auto-i { margin-right: auto !important; }
+.mb-auto-i { margin-bottom: auto !important; }
+.ml-auto-i { margin-left: auto !important; }
 
 .mh-1 { margin-right: -1rem; margin-left: -1rem; }
 .mv-1 { margin-top: -1rem; margin-bottom: -1rem; }
@@ -102,10 +105,15 @@
   @media ($media) {
     .mh-auto-$(ext) { margin-right: auto; margin-left: auto; }
     .mv-auto-$(ext) { margin-top: auto; margin-bottom: auto; }
-    .mt-auto-$(ext) { margin-top: auto !important; }
-    .mr-auto-$(ext) { margin-right: auto !important; }
-    .mb-auto-$(ext) { margin-bottom: auto !important; }
-    .ml-auto-$(ext) { margin-left: auto !important; }
+    .mt-auto-$(ext) { margin-top: auto; }
+    .mr-auto-$(ext) { margin-right: auto; }
+    .mb-auto-$(ext) { margin-bottom: auto; }
+    .ml-auto-$(ext) { margin-left: auto; }
+
+    .mt-auto-$(ext)-i { margin-top: auto !important; }
+    .mr-auto-$(ext)-i { margin-right: auto !important; }
+    .mb-auto-$(ext)-i { margin-bottom: auto !important; }
+    .ml-auto-$(ext)-i { margin-left: auto !important; }
 
     .mh-1-$(ext) { margin-right: -1rem; margin-left: -1rem; }
     .mv-1-$(ext) { margin-top: -1rem; margin-bottom: -1rem; }
