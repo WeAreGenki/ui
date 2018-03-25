@@ -34,12 +34,26 @@
   .b$(step) { bottom: $val; }
   .l$(step) { left: $val; }
 
+  .a$(step) {
+    top: $val;
+    right: $val;
+    bottom: $val;
+    left: $val;
+  }
+
   @each $media, $ext in (var(--breakpoint-media)), (var(--breakpoints)) {
     @media ($media) {
       .t$(step)-$(ext) { top: $val; }
       .r$(step)-$(ext) { right: $val; }
       .b$(step)-$(ext) { bottom: $val; }
       .l$(step)-$(ext) { left: $val; }
+
+      .a$(step)-$(ext) {
+        top: $val;
+        right: $val;
+        bottom: $val;
+        left: $val;
+      }
     }
   }
 }
@@ -48,8 +62,14 @@
 .r-unset { right: unset; }
 .b-unset { bottom: unset; }
 .l-unset { left: unset; }
-/* FIXME: These aren't working! */
-/* FIXME: Not getting removed by PurgeCSS */
+
+.a-unset {
+  top: unset;
+  right: unset;
+  bottom: unset;
+  left: unset;
+}
+
 /* stylelint-disable declaration-no-important */
 .t-unset-i { top: unset !important; }
 .r-unset-i { right: unset !important; }
