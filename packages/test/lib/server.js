@@ -48,7 +48,10 @@ exports.run = (argv) => {
     .getPortPromise()
     .then((port) => {
       server.listen(port, () => {
-        console.log(`\nLocal server running on http://localhost:${port}`);
+        console.log(`
+┌───────────────────────────────────────────────┐
+│ Local server running on`, chalk.bold.blue(`http://localhost:${port}`), `│
+└───────────────────────────────────────────────┘\n`);
       });
     })
     .catch((err) => {

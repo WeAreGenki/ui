@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
+
+- Better looking `testserver` start up notice.
+
 ## [0.7.0] - 2018-03-25
 
 ### Changed
