@@ -8,7 +8,7 @@
   dependencies:
     "@babel/highlight" "7.0.0-beta.42"
 
-"@babel/core@^7.0.0-beta.42":
+"@babel/core@7.0.0-beta.42", "@babel/core@^7.0.0-beta.42":
   version "7.0.0-beta.42"
   resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.0.0-beta.42.tgz#b3a838fddbd19663369a0b4892189fd8d3f82001"
   dependencies:
@@ -1119,7 +1119,7 @@
     lodash "^4.17.4"
 
 "@wearegenki/eslint-config@file:packages/eslint-config":
-  version "0.6.0"
+  version "0.7.0"
   dependencies:
     babel-eslint "^8.2.2"
     eslint-config-airbnb-base "^12.1.0"
@@ -1134,7 +1134,7 @@
   resolved "https://registry.yarnpkg.com/@wearegenki/icons/-/icons-0.5.1.tgz#0899cd32da1813bb6a0af3400f6006b7a2202eae"
 
 "@wearegenki/postcss-config@file:packages/postcss-config":
-  version "0.6.0"
+  version "0.7.0"
   dependencies:
     autoprefixer "^8.2.0"
     css-mqpacker "^6.0.2"
@@ -1155,18 +1155,18 @@
     postcss-url "^7.3.1"
 
 "@wearegenki/stylelint-config@file:packages/stylelint-config":
-  version "0.5.1"
+  version "0.7.0"
   dependencies:
     stylelint-config-standard "^18.2.0"
     stylelint-order "^0.8.1"
 
 "@wearegenki/test-marko@file:packages/test-marko":
-  version "0.6.0"
+  version "0.7.0"
   dependencies:
     "@types/jest" "22.2.2"
 
 "@wearegenki/test-vue@file:packages/test-vue":
-  version "0.6.0"
+  version "0.7.0"
   dependencies:
     "@types/jest" "22.2.2"
     "@vue/test-utils" "1.0.0-beta.12"
@@ -1174,7 +1174,7 @@
     vue-jest "2.3.0"
 
 "@wearegenki/test@file:packages/test":
-  version "0.6.0"
+  version "0.7.0"
   dependencies:
     "@babel/core" "^7.0.0-beta.42"
     "@babel/plugin-transform-modules-commonjs" "^7.0.0-beta.42"
@@ -1547,6 +1547,10 @@ babel-code-frame@^6.22.0, babel-code-frame@^6.26.0:
     esutils "^2.0.2"
     js-tokens "^3.0.2"
 
+babel-core@7.0.0-bridge.0, babel-core@^7.0.0-0:
+  version "7.0.0-bridge.0"
+  resolved "https://registry.yarnpkg.com/babel-core/-/babel-core-7.0.0-bridge.0.tgz#95a492ddd90f9b4e9a4a1da14eb335b87b634ece"
+
 babel-core@^6.0.0, babel-core@^6.26.0:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-core/-/babel-core-6.26.0.tgz#af32f78b31a6fcef119c87b0fd8d9753f03a0bb8"
@@ -1570,10 +1574,6 @@ babel-core@^6.0.0, babel-core@^6.26.0:
     private "^0.1.7"
     slash "^1.0.0"
     source-map "^0.5.6"
-
-babel-core@^7.0.0-0:
-  version "7.0.0-bridge.0"
-  resolved "https://registry.yarnpkg.com/babel-core/-/babel-core-7.0.0-bridge.0.tgz#95a492ddd90f9b4e9a4a1da14eb335b87b634ece"
 
 babel-eslint@^8.2.2:
   version "8.2.2"
@@ -9375,9 +9375,9 @@ vue-router@3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.0.1.tgz#d9b05ad9c7420ba0f626d6500d693e60092cc1e9"
 
-vue-server-renderer@2.5.16:
-  version "2.5.16"
-  resolved "https://registry.yarnpkg.com/vue-server-renderer/-/vue-server-renderer-2.5.16.tgz#279ef8e37e502a0de3a9ae30758cc04a472eaac0"
+vue-server-renderer@2.5.17-beta.0:
+  version "2.5.17-beta.0"
+  resolved "https://registry.yarnpkg.com/vue-server-renderer/-/vue-server-renderer-2.5.17-beta.0.tgz#4a36f72f8a7a7761cf68e4de58022e196f51caa6"
   dependencies:
     chalk "^1.1.3"
     hash-sum "^1.0.2"
@@ -9388,9 +9388,9 @@ vue-server-renderer@2.5.16:
     serialize-javascript "^1.3.0"
     source-map "0.5.6"
 
-vue-template-compiler@2.5.16:
-  version "2.5.16"
-  resolved "https://registry.yarnpkg.com/vue-template-compiler/-/vue-template-compiler-2.5.16.tgz#93b48570e56c720cdf3f051cc15287c26fbd04cb"
+vue-template-compiler@2.5.17-beta.0:
+  version "2.5.17-beta.0"
+  resolved "https://registry.yarnpkg.com/vue-template-compiler/-/vue-template-compiler-2.5.17-beta.0.tgz#6653d4029bd6fc427de616ce626e7f1db63e615c"
   dependencies:
     de-indent "^1.0.2"
     he "^1.1.0"
@@ -9399,9 +9399,9 @@ vue-template-es2015-compiler@^1.5.3:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.6.0.tgz#dc42697133302ce3017524356a6c61b7b69b4a18"
 
-vue@2.5.16:
-  version "2.5.16"
-  resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.16.tgz#07edb75e8412aaeed871ebafa99f4672584a0085"
+vue@2.5.17-beta.0:
+  version "2.5.17-beta.0"
+  resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.17-beta.0.tgz#b9985447818827306beee146923a1bd64f1bb834"
 
 vuex@3.0.1:
   version "3.0.1"
