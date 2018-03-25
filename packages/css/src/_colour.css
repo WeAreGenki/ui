@@ -23,6 +23,13 @@
 .grey { color: var(--grey-500); }
 .blue-grey { color: var(--blue-grey-500); }
 
+/* Transparency */
+.alpha100 { opacity: 1; }
+.alpha75 { opacity: 0.75; }
+.alpha50 { opacity: 0.5; }
+.alpha25 { opacity: 0.25; }
+.alpha0 { opacity: 0; }
+
 /* Utility colours */
 .plain { color: var(--body-font-colour); }
 .subtle { color: var(--subtle); }

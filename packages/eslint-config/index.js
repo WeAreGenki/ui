@@ -52,6 +52,7 @@ module.exports = {
     'no-param-reassign': ['error', {
       props: true,
       ignorePropertyModificationsFor: [
+        'el', // generic element
         'state', // vuex state
       ],
     }],

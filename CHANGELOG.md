@@ -11,7 +11,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
-- More CSS improvements. Many changes including refactor how to declare a style `!important`, now uses the new `-i` modifier.
+- BREAKING CHANGES:
+  - Rename `_width.css` to `_measure.css` as it now contains height classes too.
+- More CSS improvements. Many changes including:
+  - Refactor classes with `!important`, now uses the new `-i` modifier.
+  - New transparency classes. New utility and border classes.
+  - Simplify monospace font family; just use the browser default.
+
+### Fixed
+
+- PurgeCSS not removing some CSS classes and styles.
+- Broken `<abbr>` element styles.
 
 ## [0.6.2] - 2018-03-25
 
