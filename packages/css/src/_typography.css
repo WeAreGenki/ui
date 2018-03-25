@@ -168,14 +168,16 @@ abbr[title] {
   text-decoration: none;
 
   &::after {
-    position: relative;
+    position: absolute;
+    right: calc(-1 * var(--abbreviation-line-thickness));
     bottom: 0.4rem;
+    left: calc(-1 * var(--abbreviation-line-thickness));
     z-index: -1;
-    display: block;
-    height: 0.3rem;
-    margin-bottom: -0.3rem;
+    display: inline-block;
+    height: var(--abbreviation-line-thickness);
+    margin-bottom: calc(-1 * var(--abbreviation-line-thickness));
     content: "";
-    background: var(--yellow-400);
+    background: var(--abbreviation-line-colour);
   }
 }
 

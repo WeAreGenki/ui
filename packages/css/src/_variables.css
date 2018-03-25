@@ -123,6 +123,8 @@
   --hr-margin: 3rem 0;
   --quote-font-size: 2rem;
   --quote-mark-font-size: 3em; /* em (not rem) so it's relative to the parent font size */
+  --abbreviation-line-colour: var(--yellow-400);
+  --abbreviation-line-thickness: 0.3rem;
 
   /* Lists */
   --li-margin-between: 0.5rem;
