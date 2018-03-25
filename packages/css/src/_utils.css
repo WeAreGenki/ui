@@ -6,11 +6,24 @@
 
 */
 
-/* Border radius */
+/* Borders */
 
-.rad {
-  border-radius: var(--radius);
-}
+.bt0 { border-top: 0; }
+.br0 { border-right: 0; }
+.bb0 { border-bottom: 0; }
+.bl0 { border-left: 0; }
+
+.rad { border-radius: var(--radius); }
+.rad0 { border-radius: 0; }
+
+/* stylelint-disable declaration-no-important */
+.bt0-i { border-top: 0 !important; }
+.br0-i { border-right: 0 !important; }
+.bb0-i { border-bottom: 0 !important; }
+.bl0-i { border-left: 0 !important; }
+
+.rad0-i { border-radius: 0 !important; }
+/* stylelint-enable declaration-no-important */
 
 /* Scroll prevention */
 
