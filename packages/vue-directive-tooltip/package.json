@@ -13,6 +13,7 @@
     "design-system",
     "postcss",
     "vue",
+    "wearegenki-ui",
     "wearegenki"
   ],
   "main": "index.js",

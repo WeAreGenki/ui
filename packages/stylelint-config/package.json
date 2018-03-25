@@ -12,6 +12,7 @@
     "cssgrid",
     "design-system",
     "stylelint",
+    "wearegenki-ui",
     "wearegenki"
   ],
   "main": "index.js",

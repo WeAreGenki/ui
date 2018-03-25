@@ -13,6 +13,7 @@
     "design-system",
     "postcss",
     "marko",
+    "wearegenki-ui",
     "wearegenki"
   ],
   "main": "dist/index.js",

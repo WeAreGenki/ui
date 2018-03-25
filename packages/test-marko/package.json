@@ -11,6 +11,7 @@
     "jest",
     "marko",
     "unit-testing",
+    "wearegenki-ui",
     "wearegenki"
   ],
   "files": [

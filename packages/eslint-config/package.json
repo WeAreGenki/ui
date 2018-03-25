@@ -12,6 +12,7 @@
     "vue",
     "marko",
     "markojs",
+    "wearegenki-ui",
     "wearegenki"
   ],
   "main": "index.js",
