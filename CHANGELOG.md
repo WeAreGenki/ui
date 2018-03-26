@@ -27,6 +27,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 
+- `@wearegenki/vue-directive-tooltip` now handles left and bottom durection modifiers correctly.
 - Tweak `@wearegenki/eslint-config` to allow reassignment of parameters called `el`. Especially helpful with Hyperapp and with DOM manipulation.
 - PurgeCSS not removing some CSS classes and styles.
 - Broken `<abbr>` element styles.
