@@ -20,6 +20,7 @@
   &:focus {
     color: var(--btn-font-colour); /* prevents repaint on hover */
     text-decoration: none;
+    transform: scale(1.05);
   }
 
   &[disabled],
@@ -34,11 +35,6 @@
       box-shadow: none;
     }
   }
-}
-
-.btn-main,
-.btn-cta {
-  color: var(--white);
 }
 
 .btn-main {
@@ -62,6 +58,16 @@
   }
 }
 
+.btn-main,
+.btn-cta {
+  color: var(--white);
+
+  &:hover,
+  &:focus {
+    color: var(--white); /* prevents repaint on hover */
+  }
+}
+
 /* remove browser default button styles */
 .btn-clear {
   background: transparent;
@@ -75,7 +81,9 @@
 
   &:hover,
   &:focus {
-    color: unset; /* prevent change when applied to links */
+    /* prevent change when applied to links */
+    color: unset;
+    transform: unset;
   }
 }
 
