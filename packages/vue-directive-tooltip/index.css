@@ -22,7 +22,9 @@
 */
 
 .tooltip-top,
-.tooltip-right {
+.tooltip-right,
+.tooltip-bottom,
+.tooltip-left {
   position: absolute;
   z-index: var(--tooltip-zindex);
   padding: var(--tooltip-padding-y) var(--tooltip-padding-x);
@@ -58,6 +60,18 @@
   @mixin triangle left, var(--tooltip-triangle-size), var(--tooltip-bg-colour), true;
 }
 
+.tooltip-bottom {
+  top: calc(100% + (var(--tooltip-triangle-size) * 2));
+
+  @mixin triangle top, var(--tooltip-triangle-size), var(--tooltip-bg-colour), true;
+}
+
+.tooltip-left {
+  right: calc(100% + (var(--tooltip-triangle-size) * 2));
+
+  @mixin triangle right, var(--tooltip-triangle-size), var(--tooltip-bg-colour), true;
+}
+
 .has-tooltip {
   display: inline-flex;
   align-items: center;
@@ -66,7 +80,9 @@
   &:hover,
   &:focus {
     > .tooltip-top,
-    > .tooltip-right {
+    > .tooltip-right,
+    > .tooltip-bottom,
+    > .tooltip-left {
       opacity: 1;
       transition-timing-function: ease-out;
       transform: scale(1);
