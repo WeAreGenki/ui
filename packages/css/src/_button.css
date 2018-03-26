@@ -28,6 +28,7 @@
   &[disabled]:focus {
     color: var(--btn-disabled-font-colour);
     border: 1px solid var(--btn-disabled-border-colour);
+    transform: unset;
 
     @if var(--use-drop-shadow) {
       filter: none;
