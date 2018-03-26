@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
+- Better side nav styles.
 - Better looking `testserver` start up notice.
 
 ## [0.7.0] - 2018-03-25

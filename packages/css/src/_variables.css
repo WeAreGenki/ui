@@ -132,8 +132,10 @@
   /* Navigation */
   --nav-link-padding-x: 1.3rem;
   --nav-link-padding-y: 0.9rem;
-  --side-nav-active-bg-colour: var(--grey-300);
   --side-nav-link-margin-y: 0.2rem;
+  --side-nav-active-bg-colour: var(--blue-grey-50);
+  --side-nav-border-width: 0.2rem;
+  --side-nav-border-colour: var(--primary);
   --footer-margin-y: 5rem;
   --footer-font-colour: var(--subtle);
 

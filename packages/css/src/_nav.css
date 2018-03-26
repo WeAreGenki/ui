@@ -7,17 +7,23 @@
 
 /* Side menu */
 
-/* TODO: Change how the sidebar looks; more functional */
 .side-nav {
   display: flex;
   flex-direction: column;
 
-  > .nav-link {
+  & > .nav-link {
     margin: var(--side-nav-link-margin-y) 0;
+    border-left: var(--side-nav-border-width) solid transparent;
 
     &.active {
       text-decoration: none;
       background-color: var(--side-nav-active-bg-colour);
+    }
+
+    &.active,
+    &:hover,
+    &:focus {
+      border-left-color: var(--side-nav-border-colour);
     }
 
     &.exact {
