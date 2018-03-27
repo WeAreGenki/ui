@@ -52,7 +52,7 @@
         </svg>
       </button>
 
-      <router-link to="/" class="nav-logo ml-1-l" title="home">
+      <router-link to="/" class="nav-logo ml-1-l" title="Home">
         <svg class="logo"><use xlink:href="#logo"/></svg>
       </router-link>
 

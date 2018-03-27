@@ -238,7 +238,7 @@
   --navbar-shadow-legacy: 0 0.5rem 2rem var(--shadow-base-legacy);
   --navbar-shadow-before: 0 0.5rem 1.8rem color(var(--shadow-colour) alpha(0));
   --navbar-icon-size: 2rem;
-  --navbar-logo-size-x: 2rem;
+  --navbar-logo-size-x: 4rem;
   --navbar-logo-size-y: 2rem;
   --navbar-logo-padding: 0.65rem 0 0;
 
