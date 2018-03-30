@@ -191,6 +191,10 @@ export default {
     transform: translateX(100%);
   }
 
+  .mini > & {
+    box-shadow: var(--input-toggle-mini-slider-inner-shadow);
+  }
+
   .input-toggle:hover > &,
   .input-toggle:focus > & {
     background: var(--input-toggle-hover-slider-bg-colour);

@@ -268,8 +268,7 @@
   --input-toggle-hover-slider-bg-colour: var(--grey-200);
   --input-toggle-disabled-slider-bg-colour: var(--grey-100);
   --input-toggle-mini-width: calc(var(--input-toggle-width) / 1.7);
-  /* FIXME: Mini slider inner box shadow should be smaller, in proportion to its size. */
-  --input-toggle-mini-slider-inner-shadow: inset 0 -1rem 0.4rem color(var(--shadow-colour) alpha(0.05));
+  --input-toggle-mini-slider-inner-shadow: inset 0 -0.7rem 0.4rem color(var(--shadow-colour) alpha(0.05));
 
   /* @wearegenki/vue-input-select component */
   --input-select-optimize: var(--optimize);
