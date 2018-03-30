@@ -47,23 +47,23 @@
 
   /* Colours */
   /* FIXME: Do we really need so many gradient steps? Simplify! */
-  --primary-gradient-0: #02e8ff;
-  --primary-gradient-100: #0060df;
-  --primary-gradient-35: color(var(--primary-gradient-0) blend(var(--primary-gradient-100) 35%));
-  --primary-gradient-60: color(var(--primary-gradient-0) blend(var(--primary-gradient-100) 60%));
-  --primary-gradient-80: color(var(--primary-gradient-0) blend(var(--primary-gradient-100) 80%));
-  --primary-gradient-90: color(var(--primary-gradient-0) blend(var(--primary-gradient-100) 90%));
-  --primary: var(--primary-gradient-80); /* links, buttons */
+  --gradient-primary-0: #02e8ff;
+  --gradient-primary-100: #0060df;
+  --gradient-primary-35: color(var(--gradient-primary-0) blend(var(--gradient-primary-100) 35%));
+  --gradient-primary-60: color(var(--gradient-primary-0) blend(var(--gradient-primary-100) 60%));
+  --gradient-primary-80: color(var(--gradient-primary-0) blend(var(--gradient-primary-100) 80%));
+  --gradient-primary-90: color(var(--gradient-primary-0) blend(var(--gradient-primary-100) 90%));
+  --primary: var(--gradient-primary-80); /* links, buttons */
   /* FIXME: --secondary should be contrasting to --primary -- green is ideal for CTAs */
   /* TODO: Incorporate --secondary into various places */
-  --secondary-gradient-0: #30cde2;
-  --secondary-gradient-100: #306efe;
-  --secondary-gradient-35: color(var(--secondary-gradient-0) blend(var(--secondary-gradient-100) 35%));
-  --secondary-gradient-60: color(var(--secondary-gradient-0) blend(var(--secondary-gradient-100) 60%));
-  --secondary-gradient-80: color(var(--secondary-gradient-0) blend(var(--secondary-gradient-100) 80%));
-  --secondary-gradient-90: color(var(--secondary-gradient-0) blend(var(--secondary-gradient-100) 90%));
+  --gradient-secondary-0: #2dde98;
+  --gradient-secondary-100: #1cc7d0;
+  --gradient-secondary-35: color(var(--gradient-secondary-0) blend(var(--gradient-secondary-100) 35%));
+  --gradient-secondary-60: color(var(--gradient-secondary-0) blend(var(--gradient-secondary-100) 60%));
+  --gradient-secondary-80: color(var(--gradient-secondary-0) blend(var(--gradient-secondary-100) 80%));
+  --gradient-secondary-90: color(var(--gradient-secondary-0) blend(var(--gradient-secondary-100) 90%));
   --secondary: var(--purple-a700); /* call to action, highlights */
-  --secondary-accent: var(--purple-a200);
+  --accent-secondary: var(--purple-a200);
   --subtle: var(--blue-grey-200); /* footer, title subheading */
   --dark: var(--blue-grey-800);
   --body-font-colour: var(--blue-grey-900);
@@ -116,7 +116,7 @@
   /* links */
   --link-click-area: 0.25rem; /* increase if you don't have links close to each other (otherwise they may overlap) */
   --link-font-colour: var(--primary);
-  --link-hover-font-colour: var(--primary-gradient-100);
+  --link-hover-font-colour: var(--gradient-primary-100);
   --link-animate-in-speed: 0s;
   --link-animate-out-speed: 1s;
   /* other */
@@ -210,7 +210,7 @@
   /* Labels */
   --label-padding: 0.04rem 0.4rem 0.08rem;
   --label-font-size: 90%;
-  --label-font-colour: var(--primary-gradient-100);
+  --label-font-colour: var(--gradient-primary-100);
   --label-bg-colour: var(--body-bg-colour);
   --label-border: 1px solid var(--primary);
   --label-border-radius: var(--radius);
@@ -256,6 +256,8 @@
   --input-toggle-hover-slider-bg-colour: var(--grey-200);
   --input-toggle-disabled-slider-bg-colour: var(--grey-100);
   --input-toggle-mini-width: calc(var(--input-toggle-width) / 1.7);
+  /* FIXME: Mini slider inner box shadow should be smaller, in proportion to its size. */
+  --input-toggle-mini-slider-inner-shadow: inset 0 -1rem 0.4rem color(var(--shadow-colour) alpha(0.05));
 
   /* @wearegenki/vue-input-select component */
   --input-select-optimize: var(--optimize);
