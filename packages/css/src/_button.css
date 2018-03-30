@@ -1,6 +1,6 @@
-/* FIXME: Better hover state -- should also be applied to toggle, maybe inputs, etc. */
+/* FIXME: Button hover state can make tooltips bounce and look a little crap. */
 
-/* TODO: Active (clicked on) state -- think microinteraction */
+/* TODO: Active (clicked on) state -- think microinteraction (?). */
 
 .btn {
   display: inline-block;
@@ -38,29 +38,28 @@
   }
 }
 
+.btn-cta {
+  background-image: var(--btn-cta-bg-gradient);
+
+  @if var(--use-drop-shadow) {
+    filter: drop-shadow(var(--btn-cta-shadow));
+  } @else { /* stylelint-disable-line */
+    filter: var(--btn-cta-shadow-legacy);
+  }
+}
+
 .btn-main {
-  background-image: linear-gradient(115deg, var(--gradient-primary-35), var(--gradient-primary-90));
+  background-image: var(--btn-main-bg-gradient);
 
   @if var(--use-drop-shadow) {
-    filter: drop-shadow(0 0.125rem 0.375rem color(var(--gradient-primary-90) alpha(0.4)));
+    filter: drop-shadow(var(--btn-main-shadow));
   } @else { /* stylelint-disable-line */
-    box-shadow: 0 0.125rem 0.375rem color(var(--primary-gradient-90) alpha(0.4));
+    filter: var(--btn-main-shadow-legacy);
   }
 }
 
-.btn-cta {
-  background-image: linear-gradient(115deg, var(--secondary-gradient-35), var(--secondary-gradient-90));
-  background-image: linear-gradient(284deg, #1cc7d0, #2dde98);
-
-  @if var(--use-drop-shadow) {
-    filter: drop-shadow(0 0.25rem 0.75rem rgba(45, 222, 152, 0.4));
-  } @else { /* stylelint-disable-line */
-    box-shadow: 0 0.25rem 0.75rem rgba(45, 222, 152, 0.4);
-  }
-}
-
-.btn-main,
-.btn-cta {
+.btn-cta,
+.btn-main {
   color: var(--white);
 
   &:hover,

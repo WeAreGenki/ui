@@ -46,26 +46,31 @@
   --radius-negative: -0.1875rem; /* used to calculate negative offsets e.g. for .input-group */
 
   /* Colours */
-  /* FIXME: Do we really need so many gradient steps? Simplify! */
-  --gradient-primary-0: #02e8ff;
-  --gradient-primary-100: #0060df;
-  --gradient-primary-35: color(var(--gradient-primary-0) blend(var(--gradient-primary-100) 35%));
+  --gradient-primary-0: #02e1ff;
+  --gradient-primary-100: #0368eb;
+  --gradient-primary-10: color(var(--gradient-primary-0) blend(var(--gradient-primary-100) 10%));
+  --gradient-primary-20: color(var(--gradient-primary-0) blend(var(--gradient-primary-100) 20%));
+  --gradient-primary-30: color(var(--gradient-primary-0) blend(var(--gradient-primary-100) 30%));
+  --gradient-primary-40: color(var(--gradient-primary-0) blend(var(--gradient-primary-100) 40%));
+  --gradient-primary-50: color(var(--gradient-primary-0) blend(var(--gradient-primary-100) 50%));
   --gradient-primary-60: color(var(--gradient-primary-0) blend(var(--gradient-primary-100) 60%));
+  --gradient-primary-70: color(var(--gradient-primary-0) blend(var(--gradient-primary-100) 70%));
   --gradient-primary-80: color(var(--gradient-primary-0) blend(var(--gradient-primary-100) 80%));
   --gradient-primary-90: color(var(--gradient-primary-0) blend(var(--gradient-primary-100) 90%));
-  --primary: var(--gradient-primary-80); /* links, buttons */
-  /* FIXME: --secondary should be contrasting to --primary -- green is ideal for CTAs */
-  /* TODO: Incorporate --secondary into various places */
-  --gradient-secondary-0: #2dde98;
-  --gradient-secondary-100: #1cc7d0;
-  --gradient-secondary-35: color(var(--gradient-secondary-0) blend(var(--gradient-secondary-100) 35%));
+  --primary: var(--gradient-primary-90); /* links, buttons */
+  --gradient-secondary-0: #b970fd;
+  --gradient-secondary-100: #6b2ecc;
+  --gradient-secondary-10: color(var(--gradient-secondary-0) blend(var(--gradient-secondary-100) 10%));
+  --gradient-secondary-20: color(var(--gradient-secondary-0) blend(var(--gradient-secondary-100) 20%));
+  --gradient-secondary-30: color(var(--gradient-secondary-0) blend(var(--gradient-secondary-100) 30%));
+  --gradient-secondary-50: color(var(--gradient-secondary-0) blend(var(--gradient-secondary-100) 50%));
   --gradient-secondary-60: color(var(--gradient-secondary-0) blend(var(--gradient-secondary-100) 60%));
+  --gradient-secondary-70: color(var(--gradient-secondary-0) blend(var(--gradient-secondary-100) 70%));
   --gradient-secondary-80: color(var(--gradient-secondary-0) blend(var(--gradient-secondary-100) 80%));
   --gradient-secondary-90: color(var(--gradient-secondary-0) blend(var(--gradient-secondary-100) 90%));
-  --secondary: var(--purple-a700); /* call to action, highlights */
-  --accent-secondary: var(--purple-a200);
+  --secondary: var(--gradient-secondary-90); /* call to action, highlights */
   --subtle: var(--blue-grey-200); /* footer, title subheading */
-  --dark: var(--blue-grey-800);
+  --dark: #222b35;
   --body-font-colour: var(--blue-grey-900);
   --body-bg-colour: var(--grey-50);
   --alt-bg-colour: var(--grey-100); /* alternating background in lists, tables, etc. */
@@ -153,6 +158,12 @@
   --btn-disabled-border-colour: var(--blue-grey-50);
   --btn-arrow-animate-speed: 200ms;
   --btn-margin-between: 1.5rem; /* space between buttons */
+  --btn-cta-bg-gradient: linear-gradient(115deg, var(--gradient-secondary-10), var(--gradient-secondary-100));
+  --btn-cta-shadow: 0 0.18rem 0.18rem color(var(--gradient-secondary-100) alpha(0.5));
+  --btn-cta-shadow-legacy: 0 0.25rem 0.75rem rgba(45, 222, 152, 0.4);
+  --btn-main-bg-gradient: linear-gradient(115deg, var(--gradient-primary-40), var(--gradient-primary-100));
+  --btn-main-shadow: 0 0.18rem 0.18rem color(var(--gradient-primary-100) alpha(0.5));
+  --btn-main-shadow-legacy: 0 0.125rem 0.375rem color(var(--gradient-primary-90) alpha(0.4));
 
   /* Forms */
   --form-help-font-colour: var(--grey-600);

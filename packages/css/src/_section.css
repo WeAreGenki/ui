@@ -44,14 +44,10 @@
 
 .slant-cta {
   /* color: var(--white); */
-  background-color: var(--blue-grey-700);
-  /* background-color: var(--blue-700); */
+  background-color: var(--dark);
 
   &::before,
   &::after {
-    background-color: var(--blue-grey-700);
-    /* background-color: var(--body-bg); */
-    /* background-color: var(--blue-700);
-    background-color: var(--red-600); */
+    background-color: var(--dark);
   }
 }
