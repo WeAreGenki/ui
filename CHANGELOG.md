@@ -15,8 +15,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
+- BREAKING CHANGES:
+  - Rename CSS variables `--primary-gradient` to `--gradient-primary` and `--secondary-gradient` to `--gradient-secondary`.
+- Improved button shadows.
 - Better side nav styles.
-- Better looking `testserver` start up notice.
+- Better `testserver` logging.
 
 ## [0.7.0] - 2018-03-25
 
@@ -31,7 +34,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 
-- `@wearegenki/vue-directive-tooltip` now handles left and bottom durection modifiers correctly.
+- `@wearegenki/vue-directive-tooltip` now handles left and bottom direction modifiers correctly.
 - Tweak `@wearegenki/eslint-config` to allow reassignment of parameters called `el`. Especially helpful with Hyperapp and with DOM manipulation.
 - PurgeCSS not removing some CSS classes and styles.
 - Broken `<abbr>` element styles.
@@ -113,7 +116,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Fixed
 
-- Use relative paths for CSS imports for better compatibility with some resource bundlers (e.g. parcel, package-bundler).
+- Use relative paths for CSS imports for better compatibility with some resource bundler tools (e.g. parcel, package-bundler).
 - Vue resource resolving in `@wearegenki/eslint-config/vue`.
 
 ## [0.4.2] - 2018-02-03
