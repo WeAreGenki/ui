@@ -39,7 +39,7 @@
   margin-bottom: var(--footer-margin-y);
   color: var(--footer-font-colour);
 
-  > .nav-link {
+  > .nav-link { /* stylelint-disable-line no-descending-specificity */
     margin: calc(-1 * var(--link-click-area)); /* offset large link click area */
 
     &:first-of-type {
