@@ -1,10 +1,13 @@
 /*
+  BUTTONS
+
   FIXME: Button hover state can make some things look a little bad:
   - tooltips -- makes them bounce
   - input groups -- button is bigger than input (... or maybe this is OK?)
-*/
 
-/* TODO: Active (clicked on) state -- think microinteraction (?). */
+  TODO: Active (clicked on) state -- think microinteraction (?).
+
+*/
 
 .btn {
   display: inline-block;

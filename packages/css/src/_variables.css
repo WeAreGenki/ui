@@ -1,3 +1,10 @@
+/*
+  VARIABLES
+
+    Anything you may want to customise is probably a variable here.
+
+*/
+
 /* Media queries */
 @custom-media --breakpoint-small screen and (min-width: 30.01em) and (max-width: 48em);
 @custom-media --breakpoint-large screen and (min-width: 48.01em);

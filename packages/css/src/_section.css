@@ -1,6 +1,24 @@
-/* TODO: Once this is ready, create variables for easy customisation */
+/*
+  SECTION
 
-/* Section */
+    A way to break up long pages and add visual interest.
+
+  HTML LAYOUT:
+    <section class="slant">
+      <div class="con tc">
+        <h2 class="mt0">Example slant section</h2>
+        <p class="lead">Your text.</p>
+      </div>
+    </section>
+
+    <section class="slant-cta">
+      <div class="con tc">
+        <h2 class="mt0">Example CTA slant</h2>
+        <p class="lead">Your text.</p>
+      </div>
+    </section>
+
+*/
 
 .slant,
 .slant-cta {
