@@ -11,9 +11,10 @@
     "css",
     "cssgrid",
     "design-system",
-    "postcss",
-    "marko",
     "lasso",
+    "marko",
+    "metapackage",
+    "postcss",
     "wearegenki-ui",
     "wearegenki"
   ],

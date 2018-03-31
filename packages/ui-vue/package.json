@@ -11,6 +11,7 @@
     "css",
     "cssgrid",
     "design-system",
+    "metapackage",
     "postcss",
     "vue",
     "wearegenki-ui",
