@@ -56,10 +56,20 @@
 
   /* Gradients */
   /* FIXME: Breaks postcss-color-function when doing hsl() blend: https://git.io/vxKf2 */
-  /* --gradient-primary-0: hsl(187, 100%, 50%); */
-  /* --gradient-primary-100: hsl(214, 97%, 47%); */
+  /*
+  --gradient-primary-0: hsl(187, 100%, 50%);
+  --gradient-primary-100: hsl(214, 97%, 47%);
+  --gradient-secondary-0: hsl(271, 97%, 72%);
+  --gradient-secondary-100: hsl(263, 63%, 49%);
+  --gradient-dark-0: hsl(246, 30%, 32%);
+  --gradient-dark-100: hsl(249, 33%, 16%);
+  */
   --gradient-primary-0: #00e1ff;
   --gradient-primary-100: #0368ec;
+  --gradient-secondary-0: #b972fc;
+  --gradient-secondary-100: #6a2ecb;
+  --gradient-dark-0: #3e396a;
+  --gradient-dark-100: #1f1b36;
   --gradient-primary-10: color(var(--gradient-primary-0) blend(var(--gradient-primary-100) 10%));
   --gradient-primary-20: color(var(--gradient-primary-0) blend(var(--gradient-primary-100) 20%));
   --gradient-primary-30: color(var(--gradient-primary-0) blend(var(--gradient-primary-100) 30%));
@@ -69,11 +79,6 @@
   --gradient-primary-70: color(var(--gradient-primary-0) blend(var(--gradient-primary-100) 70%));
   --gradient-primary-80: color(var(--gradient-primary-0) blend(var(--gradient-primary-100) 80%));
   --gradient-primary-90: color(var(--gradient-primary-0) blend(var(--gradient-primary-100) 90%));
-  /* FIXME: Breaks postcss-color-function when doing hsl() blend: https://git.io/vxKf2 */
-  /* --gradient-secondary-0: hsl(271, 97%, 72%); */
-  /* --gradient-secondary-100: hsl(263, 63%, 49%); */
-  --gradient-secondary-0: #b972fc;
-  --gradient-secondary-100: #6a2ecb;
   --gradient-secondary-10: color(var(--gradient-secondary-0) blend(var(--gradient-secondary-100) 10%));
   --gradient-secondary-20: color(var(--gradient-secondary-0) blend(var(--gradient-secondary-100) 20%));
   --gradient-secondary-30: color(var(--gradient-secondary-0) blend(var(--gradient-secondary-100) 30%));
@@ -82,11 +87,6 @@
   --gradient-secondary-70: color(var(--gradient-secondary-0) blend(var(--gradient-secondary-100) 70%));
   --gradient-secondary-80: color(var(--gradient-secondary-0) blend(var(--gradient-secondary-100) 80%));
   --gradient-secondary-90: color(var(--gradient-secondary-0) blend(var(--gradient-secondary-100) 90%));
-  /* FIXME: Breaks postcss-color-function when doing hsl() blend: https://git.io/vxKf2 */
-  /* --gradient-dark-0: hsl(246, 30%, 32%); */
-  /* --gradient-dark-100: hsl(249, 33%, 16%); */
-  --gradient-dark-0: #3e396a;
-  --gradient-dark-100: #1f1b36;
   --gradient-dark-90: color(var(--gradient-dark-0) blend(var(--gradient-dark-100) 90%));
   --gradient-primary: linear-gradient(var(--tilt-angle), var(--gradient-primary-0), var(--gradient-primary-100));
   --gradient-secondary: linear-gradient(var(--tilt-angle), var(--gradient-secondary-0), var(--gradient-secondary-100));
