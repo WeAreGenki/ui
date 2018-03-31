@@ -44,6 +44,6 @@ export default {
 
 <style lang="postcss">
 #breakpoints { /* stylelint-disable-line selector-max-id */
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: hsla(0, 0%, 0%, 0.6);
 }
 </style>
