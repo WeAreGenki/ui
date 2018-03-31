@@ -76,16 +76,19 @@
   --gradient-secondary-70: color(var(--gradient-secondary-0) blend(var(--gradient-secondary-100) 70%));
   --gradient-secondary-80: color(var(--gradient-secondary-0) blend(var(--gradient-secondary-100) 80%));
   --gradient-secondary-90: color(var(--gradient-secondary-0) blend(var(--gradient-secondary-100) 90%));
+  --gradient-dark-0: #3e396b;
+  --gradient-dark-100: #201c38;
+  --gradient-dark-90: color(var(--gradient-dark-0) blend(var(--gradient-dark-100) 90%));
   --gradient-primary: linear-gradient(var(--tilt-angle), var(--gradient-primary-0), var(--gradient-primary-100));
   --gradient-secondary: linear-gradient(var(--tilt-angle), var(--gradient-secondary-0), var(--gradient-secondary-100));
-  --gradient-dark: linear-gradient(var(--tilt-angle-alt), #3e396b, #201c38);
+  --gradient-dark: linear-gradient(var(--tilt-angle-alt), var(--gradient-dark-0), var(--gradient-dark-100));
 
   /* Colours */
   --primary: var(--gradient-primary-90); /* links, buttons */
   --secondary: var(--gradient-secondary-90); /* call to action, highlights */
-  --dark: #222b35;
+  --dark: var(--gradient-dark-90); /* slant-cta */
   --subtle: var(--blue-grey-200); /* footer, title subheading */
-  --body-font-colour: var(--blue-grey-900);
+  --body-font-colour: var(--dark);
   --body-bg-colour: var(--grey-50);
   --alt-bg-colour: var(--grey-100); /* alternating background in lists, tables, etc. */
 
