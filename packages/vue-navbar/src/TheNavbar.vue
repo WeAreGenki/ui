@@ -2,7 +2,7 @@
   TODO: Rewrite readme: new changes since we now have @wearegenki/icons
   ↳ Experimental input SVG sprite icon reference
   ↳ Since the navbar makes up a critical part of the page UI we use [a page
-    embeded version of the SVG sprite icon technique]
+    embedded version of the SVG sprite icon technique]
   ↳ [about inline SVG sprite technique] fast loading UI elements are important for
     perceptual load performance...
 -->
@@ -34,7 +34,7 @@
     your SVGs.
 
   NOTE:
-    Object properties ending with __ are marked safe to mangle; the name can be
+    Object properties ending with __ are safe to mangle; the name can be
     shortened at build time for smaller file size.
 
 -->
@@ -199,10 +199,8 @@ export default {
 
 .navbar-active {
   @if var(--use-drop-shadow) {
-    & {
-      filter: drop-shadow(var(--navbar-shadow));
-      transform: translateY(-3px);
-    }
+    filter: drop-shadow(var(--navbar-shadow));
+    transform: translateY(-3px);
   } @else { /* stylelint-disable-line */
     & > .con {
       transform: translateY(-3px);
