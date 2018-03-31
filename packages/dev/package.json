@@ -9,7 +9,7 @@
   "license": "Apache-2.0",
   "keywords": [
     "eslint",
-    "metapackage",
+    "meta-package",
     "postcss",
     "stylelint",
     "wearegenki-ui",
