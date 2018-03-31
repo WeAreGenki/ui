@@ -33,6 +33,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Shadow too large inside mini toggle slider in `@wearegenki/vue-input-toggle`.
 
+### Removed
+
+- Unused CSS variable `--secondary-accent`.
+
 ## [0.7.0] - 2018-03-25
 
 ### Changed
