@@ -23,7 +23,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Redesigned colours and gradients.
 - Much improved button colours and shadows.
 - Better side nav style.
-- Better slant section styles.
+- Better slant section styles and now easily customizable via CSS variables.
 - Small improvements to `@wearegenki/vue-navbar`.
 - Better `testserver` logging.
 - Updated dependencies.
