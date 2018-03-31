@@ -23,8 +23,8 @@
 
   @if var(--use-drop-shadow) {
     filter:
-      drop-shadow(var(--card-touch-shadow1))
-      drop-shadow(var(--card-touch-shadow2));
+      drop-shadow(var(--card-touch-shadow-1))
+      drop-shadow(var(--card-touch-shadow-2));
     transition: transform var(--card-touch-animate-speed) ease, filter var(--card-touch-animate-speed) ease;
 
     @if var(--card-touch-optimize) {
@@ -32,8 +32,8 @@
     }
   } @else { /* stylelint-disable-line */
     box-shadow:
-      var(--card-touch-shadow1-legacy),
-      var(--card-touch-shadow2-legacy);
+      var(--card-touch-shadow-1-legacy),
+      var(--card-touch-shadow-2-legacy);
     transition: transform var(--card-touch-animate-speed) ease, box-shadow var(--card-touch-animate-speed) ease;
 
     @if var(--card-touch-optimize) {
@@ -51,13 +51,13 @@
 
     @if var(--use-drop-shadow) {
       filter:
-        drop-shadow(var(--card-touch-hover-shadow1))
-        drop-shadow(var(--card-touch-hover-shadow2));
+        drop-shadow(var(--card-touch-hover-shadow-1))
+        drop-shadow(var(--card-touch-hover-shadow-2));
       transform: translateY(-7px);
     } @else { /* stylelint-disable-line */
       box-shadow:
-        var(--card-touch-hover-shadow1-legacy),
-        var(--card-touch-hover-shadow2-legacy);
+        var(--card-touch-hover-shadow-1-legacy),
+        var(--card-touch-hover-shadow-2-legacy);
       transform: translateY(-5px);
     }
 

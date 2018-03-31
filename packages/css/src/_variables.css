@@ -219,15 +219,15 @@
   --card-shadow-legacy: var(--shadow-subtle-legacy);
   --card-touch-optimize: var(--optimize);
   --card-touch-bg-colour: var(--body-bg-colour);
-  --card-touch-shadow1: var(--shadow-light-1);
-  --card-touch-shadow2: var(--shadow-light-2);
-  --card-touch-shadow1-legacy: var(--shadow-light-1-legacy);
-  --card-touch-shadow2-legacy: var(--shadow-light-2-legacy);
+  --card-touch-shadow-1: var(--shadow-light-1);
+  --card-touch-shadow-2: var(--shadow-light-2);
+  --card-touch-shadow-1-legacy: var(--shadow-light-1-legacy);
+  --card-touch-shadow-2-legacy: var(--shadow-light-2-legacy);
   --card-touch-animate-speed: 200ms;
-  --card-touch-hover-shadow1: var(--shadow);
-  --card-touch-hover-shadow2: 0 0.125rem 0.25rem color(var(--shadow-colour) alpha(0.07));
-  --card-touch-hover-shadow1-legacy: var(--shadow-legacy);
-  --card-touch-hover-shadow2-legacy: 0 0 0 transparent;
+  --card-touch-hover-shadow-1: var(--shadow);
+  --card-touch-hover-shadow-2: 0 0.125rem 0.25rem color(var(--shadow-colour) alpha(0.07));
+  --card-touch-hover-shadow-1-legacy: var(--shadow-legacy);
+  --card-touch-hover-shadow-2-legacy: 0 0 0 transparent;
 
   /* Alerts */
   --alert-padding: 1rem;
