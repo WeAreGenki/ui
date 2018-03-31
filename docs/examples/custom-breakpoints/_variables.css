@@ -32,7 +32,7 @@
 
 :root {
   /* Breakpoints */
-  --breakpoint-media: --breakpoint-small, --breakpoint-large, --breakpoint-xlarge;
+  --breakpoints-media: --breakpoint-small, --breakpoint-large, --breakpoint-xlarge;
   --breakpoints: s, l, xl;
   --font-size-xl: 1.25rem; /* Optional */
 }

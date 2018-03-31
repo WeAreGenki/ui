@@ -29,7 +29,7 @@
 .dg { display: grid; }
 .dig { display: inline-grid; }
 
-@each $media, $ext in (var(--breakpoint-media)), (var(--breakpoints)) {
+@each $media, $ext in (var(--breakpoints-media)), (var(--breakpoints)) {
   @media ($media) {
     .dn-$(ext) { display: none; }
     .db-$(ext) { display: block; }

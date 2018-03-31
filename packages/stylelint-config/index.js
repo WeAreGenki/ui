@@ -5,6 +5,10 @@ module.exports = {
   reportNeedlessDisables: true,
   plugins: ['stylelint-order'],
   rules: {
+    // TODO: Once we have hsl() fully supported enable these:
+    // 'color-no-hex': true,
+    // 'function-blacklist': ['rgb', 'rgba'],
+
     'no-empty-source': null, // allow .vue files without <style/>
     'comment-empty-line-before': null, // not helpful for rapid development
     'at-rule-no-unknown': [true, { ignoreAtRules: ['if', 'else', 'each', 'mixin', 'define-mixin'] }],

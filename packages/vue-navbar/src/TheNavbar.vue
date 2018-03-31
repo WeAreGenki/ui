@@ -1,21 +1,12 @@
 <!--
-  TODO: Rewrite readme: new changes since we now have @wearegenki/icons
-  ↳ Experimental input SVG sprite icon reference
-  ↳ Since the navbar makes up a critical part of the page UI we use [a page
-    embeded version of the SVG sprite icon technique]
-  ↳ [about inline SVG sprite technique] fast loading UI elements are important for
-    perceptual load performance...
--->
-
-<!--
 
   NAVBAR COMPONENT
 
-    A simple fixed top navigation bar with a floating effect upon scrolling. Will
-    collapse into a hamburger menu when the screen width is small.
+    A simple fixed top navigation bar with a floating effect upon scrolling.
+    Will collapse into a hamburger menu when the screen width is small.
 
   README:
-    The `items` property should be an array of objects with a url and name key, e.g.:
+    The "items" property should be an array of objects which look like this:
 
       <navbar :items="[
         { url: '/our-brands', name: 'Our Brands' },
@@ -23,18 +14,15 @@
         { url: '/consulting', name: 'Consulting' },
       ]"/>
 
-    You need to supply a logo and menu/close icons as SVG (since each project will
-    likely have its own icon set):
+    Menu and close icons are already included but you need to supply your logo
+    as a SVG. Place the file in "assets/logo.svg" and it will be automatically
+    resolved by this component.
 
-      logo  = assets/logo.svg
-      menu  = assets/icons/menu.svg
-      close = assets/icons/x.svg
-
-    You need to adjust .nav-icon + .logo width/height and .nav-logo padding to suit
-    your SVGs.
+    You may need to adjust size and whitespace to suite your logo. See the CSS
+    variables below in .nav-icon + .logo and .nav-logo.
 
   NOTE:
-    Object properties ending with __ are marked safe to mangle; the name can be
+    Object properties ending with __ are safe to mangle; the name can be
     shortened at build time for smaller file size.
 
 -->
@@ -88,7 +76,7 @@ export default {
   },
   data: () => ({
     show: false, // show hamburger menu?
-    nt: false, // is not at top?
+    nt: false, // not top; is the page scrolled?
   }),
   computed: {
     // check for passive eventListener support
@@ -166,6 +154,11 @@ export default {
       will-change: filter, transform;
     }
   } @else { /* stylelint-disable-line */
+    /**
+     * Legacy shadows are a special case. Because `box-shadow` is not hardware
+     * accelerated we animate using `opacity` on a pseudo element instead.
+     */
+
     > .con {
       transition: transform var(--navbar-animate-speed) ease;
 
@@ -199,10 +192,8 @@ export default {
 
 .navbar-active {
   @if var(--use-drop-shadow) {
-    & {
-      filter: drop-shadow(var(--navbar-shadow));
-      transform: translateY(-3px);
-    }
+    filter: drop-shadow(var(--navbar-shadow));
+    transform: translateY(-3px);
   } @else { /* stylelint-disable-line */
     & > .con {
       transform: translateY(-3px);

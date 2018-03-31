@@ -58,7 +58,7 @@
   .pb$(step) { padding-bottom: $val; }
   .pl$(step) { padding-left: $val; }
 
-  @each $media, $ext in (var(--breakpoint-media)), (var(--breakpoints)) {
+  @each $media, $ext in (var(--breakpoints-media)), (var(--breakpoints)) {
     @media ($media) {
       .ma$(step)-$(ext) { margin: $val; }
       .mh$(step)-$(ext) { margin-right: $val; margin-left: $val; }
@@ -104,7 +104,7 @@
 .mb-2 { margin-bottom: -2rem; }
 .ml-2 { margin-left: -2rem; }
 
-@each $media, $ext in (var(--breakpoint-media)), (var(--breakpoints)) {
+@each $media, $ext in (var(--breakpoints-media)), (var(--breakpoints)) {
   @media ($media) {
     .mh-auto-$(ext) { margin-right: auto; margin-left: auto; }
     .mv-auto-$(ext) { margin-top: auto; margin-bottom: auto; }

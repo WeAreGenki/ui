@@ -44,7 +44,7 @@
 .wmu { min-width: unset; }
 .hmu { min-height: unset; }
 
-@each $media, $ext in (var(--breakpoint-media)), (var(--breakpoints)) {
+@each $media, $ext in (var(--breakpoints-media)), (var(--breakpoints)) {
   @media ($media) {
     .w-100-$(ext) { width: 100%; }
     .w-75-$(ext) { width: 75%; }

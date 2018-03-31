@@ -12,7 +12,7 @@
   align-items: center;
 }
 
-@each $media, $ext in (var(--breakpoint-media)), (var(--breakpoints)) {
+@each $media, $ext in (var(--breakpoints-media)), (var(--breakpoints)) {
   @media ($media) {
     .f-col-$(ext) { flex-direction: column; }
     .f-colr-$(ext) { flex-direction: column-reverse; }

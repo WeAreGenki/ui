@@ -11,7 +11,7 @@
 .float-l { float: left; }
 .float-r { float: right; }
 
-@each $media, $ext in (var(--breakpoint-media)), (var(--breakpoints)) {
+@each $media, $ext in (var(--breakpoints-media)), (var(--breakpoints)) {
   @media ($media) {
     .pos-f-$(ext) { position: fixed; }
     .pos-a-$(ext) { position: absolute; }
@@ -41,7 +41,7 @@
     left: $val;
   }
 
-  @each $media, $ext in (var(--breakpoint-media)), (var(--breakpoints)) {
+  @each $media, $ext in (var(--breakpoints-media)), (var(--breakpoints)) {
     @media ($media) {
       .t$(step)-$(ext) { top: $val; }
       .r$(step)-$(ext) { right: $val; }

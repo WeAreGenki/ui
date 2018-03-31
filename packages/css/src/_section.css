@@ -20,6 +20,8 @@
 
 */
 
+/* Slant */
+
 .slant,
 .slant-cta {
   position: relative;
@@ -69,4 +71,13 @@
   a {
     color: var(--slant-cta-link-colour);
   }
+}
+
+/* Hero */
+
+.hero {
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+  color: var(--hero-font-colour);
+  background-image: var(--hero-bg-gradient);
 }

@@ -51,7 +51,7 @@
   @if var(--use-drop-shadow) {
     filter: drop-shadow(var(--btn-cta-shadow));
   } @else { /* stylelint-disable-line */
-    filter: var(--btn-cta-shadow-legacy);
+    box-shadow: var(--btn-cta-shadow-legacy);
   }
 }
 
@@ -61,7 +61,7 @@
   @if var(--use-drop-shadow) {
     filter: drop-shadow(var(--btn-dark-shadow));
   } @else { /* stylelint-disable-line */
-    filter: var(--btn-dark-shadow-legacy);
+    box-shadow: var(--btn-dark-shadow-legacy);
   }
 }
 
@@ -71,7 +71,7 @@
   @if var(--use-drop-shadow) {
     filter: drop-shadow(var(--btn-main-shadow));
   } @else { /* stylelint-disable-line */
-    filter: var(--btn-main-shadow-legacy);
+    box-shadow: var(--btn-main-shadow-legacy);
   }
 }
 
