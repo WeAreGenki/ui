@@ -22,6 +22,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
     - `--card-touch-shadow2-legacy` renamed to `--card-touch-shadow-2-legacy`
   - Converted all colours to use hsl notation. It's easier for humans to read colors using the `hsl()` function. One big caveat is the PostCSS build breaks and so the gradient colours need to remain in HEX notation [until the bug is fixed](https://github.com/ianstormtaylor/css-color-function/issues/24).
 
+### Fixed
+
+- Legacy shadows (current default) not shown correctly on buttons.
+
 ## [0.8.0] - 2018-03-31
 
 ### Added

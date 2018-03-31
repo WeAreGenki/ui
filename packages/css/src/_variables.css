@@ -185,13 +185,13 @@
   --btn-margin-between: 1.5rem; /* space between buttons */
   --btn-cta-bg-gradient: linear-gradient(var(--angle-1), var(--gradient-secondary-10), var(--gradient-secondary-100));
   --btn-cta-shadow: 0 0.18rem 0.18rem color(var(--gradient-secondary-100) alpha(0.5));
-  --btn-cta-shadow-legacy: 0 0.25rem 0.75rem hsla(156, 73%, 52%, 0.4);
+  --btn-cta-shadow-legacy: 0 0.2rem 0.45rem color(var(--gradient-secondary-90) alpha(0.4));
   --btn-main-bg-gradient: linear-gradient(var(--angle-1), var(--gradient-primary-40), var(--gradient-primary-100));
   --btn-main-shadow: 0 0.18rem 0.18rem color(var(--gradient-primary-100) alpha(0.5));
-  --btn-main-shadow-legacy: 0 0.125rem 0.375rem color(var(--gradient-primary-90) alpha(0.4));
+  --btn-main-shadow-legacy: 0 0.2rem 0.45rem color(var(--gradient-primary-90) alpha(0.4));
   --btn-dark-bg-gradient: var(--gradient-dark);
   --btn-dark-shadow: 0 0.18rem 0.18rem color(var(--dark) alpha(0.4));
-  --btn-dark-shadow-legacy: 0 0.125rem 0.375rem color(var(--dark) alpha(0.4));
+  --btn-dark-shadow-legacy: 0 0.2rem 0.45rem color(var(--dark) alpha(0.3));
 
   /* Forms */
   --form-help-font-colour: var(--grey-600);
