@@ -1,6 +1,6 @@
 {
   "name": "@wearegenki/vue-toasts",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "description": "A friendly UI framework which aims to be straightforward, intuitive, and high performance.",
   "repository": "https://github.com/WeAreGenki/ui/tree/master/packages/vue-toasts",
   "bugs": "https://github.com/WeAreGenki/ui/issues",
@@ -23,7 +23,7 @@
     "src"
   ],
   "dependencies": {
-    "@wearegenki/css": "^0.8.0"
+    "@wearegenki/css": "^0.9.0"
   },
   "peerDependencies": {
     "vue": "^2.5.13",
