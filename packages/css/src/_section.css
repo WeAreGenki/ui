@@ -7,8 +7,7 @@
   position: relative;
   padding: 2rem 0;
   margin: 8rem 0;
-  color: color(var(--white) alpha(0.9));
-  background-color: var(--blue-grey-700);
+  background-color: var(--slant-bg-colour);
 
   &::before,
   &::after {
@@ -20,7 +19,7 @@
     width: 100%;
     height: 12rem;
     content: "";
-    background-color: var(--blue-grey-700);
+    background-color: var(--slant-bg-colour);
     transform: skewY(-6deg);
 
     @media (--breakpoint-large) {
@@ -32,22 +31,22 @@
     top: auto;
     bottom: -4rem;
   }
-
-  strong {
-    color: var(--white);
-  }
-
-  a {
-    color: color(var(--link-font-colour) lightness(65%));
-  }
 }
 
 .slant-cta {
-  /* color: var(--white); */
-  background-color: var(--dark);
+  color: var(--slant-cta-font-colour);
+  background-color: var(--slant-cta-bg-colour);
 
   &::before,
   &::after {
-    background-color: var(--dark);
+    background-color: var(--slant-cta-bg-colour);
+  }
+
+  strong {
+    color: var(--slant-cta-font-colour);
+  }
+
+  a {
+    color: var(--slant-cta-link-colour);
   }
 }

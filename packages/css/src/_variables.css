@@ -232,6 +232,12 @@
   --template-card-body-padding: 1rem 1rem 0;
   --template-card-button-padding: 0 1rem 1rem;
 
+  /* Slant sections */
+  --slant-bg-colour: #eaeff5;
+  --slant-cta-font-colour: var(--white);
+  --slant-cta-bg-colour: var(--dark);
+  --slant-cta-link-colour: color(var(--link-font-colour) lightness(61%));
+
   /* Minimal navbar (lightweight alternative to navbar component) */
   --navbar-font-colour: var(--white);
   --navbar-bg-colour: var(--primary);
