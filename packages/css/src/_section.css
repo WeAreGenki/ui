@@ -78,6 +78,6 @@
 .hero {
   padding: 2rem 0;
   margin-bottom: 2rem;
-  color: var(--white);
-  background-image: var(--gradient-primary);
+  color: var(--hero-font-colour);
+  background-image: var(--hero-bg-gradient);
 }

@@ -48,7 +48,7 @@
   .c$(step) { grid-column-start: $step; }
   .w$(step) { grid-column-end: span $step; }
 
-  @each $media, $ext in (var(--breakpoint-media)), (var(--breakpoints)) {
+  @each $media, $ext in (var(--breakpoints-media)), (var(--breakpoints)) {
     @media ($media) {
       .x$(step)-$(ext) { grid-template-columns: repeat($step, var(--item-size)); }
       .c$(step)-$(ext) { grid-column-start: $step; }
@@ -62,7 +62,7 @@
   .r$(step) { grid-row-start: $step; }
   .h$(step) { grid-row-end: span $step; }
 
-  @each $media, $ext in (var(--breakpoint-media)), (var(--breakpoints)) {
+  @each $media, $ext in (var(--breakpoints-media)), (var(--breakpoints)) {
     @media ($media) {
       .y$(step)-$(ext) { grid-template-rows: repeat($step, auto); }
       .r$(step)-$(ext) { grid-row-start: $step; }
@@ -121,7 +121,7 @@
 .flow-col-dense { grid-auto-flow: column dense; }
 .flow-col { grid-auto-flow: column; } /* default */
 
-@each $media, $ext in (var(--breakpoint-media)), (var(--breakpoints)) {
+@each $media, $ext in (var(--breakpoints-media)), (var(--breakpoints)) {
   @media ($media) {
     .middle-$(ext) {
       align-items: center;
