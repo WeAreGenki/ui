@@ -1,6 +1,8 @@
-/* Margin & Padding */
-
 /*
+  SPACING
+
+    Margin and padding for whitespace control.
+
   BASE:
     .m = margin
     .p = padding
@@ -34,6 +36,7 @@
 
   MODIFIER:
     -i = force using !important (only available on margin auto directions)
+
 */
 
 /* stylelint-disable declaration-block-single-line-max-declarations, declaration-no-important */

@@ -18,6 +18,7 @@ codemirror
 cssgrid
 cssnano
 cssstats
+cta
 dataset
 el
 flexbugs
@@ -27,6 +28,8 @@ ib
 jank
 labelledby
 lerna
+markdownlint
+Marko
 microsites
 monorepo
 mousedown
@@ -46,6 +49,7 @@ renderer
 Segoe
 serializer
 substr
+tc
 tooltips
 UnCSS
 unstyled
