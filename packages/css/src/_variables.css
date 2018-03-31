@@ -240,7 +240,7 @@
   --template-card-button-padding: 0 1rem 1rem;
 
   /* Slant sections */
-  --slant-size-factor: 4rem; /* used to calculate section whitespace and size */
+  --slant-size-factor: 3.5rem; /* used to calculate section whitespace and size */
   --slant-angle: -4deg;
   --slant-angle-large: -3deg;
   --slant-bg-colour: #eaeff5;
