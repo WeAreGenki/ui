@@ -65,8 +65,19 @@
   }
 }
 
+.btn-dark {
+  background-image: var(--btn-dark-bg-gradient);
+
+  @if var(--use-drop-shadow) {
+    filter: drop-shadow(var(--btn-dark-shadow));
+  } @else { /* stylelint-disable-line */
+    filter: var(--btn-dark-shadow-legacy);
+  }
+}
+
 .btn-cta,
-.btn-main {
+.btn-main,
+.btn-dark {
   color: var(--white);
 
   &:hover,
