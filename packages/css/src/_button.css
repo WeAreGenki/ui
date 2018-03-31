@@ -55,16 +55,6 @@
   }
 }
 
-.btn-main {
-  background-image: var(--btn-main-bg-gradient);
-
-  @if var(--use-drop-shadow) {
-    filter: drop-shadow(var(--btn-main-shadow));
-  } @else { /* stylelint-disable-line */
-    filter: var(--btn-main-shadow-legacy);
-  }
-}
-
 .btn-dark {
   background-image: var(--btn-dark-bg-gradient);
 
@@ -75,9 +65,19 @@
   }
 }
 
+.btn-main {
+  background-image: var(--btn-main-bg-gradient);
+
+  @if var(--use-drop-shadow) {
+    filter: drop-shadow(var(--btn-main-shadow));
+  } @else { /* stylelint-disable-line */
+    filter: var(--btn-main-shadow-legacy);
+  }
+}
+
 .btn-cta,
-.btn-main,
-.btn-dark {
+.btn-dark,
+.btn-main {
   color: var(--white);
 
   &:hover,
