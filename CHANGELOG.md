@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 
 - BREAKING CHANGES:
+  - `@wearegenki/ui` is now, once again, a meta-package to install everything. To install just the developer tool configs there's a new meta-package `@wearegenki/dev`.
   - Rename CSS variables `--primary-gradient-*` to `--gradient-primary-*` and `--secondary-gradient-*` to `--gradient-secondary-*`.
 - Redesigned colours and gradients.
 - Much improved button colours and shadows.
