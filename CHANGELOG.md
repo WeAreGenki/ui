@@ -9,17 +9,28 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.8.0] - 2018-03-31
+
 ### Added
 
 - Animated hover state for buttons.
+- New CSS variables for gradients.
 
 ### Changed
 
 - BREAKING CHANGES:
-  - Rename CSS variables `--primary-gradient` to `--gradient-primary` and `--secondary-gradient` to `--gradient-secondary`.
-- Improved button shadows.
-- Better side nav styles.
+  - Rename CSS variables `--primary-gradient-*` to `--gradient-primary-*` and `--secondary-gradient-*` to `--gradient-secondary-*`.
+- Redesigned colours and gradients.
+- Much improved button colours and shadows.
+- Better side nav style.
+- Better slant section styles.
+- Small improvements to `@wearegenki/vue-navbar`.
 - Better `testserver` logging.
+- Updated dependencies.
+
+### Fixed
+
+- Shadow too large inside mini toggle slider in `@wearegenki/vue-input-toggle`.
 
 ## [0.7.0] - 2018-03-25
 
@@ -235,7 +246,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Initial public release with a base set of styles, Vue components, and dev configs but without a working build system so only source files are usable.
 
-[Unreleased]: https://github.com/WeAreGenki/ui/compare/v0.7.0...HEAD
+[Unreleased]: https://github.com/WeAreGenki/ui/compare/v0.8.0...HEAD
+[0.8.0]: https://github.com/WeAreGenki/ui/compare/v0.7.0...v0.8.0
 [0.7.0]: https://github.com/WeAreGenki/ui/compare/v0.6.2...v0.7.0
 [0.6.2]: https://github.com/WeAreGenki/ui/compare/v0.6.1...v0.6.2
 [0.6.1]: https://github.com/WeAreGenki/ui/compare/v0.6.0...v0.6.1
