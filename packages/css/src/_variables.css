@@ -65,7 +65,6 @@
   --gradient-primary-70: color(var(--gradient-primary-0) blend(var(--gradient-primary-100) 70%));
   --gradient-primary-80: color(var(--gradient-primary-0) blend(var(--gradient-primary-100) 80%));
   --gradient-primary-90: color(var(--gradient-primary-0) blend(var(--gradient-primary-100) 90%));
-  --primary: var(--gradient-primary-90); /* links, buttons */
   --gradient-secondary-0: #b970fd;
   --gradient-secondary-100: #6b2ecc;
   --gradient-secondary-10: color(var(--gradient-secondary-0) blend(var(--gradient-secondary-100) 10%));
@@ -76,6 +75,9 @@
   --gradient-secondary-70: color(var(--gradient-secondary-0) blend(var(--gradient-secondary-100) 70%));
   --gradient-secondary-80: color(var(--gradient-secondary-0) blend(var(--gradient-secondary-100) 80%));
   --gradient-secondary-90: color(var(--gradient-secondary-0) blend(var(--gradient-secondary-100) 90%));
+  --gradient-primary: linear-gradient(var(--tilt-angle), var(--gradient-primary-0), var(--gradient-primary-100));
+  --gradient-secondary: linear-gradient(var(--tilt-angle), var(--gradient-secondary-0), var(--gradient-secondary-100));
+  --primary: var(--gradient-primary-90); /* links, buttons */
   --secondary: var(--gradient-secondary-90); /* call to action, highlights */
   --subtle: var(--blue-grey-200); /* footer, title subheading */
   --dark: #222b35;
