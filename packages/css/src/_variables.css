@@ -333,7 +333,7 @@
 
   /* @wearegenki/vue-tabs component */
   --tab-font-size: 1.1rem;
-  --tab-border-width: 0.25rem;
+  --tab-border-width: 0.17rem;
   --tab-border-colour: var(--link-font-colour);
   --tab-hover-border-colour: var(--grey-400);
 

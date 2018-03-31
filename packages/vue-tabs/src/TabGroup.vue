@@ -43,7 +43,7 @@
         :key="name"
         :href="`#${encodeURIComponent(name)}`"
         :class="{ 'btn-tab-active': active === name }"
-        class="btn-tab ttu bold"
+        class="btn-tab ttu"
         role="tab"
         @click="active = name"
       >
