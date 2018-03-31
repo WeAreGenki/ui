@@ -1,6 +1,6 @@
 {
   "name": "@wearegenki/vue-input-select",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "A friendly UI framework which aims to be straightforward, intuitive, and high performance.",
   "repository": "https://github.com/WeAreGenki/ui/tree/master/packages/vue-input-select",
   "bugs": "https://github.com/WeAreGenki/ui/issues",
@@ -23,7 +23,7 @@
     "src"
   ],
   "dependencies": {
-    "@wearegenki/css": "^0.7.0",
+    "@wearegenki/css": "^0.8.0",
     "@wearegenki/vue-directive-view": "^0.7.0"
   },
   "peerDependencies": {
