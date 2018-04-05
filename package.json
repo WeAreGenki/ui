@@ -26,7 +26,7 @@
     "debug:browsers": "yarn autoprefixer --info"
   },
   "devDependencies": {
-    "@babel/core": "7.0.0-beta.42",
+    "@babel/core": "7.0.0-beta.44",
     "@wearegenki/eslint-config": "file:packages/eslint-config",
     "@wearegenki/postcss-config": "file:packages/postcss-config",
     "@wearegenki/stylelint-config": "file:packages/stylelint-config",
