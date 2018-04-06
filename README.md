@@ -38,9 +38,15 @@ To see [live examples](https://ui.wearegenki.com/examples) and the docs, visit [
 
 #### 1. Install dependencies
 
+Choose one of the following:
+
 ```bash
+# everything (not recommended but convenient for quick prototyping)
+yarn install "@wearegenki/ui" vue vue-router vuex marko \
+  && yarn install -D postcss eslint stylelint jest puppeteer vue-server-renderer vue-template-compiler marko-lasso postcss-lasso lasso
+
 # development configuration files only
-yarn install -D "@wearegenki/ui" "@wearegenki/test" eslint stylelint jest puppeteer
+yarn install -D "@wearegenki/dev" "@wearegenki/test" eslint stylelint jest puppeteer
 
 # CSS + compilation only
 yarn install "@wearegenki/css" \
@@ -48,11 +54,11 @@ yarn install "@wearegenki/css" \
 
 # all Vue.js packages (includes CSS)
 yarn install "@wearegenki/ui-vue" vue vue-router vuex \
-  && yarn install -D "@wearegenki/ui" "@wearegenki/test-vue" vue-server-renderer vue-template-compiler postcss eslint stylelint jest
+  && yarn install -D "@wearegenki/ui" "@wearegenki/test-vue" postcss eslint stylelint jest vue-server-renderer vue-template-compiler
 
 # all Marko.js packages (includes CSS)
 yarn install "@wearegenki/ui-marko" marko \
-  && yarn install -D "@wearegenki/ui" "@wearegenki/test-marko" marko-lasso postcss-lasso lasso postcss eslint stylelint jest
+  && yarn install -D "@wearegenki/ui" "@wearegenki/test-marko" postcss eslint stylelint jest marko-lasso postcss-lasso lasso
 ```
 
 #### 2. Copy config boilerplate
