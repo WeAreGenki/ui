@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Fixed
+
+- Poor `@wearegenki/vue-navbar` transition performance due to inconsistent shadow before vs after.
+
 ## [0.9.0] - 2018-04-01
 
 ### Changed
