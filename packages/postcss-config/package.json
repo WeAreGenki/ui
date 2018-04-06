@@ -28,7 +28,7 @@
     "autoprefixer": "^8.2.0",
     "css-mqpacker": "^6.0.2",
     "cssstats": "^3.2.0",
-    "postcss-at-rules-variables": "^0.1.4",
+    "postcss-at-rules-variables": "^0.1.5",
     "postcss-calc": "^6.0.1",
     "postcss-color-function": "^4.0.1",
     "postcss-conditionals": "^3.0.0-beta.0",
@@ -41,7 +41,7 @@
     "postcss-load-config": "^1.2.0",
     "postcss-mixins": "^6.2.0",
     "postcss-nested": "^3.0.0",
-    "postcss-url": "^7.3.1"
+    "postcss-url": "^7.3.2"
   },
   "engines": {
     "node": ">= 6.9.0"
