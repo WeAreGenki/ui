@@ -286,7 +286,7 @@
   --navbar-shadow-fade-speed: 300ms;
   --navbar-shadow: 0 0.5rem 1rem var(--shadow-base);
   --navbar-shadow-legacy: 0 0.5rem 2rem var(--shadow-base-legacy);
-  --navbar-shadow-before: 0 0.5rem 1.8rem color(var(--shadow-colour) alpha(0));
+  --navbar-shadow-before: 0 0.5rem 1rem color(var(--shadow-colour) alpha(0)); /* same as --navbar-shadow but 0 alpha */
   --navbar-icon-size: 2rem;
   --navbar-logo-size-x: 4rem;
   --navbar-logo-size-y: 2rem;
