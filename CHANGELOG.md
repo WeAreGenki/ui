@@ -11,7 +11,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 
-- Poor `@wearegenki/vue-navbar` transition performance due to inconsistent shadow before vs after.
+- Regression in `@wearegenki/vue-navbar` transition performance due to inconsistent shadow before vs after.
+- Correct quick start install instructions in main readme.
 
 ## [0.9.0] - 2018-04-01
 
@@ -26,8 +27,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
     - `--card-touch-shadow2` renamed to `--card-touch-shadow-2`
     - `--card-touch-shadow1-legacy` renamed to `--card-touch-shadow-1-legacy`
     - `--card-touch-shadow2-legacy` renamed to `--card-touch-shadow-2-legacy`
-  - Converted all colours to use hsl notation. It's easier for humans to read colors using the `hsl()` function and the PostCSS build will convert all the colours to HEX anyway. One major caveat is the PostCSS build breaks and so the gradient colours need to remain in HEX notation [until the upstream bug is fixed](https://github.com/ianstormtaylor/css-color-function/issues/24).
-  - Rewrite of `@wearegenki/vue-navbar` component documentation.
+- Converted all colours to use hsl notation. It's easier for humans to read colors using the `hsl()` function and the PostCSS build will convert all the colours to HEX anyway. One major caveat is the PostCSS build breaks and so the gradient colours need to remain in HEX notation [until the upstream bug is fixed](https://github.com/ianstormtaylor/css-color-function/issues/24).
+- Rewrite of `@wearegenki/vue-navbar` component documentation.
 
 ### Fixed
 
