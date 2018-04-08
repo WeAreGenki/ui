@@ -15,10 +15,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
-- Link hover colour.
+- General colour, gradient, and button refinements.
 
 ### Fixed
 
+- Labels no longer have the same colour as links. Users previously thought they were clickable.
 - Regression in `@wearegenki/vue-navbar` transition performance due to inconsistent shadow before vs after.
 - Correct quick start install instructions in main readme.
 
