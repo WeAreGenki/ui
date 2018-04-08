@@ -24,7 +24,7 @@
     "lib/"
   ],
   "peerDependencies": {
-    "jest": "^22.4.0",
+    "jest": "^22.4.3",
     "puppeteer": "^1.2.0"
   },
   "dependencies": {
@@ -41,7 +41,7 @@
     "babel-plugin-dynamic-import-node-babel-7": "^2.0.7",
     "chalk": "^2.3.2",
     "jest-environment-node": "^22.4.3",
-    "jest-puppeteer": "^2.2.3",
+    "jest-puppeteer": "^2.3.0",
     "node-static": "^0.7.10",
     "portfinder": "^1.0.13"
   },

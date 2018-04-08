@@ -19,7 +19,7 @@
   "main": "index.js",
   "style": "index.css",
   "peerDependencies": {
-    "vue": "^2.5.13"
+    "vue": "^2.5.16"
   },
   "engines": {
     "node": ">= 6.9.0"
