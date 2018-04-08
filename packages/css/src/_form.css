@@ -57,7 +57,6 @@ textarea {
     FIXME: These outlines don't look so good, experiment with icons and maybe
     minimal outlines instead.
   */
-  /*
   &:valid {
     box-shadow: 0 0 0.5rem 0.15rem var(--input-valid-colour);
   }
@@ -65,7 +64,6 @@ textarea {
   &:invalid {
     box-shadow: 0 0 0.5rem 0.15rem var(--input-invalid-colour);
   }
-  */
 
   &::placeholder {
     color: var(--input-placeholder-font-colour);
