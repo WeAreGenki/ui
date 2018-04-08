@@ -73,11 +73,19 @@
   }
 }
 
-/* Hero */
+/* Hero section */
 
 .hero {
   padding: 2rem 0;
   margin-bottom: 2rem;
   color: var(--hero-font-colour);
   background-image: var(--hero-bg-gradient);
+}
+
+.hero-cta {
+  background-image: var(--gradient-cta);
+}
+
+.hero-dark {
+  background-image: var(--gradient-dark);
 }
