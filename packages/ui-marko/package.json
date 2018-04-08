@@ -1,6 +1,6 @@
 {
   "name": "@wearegenki/ui-marko",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "description": "We Are Genki UI meta package which bundles all Marko components",
   "repository": "https://github.com/WeAreGenki/ui/tree/master/packages/ui-marko",
   "bugs": "https://github.com/WeAreGenki/ui/issues",
@@ -21,8 +21,8 @@
   "main": "index.js",
   "style": "index.css",
   "dependencies": {
-    "@wearegenki/css": "^0.9.0",
-    "@wearegenki/marko-modal": "^0.9.0"
+    "@wearegenki/css": "^0.10.0",
+    "@wearegenki/marko-modal": "^0.10.0"
   },
   "engines": {
     "node": ">= 6.9.0"
