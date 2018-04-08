@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.10.0] - 2018-04-09
+
 ### Added
 
 - More hero section variants.
@@ -281,7 +283,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Initial public release with a base set of styles, Vue components, and dev configs but without a working build system so only source files are usable.
 
-[Unreleased]: https://github.com/WeAreGenki/ui/compare/v0.9.0...HEAD
+[Unreleased]: https://github.com/WeAreGenki/ui/compare/v0.10.0...HEAD
+[0.10.0]: https://github.com/WeAreGenki/ui/compare/v0.9.0...v0.10.0
 [0.9.0]: https://github.com/WeAreGenki/ui/compare/v0.8.0...v0.9.0
 [0.8.0]: https://github.com/WeAreGenki/ui/compare/v0.7.0...v0.8.0
 [0.7.0]: https://github.com/WeAreGenki/ui/compare/v0.6.2...v0.7.0
