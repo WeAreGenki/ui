@@ -16,6 +16,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 
 - General colour, gradient, and button refinements.
+- Link hover animation; colour no longer fades out. This provides instant feedback and is more intuitive.
+- Update peer dependency versions and update dependencies.
 
 ### Fixed
 
@@ -23,23 +25,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Regression in `@wearegenki/vue-navbar` transition performance due to inconsistent shadow before vs after.
 - Correct quick start install instructions in main readme.
 
-### Changed
-
-- Link hover animation; colour no longer fades out. This provides instant feedback and is more intuitive.
-
 ## [0.9.0] - 2018-04-01
 
 ### Changed
 
-- BREAKING CHANGES:
-  - Renamed the following CSS variables for consistency:
-    - `--breakpoint-media` renamed to `--breakpoints-media`
-    - `--shadow-light1` renamed to `--shadow-light-1`
-    - `--shadow-light2` renamed to `--shadow-light-2`
-    - `--card-touch-shadow1` renamed to `--card-touch-shadow-1`
-    - `--card-touch-shadow2` renamed to `--card-touch-shadow-2`
-    - `--card-touch-shadow1-legacy` renamed to `--card-touch-shadow-1-legacy`
-    - `--card-touch-shadow2-legacy` renamed to `--card-touch-shadow-2-legacy`
+- BREAKING CHANGE: Renamed the following CSS variables for consistency:
+  - `--breakpoint-media` renamed to `--breakpoints-media`
+  - `--shadow-light1` renamed to `--shadow-light-1`
+  - `--shadow-light2` renamed to `--shadow-light-2`
+  - `--card-touch-shadow1` renamed to `--card-touch-shadow-1`
+  - `--card-touch-shadow2` renamed to `--card-touch-shadow-2`
+  - `--card-touch-shadow1-legacy` renamed to `--card-touch-shadow-1-legacy`
+  - `--card-touch-shadow2-legacy` renamed to `--card-touch-shadow-2-legacy`
 - Converted all colours to use hsl notation. It's easier for humans to read colors using the `hsl()` function and the PostCSS build will convert all the colours to HEX anyway. One major caveat is the PostCSS build breaks and so the gradient colours need to remain in HEX notation [until the upstream bug is fixed](https://github.com/ianstormtaylor/css-color-function/issues/24).
 - Rewrite of `@wearegenki/vue-navbar` component documentation.
 
@@ -57,9 +54,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
-- BREAKING CHANGES:
-  - `@wearegenki/ui` is now, once again, a meta-package to install everything. To install just the developer tool configs there's a new meta-package `@wearegenki/dev`.
-  - Rename CSS variables `--primary-gradient-*` to `--gradient-primary-*` and `--secondary-gradient-*` to `--gradient-secondary-*`.
+- BREAKING CHANGE: `@wearegenki/ui` is now, once again, a meta-package to install everything. To install just the developer tool configs there's a new meta-package `@wearegenki/dev`.
+- BREAKING CHANGE: Rename CSS variables `--primary-gradient-*` to `--gradient-primary-*` and `--secondary-gradient-*` to `--gradient-secondary-*`.
 - Redesigned colours and gradients.
 - Much improved button colours and shadows.
 - Better side nav style.
@@ -80,8 +76,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
-- BREAKING CHANGES:
-  - Rename `_width.css` to `_measure.css` as it now contains height classes too.
+- BREAKING CHANGE: Rename `_width.css` to `_measure.css` as it now contains height classes too.
 - More CSS improvements. Many changes including:
   - Refactor classes with `!important`, now uses the new `-i` modifier.
   - New transparency classes. New utility and border classes.
@@ -102,8 +97,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
-- BREAKING CHANGES:
-  - Changed dependency graph. `@wearegenki/icons` and `@wearegenki/test` are no longer bundled with `@wearegenki/ui` and need to be installed separately.
+- BREAKING CHANGE: Changed dependency graph. `@wearegenki/icons` and `@wearegenki/test` are no longer bundled with `@wearegenki/ui` and need to be installed separately.
 - Remove `coverageThreshold` from Jest presets. It should be manually added per project instead.
 
 ### Fixed
@@ -121,9 +115,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
-- BREAKING CHANGES:
-  - Changed dependency graph. The `@wearegenki/ui` meta-package only installs the development configs and now it's also necessary to manually install the meta package specific to the JavaScript framework you're using, e.g `@wearegenki/ui-vue` or `@wearegenki/ui-marko`. This helps to limit the number of dependencies which need to be installed; there's no point installing Vue.js packages if you're using Marko.
-  - Test suite presets have also been split into their own packages. `@wearegenki/test` is now a generic test suite using Jest + Puppeteer. Vue and Marko suites spilt into `@wearegenki/test-vue` and `@wearegenki/test-marko` respectively.
+- BREAKING CHANGE: Changed dependency graph. The `@wearegenki/ui` meta-package only installs the development configs and now it's also necessary to manually install the meta package specific to the JavaScript framework you're using, e.g `@wearegenki/ui-vue` or `@wearegenki/ui-marko`. This helps to limit the number of dependencies which need to be installed; there's no point installing Vue.js packages if you're using Marko.
+- BREAKING CHANGE: Test suite presets have also been split into their own packages. `@wearegenki/test` is now a generic test suite using Jest + Puppeteer. Vue and Marko suites spilt into `@wearegenki/test-vue` and `@wearegenki/test-marko` respectively.
 
 ## [0.5.2] - 2018-03-16
 
@@ -159,9 +152,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
-- BREAKING CHANGES:
-  - `@wearegenki/vue-input-select` property `has-filter` renamed to `filterable`.
-  - Rename `@wearegenki/vue-link-preload` to `@wearegenki/vue-link-preloader`.
+- BREAKING CHANGE: `@wearegenki/vue-input-select` property `has-filter` renamed to `filterable`.
+- BREAKING CHANGE: Rename `@wearegenki/vue-link-preload` to `@wearegenki/vue-link-preloader`.
 - Many internal property names changed to indicate which are safe to mangle (shorten for smaller file size).
 - Continued CSS style improvements.
 - Small performance improvement to `@wearegenki/vue-input-select`; removed `:key` binding.
@@ -207,9 +199,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
-- BREAKING CHANGES:
-  - `@wearegenki/ui-postcss` renamed to `@wearegenki/postcss-config`.
-  - `@wearegenki/ui-stylelint` renamed to `@wearegenki/stylelint-config`.
+- BREAKING CHANGE: `@wearegenki/ui-postcss` renamed to `@wearegenki/postcss-config`.
+- BREAKING CHANGE: `@wearegenki/ui-stylelint` renamed to `@wearegenki/stylelint-config`.
 - Continued improvements to CSS styles.
 - Updated dependencies.
 
