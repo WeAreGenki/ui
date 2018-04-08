@@ -9,10 +9,22 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+
+- More hero section variants.
+
+### Changed
+
+- Link hover colour.
+
 ### Fixed
 
 - Regression in `@wearegenki/vue-navbar` transition performance due to inconsistent shadow before vs after.
 - Correct quick start install instructions in main readme.
+
+### Changed
+
+- Link hover animation; colour no longer fades out. This provides instant feedback and is more intuitive.
 
 ## [0.9.0] - 2018-04-01
 
