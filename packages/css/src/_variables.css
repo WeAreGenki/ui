@@ -245,11 +245,12 @@
   --alert-error-border-colour: var(--red-500);
 
   /* Labels */
-  --label-padding: 0.04rem 0.4rem 0.08rem;
+  --label-padding: 0.04rem 0.4rem 0.185rem;
   --label-font-size: 90%;
-  --label-font-colour: var(--gradient-primary-100);
+  --label-font-colour: var(--dark);
+  --label-alignment: 0.1rem;
   --label-bg-colour: var(--body-bg-colour);
-  --label-border: 1px solid var(--primary);
+  --label-border: 1px solid var(--gradient-dark-40);
   --label-border-radius: var(--radius);
   --label-margin-between: var(--btn-margin-between);
 

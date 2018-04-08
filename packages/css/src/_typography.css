@@ -1,7 +1,7 @@
 /* TYPOGRAPHY */
 
 /* Fluid font size (experimental) */
-/* TODO: Extensive cross browser testing because rem fonts on <html> is uncommon */
+/* TODO: Full cross browser testing because rem fonts on <html> is uncommon. */
 
 @if var(--use-font-size-fluid) {
   html {
