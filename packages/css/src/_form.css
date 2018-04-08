@@ -31,6 +31,10 @@ label {
 input,
 select,
 textarea {
+  /*
+    FIXME: Need some way to make inputs sized consistently but without effecting
+    the document flow.
+  */
   /* min-width: 17rem; */
   /* max-width: 100%; */
   padding: var(--input-padding-y) var(--input-padding-x);
@@ -49,14 +53,19 @@ textarea {
     outline: var(--input-focus-outline);
   }
 
-  /* FIXME: Remove; failed experiment */
-  /* &:valid {
+  /*
+    FIXME: These outlines don't look so good, experiment with icons and maybe
+    minimal outlines instead.
+  */
+  /*
+  &:valid {
     box-shadow: 0 0 0.5rem 0.15rem var(--input-valid-colour);
   }
 
   &:invalid {
     box-shadow: 0 0 0.5rem 0.15rem var(--input-invalid-colour);
-  } */
+  }
+  */
 
   &::placeholder {
     color: var(--input-placeholder-font-colour);
