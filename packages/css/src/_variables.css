@@ -51,24 +51,24 @@
   --spacing-values: 0, 0.25rem, 0.5rem, 1rem, 2rem, 4rem, 8rem, 16rem;
   --radius: 0.1875rem; /* 3px at root */
   --radius-negative: -0.1875rem; /* used to calculate negative offsets e.g. for .input-group */
-  --angle-1: 160deg; /* gradient direction; main, cta */
+  --angle-1: 151deg; /* gradient direction; main, cta */
   --angle-2: 45deg; /* gradient direction; dark */
-  --angle-3: -15deg; /* hero section */
+  --angle-3: -27deg; /* hero section */
 
   /* Gradients */
   /* FIXME: Using hsl() breaks postcss-color-function when doing blend(): https://git.io/vxKf2 */
   /*
-  --gradient-primary-0: hsl(187, 100%, 50%);
-  --gradient-primary-100: hsl(214, 97%, 47%);
-  --gradient-secondary-0: hsl(271, 97%, 72%);
-  --gradient-secondary-100: hsl(263, 63%, 49%);
-  --gradient-dark-0: hsl(246, 30%, 32%);
-  --gradient-dark-100: hsl(249, 33%, 16%);
+  --gradient-primary-0: hsl(188.1, 100%, 50.6%);
+  --gradient-primary-100: hsl(215, 98.3%, 45.9%);
+  --gradient-secondary-0: hsl(270.2, 95.6%, 72.8%);
+  --gradient-secondary-100: hsl(263, 59.8%, 48.8%);
+  --gradient-dark-0: hsl(245.9, 30%, 32%);
+  --gradient-dark-100: hsl(249.1, 33.3%, 15.9%);
   */
-  --gradient-primary-0: #00e1ff;
-  --gradient-primary-100: #0368ec;
-  --gradient-secondary-0: #b972fc;
-  --gradient-secondary-100: #6a2ecb;
+  --gradient-primary-0: #03ddff;
+  --gradient-primary-100: #0262e8;
+  --gradient-secondary-0: #ba77fc;
+  --gradient-secondary-100: #6b32c7;
   --gradient-dark-0: #3e396a;
   --gradient-dark-100: #1f1b36;
   --gradient-primary-10: color(var(--gradient-primary-0) blend(var(--gradient-primary-100) 10%));
@@ -88,15 +88,15 @@
   --gradient-secondary-70: color(var(--gradient-secondary-0) blend(var(--gradient-secondary-100) 70%));
   --gradient-secondary-80: color(var(--gradient-secondary-0) blend(var(--gradient-secondary-100) 80%));
   --gradient-secondary-90: color(var(--gradient-secondary-0) blend(var(--gradient-secondary-100) 90%));
-  --gradient-dark-90: color(var(--gradient-dark-0) blend(var(--gradient-dark-100) 90%));
+  --gradient-dark-80: color(var(--gradient-dark-0) blend(var(--gradient-dark-100) 80%));
   --gradient-primary: linear-gradient(var(--angle-1), var(--gradient-primary-0), var(--gradient-primary-100));
   --gradient-secondary: linear-gradient(var(--angle-1), var(--gradient-secondary-0), var(--gradient-secondary-100));
   --gradient-dark: linear-gradient(var(--angle-2), var(--gradient-dark-0), var(--gradient-dark-100));
 
   /* Colours */
-  --primary: var(--gradient-primary-90); /* links, buttons */
-  --secondary: var(--gradient-secondary-90); /* call to action, highlights */
-  --dark: var(--gradient-dark-90); /* slant-cta */
+  --primary: var(--gradient-primary-80); /* links, buttons */
+  --secondary: var(--gradient-secondary-80); /* call to action, highlights */
+  --dark: var(--gradient-dark-80); /* body text, slant-cta */
   --subtle: var(--blue-grey-200); /* footer, title subheading */
   --body-font-colour: var(--dark);
   --body-bg-colour: var(--grey-50);
@@ -181,10 +181,10 @@
   --btn-disabled-border-colour: var(--blue-grey-50);
   --btn-arrow-animate-speed: 200ms;
   --btn-margin-between: 1.5rem; /* space between buttons */
-  --btn-cta-bg-gradient: linear-gradient(var(--angle-1), var(--gradient-secondary-10), var(--gradient-secondary-100));
+  --btn-cta-bg-gradient: linear-gradient(var(--angle-1), var(--gradient-secondary-0), var(--gradient-secondary-100));
   --btn-cta-shadow: 0 0.18rem 0.18rem color(var(--gradient-secondary-100) alpha(0.5));
   --btn-cta-shadow-legacy: 0 0.2rem 0.45rem color(var(--gradient-secondary-90) alpha(0.4));
-  --btn-main-bg-gradient: linear-gradient(var(--angle-1), var(--gradient-primary-40), var(--gradient-primary-100));
+  --btn-main-bg-gradient: linear-gradient(var(--angle-1), var(--gradient-primary-20), var(--gradient-primary-100));
   --btn-main-shadow: 0 0.18rem 0.18rem color(var(--gradient-primary-100) alpha(0.5));
   --btn-main-shadow-legacy: 0 0.2rem 0.45rem color(var(--gradient-primary-90) alpha(0.4));
   --btn-dark-bg-gradient: var(--gradient-dark);
@@ -264,7 +264,7 @@
   --slant-bg-colour: hsl(213, 35%, 94%);
   --slant-cta-font-colour: var(--white);
   --slant-cta-bg-colour: var(--dark);
-  --slant-cta-link-colour: color(var(--link-font-colour) lightness(61%));
+  --slant-cta-link-colour: color(var(--link-font-colour) hue(-5) lightness(58%));
   --hero-font-colour: var(--white);
   --hero-bg-gradient: linear-gradient(var(--angle-3), var(--gradient-primary-20), var(--gradient-primary-100));
 
