@@ -146,9 +146,7 @@
   /* links */
   --link-click-area: 0.25rem; /* increase if you don't have links close to each other (otherwise they may overlap) */
   --link-font-colour: var(--primary);
-  --link-hover-font-colour: var(--gradient-primary-100);
-  --link-animate-in-speed: 0s;
-  --link-animate-out-speed: 1s;
+  --link-hover-font-colour: color(var(--primary) blackness(16%));
   /* other */
   --hr-margin: 3rem 0;
   --quote-font-size: 2rem;

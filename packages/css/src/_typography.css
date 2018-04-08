@@ -77,12 +77,10 @@ a {
   color: var(--link-font-colour);
   text-decoration: none;
   word-wrap: break-word;
-  transition: color var(--link-animate-out-speed) ease-out;
 
   &:hover {
     color: var(--link-hover-font-colour);
     text-decoration: underline;
-    transition-duration: var(--link-animate-in-speed);
   }
 }
 
