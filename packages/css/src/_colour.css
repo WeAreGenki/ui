@@ -23,6 +23,11 @@
 .grey { color: var(--grey-500); }
 .blue-grey { color: var(--blue-grey-500); }
 
+/* Theme colours */
+.primary { color: var(--primary); }
+.secondary { color: var(--secondary); }
+/* .dark { color: var(--dark); } *//* same as .plain */
+
 /* Transparency */
 .alpha100 { opacity: 1; }
 .alpha75 { opacity: 0.75; }
