@@ -88,13 +88,21 @@
   --gradient-secondary-70: color(var(--gradient-secondary-0) blend(var(--gradient-secondary-100) 70%));
   --gradient-secondary-80: color(var(--gradient-secondary-0) blend(var(--gradient-secondary-100) 80%));
   --gradient-secondary-90: color(var(--gradient-secondary-0) blend(var(--gradient-secondary-100) 90%));
+  --gradient-dark-10: color(var(--gradient-dark-0) blend(var(--gradient-dark-100) 10%));
+  --gradient-dark-20: color(var(--gradient-dark-0) blend(var(--gradient-dark-100) 20%));
+  --gradient-dark-30: color(var(--gradient-dark-0) blend(var(--gradient-dark-100) 30%));
+  --gradient-dark-40: color(var(--gradient-dark-0) blend(var(--gradient-dark-100) 40%));
+  --gradient-dark-50: color(var(--gradient-dark-0) blend(var(--gradient-dark-100) 50%));
+  --gradient-dark-60: color(var(--gradient-dark-0) blend(var(--gradient-dark-100) 60%));
+  --gradient-dark-70: color(var(--gradient-dark-0) blend(var(--gradient-dark-100) 70%));
   --gradient-dark-80: color(var(--gradient-dark-0) blend(var(--gradient-dark-100) 80%));
+  --gradient-dark-90: color(var(--gradient-dark-0) blend(var(--gradient-dark-100) 90%));
   --gradient-primary: linear-gradient(var(--angle-1), var(--gradient-primary-0), var(--gradient-primary-100));
   --gradient-secondary: linear-gradient(var(--angle-1), var(--gradient-secondary-0), var(--gradient-secondary-100));
   --gradient-dark: linear-gradient(var(--angle-2), var(--gradient-dark-0), var(--gradient-dark-100));
 
   /* Colours */
-  --primary: var(--gradient-primary-80); /* links, buttons */
+  --primary: var(--gradient-primary-90); /* links, buttons */
   --secondary: var(--gradient-secondary-80); /* call to action, highlights */
   --dark: var(--gradient-dark-80); /* body text, slant-cta */
   --subtle: var(--blue-grey-200); /* footer, title subheading */
@@ -103,8 +111,8 @@
   --alt-bg-colour: var(--grey-100); /* alternating background in lists, tables, etc. */
 
   /* Shadows */
-  --shadow-colour: hsl(236, 46%, 19%);
-  --shadow-colour-subtle: hsl(225, 23%, 52%);
+  --shadow-colour: hsl(241, 48%, 19%);
+  --shadow-colour-subtle: hsl(230, 24%, 51%);
   /* filter:drop-shadow() */
   --shadow-base: color(var(--shadow-colour) alpha(0.33));
   --shadow: 0 1rem 0.95rem var(--shadow-base);
@@ -163,7 +171,7 @@
   --side-nav-link-margin-y: 0.2rem;
   --side-nav-active-bg-colour: var(--blue-grey-50);
   --side-nav-border-width: 0.2rem;
-  --side-nav-border-colour: var(--primary);
+  --side-nav-border-colour: var(--gradient-primary-70);
   --footer-margin-y: 5rem;
   --footer-font-colour: var(--subtle);
 
@@ -181,15 +189,18 @@
   --btn-disabled-border-colour: var(--blue-grey-50);
   --btn-arrow-animate-speed: 200ms;
   --btn-margin-between: 1.5rem; /* space between buttons */
+  /* CTA */
   --btn-cta-bg-gradient: linear-gradient(var(--angle-1), var(--gradient-secondary-0), var(--gradient-secondary-100));
   --btn-cta-shadow: 0 0.18rem 0.18rem color(var(--gradient-secondary-100) alpha(0.5));
   --btn-cta-shadow-legacy: 0 0.2rem 0.45rem color(var(--gradient-secondary-90) alpha(0.4));
-  --btn-main-bg-gradient: linear-gradient(var(--angle-1), var(--gradient-primary-20), var(--gradient-primary-100));
-  --btn-main-shadow: 0 0.18rem 0.18rem color(var(--gradient-primary-100) alpha(0.5));
-  --btn-main-shadow-legacy: 0 0.2rem 0.45rem color(var(--gradient-primary-90) alpha(0.4));
+  /* dark */
   --btn-dark-bg-gradient: var(--gradient-dark);
   --btn-dark-shadow: 0 0.18rem 0.18rem color(var(--dark) alpha(0.4));
   --btn-dark-shadow-legacy: 0 0.2rem 0.45rem color(var(--dark) alpha(0.3));
+  /* main */
+  --btn-main-bg-gradient: linear-gradient(var(--angle-1), var(--gradient-primary-20), var(--gradient-primary-100));
+  --btn-main-shadow: 0 0.18rem 0.18rem color(var(--gradient-primary-100) alpha(0.5));
+  --btn-main-shadow-legacy: 0 0.2rem 0.45rem color(var(--gradient-primary-90) alpha(0.4));
 
   /* Forms */
   --form-help-font-colour: var(--grey-600);
