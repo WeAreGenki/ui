@@ -22,12 +22,12 @@
     "dist",
     "src"
   ],
+  "peerDependencies": {
+    "vue": "^2.5.16"
+  },
   "dependencies": {
     "@wearegenki/css": "^0.9.0",
     "@wearegenki/icons": "^0.5.1"
-  },
-  "peerDependencies": {
-    "vue": "^2.5.13"
   },
   "publishConfig": {
     "access": "public"

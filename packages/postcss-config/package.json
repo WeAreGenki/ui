@@ -22,7 +22,7 @@
     "tools.js"
   ],
   "peerDependencies": {
-    "postcss": "^6.0.14"
+    "postcss": "^6.0.21"
   },
   "dependencies": {
     "autoprefixer": "^8.2.0",

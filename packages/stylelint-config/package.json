@@ -16,12 +16,12 @@
     "wearegenki"
   ],
   "main": "index.js",
+  "peerDependencies": {
+    "stylelint": "^9.2.0"
+  },
   "dependencies": {
     "stylelint-config-standard": "^18.2.0",
     "stylelint-order": "^0.8.1"
-  },
-  "peerDependencies": {
-    "stylelint": "^9.1.1"
   },
   "engines": {
     "node": ">= 6.9.0"
