@@ -22,11 +22,11 @@
     "dist",
     "src"
   ],
+  "peerDependencies": {
+    "marko": "^4.9.6"
+  },
   "dependencies": {
     "@wearegenki/css": "^0.9.0"
-  },
-  "peerDependencies": {
-    "marko": "^4.7.4"
   },
   "publishConfig": {
     "access": "public"

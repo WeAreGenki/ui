@@ -19,8 +19,8 @@
     "lib/"
   ],
   "peerDependencies": {
-    "jest": "^22.4.2",
-    "marko": "^4.9.0"
+    "jest": "^22.4.3",
+    "marko": "^4.9.6"
   },
   "dependencies": {
     "@types/jest": "22.2.2"
