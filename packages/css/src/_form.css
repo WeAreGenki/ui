@@ -58,11 +58,19 @@ textarea {
     minimal outlines instead.
   */
   &:valid {
-    box-shadow: 0 0 0.5rem 0.15rem var(--input-valid-colour);
+    @if var(--use-drop-shadow) {
+      filter: drop-shadow(0 0 0.15rem var(--input-valid-colour));
+    } @else { /* stylelint-disable-line */
+      box-shadow: 0 0 0.5rem var(--input-valid-colour);
+    }
   }
 
   &:invalid {
-    box-shadow: 0 0 0.5rem 0.15rem var(--input-invalid-colour);
+    @if var(--use-drop-shadow) {
+      filter: drop-shadow(0 0 0.15rem var(--input-invalid-colour));
+    } @else { /* stylelint-disable-line */
+      box-shadow: 0 0 0.5rem var(--input-invalid-colour);
+    }
   }
 
   &::placeholder {
