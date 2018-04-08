@@ -5,6 +5,7 @@
   padding: var(--label-padding);
   font-size: var(--label-font-size);
   color: var(--label-font-colour);
+  vertical-align: var(--label-alignment);
   background-color: var(--label-bg-colour);
   border: var(--label-border);
   border-radius: var(--label-border-radius);
