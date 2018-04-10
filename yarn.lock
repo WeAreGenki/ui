@@ -694,9 +694,9 @@
     p-map-series "^1.0.0"
     p-waterfall "^1.0.0"
 
-"@lerna/cli@^3.0.0-beta.15":
-  version "3.0.0-beta.15"
-  resolved "https://registry.yarnpkg.com/@lerna/cli/-/cli-3.0.0-beta.15.tgz#99c9bc4628dbe4f5c78fbd772ff9743f6c9891e1"
+"@lerna/cli@^3.0.0-beta.16":
+  version "3.0.0-beta.16"
+  resolved "https://registry.yarnpkg.com/@lerna/cli/-/cli-3.0.0-beta.16.tgz#91782574eb7da761765f25941554c55d82c8b795"
   dependencies:
     "@lerna/add" "^3.0.0-beta.15"
     "@lerna/bootstrap" "^3.0.0-beta.15"
@@ -706,7 +706,7 @@
     "@lerna/diff" "^3.0.0-beta.15"
     "@lerna/exec" "^3.0.0-beta.15"
     "@lerna/global-options" "^3.0.0-beta.13"
-    "@lerna/import" "^3.0.0-beta.15"
+    "@lerna/import" "^3.0.0-beta.16"
     "@lerna/init" "^3.0.0-beta.15"
     "@lerna/link" "^3.0.0-beta.15"
     "@lerna/list" "^3.0.0-beta.15"
@@ -848,9 +848,9 @@
   version "3.0.0-beta.13"
   resolved "https://registry.yarnpkg.com/@lerna/global-options/-/global-options-3.0.0-beta.13.tgz#4ca84443056f0dce3f4a55528ad5345237675f3a"
 
-"@lerna/import@^3.0.0-beta.15":
-  version "3.0.0-beta.15"
-  resolved "https://registry.yarnpkg.com/@lerna/import/-/import-3.0.0-beta.15.tgz#ca92cdbe4956ba92c54dd0b7211fb8d9e567275b"
+"@lerna/import@^3.0.0-beta.16":
+  version "3.0.0-beta.16"
+  resolved "https://registry.yarnpkg.com/@lerna/import/-/import-3.0.0-beta.16.tgz#b001e3eb456843638957f786770019ad129dfc30"
   dependencies:
     "@lerna/child-process" "^3.0.0-beta.13"
     "@lerna/command" "^3.0.0-beta.15"
@@ -5296,11 +5296,11 @@ left-pad@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/left-pad/-/left-pad-1.2.0.tgz#d30a73c6b8201d8f7d8e7956ba9616087a68e0ee"
 
-lerna@3.0.0-beta.15:
-  version "3.0.0-beta.15"
-  resolved "https://registry.yarnpkg.com/lerna/-/lerna-3.0.0-beta.15.tgz#7caaab5c066648a40d0506e1e97147ecb699441b"
+lerna@3.0.0-beta.16:
+  version "3.0.0-beta.16"
+  resolved "https://registry.yarnpkg.com/lerna/-/lerna-3.0.0-beta.16.tgz#ef2a71090245ea6bb0c822fae9d97fa21921b382"
   dependencies:
-    "@lerna/cli" "^3.0.0-beta.15"
+    "@lerna/cli" "^3.0.0-beta.16"
     import-local "^1.0.0"
     npmlog "^4.1.2"
 
