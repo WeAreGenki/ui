@@ -1091,7 +1091,11 @@
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@types/events/-/events-1.2.0.tgz#81a6731ce4df43619e5c8c945383b3e62a89ea86"
 
-"@types/jest@22.2.2", "@types/jest@^22.2.2":
+"@types/jest@22.2.3":
+  version "22.2.3"
+  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-22.2.3.tgz#0157c0316dc3722c43a7b71de3fdf3acbccef10d"
+
+"@types/jest@^22.2.2":
   version "22.2.2"
   resolved "https://registry.yarnpkg.com/@types/jest/-/jest-22.2.2.tgz#afe5dacbd00d65325f52da0ed3e76e259629ac9d"
 
@@ -1165,12 +1169,12 @@
 "@wearegenki/test-marko@file:packages/test-marko":
   version "0.10.0"
   dependencies:
-    "@types/jest" "22.2.2"
+    "@types/jest" "22.2.3"
 
 "@wearegenki/test-vue@file:packages/test-vue":
   version "0.10.0"
   dependencies:
-    "@types/jest" "22.2.2"
+    "@types/jest" "22.2.3"
     "@vue/test-utils" "1.0.0-beta.13"
     jest-serializer-vue "1.0.0"
     vue-jest "2.4.1"
