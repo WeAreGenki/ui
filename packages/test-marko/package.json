@@ -23,7 +23,7 @@
     "marko": "^4.9.6"
   },
   "dependencies": {
-    "@types/jest": "22.2.2"
+    "@types/jest": "22.2.3"
   },
   "engines": {
     "node": ">= 6.9.0"
