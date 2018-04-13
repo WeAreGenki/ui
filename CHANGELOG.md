@@ -9,6 +9,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
+
+- BREAKING CHANGE: Renamed CSS class `.form-row` to `.form-group`.
+- Inputs were refactored; use border instead of outline for active states, new colourful borders, new approach to recommended markup.
+- Clean up reboot CSS.
+
+### Fixed
+
+- Visual bug in `@wearegenki/vue-input-toggle` where the colour under the slider was visible when active in some browsers.
+
 ## [0.10.0] - 2018-04-09
 
 ### Added
