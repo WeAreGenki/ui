@@ -1,6 +1,6 @@
 {
   "name": "@wearegenki/vue-directive-view",
-  "version": "0.7.0",
+  "version": "0.10.0",
   "description": "Vue custom directive to show/hide elements using opacity",
   "repository": "https://github.com/WeAreGenki/ui/tree/master/packages/vue-directive-view",
   "bugs": "https://github.com/WeAreGenki/ui/issues",

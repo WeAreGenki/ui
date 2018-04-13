@@ -1,6 +1,6 @@
 {
   "name": "@wearegenki/test-marko",
-  "version": "0.7.0",
+  "version": "0.10.0",
   "description": "Test suite presets for use in We Are Genki projects.",
   "repository": "https://github.com/WeAreGenki/ui/tree/master/packages/test-marko",
   "bugs": "https://github.com/WeAreGenki/ui/issues",
@@ -23,7 +23,7 @@
     "marko": "^4.9.6"
   },
   "dependencies": {
-    "@types/jest": "22.2.2"
+    "@types/jest": "22.2.3"
   },
   "engines": {
     "node": ">= 6.9.0"

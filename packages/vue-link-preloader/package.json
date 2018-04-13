@@ -1,10 +1,8 @@
 {
   "name": "@wearegenki/vue-link-preloader",
-  "version": "0.9.0",
-  "description":
-    "A friendly UI framework which aims to be straightforward, intuitive, and high performance.",
-  "repository":
-    "https://github.com/WeAreGenki/ui/tree/master/packages/vue-link-preloader",
+  "version": "0.10.0",
+  "description": "A friendly UI framework which aims to be straightforward, intuitive, and high performance.",
+  "repository": "https://github.com/WeAreGenki/ui/tree/master/packages/vue-link-preloader",
   "bugs": "https://github.com/WeAreGenki/ui/issues",
   "homepage": "https://ui.wearegenki.com",
   "author": "Max Milton <max@wearegenki.com>",
@@ -20,13 +18,16 @@
   ],
   "main": "dist/index.js",
   "style": "dist/index.css",
-  "files": ["dist", "src"],
+  "files": [
+    "dist",
+    "src"
+  ],
   "peerDependencies": {
     "vue": "^2.5.16",
     "vue-router": "^3.0.1"
   },
   "dependencies": {
-    "@wearegenki/css": "^0.9.0",
+    "@wearegenki/css": "^0.10.0",
     "futurelink": "^0.2.1"
   },
   "publishConfig": {

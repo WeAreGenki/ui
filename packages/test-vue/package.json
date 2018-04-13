@@ -1,6 +1,6 @@
 {
   "name": "@wearegenki/test-vue",
-  "version": "0.8.0",
+  "version": "0.10.0",
   "description": "Test suite presets for use in We Are Genki projects.",
   "repository": "https://github.com/WeAreGenki/ui/tree/master/packages/test-vue",
   "bugs": "https://github.com/WeAreGenki/ui/issues",
@@ -25,7 +25,7 @@
     "vue-template-compiler": "^2.5.16"
   },
   "dependencies": {
-    "@types/jest": "22.2.2",
+    "@types/jest": "22.2.3",
     "@vue/test-utils": "1.0.0-beta.13",
     "jest-serializer-vue": "1.0.0",
     "vue-jest": "2.4.1"
