@@ -63,9 +63,9 @@ body {
 .btn,
 .select,
 button,
+input
 select,
-textarea,
-input {
+textarea {
   outline-offset: -2px;
 }
 */
@@ -78,6 +78,7 @@ select {
   cursor: pointer;
 }
 
+input,
 textarea {
   outline: 0;
   cursor: text;
