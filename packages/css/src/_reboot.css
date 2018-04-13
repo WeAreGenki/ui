@@ -54,34 +54,32 @@ body {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   text-rendering: optimizeLegibility;
-  /* font-smooth: always; */ /* TODO: Enable once it's recognised in browsers */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* TODO: Can the next 3 selectors/rules be merged more logically? */
+/* consistency between browsers */
+/*
 .btn,
 .select,
 button,
 select,
 textarea,
 input {
-  outline-offset: -2px; /* consistency between browsers */
+  outline-offset: -2px;
 }
+*/
 
 .btn,
 .select,
 button,
-select,
-textarea {
+select {
+  outline: 0;
   cursor: pointer;
-
-  &:focus {
-    outline: 0; /* FIXME: Something which is better for usability and accessibility (e.g. when tabbing) */
-  }
 }
 
-textarea { /* stylelint-disable-line no-descending-specificity */
+textarea {
+  outline: 0;
   cursor: text;
 }
 
@@ -94,7 +92,6 @@ textarea { /* stylelint-disable-line no-descending-specificity */
 
 /* simple horizontal rule */
 hr {
-  /* width: 100%; *//* TODO: @TESTING: Check cross-browser + remove if unnecessary */
   margin: var(--hr-margin);
   border: 0;
   border-top: 1px solid var(--grey-300);
