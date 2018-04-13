@@ -111,7 +111,7 @@
   --alt-bg-colour: var(--grey-100); /* alternating background in lists, tables, etc. */
 
   /* Shadows */
-  --shadow-colour: hsl(241, 48%, 19%);
+  --shadow-colour: hsl(258, 49%, 18%);
   --shadow-colour-subtle: hsl(230, 24%, 51%);
   /* filter:drop-shadow() */
   --shadow-base: color(var(--shadow-colour) alpha(0.33));
