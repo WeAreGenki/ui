@@ -58,29 +58,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* consistency between browsers */
-/*
-.btn,
-.select,
-button,
-input
-select,
-textarea {
-  outline-offset: -2px;
-}
-*/
-
 .btn,
 .select,
 button,
 select {
-  outline: 0;
+  outline-offset: -2px; /* consistency between browsers */
   cursor: pointer;
 }
 
 input,
 textarea {
-  outline: 0;
+  outline-offset: -2px; /* consistency between browsers */
   cursor: text;
 }
 

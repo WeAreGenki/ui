@@ -214,6 +214,7 @@
   --input-border: var(--input-border-width) solid var(--grey-300);
   --input-radius: var(--radius);
   --input-hover-border-colour: var(--grey-400);
+  --input-focus-outline: 2px solid var(--primary);
   --input-valid-colour: var(--green-500); /* TODO: Remove if not used */
   --input-invalid-colour: var(--red-500); /* TODO: Remove if not used */
   --input-placeholder-font-colour: var(--blue-grey-400);

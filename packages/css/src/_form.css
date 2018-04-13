@@ -1,5 +1,6 @@
 /* FIXME: Better approach at custom input and label sizing */
-/* TODO: Create variables for relevant properties */
+
+/* FIXME: Create variables for relevant properties */
 
 form {
   margin-top: 1rem;
@@ -20,6 +21,7 @@ label {
   display: block;
   /* FIXME: Margin when used with a checkbox or radio input */
   margin-bottom: 0.5rem;
+  color: var(--grey-800);
   text-align: left;
   text-transform: uppercase;
 }
@@ -55,15 +57,14 @@ textarea {
 
   &:focus,
   &:active {
-    border-color: var(--gradient-primary-60);
-    border-top-color: var(--gradient-secondary-60);
-    border-left-color: var(--gradient-secondary-60);
+    outline: var(--input-focus-outline);
   }
 
   &::placeholder {
     color: var(--input-placeholder-font-colour);
   }
 
+  /* FIXME: */
   &.input-small { /* stylelint-disable-line selector-no-qualifying-type */
     min-width: 5rem;
     max-width: 7rem;
@@ -75,6 +76,11 @@ textarea {
     color: var(--input-disabled-font-colour);
     background-color: var(--input-bg-colour);
     border: var(--input-border-width) solid var(--input-disabled-border-colour);
+
+    &:focus,
+    &:active {
+      outline: none;
+    }
 
     &::placeholder {
       color: var(--input-disabled-placeholder-font-colour);
@@ -125,9 +131,7 @@ input[type="checkbox"] {
 
     &:focus + .btn,
     &:active + .btn {
-      border-color: var(--gradient-primary-60);
-      border-top-color: var(--gradient-secondary-60);
-      border-left-color: color(var(--gradient-primary-60) blend(var(--gradient-secondary-60) 50%));
+      outline: var(--input-focus-outline);
     }
   }
 
