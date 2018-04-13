@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 
 - BREAKING CHANGE: Renamed CSS class `.form-row` to `.form-group`.
-- Inputs were refactored; use border instead of outline for active states, new colourful borders, new approach to recommended markup.
+- Input styles refactored and the recommended markup was revised.
 - Clean up reboot CSS.
 
 ### Fixed
