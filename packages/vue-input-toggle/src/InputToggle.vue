@@ -188,7 +188,7 @@ export default {
   }
 
   .input-toggle-checked > & {
-    transform: translateX(100%);
+    transform: translateX(101%); /* +1% to workaround visual bug */
   }
 
   .mini > & {
