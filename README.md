@@ -21,7 +21,7 @@ Features:
 * semi-flat design
 * microinteractions
 * high performance
-* great developer experience
+* [universal design](https://en.wikipedia.org/wiki/Universal_design) as a core concept
 
 Technologies:
 
