@@ -225,7 +225,7 @@ export default {
   margin: 0;
 }
 
-/* offset the page content so it's not covered by the navbar */
+/* offset the page content so it's not covered by the fixed navbar */
 body {
   margin-top: var(--navbar-body-offset);
 }
@@ -235,6 +235,9 @@ body {
   target element is moved to the top of the page it becomes covered by the fixed
   navbar. We get around this using an invisible pseudo element with an offset
   position which is attached to any heading with an id.
+
+  Only add an id property to a heading when truly necessary to avoid the small
+  CSS rendering performance hit.
 */
 .h1,
 h1,
