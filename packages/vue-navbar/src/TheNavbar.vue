@@ -162,8 +162,9 @@ export default {
     }
   } @else { /* stylelint-disable-line */
     /**
-     * Legacy shadows are a special case. Because `box-shadow` is not hardware
-     * accelerated we animate using `opacity` on a pseudo element instead.
+     * Legacy shadows are a special case. Because `box-shadow` is not gpu
+     * hardware accelerated we animate using `opacity` on a pseudo element
+     * instead which is hardware accelerated.
      */
 
     > .con {
@@ -225,15 +226,15 @@ body {
   margin-top: var(--navbar-body-offset);
 }
 
-/*
-  This is a workaround for jumping to a link within the same page. Since the
-  target element is moved to the top of the page it becomes covered by the fixed
-  navbar. We get around this using an invisible pseudo element with an offset
-  position which is attached to any heading with an id.
-
-  Only add an id property to a heading when truly necessary to avoid the small
-  CSS rendering performance hit.
-*/
+/*^
+ * This is a workaround for jumping to a link within the same page. Since the
+ * target element is moved to the top of the page it becomes covered by the fixed
+ * navbar. We get around this using an invisible pseudo element with an offset
+ * position which is attached to any heading with an id.
+ *
+ * Only add an id property to a heading when truly necessary to avoid the small
+ * CSS rendering performance hit.
+ */
 .h1,
 h1,
 .h2,
