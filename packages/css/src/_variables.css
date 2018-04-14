@@ -302,7 +302,7 @@
   --navbar-shadow-before: 0 0.5rem 1rem color(var(--shadow-colour) alpha(0)); /* same as --navbar-shadow but 0 alpha */
   --navbar-icon-size: 2rem;
   --navbar-logo-size-x: 5.25rem; /* 84px at root */
-  --navbar-logo-size-y: 2rem; /* 32px at root*/
+  --navbar-logo-size-y: 2rem; /* 32px at root */
   --navbar-logo-padding: 0.65rem 0 0;
   --navbar-body-offset: 3.26rem; /* offset body so contents are not covered */
   --navbar-anchor-offset: calc(var(--navbar-body-offset) + 1rem); /* offset in-page links; navbar + shadow */

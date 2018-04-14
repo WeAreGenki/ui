@@ -62,14 +62,14 @@ body {
 .select,
 button,
 select {
-  outline-offset: -2px; /* consistency between browsers */
   cursor: pointer;
+  outline-offset: -2px; /* consistency between browsers */
 }
 
 input,
 textarea {
-  outline-offset: -2px; /* consistency between browsers */
   cursor: text;
+  outline-offset: -2px; /* consistency between browsers */
 }
 
 /* disabled elements */

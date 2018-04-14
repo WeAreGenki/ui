@@ -19,9 +19,6 @@
       color: var(--side-nav-active-font-colour);
       text-decoration: none;
       background-color: var(--side-nav-active-bg-colour);
-    }
-
-    &.active {
       border-color: var(--side-nav-border-colour);
     }
 
