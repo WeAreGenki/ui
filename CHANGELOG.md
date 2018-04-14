@@ -18,11 +18,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - BREAKING CHANGE: Renamed CSS class `.compact` to `.gc`. Also added new class `.gc0` for no gap in grid.
 - BREAKING CHANGE: Renamed CSS class `.form-row` to `.form-group`.
 - Input styles refactored and the recommended markup was revised.
-- Clean up reboot CSS.
+- Continued refinement of styles including cleaning up the reboot CSS.
 - Remove custom `<abbr>` element styles; it's more user friendly to go with something similar to the browser default.
 
 ### Fixed
 
+- Workarounds for `@wearegenki/vue-navbar` body and in-page links covered by the fixed navbar. It's no longer necessary to specify this manually.
 - Significantly increase the browser coverage in browserslist for production builds.
 - Tweak colours to pass contrast tests in accessibility audits.
 - Visual bug in `@wearegenki/vue-input-toggle` where the colour under the slider was visible when active in some browsers.
