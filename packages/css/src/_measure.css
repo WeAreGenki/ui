@@ -17,6 +17,7 @@
     .h = height
 
   VALUE:
+    -fix = size of content
     -100 = 100%
     -75 = 75%
     -50 = 50%
@@ -29,12 +30,14 @@
     -l = large
 */
 
+.w-fit { width: fit-content; }
 .w-100 { width: 100%; }
 .w-75 { width: 75%; }
 .w-50 { width: 50%; }
 .w-25 { width: 25%; }
 .w-a { width: auto; } /* default */
 
+.h-fit { height: fit-content; }
 .h-100 { height: 100%; }
 .h-75 { height: 75%; }
 .h-50 { height: 50%; }
@@ -46,12 +49,14 @@
 
 @each $media, $ext in (var(--breakpoints-media)), (var(--breakpoints)) {
   @media ($media) {
+    .w-fit-$(ext) { width: fit-content; }
     .w-100-$(ext) { width: 100%; }
     .w-75-$(ext) { width: 75%; }
     .w-50-$(ext) { width: 50%; }
     .w-25-$(ext) { width: 25%; }
     .w-a-$(ext) { width: auto; }
 
+    .h-fit-$(ext) { height: fit-content; }
     .h-100-$(ext) { height: 100%; }
     .h-75-$(ext) { height: 75%; }
     .h-50-$(ext) { height: 50%; }
