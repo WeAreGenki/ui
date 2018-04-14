@@ -27,9 +27,13 @@
 
 -->
 
+<!--
+  TODO: Add accessibility features - http://www.a11ymatters.com/pattern/mobile-nav/
+-->
+
 <template>
   <header :class="{ 'navbar-active': nt || show }" class="navbar z5">
-    <div class="df-l con">
+    <nav class="df-l con">
       <button
         type="button"
         class="dn-l btn-clear mr3"
@@ -44,7 +48,7 @@
         <svg class="logo"><use xlink:href="#logo"/></svg>
       </router-link>
 
-      <nav :class="{ 'df': show }" class="dn df-l f-col f-row-l ml-auto-l mh-1">
+      <div :class="{ 'df': show }" class="dn df-l f-col f-row-l ml-auto-l mh-1">
         <hr class="dn-l mv0">
 
         <router-link
@@ -56,8 +60,8 @@
         >
           {{ item.name }}
         </router-link>
-      </nav>
-    </div>
+      </div>
+    </nav>
   </header>
 </template>
 
