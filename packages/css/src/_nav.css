@@ -16,6 +16,7 @@
     border-left: var(--side-nav-border-width) solid transparent;
 
     &.active {
+      color: var(--side-nav-active-font-colour);
       text-decoration: none;
       background-color: var(--side-nav-active-bg-colour);
     }

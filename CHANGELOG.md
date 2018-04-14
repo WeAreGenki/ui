@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+
+- New CSS classes to fit width/height to content; `.w-fit` and `.h-fit`.
+
 ### Changed
 
 - BREAKING CHANGE: Renamed CSS class `.compact` to `.gc`. Also added new class `.gc0` for no gap in grid.
@@ -19,6 +23,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 
+- Tweak colours to pass contrast tests in accessibility audits.
 - Visual bug in `@wearegenki/vue-input-toggle` where the colour under the slider was visible when active in some browsers.
 
 ## [0.10.0] - 2018-04-09

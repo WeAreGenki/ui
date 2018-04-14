@@ -102,9 +102,10 @@
   --gradient-dark: linear-gradient(var(--angle-2), var(--gradient-dark-0), var(--gradient-dark-100));
 
   /* Colours */
-  --primary: var(--gradient-primary-80); /* links, buttons */
-  --secondary: var(--gradient-secondary-80); /* call to action, highlights */
+  --primary: var(--gradient-primary-90); /* links, buttons */
+  --secondary: var(--gradient-secondary-90); /* call to action, highlights */
   --dark: var(--gradient-dark-90); /* body text, slant-cta */
+  --light: hsl(213, 35%, 94%); /* active state bg, slant */
   --subtle: var(--blue-grey-200); /* footer, title subheading */
   --body-font-colour: var(--gradient-dark-80);
   --body-bg-colour: var(--grey-50);
@@ -169,7 +170,8 @@
   --nav-link-padding-x: 1.3rem;
   --nav-link-padding-y: 0.9rem;
   --side-nav-link-margin-y: 0.2rem;
-  --side-nav-active-bg-colour: var(--blue-grey-50);
+  --side-nav-active-font-colour: var(--link-hover-font-colour);
+  --side-nav-active-bg-colour: var(--light);
   --side-nav-border-width: 0.2rem;
   --side-nav-border-colour: var(--gradient-primary-70);
   --footer-margin-y: 5rem;
@@ -274,7 +276,7 @@
   --slant-size-factor: 3.5rem; /* used to calculate section whitespace and size */
   --slant-angle: -4deg;
   --slant-angle-large: -3deg;
-  --slant-bg-colour: hsl(213, 35%, 94%);
+  --slant-bg-colour: var(--light);
   --slant-cta-font-colour: var(--white);
   --slant-cta-bg-colour: var(--dark);
   --slant-cta-link-colour: color(var(--link-font-colour) hue(-5) lightness(58%));
