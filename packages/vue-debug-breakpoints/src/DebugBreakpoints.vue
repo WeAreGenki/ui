@@ -1,5 +1,5 @@
 <template>
-  <dl id="breakpoints" class="pos-f r0 b0 dg x2 compact pv2 ph3 mv0 white bold">
+  <dl id="breakpoints" class="pos-f r0 b0 dg x2 gc pv2 ph3 mv0 white bold">
     <dt>none</dt>
     <dd :class="none ? 'green' : 'red'" class="ml2">
       {{ none }}
