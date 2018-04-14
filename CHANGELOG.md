@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - BREAKING CHANGE: Renamed CSS class `.form-row` to `.form-group`.
 - Input styles refactored and the recommended markup was revised.
 - Clean up reboot CSS.
+- Remove custom `<abbr>` element styles; it's more user friendly to go with something similar to the browser default.
 
 ### Fixed
 

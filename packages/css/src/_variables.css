@@ -154,14 +154,13 @@
   /* links */
   --link-click-area: 0.25rem; /* increase if you don't have links close to each other (otherwise they may overlap) */
   --link-font-colour: var(--primary);
-  --link-hover-font-colour: color(var(--primary) blackness(16%));
+  --link-hover-font-colour: color(var(--primary) blackness(22%));
 
   /* other */
   --hr-margin: 3rem 0;
   --quote-font-size: 2rem;
   --quote-mark-font-size: 3em; /* em (not rem) so it's relative to the parent font size */
-  --abbreviation-line-colour: var(--yellow-400);
-  --abbreviation-line-thickness: 0.3rem;
+  --abbr-underline-colour: color(var(--body-font-colour lightness(25%)));
 
   /* Lists */
   --li-margin-between: 0.5rem;

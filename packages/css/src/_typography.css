@@ -153,7 +153,7 @@ a {
 
 /* Lists */
 
-li { margin-bottom: var(--li-margin-between); } /* extra space between list items */
+li { margin-bottom: var(--li-margin-between); } /* more space between list items */
 
 .lsn { /* list style none */
   padding-left: 0;
@@ -163,20 +163,8 @@ li { margin-bottom: var(--li-margin-between); } /* extra space between list item
 /* Abbreviations */
 
 abbr[title] {
-  text-decoration: none;
-
-  &::after {
-    position: absolute;
-    right: calc(-1 * var(--abbreviation-line-thickness));
-    bottom: 0.4rem;
-    left: calc(-1 * var(--abbreviation-line-thickness));
-    z-index: -1;
-    display: inline-block;
-    height: var(--abbreviation-line-thickness);
-    margin-bottom: calc(-1 * var(--abbreviation-line-thickness));
-    content: "";
-    background: var(--abbreviation-line-colour);
-  }
+  text-decoration-color: var(--abbr-underline-colour); /* NOTE: Not implemented in most browsers yet */
+  cursor: help;
 }
 
 /* Code */
