@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - BREAKING CHANGE: Renamed CSS class `.compact` to `.gc`. Also added new class `.gc0` for no gap in grid.
 - BREAKING CHANGE: Renamed CSS class `.form-row` to `.form-group`.
+- BREAKING CHANGE: Resized negative margin CSS classes; `.m?-1` is now `.m?-3`.
 - Input styles refactored and the recommended markup was revised.
 - Slight refactor of `@wearegenki/vue-navbar` for better alignment.
 - Continued refinement of styles including cleaning up the reboot CSS.
