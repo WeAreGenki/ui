@@ -21,10 +21,8 @@
       background-color: var(--side-nav-active-bg-colour);
     }
 
-    &.active,
-    &:hover,
-    &:focus {
-      border-left-color: var(--side-nav-border-colour);
+    &.active {
+      border-color: var(--side-nav-border-colour);
     }
 
     &.exact {
