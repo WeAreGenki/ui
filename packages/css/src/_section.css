@@ -72,6 +72,15 @@
   a {
     color: var(--slant-cta-link-colour);
   }
+
+  .input,
+  .select,
+  .textarea,
+  input,
+  select,
+  textarea {
+    outline-color: var(--slant-cta-link-colour);
+  }
 }
 
 /* Hero section */
