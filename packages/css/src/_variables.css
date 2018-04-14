@@ -245,18 +245,18 @@
   --alert-padding: 1rem;
   --alert-margin-y: 2rem;
   --alert-border-size: 4px;
-  --alert-tip-font-colour: var(--green-800);
-  --alert-tip-bg-colour: var(--green-100);
+  --alert-tip-font-colour: var(--green-900);
+  --alert-tip-bg-colour: var(--green-50);
   --alert-tip-border-colour: var(--green-500);
-  --alert-info-font-colour: var(--blue-800);
-  --alert-info-bg-colour: var(--blue-100);
+  --alert-info-font-colour: var(--blue-900);
+  --alert-info-bg-colour: var(--blue-50);
   --alert-info-border-colour: var(--blue-500);
-  --alert-warning-font-colour: var(--amber-900);
-  --alert-warning-bg-colour: var(--amber-100);
-  --alert-warning-border-colour: var(--amber-500);
-  --alert-error-font-colour: var(--red-700);
-  --alert-error-bg-colour: var(--red-100);
-  --alert-error-border-colour: var(--red-500);
+  --alert-warning-font-colour: var(--deep-orange-900);
+  --alert-warning-bg-colour: var(--amber-50);
+  --alert-warning-border-colour: var(--amber-600);
+  --alert-error-font-colour: var(--red-900);
+  --alert-error-bg-colour: var(--red-50);
+  --alert-error-border-colour: var(--red-400);
 
   /* Labels */
   --label-padding: 0.04rem 0.4rem 0.185rem;
