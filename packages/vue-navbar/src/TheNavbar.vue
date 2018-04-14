@@ -224,4 +224,36 @@ export default {
   padding: var(--navbar-logo-padding);
   margin: 0;
 }
+
+/* offset the page content so it's not covered by the navbar */
+body {
+  margin-top: var(--navbar-body-offset);
+}
+
+/*
+  This is a workaround for jumping to a link within the same page. Since the
+  target element is moved to the top of the page it becomes covered by the fixed
+  navbar. We get around this using an invisible pseudo element with an offset
+  position which is attached to any heading with an id.
+*/
+.h1,
+h1,
+.h2,
+h2,
+.h3,
+h3,
+.h4,
+h4,
+.h5,
+h5,
+.h6,
+h6 {
+  &[id]::before {
+    display: block;
+    height: var(--navbar-anchor-offset);
+    margin-top: calc(-1 * var(--navbar-anchor-offset));
+    visibility: hidden;
+    content: "";
+  }
+}
 </style>
