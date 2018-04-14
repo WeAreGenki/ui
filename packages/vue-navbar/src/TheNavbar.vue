@@ -34,19 +34,21 @@
 <template>
   <header :class="{ 'navbar-active': nt || show }" class="navbar z5">
     <nav class="df-l con">
-      <button
-        type="button"
-        class="dn-l btn-clear mr3"
-        @click.stop="show = !show"
-      >
-        <svg class="nav-icon link">
-          <use :xlink:href="show ? '#x' : '#menu'"/>
-        </svg>
-      </button>
+      <div class="dfc">
+        <button
+          type="button"
+          class="dn-l btn-clear mr3"
+          @click.stop="show = !show"
+        >
+          <svg class="nav-icon link">
+            <use :xlink:href="show ? '#x' : '#menu'"/>
+          </svg>
+        </button>
 
-      <router-link to="/" class="nav-logo ml-1-l" title="Home">
-        <svg class="logo"><use xlink:href="#logo"/></svg>
-      </router-link>
+        <router-link id="nav-logo" to="/" title="Home">
+          <svg class="logo"><use xlink:href="#logo"/></svg>
+        </router-link>
+      </div>
 
       <div :class="{ 'df': show }" class="dn df-l f-col f-row-l ml-auto-l mh-1">
         <hr class="dn-l mv0">
@@ -146,6 +148,7 @@ export default {
   top: 0;
   right: 0;
   left: 0;
+  padding-top: var(--navbar-animate-offset); /* offset for animation movement */
   background-color: var(--navbar-bg-colour);
 
   @if var(--use-drop-shadow) {
@@ -188,19 +191,15 @@ export default {
       }
     }
   }
-
-  .nav-link {
-    margin-top: 0.2rem;
-  }
 }
 
 .navbar-active {
   @if var(--use-drop-shadow) {
     filter: drop-shadow(var(--navbar-shadow));
-    transform: translateY(-3px);
+    transform: translateY(calc(-1 * var(--navbar-animate-distance)));
   } @else { /* stylelint-disable-line */
     & > .con {
-      transform: translateY(-3px);
+      transform: translateY(calc(-1 * var(--navbar-animate-distance)));
     }
 
     &::after {
@@ -212,17 +211,13 @@ export default {
 .nav-icon {
   width: var(--navbar-icon-size);
   height: var(--navbar-icon-size);
+  padding: var(--navbar-icon-padding);
+  margin-left: calc(-1 * var(--navbar-icon-padding));
 }
 
 .logo {
   width: var(--navbar-logo-size-x);
   height: var(--navbar-logo-size-y);
-}
-
-.nav-logo {
-  display: inline-block;
-  padding: var(--navbar-logo-padding);
-  margin: 0;
 }
 
 /* offset the page content so it's not covered by the fixed navbar */
