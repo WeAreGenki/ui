@@ -1093,7 +1093,7 @@
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@types/events/-/events-1.2.0.tgz#81a6731ce4df43619e5c8c945383b3e62a89ea86"
 
-"@types/jest@22.2.3", "@types/jest@^22.2.2":
+"@types/jest@22.2.3", "@types/jest@^22.2.3":
   version "22.2.3"
   resolved "https://registry.yarnpkg.com/@types/jest/-/jest-22.2.3.tgz#0157c0316dc3722c43a7b71de3fdf3acbccef10d"
 
@@ -1137,11 +1137,11 @@
 "@wearegenki/eslint-config@file:packages/eslint-config":
   version "0.10.0"
   dependencies:
-    babel-eslint "^8.2.2"
+    babel-eslint "^8.2.3"
     eslint-config-airbnb-base "^12.1.0"
     eslint-plugin-compat "^2.2.0"
-    eslint-plugin-html "^4.0.2"
-    eslint-plugin-import "^2.10.0"
+    eslint-plugin-html "^4.0.3"
+    eslint-plugin-import "^2.11.0"
     eslint-plugin-jest "^21.15.0"
     eslint-plugin-vue "^4.4.0"
 
@@ -1227,7 +1227,7 @@
     "@babel/preset-env" "^7.0.0-beta.44"
     "@babel/preset-stage-2" "^7.0.0-beta.44"
     "@babel/runtime" "^7.0.0-beta.44"
-    "@types/jest" "^22.2.2"
+    "@types/jest" "^22.2.3"
     "@types/puppeteer" "^1.2.1"
     babel-core "^7.0.0-0"
     babel-jest "^22.4.3"
@@ -1629,7 +1629,7 @@ babel-core@^6.0.0, babel-core@^6.26.0:
     slash "^1.0.0"
     source-map "^0.5.6"
 
-babel-eslint@^8.2.2:
+babel-eslint@^8.2.2, babel-eslint@^8.2.3:
   version "8.2.3"
   resolved "https://registry.yarnpkg.com/babel-eslint/-/babel-eslint-8.2.3.tgz#1a2e6681cc9bc4473c32899e59915e19cd6733cf"
   dependencies:
@@ -3241,13 +3241,13 @@ eslint-plugin-compat@^2.2.0:
     mdn-browser-compat-data "^0.0.20"
     requireindex "^1.1.0"
 
-eslint-plugin-html@^4.0.2:
+eslint-plugin-html@^4.0.2, eslint-plugin-html@^4.0.3:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/eslint-plugin-html/-/eslint-plugin-html-4.0.3.tgz#97d52dcf9e22724505d02719fbd02754013c8a17"
   dependencies:
     htmlparser2 "^3.8.2"
 
-eslint-plugin-import@^2.10.0, eslint-plugin-import@^2.9.0:
+eslint-plugin-import@^2.11.0, eslint-plugin-import@^2.9.0:
   version "2.11.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-2.11.0.tgz#15aeea37a67499d848e8e981806d4627b5503816"
   dependencies:
