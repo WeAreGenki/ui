@@ -115,7 +115,7 @@
   --shadow-colour: hsl(258, 49%, 18%);
   --shadow-colour-subtle: hsl(230, 24%, 51%);
   /* filter:drop-shadow() */
-  --shadow-base: color(var(--shadow-colour) alpha(0.4));
+  --shadow-base: color(var(--shadow-colour) alpha(0.39));
   --shadow: 0 1rem 0.95rem var(--shadow-base);
   --shadow-subtle: 0 0.3125rem 0.28rem color(var(--shadow-colour-subtle) alpha(0.2));
   --shadow-light-1: 0 0.625rem 1.5rem color(var(--shadow-colour) alpha(0.06));
