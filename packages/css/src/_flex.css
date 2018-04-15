@@ -1,12 +1,28 @@
 /* TODO: We may need to use postcss-flexbugs-fixes if we build out a lot of flexbox stuff and need wide browser compatibility */
 /* TThings that are shared between both flexbox and CSS grid are found in _grid.css because this framework is mostly focused on CSS grid */
 
+.fwn { flex-wrap: nowrap; } /* default */
+.fww { flex-wrap: wrap; }
+.fwr { flex-wrap: wrap-reverse; }
+.fwu { flex-wrap: unset; }
+
 .f-col { flex-direction: column; }
 .f-colr { flex-direction: column-reverse; }
 .f-row { flex-direction: row; }
 .f-rowr { flex-direction: row-reverse; }
 
-/* Most of the time when using flexbox you really just want to vertically align things, so this serves as a shortcut to that */
+.fba { flex-basis: auto; } /* default */
+.fbc { flex-basis: content; }
+.fbx { flex-basis: max-content; }
+.fbm { flex-basis: min-content; }
+.fbf { flex-basis: fit-content; }
+.fb0 { flex-basis: 0; }
+.fbu { flex-basis: unset; }
+
+/**
+ * Much of the time when using flexbox you really just want to vertically align
+ * elements, so this class is a shortcut for that.
+ */
 .dfc {
   display: flex;
   align-items: center;
@@ -14,10 +30,23 @@
 
 @each $media, $ext in (var(--breakpoints-media)), (var(--breakpoints)) {
   @media ($media) {
+    .fwn-$(ext) { flex-wrap: nowrap; }
+    .fww-$(ext) { flex-wrap: wrap; }
+    .fwr-$(ext) { flex-wrap: wrap-reverse; }
+    .fwu-$(ext) { flex-wrap: unset; }
+
     .f-col-$(ext) { flex-direction: column; }
     .f-colr-$(ext) { flex-direction: column-reverse; }
     .f-row-$(ext) { flex-direction: row; }
     .f-rowr-$(ext) { flex-direction: row-reverse; }
+
+    .fba-$(ext) { flex-basis: auto; }
+    .fbc-$(ext) { flex-basis: content; }
+    .fb-max-$(ext) { flex-basis: max-content; }
+    .fb-min-$(ext) { flex-basis: min-content; }
+    .fb-fit-$(ext) { flex-basis: fit-content; }
+    .fb0-$(ext) { flex-basis: 0; }
+    .fbu-$(ext) { flex-basis: unset; }
 
     .dfc-$(ext) {
       display: flex;
