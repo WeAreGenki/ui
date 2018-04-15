@@ -45,12 +45,12 @@
           </svg>
         </button>
 
-        <router-link id="nav-logo" to="/" title="Home">
-          <svg class="logo"><use xlink:href="#logo"/></svg>
+        <router-link class="ml-offset" to="/" title="Home">
+          <svg id="nav-logo" class="logo"><use xlink:href="#logo"/></svg>
         </router-link>
       </div>
 
-      <div :class="{ 'df': show }" class="dn df-l f-col f-row-l ml-auto-l mh-1">
+      <div :class="{ 'df': show }" class="dn df-l f-col f-row-l ml-auto-l mh-3">
         <hr class="dn-l mv0">
 
         <router-link
@@ -148,7 +148,7 @@ export default {
   top: 0;
   right: 0;
   left: 0;
-  padding-top: var(--navbar-animate-offset); /* offset for animation movement */
+  padding-top: var(--navbar-animate-distance); /* offset for animation movement */
   background-color: var(--navbar-bg-colour);
 
   @if var(--use-drop-shadow) {
@@ -212,8 +212,7 @@ export default {
 .nav-icon {
   width: var(--navbar-icon-size);
   height: var(--navbar-icon-size);
-  padding: var(--navbar-icon-padding);
-  margin-left: calc(-1 * var(--navbar-icon-padding));
+  margin: 0;
 }
 
 .logo {
