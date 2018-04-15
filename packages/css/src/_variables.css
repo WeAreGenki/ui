@@ -301,6 +301,7 @@
   --navbar-shadow-legacy: 0 0.5rem 2rem var(--shadow-base-legacy);
   --navbar-shadow-before: 0 0.5rem 1rem color(var(--shadow-colour) alpha(0)); /* same as --navbar-shadow but 0 alpha */
   --navbar-icon-size: 2rem;
+  --navbar-icon-padding: 0.4rem 0.4rem 0.25rem;
   --navbar-logo-size-x: 4.2rem;
   --navbar-logo-size-y: 1.6rem;
   --navbar-body-offset: 3.26rem; /* offset body so contents are not covered */

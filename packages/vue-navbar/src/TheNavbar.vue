@@ -27,17 +27,15 @@
 
 -->
 
-<!--
-  TODO: Add accessibility features - http://www.a11ymatters.com/pattern/mobile-nav/
--->
-
 <template>
   <header :class="{ 'navbar-active': nt || show }" class="navbar z5">
-    <nav class="df-l con">
+    <nav class="df-l con" role="navigation">
       <div class="dfc">
         <button
+          :aria-expanded="show ? 'true' : 'false'"
           type="button"
-          class="dn-l btn-clear mr3"
+          class="dn-l btn-clear btn-menu"
+          aria-label="menu toggle"
           @click.stop="show = !show"
         >
           <svg class="nav-icon link">
@@ -45,17 +43,23 @@
           </svg>
         </button>
 
-        <router-link class="ml-offset" to="/" title="Home">
-          <svg id="nav-logo" class="logo"><use xlink:href="#logo"/></svg>
+        <router-link to="/" title="Home">
+          <svg id="navbar-logo" class="logo">
+            <use xlink:href="#logo"/>
+          </svg>
         </router-link>
       </div>
 
-      <div :class="{ 'df': show }" class="dn df-l f-col f-row-l ml-auto-l mh-3">
-        <hr class="dn-l mv0">
+      <div
+        :class="{ 'df': show }"
+        class="dn df-l f-col f-row-l navbar-links"
+      >
+        <router-link to="/" class="nav-link dn-l">
+          Home
+        </router-link>
 
         <router-link
           v-for="item in items"
-          v-once
           :key="item.url"
           :to="item.url"
           class="nav-link"
@@ -162,7 +166,7 @@ export default {
     }
   } @else { /* stylelint-disable-line */
     /**
-     * Legacy shadows are a special case. Because `box-shadow` is not gpu
+     * Legacy shadows are a special case. Because `box-shadow` is not GPU
      * hardware accelerated we animate using `opacity` on a pseudo element
      * instead which is hardware accelerated.
      */
@@ -209,9 +213,15 @@ export default {
   }
 }
 
+.btn-menu {
+  padding: 0;
+  margin-right: 1.2rem;
+}
+
 .nav-icon {
   width: var(--navbar-icon-size);
   height: var(--navbar-icon-size);
+  padding: var(--navbar-icon-padding);
   margin: 0;
 }
 
@@ -220,12 +230,27 @@ export default {
   height: var(--navbar-logo-size-y);
 }
 
+.navbar-links {
+  padding: calc(var(--nav-link-padding-y) / 2) 0;
+  margin: 0 -1rem;
+  border-top: 1px solid transparent;
+
+  .navbar-active & {
+    border-color: var(--grey-300);
+  }
+
+  @media (--breakpoint-large) {
+    padding: 0;
+    margin: 0 -1rem 0 auto;
+  }
+}
+
 /* offset the page content so it's not covered by the fixed navbar */
 body {
   margin-top: var(--navbar-body-offset);
 }
 
-/*^
+/**
  * This is a workaround for jumping to a link within the same page. Since the
  * target element is moved to the top of the page it becomes covered by the fixed
  * navbar. We get around this using an invisible pseudo element with an offset
