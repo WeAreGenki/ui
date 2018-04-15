@@ -153,10 +153,9 @@
   --paragraph-line-height: 1.5;
   --paragraph-lead-font-size: 1.625rem;
   /* links */
-  --link-click-area: 0.25rem; /* increase if you don't have links close to each other (otherwise they may overlap) */
+  --link-click-area: 0.4rem; /* reduce this if your links are overlapping */
   --link-font-colour: var(--primary);
   --link-hover-font-colour: color(var(--primary) blackness(22%));
-
   /* other */
   --hr-margin: 3rem 0;
   --quote-font-size: 2rem;
