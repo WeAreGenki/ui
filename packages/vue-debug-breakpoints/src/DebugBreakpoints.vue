@@ -1,8 +1,8 @@
 <template>
   <dl id="breakpoints" class="pos-f r0 b0 dg x2 gc pv2 ph3 mv0 white bold">
-    <dt>none</dt>
-    <dd :class="none ? 'green' : 'red'" class="ml2">
-      {{ none }}
+    <dt>root</dt>
+    <dd :class="root ? 'green' : 'red'" class="ml2">
+      {{ root }}
     </dd>
 
     <dt>s</dt>
@@ -18,14 +18,14 @@
 </template>
 
 <script>
-const none = matchMedia('(max-width: 30em)');
+const root = matchMedia('(max-width: 30em)');
 const s = matchMedia('(min-width: 30.01em) and (max-width: 48em)');
 const l = matchMedia('(min-width: 48.01em)');
 
 export default {
   name: 'DebugBreakpoints',
   data: () => ({
-    none: none.matches,
+    root: root.matches,
     s: s.matches,
     l: l.matches,
   }),
@@ -34,7 +34,7 @@ export default {
   },
   methods: {
     setListeners() {
-      none.addListener((event) => { this.none = event.matches; });
+      root.addListener((event) => { this.root = event.matches; });
       s.addListener((event) => { this.s = event.matches; });
       l.addListener((event) => { this.l = event.matches; });
     },
