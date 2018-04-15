@@ -18,6 +18,7 @@
 
   VALUE:
     -auto = auto (margin only + no 'a' direction)
+    -offset = same size as expended click target area (-t/r/b/l margin only)
     -4 = -2rem (margin only + no 'a' direction)
     -3 = -1rem (margin only + no 'a' direction)
     -2 = -0.5rem (margin only + no 'a' direction)
@@ -92,6 +93,11 @@
 .mr-auto-i { margin-right: auto !important; }
 .mb-auto-i { margin-bottom: auto !important; }
 .ml-auto-i { margin-left: auto !important; }
+
+.mt-offset { margin-top: calc(-1 * var(--link-click-area)); }
+.mr-offset { margin-right: calc(-1 * var(--link-click-area)); }
+.mb-offset { margin-bottom: calc(-1 * var(--link-click-area)); }
+.ml-offset { margin-left: calc(-1 * var(--link-click-area)); }
 
 .mh-1 { margin-right: -0.25rem; margin-left: -0.25rem; }
 .mv-1 { margin-top: -0.25rem; margin-bottom: -0.25rem; }
