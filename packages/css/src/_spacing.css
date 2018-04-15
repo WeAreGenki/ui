@@ -138,6 +138,11 @@
     .mb-auto-$(ext)-i { margin-bottom: auto !important; }
     .ml-auto-$(ext)-i { margin-left: auto !important; }
 
+    .mt-offset-$(ext) { margin-top: calc(-1 * var(--link-click-area)); }
+    .mr-offset-$(ext) { margin-right: calc(-1 * var(--link-click-area)); }
+    .mb-offset-$(ext) { margin-bottom: calc(-1 * var(--link-click-area)); }
+    .ml-offset-$(ext) { margin-left: calc(-1 * var(--link-click-area)); }
+
     .mh-1-$(ext) { margin-right: -0.25rem; margin-left: -0.25rem; }
     .mv-1-$(ext) { margin-top: -0.25rem; margin-bottom: -0.25rem; }
     .mt-1-$(ext) { margin-top: -0.25rem; }
