@@ -126,6 +126,7 @@ a {
 
   /* use em not rem so it's relative to font size */
   /* TODO: @TESTING: Check this works correctly with all fonts */
+  /* FIXME: This doesn't work and looks bad! */
   &::before {
     top: -0.28em;
     left: -0.45em;
