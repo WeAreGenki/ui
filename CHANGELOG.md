@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - BREAKING CHANGE: Renamed CSS class `.form-row` to `.form-group`.
 - BREAKING CHANGE: Resized negative margin CSS classes; `.m?-1` is now `.m?-3`.
 - Input styles refactored and the recommended markup was revised.
+- Increase link click area so default is the ideal size. If you have any overlapping links you should configure a smaller value.
 - Slight refactor of `@wearegenki/vue-navbar` for better alignment.
 - Continued refinement of styles including cleaning up the reboot CSS.
 - Remove custom `<abbr>` element styles; it's more user friendly to go with something similar to the browser default.
