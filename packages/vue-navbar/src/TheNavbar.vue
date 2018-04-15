@@ -251,10 +251,11 @@ body {
 }
 
 /**
- * This is a workaround for jumping to a link within the same page. Since the
- * target element is moved to the top of the page it becomes covered by the fixed
- * navbar. We get around this using an invisible pseudo element with an offset
- * position which is attached to any heading with an id.
+ * This is a workaround when clicking on a link with a internal target location
+ * (a link to another place within the same page). Since the target element is
+ * moved to the top of the page it becomes covered by the fixed navbar. We get
+ * around this using an invisible pseudo element with an offset position which
+ * is attached to any heading with an id.
  *
  * Only add an id property to a heading when truly necessary to avoid the small
  * CSS rendering performance hit.
