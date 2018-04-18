@@ -90,6 +90,7 @@ a {
 .tr { text-align: right; }
 .tc { text-align: center; }
 .tj { text-align: justify; }
+.tu { text-align: unset; }
 
 /* Text transform */
 
@@ -104,6 +105,7 @@ a {
     .tr-$(ext) { text-align: right; }
     .tc-$(ext) { text-align: center; }
     .tj-$(ext) { text-align: justify; }
+    .tu-$(ext) { text-align: unset; }
 
     .ttc-$(ext) { text-transform: capitalize; }
     .ttl-$(ext) { text-transform: lowercase; }
@@ -176,5 +178,5 @@ code {
   color: var(--red-500);
   background-color: var(--grey-100);
   border: 1px solid var(--grey-300);
-  border-radius: var(--radius);
+  border-radius: var(--radius-1);
 }
