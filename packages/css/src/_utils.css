@@ -13,7 +13,8 @@
 .bb0 { border-bottom: 0; }
 .bl0 { border-left: 0; }
 
-.rad { border-radius: var(--radius); }
+.rad { border-radius: var(--radius-1); }
+.rad2 { border-radius: var(--radius-2); }
 .rad0 { border-radius: 0; }
 
 /* stylelint-disable declaration-no-important */

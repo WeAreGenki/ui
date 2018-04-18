@@ -123,7 +123,7 @@ input[type="checkbox"] {
 
   & > input {
     /* so border doesn't look strange when active + hide rounded corners */
-    @mixin min margin-right, -2px, var(--radius-negative);
+    @mixin min margin-right, -2px, var(--radius-1-negative);
 
     &:focus + .btn,
     &:active + .btn {

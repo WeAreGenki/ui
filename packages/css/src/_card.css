@@ -1,10 +1,12 @@
 /* Cards */
 
+.card-touch,
 .card {
   padding: var(--card-padding-y) var(--card-padding-x);
   margin: 0;
   word-wrap: break-word;
   background-color: var(--card-bg-colour);
+  border-radius: var(--radius-2); /* FIXME: KEEP? */
 
   @if var(--use-drop-shadow) {
     filter: drop-shadow(var(--card-shadow));
@@ -18,7 +20,9 @@
 }
 
 .card-touch {
-  z-index: 1;
+  position: relative;
+  z-index: var(--card-touch-zindex);
+  color: var(--card-touch-font-colour);
   background-color: var(--card-touch-bg-colour);
 
   @if var(--use-drop-shadow) {
@@ -41,11 +45,8 @@
     }
   }
 
-  .btn-clear {
-    margin-left: calc(-1 * var(--btn-padding-x));
-  }
-
   &:hover {
+    color: var(--card-touch-font-colour);
     text-decoration: unset; /* no need to underline links as it's obvious this element is interactive */
     transition-duration: var(--card-touch-animate-speed); /* overrides <a> when .card-touch is used on a link */
 
@@ -60,14 +61,31 @@
         var(--card-touch-hover-shadow-2-legacy);
       transform: translateY(-5px);
     }
-
-    .btn-clear {
-      color: var(--link-hover-font-colour);
-      background-color: unset;
-    }
   }
 }
 
-/* TODO: Image veiled overlay + reveal on hover -- works to bring focus on card body first before looking at the image (but what about the touch device experience?) */
-/* REF: https://www.algolia.com/customers */
-/*  ↳ + them badges are nice yo! */
+/* TODO: Move values into variables */
+/* TODO: Use existing variables where possible */
+
+.card-touch-btn {
+  padding: 0 0 2.9rem;
+}
+
+/* NOTE: Current implementation is limited to only one button per card */
+.btn-card {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: var(--btn-padding-y) var(--btn-padding-x);
+  text-align: center;
+  /* background-color: var(--card-touch-bg-colour); */
+  border-top: 1px solid hsl(240, 67%, 96%);
+  border-bottom-right-radius: var(--radius-2);
+  border-bottom-left-radius: var(--radius-2);
+
+  .card-touch:hover > &,
+  .card-touch:focus > & {
+    background-color: var(--grey-100);
+  }
+}

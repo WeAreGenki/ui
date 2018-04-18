@@ -28,7 +28,7 @@
 -->
 
 <template>
-  <header :class="{ 'navbar-active': nt || show }" class="navbar z5">
+  <header :class="{ 'navbar-active': nt || show }" class="navbar">
     <nav class="df-l con" role="navigation">
       <div class="dfc">
         <button
@@ -149,6 +149,7 @@ export default {
 
 .navbar {
   position: fixed;
+  z-index: var(--navbar-zindex);
   top: 0;
   right: 0;
   left: 0;

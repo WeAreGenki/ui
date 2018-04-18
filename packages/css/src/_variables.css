@@ -44,13 +44,14 @@
   --gutter-col: 1rem;
   --gutter-col-l: calc(var(--gutter-col) * 2);
   --gutter-row: var(--gutter-col);
-  --gutter-row-l: var(--gutter-row);
+  --gutter-row-l: calc(var(--gutter-row) * 2);
 
   /* General */
   --spacing-steps: 0, 1, 2, 3, 4, 5, 6, 7;
   --spacing-values: 0, 0.25rem, 0.5rem, 1rem, 2rem, 4rem, 8rem, 16rem;
-  --radius: 0.1875rem; /* 3px at root */
-  --radius-negative: -0.1875rem; /* used to calculate offset for .input-group */
+  --radius-1-negative: -0.1875rem; /* for .input-group (workaround for PostCSS plugin issues) */
+  --radius-1: 0.1875rem; /* 3px at root - buttons, inputs, labels */
+  --radius-2: 0.2875rem; /* 4.6px at root - cards */
   --angle-1: 151deg; /* gradient direction; main, cta */
   --angle-2: 45deg; /* gradient direction; dark */
   --angle-3: -27deg; /* hero section */
@@ -181,7 +182,7 @@
   --btn-padding-y: 0.75rem;
   --btn-font-colour: var(--blue-grey-800);
   --btn-bg-colour: var(--white);
-  --btn-radius: var(--radius);
+  --btn-radius: var(--radius-1);
   --btn-shadow: 0 0.18rem 0.18rem color(var(--shadow-colour) alpha(0.16));
   --btn-shadow-legacy: 0 0.125rem 0.375rem color(var(--shadow-colour) alpha(0.18));
   --btn-hover-font-colour: var(--link-hover-font-colour);
@@ -212,7 +213,7 @@
   --input-bg-colour: var(--white);
   --input-border-width: 1px;
   --input-border: var(--input-border-width) solid var(--grey-300);
-  --input-radius: var(--radius);
+  --input-radius: var(--radius-1);
   --input-hover-border-colour: var(--grey-400);
   --input-focus-outline: 2px solid var(--primary);
   --input-valid-colour: var(--green-500); /* TODO: Remove if not used */
@@ -229,6 +230,8 @@
   --card-shadow: var(--shadow-subtle);
   --card-shadow-legacy: var(--shadow-subtle-legacy);
   --card-touch-optimize: var(--optimize);
+  --card-touch-zindex: 1;
+  --card-touch-font-colour: var(--body-font-colour);
   --card-touch-bg-colour: var(--body-bg-colour);
   --card-touch-shadow-1: var(--shadow-light-1);
   --card-touch-shadow-2: var(--shadow-light-2);
@@ -264,11 +267,11 @@
   --label-alignment: 0.1rem;
   --label-bg-colour: var(--body-bg-colour);
   --label-border: 1px solid var(--gradient-dark-40);
-  --label-border-radius: var(--radius);
+  --label-border-radius: var(--radius-1);
   --label-margin-between: var(--btn-margin-between);
 
   /* Grid templates */
-  --template-card-body-padding: 1rem 1rem 0;
+  --template-card-body-padding: var(--card-padding-y) var(--card-padding-x) 0;
   --template-card-button-padding: 0 1rem 1rem;
 
   /* Sections */
@@ -293,6 +296,7 @@
 
   /* @wearegenki/vue-navbar component */
   --navbar-optimize: var(--optimize);
+  --navbar-zindex: 5;
   --navbar-bg-colour: var(--body-bg-colour);
   --navbar-animate-distance: 3px;
   --navbar-animate-speed: 200ms;
