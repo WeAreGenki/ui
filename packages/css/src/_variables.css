@@ -282,6 +282,8 @@
   --slant-cta-font-colour: var(--white);
   --slant-cta-bg-colour: var(--dark);
   --slant-cta-link-colour: color(var(--link-font-colour) hue(-5) lightness(58%));
+  --hero-padding: 1.5rem 0;
+  --hero-margin: 2rem 0;
   --hero-font-colour: var(--white);
   --hero-bg-gradient: linear-gradient(var(--angle-3), var(--gradient-primary-20), var(--gradient-primary-100));
 
