@@ -1,7 +1,7 @@
 /* Cards */
 
-.card-touch,
 .card {
+  position: relative;
   padding: var(--card-padding-y) var(--card-padding-x);
   margin: 0;
   word-wrap: break-word;
@@ -17,10 +17,14 @@
   & > .card-body > h3 { /* TODO: Keep? */
     font-weight: var(--font-weight-heavy);
   }
+
+  /* TODO: Move values into variable */
+  &.has-btn {
+    padding: 0 0 2.9rem;
+  }
 }
 
 .card-touch {
-  position: relative;
   z-index: var(--card-touch-zindex);
   color: var(--card-touch-font-colour);
   background-color: var(--card-touch-bg-colour);
@@ -66,10 +70,6 @@
 
 /* TODO: Move values into variables */
 /* TODO: Use existing variables where possible */
-
-.card-touch-btn {
-  padding: 0 0 2.9rem;
-}
 
 /* NOTE: Current implementation is limited to only one button per card */
 .btn-card {
