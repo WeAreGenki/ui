@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "@wearegenki/css": "^0.10.0",
-    "codemirror": "^5.36.0"
+    "codemirror": "^5.37.0"
   },
   "publishConfig": {
     "access": "public"
