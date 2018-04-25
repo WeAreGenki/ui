@@ -1,6 +1,6 @@
 {
   "name": "@wearegenki/vue-debug-breakpoints",
-  "version": "0.10.0",
+  "version": "0.11.0",
   "description": "A friendly UI framework which aims to be straightforward, intuitive, and high performance.",
   "repository": "https://github.com/WeAreGenki/ui/tree/master/packages/vue-debug-breakpoints",
   "bugs": "https://github.com/WeAreGenki/ui/issues",
@@ -26,7 +26,7 @@
     "vue": "^2.5.16"
   },
   "dependencies": {
-    "@wearegenki/css": "^0.10.0"
+    "@wearegenki/css": "^0.11.0"
   },
   "publishConfig": {
     "access": "public"

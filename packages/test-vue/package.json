@@ -1,6 +1,6 @@
 {
   "name": "@wearegenki/test-vue",
-  "version": "0.10.0",
+  "version": "0.11.0",
   "description": "Test suite presets for use in We Are Genki projects.",
   "repository": "https://github.com/WeAreGenki/ui/tree/master/packages/test-vue",
   "bugs": "https://github.com/WeAreGenki/ui/issues",
