@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.12.0] - 2018-04-25
+
+### Removed
+
+- BREAKING CHANGE: Deleted all Marko.js packages and references. Although marko has a remarkable custom syntax which compiles to HTML, unfortunately marko never lived up to its performance promises and was too hard to use in real-world use cases. We simply didn't feel productive when using marko. For projects which require high performance we're investigating alternatives and are currently leaning towards Svelte.
+
 ## [0.11.0] - 2018-04-25
 
 ### Added
@@ -308,7 +314,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Initial public release with a base set of styles, Vue components, and dev configs but without a working build system so only source files are usable.
 
-[Unreleased]: https://github.com/WeAreGenki/ui/compare/v0.11.0...HEAD
+[Unreleased]: https://github.com/WeAreGenki/ui/compare/v0.12.0...HEAD
+[0.12.0]: https://github.com/WeAreGenki/ui/compare/v0.11.0...v0.12.0
 [0.11.0]: https://github.com/WeAreGenki/ui/compare/v0.10.0...v0.11.0
 [0.10.0]: https://github.com/WeAreGenki/ui/compare/v0.9.0...v0.10.0
 [0.9.0]: https://github.com/WeAreGenki/ui/compare/v0.8.0...v0.9.0

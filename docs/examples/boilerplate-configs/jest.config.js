@@ -5,7 +5,6 @@
 module.exports = {
   preset: '@wearegenki/test',
   // preset: '@wearegenki/test-vue',
-  // preset: '@wearegenki/test-marko',
 
   coverageThreshold: {
     global: {

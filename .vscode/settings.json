@@ -4,7 +4,6 @@
   "eslint.validate": [
     "html",
     "javascript",
-    "marko",
     "vue"
   ],
   // recommended dictionary: https://github.com/MaxMilton/hunspell-dictionary
@@ -15,7 +14,6 @@
     "javascript",
     "json",
     "markdown",
-    "marko",
     "plaintext",
     "postcss",
     "text",

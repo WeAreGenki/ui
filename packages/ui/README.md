@@ -9,11 +9,9 @@ A friendly UI framework which aims to be straightforward, intuitive, and high pe
 | NPM Package | Notes |
 |---------|-------|
 | `@wearegenki/ui-vue` | Vue components and CSS. |
-| `@wearegenki/ui-marko` | Marko components and CSS. |
 | `@wearegenki/dev` | Development configs. |
 | `@wearegenki/test` | Generic test suite with puppeteer. |
 | `@wearegenki/test-vue` | Vue specific test suite. |
-| `@wearegenki/test-marko` | Marko specific test suite. |
 
 ## Documentation
 

@@ -1,4 +1,4 @@
-/* README: Import this file into Vue/Marko components for access to CSS variables */
+/* README: Import this file into Vue components for access to CSS variables */
 
 @import "@wearegenki/css/src/_variables-colour";
 @import "@wearegenki/css/src/_variables";

@@ -23,12 +23,11 @@ module.exports = {
         '.js',
         '.json',
         '.jsx',
-        '.marko',
         '.mjs',
         '.vue',
       ] },
     },
-    'html/html-extensions': ['.html', '.marko'], // not .vue; it has its own parser
+    'html/html-extensions': ['.html'], // not .vue; it has its own parser
   },
   rules: {
     'comma-dangle': ['error', {
@@ -43,7 +42,6 @@ module.exports = {
       js: 'never',
       json: 'never',
       jsx: 'never',
-      marko: 'never',
       mjs: 'never',
       vue: 'never',
     }],

@@ -11,7 +11,6 @@
     "css-grid",
     "css",
     "design-system",
-    "marko",
     "meta-package",
     "postcss",
     "vue",
@@ -27,9 +26,7 @@
   "dependencies": {
     "@wearegenki/dev": "^0.11.0",
     "@wearegenki/test": "^0.10.0",
-    "@wearegenki/test-marko": "^0.11.0",
     "@wearegenki/test-vue": "^0.11.0",
-    "@wearegenki/ui-marko": "^0.11.0",
     "@wearegenki/ui-vue": "^0.11.0"
   },
   "publishConfig": {
