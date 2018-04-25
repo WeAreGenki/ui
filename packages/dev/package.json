@@ -1,6 +1,6 @@
 {
   "name": "@wearegenki/dev",
-  "version": "0.11.0",
+  "version": "0.12.0",
   "description": "Development tools configuration meta package.",
   "repository": "https://github.com/WeAreGenki/ui/tree/master/packages/dev",
   "bugs": "https://github.com/WeAreGenki/ui/issues",
@@ -17,7 +17,7 @@
   ],
   "main": "index.js",
   "dependencies": {
-    "@wearegenki/eslint-config": "^0.11.0",
+    "@wearegenki/eslint-config": "^0.12.0",
     "@wearegenki/postcss-config": "^0.11.0",
     "@wearegenki/stylelint-config": "^0.11.0"
   },
