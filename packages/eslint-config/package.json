@@ -10,15 +10,12 @@
   "keywords": [
     "eslint",
     "vue",
-    "marko",
-    "markojs",
     "wearegenki-ui",
     "wearegenki"
   ],
   "main": "index.js",
   "files": [
     "jest.js",
-    "marko.js",
     "node.js",
     "vue.js"
   ],

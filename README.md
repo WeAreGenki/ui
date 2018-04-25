@@ -8,7 +8,7 @@
 
 # @wearegenki/ui
 
-A friendly UI framework which aims to be straightforward, intuitive, and high performance. Uses modern and futuristic tools and approach. Intended to be used in Vue or Marko projects or as standalone CSS.
+A friendly UI framework which aims to be straightforward, intuitive, and high performance. Uses modern and futuristic tools and approach. Intended to be used in Vue projects or as standalone CSS.
 
 _NOTE: This is currently a work in progress and is not recommended for production applications... unless you love living on the bleeding edge!_
 
@@ -28,7 +28,6 @@ Technologies:
 * CSS Grid Layout
 * [PostCSS](http://postcss.org)
 * [Vue](https://vuejs.org/) components
-* [Marko](https://markojs.com) components
 
 ## Documentation
 
@@ -42,8 +41,8 @@ Choose one of the following:
 
 ```bash
 # everything (not recommended but convenient for quick prototyping)
-yarn install "@wearegenki/ui" vue vue-router vuex marko \
-  && yarn install -D postcss eslint stylelint jest puppeteer vue-server-renderer vue-template-compiler marko-lasso postcss-lasso lasso
+yarn install "@wearegenki/ui" vue vue-router vuex \
+  && yarn install -D postcss eslint stylelint jest puppeteer vue-server-renderer vue-template-compiler
 
 # development configuration files only
 yarn install -D "@wearegenki/dev" "@wearegenki/test" eslint stylelint jest puppeteer
@@ -55,10 +54,6 @@ yarn install "@wearegenki/css" \
 # all Vue.js packages (includes CSS)
 yarn install "@wearegenki/ui-vue" vue vue-router vuex \
   && yarn install -D "@wearegenki/ui" "@wearegenki/test-vue" postcss eslint stylelint jest vue-server-renderer vue-template-compiler
-
-# all Marko.js packages (includes CSS)
-yarn install "@wearegenki/ui-marko" marko \
-  && yarn install -D "@wearegenki/ui" "@wearegenki/test-marko" postcss eslint stylelint jest marko-lasso postcss-lasso lasso
 ```
 
 #### 2. Copy config boilerplate

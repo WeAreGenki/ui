@@ -6,6 +6,5 @@ package-lock.json*
 *.log
 .stylelintcache
 .esm-cache
-*.marko.js
 *.bak.js
 *.bak
