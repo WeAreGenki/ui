@@ -90,6 +90,7 @@ a {
 .tr { text-align: right; }
 .tc { text-align: center; }
 .tj { text-align: justify; }
+.tu { text-align: unset; }
 
 /* Text transform */
 
@@ -104,6 +105,7 @@ a {
     .tr-$(ext) { text-align: right; }
     .tc-$(ext) { text-align: center; }
     .tj-$(ext) { text-align: justify; }
+    .tu-$(ext) { text-align: unset; }
 
     .ttc-$(ext) { text-transform: capitalize; }
     .ttl-$(ext) { text-transform: lowercase; }
@@ -126,6 +128,7 @@ a {
 
   /* use em not rem so it's relative to font size */
   /* TODO: @TESTING: Check this works correctly with all fonts */
+  /* FIXME: This doesn't work and looks bad! */
   &::before {
     top: -0.28em;
     left: -0.45em;
@@ -153,7 +156,7 @@ a {
 
 /* Lists */
 
-li { margin-bottom: var(--li-margin-between); } /* extra space between list items */
+li { margin-bottom: var(--li-margin-between); } /* more space between list items */
 
 .lsn { /* list style none */
   padding-left: 0;
@@ -163,20 +166,8 @@ li { margin-bottom: var(--li-margin-between); } /* extra space between list item
 /* Abbreviations */
 
 abbr[title] {
-  text-decoration: none;
-
-  &::after {
-    position: absolute;
-    right: calc(-1 * var(--abbreviation-line-thickness));
-    bottom: 0.4rem;
-    left: calc(-1 * var(--abbreviation-line-thickness));
-    z-index: -1;
-    display: inline-block;
-    height: var(--abbreviation-line-thickness);
-    margin-bottom: calc(-1 * var(--abbreviation-line-thickness));
-    content: "";
-    background: var(--abbreviation-line-colour);
-  }
+  text-decoration-color: var(--abbr-underline-colour); /* NOTE: Not implemented in most browsers yet */
+  cursor: help;
 }
 
 /* Code */
@@ -187,5 +178,5 @@ code {
   color: var(--red-500);
   background-color: var(--grey-100);
   border: 1px solid var(--grey-300);
-  border-radius: var(--radius);
+  border-radius: var(--radius-1);
 }

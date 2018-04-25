@@ -28,36 +28,46 @@
 -->
 
 <template>
-  <header :class="{ 'navbar-active': nt || show }" class="navbar z5">
-    <div class="df-l con">
-      <button
-        type="button"
-        class="dn-l btn-clear mr3"
-        @click.stop="show = !show"
+  <header :class="{ 'navbar-active': nt || show }" class="navbar">
+    <nav class="df-l con" role="navigation">
+      <div class="dfc">
+        <button
+          :aria-expanded="show ? 'true' : 'false'"
+          type="button"
+          class="dn-l btn-clear btn-menu"
+          aria-label="menu toggle"
+          @click.stop="show = !show"
+        >
+          <svg class="nav-icon link">
+            <use :xlink:href="show ? '#x' : '#menu'"/>
+          </svg>
+        </button>
+
+        <router-link to="/" title="Home">
+          <svg id="navbar-logo" class="logo">
+            <use xlink:href="#logo"/>
+          </svg>
+        </router-link>
+      </div>
+
+      <div
+        :class="{ 'df': show }"
+        class="dn df-l f-col f-row-l navbar-links"
       >
-        <svg class="nav-icon link">
-          <use :xlink:href="show ? '#x' : '#menu'"/>
-        </svg>
-      </button>
-
-      <router-link to="/" class="nav-logo ml-1-l" title="Home">
-        <svg class="logo"><use xlink:href="#logo"/></svg>
-      </router-link>
-
-      <nav :class="{ 'df': show }" class="dn df-l f-col f-row-l ml-auto-l mh-1">
-        <hr class="dn-l mv0">
+        <router-link to="/" class="nav-link dn-l">
+          Home
+        </router-link>
 
         <router-link
           v-for="item in items"
-          v-once
           :key="item.url"
           :to="item.url"
           class="nav-link"
         >
           {{ item.name }}
         </router-link>
-      </nav>
-    </div>
+      </div>
+    </nav>
   </header>
 </template>
 
@@ -139,9 +149,11 @@ export default {
 
 .navbar {
   position: fixed;
+  z-index: var(--navbar-zindex);
   top: 0;
   right: 0;
   left: 0;
+  padding-top: var(--navbar-animate-distance); /* offset for animation movement */
   background-color: var(--navbar-bg-colour);
 
   @if var(--use-drop-shadow) {
@@ -155,8 +167,9 @@ export default {
     }
   } @else { /* stylelint-disable-line */
     /**
-     * Legacy shadows are a special case. Because `box-shadow` is not hardware
-     * accelerated we animate using `opacity` on a pseudo element instead.
+     * Legacy shadows are a special case. Because `box-shadow` is not GPU
+     * hardware accelerated we animate using `opacity` on a pseudo element
+     * instead which is hardware accelerated.
      */
 
     > .con {
@@ -184,19 +197,15 @@ export default {
       }
     }
   }
-
-  .nav-link {
-    margin-top: 0.2rem;
-  }
 }
 
 .navbar-active {
   @if var(--use-drop-shadow) {
     filter: drop-shadow(var(--navbar-shadow));
-    transform: translateY(-3px);
+    transform: translateY(calc(-1 * var(--navbar-animate-distance)));
   } @else { /* stylelint-disable-line */
     & > .con {
-      transform: translateY(-3px);
+      transform: translateY(calc(-1 * var(--navbar-animate-distance)));
     }
 
     &::after {
@@ -205,9 +214,16 @@ export default {
   }
 }
 
+.btn-menu {
+  padding: 0;
+  margin-right: 1.2rem;
+}
+
 .nav-icon {
   width: var(--navbar-icon-size);
   height: var(--navbar-icon-size);
+  padding: var(--navbar-icon-padding);
+  margin: 0;
 }
 
 .logo {
@@ -215,9 +231,54 @@ export default {
   height: var(--navbar-logo-size-y);
 }
 
-.nav-logo {
-  display: inline-block;
-  padding: var(--navbar-logo-padding);
-  margin: 0;
+.navbar-links {
+  padding: calc(var(--nav-link-padding-y) / 2) 0;
+  margin: 0 -1rem;
+  border-top: 1px solid transparent;
+
+  .navbar-active & {
+    border-color: var(--grey-300);
+  }
+
+  @media (--breakpoint-large) {
+    padding: 0;
+    margin: 0 -1rem 0 auto;
+  }
+}
+
+/* offset the page content so it's not covered by the fixed navbar */
+body {
+  margin-top: var(--navbar-body-offset);
+}
+
+/**
+ * This is a workaround when clicking on a link with a internal target location
+ * (a link to another place within the same page). Since the target element is
+ * moved to the top of the page it becomes covered by the fixed navbar. We get
+ * around this using an invisible pseudo element with an offset position which
+ * is attached to any heading with an id.
+ *
+ * Only add an id property to a heading when truly necessary to avoid the small
+ * CSS rendering performance hit.
+ */
+.h1,
+h1,
+.h2,
+h2,
+.h3,
+h3,
+.h4,
+h4,
+.h5,
+h5,
+.h6,
+h6 {
+  &[id]::before {
+    display: block;
+    height: var(--navbar-anchor-offset);
+    margin-top: calc(-1 * var(--navbar-anchor-offset));
+    visibility: hidden;
+    content: "";
+  }
 }
 </style>

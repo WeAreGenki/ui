@@ -44,13 +44,14 @@
   --gutter-col: 1rem;
   --gutter-col-l: calc(var(--gutter-col) * 2);
   --gutter-row: var(--gutter-col);
-  --gutter-row-l: var(--gutter-row);
+  --gutter-row-l: calc(var(--gutter-row) * 2);
 
   /* General */
   --spacing-steps: 0, 1, 2, 3, 4, 5, 6, 7;
   --spacing-values: 0, 0.25rem, 0.5rem, 1rem, 2rem, 4rem, 8rem, 16rem;
-  --radius: 0.1875rem; /* 3px at root */
-  --radius-negative: -0.1875rem; /* used to calculate offset for .input-group */
+  --radius-1-negative: -0.1875rem; /* for .input-group (workaround for PostCSS plugin issues) */
+  --radius-1: 0.1875rem; /* 3px at root - buttons, inputs, labels */
+  --radius-2: 0.2875rem; /* 4.6px at root - cards */
   --angle-1: 151deg; /* gradient direction; main, cta */
   --angle-2: 45deg; /* gradient direction; dark */
   --angle-3: -27deg; /* hero section */
@@ -105,16 +106,17 @@
   --primary: var(--gradient-primary-90); /* links, buttons */
   --secondary: var(--gradient-secondary-90); /* call to action, highlights */
   --dark: var(--gradient-dark-90); /* body text, slant-cta */
+  --light: hsl(213, 35%, 94%); /* active state bg, slant */
   --subtle: var(--blue-grey-200); /* footer, title subheading */
   --body-font-colour: var(--gradient-dark-80);
   --body-bg-colour: var(--grey-50);
   --alt-bg-colour: var(--grey-100); /* alternating background in lists, tables, etc. */
 
   /* Shadows */
-  --shadow-colour: hsl(241, 48%, 19%);
+  --shadow-colour: hsl(258, 49%, 18%);
   --shadow-colour-subtle: hsl(230, 24%, 51%);
   /* filter:drop-shadow() */
-  --shadow-base: color(var(--shadow-colour) alpha(0.33));
+  --shadow-base: color(var(--shadow-colour) alpha(0.39));
   --shadow: 0 1rem 0.95rem var(--shadow-base);
   --shadow-subtle: 0 0.3125rem 0.28rem color(var(--shadow-colour-subtle) alpha(0.2));
   --shadow-light-1: 0 0.625rem 1.5rem color(var(--shadow-colour) alpha(0.06));
@@ -152,15 +154,14 @@
   --paragraph-line-height: 1.5;
   --paragraph-lead-font-size: 1.625rem;
   /* links */
-  --link-click-area: 0.25rem; /* increase if you don't have links close to each other (otherwise they may overlap) */
+  --link-click-area: 0.4rem; /* reduce this if your links are overlapping */
   --link-font-colour: var(--primary);
-  --link-hover-font-colour: color(var(--primary) blackness(16%));
+  --link-hover-font-colour: color(var(--primary) blackness(22%));
   /* other */
   --hr-margin: 3rem 0;
   --quote-font-size: 2rem;
   --quote-mark-font-size: 3em; /* em (not rem) so it's relative to the parent font size */
-  --abbreviation-line-colour: var(--yellow-400);
-  --abbreviation-line-thickness: 0.3rem;
+  --abbr-underline-colour: color(var(--body-font-colour lightness(25%)));
 
   /* Lists */
   --li-margin-between: 0.5rem;
@@ -169,7 +170,8 @@
   --nav-link-padding-x: 1.3rem;
   --nav-link-padding-y: 0.9rem;
   --side-nav-link-margin-y: 0.2rem;
-  --side-nav-active-bg-colour: var(--blue-grey-50);
+  --side-nav-active-font-colour: var(--link-hover-font-colour);
+  --side-nav-active-bg-colour: var(--light);
   --side-nav-border-width: 0.2rem;
   --side-nav-border-colour: var(--gradient-primary-70);
   --footer-margin-y: 5rem;
@@ -180,7 +182,7 @@
   --btn-padding-y: 0.75rem;
   --btn-font-colour: var(--blue-grey-800);
   --btn-bg-colour: var(--white);
-  --btn-radius: var(--radius);
+  --btn-radius: var(--radius-1);
   --btn-shadow: 0 0.18rem 0.18rem color(var(--shadow-colour) alpha(0.16));
   --btn-shadow-legacy: 0 0.125rem 0.375rem color(var(--shadow-colour) alpha(0.18));
   --btn-hover-font-colour: var(--link-hover-font-colour);
@@ -209,8 +211,9 @@
   --input-font-size: 1.2rem;
   --input-font-colour: var(--body-font-colour);
   --input-bg-colour: var(--white);
-  --input-border: 1px solid var(--grey-300);
-  --input-radius: var(--radius);
+  --input-border-width: 1px;
+  --input-border: var(--input-border-width) solid var(--grey-300);
+  --input-radius: var(--radius-1);
   --input-hover-border-colour: var(--grey-400);
   --input-focus-outline: 2px solid var(--primary);
   --input-valid-colour: var(--green-500); /* TODO: Remove if not used */
@@ -227,6 +230,8 @@
   --card-shadow: var(--shadow-subtle);
   --card-shadow-legacy: var(--shadow-subtle-legacy);
   --card-touch-optimize: var(--optimize);
+  --card-touch-zindex: 1;
+  --card-touch-font-colour: var(--body-font-colour);
   --card-touch-bg-colour: var(--body-bg-colour);
   --card-touch-shadow-1: var(--shadow-light-1);
   --card-touch-shadow-2: var(--shadow-light-2);
@@ -242,18 +247,18 @@
   --alert-padding: 1rem;
   --alert-margin-y: 2rem;
   --alert-border-size: 4px;
-  --alert-tip-font-colour: var(--green-800);
-  --alert-tip-bg-colour: var(--green-100);
+  --alert-tip-font-colour: var(--green-900);
+  --alert-tip-bg-colour: var(--green-50);
   --alert-tip-border-colour: var(--green-500);
-  --alert-info-font-colour: var(--blue-800);
-  --alert-info-bg-colour: var(--blue-100);
+  --alert-info-font-colour: var(--blue-900);
+  --alert-info-bg-colour: var(--blue-50);
   --alert-info-border-colour: var(--blue-500);
-  --alert-warning-font-colour: var(--amber-900);
-  --alert-warning-bg-colour: var(--amber-100);
-  --alert-warning-border-colour: var(--amber-500);
-  --alert-error-font-colour: var(--red-700);
-  --alert-error-bg-colour: var(--red-100);
-  --alert-error-border-colour: var(--red-500);
+  --alert-warning-font-colour: var(--deep-orange-900);
+  --alert-warning-bg-colour: var(--amber-50);
+  --alert-warning-border-colour: var(--amber-600);
+  --alert-error-font-colour: var(--red-900);
+  --alert-error-bg-colour: var(--red-50);
+  --alert-error-border-colour: var(--red-400);
 
   /* Labels */
   --label-padding: 0.04rem 0.4rem 0.185rem;
@@ -262,21 +267,23 @@
   --label-alignment: 0.1rem;
   --label-bg-colour: var(--body-bg-colour);
   --label-border: 1px solid var(--gradient-dark-40);
-  --label-border-radius: var(--radius);
+  --label-border-radius: var(--radius-1);
   --label-margin-between: var(--btn-margin-between);
 
   /* Grid templates */
-  --template-card-body-padding: 1rem 1rem 0;
+  --template-card-body-padding: var(--card-padding-y) var(--card-padding-x) 0;
   --template-card-button-padding: 0 1rem 1rem;
 
   /* Sections */
   --slant-size-factor: 3.5rem; /* used to calculate section whitespace and size */
   --slant-angle: -4deg;
   --slant-angle-large: -3deg;
-  --slant-bg-colour: hsl(213, 35%, 94%);
+  --slant-bg-colour: var(--light);
   --slant-cta-font-colour: var(--white);
   --slant-cta-bg-colour: var(--dark);
   --slant-cta-link-colour: color(var(--link-font-colour) hue(-5) lightness(58%));
+  --hero-padding: 1.5rem 0;
+  --hero-margin: 2rem 0;
   --hero-font-colour: var(--white);
   --hero-bg-gradient: linear-gradient(var(--angle-3), var(--gradient-primary-20), var(--gradient-primary-100));
 
@@ -291,16 +298,20 @@
 
   /* @wearegenki/vue-navbar component */
   --navbar-optimize: var(--optimize);
+  --navbar-zindex: 5;
   --navbar-bg-colour: var(--body-bg-colour);
+  --navbar-animate-distance: 3px;
   --navbar-animate-speed: 200ms;
   --navbar-shadow-fade-speed: 300ms;
   --navbar-shadow: 0 0.5rem 1rem var(--shadow-base);
   --navbar-shadow-legacy: 0 0.5rem 2rem var(--shadow-base-legacy);
   --navbar-shadow-before: 0 0.5rem 1rem color(var(--shadow-colour) alpha(0)); /* same as --navbar-shadow but 0 alpha */
   --navbar-icon-size: 2rem;
-  --navbar-logo-size-x: 4rem;
-  --navbar-logo-size-y: 2rem;
-  --navbar-logo-padding: 0.65rem 0 0;
+  --navbar-icon-padding: 0.4rem 0.4rem 0.25rem;
+  --navbar-logo-size-x: 4.2rem;
+  --navbar-logo-size-y: 1.6rem;
+  --navbar-body-offset: 3.26rem; /* offset body so contents are not covered */
+  --navbar-anchor-offset: calc(var(--navbar-body-offset) + 1rem); /* offset in-page links; navbar + shadow */
 
   /* @wearegenki/vue-input-toggle component */
   --input-toggle-optimize: var(--optimize);

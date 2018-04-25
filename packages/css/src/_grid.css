@@ -14,13 +14,13 @@
   }
 }
 
-.compact {
-  grid-gap: calc(var(--gutter-row) / 2) 0 !important; /* stylelint-disable-line declaration-no-important */
-}
+/* compact gaps between rows and columns */
+.gc { grid-gap: calc(var(--gutter-row) / 2) 0 !important; } /* stylelint-disable-line declaration-no-important */
+.gc0 { grid-gap: 0 0 !important; } /* stylelint-disable-line declaration-no-important */
 
 .col-fluid { grid-template-columns: auto; }
 
-/* For a consistent item size */
+/* for consistent item size */
 /* FIXME: Doesn't seem to be doing anything */
 .col-set { grid-auto-columns: min-content; }
 .row-set { grid-auto-rows: min-content; }

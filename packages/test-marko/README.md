@@ -1,6 +1,4 @@
-# `@wearegenki/test-marko`
-
-## Overview
+# @wearegenki/test-marko
 
 TODO: Write me.
 
@@ -12,7 +10,7 @@ TODO: Write me.
 
 ## Licence
 
-`@wearegenki/test-marko` is an Apache-2.0 licensed open source project. See [LICENCE](https://github.com/WeAreGenki/test/blob/master/LICENCE).
+`@wearegenki/test-marko` is part of [`@wearegenki/ui`](https://github.com/WeAreGenki/ui), an Apache-2.0 licensed open source project. See [LICENCE](https://github.com/WeAreGenki/ui/blob/master/LICENCE).
 
 -----
 

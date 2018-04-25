@@ -9,6 +9,11 @@
 
 */
 
+/*
+  NOTE: Since plain .btn will be the most common button, it has no gradient
+  background for performance reasons. Use the other button styles sparingly
+  when emphasis is required.
+*/
 .btn {
   display: inline-block;
   padding: var(--btn-padding-y) var(--btn-padding-x);

@@ -9,6 +9,11 @@
       "allowBranch": "master"
     }
   },
+  "ignoreChanges": [
+    "**/dist/**",
+    "**/test/**",
+    "**/*.md"
+  ],
   "npmClient": "yarn",
   "useWorkspaces": true,
   "registry": "https://registry.npmjs.org/"

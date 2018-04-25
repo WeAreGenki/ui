@@ -64,6 +64,7 @@
     background-color: var(--slant-cta-bg-colour);
   }
 
+  label,
   strong {
     color: var(--slant-cta-font-colour);
   }
@@ -71,13 +72,22 @@
   a {
     color: var(--slant-cta-link-colour);
   }
+
+  .input,
+  .select,
+  .textarea,
+  input,
+  select,
+  textarea {
+    outline-color: var(--slant-cta-link-colour);
+  }
 }
 
 /* Hero section */
 
 .hero {
-  padding: 2rem 0;
-  margin-bottom: 2rem;
+  padding: var(--hero-padding);
+  margin: var(--hero-margin);
   color: var(--hero-font-colour);
   background-image: var(--hero-bg-gradient);
 }

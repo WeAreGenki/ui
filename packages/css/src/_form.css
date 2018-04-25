@@ -1,14 +1,14 @@
 /* FIXME: Better approach at custom input and label sizing */
-/* TODO: Create variables for relevant properties */
+
+/* FIXME: Create variables for relevant properties */
 
 form {
   margin-top: 1rem;
 }
 
-.form-row {
-  /* display: flex; */
-  /* flex-direction: column; */
-  margin-bottom: 1rem;
+.form-group {
+  position: relative;
+  margin-bottom: 1.5rem;
 }
 
 .form-help {
@@ -19,6 +19,11 @@ form {
 
 label {
   display: block;
+  /* FIXME: Margin when used with a checkbox or radio input */
+  margin-bottom: 0.5rem;
+  color: var(--grey-800);
+  text-align: left;
+  text-transform: uppercase;
 }
 
 .form-label {
@@ -35,6 +40,8 @@ textarea {
     FIXME: Need some way to make inputs sized consistently but without effecting
     the document flow.
   */
+  /* display: block; */
+  /* width: 100%; */
   /* min-width: 17rem; */
   /* max-width: 100%; */
   padding: var(--input-padding-y) var(--input-padding-x);
@@ -53,38 +60,23 @@ textarea {
     outline: var(--input-focus-outline);
   }
 
-  /*
-    FIXME: These outlines don't look so good, experiment with icons and maybe
-    minimal outlines instead.
-  */
-  /*
-  &:valid {
-    box-shadow: 0 0 0.5rem 0.15rem var(--input-valid-colour);
-  }
-
-  &:invalid {
-    box-shadow: 0 0 0.5rem 0.15rem var(--input-invalid-colour);
-  }
-  */
-
   &::placeholder {
     color: var(--input-placeholder-font-colour);
   }
 
+  /* FIXME: */
   &.input-small { /* stylelint-disable-line selector-no-qualifying-type */
     min-width: 5rem;
     max-width: 7rem;
   }
 
-  &[disabled] {
+  &[disabled],
+  &[disabled]:focus,
+  &[disabled]:active {
     color: var(--input-disabled-font-colour);
     background-color: var(--input-bg-colour);
-    border: 1px solid var(--input-disabled-border-colour);
-
-    &:focus,
-    &:active {
-      outline: none;
-    }
+    border: var(--input-border-width) solid var(--input-disabled-border-colour);
+    outline: none;
 
     &::placeholder {
       color: var(--input-disabled-placeholder-font-colour);
@@ -117,9 +109,21 @@ input[type="checkbox"] {
     }
   }
 
+  & > .btn-cta {
+    border-color: var(--secondary);
+  }
+
+  & > .btn-dark {
+    border-color: var(--dark);
+  }
+
+  & > .btn-main {
+    border-color: var(--primary);
+  }
+
   & > input {
-    /* so outline doesn't look strange when active + hide rounded corners */
-    @mixin min margin-right, -2px, var(--radius-negative);
+    /* so border doesn't look strange when active + hide rounded corners */
+    @mixin min margin-right, -2px, var(--radius-1-negative);
 
     &:focus + .btn,
     &:active + .btn {
@@ -132,5 +136,26 @@ input[type="checkbox"] {
     & > .btn { /* stylelint-disable-line no-descending-specificity */
       border-color: var(--input-hover-border-colour);
     }
+  }
+}
+
+/* Form validation */
+/* FIXME: These don't look so good, experiment with icons and maybe minimal outlines instead. */
+
+/* :valid { */
+.valid {
+  @if var(--use-drop-shadow) {
+    filter: drop-shadow(0 0 0.15rem var(--input-valid-colour));
+  } @else { /* stylelint-disable-line */
+    box-shadow: 0 0 0.5rem var(--input-valid-colour);
+  }
+}
+
+/* :invalid { */
+.invalid {
+  @if var(--use-drop-shadow) {
+    filter: drop-shadow(0 0 0.15rem var(--input-invalid-colour));
+  } @else { /* stylelint-disable-line */
+    box-shadow: 0 0 0.5rem var(--input-invalid-colour);
   }
 }

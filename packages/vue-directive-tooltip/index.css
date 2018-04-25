@@ -14,7 +14,7 @@
     z-index of the element with the covered tooltip — simply add the class "z1",
     "z2", etc. to the same element as you added v-tooltip too. Example:
 
-      <div class="form-row">
+      <div class="form-group">
         <button v-tooltip="Text 1" class="z1 tooltip-fix">Button 1</button>
         <button v-tooltip="Text 2" class="tooltip-fix">Button 2</button>
       </div>
