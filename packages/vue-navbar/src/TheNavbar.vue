@@ -149,10 +149,10 @@ export default {
 
 .navbar {
   position: fixed;
-  z-index: var(--navbar-zindex);
   top: 0;
   right: 0;
   left: 0;
+  z-index: var(--navbar-zindex);
   padding-top: var(--navbar-animate-distance); /* offset for animation movement */
   background-color: var(--navbar-bg-colour);
 
@@ -186,7 +186,6 @@ export default {
       bottom: 0;
       z-index: -1;
       width: 100%;
-      height: 100%;
       content: "";
       box-shadow: var(--navbar-shadow-legacy);
       opacity: 0;

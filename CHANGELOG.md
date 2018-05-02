@@ -9,11 +9,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
+
+- Better form validation styles.
+
 ## [0.12.0] - 2018-04-25
 
 ### Removed
 
-- BREAKING CHANGE: Deleted all Marko.js packages and references. Although marko has a remarkable custom syntax which compiles to HTML, unfortunately marko never lived up to its performance promises and was too hard to use in real-world use cases. We simply didn't feel productive when using marko. For projects which require high performance we're investigating alternatives and are currently leaning towards Svelte.
+- BREAKING CHANGE: Deleted all Marko.js packages and references. Although marko has a great custom syntax which compiles to HTML, unfortunately marko never lived up to its performance promises and was too hard to use in real-world use cases. We simply didn't feel productive when using marko. For projects which require high performance we're investigating alternatives and are currently leaning towards Svelte.
 
 ## [0.11.0] - 2018-04-25
 
