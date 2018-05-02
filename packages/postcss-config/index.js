@@ -11,7 +11,7 @@ const customProperties = require('postcss-custom-properties');
 const conditionals = require('postcss-conditionals');
 const customMedia = require('postcss-custom-media');
 const calc = require('postcss-calc');
-const colorFunction = require('postcss-color-function');
+const colorModFunction = require('postcss-color-mod-function');
 const mediaQueryPacker = require('css-mqpacker');
 const autoprefixer = require('autoprefixer');
 const url = require('postcss-url');
@@ -51,7 +51,7 @@ module.exports = postcss.plugin('postcss-config', (opts = {}) => {
     .use(conditionals)
     .use(customMedia)
     .use(calc({ warnWhenCannotResolve: opts.verbose }))
-    .use(colorFunction)
+    .use(colorModFunction)
     .use(mediaQueryPacker)
     .use(autoprefixer({ remove: false, flexbox: 'no-2009' }))
     .use(url);
