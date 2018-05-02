@@ -84,8 +84,8 @@
   border-bottom-right-radius: var(--radius-2);
   border-bottom-left-radius: var(--radius-2);
 
-  .card-touch:hover > &,
+  /* .card-touch:hover > &,
   .card-touch:focus > & {
     background-color: var(--grey-100);
-  }
+  } */
 }
