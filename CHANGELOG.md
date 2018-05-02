@@ -9,8 +9,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+
+- Experimental CSS styles for high performance font rendering (at the cost of potential ugly font kerning in some situations).
+
 ### Changed
 
+- BREAKING CHANGE: Switched PostCSS plugins for colour function. `color()` is now `color-mod()`, which is more in line with the emerging web standard.
+- All colours are now defined using HSL including gradients.
 - Better form validation styles.
 
 ## [0.12.0] - 2018-04-25
