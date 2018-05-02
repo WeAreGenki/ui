@@ -205,7 +205,6 @@
   --btn-main-shadow-legacy: 0 0.2rem 0.45rem color(var(--gradient-primary-90) alpha(0.4));
 
   /* Forms */
-  --form-help-font-colour: var(--grey-600);
   --input-padding-x: 1rem;
   --input-padding-y: 0.6rem;
   --input-font-size: 1.2rem;
@@ -216,12 +215,13 @@
   --input-radius: var(--radius-1);
   --input-hover-border-colour: var(--grey-400);
   --input-focus-outline: 2px solid var(--primary);
-  --input-valid-colour: var(--green-500); /* TODO: Remove if not used */
-  --input-invalid-colour: var(--red-500); /* TODO: Remove if not used */
+  --input-invalid-colour: var(--red-500);
+  --input-invalid-border: 2px solid var(--input-invalid-colour);
   --input-placeholder-font-colour: var(--blue-grey-400);
   --input-disabled-font-colour: var(--blue-grey-200);
   --input-disabled-border-colour: var(--blue-grey-50);
   --input-disabled-placeholder-font-colour: var(--blue-grey-100);
+  --form-help-font-colour: var(--grey-600);
 
   /* Cards */
   --card-padding-x: 1.3rem;
@@ -282,6 +282,8 @@
   --slant-cta-font-colour: var(--white);
   --slant-cta-bg-colour: var(--dark);
   --slant-cta-link-colour: color(var(--link-font-colour) hue(-5) lightness(58%));
+  --slant-cta-input-invalid-colour: color(var(--input-invalid-colour) lightness(60%));
+  --slant-cta-input-invalid-border: 2px solid var(--slant-cta-input-invalid-colour);
   --hero-padding: 1.5rem 0;
   --hero-margin: 2rem 0;
   --hero-font-colour: var(--white);

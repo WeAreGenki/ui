@@ -140,22 +140,23 @@ input[type="checkbox"] {
 }
 
 /* Form validation */
-/* FIXME: These don't look so good, experiment with icons and maybe minimal outlines instead. */
 
-/* :valid { */
-.valid {
-  @if var(--use-drop-shadow) {
-    filter: drop-shadow(0 0 0.15rem var(--input-valid-colour));
-  } @else { /* stylelint-disable-line */
-    box-shadow: 0 0 0.5rem var(--input-valid-colour);
+.form-help {
+  margin-top: 0.6rem;
+  color: inherit;
   }
+
+.invalid {
+  border: var(--input-invalid-border);
+  outline-color: var(--input-invalid-colour);
 }
 
-/* :invalid { */
-.invalid {
-  @if var(--use-drop-shadow) {
-    filter: drop-shadow(0 0 0.15rem var(--input-invalid-colour));
-  } @else { /* stylelint-disable-line */
-    box-shadow: 0 0 0.5rem var(--input-invalid-colour);
+.invalid-feedback {
+  display: none;
+  margin-top: 0.6rem;
+  color: var(--input-invalid-colour);
+
+  .invalid + & {
+    display: block;
   }
 }
