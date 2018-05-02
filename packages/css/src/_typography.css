@@ -15,6 +15,10 @@ body {
   font-family: var(--font-family);
   font-size: var(--font-size);
   font-weight: var(--font-weight);
+  text-rendering: var(--font-rendering);
+  font-variant-ligatures: var(--font-variant);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   color: var(--body-font-colour);
   background-color: var(--body-bg-colour);
 
