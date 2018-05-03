@@ -87,6 +87,10 @@
     }
   }
 
+  .form-help {
+    color: inherit;
+  }
+
   .invalid-feedback {
     color: var(--slant-cta-input-invalid-colour);
   }
