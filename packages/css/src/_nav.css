@@ -35,12 +35,9 @@
   margin-bottom: var(--footer-margin-y);
   color: var(--footer-font-colour);
 
-  > .nav-link { /* stylelint-disable-line no-descending-specificity */
-    margin: calc(-1 * var(--link-click-area)); /* offset large link click area */
-
-    &:first-of-type {
-      margin-left: calc(-1 * var(--gutter-col));
-    }
+  > .nav-link {
+    display: inline-block;
+    margin: 0 0 0 calc(-1 * var(--gutter-col));
   }
 }
 
@@ -52,7 +49,7 @@
   background-color: var(--navbar-bg-colour);
   box-shadow: var(--navbar-shadow);
 
-  .nav-link { /* stylelint-disable-line no-descending-specificity */
+  .nav-link {
     color: var(--navbar-font-colour);
 
     &:hover {
