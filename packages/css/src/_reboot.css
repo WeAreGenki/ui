@@ -74,3 +74,9 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+/* Abbreviations */
+
+abbr[title] {
+  cursor: help;
+}

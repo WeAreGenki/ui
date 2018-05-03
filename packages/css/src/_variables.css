@@ -132,8 +132,8 @@
   --font-size-s: 1.125rem; /* only used when --use-font-size-fluid is false */
   --font-size-l: 1.125rem; /* only used when --use-font-size-fluid is false */
   --font-weight-light: 300;
-  --font-weight: 500;
-  --font-weight-heavy: 700;
+  --font-weight: 400; /* same as normal */
+  --font-weight-heavy: 700; /* same as bold */
   --line-height: 1.25;
   /* headings */
   --headline-font-size: 6rem;

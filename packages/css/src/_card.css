@@ -14,10 +14,6 @@
     box-shadow: var(--card-shadow-legacy);
   }
 
-  & > .card-body > h3 { /* TODO: Keep? */
-    font-weight: var(--font-weight-heavy);
-  }
-
   /* TODO: Move values into variable */
   &.has-btn {
     padding: 0 0 2.9rem;
@@ -83,9 +79,4 @@
   border-top: 1px solid hsl(240, 67%, 96%);
   border-bottom-right-radius: var(--radius-2);
   border-bottom-left-radius: var(--radius-2);
-
-  /* .card-touch:hover > &,
-  .card-touch:focus > & {
-    background-color: var(--grey-100);
-  } */
 }
