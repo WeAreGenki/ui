@@ -12,16 +12,17 @@
 :root {
   /* Options */
   /**
-   * Force hardware acceleration on animated elements, may be buggy. More
-   * information: https://developer.mozilla.org/en-US/docs/Web/CSS/will-change
+   * Force hardware acceleration on animated elements, may be buggy. Not
+   * supported in IE or Edge - https://caniuse.com/#feat=will-change
    */
   --optimize: false;
   /**
    * Better performance by using filter:drop-shadow() for shadows, may be buggy.
+   * Not supported in IE - https://caniuse.com/#feat=css-filters
    */
   --use-drop-shadow: false;
   /**
-  * Dynamic font size based on viewport width. This works well but is somewhat
+  * Dynamic font size based on viewport width. This works but is somewhat
   * experimental and may break your site on very old browsers.
   */
   /* TODO: @TESTING: Cross-browser compatibility */
@@ -275,7 +276,7 @@
   --slant-cta-font-colour: var(--white);
   --slant-cta-bg-colour: var(--dark);
   --slant-cta-link-colour: color-mod(var(--link-font-colour) hue(-5) lightness(58%));
-  --slant-cta-input-invalid-colour: color-mod(var(--input-invalid-colour) lightness(60%));
+  --slant-cta-input-invalid-colour: color-mod(var(--input-invalid-colour) lightness(65%));
   --slant-cta-input-invalid-border: 2px solid var(--slant-cta-input-invalid-colour);
   --hero-padding: 1.5rem 0;
   --hero-margin: 2rem 0;
@@ -326,6 +327,7 @@
 
   /* @wearegenki/vue-input-select component */
   --input-select-optimize: var(--optimize);
+  --input-select-zindex: 4;
   --input-select-bg-colour: var(--white);
   --input-select-shadow: var(--shadow);
   --input-select-shadow-legacy: var(--shadow-legacy);
