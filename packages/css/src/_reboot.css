@@ -48,13 +48,6 @@ input[type="url"],
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  overflow-x: hidden; /* opinionated */
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-}
-
 .btn,
 .select,
 button,
