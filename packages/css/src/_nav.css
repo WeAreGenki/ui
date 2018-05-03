@@ -33,7 +33,7 @@
 
   > .nav-link {
     display: inline-block;
-    margin: 0 0 0 calc(-1 * var(--gutter-col));
+    margin: 0 var(--gutter-col) 0 calc(-1 * var(--gutter-col));
   }
 }
 
