@@ -12,12 +12,18 @@
 
 body {
   font-family: var(--font-family);
-  @if var(--font-size) != 1rem { font-size: var(--font-size); }
-  @if var(--font-weight) != 400 { font-weight: var(--font-weight); }
   text-rendering: var(--font-rendering);
   font-variant-ligatures: var(--font-variant);
   color: var(--body-font-colour);
   background-color: var(--body-bg-colour);
+
+  @if var(--font-size) != 1rem {
+    font-size: var(--font-size);
+  }
+
+  @if var(--font-weight) != 400 {
+    font-weight: var(--font-weight);
+  }
 
   @if NOT (var(--use-font-size-fluid)) {
     @media (--breakpoint-small) {

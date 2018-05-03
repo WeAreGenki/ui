@@ -80,11 +80,11 @@
   select,
   textarea {
     outline-color: var(--slant-cta-link-colour);
+  }
 
-    &.invalid {
-      border: var(--slant-cta-input-invalid-border);
-      outline-color: var(--slant-cta-input-invalid-colour);
-    }
+  .invalid {
+    border: var(--slant-cta-input-invalid-border);
+    outline-color: var(--slant-cta-input-invalid-colour);
   }
 
   .form-help {
