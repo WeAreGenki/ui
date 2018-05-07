@@ -5,14 +5,14 @@
 
   HTML LAYOUT:
     <section class="slant">
-      <div class="con tc">
+      <div class="con pv4 tc">
         <h2 class="mt0">Example slant section</h2>
         <p class="lead">Your text.</p>
       </div>
     </section>
 
     <section class="slant-cta">
-      <div class="con tc">
+      <div class="con pv4 tc">
         <h2 class="mt0">Example CTA slant</h2>
         <p class="lead">Your text.</p>
       </div>
