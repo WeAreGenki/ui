@@ -221,21 +221,24 @@
   --card-padding-x: 1.3rem;
   --card-padding-y: 1.2rem;
   --card-bg-colour: var(--blue-grey-100);
+  --card-bg-colour: var(--white);
   --card-shadow: var(--shadow-subtle);
   --card-shadow-legacy: var(--shadow-subtle-legacy);
   --card-touch-optimize: var(--optimize);
   --card-touch-zindex: 1;
   --card-touch-font-colour: var(--body-font-colour);
-  --card-touch-bg-colour: var(--body-bg-colour);
   --card-touch-shadow-1: var(--shadow-light-1);
   --card-touch-shadow-2: var(--shadow-light-2);
   --card-touch-shadow-1-legacy: var(--shadow-light-1-legacy);
   --card-touch-shadow-2-legacy: var(--shadow-light-2-legacy);
-  --card-touch-animate-speed: 200ms;
+  --card-touch-animate-speed: 160ms;
+  --card-touch-animate-distance: -7px;
+  --card-touch-animate-distance-legacy: -5px;
   --card-touch-hover-shadow-1: var(--shadow);
   --card-touch-hover-shadow-2: 0 0.125rem 0.25rem color-mod(var(--shadow-colour) alpha(0.07));
   --card-touch-hover-shadow-1-legacy: var(--shadow-legacy);
   --card-touch-hover-shadow-2-legacy: 0 0 0 transparent;
+  --card-btn-border: 1px solid hsl(240, 67%, 96%);
 
   /* Alerts */
   --alert-padding: 1rem;
