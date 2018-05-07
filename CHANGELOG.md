@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - BREAKING CHANGE: Switched PostCSS plugins for colour function. `color()` is now `color-mod()`, which is more in line with the emerging web standard.
 - All colours are now defined using HSL including gradients.
 - Better form validation styles.
+- Refactor slant section CSS using new technique for better paint performance.
 
 ## [0.12.0] - 2018-04-25
 
