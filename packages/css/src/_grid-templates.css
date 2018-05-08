@@ -6,6 +6,7 @@
 /* FIXME: DEPRECATED: We're not using this anymore and so it should be removed! */
 
 /* Horizontal card */
+/*
 .card-t-h {
   grid-column-gap: 0;
   grid-template:
@@ -50,3 +51,4 @@
   align-self: end;
   padding: var(--template-card-button-padding);
 }
+*/
