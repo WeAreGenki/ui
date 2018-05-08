@@ -3,21 +3,23 @@
 /* TODO: Might want to use long form instead of this shorthand for IE compatibility */
 /* TODO: I highly suspect we may need to use @supports (display: grid) {} here eventually */
 
+/* FIXME: DEPRECATED: We're not using this anymore and so it should be removed! */
+
 /* Horizontal card */
 .card-t-h {
-  /* position: relative; */ /* XXX: Related to below */
+  grid-column-gap: 0;
   grid-template:
     "img"
     "body"
     "btn"
     / auto;
-  /* overflow: hidden; */ /* XXX: Related to below */
 
   @media (--breakpoint-small) {
     grid-column-gap: 0;
   }
 
   @media (--breakpoint-large) {
+    grid-column-gap: 0;
     grid-template:
       "img body"
       "img btn"
@@ -28,16 +30,13 @@
 .card-img {
   grid-area: img;
   width: 100%;
-  /* XXX: Like background-size:cover but using a foreground <img> */
-  /* position: absolute;
-  grid-area: img;
-  top: -9999px;
-  right: -9999px;
-  bottom: -9999px;
-  left: -9999px;
-  min-width: 100%;
-  min-height: 100%;
-  margin: auto; */
+  border-top-left-radius: var(--radius-2);
+  border-top-right-radius: var(--radius-2);
+
+  @media (--breakpoint-large) {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: var(--radius-2);
+  }
 }
 
 .card-body {
