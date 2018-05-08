@@ -262,7 +262,6 @@
   --label-font-size: 90%;
   --label-font-colour: var(--dark);
   --label-alignment: 0.1rem;
-  --label-bg-colour: var(--body-bg-colour);
   --label-border: 1px solid var(--gradient-dark-40);
   --label-border-radius: var(--radius-1);
   --label-margin-between: var(--btn-margin-between);
