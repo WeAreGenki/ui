@@ -32,8 +32,8 @@
 @import "./_container";
 @import "./_flex";
 @import "./_grid-compat";
-@import "./_grid-templates";
 @import "./_grid";
+@import "./_grid-templates";
 @import "./_colour";
 @import "./_measure";
 @import "./_spacing";

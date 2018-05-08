@@ -43,9 +43,9 @@
   --col-steps: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
   --row-steps: 1, 2, 3, 4, 5, 6;
   --gutter-col: 1rem;
-  --gutter-col-l: calc(var(--gutter-col) * 2);
-  --gutter-row: var(--gutter-col);
-  --gutter-row-l: calc(var(--gutter-row) * 2);
+  --gutter-col-l: 2rem;
+  --gutter-row: 2rem;
+  --gutter-row-l: 2rem;
 
   /* General */
   --spacing-steps: 0, 1, 2, 3, 4, 5, 6, 7;
