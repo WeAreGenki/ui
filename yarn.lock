@@ -1226,9 +1226,9 @@
     eslint-plugin-jest "^21.15.1"
     eslint-plugin-vue "^4.5.0"
 
-"@wearegenki/icons@^0.5.1":
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/@wearegenki/icons/-/icons-0.5.1.tgz#0899cd32da1813bb6a0af3400f6006b7a2202eae"
+"@wearegenki/icons@^0.11.0":
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/@wearegenki/icons/-/icons-0.11.0.tgz#0dfd6ed377cf6799b5c4796362bda22b64726d92"
 
 "@wearegenki/postcss-config@file:packages/postcss-config":
   version "0.11.0"
