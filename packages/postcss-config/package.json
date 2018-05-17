@@ -25,7 +25,7 @@
     "postcss": "^6.0.21"
   },
   "dependencies": {
-    "autoprefixer": "^8.4.1",
+    "autoprefixer": "^8.5.0",
     "css-mqpacker": "^6.0.2",
     "cssstats": "^3.2.0",
     "postcss-at-rules-variables": "^0.1.5",
