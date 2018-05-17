@@ -1,33 +1,20 @@
-/* FIXME: Better approach at custom input and label sizing */
-
 /* FIXME: Create variables for relevant properties */
 
-form {
-  margin-top: 1rem;
-}
-
 .form-group {
-  position: relative;
   margin-bottom: 1.5rem;
 }
 
-.form-help {
-  display: block;
-  margin-top: 0.25rem;
-  color: var(--form-help-font-colour);
-}
-
 label {
-  display: block;
-  /* FIXME: Margin when used with a checkbox or radio input */
+  display: block; /* forces label to render above the input */
   margin-bottom: 0.5rem;
   color: var(--grey-800);
-  text-align: left;
   text-transform: uppercase;
-}
 
-.form-label {
-  /* min-width: 6.5rem; */
+  input[type="radio"] + &,
+  input[type="checkbox"] + & {
+    display: inline-block;
+    margin-bottom: 0;
+  }
 }
 
 .input,
@@ -36,14 +23,6 @@ label {
 input,
 select,
 textarea {
-  /*
-    FIXME: Need some way to make inputs sized consistently but without effecting
-    the document flow.
-  */
-  /* display: block; */
-  /* width: 100%; */
-  /* min-width: 17rem; */
-  /* max-width: 100%; */
   padding: var(--input-padding-y) var(--input-padding-x);
   font-size: var(--input-font-size);
   color: var(--input-font-colour);
@@ -62,12 +41,6 @@ textarea {
 
   &::placeholder {
     color: var(--input-placeholder-font-colour);
-  }
-
-  /* FIXME: */
-  &.input-small { /* stylelint-disable-line selector-no-qualifying-type */
-    min-width: 5rem;
-    max-width: 7rem;
   }
 
   &[disabled],
@@ -89,8 +62,33 @@ input[type="checkbox"] {
   width: 1.6rem;
   min-width: unset;
   height: 1.6rem;
-  margin-right: 0.5rem;
+  /* margin-right: 0.5rem; */
 }
+
+.form-help {
+  display: block;
+  margin-top: 0.5rem;
+  color: var(--form-help-font-colour);
+}
+
+/* Form validation */
+
+.invalid {
+  border: var(--input-invalid-border);
+  outline-color: var(--input-invalid-colour);
+}
+
+.invalid-feedback {
+  display: none;
+  margin-top: 0.5rem;
+  color: var(--input-invalid-colour);
+
+  .invalid + & {
+    display: block;
+  }
+}
+
+/* Grouped inputs */
 
 /* visually join an input and button together */
 /* FIXME: .btn needs an active state (globally they still need both hover and active) */
@@ -109,6 +107,7 @@ input[type="checkbox"] {
     }
   }
 
+  /* TODO: Consider removing these */
   & > .btn-cta {
     border-color: var(--secondary);
   }
@@ -125,37 +124,18 @@ input[type="checkbox"] {
     /* so border doesn't look strange when active + hide rounded corners */
     @mixin min margin-right, -2px, var(--radius-1-negative);
 
+    /* TODO: Consider removing this */
     &:focus + .btn,
     &:active + .btn {
       outline: var(--input-focus-outline);
     }
   }
 
+  /* TODO: Consider removing this */
   &:hover {
     & > input,
     & > .btn { /* stylelint-disable-line no-descending-specificity */
       border-color: var(--input-hover-border-colour);
     }
-  }
-}
-
-/* Form validation */
-/* FIXME: These don't look so good, experiment with icons and maybe minimal outlines instead. */
-
-/* :valid { */
-.valid {
-  @if var(--use-drop-shadow) {
-    filter: drop-shadow(0 0 0.15rem var(--input-valid-colour));
-  } @else { /* stylelint-disable-line */
-    box-shadow: 0 0 0.5rem var(--input-valid-colour);
-  }
-}
-
-/* :invalid { */
-.invalid {
-  @if var(--use-drop-shadow) {
-    filter: drop-shadow(0 0 0.15rem var(--input-invalid-colour));
-  } @else { /* stylelint-disable-line */
-    box-shadow: 0 0 0.5rem var(--input-invalid-colour);
   }
 }

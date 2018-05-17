@@ -1,5 +1,9 @@
 <!-- markdownlint-disable first-line-h1 -->
 
+**IMPORTANT: This project has been deprecated, please use [`minna-ui`](https://github.com/WeAreGenki/minna-ui), a new UI framework which is based on the next-gen version of `@wearegenki/ui`. It follows our decision at We Are Genki to transition our projects from [Vue](https://vuejs.org) to [Svelte](https://svelte.technology).**
+
+-----
+
 [![Build status](https://img.shields.io/travis/WeAreGenki/ui.svg)](https://travis-ci.org/WeAreGenki/ui)
 [![Coverage status](https://img.shields.io/codecov/c/github/WeAreGenki/ui.svg)](https://codecov.io/gh/WeAreGenki/ui)
 [![NPM version](https://img.shields.io/npm/v/@wearegenki/ui.svg)](https://www.npmjs.com/package/@wearegenki/ui)

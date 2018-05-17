@@ -1,39 +1,28 @@
 /* Cards */
 
 .card {
-  position: relative;
   padding: var(--card-padding-y) var(--card-padding-x);
-  margin: 0;
   word-wrap: break-word;
   background-color: var(--card-bg-colour);
-  border-radius: var(--radius-2); /* FIXME: KEEP? */
+  border-radius: var(--radius-2);
 
   @if var(--use-drop-shadow) {
     filter: drop-shadow(var(--card-shadow));
   } @else { /* stylelint-disable-line */
     box-shadow: var(--card-shadow-legacy);
   }
-
-  & > .card-body > h3 { /* TODO: Keep? */
-    font-weight: var(--font-weight-heavy);
-  }
-
-  /* TODO: Move values into variable */
-  &.has-btn {
-    padding: 0 0 2.9rem;
-  }
 }
 
 .card-touch {
   z-index: var(--card-touch-zindex);
+  margin: 0;
   color: var(--card-touch-font-colour);
-  background-color: var(--card-touch-bg-colour);
 
   @if var(--use-drop-shadow) {
     filter:
       drop-shadow(var(--card-touch-shadow-1))
       drop-shadow(var(--card-touch-shadow-2));
-    transition: transform var(--card-touch-animate-speed) ease, filter var(--card-touch-animate-speed) ease;
+    transition: all var(--card-touch-animate-speed) ease;
 
     @if var(--card-touch-optimize) {
       will-change: transform, filter;
@@ -42,7 +31,7 @@
     box-shadow:
       var(--card-touch-shadow-1-legacy),
       var(--card-touch-shadow-2-legacy);
-    transition: transform var(--card-touch-animate-speed) ease, box-shadow var(--card-touch-animate-speed) ease;
+    transition: all var(--card-touch-animate-speed) ease;
 
     @if var(--card-touch-optimize) {
       will-change: transform, box-shadow;
@@ -51,41 +40,42 @@
 
   &:hover {
     color: var(--card-touch-font-colour);
-    text-decoration: unset; /* no need to underline links as it's obvious this element is interactive */
-    transition-duration: var(--card-touch-animate-speed); /* overrides <a> when .card-touch is used on a link */
+    text-decoration: unset;
 
     @if var(--use-drop-shadow) {
       filter:
         drop-shadow(var(--card-touch-hover-shadow-1))
         drop-shadow(var(--card-touch-hover-shadow-2));
-      transform: translateY(-7px);
+      transform: translateY(var(--card-touch-animate-distance));
     } @else { /* stylelint-disable-line */
       box-shadow:
         var(--card-touch-hover-shadow-1-legacy),
         var(--card-touch-hover-shadow-2-legacy);
-      transform: translateY(-5px);
+      transform: translateY(var(--card-touch-animate-distance-legacy));
     }
   }
 }
 
-/* TODO: Move values into variables */
-/* TODO: Use existing variables where possible */
+.card-has-btn {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
 
-/* NOTE: Current implementation is limited to only one button per card */
-.btn-card {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
+.card-img {
+  border-top-left-radius: var(--radius-2);
+  border-top-right-radius: var(--radius-2);
+}
+
+.card-body {
+  margin: 1.2rem 2rem;
+}
+
+.card-btn {
   padding: var(--btn-padding-y) var(--btn-padding-x);
+  margin-top: auto;
   text-align: center;
-  /* background-color: var(--card-touch-bg-colour); */
-  border-top: 1px solid hsl(240, 67%, 96%);
+  border-top: var(--card-btn-border);
   border-bottom-right-radius: var(--radius-2);
   border-bottom-left-radius: var(--radius-2);
-
-  .card-touch:hover > &,
-  .card-touch:focus > & {
-    background-color: var(--grey-100);
-  }
 }

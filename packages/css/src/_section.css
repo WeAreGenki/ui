@@ -5,14 +5,14 @@
 
   HTML LAYOUT:
     <section class="slant">
-      <div class="con tc">
+      <div class="con pv4 tc">
         <h2 class="mt0">Example slant section</h2>
         <p class="lead">Your text.</p>
       </div>
     </section>
 
     <section class="slant-cta">
-      <div class="con tc">
+      <div class="con pv4 tc">
         <h2 class="mt0">Example CTA slant</h2>
         <p class="lead">Your text.</p>
       </div>
@@ -22,36 +22,22 @@
 
 /* Slant */
 
-.slant,
-.slant-cta {
-  position: relative;
-  padding: calc(var(--slant-size-factor) / 2) 0;
-  margin: calc(var(--slant-size-factor) * 2) 0;
+.slant {
   background-color: var(--slant-bg-colour);
 
   &::before,
   &::after {
-    position: absolute;
-    left: 0;
-    z-index: -1;
     display: block;
-    width: 100%;
-    height: calc(var(--slant-size-factor) * 3);
+    height: var(--slant-hight);
     content: "";
-    background-color: var(--slant-bg-colour);
-    transform: skewY(var(--slant-angle));
-
-    @media (--breakpoint-large) {
-      transform: skewY(var(--slant-angle-large));
-    }
   }
 
   &::before {
-    top: calc(-1 * var(--slant-size-factor));
+    background-image: linear-gradient(to bottom right, var(--body-bg-colour), var(--body-bg-colour) var(--slant-stop-point), var(--slant-bg-colour) 50%, var(--slant-bg-colour));
   }
 
   &::after {
-    bottom: calc(-1 * var(--slant-size-factor));
+    background-image: linear-gradient(to bottom right, var(--slant-bg-colour), var(--slant-bg-colour) var(--slant-stop-point), var(--body-bg-colour) 50%, var(--body-bg-colour));
   }
 }
 
@@ -61,7 +47,17 @@
 
   &::before,
   &::after {
-    background-color: var(--slant-cta-bg-colour);
+    display: block;
+    height: var(--slant-hight);
+    content: "";
+  }
+
+  &::before {
+    background-image: linear-gradient(to bottom right, var(--body-bg-colour), var(--body-bg-colour) var(--slant-stop-point), var(--slant-cta-bg-colour) 50%, var(--slant-cta-bg-colour));
+  }
+
+  &::after {
+    background-image: linear-gradient(to bottom right, var(--slant-cta-bg-colour), var(--slant-cta-bg-colour) var(--slant-stop-point), var(--body-bg-colour) 50%, var(--body-bg-colour));
   }
 
   label,
@@ -80,6 +76,33 @@
   select,
   textarea {
     outline-color: var(--slant-cta-link-colour);
+  }
+
+  .invalid {
+    border: var(--slant-cta-input-invalid-border);
+    outline-color: var(--slant-cta-input-invalid-colour);
+  }
+
+  .form-help {
+    color: inherit;
+  }
+
+  .invalid-feedback {
+    color: var(--slant-cta-input-invalid-colour);
+  }
+}
+
+.slant-offset {
+  &::before {
+    margin-top: calc(-1 * var(--slant-hight));
+    background-image: linear-gradient(to bottom right, var(--slant-bg-colour), var(--slant-bg-colour) var(--slant-stop-point), var(--slant-cta-bg-colour) 50%, var(--slant-cta-bg-colour));
+  }
+}
+
+.slant-cta-offset {
+  &::before {
+    margin-top: calc(-1 * var(--slant-hight));
+    background-image: linear-gradient(to bottom right, var(--slant-cta-bg-colour), var(--slant-cta-bg-colour) var(--slant-stop-point), var(--slant-bg-colour) 50%, var(--slant-bg-colour));
   }
 }
 

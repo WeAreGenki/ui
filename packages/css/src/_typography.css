@@ -1,8 +1,7 @@
 /* TYPOGRAPHY */
 
 /* Fluid font size (experimental) */
-/* TODO: Full cross browser testing because rem fonts on <html> is uncommon. */
-
+/* TODO: @TESTING: Cross browser compat because rem fonts on <html> is uncommon. */
 @if var(--use-font-size-fluid) {
   html {
     @mixin font-size-fluid var(--font-size), var(--font-size-fluid-max), var(--font-size-fluid-from), var(--font-size-fluid-until);
@@ -13,10 +12,18 @@
 
 body {
   font-family: var(--font-family);
-  font-size: var(--font-size);
-  font-weight: var(--font-weight);
+  text-rendering: var(--font-rendering);
+  font-variant-ligatures: var(--font-variant);
   color: var(--body-font-colour);
   background-color: var(--body-bg-colour);
+
+  @if var(--font-size) != 1rem {
+    font-size: var(--font-size);
+  }
+
+  @if var(--font-weight) != 400 {
+    font-weight: var(--font-weight);
+  }
 
   @if NOT (var(--use-font-size-fluid)) {
     @media (--breakpoint-small) {
@@ -84,6 +91,33 @@ a {
   }
 }
 
+/* Quotes */
+
+.quote {
+  position: relative;
+  font-size: var(--quote-font-size);
+
+  &::before,
+  &::after {
+    position: absolute;
+    font-size: var(--quote-mark-font-size);
+  }
+
+  /* use em not rem so it's relative to font size */
+  /* FIXME: This doesn't work and looks bad! */
+  &::before {
+    top: -0.28em;
+    left: -0.45em;
+    content: "“";
+  }
+
+  &::after {
+    top: -0.25em;
+    margin-left: 0.1em;
+    content: "”";
+  }
+}
+
 /* Text alignment */
 
 .tl { text-align: left; } /* default */
@@ -114,34 +148,6 @@ a {
   }
 }
 
-/* Quotes */
-
-.quote {
-  position: relative;
-  font-size: var(--quote-font-size);
-
-  &::before,
-  &::after {
-    position: absolute;
-    font-size: var(--quote-mark-font-size);
-  }
-
-  /* use em not rem so it's relative to font size */
-  /* TODO: @TESTING: Check this works correctly with all fonts */
-  /* FIXME: This doesn't work and looks bad! */
-  &::before {
-    top: -0.28em;
-    left: -0.45em;
-    content: "“";
-  }
-
-  &::after {
-    top: -0.25em;
-    margin-left: 0.1em;
-    content: "”";
-  }
-}
-
 /* Font variants and decoration */
 
 .bold { font-weight: var(--font-weight-heavy); }
@@ -161,13 +167,6 @@ li { margin-bottom: var(--li-margin-between); } /* more space between list items
 .lsn { /* list style none */
   padding-left: 0;
   list-style: none;
-}
-
-/* Abbreviations */
-
-abbr[title] {
-  text-decoration-color: var(--abbr-underline-colour); /* NOTE: Not implemented in most browsers yet */
-  cursor: help;
 }
 
 /* Code */

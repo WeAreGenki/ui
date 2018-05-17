@@ -12,16 +12,17 @@
 :root {
   /* Options */
   /**
-   * Force hardware acceleration on animated elements, may be buggy. More
-   * information: https://developer.mozilla.org/en-US/docs/Web/CSS/will-change
+   * Force hardware acceleration on animated elements, may be buggy. Not
+   * supported in IE or Edge - https://caniuse.com/#feat=will-change
    */
   --optimize: false;
   /**
    * Better performance by using filter:drop-shadow() for shadows, may be buggy.
+   * Not supported in IE - https://caniuse.com/#feat=css-filters
    */
   --use-drop-shadow: false;
   /**
-  * Dynamic font size based on viewport width. This works well but is somewhat
+  * Dynamic font size based on viewport width. This works but is somewhat
   * experimental and may break your site on very old browsers.
   */
   /* TODO: @TESTING: Cross-browser compatibility */
@@ -42,9 +43,9 @@
   --col-steps: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
   --row-steps: 1, 2, 3, 4, 5, 6;
   --gutter-col: 1rem;
-  --gutter-col-l: calc(var(--gutter-col) * 2);
-  --gutter-row: var(--gutter-col);
-  --gutter-row-l: calc(var(--gutter-row) * 2);
+  --gutter-col-l: 2rem;
+  --gutter-row: 2rem;
+  --gutter-row-l: 2rem;
 
   /* General */
   --spacing-steps: 0, 1, 2, 3, 4, 5, 6, 7;
@@ -57,47 +58,38 @@
   --angle-3: -27deg; /* hero section */
 
   /* Gradients */
-  /* FIXME: Using hsl() breaks postcss-color-function when doing blend(): https://git.io/vxKf2 */
-  /*
-  --gradient-primary-0: hsl(188.1, 100%, 50.6%);
-  --gradient-primary-100: hsl(215, 98.3%, 45.9%);
-  --gradient-secondary-0: hsl(270.2, 95.6%, 72.8%);
-  --gradient-secondary-100: hsl(263, 59.8%, 48.8%);
-  --gradient-dark-0: hsl(245.9, 30%, 32%);
-  --gradient-dark-100: hsl(249.1, 33.3%, 15.9%);
-  */
-  --gradient-primary-0: #03ddff;
-  --gradient-primary-100: #0262e8;
-  --gradient-secondary-0: #ba77fc;
-  --gradient-secondary-100: #6b32c7;
-  --gradient-dark-0: #3e396a;
-  --gradient-dark-100: #1f1b36;
-  --gradient-primary-10: color(var(--gradient-primary-0) blend(var(--gradient-primary-100) 10%));
-  --gradient-primary-20: color(var(--gradient-primary-0) blend(var(--gradient-primary-100) 20%));
-  --gradient-primary-30: color(var(--gradient-primary-0) blend(var(--gradient-primary-100) 30%));
-  --gradient-primary-40: color(var(--gradient-primary-0) blend(var(--gradient-primary-100) 40%));
-  --gradient-primary-50: color(var(--gradient-primary-0) blend(var(--gradient-primary-100) 50%));
-  --gradient-primary-60: color(var(--gradient-primary-0) blend(var(--gradient-primary-100) 60%));
-  --gradient-primary-70: color(var(--gradient-primary-0) blend(var(--gradient-primary-100) 70%));
-  --gradient-primary-80: color(var(--gradient-primary-0) blend(var(--gradient-primary-100) 80%));
-  --gradient-primary-90: color(var(--gradient-primary-0) blend(var(--gradient-primary-100) 90%));
-  --gradient-secondary-10: color(var(--gradient-secondary-0) blend(var(--gradient-secondary-100) 10%));
-  --gradient-secondary-20: color(var(--gradient-secondary-0) blend(var(--gradient-secondary-100) 20%));
-  --gradient-secondary-30: color(var(--gradient-secondary-0) blend(var(--gradient-secondary-100) 30%));
-  --gradient-secondary-50: color(var(--gradient-secondary-0) blend(var(--gradient-secondary-100) 50%));
-  --gradient-secondary-60: color(var(--gradient-secondary-0) blend(var(--gradient-secondary-100) 60%));
-  --gradient-secondary-70: color(var(--gradient-secondary-0) blend(var(--gradient-secondary-100) 70%));
-  --gradient-secondary-80: color(var(--gradient-secondary-0) blend(var(--gradient-secondary-100) 80%));
-  --gradient-secondary-90: color(var(--gradient-secondary-0) blend(var(--gradient-secondary-100) 90%));
-  --gradient-dark-10: color(var(--gradient-dark-0) blend(var(--gradient-dark-100) 10%));
-  --gradient-dark-20: color(var(--gradient-dark-0) blend(var(--gradient-dark-100) 20%));
-  --gradient-dark-30: color(var(--gradient-dark-0) blend(var(--gradient-dark-100) 30%));
-  --gradient-dark-40: color(var(--gradient-dark-0) blend(var(--gradient-dark-100) 40%));
-  --gradient-dark-50: color(var(--gradient-dark-0) blend(var(--gradient-dark-100) 50%));
-  --gradient-dark-60: color(var(--gradient-dark-0) blend(var(--gradient-dark-100) 60%));
-  --gradient-dark-70: color(var(--gradient-dark-0) blend(var(--gradient-dark-100) 70%));
-  --gradient-dark-80: color(var(--gradient-dark-0) blend(var(--gradient-dark-100) 80%));
-  --gradient-dark-90: color(var(--gradient-dark-0) blend(var(--gradient-dark-100) 90%));
+  --gradient-primary-0: hsl(188, 100%, 51%);
+  --gradient-primary-100: hsl(215, 98%, 46%);
+  --gradient-secondary-0: hsl(270, 96%, 73%);
+  --gradient-secondary-100: hsl(263, 60%, 49%);
+  --gradient-dark-0: hsl(246, 30%, 32%);
+  --gradient-dark-100: hsl(249, 33%, 16%);
+  --gradient-primary-10: color-mod(var(--gradient-primary-0) blend(var(--gradient-primary-100) 10%));
+  --gradient-primary-20: color-mod(var(--gradient-primary-0) blend(var(--gradient-primary-100) 20%));
+  --gradient-primary-30: color-mod(var(--gradient-primary-0) blend(var(--gradient-primary-100) 30%));
+  --gradient-primary-40: color-mod(var(--gradient-primary-0) blend(var(--gradient-primary-100) 40%));
+  --gradient-primary-50: color-mod(var(--gradient-primary-0) blend(var(--gradient-primary-100) 50%));
+  --gradient-primary-60: color-mod(var(--gradient-primary-0) blend(var(--gradient-primary-100) 60%));
+  --gradient-primary-70: color-mod(var(--gradient-primary-0) blend(var(--gradient-primary-100) 70%));
+  --gradient-primary-80: color-mod(var(--gradient-primary-0) blend(var(--gradient-primary-100) 80%));
+  --gradient-primary-90: color-mod(var(--gradient-primary-0) blend(var(--gradient-primary-100) 90%));
+  --gradient-secondary-10: color-mod(var(--gradient-secondary-0) blend(var(--gradient-secondary-100) 10%));
+  --gradient-secondary-20: color-mod(var(--gradient-secondary-0) blend(var(--gradient-secondary-100) 20%));
+  --gradient-secondary-30: color-mod(var(--gradient-secondary-0) blend(var(--gradient-secondary-100) 30%));
+  --gradient-secondary-50: color-mod(var(--gradient-secondary-0) blend(var(--gradient-secondary-100) 50%));
+  --gradient-secondary-60: color-mod(var(--gradient-secondary-0) blend(var(--gradient-secondary-100) 60%));
+  --gradient-secondary-70: color-mod(var(--gradient-secondary-0) blend(var(--gradient-secondary-100) 70%));
+  --gradient-secondary-80: color-mod(var(--gradient-secondary-0) blend(var(--gradient-secondary-100) 80%));
+  --gradient-secondary-90: color-mod(var(--gradient-secondary-0) blend(var(--gradient-secondary-100) 90%));
+  --gradient-dark-10: color-mod(var(--gradient-dark-0) blend(var(--gradient-dark-100) 10%));
+  --gradient-dark-20: color-mod(var(--gradient-dark-0) blend(var(--gradient-dark-100) 20%));
+  --gradient-dark-30: color-mod(var(--gradient-dark-0) blend(var(--gradient-dark-100) 30%));
+  --gradient-dark-40: color-mod(var(--gradient-dark-0) blend(var(--gradient-dark-100) 40%));
+  --gradient-dark-50: color-mod(var(--gradient-dark-0) blend(var(--gradient-dark-100) 50%));
+  --gradient-dark-60: color-mod(var(--gradient-dark-0) blend(var(--gradient-dark-100) 60%));
+  --gradient-dark-70: color-mod(var(--gradient-dark-0) blend(var(--gradient-dark-100) 70%));
+  --gradient-dark-80: color-mod(var(--gradient-dark-0) blend(var(--gradient-dark-100) 80%));
+  --gradient-dark-90: color-mod(var(--gradient-dark-0) blend(var(--gradient-dark-100) 90%));
   --gradient-primary: linear-gradient(var(--angle-1), var(--gradient-primary-0), var(--gradient-primary-100));
   --gradient-secondary: linear-gradient(var(--angle-1), var(--gradient-secondary-0), var(--gradient-secondary-100));
   --gradient-dark: linear-gradient(var(--angle-2), var(--gradient-dark-0), var(--gradient-dark-100));
@@ -116,21 +108,23 @@
   --shadow-colour: hsl(258, 49%, 18%);
   --shadow-colour-subtle: hsl(230, 24%, 51%);
   /* filter:drop-shadow() */
-  --shadow-base: color(var(--shadow-colour) alpha(0.39));
+  --shadow-base: color-mod(var(--shadow-colour) alpha(0.39));
   --shadow: 0 1rem 0.95rem var(--shadow-base);
-  --shadow-subtle: 0 0.3125rem 0.28rem color(var(--shadow-colour-subtle) alpha(0.2));
-  --shadow-light-1: 0 0.625rem 1.5rem color(var(--shadow-colour) alpha(0.06));
-  --shadow-light-2: 0 0.125rem 0.25rem color(var(--shadow-colour) alpha(0.076));
+  --shadow-subtle: 0 0.3125rem 0.28rem color-mod(var(--shadow-colour-subtle) alpha(0.2));
+  --shadow-light-1: 0 0.625rem 1.5rem color-mod(var(--shadow-colour) alpha(0.06));
+  --shadow-light-2: 0 0.125rem 0.25rem color-mod(var(--shadow-colour) alpha(0.076));
   /* box-shadow */
-  --shadow-base-legacy: color(var(--shadow-colour) alpha(0.28));
+  --shadow-base-legacy: color-mod(var(--shadow-colour) alpha(0.28));
   --shadow-legacy: 0 1rem 2rem var(--shadow-base-legacy);
-  --shadow-subtle-legacy: 0 0.3125rem 1rem color(var(--shadow-colour-subtle) alpha(0.2));
-  --shadow-light-1-legacy: 0 0.625rem 2.5rem color(var(--shadow-colour) alpha(0.07));
-  --shadow-light-2-legacy: 0 0.125rem 0.56rem color(var(--shadow-colour) alpha(0.06));
+  --shadow-subtle-legacy: 0 0.3125rem 1rem color-mod(var(--shadow-colour-subtle) alpha(0.2));
+  --shadow-light-1-legacy: 0 0.625rem 2.5rem color-mod(var(--shadow-colour) alpha(0.07));
+  --shadow-light-2-legacy: 0 0.125rem 0.56rem color-mod(var(--shadow-colour) alpha(0.06));
 
   /* Typography */
-  --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Cantarell, "Helvetica Neue", sans-serif;
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Cantarell, "Helvetica Neue", sans-serif;
   --font-family-monospace: monospace;
+  --font-rendering: optimizeSpeed;
+  --font-variant: none;
   --font-size-fluid-max: 1.3125rem; /* font size will grow from --font-size to this */
   --font-size-fluid-from: 30em; /* start growing font from this screen width */
   --font-size-fluid-until: 90em; /* stop growing font size at this screen width */
@@ -138,8 +132,8 @@
   --font-size-s: 1.125rem; /* only used when --use-font-size-fluid is false */
   --font-size-l: 1.125rem; /* only used when --use-font-size-fluid is false */
   --font-weight-light: 300;
-  --font-weight: 500;
-  --font-weight-heavy: 700;
+  --font-weight: 400; /* same as normal */
+  --font-weight-heavy: 700; /* same as bold */
   --line-height: 1.25;
   /* headings */
   --headline-font-size: 6rem;
@@ -156,12 +150,12 @@
   /* links */
   --link-click-area: 0.4rem; /* reduce this if your links are overlapping */
   --link-font-colour: var(--primary);
-  --link-hover-font-colour: color(var(--primary) blackness(22%));
+  --link-hover-font-colour: color-mod(var(--primary) blackness(22%));
   /* other */
   --hr-margin: 3rem 0;
   --quote-font-size: 2rem;
   --quote-mark-font-size: 3em; /* em (not rem) so it's relative to the parent font size */
-  --abbr-underline-colour: color(var(--body-font-colour lightness(25%)));
+  --abbr-underline-colour: color-mod(var(--body-font-colour lightness(25%)));
 
   /* Lists */
   --li-margin-between: 0.5rem;
@@ -183,8 +177,8 @@
   --btn-font-colour: var(--blue-grey-800);
   --btn-bg-colour: var(--white);
   --btn-radius: var(--radius-1);
-  --btn-shadow: 0 0.18rem 0.18rem color(var(--shadow-colour) alpha(0.16));
-  --btn-shadow-legacy: 0 0.125rem 0.375rem color(var(--shadow-colour) alpha(0.18));
+  --btn-shadow: 0 0.18rem 0.18rem color-mod(var(--shadow-colour) alpha(0.16));
+  --btn-shadow-legacy: 0 0.125rem 0.375rem color-mod(var(--shadow-colour) alpha(0.18));
   --btn-hover-font-colour: var(--link-hover-font-colour);
   --btn-hover-bg-colour: var(--blue-grey-100);
   --btn-disabled-font-colour: var(--blue-grey-200);
@@ -193,19 +187,18 @@
   --btn-margin-between: 1.5rem; /* space between buttons */
   /* CTA */
   --btn-cta-bg-gradient: linear-gradient(var(--angle-1), var(--gradient-secondary-0), var(--gradient-secondary-100));
-  --btn-cta-shadow: 0 0.18rem 0.18rem color(var(--gradient-secondary-100) alpha(0.5));
-  --btn-cta-shadow-legacy: 0 0.2rem 0.45rem color(var(--gradient-secondary-90) alpha(0.4));
+  --btn-cta-shadow: 0 0.18rem 0.18rem color-mod(var(--gradient-secondary-100) alpha(0.5));
+  --btn-cta-shadow-legacy: 0 0.2rem 0.45rem color-mod(var(--gradient-secondary-90) alpha(0.4));
   /* dark */
   --btn-dark-bg-gradient: var(--gradient-dark);
-  --btn-dark-shadow: 0 0.18rem 0.18rem color(var(--dark) alpha(0.4));
-  --btn-dark-shadow-legacy: 0 0.2rem 0.45rem color(var(--dark) alpha(0.3));
+  --btn-dark-shadow: 0 0.18rem 0.18rem color-mod(var(--dark) alpha(0.4));
+  --btn-dark-shadow-legacy: 0 0.2rem 0.45rem color-mod(var(--dark) alpha(0.3));
   /* main */
   --btn-main-bg-gradient: linear-gradient(var(--angle-1), var(--gradient-primary-20), var(--gradient-primary-100));
-  --btn-main-shadow: 0 0.18rem 0.18rem color(var(--gradient-primary-100) alpha(0.5));
-  --btn-main-shadow-legacy: 0 0.2rem 0.45rem color(var(--gradient-primary-90) alpha(0.4));
+  --btn-main-shadow: 0 0.18rem 0.18rem color-mod(var(--gradient-primary-100) alpha(0.5));
+  --btn-main-shadow-legacy: 0 0.2rem 0.45rem color-mod(var(--gradient-primary-90) alpha(0.4));
 
   /* Forms */
-  --form-help-font-colour: var(--grey-600);
   --input-padding-x: 1rem;
   --input-padding-y: 0.6rem;
   --input-font-size: 1.2rem;
@@ -216,32 +209,36 @@
   --input-radius: var(--radius-1);
   --input-hover-border-colour: var(--grey-400);
   --input-focus-outline: 2px solid var(--primary);
-  --input-valid-colour: var(--green-500); /* TODO: Remove if not used */
-  --input-invalid-colour: var(--red-500); /* TODO: Remove if not used */
+  --input-invalid-colour: var(--red-500);
+  --input-invalid-border: 2px solid var(--input-invalid-colour);
   --input-placeholder-font-colour: var(--blue-grey-400);
   --input-disabled-font-colour: var(--blue-grey-200);
   --input-disabled-border-colour: var(--blue-grey-50);
   --input-disabled-placeholder-font-colour: var(--blue-grey-100);
+  --form-help-font-colour: var(--grey-600);
 
   /* Cards */
   --card-padding-x: 1.3rem;
   --card-padding-y: 1.2rem;
   --card-bg-colour: var(--blue-grey-100);
+  --card-bg-colour: var(--white);
   --card-shadow: var(--shadow-subtle);
   --card-shadow-legacy: var(--shadow-subtle-legacy);
   --card-touch-optimize: var(--optimize);
   --card-touch-zindex: 1;
   --card-touch-font-colour: var(--body-font-colour);
-  --card-touch-bg-colour: var(--body-bg-colour);
   --card-touch-shadow-1: var(--shadow-light-1);
   --card-touch-shadow-2: var(--shadow-light-2);
   --card-touch-shadow-1-legacy: var(--shadow-light-1-legacy);
   --card-touch-shadow-2-legacy: var(--shadow-light-2-legacy);
-  --card-touch-animate-speed: 200ms;
+  --card-touch-animate-speed: 160ms;
+  --card-touch-animate-distance: -7px;
+  --card-touch-animate-distance-legacy: -5px;
   --card-touch-hover-shadow-1: var(--shadow);
-  --card-touch-hover-shadow-2: 0 0.125rem 0.25rem color(var(--shadow-colour) alpha(0.07));
+  --card-touch-hover-shadow-2: 0 0.125rem 0.25rem color-mod(var(--shadow-colour) alpha(0.07));
   --card-touch-hover-shadow-1-legacy: var(--shadow-legacy);
   --card-touch-hover-shadow-2-legacy: 0 0 0 transparent;
+  --card-btn-border: 1px solid hsl(240, 67%, 96%);
 
   /* Alerts */
   --alert-padding: 1rem;
@@ -265,23 +262,23 @@
   --label-font-size: 90%;
   --label-font-colour: var(--dark);
   --label-alignment: 0.1rem;
-  --label-bg-colour: var(--body-bg-colour);
   --label-border: 1px solid var(--gradient-dark-40);
   --label-border-radius: var(--radius-1);
-  --label-margin-between: var(--btn-margin-between);
+  --label-margin-between: 1rem;
 
   /* Grid templates */
   --template-card-body-padding: var(--card-padding-y) var(--card-padding-x) 0;
   --template-card-button-padding: 0 1rem 1rem;
 
   /* Sections */
-  --slant-size-factor: 3.5rem; /* used to calculate section whitespace and size */
-  --slant-angle: -4deg;
-  --slant-angle-large: -3deg;
+  --slant-hight: 6rem;
+  --slant-stop-point: 49.6%; /* prevents jagged edge, tweak if editing --slant-height */
   --slant-bg-colour: var(--light);
   --slant-cta-font-colour: var(--white);
   --slant-cta-bg-colour: var(--dark);
-  --slant-cta-link-colour: color(var(--link-font-colour) hue(-5) lightness(58%));
+  --slant-cta-link-colour: color-mod(var(--link-font-colour) hue(-5) lightness(58%));
+  --slant-cta-input-invalid-colour: color-mod(var(--input-invalid-colour) lightness(65%));
+  --slant-cta-input-invalid-border: 2px solid var(--slant-cta-input-invalid-colour);
   --hero-padding: 1.5rem 0;
   --hero-margin: 2rem 0;
   --hero-font-colour: var(--white);
@@ -305,7 +302,7 @@
   --navbar-shadow-fade-speed: 300ms;
   --navbar-shadow: 0 0.5rem 1rem var(--shadow-base);
   --navbar-shadow-legacy: 0 0.5rem 2rem var(--shadow-base-legacy);
-  --navbar-shadow-before: 0 0.5rem 1rem color(var(--shadow-colour) alpha(0)); /* same as --navbar-shadow but 0 alpha */
+  --navbar-shadow-before: 0 0.5rem 1rem color-mod(var(--shadow-colour) alpha(0)); /* same as --navbar-shadow but 0 alpha */
   --navbar-icon-size: 2rem;
   --navbar-icon-padding: 0.4rem 0.4rem 0.25rem;
   --navbar-logo-size-x: 4.2rem;
@@ -320,17 +317,18 @@
   --input-toggle-on-bg-colour: var(--green-500);
   --input-toggle-off-font-colour: var(--btn-font-colour);
   --input-toggle-off-bg-colour: var(--grey-400);
-  --input-toggle-inner-shadow: inset 0 -0.125rem 0.6rem color(var(--shadow-colour) alpha(0.15));
-  --input-toggle-slider-inner-shadow: inset 0 -1rem 0.4rem color(var(--shadow-colour) alpha(0.05));
+  --input-toggle-inner-shadow: inset 0 -0.125rem 0.6rem color-mod(var(--shadow-colour) alpha(0.15));
+  --input-toggle-slider-inner-shadow: inset 0 -1rem 0.4rem color-mod(var(--shadow-colour) alpha(0.05));
   --input-toggle-animate-in-speed: 180ms;
   --input-toggle-animate-out-speed: 130ms;
   --input-toggle-hover-slider-bg-colour: var(--grey-200);
   --input-toggle-disabled-slider-bg-colour: var(--grey-100);
   --input-toggle-mini-width: calc(var(--input-toggle-width) / 1.7);
-  --input-toggle-mini-slider-inner-shadow: inset 0 -0.7rem 0.4rem color(var(--shadow-colour) alpha(0.05));
+  --input-toggle-mini-slider-inner-shadow: inset 0 -0.7rem 0.4rem color-mod(var(--shadow-colour) alpha(0.05));
 
   /* @wearegenki/vue-input-select component */
   --input-select-optimize: var(--optimize);
+  --input-select-zindex: 4;
   --input-select-bg-colour: var(--white);
   --input-select-shadow: var(--shadow);
   --input-select-shadow-legacy: var(--shadow-legacy);

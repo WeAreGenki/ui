@@ -1,4 +1,9 @@
 <!-- markdownlint-disable no-duplicate-header no-inline-html -->
+<!-- markdownlint-disable first-line-h1 -->
+
+**IMPORTANT: This project has been deprecated, please use [`minna-ui`](https://github.com/WeAreGenki/minna-ui), a new UI framework which is based on the next-gen version of `@wearegenki/ui`. It follows our decision at We Are Genki to transition our projects from [Vue](https://vuejs.org) to [Svelte](https://svelte.technology).**
+
+-----
 
 # Changelog
 
@@ -9,11 +14,22 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+
+- Experimental CSS styles for high performance font rendering (at the cost of potential ugly font kerning in some situations).
+
+### Changed
+
+- BREAKING CHANGE: Switched PostCSS plugins for colour function. `color()` is now `color-mod()`, which is more in line with the emerging web standard.
+- All colours are now defined using HSL including gradients.
+- Better form validation styles.
+- Refactor slant section CSS using new technique for better paint performance.
+
 ## [0.12.0] - 2018-04-25
 
 ### Removed
 
-- BREAKING CHANGE: Deleted all Marko.js packages and references. Although marko has a remarkable custom syntax which compiles to HTML, unfortunately marko never lived up to its performance promises and was too hard to use in real-world use cases. We simply didn't feel productive when using marko. For projects which require high performance we're investigating alternatives and are currently leaning towards Svelte.
+- BREAKING CHANGE: Deleted all Marko.js packages and references. Although marko has a great custom syntax which compiles to HTML, unfortunately marko never lived up to its performance promises and was too hard to use in real-world use cases. We simply didn't feel productive when using marko. For projects which require high performance we're investigating alternatives and are currently leaning towards Svelte.
 
 ## [0.11.0] - 2018-04-25
 

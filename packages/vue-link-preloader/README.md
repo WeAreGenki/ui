@@ -1,3 +1,9 @@
+<!-- markdownlint-disable first-line-h1 -->
+
+**IMPORTANT: This project has been deprecated, please use [`minna-ui`](https://github.com/WeAreGenki/minna-ui), a new UI framework which is based on the next-gen version of `@wearegenki/ui`. It follows our decision at We Are Genki to transition our projects from [Vue](https://vuejs.org) to [Svelte](https://svelte.technology).**
+
+-----
+
 # @wearegenki/vue-link-preloader
 
 TODO: Write me!

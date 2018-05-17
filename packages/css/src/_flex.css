@@ -28,11 +28,14 @@
 .fb0 { flex-basis: 0; }
 .fbu { flex-basis: unset; }
 
-.order-99 { order: -99; }
-.order-98 { order: -98; }
-.order-97 { order: -97; }
-.order-5 { order: -5; }
-.order-4 { order: -4; }
+.fs0 { flex-shrink: 0; }
+.fs1 { flex-shrink: 1; }
+.fsu { flex-shrink: unset; }
+
+.fg0 { flex-grow: 0; }
+.fg1 { flex-grow: 1; }
+.fgu { flex-grow: unset; }
+
 .order-3 { order: -3; }
 .order-2 { order: -2; }
 .order-1 { order: -1; }
@@ -46,9 +49,6 @@
 .order7 { order: 7; }
 .order8 { order: 8; }
 .order9 { order: 9; }
-.order97 { order: 97; }
-.order98 { order: 98; }
-.order99 { order: 99; }
 .order-unset { order: unset; }
 
 @each $media, $ext in (var(--breakpoints-media)), (var(--breakpoints)) {
@@ -76,11 +76,14 @@
     .fb0-$(ext) { flex-basis: 0; }
     .fbu-$(ext) { flex-basis: unset; }
 
-    .order-99-$(ext) { order: -99; }
-    .order-98-$(ext) { order: -98; }
-    .order-97-$(ext) { order: -97; }
-    .order-5-$(ext) { order: -5; }
-    .order-4-$(ext) { order: -4; }
+    .fs0-$(ext) { flex-shrink: 0; }
+    .fs1-$(ext) { flex-shrink: 1; }
+    .fsu-$(ext) { flex-shrink: unset; }
+
+    .fg0-$(ext) { flex-grow: 0; }
+    .fg1-$(ext) { flex-grow: 1; }
+    .fgu-$(ext) { flex-grow: unset; }
+
     .order-3-$(ext) { order: -3; }
     .order-2-$(ext) { order: -2; }
     .order-1-$(ext) { order: -1; }
@@ -94,9 +97,6 @@
     .order7-$(ext) { order: 7; }
     .order8-$(ext) { order: 8; }
     .order9-$(ext) { order: 9; }
-    .order97-$(ext) { order: 97; }
-    .order98-$(ext) { order: 98; }
-    .order99-$(ext) { order: 99; }
     .order-unset-$(ext) { order: unset; }
   }
 }

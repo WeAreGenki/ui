@@ -33,29 +33,13 @@ li,
 dl,
 dt,
 dd,
+input,
 textarea,
 table,
 td,
 th,
-tr,
-input[type="email"],
-input[type="number"],
-input[type="password"],
-input[type="tel"],
-input[type="text"],
-input[type="url"],
-.border-box {
+tr {
   box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  overflow-x: hidden; /* opinionated */
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 .btn,
@@ -74,8 +58,7 @@ textarea {
 
 /* disabled elements */
 .disabled,
-[disabled],
-:disabled {
+[disabled] {
   cursor: not-allowed !important; /* stylelint-disable-line declaration-no-important */
 }
 
@@ -90,4 +73,10 @@ hr {
 img {
   max-width: 100%;
   height: auto;
+}
+
+/* Abbreviations */
+
+abbr[title] {
+  cursor: help;
 }
