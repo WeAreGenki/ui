@@ -1263,7 +1263,7 @@
     "@types/jest" "22.2.3"
     "@vue/test-utils" "1.0.0-beta.15"
     jest-serializer-vue "1.0.0"
-    vue-jest "2.5.0"
+    vue-jest "2.6.0"
 
 "@wearegenki/test@file:packages/test":
   version "0.10.0"
@@ -8198,9 +8198,9 @@ vue-eslint-parser@^2.0.3:
     esquery "^1.0.0"
     lodash "^4.17.4"
 
-vue-jest@2.5.0:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/vue-jest/-/vue-jest-2.5.0.tgz#9dcf902720fa47ba98e60eb771a02c13e6b4eb56"
+vue-jest@2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/vue-jest/-/vue-jest-2.6.0.tgz#23dc99a4dce0bb59fea3946e1317b234968cf12a"
   dependencies:
     babel-plugin-transform-es2015-modules-commonjs "^6.26.0"
     chalk "^2.1.0"
@@ -8211,7 +8211,7 @@ vue-jest@2.5.0:
     object-assign "^4.1.1"
     source-map "^0.5.6"
     tsconfig "^7.0.0"
-    vue-template-es2015-compiler "^1.5.3"
+    vue-template-es2015-compiler "^1.6.0"
 
 vue-router@3.0.1:
   version "3.0.1"
@@ -8237,7 +8237,7 @@ vue-template-compiler@2.5.17-beta.0:
     de-indent "^1.0.2"
     he "^1.1.0"
 
-vue-template-es2015-compiler@^1.5.3:
+vue-template-es2015-compiler@^1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.6.0.tgz#dc42697133302ce3017524356a6c61b7b69b4a18"
 
