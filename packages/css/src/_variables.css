@@ -264,7 +264,7 @@
   --label-alignment: 0.1rem;
   --label-border: 1px solid var(--gradient-dark-40);
   --label-border-radius: var(--radius-1);
-  --label-margin-between: var(--btn-margin-between);
+  --label-margin-between: 1rem;
 
   /* Grid templates */
   --template-card-body-padding: var(--card-padding-y) var(--card-padding-x) 0;
